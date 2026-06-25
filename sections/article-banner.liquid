@@ -1,0 +1,20 @@
+<div class="banner-setion " style="background-image:url('{{article.image | img_url : '2000x'}}')">
+   <div class="container position-relative">
+          <div class="faq-banner-text position-absolute">
+               <h3 class="heading-2 white-text my-1">{{article.title }}</h3>
+            	<span class="article-time white-text">{{ article.created_at | date : format: 'long' }}</span>
+                <div class="my-3"><h2 class="heading-3-5 white-text">{{ article.author }}</h2></div>
+          </div>
+      </div>   
+</div>
+{% schema %}
+  {
+    "name": "Article Banner",
+    "settings": [],
+    "presets": [
+		{
+			"name": "Article Banner"
+		}
+	]
+  }
+{% endschema %}

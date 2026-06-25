@@ -1,0 +1,104 @@
+<style>
+  .ann-btn{
+    display:inline-block;
+    margin-left:15px;
+    padding:5px 10px;
+    background:#CA7351;
+    color:#fff;
+    border-radius:25px;
+    text-align:center;
+    min-width:200px;
+  }
+  .fixed-top{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    z-index:999;
+  }
+  {% if section.settings.position %} 
+  @media(max-width:768px){
+   .main-banner{padding-top:50px;}  
+  } 
+    {% endif %}
+  @media(max-width:560px){
+  .landing-page .annoucment-bar .container > *{
+    display:inline-block;
+    width:calc(49% - 10px);
+    vertical-align:middle;
+  }
+  .landing-page .annoucment-bar .container .ann-btn{
+    min-width:auto;
+  }
+  .landing-page .annoucment-bar .container span{font-size:12px;} 
+  {% if section.settings.position %} 
+  
+   .main-banner{padding-top:75px;}   
+    {% endif %}
+}
+</style>
+<div class="annoucment-bar py-2 font-pier {% if section.settings.position %} fixed-top {% endif %}" style="background-color:{{section.settings.bg-color}}">
+    <div class="container text-center">
+        <span style="color:{{section.settings.text-color}}; display:inline-block; vertical-align:middle;">{{section.settings.text}}</span> 
+        {% if section.settings.btnLable %} <a class="ann-btn" style="display:inline-block; vertical-align:middle;" href="#{{ section.settings.btnLink }}">{{ section.settings.btnLable }}</a>{% endif %}
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "settings" : [
+      {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+      },
+    {
+            "type": "select",
+            "id": "position",
+            "label": "Choose sticky or not",
+            "options": [
+              {
+                "value": "scroll-section",
+                "label": "Scroll"
+              },
+              {
+                "value": "fixed-top",
+                "label": "Sticky"
+              }
+            ],
+            "default": "scroll-section"
+          },
+	  {
+          "type": "color",
+          "id": "bg-color",
+          "default": "#fff",
+          "label": "Background Colour"
+      },
+	  {
+          "type": "color",
+          "id": "text-color",
+          "default": "#fff",
+          "label": "text Colour"
+      },
+    {
+          "type": "text",
+          "id": "btnLable",
+          "label": "Button Label"
+      },
+    {
+          "type": "text",
+          "id": "btnLink",
+          "label": "Button Link"
+      }
+  ],
+  "presets": [
+		{
+			"name": "Landing Page announcement-bar"
+		}
+	]
+}
+{% endschema %}

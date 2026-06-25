@@ -1,0 +1,59 @@
+{%assign image = section.settings.bannerimage | img_url : 'large' %}
+<div class="banner-setion " style="background-image:url('{{image}}')">
+   <div class="container position-relative">
+          <div class="faq-banner-text position-absolute">
+               <h3 class="heading-2 white-text my-1">{{section.settings.heading}}</h3>
+          </div>
+      </div>   
+</div>
+<div class="container my-3">
+  {{ page.content }}
+</div>
+
+
+{% schema %}
+  {
+    "name": "About Us",
+    "settings": [
+	{
+      "type": "image_picker",
+      "id": "bannerimage",
+      "label": "Page Bannner"
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Page heading"
+    },
+{
+            "type": "text",
+            "id": "bold-text",
+            "label": "Main Text"
+          }
+	],
+	"blocks": [
+      {
+        "type": "boldtext",
+        "name": "Bold Text",
+        "settings": [ 
+          
+
+        ]
+      },
+{
+        "type": "normaltext",
+        "name": "Text",
+        "settings": [ 
+          {
+            "type": "text",
+            "id": "normal-text",
+            "label": "Text"
+          }
+
+        ]
+      }
+	]
+  }
+{% endschema %}
+
+

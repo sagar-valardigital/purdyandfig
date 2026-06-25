@@ -1,0 +1,1201 @@
+<style>
+  .cart-toast{
+    position:fixed;
+    left:0;
+    right:0;
+    top:-100px;
+    background-color:#11322c;
+    padding:15px 10px;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    transition:all 0.3s ease;
+    z-index:9999;
+  }
+  .cart-toast.show{
+    top:0;
+  }
+  .global-product-19-wrapper .gp-4-details .gp-5-bottom .gp-5-price-points .gp-5-points li {
+    color: #424242 !important;
+  }
+  .reskin--buybox
+  .bg-white.gp-4-details
+  .gp-5-bottom
+  .gp-5-price-points
+  > ul
+  li.gray-text {
+    background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Checkmark.svg?v=1753917568);
+    background-size: 20px 24px;
+  }
+  .gp-5-price-points {
+    border: 0 !important;
+    box-shadow: none;
+    background-color: transparent;
+  }
+  .gp-4-product-gallery-thumb .main-product-img {
+    width: 64px !important;
+  }
+  .slick-slider .slick-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .new-product-gallery-wrapper .slick-arrow {
+    display: none !important;
+  }
+  .pricebullets del {
+    color: #9E9E9E;
+    font-weight: 400;
+  }
+  .cls-1template--25758333370748__buy_box_434_c7gCXk {
+    fill: #D89B39 !important;
+  }
+  .reskin--buybox .bg-white.gp-4-details .gp-5-bottom .gp-5-price-points > ul li.gray-text {
+    background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Checkmark_ac46f69d-8f3d-4fc8-a29a-066f82a69be5.svg?v=1762440011) !important;
+  }
+  .checkout-starterkit-btn {
+  	background: #11322C !important;
+  	gap: 4px;
+  }
+  .gp-4-product-gallery-thumb .slick-track{transform: none !important;}
+
+  .gp-354-del-price {
+    text-decoration: none !important;
+    position: relative;
+    color: #9E9E9E;
+  }
+  .gp-354-del-price:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: #9E9E9E !important;
+    top: calc(50% + 1px);
+    left: 0;
+  }
+  .black-text {
+    color: #212121;
+  }
+  .product-box-border {
+    padding-top:16px;
+  }
+  .black-text.product-box-border.gp-5-price-points {
+    padding-inline: 0;
+  }
+
+  .new-product-gallery-wrapper-thumb {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 288px;
+    width:100%;
+  }
+  .new-product-gallery-wrapper-thumb .main-product-img {
+    padding:5px;
+  }
+  .new-product-gallery-wrapper-thumb .main-product-img img {
+    border-radius:4px;
+    border:2px solid transparent;
+  }
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current img {
+    border:2px solid #0F2D28;
+  }
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current .imglay {
+    background-color: #00000040;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    pointer-events: none;
+  }
+  .new-product-gallery-wrapper-thumb .slick-track {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  .new-product-gallery-wrapper-thumb .main-product-img {
+    width: 48px !important;
+    padding: 0 !important;
+  }
+  .new-product-gallery-wrapper-thumb .slick-track {
+    transform: none !important;
+  }
+  #body h2.heading-2.blue-text-3.mt-0.text-center.font-gtsuper.m-text-left {
+    color: #212121 !important;
+  }
+  .product-box-border {
+    padding-top: 0;
+  }
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current img {
+    border: 2px solid #0F2D28;
+    border-radius: 4px;
+  }
+  .heading-2 {
+    line-height: 40px;
+    letter-spacing: 0px !important;
+  }
+  .heading-3 {
+    line-height: 35px;
+  }
+  .global-product-19-wrapper .gp-4-details .gp-5-bottom .gp-19-var-short-desc {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .gp-5-points li {
+    line-height: 25.6px;
+  }
+  .glbreviews {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .tbdesc {
+    font-size: 18px;
+    line-height: 27px;
+  }
+  .main-product-img {
+    aspect-ratio: 610 / 610;
+  }
+  .pf477-buy-box .tbdesc {
+    color: #212121 !important;
+  }
+
+  @media (max-width: 768px) {
+    .italic {
+      font-size: 32px;
+    }
+    .reviews-scroll-block {
+      margin-top: 16px !important;
+      padding-left: 16px;
+    }
+    .heading-3 {
+      padding-left: 16px;
+    }
+    .gp-5-price-points {
+      margin-top: 0px !important;
+    }
+    .global-product-19-wrapper .gp-4-details .gp-5-bottom {
+      padding-top: 0 !important;
+    }
+    .heading-2 {
+      text-align: left !important;
+    }
+    #body .global-product-19-wrapper .gp-4-details .gp-5-bottom .gp-19-var-short-desc.show {
+      margin: 8px 0 12px 0 !important;
+    }
+    .gp-5-price-points {
+      margin-bottom: 4px !important;
+    }
+    .new-product-gallery-wrapper-thumb .main-product-img {
+      width: 48px !important;
+      height: 48px !important;
+    }
+    .heading-3 {
+      padding-left: 0;
+    }
+    .reviews-scroll-block {
+      padding-left: 0;
+    }
+    .heading-2 {
+      line-height: 50px;
+    }
+    .heading-3 {
+      line-height: 30px;
+    }
+    .global-product-19-wrapper .gp-4-details .gp-5-bottom .gp-19-var-short-desc {
+      line-height: 24px;
+    }
+    .gp-5-points li {
+      line-height: 21px;
+    }
+    .glbreviews {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+    }
+    .tbdesc {
+      font-size: 16px !important;
+      line-height: 24px;
+    }
+    .moneybackguarateetext {
+      color: #424242;
+    }
+    #body .pf477-buy-box h2.heading-2.blue-text-3.mt-0.text-center.font-gtsuper.m-text-left {
+      color: #0A1E1A !important;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .main-product-img {
+      aspect-ratio: 375 / 250;
+    }
+    .new-product-gallery-wrapper-thumb {
+      bottom: 8px;
+    }
+    .new-product-gallery-wrapper-thumb .main-product-img {
+      width: 35px !important;
+      height: 35px !important;
+    }
+  }
+</style>
+{% assign product = section.settings.landingproduct %}
+{% assign s_variant = product.selected_or_first_available_variant %}
+
+{% if section.settings.toast %}
+<script>
+  window.addEventListener('product:added', function (event) {
+    const cartToast = document.getElementById('cart-toast');
+    const cartData = event.detail; // Access the passed data here
+    if (cartToast) {
+      cartToast.classList.add('show');
+      setTimeout(() => {
+        cartToast.classList.remove('show');
+      }, 1500);
+    }
+  });
+</script>
+<div id="cart-toast" class="cart-toast font-lausanne fw-400">Great choice, that's in your cart!</div>
+{% endif %}
+
+<div
+  class="{{ section.settings.className }} reskin--buybox global-product-5 py-80"
+  id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};"
+  x-data="{qty:1}"
+>
+  <div class="">
+    <div class=" mb-4 container heading-2-wrapper">
+      {% if section.settings.mainheading != '' %}
+        <h2 class="heading-2 blue-text-3 mt-0 text-center font-gtsuper m-text-left">
+          {{ section.settings.mainheading }}
+        </h2>
+      {% endif %}
+    </div>
+    {% if section.settings['before-mobile'] %}
+      <div class="mb-3 container">
+        <div class="gp-5-top  desktop-hide ">
+          <div class="text-left mt-2 reviews-scroll-block">
+            <div
+              class="value-sans theme-text mt-0 mb-3 stars-img-review click-scroll"
+              data-target="{{ section.settings.scrollto }}"
+            >
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{{ section.id }}{fill:#212121;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{{ section.id }}{fill:#212121;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{{ section.id }}{fill:#212121;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{{ section.id }}{fill:#212121;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{{ section.id }}{fill:#212121;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="font-lausanne fw-400 glbreviews" style="color: {{ section.settings.review_text_color }} !important;">
+                {{ settings.gloabalreviews }} verified 5-star reviews</span
+              >
+            </div>
+          </div>
+          <h2 class="heading-3 font-lausanne fw-600  mb-0 mt-0">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.mainsubheading != '' -%}
+            <p class="font-lausanne fw-200  mt-2 mb-2 gp-5-subheading">{{ section.settings.mainsubheading }}</p>
+          {%- endif %}
+        </div>
+      </div>
+    {% endif %}
+    <div
+      class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container"
+      id="{{ section.settings.p_id }}"
+    >
+      
+      <div class="w-50 {% if section.settings.verticalThumbnails %}vertical-thumbnails-slider-wrapper{% endif %} {% if section.settings.layout %} order-2 {%endif%}">
+        <div class="two-women position-relative">
+          {% if section.settings.tag != '' %}
+            <span class="tag theme-text value-sans">{{ section.settings.tag }}</span>
+          {% endif %}
+          {% assign mediacount = 0 %}
+          <div class="gp-19-gallery-block link-to-variant variant_1 show position-relative">
+            <div class="product-gallery-341-1 new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage' %}
+                  {% assign image = block.settings.image %}
+                  {% assign mimage = block.settings.mimage %}
+                  {% if block.settings.is_video %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100"
+                        poster="{{ block.settings.poster | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | image_url: width: 1200, crop: 'center' }}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | image_url: width: 800, crop: 'center' }}">
+                        <img
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto"
+                          src="{{ image | image_url: width: 800, crop: 'center' }}"
+                          width="800"
+                          height="700"
+                          alt="{{ image.alt }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+            <div class="product-gallery-thumb-341-1 new-product-gallery-wrapper-thumb">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage' %}
+                  {% assign image = block.settings.image %}
+                  {% assign mimage = block.settings.mimage %}
+                  {% if block.settings.is_video %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100"
+                        poster="{{ block.settings.poster | img_url : '100x'}}"
+                        width="48"
+                        height="48"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img">
+                      <picture class="position-relative">
+                        <source media="(min-width:650px)" srcset="{{ image | image_url: width: 100, crop: 'center' }}">
+                        <source media="(max-width:650px)" srcset="{{ image | image_url: width: 100, crop: 'center' }}">
+                        <img
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto"
+                          src="{{ image | image_url: width: 100 }}"
+                          width="48"
+                          height="48"
+                          alt="{{ image.alt }}"
+                        >
+                        <div class="imglay"></div>
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="gp-19-gallery-block link-to-variant variant_2 position-relative">
+            <div class="product-gallery-341-2 new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage2' %}
+                  {% assign image = block.settings.image_2 %}
+                  {% assign mimage = block.settings.mimage_2 %}
+                  {% if block.settings.is_video_2 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100"
+                        poster="{{ block.settings.poster_2 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_2 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | image_url: width: 1200, crop: 'center' }}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | image_url: width: 800, crop: 'center' }}">
+                        <img
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto"
+                          src="{{ image | image_url: width: 800, crop: 'center' }}"
+                          width="800"
+                          height="700"
+                          alt="{{ image.alt }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+            <div class="product-gallery-thumb-341-2 new-product-gallery-wrapper-thumb">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage2' %}
+                  {% assign image = block.settings.image_2 %}
+                  {% assign mimage = block.settings.mimage_2 %}
+                  {% if block.settings.is_video_2 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100"
+                        poster="{{ block.settings.poster_2 | img_url : '100x'}}"
+                        width="48"
+                        height="48"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_2 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img">
+                      <picture class="position-relative">
+                        <source media="(min-width:650px)" srcset="{{ image | image_url: width: 100, crop: 'center' }}">
+                        <source media="(max-width:650px)" srcset="{{ image | image_url: width: 100, crop: 'center' }}">
+                        <img
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto"
+                          src="{{ image | image_url: width: 100 }}"
+                          width="48"
+                          height="48"
+                          alt="{{ image.alt }}"
+                        >
+                        <div class="imglay"></div>
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-50  d-flex justify-content-center">
+        <div class="w-90   bg-white gp-4-details">
+          <div
+            class="gp-5-top {% if section.settings.before-mobile %} mobile-hide {% endif %}"
+          >
+            <div class="text-left mt-2 mb-2 reviews-scroll-block">
+              <div
+                class="value-sans theme-text mt-0  stars-img-review click-scroll"
+                data-target="{{ section.settings.scrollto }}"
+              >
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{{ section.id }}{fill:#F3C419;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{{ section.id }}{fill:#F3C419;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{{ section.id }}{fill:#F3C419;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{{ section.id }}{fill:#F3C419;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{{ section.id }}{fill:#F3C419;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1{{ section.id }}" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+
+                <span class="font-lausanne fw-400 glbreviews" style="color: {{ section.settings.review_text_color }} !important;">
+                  {{ settings.gloabalreviews }} verified 5-star reviews</span
+                >
+              </div>
+            </div>
+
+            <h2 class="heading-3 font-lausanne  fw-600 mb-0 mt-0">
+              {{ section.settings.heading }}
+            </h2>
+            {% if section.settings.mainsubheading != '' -%}
+              <p class="font-lausanne fw-200 mt-2 mb-2 gp-5-subheading">{{ section.settings.mainsubheading }}</p>
+            {%- endif %}
+          </div>
+          <div class="gp-5-bottom">
+            <div class="black-text  product-box-border    gp-5-price-points ">
+              <div class="d-flex justify-content-between font-lausanne gp-5-var">
+                <div class="gp-5-price">
+                  <del style="color:#707279; font-size:16px;" class="gp-5-del-price">
+                    {{- section.settings.delPrice -}}</del
+                  >&nbsp;<span style="color:#A94442; font-size:16px;" class="font-lausanne fw-500 gp-5-sell-price">
+                    {{- section.settings.price -}}
+                  </span>
+                </div>
+                <div style="color:#434448;">Subscribe & Save 50%</div>
+              </div>
+              {% if section.settings.tab_description_1 != blank %}
+                <div
+                  style="color:#11322C;"
+                  class="tbdesc font-lausanne gp-19-var-short-desc fw-400 gp-5-var gp-5-var-ab link-to-variant variant_1 show"
+                >
+                  {{ section.settings.tab_description_1 }}
+                </div>
+              {% endif %}
+
+              {% if section.settings.tab_description_2 != blank %}
+                <div
+                  style="color:#434448;"
+                  class="tbdesc font-lausanne fw-400 gp-5-var gp-5-var-ab link-to-variant variant_2 "
+                >
+                  {{ section.settings.tab_description_2 }}
+                </div>
+              {% endif %}
+              <ul class="gp-5-points text-left">
+                {% for block in section.blocks %}
+                  {% if block.type == 'text' %}
+                    <li class="font-lausanne fw-200 gray-text link-to-variant variant_{{ block.settings.listClass }} ">
+                      {{ block.settings.listItem }}
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+            <form
+              @submit.prevent="console.log('submitted')"
+              x-ref="product_form_{{ section.index}}"
+              enctype="multipart/form-data"
+              accept-charset="UTF-8"
+              id="product_form_{{ section.index}}"
+              class="shopify-product-form"
+              data-product-id="{{product.id}}"
+              action="/cart/add"
+            >
+              <input type="hidden" name="id" class="input_variant_id" value="{{ section.settings.varaiantid }}">
+              <input type="hidden" class="discout_input" name="discount" value="{{ section.settings.discount }}">
+              {% assign discount_titles = '' %}
+
+              {% for item in cart.items %}
+                {% for discount in item.discounts %}
+                  {% if discount_titles != '' %}
+                    {% assign discount_titles = discount_titles | append: ',' %}
+                  {% endif %}
+                  {% assign discount_titles = discount_titles | append: discount.title %}
+                {% endfor %}
+              {% endfor %}
+
+              <input type="hidden" name="already_discount" value="{{ discount_titles }}">
+              <input type="hidden" name="quantity" value="1">
+              {% if section.settings.isSub %}
+                <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                <input
+                  class="input_selling_plan"
+                  type="hidden"
+                  name="selling_plan"
+                  value="{{section.settings.sellingid}}"
+                >
+              {% else %}
+                <input type="checkbox" name="purchase_type" value="PAYG" checked class="d-none">
+              {% endif %}
+            </form>
+
+            <div class="text-left  g4-btn-wrapper m-auto">
+              {% if section.settings.redirectLink %}
+                <a
+                  class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                  href="{{ section.settings.redirectLink }}"
+                >
+                  {% if section.settings.outOfStock %}
+                    Out of Stock
+                  {% else %}
+                    {{ section.settings.btnText }}
+                  {% endif -%}
+                </a>
+              {% else %}
+                {% if section.settings.isCheckout %}
+                  <span
+                    {% if section.settings.toast %}
+                      x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ section.index}}, false, false, $event)"
+                    {% else %}
+                      x-on:click="Purdy.CheckoutLandingV2($refs.product_form_{{ section.index}}, $event)"
+                    {% endif %}
+
+                    class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn ga4-checkout-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+
+                    data-add-to-cart="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url="{{ section.settings.targetUrl }}"
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="{{ section.settings.dataTitle }}"
+                    data-event-value="{{ section.settings.eventValue }}"
+                    data-item-id="{{ section.settings.sku }}"
+                    data-option-index="{{ section.settings.optionIndex }}"
+                    data-item-name="{{ product.title }}"
+                    data-quantity="{{ section.settings.quantity }}"
+                    data-price="{{ localization.country.currency.symbol }}{{ section.settings.price }}"
+                    data-checkout="true"
+                    {% if section.settings.sellingid != blank %}
+                      data-item-type="subscription"
+                    {% else %}
+                      data-item-type="PAYG"
+                    {% endif %}
+                  >
+                    {% if section.settings.outOfStock %}
+                      Out of Stock
+                    {% else %}
+                      <span class="buy-text font-lausanne fw-400">{{ section.settings.btnText }}</span> |
+                      <span class="deleted-price font-lausanne fw-400 font-16 white-text gp-5-del-price">
+                        {{ localization.country.currency.symbol }}
+                        {{- section.settings.delPrice -}}
+                      </span>
+                      <span class="font-lausanne fw-400 white-text gp-5-sell-price">
+                        {{- localization.country.currency.symbol -}}
+                        {{- section.settings.price }}
+                      </span>
+                    {% endif -%}
+                  </span>
+                {% else %}
+                  <span
+                    class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn ga4-checkout-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                    {% if section.settings.toast %}
+                      x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ section.index}}, false, false, $event)"
+                    {% else %}
+                      x-on:click="Purdy.AddToCart($refs.product_form_{{ section.index}}, true, false, $event)"
+                    {% endif %}
+                    {% if section.settings.dataTrack %}
+                      data-add-to-cart="true"
+                      data-page-url="{{ request.path }}"
+                      data-target-url="{{ section.settings.targetUrl }}"
+                      data-index="{{ section.index }}"
+                      data-funnel-stage="{{ section.settings.funnel_stage }}"
+                      data-module="{{ section.settings.dataModule }}"
+                      data-event-label="{{ section.settings.dataTitle }}"
+                      data-event-value="{{ section.settings.eventValue }}"
+                      data-item-id="{{ section.settings.sku }}"
+                      data-option-index="{{ section.settings.optionIndex }}"
+                      data-item-name="{{ product.title }}"
+                      data-quantity="{{ section.settings.quantity }}"
+                      data-price="{{ localization.country.currency.symbol }}{{ section.settings.price }}"
+                      {% if section.settings.sellingid != blank %}
+                        data-item-type="subscription"
+                      {% else %}
+                        data-item-type="PAYG"
+                      {% endif %}
+                    {% endif %}
+                  >
+                    {% if section.settings.outOfStock %}
+                      Out of Stock
+                    {% else %}
+                      <span class="buy-text">{{ section.settings.btnText }} </span> |
+                      <span class="deleted-price font-lausanne fw-400 font-16 white-text gp-5-del-price">
+                        {{ localization.country.currency.symbol }}
+                        {{- section.settings.delPrice -}}
+                      </span>
+                      <span class="font-lausanne fw-400 white-text gp-5-sell-price">
+                        {{- localization.country.currency.symbol -}}
+                        {{- section.settings.price }}
+                      </span>
+                    {% endif -%}
+                  </span>
+                {% endif %}
+              {% endif -%}
+              {% if section.settings.guaranteeText %}
+                <div
+                  class="text-center font-lausanne fw-400 theme-text mt-2 guarantee-text"
+                  style="font-size: 15.5px; color: {{ section.settings.guaranteeTextColor }}"
+                >
+                  {{ section.settings.guaranteeDescription }}
+                </div>
+              {% endif %}
+            </div>
+            <p class="moneybackguarateetext text-center fw-600 font-lausanne mt-12">{{ section.settings.moneyback }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Buy box 434",
+  "settings": [
+    {
+      "type": "text",
+      "id": "moneyback",
+      "label": "30-day money-back guarantee",
+      "default": "30-day money-back guarantee"
+    },
+    {
+      "type": "checkbox",
+      "id": "toast",
+      "label": "Enable Toast",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "reviewCount",
+      "label": "Review Count",
+      "default": "9,500+"
+    },
+    {
+      "type": "checkbox",
+      "id": "outOfStock",
+      "label": "Enable If product out Of Stock",
+      "default": true
+    },
+    {
+      "id": "isSub",
+      "label": "Product subscription",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "id": "isCheckout",
+      "label": "Go to Checkout",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "guaranteeText",
+      "label": "Show Guarantee Text",
+      "default": false
+    },
+    {
+      "type": "text",
+      "id": "guaranteeDescription",
+      "label": "Guarantee Description"
+    },
+    {
+      "type": "color",
+      "id": "guaranteeTextColor",
+      "label": "Guarantee Text Color",
+      "default": "#434448"
+    },
+    {
+      "id": "scrollto",
+      "label": "Review Scroll to",
+      "type": "text"
+    },
+    {
+      "type": "color",
+      "id": "review_text_color",
+      "label": "Reviews text color"
+    },
+    {
+      "id": "background",
+      "label": "Background color",
+      "type": "color"
+    },
+    {
+      "id": "p_id",
+      "label": "Product Section Scroll ID",
+      "type": "text"
+    },
+    {
+      "id": "landingproduct",
+      "label": "Choose the landing product",
+      "type": "product"
+    },
+    {
+      "type": "text",
+      "id": "varaiantid",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "sellingid",
+      "label": "Selling ID"
+    },
+    {
+      "type": "text",
+      "id": "sku",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discount",
+      "label": "Discount Code"
+    },
+    {
+      "id": "tab_description_1",
+      "label": "Tab 1 Description",
+      "default": "Transform your home with new natural scents each season",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Section Class"
+    },
+    {
+      "type": "html",
+      "id": "mainheading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "html",
+      "id": "mainsubheading",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Product Title"
+    },
+    {
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "html"
+    },
+    {
+      "id": "price",
+      "label": "Price",
+      "type": "text"
+    },
+    {
+      "id": "delPrice",
+      "label": "Compare Price",
+      "type": "text"
+    },
+    {
+      "id": "btnText",
+      "label": "Button label",
+      "type": "text",
+      "default": "BUY NOW"
+    },
+    {
+      "id": "redirectLink",
+      "label": "Button Link",
+      "type": "url"
+    },
+    {
+      "id": "ctaDetails",
+      "label": "Button Details Text",
+      "type": "html"
+    },
+    {
+      "id": "shopbtnLabel",
+      "label": "Shop Button label",
+      "type": "text"
+    },
+    {
+      "id": "shopbtnLink",
+      "label": "Shop Button link",
+      "type": "url"
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+
+    {
+      "type": "checkbox",
+      "id": "heading-position",
+      "label": "Heading After Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "before-mobile",
+      "label": "Heading before Image"
+    },
+    {
+      "type": "header",
+      "content": "GA4"
+    },
+    {
+      "id": "dataTrack",
+      "label": "Data Track",
+      "type": "checkbox"
+    },
+    {
+      "id": "targetUrl",
+      "label": "Target Url",
+      "type": "url"
+    },
+
+    {
+      "id": "index",
+      "label": "Index",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "funnel_stage",
+      "label": "Funnel Stage",
+      "type": "text",
+      "default": "landing_page"
+    },
+    {
+      "id": "dataModule",
+      "label": "Module",
+      "type": "text",
+      "default": "announcement_bar"
+    },
+    {
+      "id": "dataTitle",
+      "label": "Event Label",
+      "type": "text",
+      "default": "get_your_offer"
+    },
+    {
+      "id": "eventValue",
+      "label": "Event Value",
+      "type": "text",
+      "default": "shop_anchor"
+    },
+    {
+      "id": "optionIndex",
+      "label": "Option Index",
+      "type": "text"
+    },
+    {
+      "id": "quantity",
+      "label": "Item Quantity",
+      "type": "number",
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "listClass",
+          "label": "Add list Class",
+          "default": "1 show",
+          "info": "add number 1, 2, 3 according to related variant number"
+        },
+        {
+          "type": "html",
+          "id": "listItem",
+          "label": "Add Item"
+        }
+      ]
+    },
+
+    {
+      "type": "productImage",
+      "name": "Product Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "productImage2",
+      "name": "Product Image 2",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage_2",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video_2",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL_2",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster_2",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "aboutproduct",
+      "name": "About Product",
+      "settings": [
+        {
+          "type": "text",
+          "id": "text-heading",
+          "label": "Heading"
+        },
+        {
+          "type": "color",
+          "id": "heading-color",
+          "label": "Heading Color"
+        },
+        {
+          "type": "text",
+          "id": "text-detail",
+          "label": "About Text"
+        }
+      ]
+    },
+    {
+      "type": "variant",
+      "name": "Add Product",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "outofstock",
+          "label": "Make Variant Out of Stock",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "varCount",
+          "label": "Variant Number"
+        },
+        {
+          "type": "text",
+          "id": "text_heading",
+          "label": "Heading"
+        },
+        {
+          "type": "text",
+          "id": "discount",
+          "label": "Discount Code"
+        },
+        {
+          "type": "product",
+          "id": "variantProduct",
+          "label": "Choose Product"
+        },
+        {
+          "type": "text",
+          "id": "delPrice",
+          "label": "Del Price"
+        },
+        {
+          "type": "text",
+          "id": "sellPrice",
+          "label": "Sell Price"
+        },
+        {
+          "type": "image_picker",
+          "id": "varImage",
+          "label": "Image"
+        },
+
+        {
+          "type": "text",
+          "id": "varaiantid",
+          "label": "Variant ID"
+        },
+        {
+          "type": "text",
+          "id": "sellingid",
+          "label": "Selling ID"
+        },
+        {
+          "type": "text",
+          "id": "sku",
+          "label": "SKU"
+        },
+        {
+          "type": "header",
+          "content": "GA4"
+        },
+        {
+          "id": "dataTrack",
+          "label": "Data Track",
+          "type": "checkbox",
+          "default": true
+        },
+        {
+          "id": "targetUrl",
+          "label": "Target Url",
+          "type": "url"
+        },
+        {
+          "id": "index",
+          "label": "Index",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "id": "funnel_stage",
+          "label": "Funnel Stage",
+          "type": "text",
+          "default": "landing_page"
+        },
+        {
+          "id": "dataModule",
+          "label": "Module",
+          "type": "text",
+          "default": "announcement_bar"
+        },
+        {
+          "id": "dataTitle",
+          "label": "Event Label",
+          "type": "text",
+          "default": "get_your_offer"
+        },
+        {
+          "id": "eventValue",
+          "label": "Event Value",
+          "type": "text",
+          "default": "shop_anchor"
+        },
+        {
+          "id": "optionIndex",
+          "label": "Option Index",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Buy box 434"
+    }
+  ]
+}
+{% endschema %}

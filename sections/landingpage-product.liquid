@@ -1,0 +1,251 @@
+{% if section.settings.enable %}
+{% assign product = section.settings.bestseller %}
+<style>
+  .landing-page-images-wrapper{  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  .main-landing-image{width:calc(100% - 120px);}
+.thumb-landing-images{width: 90px;
+display: flex;
+height: 100%;
+flex-direction: column;
+justify-content: space-between;}
+  .thumb-landing-images > div{margin-bottom:10px; cursor:pointer;}
+  .landing-page .block-img-wrapper{height:auto !important;}
+  .desktop-hide{display:none;}
+   .lp-product-price del{
+    text-decoration:none;
+    position:relative;
+  }
+  .lp-product-price del:after{
+  content:'';
+  position:absolute;
+  left:0;
+  top:50%;
+  height:2px;
+  width:100%;
+  background:#3d5065;
+  }
+  @media(max-width:768px){
+   .main-landing-image{width:100%;margin-bottom:15px;}
+.thumb-landing-images{flex-direction: row;
+justify-content: space-between;height:auto;width:100%;}
+  .thumb-landing-images > div{flex:1;margin:5px;}
+  .best-seller-wrapper  .w-40{order:2;}
+  .best-seller-wrapper  .w-60{order:1; margin-bottom:15px;}
+  
+  .desktop-hide{display:block;}
+  .mobile-hide{display:none;}
+  .heading-2.lp-product-price{
+    font-size:26px !important;
+  }
+ 
+  }
+  
+</style>
+<div class="best-seller-section py-4" style="background:#fff;" id="customer-offer">
+        <div class="container py-0">
+                 
+             <h3 class="heading-2 my-5 text-center theme-text">{{section.settings.heading}}</h3>    
+  
+            <div class="d-flex flex-wrap best-seller-wrapper">
+               {% assign s_variant = product.selected_or_first_available_variant %}
+		       {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+                <div class="w-40 p-2" x-data="{ qty:1}" @quantity-changed.window="qty = $event.detail.quantity">
+                    <div class="best-product-details">
+                      
+                        <h2 class="product-title theme-text">Starter Kit</h2>
+                        <p class="normal-text theme-text mb-0 about-text-heading text-left mobile-hide">This Kit Includes:</p>
+                          <ul class="home-best-seller-details mobile-hide">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'text' %}
+                            <li class="">
+                          <p class="normal-text theme-text">{{block.settings.details}}</p>
+                            </li>
+                              {% endif %}
+                          {% endfor %}
+                          </ul>
+                      <div class="my-3">
+                        <h2 class="heading-2 theme-text lp-product-price"> <del><small>£30</small></del> <span style="color:#FCA722"> £15</span></h2>
+                          <p style="color:#FCA722">Use Code: FREESPA</p>
+                      </div>
+                      <div class="product-varient-selection ">
+                              <div class="product-buy-btn mt-0 mb-3">
+                       
+                                    <button class="btn theme-btn checkout-btn" style="background:#FCA722;border-color:#FCA722"  id="checkout-btn">Quick buy</button>
+                        <div class="d-flex justify-content-around theme-text mt-1"><small>100% Secure Checkout</small><small>Offer Valid for 7 Days</small></div>    
+                        </div>
+                        </div> 
+  <p class="normal-text theme-text mb-0 about-text-heading text-left desktop-hide">This Kit Includes:</p>
+                          <ul class="home-best-seller-details desktop-hide">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'text' %}
+                            <li class="my-3">
+                          <p class="normal-text theme-text">{{block.settings.details}}</p>
+                            </li>
+                              {% endif %}
+                          {% endfor %}
+                          </ul>
+                      <p class="theme-text mt-3 text-left">Try Purdy & Figg risk-free with our Starter Kit. Get 2/3 months of cleaning, a glass bottle for life and a re-usable microfibre cloth. If you don’t love it get a full refund guaranteed with no quibbles and cancel your plan.</p>
+                       
+                    </div>
+                </div>
+              <div class="w-60 text-center  landing-page-images-wrapper">
+                <div class="main-landing-image">
+                  	{% assign productImage = section.settings.productImage | img_url: '800x' %}
+                    <img loading="lazy" class="img-responsive w-100 lp-img" width="600px"  src="{{productImage}}" alt="{{productImage}}">
+                </div>   
+                <div class="thumb-landing-images">
+                  {% for block in section.blocks %}
+                    {% if block.type == 'thumb' %}
+                      {% assign thumbImage = block.settings.thumb | img_url: '90x100', crop : 'center' %}
+                      {% assign thumbmainImage = block.settings.thumb | img_url: 'master' %}
+                  <div class="thumb-landing-img" data-img="{{ thumbmainImage }}">
+                    <img loading="lazy" class="img-responsive w-100" width="100px"  src="{{thumbImage}}" alt="{{thumbImage}}">
+                  </div>
+                      {% endif %}
+                    {% endfor %}
+                </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+<script>
+  $('.checkout-btn').on('click', function(){
+    $(this).addClass('disabled');
+ console.log(document.referrer);
+data = 
+  {
+    quantity: 1,
+    id: 42857385099491,
+    selling_plan:3091923171
+  }
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4){
+          window.location.href = '/checkout/?discount=PREMIUMSPA';
+      }
+  };
+  xhr.open('POST', '/cart/add.js');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(data));
+    })
+</script>
+<style>
+  #checkout-btn.disabled{
+    pointer-events:none;
+    position:relative;
+    color:transparent;
+  }
+  #checkout-btn.disabled:before{
+    content:'';
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    border:5px solid #fff;
+    border-top-color:#ccc;
+    position:absolute;
+    top:calc(50% - 12px);
+    left:calc(50% - 12px);
+  }
+  .home-best-seller-details li{
+    background-image:url({{'check-box.png' | asset_url }})
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+  $(".thumb-landing-img").click(function(){
+    event.preventDefault();
+    var img = $(this).data("img");
+    console.log(img);
+    $('.lp-img').attr('src', img);
+  })
+  })
+</script>
+{% schema %}
+  {
+    "name": "New Customer Offer",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+{
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+{
+            "type": "product",
+            "id": "bestseller",
+            "label": "Select Product"
+          },
+{
+            "type": "text",
+            "id": "details",
+            "label": "About Product"
+          },
+{
+            "type": "image_picker",
+            "id": "Dimage",
+            "label": "Product Desktop Image"
+          },
+{
+            "type": "image_picker",
+            "id": "productImage",
+            "label": "Product Mobile Image"
+          },
+{
+            "type": "color",
+            "id": "mobilebgcolor",
+            "label": "Mobile Background Color"
+          },
+{
+            "type": "text",
+            "id": "btnlabel",
+            "label": "Button Label",
+"default": "Quick Buy"
+          }
+		
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [ 
+
+		{
+            "type": "text",
+            "id": "details",
+            "label": "Details"
+          }
+        ]
+      },
+      {
+        "type": "thumb",
+        "name": "Thumbnail Images",
+        "settings": [ 
+
+		{
+            "type": "image_picker",
+            "id": "thumb",
+            "label": "Thumbnail Images"
+          }
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "New Customer Offer"
+		}
+	]
+  }
+{% endschema %}
+

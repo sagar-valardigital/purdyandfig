@@ -1,0 +1,154 @@
+<div class="{{ section.settings.className }}">
+  <div
+    style="background-color:{{section.settings.background}};"
+    class="py-5  image-with-text image-with-text-2"
+  >
+    <div class="container">
+      <h2 class="heading-2  {{section.settings.textcolor}} {% if section.settings.heading-position%} mobile-hide {% endif %} desktop-hide mt-0 text-center">
+        {{ section.settings.heading }}
+      </h2>
+      <div class="font-lausanne fw-200 {{section.settings.textcolor}} {% if section.settings.content-position%} mobile-hide {% endif %} desktop-hide">
+              {{ section.settings.details }}
+      </div>
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div class="w-50 {% if section.settings.layout %} order-2 {%endif%}">
+          <div class="two-women">
+            {% if section.settings.image %}
+              {% assign mImage = section.settings.image | img_url: '800x' %}
+              {% assign mmImage = section.settings.mimage | img_url: '800x' %}
+              <img
+                loading="lazy"
+                src="{{mImage}}"
+                width="800px"
+                height="800px"
+                class="img-responsive w-100 h-auto mobile-hide"
+                alt="{{ section.settings.image.alt }}"
+              >
+              <img
+                loading="lazy"
+                src="{{mmImage}}"
+                width="800px"
+                height="800px"
+                class="img-responsive w-100 h-auto desktop-hide"
+                alt="{{ section.settings.mimage.alt }}"
+              >
+            {% endif %}
+          </div>
+        </div>
+        <div class="w-50  d-flex justify-content-start {% if section.settings.layout %} order-1 {%endif%} ">
+          <div class="two-women-details  pb-2 {{section.settings.width}}">
+            <h2 class="heading-2 font-gtsuper {{section.settings.textcolor}} {% if section.settings.heading-position%} {% else %}mobile-hide{% endif %}">
+              {{ section.settings.heading }}
+            </h2>
+            <div class="font-lausanne fw-200 {{section.settings.textcolor}} {% if section.settings.content-position%} {% else %}mobile-hide{% endif %}">
+              {{ section.settings.details }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with Text 346",
+    "settings": [
+
+      {
+      "type": "text",
+      "id": "className",
+      "label": "Add Section class Name"
+    },
+{
+            "type": "color",
+            "id": "textcolor",
+            "label": "Select text color",
+            "default": "#3541BF"
+          },
+{
+            "type": "color",
+            "id": "background",
+            "label": "Select background color",
+
+            "default": "#ffffff"
+          },
+{
+            "type": "select",
+            "id": "width",
+            "label": "Select text area width",
+            "options": [
+              {
+                "value": "w-90",
+                "label": "90%"
+              },
+              {
+                "value": "w-80",
+                "label": "80%"
+              },
+{
+                "value": "w-70",
+                "label": "70%"
+              },
+              {
+                "value": "w-60",
+                "label": "60%"
+              }
+            ],
+            "default": "w-80"
+          },
+{
+            "type": "checkbox",
+            "id": "layout",
+            "label": "Image on right"
+
+          },
+{
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+{
+      "type": "image_picker",
+      "id": "image",
+      "label": "Add Desktop Image"
+    },
+      {
+      "type": "image_picker",
+      "id": "mimage",
+      "label": "Add Mobile Image"
+    },
+
+{
+      "type": "html",
+      "id": "details",
+      "label": "Detail Text"
+    },
+
+{
+      "type": "header",
+      "content": "Mobile"
+    },
+
+{
+            "type": "checkbox",
+            "id": "heading-position",
+            "label": "Heading After Image"
+
+          },
+
+{
+            "type": "checkbox",
+            "id": "content-position",
+            "label": "Content After Image"
+
+          }
+	],
+
+	"presets": [
+		{
+			"name": "Image With Text 346"
+		}
+	]
+  }
+{% endschema %}

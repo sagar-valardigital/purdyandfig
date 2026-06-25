@@ -1,0 +1,1045 @@
+{% comment %}
+  Buy Box - Stacked Plans Layout
+  Combines the stacked plan UI from pf240-buy-box with metaobject-based configuration from buy-box-v3
+  - Uses metaobjects for variant IDs (buy_box_v4)
+  - Uses metaobject_list for galleries (buy_box_variant_gallery)
+  - Auto-fetches selling plans from variant.selling_plan_allocations
+{% endcomment %}
+
+{% comment %} Find default variant block (marked as default) or fallback to first plan block {% endcomment %}
+{% assign default_variant_block = null %}
+{% assign first_plan_block_fallback = null %}
+{% assign has_explicit_default = false %}
+
+{% comment %} First pass: look for a block with default_variant checked {% endcomment %}
+{% for block in section.blocks %}
+  {% if block.type == 'plan' %}
+    {% if first_plan_block_fallback == null %}
+      {% assign first_plan_block_fallback = block %}
+    {% endif %}
+    {% if block.settings.default_variant == true %}
+      {% assign default_variant_block = block %}
+      {% assign has_explicit_default = true %}
+      {% break %}
+    {% endif %}
+  {% endif %}
+{% endfor %}
+
+{% comment %} If no default found, use first plan block {% endcomment %}
+{% unless default_variant_block %}
+  {% assign default_variant_block = first_plan_block_fallback %}
+{% endunless %}
+
+{% if default_variant_block %}
+  {% assign product = default_variant_block.settings.variantProduct %}
+  
+  {% comment %} Extract variant ID from metaobject {% endcomment %}
+  {% assign default_variant_mo = default_variant_block.settings.variantid %}
+  {% if default_variant_mo %} 
+    {% assign default_variant_id = default_variant_mo.variant_id | replace: 'gid://shopify/ProductVariant/', "" %}
+  {% else %}
+    {% assign default_variant_id = null %}
+  {% endif %}
+  
+  {% comment %} Find the variant object from product {% endcomment %}
+  {% assign s_variant = null %}
+  {% if default_variant_id %}
+    {% for v in product.variants %}
+      {% assign v_id_str = v.id | append: '' %}
+      {% if v_id_str == default_variant_id %}
+        {% assign s_variant = v %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+  {% unless s_variant %}
+    {% assign s_variant = product.selected_or_first_available_variant %}
+  {% endunless %}
+  
+  {% comment %} Get selling plan from variant's first selling plan allocation {% endcomment %}
+  {% assign default_selling_plan_id = null %}
+  {% if s_variant.selling_plan_allocations.size > 0 %}
+    {% assign default_selling_plan_id = s_variant.selling_plan_allocations[0].selling_plan.id %}
+  {% endif %}
+{% endif %}
+
+{% comment %} Calculate subscription discount {% endcomment %}
+{% if s_variant.selling_plan_allocations.size > 0 %}
+  {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+  {% assign sub_discount_percentage = s_variant.price | minus: sub_discount_price | times: 100 | divided_by: s_variant.price %}
+{% endif %}
+
+<style>
+  .link-to-variant {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .link-to-variant.show {
+    display: block !important;
+    height: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    overflow: visible;
+  }
+
+  @media(max-width:768px) {
+    .gp-5-del-price, .gp-5-sell-price, .plan-heading-label {
+      font-size: 14px;
+    }
+    .label-bestValue {
+      font-size: 12px;
+    }
+  }
+
+  .plan_cus_sub_heading {
+    margin-left: -35px;
+  }
+
+  .new-product-gallery-wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .new-product-gallery-wrapper-thumb {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 288px;
+    width: 80%;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img {
+    padding: 5px;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img img {
+    border-radius: 4px;
+    border: 2px solid transparent;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current {
+    position: relative;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    top: 5px;
+    left: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #00000040;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current img {
+    border: 2px solid #0F2D28;
+  }
+.buy--plan label.buy-plan-label-have-tag:before{
+  top:30px;
+}
+  @media(max-width:768px) {
+    .new-product-gallery-wrapper-thumb .main-product-img {
+      width: 42px !important;
+      height: 42px;
+    }
+    .new-product-gallery-wrapper-thumb .slick-track {
+      display: flex;
+      justify-content: center;
+    }
+    .scent-tag {
+      font-size: 10px;
+    }
+    #body .multi-step-product-section .heading-2 {
+      margin-bottom: 12px !important;
+    }
+  }
+
+  .multi-gallery-slider:not(.slick-initialized) .main-product-img:not(:first-child) img,
+  .multi-gallery-slider-thumbnail:not(.slick-initialized) .main-product-img:not(:first-child) img {
+    display: none;
+  }
+</style>
+
+<div class="{{ section.settings.className }} gp--product-wrapper py-80" id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};" x-data="{qty:1}">
+  <div class="position-relative">
+    
+    {% comment %} Main Heading {% endcomment %}
+    {% if section.settings.mainheading != blank %}
+    <div class="mb-4 container heading-2-wrapper">
+      <h2 class="heading-2 font-gtsuper fw-400 mt-0 text-center m-text-left">
+        {{ section.settings.mainheading }}
+      </h2>
+    </div>
+    {% endif %}
+    {% if section.settings['before-mobile'] %}
+      <div class="mb-3 container desktop-hide">
+         <h2 class="heading-3 font-lausanne fw-500 mb-0 mt-0">
+              {{ section.settings.heading }}
+            </h2>
+            {% if section.settings.subheading != blank %}
+            <p class="mt-2 mb-2 font-lausanne fw-300" style="color:#212121;">
+              {{ section.settings.subheading }}
+            </p>
+            {% endif %}
+            
+            {% comment %} Review Stars {% endcomment %}
+            {% if section.settings.show_reviews %}
+            <div class="text-left mt-2 reviews-scroll-block">
+              <div class="value-sans theme-text mt-0 mb-3 stars-img-review click-scroll"
+                data-target="{{ section.settings.scrollto }}">
+                {% render 'stars-reskin', count: section.settings.review_count %}
+              </div>
+            </div>
+            {% endif %}
+      </div>
+    {% endif %}
+
+    <div class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container">
+      
+      {% comment %} Gallery Section {% endcomment %}
+      <div class="w-50 gp--product-gallery" id="{{ section.settings.scrollId }}">
+        <div class="position-relative">
+          
+          {% comment %} Render galleries for each plan {% endcomment %}
+          {% assign plan_gallery_count = 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'plan' %}
+              {% assign plan_gallery_count = plan_gallery_count | plus: 1 %}
+              
+              <div class="link-to-variant product_gallery_buybox g_plan_{{ plan_gallery_count }} {% if block.id == default_variant_block.id %}show{% endif %} position-relative">
+                <div class="slider__block">
+                  <div class="multi-gallery-slider new-product-gallery-wrapper mobile-hide">
+                    
+                    {% comment %} Render plan gallery from metaobject_list {% endcomment %}
+                    {% assign plan_gallery_list = block.settings.plan_gallery %}
+                    {% if plan_gallery_list.count > 0 %}
+                      {% for gallery_item in plan_gallery_list %}
+                        {% for img in gallery_item.desktop_images.value %}
+                          
+                          <div class="main-product-img">
+                            <picture>
+                              <source media="(min-width:650px)" srcset="{{ img | image_url: width: 800, crop: 'center' }}">
+                              <source media="(max-width:650px)" srcset="{{ img | image_url: width: 800, crop: 'center' }}">
+                              <img class="img-responsive w-100 h-auto"
+                                src="{{ img | image_url: width: 800, crop: 'center' }}" width="800" height="700" alt="{{ img.alt }}">
+                            </picture>
+                          </div>
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+                    
+                  </div>
+                  <div class="multi-gallery-slider new-product-gallery-wrapper desktop-hide">
+                    
+                    {% comment %} Render plan gallery from metaobject_list {% endcomment %}
+                    {% assign plan_gallery_list = block.settings.plan_gallery %}
+                    {% if plan_gallery_list.count > 0 %}
+                      {% for gallery_item in plan_gallery_list %}
+                        {% for img in gallery_item.mobile_images.value %}
+                          
+                          <div class="main-product-img">
+                            <picture>
+                              <source media="(min-width:650px)" srcset="{{ img | image_url: width: 800, crop: 'center' }}">
+                              <source media="(max-width:650px)" srcset="{{ img | image_url: width: 800, crop: 'center' }}">
+                              <img class="img-responsive w-100 h-auto"
+                                src="{{ img | image_url: width: 800, crop: 'center' }}" width="800" height="700" alt="{{ img.alt }}">
+                            </picture>
+                          </div>
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+                    
+                  </div>
+                  
+                  {% comment %} Thumbnail Gallery {% endcomment %}
+                  <div class="multi-gallery-slider-thumbnail new-product-gallery-wrapper-thumb">
+                    {% if plan_gallery_list.count > 0 %}
+                      {% for gallery_item in plan_gallery_list %}
+                        {% for img in gallery_item.desktop_images.value %}
+                          <div class="main-product-img">
+                            <img class="img-responsive w-100 h-auto"
+                              src="{{ img | img_url: '100x' }}" width="100" height="100" alt="{{ img.alt }}">
+                          </div>
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+              
+            {% endif %}
+          {% endfor %}
+          
+        </div>
+      </div>
+
+      {% comment %} Content Section {% endcomment %}
+      <div class="w-50 d-flex justify-content-center">
+        <div class="w-90 bg-white">
+          
+          {% comment %} Product Heading {% endcomment %}
+          <div class="gp-5-top {% if section.settings.before-mobile %} mobile-hide {% endif %}">
+            <h2 class="heading-3 font-lausanne fw-500 mb-0 mt-0">
+              {{ section.settings.heading }}
+            </h2>
+            {% if section.settings.subheading != blank %}
+            <p class="mt-2 mb-2 font-lausanne fw-300" style="color:#212121;">
+              {{ section.settings.subheading }}
+            </p>
+            {% endif %}
+            
+            {% comment %} Review Stars {% endcomment %}
+            {% if section.settings.show_reviews %}
+            <div class="text-left mt-2 reviews-scroll-block">
+              <div class="value-sans theme-text mt-0 mb-3 stars-img-review click-scroll"
+                data-target="{{ section.settings.scrollto }}">
+                {% render 'stars-reskin', count: section.settings.review_count %}
+              </div>
+            </div>
+            {% endif %}
+          </div>
+
+          {% comment %} Description {% endcomment %}
+          {% if section.settings.description != blank %}
+          <div class="black-text mt-3 gp-5-price-points mb-3 product-box-border">
+            {{ section.settings.description }}
+          </div>
+          {% endif %}
+
+          {% comment %} Variant Selection (Scent Selection) {% endcomment %}
+          {% if section.settings.show_variant_selection %}
+          <div class="gp-5-bottom link-variants-wrapper">
+            {% if section.settings.variant_label != blank %}
+            <div class="mb-2 mt-2 choose-secnt-label font-lausanne">
+              {{ section.settings.variant_label }}
+            </div>
+            {% endif %}
+            
+            <form autocomplete="off">
+              <ul class="list-unstyle gp--product-variants">
+                {% assign checked = true %}
+                {% assign var_count = 0 %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'variant' %}
+                    {% assign var_count = var_count | plus: 1 %}
+                    {% assign product_v = block.settings.variantProduct %}
+                    
+                    {% comment %} Extract variant ID from metaobject {% endcomment %}
+                    {% assign variant_mo = block.settings.variantid %}
+                    {% if variant_mo %}
+                      {% assign actual_variant_id = variant_mo.variant_id | replace: "gid://shopify/ProductVariant/","" %}
+                    {% else %}
+                      {% assign actual_variant_id = null %}
+                    {% endif %}
+                    
+                    {% comment %} Find the variant object {% endcomment %}
+                    {% assign current_variant = null %}
+                    {% if actual_variant_id %}
+                      {% for v in product_v.variants %}
+                        {% assign v_id_str = v.id | append: '' %}
+                        {% if v_id_str == actual_variant_id %}
+                          {% assign current_variant = v %}
+                          {% break %}
+                        {% endif %}
+                      {% endfor %}
+                    {% endif %}
+                    {% unless current_variant %}
+                      {% assign current_variant = product_v.selected_or_first_available_variant %}
+                    {% endunless %}
+                    
+                    {% comment %} Get selling plan {% endcomment %}
+                    {% assign selling_plan_id = null %}
+                    {% if current_variant.selling_plan_allocations.size > 0 %}
+                      {% assign selling_plan_id = current_variant.selling_plan_allocations[0].selling_plan.id %}
+                    {% endif %}
+                    
+                    <li data-title="{{ block.settings.text_heading | downcase }}"
+                      class="{% if block.settings.outofstock %}disabled var-out-of-stock{% endif %}">
+                      <input autocomplete="off"
+                        class="gp--product-variant form_s{{ var_count }} {{ section.settings.className }}"
+                        data-plantype="subscription"
+                        data-name="{{ block.settings.text_heading | handle }}"
+                        data-gallery="variant_{{ var_count }}"
+                        data-planid="{{ selling_plan_id }}"
+                        data-variantid="{{ actual_variant_id }}"
+                        data-sku="{{ block.settings.sku }}"
+                        data-discount="{{ block.settings.discount }}"
+                        data-price="{{ block.settings.price }}"
+                        data-deleted-price="{{ block.settings.delPrice }}"
+                        value="{{ actual_variant_id }}"
+                        data-productid="{{ product_v.id }}"
+                        data-variantclass="variant_{{ var_count }}"
+                        type="radio"
+                        name="id_{{ section.id }}"
+                        id="id_{{ section.id }}_{{ block.settings.text_heading | escape }}"
+                        {% if current_variant.available and checked %}
+                          checked
+                          {% assign checked = false %}
+                        {% endif %}>
+                      <label class="font-lausanne fw-500 var_bg_{{ block.settings.text_heading | handle }}"
+                        for="id_{{ section.id }}_{{ block.settings.text_heading | escape }}"
+                        data-value="{{ block.settings.text_heading }}">
+                        {{ block.settings.text_heading }}
+                      </label>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </form>
+
+            {% comment %} Variant Descriptions {% endcomment %}
+            {% assign desc_count = 0 %}
+            {% for block in section.blocks %}
+              {% if block.type == 'variant' %}
+                {% assign desc_count = desc_count | plus: 1 %}
+                {% if block.settings.tab_description != blank %}
+                <div class="gp-19-var-short-desc gp-10-tab-desc mt-3 mb-3 gp-5-var gp-5-var-ab link-to-variant variant_{{ desc_count }} {% if desc_count == 1 %}show{% endif %}">
+                  {{ block.settings.tab_description }}
+                </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          {% endif %}
+
+            {% comment %} Single Form with All Stacked Plans {% endcomment %}
+            <form name="shopify-product-form" autocomplete="off" @submit.prevent="console.log('submitted')"
+              x-ref="product_form_stacked" enctype="multipart/form-data" accept-charset="UTF-8"
+              id="product_form_stacked" class="shopify-product-form"
+              data-product-id="{{ product.id }}" action="/cart/add">
+              
+              <div class="mt-0">
+                {% if section.settings.plan_heading != blank %}
+                <div class="mb-3 mt-0 font-lausanne fw-300 choose-secnt-label">
+                  {{ section.settings.plan_heading }}
+                </div>
+                {% endif %}
+
+                {% comment %} Render all plan blocks {% endcomment %}
+                {% assign plan_count = 0 %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'plan' %}
+                    {% assign plan_count = plan_count | plus: 1 %}
+                    
+                    {% comment %} Get variant reference for this plan {% endcomment %}
+                    {% assign plan_variant_ref = block.settings.variantid %}
+                    {% assign plan_product = block.settings.variantProduct %}
+                    {% assign plan_variant_id = null %}
+                    {% assign plan_selling_plan_id = null %}
+                    
+                    {% if plan_variant_ref %}
+                      {% comment %} Extract variant ID from referenced metaobject {% endcomment %}
+                      {% if plan_variant_ref.variant_id %}
+                        {% assign plan_variant_id = plan_variant_ref.variant_id | replace: "gid://shopify/ProductVariant/","" %}
+                      {% endif %}
+                      
+                      {% comment %} Find the variant and get selling plan {% endcomment %}
+                      {% if plan_variant_id and plan_product %}
+                        {% for v in plan_product.variants %}
+                          {% assign v_id_str = v.id | append: '' %}
+                         
+                          {% if v_id_str == plan_variant_id %}
+                            {% if v.selling_plan_allocations.size > 0 %}
+                              {% assign plan_selling_plan_id = v.selling_plan_allocations[0].selling_plan.id %}
+                            {% endif %}
+                            {% break %}
+                          {% endif %}
+                        {% endfor %}
+                      {% endif %}
+                    {% endif %}
+
+                    <div class="gp--paln-{{ plan_count }} buy--plan position-relative mt-1">
+                      <input autocomplete="off" type="radio"
+                        {% if block.id == default_variant_block.id %}checked{% endif %}
+                        data-scent-type="s{{ plan_count }}"
+                        data-index-order="{{ plan_count }}"
+                        id="buyplan_{{ plan_count }}_{{ section.id }}"
+                        name="buyplan_{{ section.id }}"
+                        class="buy_plan_radio_stacked buy_plan_radio_{{ plan_count }}"
+                        data-plantype="{%if block.settings.is_subscription %}subscription{% else %}one_time{% endif %}"
+                        data-section="id_{{ section.id }}"
+                        data-gallery="plan_{{ plan_count }}"
+                        
+                        data-planid="{%if block.settings.is_subscription %}{{ plan_selling_plan_id }}{% endif %}"
+                      data-discount="{{ block.settings.discount }}"
+                        data-variantid="{{ plan_variant_id }}"
+                        data-sku="{{ block.settings.sku }}"
+                        data-price="{{ block.settings.price }}"
+                        data-deleted-price="{{ block.settings.compare_price }}"
+                        data-qty="{{ block.settings.quantity }}">
+                      
+                      <label for="buyplan_{{ plan_count }}_{{ section.id }}" {% if block.settings.best_value %} style=
+                      "padding-top:30px;" class="buy-plan-label-have-tag"{% endif %}>
+                        {% if block.settings.best_value %}
+                        <span class="label-bestValue">{%if block.settings.best_value_text %}{{block.settings.best_value_text}}{%else%}Best Value{% endif %}</span>
+                        {% endif %}
+                        
+                        <div class="d-flex justify-content-between buy-block-text">
+                          <span class="font-lausanne fw-600 plan-heading-label">
+                            {{ block.settings.plan_heading }}
+                          </span>
+                          <span class="d-flex justify-content-end">
+                            <span class="text-decoration-line-through font-lausanne fw-600 gp-5-del-price">
+                              {{ block.settings.compare_price | money }}
+                            </span>
+                            <span class="gp-5-sell-price font-lausanne fw-600">
+                              {{ block.settings.price | money }}
+                            </span>
+                          </span>
+                        </div>
+
+                        <div class="d-flex" style="flex-direction: column;">
+                          {% if block.settings.plan_subheading != blank %}
+                          <p class="font-lausanne fw-400 include-starterkit">
+                            {{ block.settings.plan_subheading }}
+                          </p>
+                          {% endif %}
+                          
+                          {% if block.settings.features != blank %}
+                          <div class="font-lausanne fw-300">
+                            {{ block.settings.features }}
+                          </div>
+                          {% endif %}
+                        </div>
+                      </label>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+
+                {% comment %} Hidden form inputs {% endcomment %}
+                <input type="hidden" name="id" value="{{ default_variant_id }}" class="input_variant_id">
+                <input type="hidden" name="quantity" value="1">
+
+               <input
+                      autocomplete="off"
+                      type="checkbox"
+                      name="purchase_type"
+                      value="subscription"
+                      checked
+                      class="d-none gp--buyoption-input-stacked"
+                    >
+                <input type="hidden" name="selling_plan" value="{{ default_selling_plan_id }}" class="input_selling_plan">
+                <input
+                autocomplete="off"
+                type="hidden"
+                class="discout_input"
+                name="discount"
+                value="{{ default_variant_block.settings.discount }}"
+              >
+                
+                {% comment %} Check if all plans are out of stock {% endcomment %}
+                {% assign all_plans_out_of_stock = true %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'plan' and block.settings.out_of_stock == false %}
+                    {% assign all_plans_out_of_stock = false %}
+                    {% break %}
+                  {% endif %}
+                {% endfor %}
+                
+                {% comment %} Add to Cart Button inside form {% endcomment %}
+                <div class="text-left g4-btn-wrapper m-auto">
+                  {% unless all_plans_out_of_stock %}
+                    <span x-on:click="Purdy.CheckoutLandingV2($refs.product_form_stacked, event)"
+                      class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn ga4-checkout-btn"
+                      {% if section.settings.dataTrack %}
+                        data-add-to-cart="true"
+                        data-page-url="{{ request.path }}"
+                        data-target-url="{{ section.settings.targetUrl }}"
+                        data-index="{{ section.settings.index }}"
+                        data-funnel-stage="{{ section.settings.funnel_stage }}"
+                        data-module="{{ section.settings.dataModule }}"
+                        data-event-label="{{ section.settings.dataTitle }}"
+                        data-event-value="{{ section.settings.eventValue }}"
+                        data-item-type="subscription"
+                      {% endif %}>
+                      {% if section.settings.show_price_in_button and default_variant_block %}
+                        <span class="buy-text">{{ section.settings.btnText | default: "TRY IT RISK FREE" }}</span> |
+                        <span class="deleted-price font-lausanne fw-400 white-text gp-5-del-price">
+                          {{ default_variant_block.settings.compare_price | money }}
+                        </span>
+                        <span class="font-lausanne fw-400 white-text gp-5-sell-price">
+                          {{ default_variant_block.settings.price | money }}
+                        </span>
+                      {% else %}
+                        {{ section.settings.btnText | default: "TRY IT RISK FREE" }}
+                      {% endif %}
+                    </span>
+                  {% else %}
+                    <span class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn bb-disable">
+                      Out of Stock
+                    </span>
+                  {% endunless %}
+                  {% if section.settings.guaranteeText %}
+                    <div class="moneybackguarateetext text-center fw-600 font-lausanne mt-12"
+                      style="color: {{ section.settings.guaranteeTextColor }};">
+                      {{ section.settings.guaranteeDescription }}
+                    </div>
+                  {% endif %}
+                </div>
+
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Handle buy plan radio button changes
+  const buyPlanRadios = document.querySelectorAll('.buy_plan_radio_stacked');
+  
+  buyPlanRadios.forEach(function(radio) {
+    radio.addEventListener('change', function() {
+
+      // Get data attributes from the selected radio
+      const plantype = this.dataset.plantype;
+      const planid = this.dataset.planid;
+      const variantid = this.dataset.variantid;
+      const price = this.dataset.price;
+      const deletedPrice = this.dataset.deletedPrice;
+      const discountCode = this.dataset.discount;
+      const gallery = this.dataset.gallery;
+      
+      // Update input_variant_id value
+      const variantInput = document.querySelector('.input_variant_id');
+      const discoutInput = document.querySelector('.discout_input');
+      if (variantInput) {
+        variantInput.value = variantid;
+      }
+      if (discoutInput) {
+        discoutInput.value = discountCode;
+      }
+      
+      // Update button prices
+      const deletedPriceElement = document.querySelector('.checkout-starterkit-btn .deleted-price');
+      const sellPriceElement = document.querySelector('.checkout-starterkit-btn .gp-5-sell-price');
+      
+      if (deletedPriceElement && deletedPrice) {
+        deletedPriceElement.textContent = formatMoney(deletedPrice);
+      }
+      
+      if (sellPriceElement && price) {
+        sellPriceElement.textContent = formatMoney(price);
+      }
+
+       // Handle gallery switching
+      if (gallery) {
+        const galleryContainer = document.querySelector('.gp--product-gallery');
+        if (galleryContainer) {
+          // Remove 'show' class from all .link-to-variant elements
+          const allLinkVariants = galleryContainer.querySelectorAll('.link-to-variant');
+          allLinkVariants.forEach(function(linkVariant) {
+            linkVariant.classList.remove('show');
+          });
+          
+          // Add 'show' class to the element with matching gallery class
+          const targetGallery = galleryContainer.querySelector('.link-to-variant.g_' + gallery);
+          if (targetGallery) {
+            targetGallery.classList.add('show');
+          }
+        }
+      }
+      
+      // Update selling plan input
+      const sellingPlanInput = document.querySelector('.input_selling_plan');
+      const sellingPlanInputType = document.querySelector('.gp--buyoption-input-stacked');
+      if (sellingPlanInput) {
+        if (plantype === 'subscription') {
+          sellingPlanInput.value = planid;
+          sellingPlanInput.name = 'selling_plan';
+          sellingPlanInputType.value = 'subscription';
+          // Show deleted price for one-time purchase
+          if (deletedPriceElement) {
+            deletedPriceElement.classList.remove('d-none');
+          }
+          
+        } else {
+          sellingPlanInput.value = '';
+          sellingPlanInput.name = 'one_time';
+          sellingPlanInputType.value = 'one_time';
+          
+          // Hide deleted price for subscription
+          if (deletedPriceElement) {
+            deletedPriceElement.classList.add('d-none');
+          }
+          
+        }
+      }
+    });
+  });
+  
+  // Helper function to format money (cents to dollars)
+  function formatMoney(cents) {
+    const amount = parseInt(cents) / 100;
+    return '$' + amount.toFixed(2);
+  }
+});
+</script>
+
+{% schema %}
+{
+  "name": "Buy Box - Stacked Plans",
+  "settings": [
+     {
+            "type": "checkbox",
+            "id": "before-mobile",
+            "label": "Heading before Image"
+        },
+    {
+      "type": "header",
+      "content": "Main Heading"
+    },
+    {
+      "type": "text",
+      "id": "mainheading",
+      "label": "Main Heading"
+    },
+    {
+      "type": "header",
+      "content": "Product Info"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Product Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Product Subheading"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "label": "Product Description",
+      "info": "Appears below the rating field"
+    },
+    {
+      "type": "header",
+      "content": "Reviews"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reviews",
+      "label": "Show Review Stars",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "review_count",
+      "label": "Review Count Text",
+      "default": "10,000+ verified 5-star reviews"
+    },
+    {
+      "type": "text",
+      "id": "scrollto",
+      "label": "Scroll To Target",
+      "info": "Element ID to scroll to when clicking reviews"
+    },
+    {
+      "type": "header",
+      "content": "Variant Selection"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_selection",
+      "label": "Show Variant Selection",
+      "default": false,
+      "info": "Enable to show scent/variant selection buttons"
+    },
+    {
+      "type": "text",
+      "id": "variant_label",
+      "label": "Variant Selection Label",
+      "default": "Choose your scent"
+    },
+    {
+      "type": "header",
+      "content": "Plan Selection"
+    },
+    {
+      "type": "text",
+      "id": "plan_heading",
+      "label": "Plan Selection Heading",
+      "default": "Choose your plan"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btnText",
+      "label": "Button Label",
+      "default": "TRY IT RISK FREE"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_price_in_button",
+      "label": "Show Price in Button",
+      "default": false,
+      "info": "Display pricing inside the button (e.g., 'TRY IT RISK FREE | $57.00 $19.95')"
+    },
+    {
+      "type": "header",
+      "content": "Guarantee"
+    },
+    {
+      "type": "checkbox",
+      "id": "guaranteeText",
+      "label": "Show Guarantee Text",
+      "default": false
+    },
+    {
+      "type": "html",
+      "id": "guaranteeDescription",
+      "label": "Guarantee Description"
+    },
+    {
+      "type": "color",
+      "id": "guaranteeTextColor",
+      "label": "Guarantee Text Color",
+      "default": "#434448"
+    },
+    {
+      "type": "header",
+      "content": "Layout"
+    },
+    {
+      "id": "background",
+      "label": "Background Color",
+      "type": "color"
+    },
+    {
+      "id": "scrollId",
+      "label": "Gallery Scroll ID",
+      "type": "text"
+    },
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Section Class"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "variant",
+      "name": "Variant (Scent)",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Variant Info"
+        },
+        {
+          "type": "checkbox",
+          "id": "outofstock",
+          "label": "Mark as Out of Stock",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "text_heading",
+          "label": "Variant Label"
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "tab_description",
+          "label": "Variant Description",
+          "info": "Short description shown for this variant"
+        },
+        {
+          "type": "header",
+          "content": "Pricing Display"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Display Price"
+        },
+        {
+          "type": "text",
+          "id": "delPrice",
+          "label": "Compare Price"
+        },
+        {
+          "type": "header",
+          "content": "Commerce"
+        },
+        {
+          "type": "product",
+          "id": "variantProduct",
+          "label": "Product"
+        },
+        {
+          "type": "metaobject",
+          "id": "variantid",
+          "label": "Variant ID",
+          "metaobject_type": "buy_box_v4",
+          "info": "Metaobject containing the variant ID"
+        },
+        {
+          "type": "text",
+          "id": "sku",
+          "label": "SKU"
+        },
+        {
+          "type": "text",
+          "id": "discount",
+          "label": "Discount Code"
+        },
+        {
+          "type": "header",
+          "content": "Gallery"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "variant_gallery",
+          "label": "Variant Gallery",
+          "metaobject_type": "buy_box_variant_gallery",
+          "info": "Gallery slides for this variant. Overridden by productImage blocks."
+        }
+      ]
+    },
+    {
+      "type": "plan",
+      "name": "Subscription Plan",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Plan Info"
+        },
+        {
+          "type": "checkbox",
+          "id": "default_variant",
+          "label": "Set as Default Variant",
+          "default": false,
+          "info": "Check this to make this plan the default selection. If no plan is marked as default, the first plan will be used."
+        },
+        {
+          "type": "checkbox",
+          "id": "is_subscription",
+          "label": "Is Subscription",
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "out_of_stock",
+          "label": "Mark as Out of Stock",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "best_value",
+          "label": "Show 'Best Value' Badge",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "best_value_text",
+          "label": "Tab Text",
+          "visible_if": "{{block.settings.best_value}}"
+        },
+        {
+          "type": "text",
+          "id": "plan_heading",
+          "label": "Plan Heading",
+          "info": "e.g., '12-Month Supply'"
+        },
+        {
+          "type": "text",
+          "id": "plan_subheading",
+          "label": "Plan Subheading",
+          "info": "e.g., 'Includes starter kit'"
+        },
+        {
+          "type": "html",
+          "id": "features",
+          "label": "Plan Features",
+          "info": "Feature list for this plan"
+        },
+        {
+          "type": "header",
+          "content": "Pricing"
+        },
+        {
+          "type": "number",
+          "id": "price",
+          "label": "Price (in cents)",
+          "info": "e.g., 9900 for $99.00"
+        },
+        {
+          "type": "number",
+          "id": "compare_price",
+          "label": "Compare Price (in cents)",
+          "info": "e.g., 14900 for $149.00"
+        },
+        {
+          "type": "header",
+          "content": "Commerce"
+        },
+        {
+          "type": "product",
+          "id": "variantProduct",
+          "label": "Product"
+        },
+        {
+          "type": "metaobject",
+          "id": "variantid",
+          "label": "Variant ID",
+          "metaobject_type": "buy_box_v4",
+          "info": "Metaobject containing the variant ID"
+        },
+        {
+          "type": "text",
+          "id": "sku",
+          "label": "SKU"
+        },
+        {
+          "type": "text",
+          "id": "discount",
+          "label": "Discount Code"
+        },
+        {
+          "type": "number",
+          "id": "quantity",
+          "label": "Quantity",
+          "default": 1
+        },
+        {
+          "type": "header",
+          "content": "Gallery"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "plan_gallery",
+          "label": "Plan Gallery",
+          "metaobject_type": "buy_box_variant_gallery",
+          "info": "Gallery slides for this plan. Each plan can have its own gallery."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Buy Box - Stacked Plans"
+    }
+  ]
+}
+{% endschema %}

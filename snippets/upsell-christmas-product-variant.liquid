@@ -1,0 +1,120 @@
+{% assign product = all_products[pHandle] %}
+
+{% assign u_product =  product.title | handle %}
+
+    {% assign discounts = '' %}
+    {% assign u_variant = '' %}
+    {% assign sellingplan = '' %}
+   
+    {% if  u_product == 'orange-clove-refill-pack' %}
+        {% assign discounts = 'ORANGECLOVEREF242CX' %}
+        {% assign u_variant = '54837000110460' %}
+        {% assign new_price = '£20.40'%}
+    {% elsif  u_product == 'frankincense-myrrh-refill-pack' %}  
+        {% assign discounts = 'FMREF242CX' %}
+        {% assign new_price = '£20.40'%}
+        {% assign u_variant = '54836999913852' %}
+    {% elsif  u_product == 'bathroom-bliss-starter-kit' %}  
+        {% assign discounts = 'BATHROOMBLISS225CX' %}
+        {% assign u_variant = '54837001421180' %}
+        {% assign new_price = '£15.00'%}
+        {% assign sellingplan = '4327440611' %} 
+    {% elsif  u_product == 'christmas-variety-bundle' %}  
+       {% assign new_price = '£20.99'%}
+        {% assign discounts = 'MINIBUNDLE242CX' %}
+        {% assign u_variant = '54836999815548' %}
+    {% endif %}
+{% if product.available %}
+  <div class="upsell-product-wrapper upsell-2 {{ u_product }}">
+    <div class="upsell-product">
+      <div class="upsell-product-section">
+        <div class="up-product-img">
+          <img class="w-100" src="{{all_products[pHandle].featured_image | product_img_url :'120x120', crop: 'center' }}" alt="">
+        </div>
+
+        <div class="up-add-cart-option">
+          <div class="up-top">
+            <div class="up-title">
+              {{ settings['cart--upsell-product'].title }}
+              <h4 class="theme-text font-lausanne fw-600">{{ all_products[pHandle].title }}</h4>
+              {% if all_products[pHandle].variants.first.metafields.metadata.includes %}
+                <p class="theme-text font-lausanne d-none fw-200 mb-1">
+                  Include: {{ all_products[pHandle].variants.first.metafields.metadata.includes }}
+                </p>
+              {% endif %}
+
+              <div class="up-price">
+                  <span class="upsell-price theme-text font-lausanne fw-400" style="font-size:12px;">{{ new_price }}</span>
+              </div>
+            </div>
+
+            <form
+              @submit.prevent="console.log('submitted')"
+              x-ref="product_form_{{ product.id }}"
+              enctype="multipart/form-data"
+              accept-charset="UTF-8"
+              id="product_form_{{product.id}}"
+              class="shopify-product-form"
+              data-product-id="{{product.id}}"
+              action="/cart/add"
+            >
+              <input
+                type="hidden"
+                name="id"
+                value="{{ u_variant }}"
+                data-plan-id="{{variant.selling_plan_allocations.first.selling_plan.id}}"
+                data-include="{{variant.metafields.metadata.includes}}"
+                data-subprice="{{ sub_discount_price | money }}"
+                data-price="{{variant.price |  money}}"
+              >
+              {% if u_product == 'bathroom-bliss-starter-kit' %}  
+              <input type="hidden" name="selling_plan" value="{{sellingplan}}">
+              <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                {% endif %}
+              <input autocomplete="off"  type="hidden" name="discount" value="{{ discounts }}">
+              {% if product.available %}
+                <button
+                  class="btn green-btn theme-btn btn-loader"
+                  x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ product.id }}, false, '{{ product.title | replace:'"',''}}', $event)"
+                >
+                  Add
+                </button>
+              {% else %}
+                <button class="btn theme-btn green-btn disabled" >
+                  Out of Stock
+                </button>
+              {% endif %}
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <style>
+      .upsell-2 .upsell-product{
+        padding:8px;
+        background:#fff;
+        margin-bottom:5px;
+      }
+      .upsell-product-wrapper{margin:10px 0; border-radius:4px;}
+    .upsell-2  .upsell-product{background:#FCFAF6;border-radius:4px;box-shadow:none;}
+      .upsell-2 .up-title p{font-size:12px;}
+      .upsell-2 .up-top{display:grid; flex-wrap:wrap; justify-content:space-between; grid-template-columns:calc(100% - 88px) 80px; height:100%;grid-gap:8px; }
+    .upsell-2  .up-top .up-title{width:calc(100% - 5px);}
+      .upsell-2 .up-top .up-title h4{font-size:14px; font-weight:600;}
+      .upsell-2 .up-top .up-price{width:55px;display:flex;justify-content:space-between;}
+      .upsell-2 .up-top .up-price .remove-product{position:static;}
+      .upsell-2 .upsell-product-section{display:flex;justify-content:space-between;flex-wrap:wrap;}
+      .upsell-2 .upsell-product-section .up-product-img{width:75px;}
+      .upsell-2 .upsell-product-section .up-add-cart-option{width:calc(100% - 85px);}
+      .upsell-2 .upsell-product-section .up-add-cart-option label{padding:8px;border:1px solid #555;border-radius:4px;margin-bottom:10px;width:100%;display:block;}
+      .upsell-2 .upsell-product-section .up-add-cart-option button.btn{font-size:13px;}
+      .upsell-2 .upsell-product-section .btn{padding:10px;margin-top:0px;}
+      .upsell-2 .okendo-cart-review .okeReviews[data-oke-container].oke-sr .oke-sr-count{
+        font-size:14px;
+      }
+    .upsell-2 .up-top form{
+      align-self:center;
+    }
+  </style>
+{% endif %}

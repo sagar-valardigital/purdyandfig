@@ -1,0 +1,181 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.article-layout",
+  "sections": {
+    "article_379_P3aR6Q": {
+      "type": "article-379",
+      "blocks": {
+        "share_XEnnpg": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.instagram.com/purdyandfigg?igsh=MWo1OHUxOTJ6dXpiZg%3D%3D",
+            "share_icon": "shopify://shop_images/Social_64e4d0d8-969d-40cd-a8ac-aa6ebe6b9e18.png",
+            "share_link": "https://purdyandfigg.com/pages/why-chemical-cleaners-are-harmful",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_tAqntJ": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.tiktok.com/@purdyandfigg?_t=ZN-8wylO6Jc4og&_r=1",
+            "share_icon": "shopify://shop_images/Social_1.png",
+            "share_link": "https://purdyandfigg.com/pages/why-chemical-cleaners-are-harmful",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_ictGpN": {
+          "type": "share",
+          "settings": {
+            "redirect": false,
+            "redirect_link": "",
+            "share_icon": "shopify://shop_images/Social_2.png",
+            "share_link": "https://purdyandfigg.com/pages/why-chemical-cleaners-are-harmful",
+            "share_icon_class": "copy-link"
+          }
+        },
+        "press_7ibaEV": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/Daily_Mail.svg"
+          }
+        },
+        "press_etxHAC": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/The_Sunday_Times.svg"
+          }
+        },
+        "press_dmQ8dq": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/Ideal_Home.svg"
+          }
+        },
+        "article_content_fk8hW6": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Ever wondered why traditional chemical-laden disinfectants won’t kill 100% of bacteria in your home? The truth is, they can’t.</p><p>Total de-germification is impossible, but that doesn’t stop the ‘big guns’ you’ll know from your supermarket shelves attempting to convince us we can.</p><p>Traditional cleaning brands claim close-to-total disinfection but are often filled to the brim with harsh chemicals that are detrimental to our homes and even worse for our health.</p>"
+          }
+        },
+        "article_heading_XH7LWr": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "Natural alternatives lead <span class=\"dcblock\">the way</span>"
+          }
+        },
+        "article_content_WwqKkL": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>“There are many ways chemicals in traditional cleaners can affect our health”, says Charlie Rubin, co-founder at Purdy & Figg – the home of the famous multipurpose natural cleaning spray Counter Clean.</p><p>“Chemical cleaning sprays often contain countless harmful toxins that can trigger allergic reactions, cause skin irritation and even increase air pollution in your home.”</p><p>A whip-around with a classic chemical cleaning spray, for example, releases thousands of invisible toxins that can linger in the air and impact your long-term health.</p>"
+          }
+        },
+        "article_image_mi9WqY": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_-_2_cb17a7e1-b619-4b75-8886-41130a6e6026.png"
+          }
+        },
+        "article_heading_gt9fWG": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "The superpowers of <span class=\"dcblock\">surfactants</span>"
+          }
+        },
+        "article_content_WKRWB3": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Natural cleaning is touted as the most effective way to cleanse your home safely by limiting dangerous side effects from toxins, but how does it work?</p><p>“There are lots of solutions out there, but here at Purdy & Figg, we formulate Counter Clean with powerful natural surfactants derived from plants.”</p><p>Natural surfactants effectively tackle bacteria-loving grime by breaking it down. “This means you’ll be getting rid of the dirt that causes bacteria to flourish in the first place. Chemical disinfectants don’t do that,” says Charlie.</p><p>They also destroy bacteria rather than killing them. “Natural surfactants attack the fats in most bacteria by breaking them down. After that, they’re effectively as good as dead.”</p>"
+          }
+        },
+        "article_image_qBhDk9": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_-_3_4adc55b5-2bf7-4d7c-8ecd-b64b2d5c155c.png"
+          }
+        },
+        "article_content_bmtnFh": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Essential oils boost the natural cleaning power of surfactants. Not only do they smell amazing, but antibacterial oils like lemongrass, peppermint, and clove help keep germs at bay.</p><p>“The natural approach is just as effective at cleaning your home, it’s just different to what we’re used to. The most important thing is that using products like Counter Clean cuts out your exposure to nasty chemicals.”</p>"
+          }
+        },
+        "article_heading_HybJzB": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "One spray for your <span class=\"dcblock\">whole home</span>"
+          }
+        },
+        "article_content_RLtEFW": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>What’s more, the plant-derived natural ingredients found in Purdy & Figg are far safer for home surfaces and can be used on anything from countertops and tables to mirrors and porcelain. “Our blend of natural ingredients can be used throughout your home because it’s designed to replace as many toxin-filled products as possible.”</p><p>Customers like Alicia feel the difference. She said on Trust Pilot: “I really appreciate using [Purdy & Figg’s] essential oil-based cleaning products, as they help me reduce chemicals in the home. I use them regularly to clean furniture, appliances and even wooden floors.”</p><p>Alexandra agreed, saying: “I’d read you’re supposed to avoid strong cleaning chemicals when pregnant and Purdy & Figg sprays helped our place smell and be clean and fresh without overdoing it on the chemicals.”</p><p>Switching to natural cleaning products that tackle bacteria-causing dirt and grime at the source has never been easier. Try Purdy & Figg today to start ridding your home of dangerous toxins and harsh chemicals.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "share_XEnnpg",
+        "share_tAqntJ",
+        "share_ictGpN",
+        "press_7ibaEV",
+        "press_etxHAC",
+        "press_dmQ8dq",
+        "article_content_fk8hW6",
+        "article_heading_XH7LWr",
+        "article_content_WwqKkL",
+        "article_image_mi9WqY",
+        "article_heading_gt9fWG",
+        "article_content_WKRWB3",
+        "article_image_qBhDk9",
+        "article_content_bmtnFh",
+        "article_heading_HybJzB",
+        "article_content_RLtEFW"
+      ],
+      "custom_css": [
+        ".article-wrapper {padding: 100px 0;}",
+        "@media (max-width: 768px) {.article-wrapper {padding: 32px 0; } .article-header, .article-heading, .article-share-options, .article-main-image, .article-content-wrapper, .right-section {padding-left: 16px; padding-right: 16px; } .dcblock {display: block; } .explore-header h3 {letter-spacing: 0.4px; }}"
+      ],
+      "name": "Article 379",
+      "settings": {
+        "tag": "ADVERTORIAL",
+        "article-heading": "The 99.9% Myth: Your chemical disinfectants are doing more harm than good",
+        "article-subheading": "Your favourite cleaning brands are keeping a secret from you.",
+        "article-info": "By Cassie B. | Monday, July 14, 2025",
+        "main_image": "shopify://shop_images/Image_-_1_c69522c0-479e-4ae8-9177-2ed5bc960ab4.png",
+        "press_heading": "FEATURED IN PRESS",
+        "explore-heading": "Ready to clean smarter, not <span class=\"dcblock\">harsher? Try it now for just £15</span>",
+        "explore_image": "shopify://shop_images/Desktop_c98fdfa0-954b-48e5-8d6b-f277033df2bf.png",
+        "btn_label": "Explore Offer",
+        "btn_link": "https://purdyandfigg.com/pages/starterkit-offer",
+        "btn_bg": "#0085de",
+        "btn_text_color": "#ffffff",
+        "showancbar": true,
+        "ancbgcolor": "#0a1e1a",
+        "anctxtcolor": "#ffffff",
+        "anctext": "Limited Time Offer: Get 60% off all Purdy & Figg Starter Kits"
+      }
+    },
+    "articel_footer_kFGjeb": {
+      "type": "article-footer",
+      "name": "Article Footer",
+      "settings": {
+        "background-color": "#212121",
+        "text-color": "#bdbdbd",
+        "footer": "© 2025 All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "article_379_P3aR6Q",
+    "articel_footer_kFGjeb"
+  ]
+}

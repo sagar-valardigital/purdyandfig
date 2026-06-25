@@ -1,0 +1,88 @@
+{% if section.settings.enable %}
+  <div
+    class="{% if section.settings.heading != '' %} pt-3 pb-3 {% else %} pt-1 pb-1 {% endif %} "
+    style="background:{{ section.settings.bgColor }}"
+  >
+    <div class="container">
+      {% if section.settings.heading != '' %}
+        <h2 class="heading-2 text-center theme-text mt-0 mb-3">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.logoDetailText != '' %}
+        <div class="theme-text text-center bb-points">{{ section.settings.logoDetailText }}</div>
+      {% endif %}
+      <div class="d-flex flex-wrap justify-content-around align-items-center logo-wrapper-block {% if section.settings.slider %}logo-slider{% endif %}  theme-text my-1 {% if section.settings.heading !='' %} pt-5  {% endif %}">
+        {% for block in section.blocks %}
+          <div class="w-25 p-2">
+            <div class="text-center ">
+              <div class="block-img-wrapper" style="background:transparent;box-shadow:none;">
+                {% if block.settings.details != '' -%}
+                  <p class="theme-text mb-4">{{ block.settings.details }}</p>
+                {%- endif %}
+                {% assign image = block.settings.image | img_url: '300x', crop: 'center' %}
+                <img loading="lazy" src="{{image}}" class="img-responsive w-100" alt="image" width="300px" height="26">
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Logos section",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "checkbox",
+      "id": "slider",
+      "label": "slider enable",
+      "default": false
+    },
+{
+      "type": "color",
+      "id": "bgColor",
+      "label": "Background COlor"
+    },
+{
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+      {
+      "type": "richtext",
+      "id": "logoDetailText",
+      "label": "Details Text"
+    }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+          {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Add Image"
+    },
+           {
+      "type": "text",
+      "id": "details",
+      "label": "Text"
+    }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Logos section"
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,2647 @@
+<style>
+	.link-to-variant,.link-to-plan {
+		height: 0;
+		overflow: hidden;
+		position: relative;
+	}
+
+	.link-to-variant.show ,.link-to-plan.show {
+		display: block !important;
+		height: auto;
+		margin-top: 4px;
+		margin-bottom: 4px;
+		overflow: visible;
+	}
+	.scent-tag{
+		position:absolute;
+		border:1px solid #eee;
+		font-weight:400;
+		font-size:12px;
+		border-radius:4px;
+		padding:4px 8px;
+		line-height:1.2;
+		{%if section.settings.tag_position == 'left' %}
+		left:38px;
+		{% elsif section.settings.tag_position == "right" %}
+		right: 15px;
+		{%endif %}
+		top:-13px;
+		border-color:{{section.settings.tag_bg_color | default :' #708480'}};
+		background-color:{{section.settings.tag_bg_color | default :' #708480'}};
+		color:{{section.settings.tag_text_color | default : '#ffffff '}};
+	}
+  .new-product-gallery-wrapper{
+    border-radius:4px;
+    overflow:hidden;
+  }
+	.new-product-gallery-wrapper-thumb{
+		position: absolute;
+		bottom: 10px;
+		left: 50%;
+		transform: translateX(-50%);
+		max-width: 288px;
+		width:80%;
+	}
+	.new-product-gallery-wrapper-thumb .main-product-img{
+		padding:5px;
+	}
+	.new-product-gallery-wrapper-thumb .main-product-img img{
+		border-radius:4px;
+		border:2px solid transparent;
+	}
+	.new-product-gallery-wrapper-thumb .main-product-img.slick-current{position:relative;}
+	.new-product-gallery-wrapper-thumb .main-product-img.slick-current:after{
+		content:'';
+		position:absolute;
+		width:calc(100% - 10px);
+		height:calc(100% - 10px);
+		top:5px;
+		left:5px;
+		border-radius:4px;
+		overflow:hidden;
+		background:#00000040;
+	}
+	.new-product-gallery-wrapper-thumb .main-product-img.slick-current img{
+		border:2px solid #0F2D28;
+	}
+  .bestvaluelabel {
+    display: flex;
+    justify-content: space-between;
+  }
+  span.inrlabel, span.lpo {
+    margin: 4px 0 5px 0px;
+    font-size: 16px;
+  }
+  span.tagtop {
+    display: flex;
+    gap: 8px;
+    height: 24px;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0 5px 0px;
+  }
+  .bestvaluestag {
+    background: #FBE27C;
+    font-size: 12px;
+    padding: 6px 4px;
+    border-radius: 24px;
+    letter-spacing: 0.4px;
+    color: #000000 !important;
+  }
+  .sc-head {
+    font-size: 16px;
+    line-height: 160%;
+    color: #11322C;
+  }
+  .ms-scent-block label:before {
+    top: 18px;
+  }
+  .scent-header {
+    align-items: flex-start;
+  }
+  @media(max-width:768px){
+    .new-product-gallery-wrapper-thumb .main-product-img{
+			width:42px !important;height:42px;
+		}
+  	.new-product-gallery-wrapper-thumb .slick-track{display:flex; justify-content:center;}
+  	.scent-tag{font-size:10px;}
+  	#body .multi-step-product-section .heading-2{margin-bottom:12px !important;}
+
+    span.inrlabel {
+      max-width: 220px;
+      font-size: 14px;
+    }
+    span.lpo {
+      font-size: 14px;
+    }
+    .bestvaluestag {
+      font-size: 10px;
+      width: 70px;
+    }
+    .sc-head {
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .ms-scent-block label:before {
+      top: 18px;
+    }
+  }
+
+  .multi-gallery-slider:not(.slick-initialized) .main-product-img:not(:first-child) img,
+  .multi-gallery-slider-thumbnail:not(.slick-initialized) .main-product-img:not(:first-child) img{display:none;}
+
+	p.include-starterkit {
+		margin: 4px 0 5px 0px;
+		font-size: 16px;
+	}
+
+	.rol-price .text-decoration-line-through {
+		margin-right: 4px !important;
+	}
+	.rol-btn {
+		gap: 4px;
+	}
+
+  .ammend-weight del {
+    font-weight: 400 !important;
+  }
+</style>
+
+<div
+  class="{{ section.settings.className }} multi-step-product-section gp--product-wrapper py-80"
+  id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};"
+  x-data="{qty:1}"
+>
+  <div class="position-relative">
+    <div class=" mb-4 container  heading-2-wrapper">
+      {% if section.settings.sectionheading != '' %}
+        <h2 style="color:#212121" class="heading-2 font-gtsuper  fw-400 mt-0 text-center">
+          {{ section.settings.sectionheading }}
+        </h2>
+      {% endif %}
+    </div>
+    <span id="{{ section.settings.scrollId }}"></span>
+    <div class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container">
+      <div class="w-50 gp--product-gallery">
+        <div class="position-relative step step-1 step-gallery">
+          {% assign mediacount = 0 %}
+          <div class="link-to-variant variant_1 show position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'productImage' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'productImage' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="link-to-variant variant_2 position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'productImage2' %}
+                    {% assign image = block.settings.image_2 %}
+                    {% assign mimage = block.settings.mimage_2 %}
+                    {% if block.settings.is_video_2 %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster_2 | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL_2 }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x'}}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'productImage2' %}
+                    {% assign image = block.settings.image_2 %}
+                    {% assign mimage = block.settings.mimage_2 %}
+                    {% if block.settings.is_video_2 %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster_2 | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL_2 }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position-relative step-gallery step step-2 height-0">
+          <div class="link-to-plan g_variant_1 show position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider1' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider1' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="link-to-plan g_variant_2  position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider2' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider2' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="link-to-plan g_variant_3  position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider3' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider3' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="link-to-plan g_variant_4  position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider4' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider4' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="link-to-plan g_variant_5  position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider5' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider5' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+          <div class="link-to-plan g_variant_6  position-relative">
+            <div class="slider__block">
+              <div class="multi-gallery-slider  new-product-gallery-wrapper">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider6' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '800x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                          <source media="(max-width:650px)" srcset="{{ mimage | img_url: '800x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '800x'}}"
+                            width="800"
+                            height="700"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+              <div class="multi-gallery-slider-thumbnail  new-product-gallery-wrapper-thumb">
+                {% for block in section.blocks %}
+                  {% if block.type == 'step2slider6' %}
+                    {% assign image = block.settings.image %}
+                    {% assign mimage = block.settings.mimage %}
+                    {% if block.settings.is_video %}
+                      <div class="main-product-img">
+                        <video
+                          class=" w-100  "
+                          poster="{{ block.settings.poster | img_url : '100x'}}"
+                          width="520"
+                          height="520"
+                          controls
+                        >
+                          <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                        </video>
+                      </div>
+                    {% else %}
+                      <div class="main-product-img ">
+                        <picture>
+                          <source media="(min-width:650px)" srcset="{{ image | img_url: '100x'}}">
+                          <source media="(max-width:650px)" srcset="{{ image | img_url: '100x' }}">
+                          <img
+                            {% if forloop.index == 1 %}
+                              skip-
+                            {% else %}
+                              loading=" "
+                            {% endif %}
+                            data-id="{{image.id}}"
+                            class="img-responsive w-100 h-auto  "
+                            src="{{ image | img_url: '100x'}}"
+                            width="100x"
+                            height="100x"
+                            alt="{{ image.alt }}"
+                          >
+                        </picture>
+                      </div>
+                    {% endif %}
+                  {% endif %}
+                  {% assign mediacount = mediacount | plus: '1' %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-50  d-flex justify-content-center">
+        <div class="w-90   bg-white">
+          <div class="gp-5-top mobile-hide desktop-hide mt-3">
+            <h2 class="heading-2 font-gtsuper fw-400 mt-0 text-center" style="color:#212121">
+              {{ section.settings.sectionheading }}
+            </h2>
+          </div>
+
+          <div class="gp-5-bottom link-variants-wrapper scents-plan-wrapper">
+            <div class="step step-1 select-scents">
+              <h4 class="text-center font-lausanne fw-600 ">CHOOSE YOUR SCENTS</h4>
+              <div class="step-count-wrapper">
+                <span></span>
+                <div class="progress-bar pw-50"></div>
+                <span class="font-lausanne"><span class="fw-600">1</span> of <b class="fw-600">2</b></span>
+              </div>
+              <div class="ms-scents-wrapper">
+                <div class="ms-scent-block ">
+                  <input
+                    autocomplete="off"
+                    class="scent-selector-radio gp--product-variant"
+                    type="radio"
+                    name="scent"
+                    id="{{ section.settings.scent1-heading | handle }}"
+                    checked
+                    data-plan="variant_1"
+                    data-gallery="variant_1"
+                    data-image="{{ section.settings.plan-image-1 | image_url }}"
+                    data-variantclass="variant_1"
+
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="{{ section.settings.scent1-heading | handle }}"
+                    data-event-value="product_toggle"
+                    data-item-id=""
+                    data-option-index="1"
+                    data-item-name="{{ section.settings.scent1-heading }}"
+                    {% if section.settings.tab_switch %}
+                      data-tab="tab-1"
+                    {% endif %}
+                  >
+                  <label for="{{ section.settings.scent1-heading | handle }}" class="position-relative">
+                    {% if section.settings.tag_1 != blank %}
+                      <span class="scent-tag">{{ section.settings.tag_1 }}</span>
+                    {% endif %}
+                    <div class="scent-header">
+                      <div class="font-lausanne fw-600 sc-head">{{ section.settings['scent1-heading'] }}</div>
+                      <div class="scent-price">
+                        <span class="font-lausanne fw-500">Starting at</span>
+                        <span class="font-lausanne fw-500">
+                          {{- localization.country.currency.symbol -}}
+                          {{- section.settings['scent1-price'] -}}
+                        </span>
+												<del class="font-lausanne fw-500">
+                          {{- localization.country.currency.symbol -}}
+                          {{- section.settings['scent1-delprice'] -}}
+                        </del>
+                      </div>
+                    </div>
+                    <p class="m-0 font-lausanne fw-200">{{ section.settings['scent1-details'] }}</p>
+                  </label>
+                </div>
+                <div class="ms-scent-block">
+                  <input
+                    autocomplete="off"
+                    class="scent-selector-radio gp--product-variant"
+                    type="radio"
+                    name="scent"
+                    id="{{ section.settings.scent2-heading | handle }}"
+
+                    data-plan="variant_4"
+                    data-gallery="variant_2"
+                    data-image="{{ section.settings.plan-image-4 | image_url }}"
+                    data-variantclass="variant_2"
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="{{ section.settings.scent2-heading | handle }}"
+                    data-event-value="product_toggle"
+                    data-item-id=""
+                    data-option-index="2"
+                    data-item-name="{{ section.settings.scent2-heading }}"
+                    {% if section.settings.tab_switch %}
+                      data-tab="tab-2"
+                    {% endif %}
+                  >
+                  <label for="{{ section.settings.scent2-heading | handle }}" class="position-relative">
+                    {% if section.settings.tag_2 != blank %}
+                      <span class="scent-tag">{{ section.settings.tag_2 }}</span>
+                    {% endif %}
+                    <div class="scent-header">
+                      <div class="font-lausanne fw-600 sc-head">{{ section.settings['scent2-heading'] }}</div>
+                      <div class="scent-price">
+                        <span class="font-lausanne fw-500">Starting at</span>
+                        <span class="font-lausanne fw-500">
+                          {{- localization.country.currency.symbol -}}
+                          {{- section.settings['scent2-price'] -}}
+                        </span>
+												<del class="font-lausanne fw-500">
+                          {{- localization.country.currency.symbol -}}
+                          {{- section.settings['scent2-delprice'] -}}
+                        </del>
+                      </div>
+                    </div>
+                    <p class="m-0 font-lausanne fw-200">{{ section.settings['scent2-details'] }}</p>
+                  </label>
+                </div>
+                <div class="mt-4">
+                  <span
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="multi_step_buybox"
+                    data-event-label="next"
+                    data-event-value="click"
+                    class="btn w-100  value-medium next-step-btn"
+                    style="background-color:#11322c; color:#fff; width:100%;"
+                  >
+                    NEXT
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <div class="step step-2 select-Plan height-0">
+              <h4 class="text-center font-lausanne fw-500 mt-0">CHOOSE YOUR PLAN</h4>
+              <div class="step-count-wrapper">
+                <span
+                  data-tracked="true"
+                  data-page-url="{{ request.path }}"
+                  data-target-url=""
+                  data-index="{{ section.settings.index }}"
+                  data-funnel-stage="{{ section.settings.funnel_stage }}"
+                  data-module="multi_step_buybox"
+                  data-event-label="back"
+                  data-event-value="click"
+                  class="back-btn"
+                  style="cursor:pointer;"
+                >
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/arrow-right-f.png?v=1739882042"
+                    width="13"
+                    height="14"
+                    alt="back"
+                  >
+                </span>
+                <div class="progress-bar pw-100"></div>
+                <span class="font-lausanne"><span class="fw-600">2</span> of <b class="fw-600">2</b></span>
+              </div>
+              <div class="ms-plan-wrapper">
+                <div class="link-to-variant variant_1 show">
+                  <form
+                    name="shopify-product-form"
+                    autocomplete="off"
+                    @submit.prevent="console.log('submitted')"
+                    x-ref="product_form_{{ section.index}}"
+                    enctype="multipart/form-data"
+                    accept-charset="UTF-8"
+                    id="product_form_{{ section.index}}"
+                    class="shopify-product-form form_s1"
+                    data-product-id="{{product.id}}"
+                    action="/cart/add"
+                  >
+                    {% if section.settings['plan-heading-1'] != blank %}
+                      <div class="gp--paln-1 ms-buy--plan position-relative mt-1">
+                        <input
+                          autocomplete="off"
+                          type="radio"
+                          checked
+                          data-gallery="variant_1"
+
+                          data-scent-type="s1"
+                          data-index-order="1"
+                          id="buyplan_1_{{ section.id }}"
+                          name="buyplan_{{ section.id }}"
+                          class="buy_plan_radio_ buy_plan_radio_1"
+                          data-plantype="subscription"
+                          data-section="id_{{ section.id }}"
+                          data-form="product_form_{{ section.index}}"
+                          data-planid="{{ section.settings.selling_plan_1 }}"
+                          data-discount="{{ section.settings.discountPlan_1 }}"
+                          data-variantid="{{ section.settings.variant_id_1 }}"
+                          data-sku="{{ section.settings.sku_1 }}"
+                          data-price="{{ localization.country.currency.symbol }}{{- section.settings['price_1'] -}}"
+                          data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings['deleted_price_1'] -}}"
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url=""
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.plan-heading-1 | handle }}"
+                          data-event-value="plan_selector"
+                          data-item-id="{{ section.settings.sku_1 }}"
+                          data-option-index="1"
+                          data-item-name="{{ section.settings.plan-product-1  }}"
+                          data-id="{{ section.settings.variant_id_1 }}"
+                          data-item-type="subscription"
+                        >
+                        <label for="buyplan_1_{{ section.id }}" class="{% if section.settings['plan-1-tag'] != blank %}best-value-plan{% endif %}">
+													{% if section.settings['plan-1-tag'] != blank %}
+                            <div class="label-bestValue">{{ section.settings['plan-1-tag'] }}</div>
+                          {% endif %}
+                          <div class="d-flex justify-content-between buy-block-text mt-0 mb-1">
+                            <span class="font-lausanne fw-500">{{ section.settings['plan-heading-1'] }}</span>
+                            <span class="d-flex justify-content-end rol-price">
+                              <span
+                                class="text-decoration-line-through font-lausanne fw-400  gp-5-del-price"
+                              >
+                                {{ localization.country.currency.symbol }}{{- section.settings['deleted_price_1'] -}}
+                              </span>
+                              <span class="gp-5-sell-price font-lausanne fw-500 ">
+                                {{ localization.country.currency.symbol -}}{{- section.settings['price_1'] -}}
+                              </span>
+                            </span>
+                          </div>
+
+                          <div
+                            class="d-flex points"
+                            style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                          >
+                            <div class="bestvaluelabel">
+                              {% if section.settings['sub-heading-plan-1'] != blank %}
+                              <span class="font-lausanne fw-400 include-starterkit {% if section.settings['plan-1-inner-tag'] != blank %}inrlabel{% endif %}">
+                                {{ section.settings['sub-heading-plan-1'] }}
+                              </span>
+                              {% endif %}
+                              {% if section.settings['plan-1-inner-tag'] != blank %}
+                              <span class="tagtop">
+                                <span class="font-lausanne fw-500 bestvaluestag">{{ section.settings['plan-1-inner-tag'] }}</span>
+                              </span>
+                              {% endif %}
+                            </div>
+                            {% for block in section.blocks %}
+                              {% if block.type == 'point1' %}
+                                <span
+                                  class=" font-lausanne fw-300  "
+                                >
+                                  {{ block.settings.bulletpoint1 }}
+                                </span>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </label>
+                      </div>
+                    {% endif %}
+                    {% if section.settings['plan-heading-2'] != blank %}
+                      <div class="gp--paln-2  ms-buy--plan position-relative ">
+                        <input
+                          autocomplete="off"
+                          type="radio"
+                          data-gallery="variant_2"
+                          data-scent-type="s1"
+                          data-index-order="2"
+                          id="buyplan_2_{{ section.id }}"
+                          name="buyplan_{{ section.id }}"
+                          class="buy_plan_radio_ "
+                          data-section="id_{{ section.id }}"
+                          data-form="product_form_{{ section.index}}"
+                          data-plantype="subscription"
+                          data-planid="{{ section.settings.selling_plan_2 }}"
+                          data-discount="{{ section.settings.discountPlan_2 }}"
+                          data-variantid="{{ section.settings.variant_id_2 }}"
+                          data-sku="{{ section.settings.sku_2 }}"
+                          data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_2 -}}"
+                          data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_2 -}}"
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url=""
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.plan-heading-2 | handle }}"
+                          data-event-value="plan_selector"
+                          data-item-id="{{ section.settings.sku2 }}"
+                          data-option-index="2"
+                          data-item-name="{{ section.settings.plan-product-2  }}"
+                          data-id="{{ section.settings.variant_id_2 }}"
+                          data-item-type="subscription"
+                          data-discount-price=""
+                        >
+                        <label for="buyplan_2_{{ section.id }}" class="{% if section.settings['plan-2-tag'] != blank %}best-value-plan{% endif %}">
+                          {% if section.settings['plan-2-tag'] != blank %}
+                            <div class="label-bestValue">{{ section.settings['plan-2-tag'] }}</div>
+                          {% endif %}
+                          <div class="d-flex justify-content-between buy-block-text">
+                            <span class="font-lausanne fw-500">{{ section.settings['plan-heading-2'] }}</span>
+                            <span class="d-flex justify-content-end rol-price">
+                              <span
+                                class="text-decoration-line-through font-lausanne fw-400  gp-5-del-price"
+                              >
+                                {{ localization.country.currency.symbol }}{{- section.settings.deleted_price_2 -}}
+                              </span>
+                              <span class="gp-5-sell-price font-lausanne fw-500">
+                                {{ localization.country.currency.symbol -}}{{- section.settings.price_2 -}}
+                              </span>
+                            </span>
+                          </div>
+                          <div
+                            class="d-flex points"
+                            style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                          >
+                            {% if section.settings['sub-heading-plan-2'] != blank %}
+                            <div class="bestvaluelabel">
+                              <span class="font-lausanne fw-400 include-starterkit lpo">
+                                {{ section.settings['sub-heading-plan-2'] }}
+                              </span>
+                            </div>
+                            {% endif %}
+														{% if section.settings.bullet_point1_plan_2 != blank %}
+															<span
+																class=" font-lausanne fw-300  "
+															>
+																{{ section.settings.bullet_point1_plan_2 }}
+															</span>
+														{% endif %}
+														{% if section.settings.bullet_point2_plan_2 != blank %}
+															<span
+																class=" font-lausanne fw-300  "
+															>
+																{{ section.settings.bullet_point2_plan_2 }}
+															</span>
+														{% endif %}
+                          </div>
+                        </label>
+                      </div>
+                    {% endif %}
+                    {% if section.settings['plan-heading-3'] != blank %}
+                      <div class="  position-relative ms-buy--plan ">
+                        <input
+                          autocomplete="off"
+                          type="radio"
+                          data-gallery="variant_3"
+                          data-scent-type="s1"
+                          data-index-order="3"
+                          id="buyplan_3_{{ section.id }}"
+                          name="buyplan_{{ section.id }}"
+                          class="buy_plan_radio_"
+                          data-section="id_{{ section.id }}"
+                          data-plantype="payg"
+                          data-form="product_form_{{ section.index}}"
+                          data-discount="{{ section.settings.discountPlan_3 }}"
+                          data-variantid="{{ section.settings.variant_id_3 }}"
+                          data-sku="{{ section.settings.sku_3 }}"
+                          data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_3 -}}"
+                          data-deleted-price=""
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url=""
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.plan-heading-3 | handle }}"
+                          data-event-value="plan_selector"
+                          data-sku="{{ section.settings.sku_3 }}"
+                          data-option-index="2"
+                          data-item-name="{{ section.settings.plan-product-3  }}"
+                          data-id="{{ section.settings.refill_variant_id }}"
+                          data-item-type="PAYG"
+                        >
+                        <label for="buyplan_3_{{ section.id }}">
+                          <div class="d-flex justify-content-between buy-block-text">
+                            <span class="font-lausanne fw-500">{{ section.settings['plan-heading-3'] }}</span>
+                            <span class="font-lausanne fw-500">
+                              {{ localization.country.currency.symbol }}{{- section.settings.price_3 -}}
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+                    {% endif %}
+                    <input
+                      autocomplete="off"
+                      type="hidden"
+                      name="id"
+                      class="input_variant_id"
+                      value="{{ section.settings.variant_id_1 }}"
+                    >
+                    <input
+                      autocomplete="off"
+                      type="hidden"
+                      class="discout_input"
+                      name="discount"
+                      value="{{ section.settings.discountPlan_1 }}"
+                    >
+                    <input autocomplete="off" type="hidden" name="quantity" value="1">
+
+                    <input
+                      autocomplete="off"
+                      type="checkbox"
+                      name="purchase_type"
+                      value="subscription"
+                      checked
+                      class="d-none gp--buyoption-input"
+                    >
+                    <input
+                      autocomplete="off"
+                      class="input_selling_plan"
+                      type="hidden"
+                      name="selling_plan"
+                      value="{{ section.settings.selling_plan_1 }}"
+                    >
+                    <div class="text-left  g4-btn-wrapper m-auto">
+                      <span
+                        x-on:click="Purdy.CheckoutLandingV2($refs.product_form_{{ section.index}}, event)"
+                        class="btn w-100 green-btn mt-4 value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn rol-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                        style="background-color:#2D469E"
+                        {% if section.settings.dataTrack %}
+                          data-checkout="true"
+                          data-add-to-cart="true" data-page-url="{{ request.path }}"
+                          data-target-url="{{ section.settings.targetUrl }}"
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.dataTitle }}"
+                          data-event-value="{{ section.settings.eventValue }}"
+                          data-item-id="{{ section.settings.sku_1 }}"
+                          data-option-index="{{ section.settings.optionIndex }}"
+                          data-item-name="{{ section.settings.plan-product-1  }}"
+                          data-quantity="{{ section.settings.quantity }}"
+                          data-price="{{ localization.country.currency.symbol }}{{ section.settings['price_1']  }}"
+                          data-item-type="subscription"
+                        {% endif %}
+                      >
+                        {% if section.settings.outOfStock %}
+                          Out of Stock
+                        {% else %}
+                          <span class="buy-text">TRY IT RISK FREE</span> |
+                          <span
+                            class="deleted-price font-lausanne fw-400 text-decoration-line-through  gp--del-price"
+                            style="color:#bdbdbd;margin-right:0;"
+                          >
+                            {{ localization.country.currency.symbol }}{{- section.settings['deleted_price_1'] -}}
+                          </span>
+                          <span class="font-lausanne fw-500 white-text gp--sell-price">
+                            {{- localization.country.currency.symbol -}}{{- section.settings['price_1'] }}
+                          </span>
+                        {% endif -%}
+                      </span>
+                    </div>
+                    <div
+                      class="text-center theme-text mt-2 guarantee-text fw-600"
+                      style="font-size:12px; color:#212121; line-height: 18px;"
+                    >
+                      {{ section.settings.guarantee }}
+                      {% if section.settings['guarantee-sub-text'] != blank -%}
+                        <span class="guarantee-sub-text d-block">{{ section.settings['guarantee-sub-text'] }}</span>
+                      {%- endif %}
+                    </div>
+                  </form>
+                </div>
+
+                <!-- scent 2 -->
+                <div class="link-to-variant variant_2">
+                  <form
+                    name="shopify-product-form"
+                    autocomplete="off"
+                    @submit.prevent="console.log('submitted')"
+                    x-ref="product_form_{{ section.index}}_2"
+                    enctype="multipart/form-data"
+                    accept-charset="UTF-8"
+                    id="product_form_{{ section.index}}_2"
+                    class="shopify-product-form form_s2"
+                    data-product-id="{{product.id}}"
+                    action="/cart/add"
+                  >
+                    {% if section.settings['plan-heading-4'] != blank %}
+                      <div class="gp--paln-1 ms-buy--plan position-relative mt-1">
+                        <input
+                          autocomplete="off"
+                          type="radio"
+                          id="buyplan_4_{{ section.id }}"
+                          data-gallery="variant_4"
+                          data-scent-type="s2"
+                          data-index-order="1"
+                          name="buyplan_{{ section.id }}_2"
+                          class="buy_plan_radio_ buy_plan_radio_1"
+                          data-plantype="subscription"
+                          data-section="id_{{ section.id }}"
+                          data-form="product_form_{{ section.index}}_2"
+                          data-planid="{{ section.settings.selling_plan_4 }}"
+                          data-discount="{{ section.settings.discountPlan_4 }}"
+                          data-variantid="{{ section.settings.variant_id_4 }}"
+                          data-sku="{{ section.settings.sku_4 }}"
+                          data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_4 -}}"
+                          data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_4 -}}"
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url=""
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.plan-heading-4 | handle }}"
+                          data-event-value="plan_selector"
+                          data-item-id="{{ section.settings.sku_4 }}"
+                          data-option-index="1"
+                          data-item-name="{{ section.settings.plan-product-4  }}"
+                          data-id="{{ section.settings.variant_id }}"
+                          data-item-type="subscription"
+                          checked
+                        >
+                        <label for="buyplan_4_{{ section.id }}" class="{% if section.settings['plan-4-tag'] != blank %}best-value-plan{% endif %}">
+													{% if section.settings['plan-4-tag'] != blank %}
+                            <div class="label-bestValue font-lausanne fw-400">{{ section.settings['plan-4-tag'] }}</div>
+                          {% endif %}
+                          <div class="d-flex justify-content-between buy-block-text mt-0 mb-1">
+                            <span class="font-lausanne fw-500">{{ section.settings['plan-heading-4'] }}</span>
+                            <span class="d-flex justify-content-end rol-price">
+                              <span
+                                class="text-decoration-line-through font-lausanne fw-400 gp-5-del-price"
+                              >
+                                {{ localization.country.currency.symbol }}{{- section.settings.deleted_price_4 -}}
+                              </span>
+                              <span class="gp-5-sell-price font-lausanne fw-500">
+                                {{ localization.country.currency.symbol -}}{{- section.settings.price_4 -}}
+                              </span>
+                            </span>
+                          </div>
+
+                          <div
+                            class="d-flex points"
+                            style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                          >
+                            <div class="bestvaluelabel">
+                              {% if section.settings['sub-heading-plan-4'] != blank %}
+                              <span class="font-lausanne fw-400 include-starterkit {% if section.settings['plan-4-inner-tag'] != blank %}inrlabel{% endif %}">
+                                {{ section.settings['sub-heading-plan-4'] }}
+                              </span>
+                              {% endif %}
+                              {% if section.settings['plan-4-inner-tag'] != blank %}
+                              <span class="tagtop">
+                                <span class="font-lausanne fw-500 bestvaluestag">{{ section.settings['plan-4-inner-tag'] }}</span>
+                              </span>
+                              {% endif %}
+                            </div>
+                            {% for block in section.blocks %}
+                              {% if block.type == 'point4' %}
+                                <span
+                                  class=" font-lausanne fw-300  "
+                                >
+                                  {{ block.settings.bulletpoint4 }}
+                                </span>
+                              {% endif %}
+                            {% endfor %}
+                          </div>
+                        </label>
+                      </div>
+                    {% endif %}
+                    {% if section.settings['plan-heading-5'] != blank %}
+                      <div class="gp--paln-2 ms-buy--plan position-relative ">
+                        <input
+                          autocomplete="off"
+                          type="radio"
+                          data-gallery="variant_5"
+                          data-scent-type="s2"
+                          data-index-order="2"
+                          id="buyplan_5_{{ section.id }}"
+                          name="buyplan_{{ section.id }}_2"
+                          class="buy_plan_radio_ "
+                          data-section="id_{{ section.id }}"
+                          data-plantype="subscription"
+                          data-form="product_form_{{ section.index}}_2"
+                          data-planid="{{ section.settings.selling_plan_5 }}"
+                          data-discount="{{ section.settings.discountPlan_5 }}"
+                          data-variantid="{{ section.settings.variant_id_5 }}"
+                          data-sku="{{ section.settings.sku_5 }}"
+                          data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_5 -}}"
+                          data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_5 -}}"
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url=""
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.plan-heading-5 | handle }}"
+                          data-event-value="plan_selector"
+                          data-item-id="{{ section.settings.sku_5 }}"
+                          data-option-index="2"
+                          data-item-name="{{ section.settings.plan-product-5  }}"
+                          data-id="{{ section.settings.variant_id_5 }}"
+                          data-item-type="subscription"
+                        >
+                        <label for="buyplan_5_{{ section.id }}" class="{% if section.settings['plan-5-tag'] != blank %}best-value-plan{% endif %}">
+                          {% if section.settings['plan-5-tag'] != blank %}
+                            <div class="label-bestValue font-lausanne fw-400">{{ section.settings['plan-5-tag'] }}</div>
+                          {% endif %}
+                          <div class="d-flex justify-content-between buy-block-text">
+                            <span class="font-lausanne fw-500">{{ section.settings['plan-heading-5'] }}</span>
+                            <span class="d-flex justify-content-end rol-price">
+                              <span
+                                class="text-decoration-line-through font-lausanne fw-400 gp-5-del-price"
+                              >
+                                {{ localization.country.currency.symbol }}{{- section.settings.deleted_price_5 -}}
+                              </span>
+                              <span class="gp-5-sell-price font-lausanne fw-500 ">
+                                {{ localization.country.currency.symbol -}}{{- section.settings.price_5 -}}
+                              </span>
+                            </span>
+                          </div>
+
+                          <div
+                            class="d-flex points"
+                            style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                          >
+                            {% if section.settings['sub-heading-plan-5'] != blank %}
+                            <div class="bestvaluelabel">
+                              <span class="font-lausanne fw-400 include-starterkit lpo">
+                                {{ section.settings['sub-heading-plan-5'] }}
+                              </span>
+                            </div>
+                            {% endif %}
+                            {% if section.settings.bullet_point1_plan_5 != blank %}
+															<span
+																class=" font-lausanne fw-300  "
+															>
+																{{ section.settings.bullet_point1_plan_5 }}
+															</span>
+														{% endif %}
+														{% if section.settings.bullet_point2_plan_5 != blank %}
+															<span
+																class=" font-lausanne fw-300  "
+															>
+																{{ section.settings.bullet_point2_plan_5 }}
+															</span>
+														{% endif %}
+                          </div>
+                        </label>
+                      </div>
+                    {% endif %}
+                    {% if section.settings['plan-heading-6'] != blank %}
+                      <div class="  position-relative ms-buy--plan">
+                        <input
+                          autocomplete="off"
+                          type="radio"
+                          data-gallery="variant_6"
+                          data-scent-type="s2"
+                          data-index-order="3"
+                          id="buyplan_6_{{ section.id }}"
+                          name="buyplan_{{ section.id }}_2"
+                          class="buy_plan_radio_"
+                          data-section="id_{{ section.id }}"
+                          data-plantype="payg"
+                          data-form="product_form_{{ section.index}}_2"
+                          data-discount="{{ section.settings.discountPlan_6 }}"
+                          data-variantid="{{ section.settings.variant_id_6 }}"
+                          data-sku="{{ section.settings.sku_6 }}"
+                          data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_6 -}}"
+                          data-deleted-price=""
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url=""
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.plan-heading-6 | handle }}"
+                          data-event-value="plan_selector"
+                          data-item-id="{{ section.settings.sku_6 }}"
+                          data-option-index="2"
+                          data-item-name="{{ section.settings.plan-product-6  }}"
+                          data-id="{{ section.settings.variant_id_6 }}"
+                          data-item-type="PAYG"
+                        >
+                        <label for="buyplan_6_{{ section.id }}">
+                          <div class="d-flex justify-content-between buy-block-text">
+                            <span class="font-lausanne fw-500">{{ section.settings['plan-heading-6'] }}</span>
+                            <span class=" font-lausanne fw-500 refill-price">
+                              {{ localization.country.currency.symbol }}{{- section.settings.price_6 -}}
+                            </span>
+                          </div>
+                        </label>
+                      </div>
+                    {% endif %}
+                    <input
+                      autocomplete="off"
+                      type="hidden"
+                      name="id"
+                      class="input_variant_id"
+                      value="{{ section.settings.variant_id_4 }}"
+                    >
+                    <input
+                      autocomplete="off"
+                      type="hidden"
+                      class="discout_input"
+                      name="discount"
+                      value="{{ section.settings.discountPlan_4 }}"
+                    >
+                    <input autocomplete="off" type="hidden" name="quantity" value="1">
+
+                    <input
+                      autocomplete="off"
+                      type="checkbox"
+                      name="purchase_type"
+                      value="subscription"
+                      checked
+                      class="d-none gp--buyoption-input"
+                    >
+                    <input
+                      autocomplete="off"
+                      class="input_selling_plan"
+                      type="hidden"
+                      name="selling_plan"
+                      value="{{ section.settings.selling_plan_4 }}"
+                    >
+
+                    <div class="text-left  g4-btn-wrapper m-auto">
+                      <span
+                        x-on:click="Purdy.CheckoutLandingV2($refs.product_form_{{ section.index}}_2, event)"
+                        class="btn w-100 mt-4 green-btn value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn rol-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                        style="background-color:#2D469E"
+                        {% if section.settings.dataTrack %}
+                          data-checkout="true"
+                          data-add-to-cart="true" data-page-url="{{ request.path }}"
+                          data-target-url="{{ section.settings.targetUrl }}"
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ section.settings.dataTitle }}"
+                          data-event-value="{{ section.settings.eventValue }}"
+                          data-item-id="{{ section.settings.sku_4 }}"
+                          data-option-index="{{ section.settings.optionIndex }}"
+                          data-item-name="{{ section.settings.plan-product-4  }}"
+                          data-quantity="{{ section.settings.quantity }}"
+                          data-price="{{ localization.country.currency.symbol }}{{ section.settings.price_4 }}"
+                          data-item-type="subscription"
+                        {% endif %}
+                      >
+                        {% if section.settings.outOfStock %}
+                          Out of Stock
+                        {% else %}
+                          <span class="buy-text">TRY IT RISK FREE</span> |
+                          <span
+                            class="deleted-price font-lausanne fw-400 text-decoration-line-through  gp--del-price"
+                            style="color:#bdbdbd;margin-right:0;"
+                          >
+                            {{ localization.country.currency.symbol }}{{- section.settings.deleted_price_4 -}}
+                          </span>
+                          <span class="font-lausanne fw-500 white-text gp--sell-price">
+                            {{- localization.country.currency.symbol -}}{{- section.settings.price_4 }}
+                          </span>
+                        {% endif -%}
+                      </span>
+                    </div>
+                    <div
+                      class="text-center theme-text mt-2 guarantee-text fw-600"
+                      style="font-size:12px; color:#212121; line-height: 18px;"
+                    >
+                      {{ section.settings.guarantee }}
+                      {% if section.settings['guarantee-sub-text'] != blank -%}
+                        <span class="guarantee-sub-text d-block">{{ section.settings['guarantee-sub-text'] }}</span>
+                      {%- endif %}
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Next step button click handler
+      document.querySelectorAll('.next-step-btn').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          // Check which form/variant is currently selected before moving to step 2
+          let selectedForm;
+          const seasonalForm = document.querySelector('.form_s1');
+          const signatureForm = document.querySelector('.form_s2');
+
+          // Check if seasonal variant is visible and has a checked input
+          const seasonalVariant = document.querySelector('.variant_1');
+          if (seasonalVariant && seasonalVariant.classList.contains('show')) {
+            selectedForm = seasonalForm;
+          } else {
+            // Otherwise use signature form
+            selectedForm = signatureForm;
+          }
+
+          // Get the gallery value from the checked input in the selected form
+          let galleryValue;
+          if (selectedForm) {
+            const checkedInput = selectedForm.querySelector('input:checked');
+            if (checkedInput) {
+              galleryValue = checkedInput.getAttribute('data-gallery');
+            }
+          }
+
+          // Show step 2, hide step 1
+          document.querySelectorAll('.step-1').forEach((el) => el.classList.add('height-0'));
+          document.querySelectorAll('.step-2').forEach((el) => el.classList.remove('height-0'));
+
+          // Update the gallery after changing steps
+          if (galleryValue) {
+            updateGallery(galleryValue);
+          }
+        });
+      });
+
+      // Back button click handler - simple version without gallery updates
+      document.querySelectorAll('.back-btn').forEach((btn) => {
+        btn.addEventListener('click', function () {
+          document.querySelectorAll('.step-2').forEach((el) => el.classList.add('height-0'));
+          document.querySelectorAll('.step-1').forEach((el) => el.classList.remove('height-0'));
+        });
+      });
+
+      // Function to update gallery based on variant
+      function updateGallery(galleryClass) {
+        // Remove 'show' class from all variants
+        document.querySelectorAll('.step-gallery .link-to-plan').forEach(function (el) {
+          el.classList.remove('show');
+        });
+
+        // Add 'show' class to the matching variant
+        if (galleryClass) {
+          const targetElement = document.querySelector('.step-gallery .g_' + galleryClass);
+          if (targetElement) {
+            targetElement.classList.add('show');
+          }
+        }
+      }
+
+      // Input change handler for all buy plan radios
+      document.querySelectorAll('.buy_plan_radio').forEach(function (input) {
+        input.addEventListener('change', function () {
+          updateGallery(this.getAttribute('data-gallery'));
+        });
+      });
+
+      document.querySelectorAll('.ms-buy--plan input').forEach(function (input) {
+        input.addEventListener('change', function () {
+          const dataFormSelector = input.getAttribute('data-form');
+          const itemType = input.getAttribute('data-item-type');
+
+          if (itemType === 'PAYG') {
+            const guaranteeText = document.querySelector('#' + dataFormSelector + ' ' + ' .guarantee-sub-text');
+            if (guaranteeText) {
+              guaranteeText.style.display = 'none';
+            }
+          } else {
+            const guaranteeText = document.querySelector('#' + dataFormSelector + ' ' + '.guarantee-sub-text');
+            if (guaranteeText) {
+              guaranteeText.style.display = 'block';
+            }
+          }
+        });
+      });
+    });
+
+    {%if section.settings.tab_switch %}
+  document.querySelectorAll('input.scent-selector-radio').forEach(input => {
+    input.addEventListener('change', function() {
+      let tabValue = this.dataset.tab;
+
+      document.querySelectorAll('.pf-tab').forEach(tab => {
+        if (tab.dataset.target === tabValue) {
+          tab.click(); // Fire click event
+        }
+      });
+    });
+  });
+
+    {%endif %}
+</script>
+
+{% schema %}
+{
+  "name": "Roll out 378 - Buy Box",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "tab_switch",
+      "label": "Enable Tab Switching Scents",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "outOfStock",
+      "label": "Enable If product out Of Stock",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "show_slider_arrow",
+      "label": "Show Slider Arrow",
+      "default": false
+    },
+    {
+      "type": "checkbox",
+      "id": "thumb_slider",
+      "label": "Enable Thumbnail Slider",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Section Class"
+    },
+
+    {
+      "type": "text",
+      "id": "scrollId",
+      "label": "Section Scroll ID"
+    },
+    {
+      "id": "background",
+      "label": "Background color",
+      "type": "color"
+    },
+    {
+      "type": "html",
+      "id": "sectionheading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "guarantee",
+      "label": "Guarantee Text",
+      "default": "30-day money back guarantee "
+    },
+    {
+      "type": "text",
+      "id": "guarantee-sub-text",
+      "label": "Guarantee Sub Text"
+    },
+    {
+      "type": "header",
+      "content": "Tag Options"
+    },
+    {
+      "type": "color",
+      "id": "tag_bg_color",
+      "label": "Tag Background Color"
+    },
+    {
+      "type": "color",
+      "id": "tag_text_color",
+      "label": "Tag Text Color"
+    },
+    {
+      "type": "select",
+      "id": "tag_position",
+      "label": "Select Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "header",
+      "content": "First Scent"
+    },
+    {
+      "type": "text",
+      "id": "tag_1",
+      "label": "Scent Tag"
+    },
+    {
+      "type": "text",
+      "id": "scent1-heading",
+      "label": "Scent heading"
+    },
+    {
+      "type": "text",
+      "id": "scent1-details",
+      "label": "Scent Sub heading"
+    },
+    {
+      "type": "text",
+      "id": "scent1-delprice",
+      "label": "Scent Cross Over price"
+    },
+    {
+      "type": "text",
+      "id": "scent1-price",
+      "label": "Scent price"
+    },
+
+    {
+      "type": "header",
+      "content": "Second Scent"
+    },
+    {
+      "type": "text",
+      "id": "tag_2",
+      "label": "Scent Tag"
+    },
+    {
+      "type": "text",
+      "id": "scent2-heading",
+      "label": "Scent heading"
+    },
+    {
+      "type": "text",
+      "id": "scent2-details",
+      "label": "Scent Sub heading"
+    },
+    {
+      "type": "text",
+      "id": "scent2-delprice",
+      "label": "Scent Cross Over price"
+    },
+    {
+      "type": "text",
+      "id": "scent2-price",
+      "label": "Scent price"
+    },
+
+    {
+      "type": "header",
+      "content": "First Plan"
+    },
+		{
+      "type": "text",
+      "id": "plan-1-tag",
+      "label": "Plan Tag"
+    },
+    {
+      "type": "text",
+      "id": "plan-product-1",
+      "label": "Choose Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-image-1",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-mimage-1",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "plan-heading-1",
+      "label": "Plan Heading"
+    },
+		{
+			"type": "text",
+			"id": "sub-heading-plan-1",
+			"label": "Plan sub heading"
+		},
+    {
+      "type": "text",
+      "id": "plan-1-inner-tag",
+      "label": "Inner label"
+    },
+    {
+      "type": "text",
+      "id": "variant_id_1",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_1",
+      "label": "Selling Plan"
+    },
+    {
+      "type": "text",
+      "id": "sku_1",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discountPlan_1",
+      "label": "Discount Code"
+    },
+		{
+      "type": "text",
+      "id": "price_1",
+      "label": "Price"
+    },
+    {
+      "type": "text",
+      "id": "deleted_price_1",
+      "label": "Cross Over Price"
+    },
+
+    {
+      "type": "header",
+      "content": "Second Plan"
+    },
+    {
+      "type": "text",
+      "id": "plan-2-tag",
+      "label": "Plan Tag"
+    },
+    {
+      "type": "text",
+      "id": "plan-product-2",
+      "label": "Choose Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-image-2",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-mimage-2",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "plan-heading-2",
+      "label": "Plan Heading"
+    },
+		{
+			"type": "text",
+			"id": "sub-heading-plan-2",
+			"label": "Plan sub heading"
+		},
+    {
+      "type": "text",
+      "id": "variant_id_2",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_2",
+      "label": "Selling Plan"
+    },
+    {
+      "type": "text",
+      "id": "sku_2",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discountPlan_2",
+      "label": "Discount Code"
+    },
+    {
+      "type": "text",
+      "id": "price_2",
+      "label": "Price"
+    },
+    {
+      "type": "text",
+      "id": "deleted_price_2",
+      "label": "Cross Over Price"
+    },
+		{
+      "type": "html",
+      "id": "bullet_point1_plan_2",
+      "label": "Bullet point 1"
+    },
+		{
+      "type": "html",
+      "id": "bullet_point2_plan_2",
+      "label": "Bullet point 2"
+    },
+    {
+      "type": "header",
+      "content": "Third Plan"
+    },
+    {
+      "type": "text",
+      "id": "plan-product-3",
+      "label": "Choose Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-image-3",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-mimage-3",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "plan-heading-3",
+      "label": "Plan Heading"
+    },
+    {
+      "type": "text",
+      "id": "variant_id_3",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_3",
+      "label": "Selling Plan"
+    },
+    {
+      "type": "text",
+      "id": "sku_3",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discountPlan_3",
+      "label": "Discount Code"
+    },
+    {
+      "type": "text",
+      "id": "price_3",
+      "label": "Price"
+    },
+    {
+      "type": "text",
+      "id": "deleted_price_3",
+      "label": "Cross Over Price"
+    },
+    {
+      "type": "header",
+      "content": "Fourth Plan"
+    },
+		{
+      "type": "text",
+      "id": "plan-4-tag",
+      "label": "Plan Tag"
+    },
+    {
+      "type": "text",
+      "id": "plan-product-4",
+      "label": "Choose Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-image-4",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-mimage-4",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "plan-heading-4",
+      "label": "Plan Heading"
+    },
+		{
+			"type": "text",
+			"id": "sub-heading-plan-4",
+			"label": "Plan sub heading"
+		},
+    {
+      "type": "text",
+      "id": "plan-4-inner-tag",
+      "label": "Inner label"
+    },
+    {
+      "type": "text",
+      "id": "variant_id_4",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_4",
+      "label": "Selling Plan"
+    },
+    {
+      "type": "text",
+      "id": "sku_4",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discountPlan_4",
+      "label": "Discount Code"
+    },
+    {
+      "type": "text",
+      "id": "price_4",
+      "label": "Price"
+    },
+    {
+      "type": "text",
+      "id": "deleted_price_4",
+      "label": "Cross Over Price"
+    },
+    {
+      "type": "header",
+      "content": "Fifth Plan"
+    },
+    {
+      "type": "text",
+      "id": "plan-5-tag",
+      "label": "Plan Tag"
+    },
+    {
+      "type": "text",
+      "id": "plan-product-5",
+      "label": "Choose Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-image-5",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-mimage-5",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "plan-heading-5",
+      "label": "Plan Heading"
+    },
+		{
+			"type": "text",
+			"id": "sub-heading-plan-5",
+			"label": "Plan sub heading"
+		},
+    {
+      "type": "text",
+      "id": "variant_id_5",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_5",
+      "label": "Selling Plan"
+    },
+    {
+      "type": "text",
+      "id": "sku_5",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discountPlan_5",
+      "label": "Discount Code"
+    },
+    {
+      "type": "text",
+      "id": "price_5",
+      "label": "Price"
+    },
+    {
+      "type": "text",
+      "id": "deleted_price_5",
+      "label": "Cross Over Price"
+    },
+		{
+      "type": "html",
+      "id": "bullet_point1_plan_5",
+      "label": "Bullet point 1"
+    },
+		{
+      "type": "html",
+      "id": "bullet_point2_plan_5",
+      "label": "Bullet point 2"
+    },
+    {
+      "type": "header",
+      "content": "Sixth Plan"
+    },
+    {
+      "type": "text",
+      "id": "plan-product-6",
+      "label": "Choose Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-image-6",
+      "label": "Desktop Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "plan-mimage-6",
+      "label": "Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "plan-heading-6",
+      "label": "Plan Heading"
+    },
+    {
+      "type": "text",
+      "id": "variant_id_6",
+      "label": "Variant ID"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan_6",
+      "label": "Selling Plan"
+    },
+    {
+      "type": "text",
+      "id": "sku_6",
+      "label": "SKU"
+    },
+    {
+      "type": "text",
+      "id": "discountPlan_6",
+      "label": "Discount Code"
+    },
+    {
+      "type": "text",
+      "id": "price_6",
+      "label": "Price"
+    },
+    {
+      "type": "text",
+      "id": "deleted_price_6",
+      "label": "Cross Over Price"
+    },
+    {
+      "type": "header",
+      "content": "Mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "heading-position",
+      "label": "Heading After Image"
+    },
+    {
+      "type": "checkbox",
+      "id": "before-mobile",
+      "label": "Heading before Image"
+    },
+    {
+      "type": "header",
+      "content": "GA4"
+    },
+    {
+      "id": "dataTrack",
+      "label": "Data Track",
+      "type": "checkbox"
+    },
+    {
+      "id": "targetUrl",
+      "label": "Target Url",
+      "type": "url"
+    },
+    {
+      "id": "index",
+      "label": "Index",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "funnel_stage",
+      "label": "Funnel Stage",
+      "type": "text",
+      "default": "landing_page"
+    },
+    {
+      "id": "dataModule",
+      "label": "Module",
+      "type": "text",
+      "default": "announcement_bar"
+    },
+    {
+      "id": "dataTitle",
+      "label": "Event Label",
+      "type": "text",
+      "default": "get_your_offer"
+    },
+    {
+      "id": "eventValue",
+      "label": "Event Value",
+      "type": "text",
+      "default": "shop_anchor"
+    },
+    {
+      "id": "optionIndex",
+      "label": "Option Index",
+      "type": "text"
+    },
+    {
+      "id": "quantity",
+      "label": "Item Quantity",
+      "type": "number",
+      "default": 1
+    }
+  ],
+  "blocks": [
+    {
+      "type": "point1",
+      "name": "Bullet points 1",
+      "settings": [
+        {
+          "type": "html",
+          "id": "bulletpoint1",
+          "label": "Add Item"
+        }
+      ]
+    },
+		{
+      "type": "point4",
+      "name": "Bullet points 4",
+      "settings": [
+        {
+          "type": "html",
+          "id": "bulletpoint4",
+          "label": "Add Item"
+        }
+      ]
+    },
+    {
+      "type": "productImage",
+      "name": "Step 1: Slider 1 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "productImage2",
+      "name": "Step 1: Slider 2 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage_2",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video_2",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL_2",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster_2",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "step2slider1",
+      "name": "Step 2: Slider 1 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "step2slider2",
+      "name": "Step 2: Slider 2 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "step2slider3",
+      "name": "Step 2: Slider 3 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "step2slider4",
+      "name": "Step 2: Slider 4 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "step2slider5",
+      "name": "Step 2: Slider 5 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    },
+    {
+      "type": "step2slider6",
+      "name": "Step 2: Slider 6 image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Product Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Check if video added"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Add Video url"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Video poster"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Roll out 378 - Buy Box",
+      "category": "Multi Product"
+    }
+  ]
+}
+{% endschema %}

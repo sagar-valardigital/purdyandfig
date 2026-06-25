@@ -1,0 +1,104 @@
+{% if section.settings.enable%}
+<div class="choose-scent-section py-5 {{ section.settings.class }}">
+        <div class="container">
+            <h2 class="heading-2 text-center theme-text mt-0 mb-3">{{section.settings.heading}}</h2>
+          <p class="normal-text text-center theme-text">{{ section.settings.subheading }}</p>
+            <div class="choose-scent-block d-flex flex-wrap mt-4">
+                {% for block in section.blocks %}
+              	<div class="w-33 p-2 ">
+                  <a href="{{block.settings.link}}">
+                    <div class="scent-block scent-citrus">
+                        <div class="scent-img">
+                          	{% assign Image = block.settings.image | img_url:'500x'%}
+                            <img loading="lazy" width="500px" height="500px" class="img-responsive w-100" src="{{Image}}" alt="">
+                        </div>
+                        <div class="scent-details theme-text font-pier p-2 mt-2">
+                            <h4 class="m-0">{{block.settings.heading}}</h4>
+                            <p>{{block.settings.details}}</p>
+                        </div>
+                    </div>
+                  </a>
+                </div>
+                {%endfor%}
+                
+            </div>
+          {% if section.settings.ctalink %}
+    <div class="text-center mt-2 px-4"><a class="theme-btn btn" href="{{ section.settings.ctalink }}">{{ section.settings.ctalabel }}</a></div>
+                              {% endif %}
+        </div>
+    </div>
+{% endif %}
+{% schema %}
+  {
+    "name": "Select Scent",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "text",
+      "id": "class",
+      "label": "Section class"
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    } ,
+      {
+      "type": "html",
+      "id": "subheading",
+      "label": "Text"
+    },
+      {
+      "type": "text",
+      "id": "ctalabel",
+      "label": "Button label"
+    },
+      {
+      "type": "url",
+      "id": "ctalink",
+      "label": "Button Link"
+    }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [ 
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Block Heading"
+          },
+		{
+            "type": "image_picker",
+            "id": "image",
+            "label": "Block Image"
+          },
+{
+      "type": "text",
+      "id": "details",
+      "label": "Detail Text"
+    },
+
+{
+      "type": "url",
+      "id": "link",
+      "label": "Add link"
+    }
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Select Scents"
+		}
+	]
+  }
+{% endschema %}
+
+

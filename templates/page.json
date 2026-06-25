@@ -1,0 +1,86 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_BCUjKh": {
+          "type": "product",
+          "settings": {
+            "product": "anti-slip-silicone-base",
+            "variant": "",
+            "selling_plan": "",
+            "discount": "",
+            "price": "30",
+            "compare_price": "40",
+            "button_text": "add"
+          }
+        },
+        "product_UcGPRD": {
+          "type": "product",
+          "settings": {
+            "product": "anti-slip-silicone-base",
+            "variant": "",
+            "selling_plan": "",
+            "discount": "",
+            "price": "30",
+            "compare_price": "40",
+            "button_text": "add"
+          }
+        },
+        "product_nDHGzD": {
+          "type": "product",
+          "settings": {
+            "product": "anti-slip-silicone-base",
+            "variant": "",
+            "selling_plan": "",
+            "discount": "",
+            "price": "30",
+            "compare_price": "40",
+            "button_text": "add"
+          }
+        },
+        "product_XFqqrU": {
+          "type": "product",
+          "settings": {
+            "product": "anti-slip-silicone-base",
+            "variant": "",
+            "selling_plan": "",
+            "discount": "",
+            "price": "30",
+            "compare_price": "40",
+            "button_text": "add"
+          }
+        }
+      },
+      "block_order": [
+        "product_BCUjKh",
+        "product_UcGPRD",
+        "product_nDHGzD",
+        "product_XFqqrU"
+      ],
+      "settings": {
+        "enable": false
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cart_drawer_xyerRx"
+  ]
+}

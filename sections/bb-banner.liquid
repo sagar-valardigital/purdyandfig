@@ -1,0 +1,218 @@
+<style>
+  {%- assign DimageURL = section.settings.desktopimage | img_url:"2000x" -%}
+  {%- assign MimageURL = section.settings.mobileimage | img_url:"768x" -%}
+  @media(min-width:768px){
+  .bath{{ section.id }}{background-image:url({{DimageURL}})}
+  }
+</style>
+{% assign product = section.settings.landingproduct %}
+{% assign s_variant = product.selected_or_first_available_variant %}
+<div
+  class="pt-5 bathroom-banner bath{{ section.id }} {{ section.settings.className }}"
+  x-data="{qty:1}"
+  id="{{ section.settings.idName }}"
+>
+  <div class="">
+    <div class="banner-inner-container">
+      <div class="d-flex justify-content-between flex-wrap">
+        <div class="bath-banner-details">
+          <h2 class="heading-2 theme-text">{{ section.settings.title }}</h2>
+          <div class="theme-text">
+            <h3 class="font-value mt-4 bb-points">{{ section.settings.subtext }}</h3>
+            <ul class="bb-points">
+              {% for block in section.blocks %}
+                <li>{{ block.settings.listItem }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+          <div class="theme-text text-center">
+            <h2 class="heading-2 bb-price">
+              {% if section.settings.delPrice != '' -%}
+                <small
+                  ><del>£{{ section.settings.delPrice }}</del></small
+                >
+              {% endif %}
+              £{{ section.settings.price }}
+              {% if section.settings.textAfterPrice != '' -%}
+                <small class="spring-product-text value-sans">{{ section.settings.textAfterPrice }}</small>
+              {%- endif %}
+            </h2>
+          </div>
+          <form
+            @submit.prevent="console.log('submitted')"
+            x-ref="product_form_{{product.id}}"
+            enctype="multipart/form-data"
+            accept-charset="UTF-8"
+            id="product_form_{{product.id}}"
+            class="shopify-product-form"
+            data-product-id="{{product.id}}"
+            action="/cart/add"
+          >
+            <input type="hidden" name="id" value="{{ s_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            {% if section.settings.isSub %}
+              <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+              <input
+                type="hidden"
+                name="selling_plan"
+                value="{{s_variant.selling_plan_allocations.first.selling_plan.id}}"
+              >
+            {% endif %}
+          </form>
+          <div class="text-center mt-3">
+            {% if section.settings.checkout %}
+              <span
+                class="btn w-100 theme-btn checkout-au-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                x-on:click="Purdy.PurdyCheckout($refs.product_form_{{ product.id }},'{{ section.settings.discount }}', $event)"
+              >
+                {%- if section.settings.outOfStock %}
+                  Out of Stock
+                {% else %}
+                  {{ section.settings.btnText }}
+                {% endif -%}</span
+              ><br>
+            {% else %}
+              <span
+                class="btn w-100 theme-btn checkout-au-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                x-on:click="Purdy.AddToCart($refs.product_form_{{ product.id }},'{{ section.settings.discount }}', $event)"
+              >
+                {%- if section.settings.outOfStock %}
+                  Out of Stock
+                {% else %}
+                  {{ section.settings.btnText }}
+                {% endif -%}</span
+              ><br>
+            {% endif %}
+            <small class="theme-text">{{ section.settings.ctaDetails }} </small>
+          </div>
+        </div>
+        <div class="bath-banner-image">
+          <img
+            loading="lazy"
+            class="img-responsive desktop-hide m-auto mb-2 "
+            alt="{{ MimageURL }}"
+            src="{{MimageURL}}"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bathroom Bliss Banner",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "outOfStock",
+      "label": "Enable If product out Of Stock",
+      "default": true
+    },
+       {
+    "type": "checkbox",
+    "id": "checkout",
+    "label": "Direct Checkout",
+    "default": false
+  },
+
+
+     {
+           "type": "text",
+           "id": "discount",
+           "label": "Discount",
+           "default": "Free"
+         },
+    {
+      "id": "className",
+      "label": "Section Class",
+      "type": "text"
+    },
+    {
+      "id": "idName",
+      "label": "Section ID",
+      "type": "text",
+      "default" : "spring-banner"
+    },
+    {
+      "id": "isSub",
+      "label": "Product subscription",
+      "type": "checkbox",
+      "default": false
+    },
+    {
+      "id": "landingproduct",
+      "label": "Choose the landing product",
+      "type": "product"
+    },
+    {
+      "id": "desktopimage",
+      "label": "Desktop Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "mobileimage",
+      "label": "Mobile Image",
+      "type": "image_picker"
+    },
+
+	{
+      "id": "title",
+      "label": "Banner Title",
+      "type": "html"
+    },
+
+	{
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "html"
+    },
+    {
+      "id": "price",
+      "label": "Price",
+      "type": "text"
+    },
+    {
+      "id": "delPrice",
+      "label": "Compare Price",
+      "type": "text"
+    },
+    {
+      "id": "textAfterPrice",
+      "label": "Text After Price",
+      "type": "text"
+    },
+{
+      "id": "btnText",
+      "label": "Button Label",
+      "type": "text",
+	  "default" : "BUY NOW"
+	},
+{
+  "id": "ctaDetails",
+  "label":"Button Details Text",
+  "type": "html"
+}
+  ],
+  	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+
+{
+      "type": "text",
+      "id": "listItem",
+      "label": "Add Item"
+    }
+
+        ]
+      }
+	],
+  "presets": [
+		{
+			"name": "Bathroom Bliss Banner"
+		}
+	]
+}
+{% endschema %}

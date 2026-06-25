@@ -1,0 +1,132 @@
+{% assign count = 0 %}
+{% for block in section.blocks %}
+  {% assign count = count | plus: 1 %}
+{% endfor %}
+<div id="{{ section.settings.sectionId }}">
+  <div
+    style="background-color:{{ section.settings.bgcolor }}"
+    class="py-80  transformational-scents-section link-to-variant variant_{{ section.settings.linkVariant }} {{ section.settings.class }}"
+  >
+    <div class="container">
+      <div
+        {% if count < 2 %}
+          class="d-flex align-items-center justify-content-between tss-one-block-wrapper"
+        {% endif %}
+      >
+        <div class="tss-main-header">
+          <h2 class="heading-2 text-center white-text value-bold mt-0 ">{{ section.settings.heading }}</h2>
+          <p style="color:#EAEAEB" class="normal-text value-sans text-center">
+            {{ section.settings.subtext }}
+          </p>
+        </div>
+        <div class="mt-4">
+          <div class="transformational-scents-slider {% if count > 2 %}tss-slider{% endif %}">
+            {% for block in section.blocks %}
+              <div class="tss-block">
+                <div class="tss-image position-relative">
+                  <picture>
+                    {% assign image = block.settings.blockImage %}
+                    {% assign mimage = block.settings.mBlockImage %}
+
+                    <source media="(min-width:769px)" srcset="{{ image | img_url: 'master'}}">
+                    <source media="(max-width:768px)" srcset="{{ mimage | img_url: 'master' }}">
+                    <img
+                      data-id="{{image.id}}"
+                      class="img-responsive w-100 h-auto lazy"
+                      src="{{ image | img_url: 'master'}}"
+                      width="400"
+                      height="300"
+                      alt="{{ image.alt }}"
+                    >
+                  </picture>
+                  {% if block.settings.tag != blank %}
+                    <span class="tss-tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                </div>
+                <div class="tss-content">
+                  <h3 class="tss-heading blue-text-3 value-sans">{{ block.settings.heading }}</h3>
+                  <p class="tss-details black-text normal-text value-sans">{{ block.settings.details }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Transformational Scents 2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sectionId",
+      "label": "Section ID"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background color"
+    },
+{
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+    {
+      "type": "text",
+      "id": "linkVariant",
+      "label": "Link variant number"
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+     {
+      "type": "text",
+      "id": "subtext",
+      "label": "Sub Heading"
+    }
+  ],
+  "blocks": [
+      {
+        "type": "image",
+        "name": "Scent block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "blockImage",
+            "label": "Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mBlockImage",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "details",
+            "label": "text"
+          }
+        ]
+      }
+	],
+  "presets": [
+    {
+        "name": "Transformational Scents 2"
+    }
+]
+}
+{% endschema %}

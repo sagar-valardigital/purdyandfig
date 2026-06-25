@@ -1,0 +1,45 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33": {
+      "type": "bb-products",
+      "blocks": {
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14": {
+          "type": "product",
+          "settings": {
+            "product": "charlottes-floral-hand-wash-250ml"
+          }
+        }
+      },
+      "block_order": [
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14"
+      ],
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33"
+  ]
+}

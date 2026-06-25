@@ -1,0 +1,146 @@
+ <script type="text/javascript">
+  // Function to handle click events
+  function trackElementClick(event) {
+      if (event.target.dataset.tracked) {
+          // Extract custom data attributes
+          const page_url = event.target.dataset.pageUrl || window.location.href;
+          const target_url = event.target.dataset.targetUrl || '';
+          const index = event.target.dataset.index || '';
+          const funnel_stage = event.target.dataset.funnelStage || '';
+          const module = event.target.dataset.module || '';
+          const event_label = event.target.dataset.eventLabel || '';
+          const event_value = event.target.dataset.eventValue || '';
+          const item_id = event.target.dataset.itemId || '';
+          const option_index = event.target.dataset.optionIndex || '';
+          const item_name = event.target.dataset.itemName || '';
+
+          // Send data to GA4
+          gtag('event', 'click_custom', {
+              'page_url': page_url,
+              'target_url': target_url,
+              'index': index,
+              'funnel_stage': funnel_stage,
+              'module': module,
+              'event_label': event_label,
+              'event_value': event_value,
+              'item_id': item_id,
+              'option_index': option_index,
+              'item_name': item_name
+          });
+        console.log('event sent..');
+      }
+  }
+
+    // Attach event listener to all elements marked for tracking
+   document.querySelectorAll('[data-tracked="true"]').forEach(element => {
+    element.addEventListener('click', trackElementClick);
+   });
+
+
+  function trackFormSubmit(event) {
+      if (event.target.dataset.addToCart) {
+          // Extract custom data attributes
+          const page_url = event.target.dataset.pageUrl || window.location.href;
+          const target_url = event.target.dataset.targetUrl || ''; 
+          const index = event.target.dataset.index || '';
+          const funnel_stage = event.target.dataset.funnelStage || '';
+          const module = event.target.dataset.module || '';
+          const event_label = event.target.dataset.eventLabel || '';
+          const event_value = event.target.dataset.eventValue || '';
+          const item_id = event.target.dataset.itemId || '';
+          const option_index = event.target.dataset.optionIndex || '';
+          const item_name = event.target.dataset.itemName || '';
+          const price = event.target.dataset.price || '';
+          const quantity = event.target.dataset.quantity || '';
+          const item_type = event.target.dataset.itemType || '';
+
+          // Construct items array
+          const items = [{
+              "item_id": item_id,
+              "item_name": item_name,
+              "price": price,
+              "quantity": quantity
+          }];
+
+          // Send data to GA4 with event name 'add_to_cart_custom'
+          gtag('event', 'add_to_cart_custom', {
+              'page_url': page_url,
+              'target_url': target_url,
+              'index': index,
+              'funnel_stage': funnel_stage,
+              'module': module,
+              'event_label': event_label,
+              'event_value': event_value,
+              'item_id': item_id,
+              'option_index': option_index,
+              'item_name': item_name,
+              'quantity': quantity,
+              'price': price,
+              'item_type': item_type
+          });
+        console.log({
+              'page_url': page_url,
+              'target_url': target_url,
+              'index': index,
+              'funnel_stage': funnel_stage,
+              'module': module,
+              'event_label': event_label,
+              'event_value': event_value,
+              'item_id': item_id,
+              'option_index': option_index,
+              'item_name': item_name,
+              'quantity': quantity,
+              'price': price,
+              'item_type': item_type
+          });
+        console.log('add to cart sent..');
+      }
+  }
+
+  // Attach event listener to all forms marked for tracking
+  document.querySelectorAll('[data-add-to-cart="true"]').forEach(button => {
+      button.addEventListener('click', trackFormSubmit);
+  });
+
+  function trackCheckout(event) {     
+      if (event.target.dataset.checkout || event.target.dataset.purchase) {
+          const page_url = event.target.dataset.pageUrl || window.location.href;
+          const target_url = event.target.dataset.targetUrl || '';
+          const index = event.target.dataset.index || '';
+          const funnel_stage = event.target.dataset.funnelStage || '';
+          const module = event.target.dataset.module || '';
+          const event_label = event.target.dataset.eventLabel || '';
+          const event_value = event.target.dataset.eventValue || '';
+          const item_id = event.target.dataset.itemId || '';
+          const option_index = event.target.dataset.optionIndex || '';
+          const item_name = event.target.dataset.itemName || '';
+          const quantity = event.target.dataset.quantity || '';
+          const price = event.target.dataset.price || '';
+          const item_type = event.target.dataset.itemType || '';
+
+          // Send data to GA4 with event name 'begin_checkout_custom'
+          gtag('event', 'begin_checkout_custom', {
+              'page_url': page_url,
+              'target_url': target_url,
+              'index': index,
+              'funnel_stage': funnel_stage,
+              'module': module,
+              'event_label': event_label,
+              'event_value': event_value,
+              'item_id': item_id,
+              'option_index': option_index,
+              'item_name': item_name,
+              'quantity': quantity,
+              'price': price,
+              'item_type': item_type
+          });
+          console.log('begin checkout event sent..');
+      }
+  }
+
+  // Attach event listener to all elements marked for checkout tracking
+  document.querySelectorAll('[data-checkout="true"]').forEach(button => {
+      button.addEventListener('click', trackCheckout);
+  });
+</script>
+

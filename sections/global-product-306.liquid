@@ -1,0 +1,2142 @@
+<style>
+    .link-to-variant {
+        height: 0;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .link-to-variant.show {
+        display: block !important;
+        height: auto;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        overflow: visible;
+    }
+  .pf306-buy-box .gp-5-sell-price {
+    color: #11322C;
+  }
+  .pf306-buy-box .buy--plan label .link-to-variant {
+    color: #212121;
+  }
+  .pf306-buy-box .plan-heading-label {
+    color: #11322C;
+  }
+  .pf306-buy-box .label-bestValue {
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+  }
+  .pf306-buy-box .best-value-plan {
+    border: 1px;
+  }
+  .pf306-buy-box .buy--plan input:checked + label .label-bestValue {
+    border-top-left-radius: 2px !important;
+    border-top-right-radius: 2px !important;
+  }
+  .pf306-buy-box .buybox-italica {
+    font-style: italic;
+    font-weight: 600;
+    font-family: "GT Super" !important;
+  }
+  @media(max-width:768px){
+    .pf306-buy-box .bt-sub {
+      margin-top: 4px !important;
+      margin-bottom: 4px !important;
+    }
+  .gp-5-del-price,.gp-5-sell-price,.plan-heading-label{
+    font-size:14px;
+  }
+    .label-bestValue{font-size:12px;}
+  }
+
+  .cart-toast{
+    position:fixed;
+    left:0;
+    right:0;
+    top:-100px;
+    background-color:#11322c;
+    padding:15px 10px;
+    text-align:center;
+    color:#fff;
+    font-size:14px;
+    transition:all 0.3s ease;
+    z-index:9999;
+  }
+  .cart-toast.show{
+    top:0;
+  }
+  .label-best-value-1 {
+    background: #0E2823;
+  }
+  @media(max-width:768px){
+    font-size:12px;
+  }
+  @media (max-width: 560px) {
+    .pf306-buy-box.gp--product-wrapper.py-80 {
+      padding-bottom: 32px !important;
+    }
+  }
+</style>
+{% if section.settings.toast %}
+  <script>
+    window.addEventListener('product:added', function(event) {
+        const cartToast = document.getElementById('cart-toast');
+        const cartData = event.detail; // Access the passed data here
+        if (cartToast) {
+            cartToast.classList.add('show');
+            setTimeout(() => {
+                cartToast.classList.remove('show');
+            }, 1500);
+        }
+    });
+  </script>
+  <div id="cart-toast" class="cart-toast font-lausanne fw-400">Great choice, that's in your cart!</div>
+{% endif %}
+<div
+  class="{{ section.settings.className }} gp--product-wrapper gp-christmas py-80"
+  id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};"
+  x-data="{qty:1}"
+>
+  <div class="position-relative">
+    <div class=" mb-4 container heading-2-wrapper">
+      {% if section.settings.mainheading != '' %}
+        <h2 style="color:#3350B4" class="heading-2 font-gtsuper fw-400 mt-0 text-center  m-text-left">
+          {{ section.settings.mainheading }}
+        </h2>
+      {% endif %}
+    </div>
+    {% if section.settings['before-mobile'] %}
+      <div class="mb-3 container">
+        <div class="gp-5-top  desktop-hide ">
+          <h2 class="heading-3 font-lausanne fw-500 mb-0 mt-0">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.mainsubheading != '' -%}
+            <p class=" mt-2 mb-2 font-lausanne fw-300 bt-sub" style="color:#212121;">
+              {{ section.settings.mainsubheading }}
+            </p>
+          {%- endif %}
+          <div class="text-left mt-2 reviews-scroll-block">
+            <div
+              class=" theme-text mt-0 mb-3 stars-img-review click-scroll"
+              data-target="{{ section.settings.scrollto }}"
+            >
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                      <style>
+                          .clas-2 {
+                              fill: #212121;
+                          }
+                      </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="clas-2"
+                              d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                      <style>
+                          .clas-2 {
+                              fill: #212121;
+                          }
+                      </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="clas-2"
+                              d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                      <style>
+                          .clas-2 {
+                              fill: #212121;
+                          }
+                      </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="clas-2"
+                              d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                      <style>
+                          .clas-2 {
+                              fill: #212121;
+                          }
+                      </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="clas-2"
+                              d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                      <style>
+                          .clas-2 {
+                              fill: #212121;
+                          }
+                      </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                          <path class="clas-2"
+                              d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="font-lausanne fw-400" style="color:#212121; font-size:14px; font-weight:400;">
+                {{- settings.gloabalreviews }} verified 5-star reviews</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+
+    <div class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container">
+      <div class="w-50 gp--product-gallery" id="{{ section.settings.scrollId }}">
+        <div class="position-relative">
+          {% assign mediacount = 0 %}
+          <div class="link-to-variant g_variant_1  position-relative">
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage' %}
+                  {% assign image = block.settings.image %}
+                  {% assign mimage = block.settings.mimage %}
+                  {% if block.settings.is_video %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: '2000x'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: '2000x' }}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: '2000x'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="link-to-variant g_variant_2 show position-relative">
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage2' %}
+                  {% assign image = block.settings.image_2 %}
+                  {% assign mimage = block.settings.mimage_2 %}
+                  {% if block.settings.is_video_2 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_2 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_2 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: '2000x'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: '2000x'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: '2000x'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- slider 3 -->
+          <div class="link-to-variant g_variant_3 position-relative">
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage3' %}
+                  {% assign image = block.settings.image_3 %}
+                  {% assign mimage = block.settings.mimage_3 %}
+                  {% if block.settings.is_video_3 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_3 | img_url : '2000x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_3 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: '2000x'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: '2000x'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: 'master'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- slider 4 -->
+          <div class="link-to-variant g_variant_4 position-relative">
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage4' %}
+                  {% assign image = block.settings.image_4 %}
+                  {% assign mimage = block.settings.mimage_4 %}
+                  {% if block.settings.is_video_4 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_4 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_4 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: '2000x'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: '2000x'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: '2000x'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- slider 5 -->
+          <div class="link-to-variant g_variant_5 position-relative">
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage5' %}
+                  {% assign image = block.settings.image_5 %}
+                  {% assign mimage = block.settings.mimage_5 %}
+                  {% if block.settings.is_video_5 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_5 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_5 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: '2000x'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: '2000x'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: '2000x'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- slider 6 -->
+          <div class="link-to-variant g_variant_6 position-relative">
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage6' %}
+                  {% assign image = block.settings.image_6 %}
+                  {% assign mimage = block.settings.mimage_6 %}
+                  {% if block.settings.is_video_6 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_6 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_6 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: '2000x'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: '2000x'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: '2000x'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-50  d-flex justify-content-center by-content">
+        <div class="w-90   bg-white">
+          <div class="gp-5-top {% if section.settings.before-mobile %} mobile-hide {% endif %}">
+            <h2 class="heading-3 font-lausanne fw-500 mb-0 mt-0">
+              {{ section.settings.heading }}
+            </h2>
+            {% if section.settings.mainsubheading != '' -%}
+              <p class="mt-2 mb-2 font-lausanne fw-300" style="color:#212121;">
+                {{ section.settings.mainsubheading }}
+              </p>
+            {%- endif %}
+            <div class="text-left mt-2 reviews-scroll-block">
+              <div
+                class="value-sans theme-text mt-0 mb-3 stars-img-review click-scroll"
+                data-target="{{ section.settings.scrollto }}"
+              >
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                        <style>
+                            .clas-2 {
+                                fill: #212121;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <path class="clas-2"
+                                d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                        </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                        <style>
+                            .clas-2 {
+                                fill: #212121;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <path class="clas-2"
+                                d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                        </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                        <style>
+                            .clas-2 {
+                                fill: #212121;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <path class="clas-2"
+                                d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                        </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                        <style>
+                            .clas-2 {
+                                fill: #212121;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <path class="clas-2"
+                                d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                        </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                        <style>
+                            .clas-2 {
+                                fill: #212121;
+                            }
+                        </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                        <g id="Layer_1-2" data-name="Layer 1">
+                            <path class="clas-2"
+                                d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                        </g>
+                    </g>
+                  </svg>
+                </span>
+                <span
+                  class="font-lausanne fw-400"
+                  style="color:#212121; font-size:14px; font-weight:400;"
+                >
+                  {{- settings.gloabalreviews }} verified 5-star reviews</span
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="gp-5-bottom link-variants-wrapper {% if section.settings.collapse %}show-hide-buy-plan{% endif %}">
+            {% if section.settings.scent_label != blank %}
+              <div class="mb-2 mt-2 choose-secnt-label font-lausanne">{{ section.settings.scent_label }}</div>
+            {% endif %}
+            <form autocomplete="off">
+              <ul class="list-unstyle  gp--product-variants  var_{{ product.variants | size  }} ">
+                {% assign checked = true %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'variant' %}
+                    <li
+                      data-title="{{block.settings.text_heading | downcase }}"
+                      class=" {% if block.settings.outofstock %}disabled var-out-of-stock{% endif %}"
+                    >
+                      <input
+                        autocomplete="off"
+                        class="gp--product-variant form_s{{ forloop.index }} {{ section.settings.className }} {{ block.settings.class }}"
+                        data-planid="{{block.settings.selling_plan}}"
+                        data-plantype="subscription"
+                        data-variantid="{{block.settings.variant_id}}"
+                        data-sku="{{ block.settings.sku }}"
+                        data-discount="{{ block.settings.discount }}"
+                        data-name="{{block.settings.text_heading | handle}}"
+                        {% if forloop.first %}
+                          data-gallery="variant_1"
+                        {% else %}
+                          data-gallery="variant_4"
+                        {% endif %}
+                        data-price="{{ localization.country.currency.symbol }}{{- block.settings.sellPrice -}}"
+                        data-deleted-price="{{ localization.country.currency.symbol }}{{- block.settings.delPrice -}}"
+                        value="{{block.settings.variant_id }}"
+                        data-productid="{{product_v.id}}"
+                        data-variantclass="variant_{{ block.settings.varCount }}"
+                        type="radio"
+                        name="id_{{ section.id }}"
+                        {% if block.settings.dataTrack %}
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url="{{ block.settings.targetUrl }}"
+                          data-index="{{ block.settings.index }}"
+                          data-funnel-stage="{{ block.settings.funnel_stage }}"
+                          data-module="{{ block.settings.dataModule }}"
+                          data-event-label="{{ block.settings.dataTitle }}"
+                          data-event-value="{{ block.settings.eventValue }}"
+                          data-item-id="{{ block.settings.sku }}"
+                          data-option-index="{{ block.settings.optionIndex }}"
+                          data-item-name="{{block.settings.text_heading }}"
+                        {% endif %}
+                        data-section="id_{{ section.id }}"
+                        id="id_{{ section.id }}_{{block.settings.text_heading | escape }}"
+                        {% if forloop.first %}
+                          checked {% assign checked = false -%}
+                        {% else %}
+
+                        {% endif %}
+                      >
+
+                      <label
+                        class="font-lausanne fw-500 var_bg_{{ block.settings.text_heading | handle }} "
+                        for="id_{{ section.id }}_{{block.settings.text_heading | escape}}"
+                        data-include="{{variant.metafields.metadata.includes}}"
+                        data-value="{{block.settings.text_heading}}"
+                      >
+                        {{- block.settings.text_heading -}}
+                      </label>
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </form>
+            {% if section.settings.tab_description_1 != blank %}
+              <div
+                style=""
+                class="gp-19-var-short-desc gp-10-tab-desc mt-3 mb-3  gp-5-var gp-5-var-ab link-to-variant variant_1 show"
+              >
+                {{ section.settings.tab_description_1 }}
+              </div>
+            {% endif %}
+            {% if section.settings.tab_description_2 != blank %}
+              <div
+                style=""
+                class="gp-19-var-short-desc gp-10-tab-desc mt-3 mb-3  gp-5-var gp-5-var-ab link-to-variant variant_4 "
+              >
+                {{ section.settings.tab_description_2 }}
+              </div>
+            {% endif %}
+            <form
+              name="shopify-product-form"
+              autocomplete="off"
+              @submit.prevent="console.log('submitted')"
+              x-ref="product_form_{{ section.index}}"
+              enctype="multipart/form-data"
+              accept-charset="UTF-8"
+              id="product_form_christmas"
+              class="shopify-product-form form_s1 link-to-variant variant_1 show"
+              data-product-id="{{product.id}}"
+              action="/cart/add"
+            >
+              <div class="mt-0 x">
+                <div class="mb-3 mt-0 font-lausanne fw-300 choose-secnt-label ">
+                  Choose your <span class="fw-600">one-time purchase</span> bundles:
+                </div>
+
+                <div class="gp--paln-1 buy--plan position-relative mt-1">
+                  <input
+                    autocomplete="off"
+                    type="radio"
+                    
+                    data-scent-type="s1"
+                    data-index-order="1"
+                    id="buyplan_1_{{ section.id }}"
+                    name="buyplan_{{ section.id }}"
+                    class="buy_plan_radio buy_plan_christmas buy_plan_radio_1"
+                    data-plantype="PAYG"
+                    data-section="id_{{ section.id }}"
+                    data-gallery="variant_1"
+                    data-variantselected="variant_4"
+                    data-link="first"
+                    data-planid="{{ section.settings.selling_plan_1 }}"
+                    data-discount="{{ section.settings.discountPlan_1 }}"
+                    data-variantid="{{ section.settings.variant_id_1 }}"
+                    data-sku="{{ section.settings.sku_1 }}"
+                    data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_1 -}}"
+                    data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_1 -}}"
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-qty="{{ section.settings.qty_1 }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="payg"
+                    data-event-value="plan_selector"
+                    data-item-id="{{ section.settings.sku }}"
+                    data-option-index="1"
+                    data-item-name="Summer Lawn Trio"
+                    data-id="{{ section.settings.variant_id }}"
+                    data-item-type="PAYG"
+                    data-variantclass="variant_1"
+                  >
+                  <label for="buyplan_1_{{ section.id }}" class="best-value-plan ">
+                    <div class="label-bestValue label-best-value-1">Best for topping up</div>
+                    <div class="d-flex justify-content-between buy-block-text mt-0 mb-1">
+                      <span class="font-lausanne fw-600 plan-heading-label">{{ section.settings.plan_heading_1 }}</span>
+                      <span class="d-flex justify-content-end">
+                        <span
+                          class="text-decoration-line-through font-lausanne fw-600  gp-5-del-price"
+                        >
+                          {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_1 }}
+                        </span>
+                        <span class="gp-5-sell-price font-lausanne fw-600 ">
+                          {{ localization.country.currency.symbol }}{{ section.settings.price_1 }}
+                        </span>
+                      </span>
+                    </div>
+
+                    <div
+                      class="d-flex"
+                      style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                    >
+                      {% for block in section.blocks %}
+                        {% if block.type == 'text' %}
+                          <span
+                            class="link-to-variant font-lausanne fw-300 variant_{{ block.settings.listClass }}"
+                          >
+                            {{ block.settings.listItem }}
+                          </span>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </label>
+                </div>
+
+                {% if section.settings.plan_heading_2 != blank %}
+                  <div class="gp--paln-2  buy--plan position-relative ">
+                    <input
+                      autocomplete="off"
+                      data-scent-type="s1"
+                      data-index-order="2"
+                      type="radio"
+                      id="buyplan_2_{{ section.id }}"
+                      name="buyplan_{{ section.id }}"
+                      class="buy_plan_radio buy_plan_christmas"
+                      data-section="id_{{ section.id }}"
+                      data-plantype="PAYG"
+                      data-gallery="variant_2"
+                      data-variantselected="variant_5"
+                      data-link="first"
+                      data-planid="{{ section.settings.selling_plan_2 }}"
+                      data-discount="{{ section.settings.discountPlan_2 }}"
+                      data-variantid="{{ section.settings.variant_id_2 }}"
+                      data-sku="{{ section.settings.sku_2 }}"
+                      data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_2 -}}"
+                      data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_2 -}}"
+                      data-tracked="true"
+                      data-page-url="{{ request.path }}"
+                      data-target-url=""
+                      data-index="{{ section.settings.index }}"
+                      data-funnel-stage="{{ section.settings.funnel_stage }}"
+                      data-qty="{{ section.settings.qty_2 }}"
+                      data-module="{{ section.settings.dataModule }}"
+                      data-event-label="payg"
+                      data-event-value="plan_selector"
+                      data-item-id="{{ section.settings.sku2 }}"
+                      data-option-index="2"
+                      data-item-name="Summer Lawn Bundle"
+                      data-id="{{ section.settings.variant_id_2 }}"
+                      data-item-type="PAYG"
+                      data-discount-price=""
+                      checked
+                    >
+                    <label for="buyplan_2_{{ section.id }}" class="best-value-plan">
+                      <div class="label-bestValue">Best for variety</div>
+                      <div class="d-flex justify-content-between buy-block-text">
+                        <span class="font-lausanne fw-600 plan-heading-label">
+                          {{- section.settings.plan_heading_2 -}}
+                        </span>
+                        <span class="d-flex justify-content-end">
+                          <span
+                            class="text-decoration-line-through font-lausanne fw-600  gp-5-del-price"
+                          >
+                            {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_2 }}
+                          </span>
+                          <span class="gp-5-sell-price font-lausanne fw-600">
+                            {{ localization.country.currency.symbol }}{{ section.settings.price_2 }}
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        class="d-flex "
+                        style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                      >
+                        {% for block in section.blocks %}
+                          {% if block.type == 'point' %}
+                            <span
+                              class="link-to-variant font-lausanne fw-300  variant_{{ block.settings.listClass2 }}"
+                            >
+                              {{ block.settings.listItem2 }}
+                            </span>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </label>
+                  </div>
+                {% endif %}
+
+                {% if section.settings.plan_heading_3 != blank %}
+                  <div class="  position-relative buy--plan">
+                    <input
+                      autocomplete="off"
+                      type="radio"
+                      data-scent-type="s1"
+                      data-index-order="3"
+                      id="buyplan_3_{{ section.id }}"
+                      name="buyplan_{{ section.id }}"
+                      class="buy_plan_radio buy_plan_christmas"
+                      data-section="id_{{ section.id }}"
+                      data-plantype="subscription"
+                      data-variantclass="variant_3"
+                      data-gallery="variant_3"
+                      data-variantselected="variant_6"
+                      data-link="first"
+                      data-planid="{{ section.settings.selling_plan_3 }}"
+                      data-discount="{{ section.settings.discountPlan_3 }}"
+                      data-variantid="{{ section.settings.variant_id_3 }}"
+                      data-sku="{{ section.settings.sku_3 }}"
+                      data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_3 -}}"
+                      data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_3 -}}"
+                      data-tracked="true"
+                      data-page-url="{{ request.path }}"
+                      data-target-url=""
+                      data-index="{{ section.settings.index }}"
+                      data-funnel-stage="{{ section.settings.funnel_stage }}"
+                      data-module="{{ section.settings.dataModule }}"
+                      data-event-label="payg"
+                      data-event-value="plan_selector"
+                      data-sku="{{ section.settings.sku_3 }}"
+                      data-option-index="2"
+                      data-item-name="3 Cleaning Concentrates only"
+                      data-qty="{{ section.settings.qty_3 }}"
+                      data-id="{{ section.settings.refill_variant_id }}"
+                      data-item-type="PAYG"
+                    >
+                    <label for="buyplan_3_{{ section.id }}" class="best-value-plan">
+                      <div class="label-bestValue" style="background:#877D64;">Best for a summer reset</div>
+                      <div class="d-flex justify-content-between buy-block-text">
+                        <span class="font-lausanne fw-600 plan-heading-label">
+                          {{- section.settings.plan_heading_3 -}}
+                        </span>
+                        <span class="d-flex justify-content-end">
+                          <span
+                            class="text-decoration-line-through font-lausanne fw-600  gp-5-del-price"
+                          >
+                            {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_3 }}
+                          </span>
+                          <span class="gp-5-sell-price font-lausanne fw-600">
+                            {{ localization.country.currency.symbol }}{{ section.settings.price_3 }}
+                          </span>
+                        </span>
+                      </div>
+                      <div
+                        class="d-flex"
+                        style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                      >
+                        {% for block in section.blocks %}
+                          {% if block.type == 'point3' %}
+                            <span
+                              class="link-to-variant font-lausanne fw-300  variant_{{ block.settings.listClass3 }}"
+                            >
+                              {{ block.settings.listItem3 }}
+                            </span>
+                          {% endif %}
+                        {% endfor %}
+                      </div>
+                    </label>
+                  </div>
+                {% endif %}
+              </div>
+              <input
+                autocomplete="off"
+                type="hidden"
+                name="id"
+                class="input_variant_id"
+                value="{{ section.settings.variant_id_2 }}"
+              >
+              <input
+                autocomplete="off"
+                type="hidden"
+                class="discout_input"
+                name="discount"
+                value="{{ section.settings.discountPlan_2 }}"
+              >
+              <input autocomplete="off" type="hidden" name="quantity" value="1">
+
+              <input
+                autocomplete="off"
+                type="checkbox"
+                name="purchase_type"
+                value="payg"
+                checked
+                class="d-none gp--buyoption-input"
+              >
+              <!--
+                <input autocomplete="off" class="input_selling_plan" type="hidden" name="selling_plan"
+                value="{{ section.settings.selling_plan_2 }}">
+              -->
+              <div class="text-left  g4-btn-wrapper m-auto">
+                {% if section.settings.redirectLink %}
+                  <a
+                    class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                    href="{{ section.settings.redirectLink }}"
+                  >
+                    {% if section.settings.outOfStock %}
+                      Out of Stock
+                    {% else %}
+                      {{ section.settings.btnText }}
+                    {% endif -%}
+                  </a>
+                {% else %}
+                  {% if section.settings.isCheckout %}
+                    <span
+                      {% if section.settings.toast %}
+                        x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ section.index}}, false, false, $event)"
+                      {% else %}
+                        x-on:click="Purdy.CheckoutLandingV2($refs.product_form_{{ section.index}}, $event)"
+                      {% endif %}
+                      class="btn w-100 green-btn value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                      style="background-color:#2D469E"
+                      {% if section.settings.dataTrack %}
+                        data-add-to-cart="true" data-page-url="{{ request.path }}"
+                        data-target-url="{{ section.settings.targetUrl }}"
+                        data-index="{{ section.settings.index }}"
+                        data-funnel-stage="{{ section.settings.funnel_stage }}"
+                        data-module="{{ section.settings.dataModule }}"
+                        data-event-label="{{ section.settings.dataTitle }}"
+                        data-event-value="{{ section.settings.eventValue }}"
+                        data-item-id="{{ section.settings.sku }}"
+                        data-option-index="{{ section.settings.optionIndex }}"
+                        data-item-name="Summer Lawn Trio" data-quantity="{{ section.settings.quantity }}"
+                        data-price="{{ localization.country.currency.symbol }}{{ section.settings.price }}"
+                        data-item-type="PAYG"
+                      {% endif %}
+                    >
+                      {% if section.settings.outOfStock %}
+                        Out of Stock
+                      {% else %}
+                        <span class="buy-text-2 fw-400 font-lausanne">{{ section.settings.btnText }}</span> |
+                        <span
+                          class="deleted-price font-lausanne fw-400 text-decoration-line-through  gp--del-price"
+                          style="color:#bdbdbd;margin-right:0;"
+                        >
+                          {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_2 }}
+                        </span>
+                        <span class="font-lausanne fw-400 white-text gp--sell-price">
+                          {{ localization.country.currency.symbol }}{{ section.settings.price_2 }}
+                        </span>
+                      {% endif -%}
+                    </span>
+                  {% endif %}
+                {% endif -%}
+              </div>
+            </form>
+
+            <form
+              name="shopify-product-form"
+              autocomplete="off"
+              @submit.prevent="console.log('submitted')"
+              x-ref="product_form_{{ section.index}}_2"
+              enctype="multipart/form-data"
+              accept-charset="UTF-8"
+              id="product_form_{{ section.index}}_2"
+              class="shopify-product-form  form_s2 link-to-variant variant_4"
+              data-product-id="{{product.id}}"
+              action="/cart/add"
+            >
+              <div class="mt-0 ">
+                <div class="mb-3 mt-0 choose-secnt-label font-lausanne fw-300">Choose your plan</div>
+
+                <div class="gp--paln-1 buy--plan position-relative mt-1">
+                  <input
+                    autocomplete="off"
+                    type="radio"
+                    data-scent-type="s2"
+                    data-s2-default
+                    data-index-order="1"
+                    id="buyplan_4_{{ section.id }}"
+                    name="buyplan_{{ section.id }}_1"
+                    class="buy_plan_radio buy_plan_radio_1"
+                    data-plantype="subscription"
+                    data-section="id_{{ section.id }}"
+                    data-gallery="variant_4"
+                    data-variantselected="variant_1"
+                    data-link="second"
+                    data-planid="{{ section.settings.selling_plan_4 }}"
+                    data-discount="{{ section.settings.discountPlan_4 }}"
+                    data-variantid="{{ section.settings.variant_id_4 }}"
+                    data-sku="{{ section.settings.sku_4 }}"
+                    data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_4 -}}"
+                    data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_4 -}}"
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="subscription"
+                    data-event-value="plan_selector"
+                    data-item-id="{{ section.settings.sku_4 }}"
+                    data-option-index="1"
+                    data-item-name="{{ product.title }}"
+                    data-id="{{ section.settings.variant_id }}"
+                    data-item-type="subscription"
+                    checked
+                  >
+                  <label for="buyplan_4_{{ section.id }}" class=" ">
+                    <div class="d-flex justify-content-between buy-block-text mt-0 mb-1">
+                      <span class="font-lausanne fw-500">{{ section.settings.plan_heading_4 }}</span>
+                      <span class="d-flex justify-content-end">
+                        <span
+                          class="text-decoration-line-through font-lausanne fw-400 gp-5-del-price"
+                        >
+                          {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_4 }}
+                        </span>
+                        <span class="gp-5-sell-price font-lausanne fw-500">
+                          {{ localization.country.currency.symbol }}{{ section.settings.price_4 }}
+                        </span>
+                      </span>
+                    </div>
+
+                    <div
+                      class="d-flex show-hide-listing"
+                      style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                    >
+                      {% for block in section.blocks %}
+                        {% if block.type == 'text' %}
+                          <span
+                            class=" font-lausanne fw-300  link-to-variant  variant_{{ block.settings.listClass }}"
+                          >
+                            {{ block.settings.listItem }}
+                          </span>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </label>
+                </div>
+
+                <div class="gp--paln-2 buy--plan position-relative ">
+                  <input
+                    autocomplete="off"
+                    data-scent-type="s2"
+                    data-index-order="2"
+                    type="radio"
+                    id="buyplan_5_{{ section.id }}"
+                    name="buyplan_{{ section.id }}_1"
+                    class="buy_plan_radio "
+                    data-section="id_{{ section.id }}"
+                    data-plantype="subscription"
+                    data-gallery="variant_5"
+                    data-variantselected="variant_2"
+                    data-link="second"
+                    data-planid="{{ section.settings.selling_plan_5 }}"
+                    data-discount="{{ section.settings.discountPlan_5 }}"
+                    data-variantid="{{ section.settings.variant_id_5 }}"
+                    data-sku="{{ section.settings.sku_5 }}"
+                    data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_5 -}}"
+                    data-deleted-price="{{ localization.country.currency.symbol }}{{- section.settings.deleted_price_5 -}}"
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="payg"
+                    data-event-value="plan_selector"
+                    data-item-id="{{ section.settings.sku_5 }}"
+                    data-option-index="2"
+                    data-item-name="{{ product.title }}"
+                    data-id="{{ section.settings.variant_id_5 }}"
+                    data-item-type="PAYG"
+                  >
+                  <label for="buyplan_5_{{ section.id }}" class="best-value-plan">
+                    <div class="label-bestValue font-lausanne fw-400">Best Value</div>
+                    <div class="d-flex justify-content-between buy-block-text">
+                      <span class="font-lausanne fw-500">{{ section.settings.plan_heading_5 }}</span>
+                      <span class="d-flex justify-content-end">
+                        <span
+                          class="text-decoration-line-through font-lausanne fw-400 gp-5-del-price"
+                        >
+                          {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_5 }}
+                        </span>
+                        <span class="gp-5-sell-price font-lausanne fw-500 ">
+                          {{ localization.country.currency.symbol }}{{ section.settings.price_5 }}
+                        </span>
+                      </span>
+                    </div>
+
+                    <div
+                      class="d-flex show-hide-listing"
+                      style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                    >
+                      <p class="font-lausanne fw-300 include-starterkit">
+                        Includes everything in a Counter Clean Plan, PLUS:
+                      </p>
+                      {% for block in section.blocks %}
+                        {% if block.type == 'point' %}
+                          <span
+                            class=" font-lausanne fw-300 link-to-variant  variant_{{ block.settings.listClass2 }}"
+                          >
+                            {{ block.settings.listItem2 }}
+                          </span>
+                        {% endif %}
+                      {% endfor %}
+                    </div>
+                  </label>
+                </div>
+
+                <div class="  position-relative buy--plan">
+                  <input
+                    data-scent-type="s2"
+                    data-index-order="3"
+                    autocomplete="off"
+                    type="radio"
+                    id="buyplan_6_{{ section.id }}"
+                    name="buyplan_{{ section.id }}_1"
+                    class="buy_plan_radio"
+                    data-section="id_{{ section.id }}"
+                    data-plantype="oneoff"
+                    data-variantclass="variant_3"
+                    data-gallery="variant_6"
+                    data-variantselected="variant_3"
+                    data-link="second"
+                    data-planid="{{ section.settings.selling_plan_6 }}"
+                    data-discount="{{ section.settings.discountPlan_6 }}"
+                    data-variantid="{{ section.settings.variant_id_6 }}"
+                    data-sku="{{ section.settings.sku_6 }}"
+                    data-price="{{ localization.country.currency.symbol }}{{- section.settings.price_6 -}}"
+                    data-deleted-price=""
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="payg"
+                    data-event-value="plan_selector"
+                    data-item-id="{{ section.settings.sku_6 }}"
+                    data-option-index="2"
+                    data-item-name="3 Cleaning Concentrates only"
+                    data-id="{{ section.settings.variant_id_6 }}"
+                    data-item-type="PAYG"
+                  >
+                  <label for="buyplan_6_{{ section.id }}" class="best-value-plan">
+                    <div class="label-bestValue">Best Value</div>
+                    <div class="d-flex justify-content-between buy-block-text">
+                      <span class="font-lausanne fw-500">{{ section.settings.plan_heading_6 }}</span>
+                      <span class=" font-lausanne fw-500 refill-price">
+                        {{ localization.country.currency.symbol }}
+                        {{- section.settings.price_6 -}}
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              </div>
+              <input
+                autocomplete="off"
+                type="hidden"
+                name="id"
+                class="input_variant_id"
+                value="{{ section.settings.variant_id_4 }}"
+              >
+              <input
+                autocomplete="off"
+                type="hidden"
+                class="discout_input"
+                name="discount"
+                value="{{ section.settings.discountPlan_4 }}"
+              >
+              <input autocomplete="off" type="hidden" name="quantity" value="1">
+
+              <input
+                autocomplete="off"
+                type="checkbox"
+                name="purchase_type"
+                value="subscription"
+                checked
+                class="d-none gp--buyoption-input"
+              >
+              <input
+                autocomplete="off"
+                class="input_selling_plan"
+                type="hidden"
+                name="selling_plan"
+                value="{{ section.settings.selling_plan_4 }}"
+              >
+
+              <div class="text-left  g4-btn-wrapper m-auto">
+                {% if section.settings.redirectLink %}
+                  <a
+                    class="btn w-100 green-btn font-lausanne fw-400 btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                    href="{{ section.settings.redirectLink }}"
+                  >
+                    {% if section.settings.outOfStock %}
+                      Out of Stock
+                    {% else %}
+                      {{ section.settings.btnText }}
+                    {% endif -%}
+                  </a>
+                {% else %}
+                  {% if section.settings.isCheckout %}
+                    <span
+                      x-on:click="Purdy.AddToCartWithDiscountChristmas($refs.product_form_{{ section.index}}_2, true, false, $event)"
+                      class="btn w-100 green-btn value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                      style="background-color:#2D469E"
+                      {% if section.settings.dataTrack %}
+                        data-add-to-cart="true" data-page-url="{{ request.path }}"
+                        data-target-url="{{ section.settings.targetUrl }}"
+                        data-index="{{ section.settings.index }}"
+                        data-funnel-stage="{{ section.settings.funnel_stage }}"
+                        data-module="{{ section.settings.dataModule }}"
+                        data-event-label="{{ section.settings.dataTitle }}"
+                        data-event-value="{{ section.settings.eventValue }}"
+                        data-item-id="{{ section.settings.sku }}"
+                        data-option-index="{{ section.settings.optionIndex }}"
+                        data-item-name="{{ product.title }}" data-quantity="{{ section.settings.quantity }}"
+                        data-price="{{ localization.country.currency.symbol }}{{ section.settings.price }}"
+                        data-item-type="subscription"
+                      {% endif %}
+                    >
+                      {% if section.settings.outOfStock %}
+                        Out of Stock
+                      {% else %}
+                        <span class="buy-text">{{ section.settings.btnText }}</span> |
+                        <span
+                          class="deleted-price font-lausanne fw-400 text-decoration-line-through  gp--del-price"
+                          style="color:#bdbdbd;margin-right:0;"
+                        >
+                          {{ localization.country.currency.symbol }}{{ section.settings.deleted_price_4 }}
+                        </span>
+                        <span class="font-lausanne fw-500 white-text gp--sell-price">
+                          {{ localization.country.currency.symbol }}{{ section.settings.price_4 }}
+                        </span>
+                      {% endif -%}
+                    </span>
+                  {% endif %}
+                {% endif -%}
+              </div>
+            </form>
+          </div>
+          <!--
+            <div
+              class="text-center theme-text mt-2 guarantee-text fw-400"
+              style="font-size:12px; color:#212121; line-height: 18px;"
+            >
+              Discount valid on maximum of 3 bundles
+            </div>
+          -->
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% comment %}
+  <div class="go-to-cart {% if cart.item_count > 0 %}show{% endif %}" x-data>
+
+    <button class="black-btn font-lausanne fw-400" @click="$dispatch('toggle-cart')">GO TO CART <svg xmlns="http://www.w3.org/2000/svg" width="12" height="10" viewBox="0 0 12 10" fill="none">
+  <path d="M11.0156 5.53906L7.26562 9.28906C6.98438 9.59375 6.49219 9.59375 6.21094 9.28906C5.90625 9.00781 5.90625 8.51562 6.21094 8.23438L8.67188 5.75H1.5C1.07812 5.75 0.75 5.42188 0.75 5C0.75 4.60156 1.07812 4.25 1.5 4.25H8.67188L6.21094 1.78906C5.90625 1.50781 5.90625 1.01562 6.21094 0.734375C6.49219 0.429688 6.98438 0.429688 7.26562 0.734375L11.0156 4.48438C11.3203 4.76562 11.3203 5.25781 11.0156 5.53906Z" fill="white"/>
+  </svg></button>
+  </div>
+{% endcomment %}
+
+{% schema %}
+{
+    "name": "Global Product 306",
+    "settings": [
+        {
+            "type": "text",
+            "id": "className",
+            "label": "Section Class"
+        },
+{
+            "type": "checkbox",
+            "id": "toast",
+            "label": "Enable Toast",
+            "default": false
+        },
+        {
+            "type": "checkbox",
+            "id": "collapse",
+            "label": "Collapse Buy Plan",
+            "default": false
+        },
+
+        {
+            "type": "checkbox",
+            "id": "outOfStock",
+            "label": "Enable If product out Of Stock",
+            "default": true
+        },
+
+        {
+            "type": "text",
+            "id": "scrollId",
+            "label": "Section Scroll ID"
+        },
+
+        {
+            "id": "buyonce",
+            "label": "Product Buy Once",
+            "type": "checkbox",
+            "default": true
+        },
+
+        {
+            "id": "isCheckout",
+            "label": "Go to Checkout",
+            "type": "checkbox",
+            "default": false
+        },
+
+        {
+            "id": "scrollto",
+            "label": "Review Scroll to",
+            "type": "text"
+        },
+
+        {
+            "id": "background",
+            "label": "Background color",
+            "type": "color"
+        },
+
+        {
+            "type": "html",
+            "id": "mainheading",
+            "label": "Main Heading"
+        },
+
+        {
+            "type": "html",
+            "id": "heading",
+            "label": "Product Title"
+        },
+
+        {
+            "type": "html",
+            "id": "mainsubheading",
+            "label": "Sub Heading"
+        },
+
+        {
+            "id": "scent_label",
+            "label": "Choose scents label",
+            "type": "text",
+            "default" : "Choose your Scent"
+        },
+
+        {
+            "id": "tab_description_1",
+            "label": "Tab 1 Description",
+            "default": "Transform your home with new natural scents each season",
+            "type": "text"
+        },
+
+        {
+            "id": "tab_description_2",
+            "label": "Tab 2 Description",
+            "default": "Our best-selling citrus for a beautifully scented home",
+            "type": "text"
+        },
+
+        {
+            "id": "btnText",
+            "label":"Button label",
+            "type": "text",
+            "default" : "BUY NOW"
+        },
+
+        {
+            "id": "redirectLink",
+            "label":"Button Link",
+            "type": "url"
+        },
+
+        {
+            "id": "ctaDetails",
+            "label":"Button Details Text",
+            "type": "html"
+        },
+
+        {
+            "type": "header",
+            "content": "First Plan"
+        },
+
+      {
+            "type": "text",
+            "id": "plan_heading_1",
+            "label": "Plan Heading"
+        },
+        {
+            "type": "text",
+            "id": "variant_id_1",
+            "label": "Variant ID"
+        },
+
+        {
+            "type": "text",
+            "id": "selling_plan_1",
+            "label": "Selling Plan"
+        },
+
+        {
+            "type": "text",
+            "id": "sku_1",
+            "label": "SKU"
+        },
+      {
+            "type": "text",
+            "id": "qty_1",
+            "label": "Qty"
+        },
+
+        {
+            "type": "text",
+            "id": "discountPlan_1",
+            "label": "Discount Code"
+        },
+
+        {
+            "type": "text",
+            "id": "price_1",
+            "label": "Price"
+        },
+
+        {
+            "type": "text",
+            "id": "deleted_price_1",
+            "label": "Cross Over Price"
+        },
+
+        {
+            "type": "header",
+            "content": "Second Plan"
+        },
+{
+            "type": "text",
+            "id": "plan_heading_2",
+            "label": "Plan Heading"
+        },
+        {
+            "type": "text",
+            "id": "variant_id_2",
+            "label": "Variant ID"
+        },
+
+        {
+            "type": "text",
+            "id": "selling_plan_2",
+            "label": "Selling Plan"
+        },
+
+        {
+            "type": "text",
+            "id": "sku_2",
+            "label": "SKU"
+        },
+      {
+            "type": "text",
+            "id": "qty_2",
+            "label": "Qty"
+        },
+
+        {
+            "type": "text",
+            "id": "discountPlan_2",
+            "label": "Discount Code"
+        },
+
+        {
+            "type": "text",
+            "id": "price_2",
+            "label": "Price"
+        },
+
+        {
+            "type": "text",
+            "id": "deleted_price_2",
+            "label": "Cross Over Price"
+        },
+
+        {
+            "type": "header",
+            "content": "Third Plan"
+        },
+{
+            "type": "text",
+            "id": "plan_heading_3",
+            "label": "Plan Heading"
+        },
+        {
+            "type": "text",
+            "id": "variant_id_3",
+            "label": "Variant ID"
+        },
+
+        {
+            "type": "text",
+            "id": "selling_plan_3",
+            "label": "Selling Plan"
+        },
+
+        {
+            "type": "text",
+            "id": "sku_3",
+            "label": "SKU"
+        },
+{
+            "type": "text",
+            "id": "qty_3",
+            "label": "Qty"
+        },
+        {
+            "type": "text",
+            "id": "discountPlan_3",
+            "label": "Discount Code"
+        },
+
+        {
+            "type": "text",
+            "id": "price_3",
+            "label": "Price"
+        },
+
+        {
+            "type": "text",
+            "id": "deleted_price_3",
+            "label": "Cross Over Price"
+        },
+
+        {
+            "type": "header",
+            "content": "Fourth Plan"
+        },
+{
+            "type": "text",
+            "id": "plan_heading_4",
+            "label": "Plan Heading"
+        },
+        {
+            "type": "text",
+            "id": "variant_id_4",
+            "label": "Variant ID"
+        },
+
+        {
+            "type": "text",
+            "id": "selling_plan_4",
+            "label": "Selling Plan"
+        },
+
+        {
+            "type": "text",
+            "id": "sku_4",
+            "label": "SKU"
+        },
+
+        {
+            "type": "text",
+            "id": "discountPlan_4",
+            "label": "Discount Code"
+        },
+
+        {
+            "type": "text",
+            "id": "price_4",
+            "label": "Price"
+        },
+
+        {
+            "type": "text",
+            "id": "deleted_price_4",
+            "label": "Cross Over Price"
+        },
+
+        {
+            "type": "header",
+            "content": "Fifth Plan"
+        },
+{
+            "type": "text",
+            "id": "plan_heading_5",
+            "label": "Plan Heading"
+        },
+        {
+            "type": "text",
+            "id": "variant_id_5",
+            "label": "Variant ID"
+        },
+
+        {
+            "type": "text",
+            "id": "selling_plan_5",
+            "label": "Selling Plan"
+        },
+
+        {
+            "type": "text",
+            "id": "sku_5",
+            "label": "SKU"
+        },
+
+        {
+            "type": "text",
+            "id": "discountPlan_5",
+            "label": "Discount Code"
+        },
+
+        {
+            "type": "text",
+            "id": "price_5",
+            "label": "Price"
+        },
+
+        {
+            "type": "text",
+            "id": "deleted_price_5",
+            "label": "Cross Over Price"
+        },
+
+        {
+            "type": "header",
+            "content": "Sixth Plan"
+        },
+{
+            "type": "text",
+            "id": "plan_heading_6",
+            "label": "Plan Heading"
+        },
+        {
+            "type": "text",
+            "id": "variant_id_6",
+            "label": "Variant ID"
+        },
+
+        {
+            "type": "text",
+            "id": "selling_plan_6",
+            "label": "Selling Plan"
+        },
+
+        {
+            "type": "text",
+            "id": "sku_6",
+            "label": "SKU"
+        },
+
+        {
+            "type": "text",
+            "id": "discountPlan_6",
+            "label": "Discount Code"
+        },
+
+        {
+            "type": "text",
+            "id": "price_6",
+            "label": "Price"
+        },
+
+        {
+            "type": "text",
+            "id": "deleted_price_6",
+            "label": "Cross Over Price"
+        },
+
+        {
+            "type": "header",
+            "content": "Mobile"
+        },
+
+        {
+            "type": "checkbox",
+            "id": "heading-position",
+            "label": "Heading After Image"
+        },
+
+        {
+            "type": "checkbox",
+            "id": "before-mobile",
+            "label": "Heading before Image"
+        },
+
+        {
+            "type": "header",
+            "content": "GA4"
+        },
+
+        {
+            "id": "dataTrack",
+            "label":"Data Track",
+            "type": "checkbox"
+        },
+
+        {
+            "id": "targetUrl",
+            "label":"Target Url",
+            "type": "url"
+        },
+
+        {
+            "id": "index",
+            "label":"Index",
+            "type": "number",
+            "default" : 0
+        },
+
+        {
+            "id": "funnel_stage",
+            "label":"Funnel Stage",
+            "type": "text",
+            "default" : "landing_page"
+        },
+
+        {
+            "id": "dataModule",
+            "label":"Module",
+            "type": "text",
+            "default" : "announcement_bar"
+        },
+
+        {
+            "id": "dataTitle",
+            "label":"Event Label",
+            "type": "text",
+            "default": "get_your_offer"
+        },
+
+        {
+            "id": "eventValue",
+            "label":"Event Value",
+            "type": "text",
+            "default" : "shop_anchor"
+        },
+
+        {
+            "id": "optionIndex",
+            "label":"Option Index",
+            "type": "text"
+        },
+
+        {
+            "id": "quantity",
+            "label":"Item Quantity",
+            "type": "number",
+            "default" : 1
+        }
+    ],
+    "blocks": [
+        {
+            "type": "text",
+            "name": "block 1",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "listClass",
+                    "label": "Add list Class",
+                    "default" : "1 show",
+                    "info" : "add number 1, 2, 3 according to related variant number"
+                },
+                {
+                    "type": "html",
+                    "id": "listItem",
+                    "label": "Add Item"
+                }
+            ]
+        },
+    {
+        "type": "point",
+        "name": "block 2",
+        "settings": [
+            {
+                "type": "text",
+                "id": "listClass2",
+                "label": "Add list Class",
+                "default" : "1 show",
+                "info" : "add number 1, 2, 3 according to related variant number"
+            },
+            {
+                "type": "html",
+                "id": "listItem2",
+                "label": "Add Item"
+            }
+        ]
+    },
+      {
+        "type": "point3",
+        "name": "block 3",
+        "settings": [
+            {
+                "type": "text",
+                "id": "listClass3",
+                "label": "Add list Class",
+                "default" : "1 show",
+                "info" : "add number 1, 2, 3 according to related variant number"
+            },
+            {
+                "type": "html",
+                "id": "listItem3",
+                "label": "Add Item"
+            }
+        ]
+    },
+    {
+        "type": "productImage",
+        "name": "Product Image",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Add Product Image"
+            },
+            {
+                "type": "image_picker",
+                "id": "mimage",
+                "label": "Mobile Product Image"
+            },
+            {
+                "type": "checkbox",
+                "id": "is_video",
+                "label": "Check if video added"
+            },
+            {
+                "type": "url",
+                "id": "videoURL",
+                "label": "Add Video url"
+            },
+            {
+                "type": "image_picker",
+                "id": "poster",
+                "label": "Add Video poster"
+            }
+        ]
+    },
+    {
+    "type": "productImage2",
+    "name": "Product Image 2",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "image_2",
+    "label": "Add Product Image"
+    },
+    {
+    "type": "image_picker",
+    "id": "mimage_2",
+    "label": "Mobile Product Image"
+    },
+    {
+    "type": "checkbox",
+    "id": "is_video_2",
+    "label": "Check if video added"
+    },
+    {
+    "type": "url",
+    "id": "videoURL_2",
+    "label": "Add Video url"
+    },
+    {
+    "type": "image_picker",
+    "id": "poster_2",
+    "label": "Add Video poster"
+    }
+
+    ]
+    }
+    ,
+    {
+    "type": "productImage3",
+    "name": "Product Image 3",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "image_3",
+    "label": "Add Product Image"
+    },
+    {
+    "type": "image_picker",
+    "id": "mimage_3",
+    "label": "Mobile Product Image"
+    },
+    {
+    "type": "checkbox",
+    "id": "is_video_3",
+    "label": "Check if video added"
+    },
+    {
+    "type": "url",
+    "id": "videoURL_3",
+    "label": "Add Video url"
+    },
+    {
+    "type": "image_picker",
+    "id": "poster_3",
+    "label": "Add Video poster"
+    }
+
+    ]
+    }
+    ,
+    {
+    "type": "productImage4",
+    "name": "Product Image 4",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "image_4",
+    "label": "Add Product Image"
+    },
+    {
+    "type": "image_picker",
+    "id": "mimage_4",
+    "label": "Mobile Product Image"
+    },
+    {
+    "type": "checkbox",
+    "id": "is_video_4",
+    "label": "Check if video added"
+    },
+    {
+    "type": "url",
+    "id": "videoURL_4",
+    "label": "Add Video url"
+    },
+    {
+    "type": "image_picker",
+    "id": "poster_4",
+    "label": "Add Video poster"
+    }
+
+    ]
+    },
+    {
+    "type": "productImage5",
+    "name": "Product Image 5",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "image_5",
+    "label": "Add Product Image"
+    },
+    {
+    "type": "image_picker",
+    "id": "mimage_5",
+    "label": "Mobile Product Image"
+    },
+    {
+    "type": "checkbox",
+    "id": "is_video_5",
+    "label": "Check if video added"
+    },
+    {
+    "type": "url",
+    "id": "videoURL_5",
+    "label": "Add Video url"
+    },
+    {
+    "type": "image_picker",
+    "id": "poster_5",
+    "label": "Add Video poster"
+    }
+
+    ]
+    },
+    {
+    "type": "productImage6",
+    "name": "Product Image 6",
+    "settings": [
+    {
+    "type": "image_picker",
+    "id": "image_6",
+    "label": "Add Product Image"
+    },
+    {
+    "type": "image_picker",
+    "id": "mimage_6",
+    "label": "Mobile Product Image"
+    },
+    {
+    "type": "checkbox",
+    "id": "is_video_6",
+    "label": "Check if video added"
+    },
+    {
+    "type": "url",
+    "id": "videoURL_6",
+    "label": "Add Video url"
+    },
+    {
+    "type": "image_picker",
+    "id": "poster_6",
+    "label": "Add Video poster"
+    }
+
+    ]
+    }
+    ,
+    {
+    "type": "variant",
+    "name": "Add Variant",
+    "settings": [
+    {
+    "type": "checkbox",
+    "id": "outofstock",
+    "label": "Mark this variant as out of stock",
+    "default": false
+    },
+    {
+    "type": "text",
+    "id": "class",
+    "label": "Block Class "
+    },
+    {
+    "type": "text",
+    "id": "varCount",
+    "label": "Variant Number"
+    },
+    {
+    "type": "text",
+    "id": "text_heading",
+    "label": "Heading"
+    },
+
+
+    {
+    "type": "header",
+    "content": "GA4"
+    },
+    {
+    "id": "dataTrack",
+    "label":"Data Track",
+    "type": "checkbox",
+    "default" : true
+    },
+    {
+    "id": "targetUrl",
+    "label":"Target Url",
+    "type": "url"
+    },
+    {
+    "id": "index",
+    "label":"Index",
+    "type": "number",
+    "default" : 0
+    },
+    {
+    "id": "funnel_stage",
+    "label":"Funnel Stage",
+    "type": "text",
+    "default" : "landing_page"
+    },
+    {
+    "id": "dataModule",
+    "label":"Module",
+    "type": "text",
+    "default" : "announcement_bar"
+    },
+    {
+    "id": "dataTitle",
+    "label":"Event Label",
+    "type": "text",
+    "default": "get_your_offer"
+    }
+    ,
+    {
+    "id": "eventValue",
+    "label":"Event Value",
+    "type": "text",
+    "default" : "shop_anchor"
+    }
+    ,
+    {
+    "id": "optionIndex",
+    "label":"Option Index",
+    "type": "text"
+    }
+    ,
+    {
+    "id": "sku",
+    "label":"SKU 1",
+    "type": "text"
+    }
+
+    ]
+    }
+    ],
+    "presets": [
+    {
+    "name": "Global Product 306"
+    }
+    ]
+    }
+{% endschema %}

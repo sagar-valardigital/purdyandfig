@@ -1,0 +1,214 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme",
+  "sections": {
+    "main-product": {
+      "type": "main-product",
+      "blocks": {
+        "cf6c706c-ee43-455a-b706-6a4012b61822": {
+          "type": "productdes",
+          "settings": {
+            "DescriptionHeading": "How it works",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
+          }
+        },
+        "03fc2aa9-f17e-452e-a45c-826d34d3704c": {
+          "type": "productdes",
+          "settings": {
+            "DescriptionHeading": "Ingredients",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
+          }
+        },
+        "190bc408-c9ec-41d6-8f17-1509c16a07e3": {
+          "type": "productdes",
+          "settings": {
+            "DescriptionHeading": "What’s Inside?",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
+          }
+        }
+      },
+      "block_order": [
+        "cf6c706c-ee43-455a-b706-6a4012b61822",
+        "03fc2aa9-f17e-452e-a45c-826d34d3704c",
+        "190bc408-c9ec-41d6-8f17-1509c16a07e3"
+      ],
+      "settings": {}
+    },
+    "blocks": {
+      "type": "blocks",
+      "blocks": {
+        "cd941053-860a-439c-b212-caf8c9206488": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_4_copy.png",
+            "rounded": false,
+            "heading": "Counters & Stone",
+            "details": ""
+          }
+        },
+        "a0392202-cb19-4c92-b2f7-7ed3e74cc0df": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_3_copy.png",
+            "rounded": false,
+            "heading": "Bath & Enamel",
+            "details": ""
+          }
+        },
+        "8986fb55-a1b7-46c2-886b-426666737b9e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_2_1_copy.png",
+            "rounded": false,
+            "heading": "Wood & Floors",
+            "details": ""
+          }
+        },
+        "be423453-57ee-445f-8e21-0a05d918be82": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_3_copy.png",
+            "rounded": false,
+            "heading": "Glass & Mirrors",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "cd941053-860a-439c-b212-caf8c9206488",
+        "a0392202-cb19-4c92-b2f7-7ed3e74cc0df",
+        "8986fb55-a1b7-46c2-886b-426666737b9e",
+        "be423453-57ee-445f-8e21-0a05d918be82"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home"
+      }
+    },
+    "16569264460c70d647": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Expertly Blended",
+        "image": "shopify://shop_images/Screenshot_1.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and have out all of their years of works into creating the most incredible smelling cleaners.</p>",
+        "link": "shopify://pages/about-us",
+        "btntext": "Read more",
+        "btntype": "btn",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "textcolor": "white-text",
+        "background": "theme-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "100% Effective + Third-Party Tested",
+        "image": "shopify://shop_images/18.jpg",
+        "details": "<p>The innovative eco-concentrate developed by PHD chemist Dr Anna Stastanova has been designed to work effectively on all your homes surfaces whilst retaining maximum scent. Over 97% of customers say it works better than their regular cleaner.</p>",
+        "link": "",
+        "btntext": "Read More",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "text-over-image": {
+      "type": "text-over-image",
+      "settings": {
+        "enable": true,
+        "bgImage": "shopify://shop_images/chemical-free-desktop.jpg",
+        "mobileimage": true,
+        "bgmImage": "shopify://shop_images/chemical-free-cleaning.jpg",
+        "headingAfterImage": false,
+        "bgcolor": "#1878b9",
+        "width": "w-50",
+        "sp": 3,
+        "alignment": "justify-content-end",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "350",
+        "mainheading": "A scent that transforms your home",
+        "heading": "The Best Essential Oils",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "review-slider": {
+      "type": "review-slider",
+      "blocks": {
+        "0856de6d-a8b3-4807-8d06-f591bbc2bd5a": {
+          "type": "text",
+          "settings": {
+            "username": "Jack",
+            "heading": "Product is very good",
+            "image": "shopify://shop_images/18.jpg",
+            "review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "7048a583-d6c6-4692-b362-87164836a17d": {
+          "type": "text",
+          "settings": {
+            "username": "Chris",
+            "heading": "Refill option is very good",
+            "image": "shopify://shop_images/Untitled-1.jpg",
+            "review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "08f9bccf-7f6b-4c7f-b15d-3fa3c1f72cea": {
+          "type": "text",
+          "settings": {
+            "username": "Shashi",
+            "heading": "P&F Hand wash is nice",
+            "image": "shopify://shop_images/Starter_kit_fc68a204-fc16-4332-b371-532487eb1656.png",
+            "review": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "0856de6d-a8b3-4807-8d06-f591bbc2bd5a",
+        "7048a583-d6c6-4692-b362-87164836a17d",
+        "08f9bccf-7f6b-4c7f-b15d-3fa3c1f72cea"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": ""
+      }
+    }
+  },
+  "order": [
+    "main-product",
+    "blocks",
+    "16569264460c70d647",
+    "image-with-text",
+    "text-over-image",
+    "review-slider"
+  ]
+}

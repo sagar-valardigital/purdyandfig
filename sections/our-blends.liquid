@@ -1,0 +1,149 @@
+{% assign total_count = 0 %}
+<div class="blens-section py-5 {{ section.settings.class }}" style="background-color:{{ section.settings.bgColor }}">
+  {% if section.settings.heading != '' %}
+    <div class="mb-4 text-center">
+      <h2 class="heading-2 theme-text">{{ section.settings.heading }}</h2>
+    </div>
+  {% endif %}
+  <div class="container">
+    <div class="blends-wrapper">
+      {% for block in section.blocks %}
+        {% assign total_count = section.blocks | size %}
+        <div
+          data-target="blend-popup-{{ forloop.index }}"
+          data-index="{{ block.settings.popup_no }}"
+          class="blend-block position-relative blend-popup  {{ block.settings.class }} {%  if block.settings.nopopup %} first-slide {%  endif %}"
+          {% if block.settings.bgImage %}
+            style="background-image:url({{ block.settings.bgImage | img_url : '500x' }})"
+          {% endif %}
+        >
+          <div class="blend-block-inner">
+            <h3 class="heading-3 m-0">{{ block.settings.heading }}</h3>
+            <p class="m-0 mt-2">{{ block.settings.detail }}</p>
+          </div>
+          {% if block.settings.showplus %}
+            <img class="blend-icon blend-plus" src="{{ 'blend-plus.png' | asset_img_url }}">
+          {% else %}
+            <img class="blend-icon blend-arrow" src="{{ 'blend-arrow.png' | asset_img_url }}">
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+    <div class="blends-popup">
+      <span class="overlay"></span>
+      <div class="slides-numbers text-white" style="display: block;">
+        <span class="active">1</span> of <span class="total"></span>
+      </div>
+      <div class="blend-popup-slider">
+        {% for block in section.blocks %}
+          {% if block.settings.nopopup %}
+          {% else %}
+            <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <p class="m-0 mt-2">{{ block.settings.pop_detail }}</p>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+   "name": "Blends",
+   "settings": [
+     {
+         "type": "text",
+         "id": "class",
+         "label": "Section Class"
+       },
+     {
+         "type": "color",
+         "id": "bgColor",
+         "label": "Background Color"
+       },
+     {
+         "type": "text",
+         "id": "heading",
+         "label": "Section Heading"
+       }
+],
+"blocks": [
+     {
+       "type": "text",
+       "name": "blend",
+       "settings": [
+         {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         {
+           "type": "text",
+           "id": "class",
+           "label": "Block Class"
+         },
+         {
+           "type": "checkbox",
+           "id": "nopopup",
+           "label": "Check if block has no popup",
+           "default": false
+         },
+
+         {
+           "type": "image_picker",
+           "id": "bgImage",
+           "label": "Background Image"
+         },
+         {
+           "type": "text",
+           "id": "heading",
+           "label": "Block Heading"
+         },
+         {
+           "type": "text",
+           "id": "detail",
+           "label": "Block Text"
+         },
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "text",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         {
+           "type": "checkbox",
+           "id": "showplus",
+           "label": "Show plus",
+           "default" : true
+         },
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+
+       ]
+     }
+],
+"presets": [
+	{
+		"name": "Blends"
+	}
+]
+ }
+{% endschema %}

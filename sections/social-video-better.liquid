@@ -1,0 +1,215 @@
+<style>
+
+  .social-video-wrapper video {
+    height: 100% !important;
+  }
+
+  .video-block-wrapper {
+  padding: 80px 0 !important;
+}
+
+.social-videos-slider .slick-dots {
+background: #E7EBEA;
+}
+
+@media (max-width: 768px) {
+  .video-block-wrapper {
+  padding: 32px 0 !important;
+}
+
+.video-block-wrapper .heading-2 {
+  font-size: 32px !important;
+}
+
+.social-video-wrapper {
+padding: 0 7px !important;
+}
+
+.social-video-wrapper video {
+border-radius: 4px !important;
+}
+
+
+}
+
+</style>
+
+<div class="video-block-wrapper social-video-reskin py-80" style="background-color:{{ section.settings.bgColor }}">
+  <div class="container">
+    <div class="text-center m-text-left">
+      <h2 class="heading-2 font-gtsuper mt-0 ">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="social-videos-slider">
+      {% for block in section.blocks %}
+        <div class="social-video-wrapper">
+          <div class="position-relative">
+            <!-- Video element with lazy loading setup -->
+            <video id="video_{{ block.id }}" poster="{{ block.settings.poster | img_url : '400x550' }}" preload="none" data-src="{{ block.settings.videoURL }}">
+            </video>
+
+            <!-- Play button icon that triggers video load and play -->
+            <div class="video-pp-icon">
+              <img
+                width="50px"
+                height="50px"
+                src="{{ 'play-button.png' | asset_img_url }}"
+                data-target="video_{{ block.id }}"
+                class="t-video-play"
+              >
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="mt-4">
+      <span
+        class="d-block text-center blue-starterkit-btn green-btn m-auto click-scroll common-btn-width"
+        data-target="{{ section.settings.scrollto }}"
+        data-top="{{ section.settings.top }}"
+        {% if section.settings.button_bg %}
+                      style="background-color:{{ section.settings.button_bg }} !important"
+                      {% endif %}
+        {% if section.settings.dataTrack %}
+            {% render "ga4-events" %}
+        {% endif %}
+      >GET YOUR OFFER</span>
+    </div>
+  </div>
+</div>
+
+<script>
+document.querySelectorAll('.t-video-play').forEach(function(button) {
+  button.addEventListener('click', function() {
+    var videoId = this.dataset.target;
+    var video = document.getElementById(videoId);
+    if (video && !video.querySelector('source')) {
+      var source = document.createElement('source');
+      source.src = video.dataset.src;
+      source.type = 'video/mp4';
+      video.appendChild(source);
+      video.load();
+      video.play();
+    } else {
+      video.play();
+    }
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Social Video Better",
+  "settings": [
+{
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "scrollto",
+      "label": "Scroll to section id",
+      "default": "javascript:void(0);"
+    },
+     {
+      "id": "button_bg",
+      "label": "Button background color",
+      "type": "color"
+    },
+    {
+      "type": "text",
+      "id": "top",
+      "label": "On scroll top position",
+      "default": "0"
+    },
+    {
+      "type": "color",
+      "id": "bgColor",
+      "label": "Background color"
+    },
+    {
+      "type": "header",
+      "content": "GA4"
+    },
+    {
+      "id": "dataTrack",
+      "label": "Data Track",
+      "type": "checkbox"
+    },
+    {
+      "id": "targetUrl",
+      "label": "Target Url",
+      "type": "url"
+    },
+    {
+      "id": "index",
+      "label": "Index",
+      "type": "number",
+      "default" : 0
+    },
+    {
+      "id": "funnel_stage",
+      "label": "Funnel Stage",
+      "type": "text",
+      "default" : "landing_page"
+    },
+    {
+      "id": "dataModule",
+      "label": "Module",
+      "type": "text",
+      "default" : "announcement_bar"
+    },
+    {
+      "id": "dataTitle",
+      "label": "Event Label",
+      "type": "text",
+      "default": "get_your_offer"
+    },
+    {
+      "id": "eventValue",
+      "label": "Event Value",
+      "type": "text",
+      "default" : "shop_anchor"
+    },
+    {
+      "id": "itemId",
+      "label": "Item Id",
+      "type": "text"
+    },
+    {
+      "id": "optionIndex",
+      "label":"Option Index",
+      "type": "text"
+    },
+    {
+      "id": "ItemName",
+      "label":"Item Name",
+      "type": "text"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "video",
+      "name": "video block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Add Image"
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Video URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Social Video Better",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

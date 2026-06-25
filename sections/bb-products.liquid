@@ -1,0 +1,85 @@
+<div class="{{ section.settings.className }}" style="background-color:{{ section.settings.bgColor }}">
+<div class="fluid py-5 container fb-section ">
+  <h4 class="heading-2 text-center theme-text" >{{ section.settings.heading }}</h4>
+  <div class="colletion-products ">
+    <div class="colletion-products-list font-pier">
+      {%  assign counter = 0 %}
+      {% for block in section.blocks %}
+
+            {% render 'landing-product-card',
+                  card_product: block.settings.product,
+                  media_aspect_ratio: block.settings.image_ratio,
+                  show_secondary_image: block.settings.show_secondary_image,
+                  show_vendor: block.settings.show_vendor,
+                  show_rating: block.settings.show_rating,
+                  lazy_load: lazy_load
+                %}
+      {% endfor %}
+
+      <div class="desktop-hide bg-white p-2 free-gift">
+        <div class="bb-products_ theme-text">
+        
+        </div>
+      </div>
+    </div>
+  </div>
+  {% if section.settings.btnLink %}
+  <div class="my-3 text-center">
+    <a href="{{ section.settings.btnLink }}" class="btn theme-btn">{{ section.settings.btnLabel }}</a>
+  </div>
+    {% endif %}
+</div>
+</div>
+
+
+{% schema %}
+ {
+    "name": "BB Best Seller",
+    "settings": [
+      {
+          "type": "text",
+          "id": "className",
+          "label": "Section class"
+        },
+      {
+          "type": "color",
+          "id": "bgColor",
+          "label": "Background Color"
+        },
+{
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+      {
+          "type": "text",
+          "id": "btnLabel",
+          "label": "Button Label"
+        },
+      {
+          "type": "url",
+          "id": "btnLink",
+          "label": "Button Link"
+        }
+	],
+	"blocks": [
+      {
+        "type": "product",
+        "name": "Select Products",
+        "settings": [ 
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Select Products"
+          }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "BB Best Seller"
+		}
+	]
+  }
+{% endschema %}

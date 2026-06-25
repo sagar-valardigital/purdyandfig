@@ -1,0 +1,51 @@
+<style>
+  .cart-toast {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: -100px;
+  background-color: #11322c;
+  padding: 15px 10px;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  z-index: 9999;
+}
+  .cart-toast.show{
+    top:0;
+  }
+</style>
+ <script>
+    window.addEventListener('product:added', function(event) {
+        const cartToast = document.getElementById('cart-toast');
+        const cartData = event.detail; // Access the passed data here
+        if (cartToast) {
+            cartToast.classList.add('show');
+            setTimeout(() => {
+                cartToast.classList.remove('show');
+            }, 1500);
+        }
+    });
+  </script>
+
+<div id="cart-toast" class="cart-toast font-lausanne fw-400">{{ section.settings.message }}</div>
+
+{% schema %}
+  {
+    "name": "Cart Toast",
+    "settings": [
+      {
+            "type": "text",
+            "id": "message",
+            "label": "Toast Message",
+            "default": "Great choice, that's in your cart!"
+          }
+    ],
+    "presets": [
+    	{
+    		"name": "Cart Toast"
+    	}
+    ]
+  }
+{% endschema %}

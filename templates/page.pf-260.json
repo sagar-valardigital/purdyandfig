@@ -1,0 +1,667 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_8iCwzJ": {
+          "type": "product",
+          "settings": {
+            "product": "gentle-chamomile-refill-pack",
+            "variant": "54956092719484",
+            "selling_plan": "",
+            "discount": "GCREF269CX",
+            "price": "£20.40",
+            "compare_price": "£24.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_8GcqGE": {
+          "type": "product",
+          "settings": {
+            "product": "orange-petitgrain-refill-pack",
+            "variant": "54956168282492",
+            "selling_plan": "",
+            "discount": "O&PREF269CX",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_RpagAJ": {
+          "type": "product",
+          "settings": {
+            "product": "lemon-marjoram-refill-pack",
+            "variant": "54956175917436",
+            "selling_plan": "",
+            "discount": "L&MREF269CX",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_hVWYBm": {
+          "type": "product",
+          "settings": {
+            "product": "patchouli-cedarwood-refill-pack",
+            "variant": "54956181913980",
+            "selling_plan": "",
+            "discount": "P&CREF269CX",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_8iCwzJ",
+        "product_8GcqGE",
+        "product_RpagAJ",
+        "product_hVWYBm"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "announcement_bar_reskin_9fjJ8d": {
+      "type": "announcement-bar-225",
+      "settings": {
+        "fixed": true,
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "NEW member exclusive Valentine’s scent",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": true,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_3EaRiV": {
+      "type": "banner-10",
+      "settings": {
+        "txt-color": "#ffffff",
+        "desktop_img": "shopify://shop_images/Hero_Desktop_0c7402f5-9069-48d8-ac86-45e636980558.jpg",
+        "mobile_img": "shopify://shop_images/Hero_Mobile_v2.jpg",
+        "heading": "A Valentine’s gift from us to your home",
+        "sub_heading": "VIP member exclusive: Save 50% on a Valentine's Bundle with NEW Rose &amp; Violet",
+        "btn-bg": "#ffffff",
+        "btn-txt-color": "#11322c",
+        "button_label": "GET YOUR OFFER",
+        "button_link": "starterkit-product",
+        "top": "150",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "transformational_scents_pf150_wG73fT": {
+      "type": "transformational-scents-pf150-blocks",
+      "blocks": {
+        "image_EBpTmW": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Image_6c5fecfb-059b-47c9-8359-b8c9c137413e.png",
+            "mBlockImage": "shopify://shop_images/Image_6c5fecfb-059b-47c9-8359-b8c9c137413e.png",
+            "tag": "",
+            "heading": "Simple & effective",
+            "details": "One naturally powerful spray for every surface"
+          }
+        },
+        "image_Jwizbp": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Image-2_8f01d6f1-05c3-4b36-95a3-ce3b6832301e.png",
+            "mBlockImage": "shopify://shop_images/Image-2_8f01d6f1-05c3-4b36-95a3-ce3b6832301e.png",
+            "tag": "",
+            "heading": "All-natural",
+            "details": "100% non-toxic, plant-based ingredients"
+          }
+        },
+        "image_3krith": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Image-3_17323681-bd20-42be-9307-452a8b0fdee5.png",
+            "mBlockImage": "shopify://shop_images/Image-3_17323681-bd20-42be-9307-452a8b0fdee5.png",
+            "tag": "",
+            "heading": "Beautifully scented",
+            "details": "Expertly blended essential oil scents"
+          }
+        }
+      },
+      "block_order": [
+        "image_EBpTmW",
+        "image_Jwizbp",
+        "image_3krith"
+      ],
+      "custom_css": [
+        ".link-to-variant {margin-top: 0;}"
+      ],
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#f6e3d1",
+        "class": "pf-173-nature show pf-173-nature_",
+        "linkVariant": "",
+        "heading": "Get the most out of nature",
+        "subtext": ""
+      }
+    },
+    "image_with_text_2_QUTUn7": {
+      "type": "image-with-text-3",
+      "settings": {
+        "className": "pf-176-img-text",
+        "textcolor": "#131e44",
+        "background": "#ffffff",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Introducing Rose & Violet",
+        "image": "shopify://shop_images/Image-4_82178771-694c-4919-8346-77a01ba71de6.png",
+        "mimage": "shopify://shop_images/Image-5_8dd69f0d-5411-4502-b829-82a7b58182d6.png",
+        "details": "A romantic blend of rose geranium and gentle notes of violet, made just for our members’ homes.",
+        "shop_now_cta": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "150",
+        "heading-position": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 4,
+        "funnel_stage": "landing_page",
+        "dataModule": "introducing_rose_&_violet",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_19_cPYKAd": {
+      "type": "global-product-260",
+      "blocks": {
+        "product_image_pAeVQQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_01_009f4f19-08fe-485a-b489-2b2c5cfd3100.jpg",
+            "mimage": "shopify://shop_images/Mobile_01_74094597-1f4f-471a-8ef8-4548c5553032.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_TAwqPa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/v-Desktop_02.jpg",
+            "mimage": "shopify://shop_images/v-Mobile_02.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_phNNax": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/v-Desktop_03.jpg",
+            "mimage": "shopify://shop_images/v-Mobile_03.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_bw4xtz": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/v-Desktop_04.jpg",
+            "mimage": "shopify://shop_images/v-Mobile_04.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_wzpCJp": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/v-Desktop_05.jpg",
+            "mimage": "shopify://shop_images/v-Mobile_05.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image3_RjK8NM": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Desktop_01_6b8c2bde-1379-45cc-9c46-380e70cd8c4d.jpg",
+            "mimage_3": "shopify://shop_images/Mobile_01_960fce87-04b4-48d0-aca6-668bea23cf48.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_6BgYWa": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/r-Desktop_02.jpg",
+            "mimage_3": "shopify://shop_images/r-Mobile_02.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_aMd7Hb": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/r-Desktop_03.jpg",
+            "mimage_3": "shopify://shop_images/r-Mobile_03.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_igQq8Q": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/r-Desktop_04.jpg",
+            "mimage_3": "shopify://shop_images/r-Mobile_04.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_EpBjQt": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/r-Desktop_05.jpg",
+            "mimage_3": "shopify://shop_images/r-Mobile_05.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "text_a6hNWF": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1x member exclusive Rose &amp; Violet"
+          }
+        },
+        "text_tDGEyp": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1x glass Bottle for Life"
+          }
+        },
+        "text_NMwGbW": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1x Purdy &amp; Figg cloth"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_pAeVQQ",
+        "product_image_TAwqPa",
+        "product_image_phNNax",
+        "product_image_bw4xtz",
+        "product_image_wzpCJp",
+        "product_image3_RjK8NM",
+        "product_image3_6BgYWa",
+        "product_image3_aMd7Hb",
+        "product_image3_igQq8Q",
+        "product_image3_EpBjQt",
+        "text_a6hNWF",
+        "text_tDGEyp",
+        "text_NMwGbW"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}"
+      ],
+      "settings": {
+        "className": "",
+        "toast": true,
+        "collapse": true,
+        "outOfStock": true,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#e7ebea",
+        "mainheading": "Just launched: NEW Rose &amp; Violet Scent",
+        "heading": "Valentine’s Member Offer",
+        "mainsubheading": "Try our delightful new Rose &amp; Violet scent",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "plan_heading_1": "1x Valentine's Bundle",
+        "variant_id_1": "54872481235324",
+        "selling_plan_1": "",
+        "sku_1": "FG1243",
+        "qty_1": "1",
+        "discountPlan_1": "MEMBERBUNDLE260",
+        "price_1": "14.00",
+        "deleted_price_1": "28.00",
+        "plan_heading_2": "",
+        "variant_id_2": "",
+        "selling_plan_2": "",
+        "sku_2": "",
+        "qty_2": "",
+        "discountPlan_2": "",
+        "price_2": "",
+        "deleted_price_2": "",
+        "plan_heading_3": "Rose & Violet Refill 3-pack",
+        "variant_id_3": "54888750645628",
+        "selling_plan_3": "",
+        "sku_3": "FG1244",
+        "qty_3": "1",
+        "discountPlan_3": "MEMBERREFILL260",
+        "price_3": "20.00",
+        "deleted_price_3": "27.00",
+        "plan_heading_4": "",
+        "variant_id_4": "",
+        "selling_plan_4": "",
+        "sku_4": "",
+        "discountPlan_4": "",
+        "price_4": "15",
+        "deleted_price_4": "40",
+        "plan_heading_5": "",
+        "variant_id_5": "",
+        "selling_plan_5": "",
+        "sku_5": "FG1171",
+        "discountPlan_5": "COMPLETE197dv",
+        "price_5": "30",
+        "deleted_price_5": "80",
+        "plan_heading_6": "",
+        "variant_id_6": "",
+        "selling_plan_6": "",
+        "sku_6": "",
+        "discountPlan_6": "",
+        "price_6": "21",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 3,
+        "funnel_stage": "lp",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "product_blocks_qCkjga": {
+      "type": "shopify-product-blocks",
+      "blocks": {
+        "product_HW4Ny8": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "variant_id": "54819160490364",
+            "sealing_plan": "",
+            "discount": "ODLMEMBER260",
+            "isSub": false,
+            "title": "Oh! de Loo",
+            "saving": "",
+            "price": "£13.56",
+            "crossprice": "£16.96",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_rAx98m": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant_id": "54837001421180",
+            "sealing_plan": "4327440611",
+            "discount": "BATHROOMMEMBER260",
+            "isSub": true,
+            "title": "Bathroom Bliss Starter Kit",
+            "saving": "",
+            "price": "£15.00",
+            "crossprice": "£40.00",
+            "buttonLabel": "ADD 90-DAY PLAN"
+          }
+        },
+        "product_MyaVAW": {
+          "type": "product",
+          "settings": {
+            "product": "seasonal-refill-pack-winter",
+            "variant_id": "53625440207228",
+            "sealing_plan": "",
+            "discount": "SEASREFMEMBER260",
+            "isSub": false,
+            "title": "Seasonal Refill Pack - Winter",
+            "saving": "",
+            "price": "£17.85",
+            "crossprice": "£21",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_ECnQ3A": {
+          "type": "product",
+          "settings": {
+            "product": "refill-booster-packs",
+            "variant_id": "45544885944547",
+            "sealing_plan": "",
+            "discount": "SIGNREFMEMBER260",
+            "isSub": false,
+            "title": "Signature Refill Pack",
+            "saving": "",
+            "price": "£17.85",
+            "crossprice": "£21",
+            "buttonLabel": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_HW4Ny8",
+        "product_rAx98m",
+        "product_MyaVAW",
+        "product_ECnQ3A"
+      ],
+      "settings": {
+        "reviews": false,
+        "toast": true,
+        "bg": "",
+        "heading": "Need anything else?",
+        "subheading": "Check out other exclusive offers just for you"
+      }
+    },
+    "icon_blocks_reskin_QyJ6db": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_6yhndz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_48a1c4ac-987e-4b6c-a556-2bd93d461b9d.png"
+          }
+        },
+        "iconblocks_WWLqyn": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_05b6088b-b8ea-4fd6-80fc-f283ed98bca8.png"
+          }
+        },
+        "iconblocks_YXCGmM": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_489bfbf0-4865-4a33-b1df-0adade1926bb.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_6yhndz",
+        "iconblocks_WWLqyn",
+        "iconblocks_YXCGmM"
+      ],
+      "settings": {
+        "class": "",
+        "bg": "#f6e3d1",
+        "textcolor": "#0c231f",
+        "heading": "Your member benefits",
+        "show_hide_block": true
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "150",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>No, this is a buy-once offer just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers. As a member, concentrate refills are always 15% off.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>This scent will be available until Valentine's Day or until this limited edition scent lasts, so we recommend getting your skates on.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into your account with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to tweak your subscription however you like. You can change what’s in your order, adjust your delivery and billing date, or pause deliveries completely for a bit.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "announcement_bar_reskin_9fjJ8d",
+    "banner_10_3EaRiV",
+    "transformational_scents_pf150_wG73fT",
+    "image_with_text_2_QUTUn7",
+    "global_product_19_cPYKAd",
+    "product_blocks_qCkjga",
+    "icon_blocks_reskin_QyJ6db",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

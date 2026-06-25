@@ -1,0 +1,36 @@
+<script type="text/javascript">
+if (document.body.classList.contains('multi-variety-product') || ('multi-variety-product-ds')) {
+  if (window.location.pathname.split('/').pop() === '{{section.settings.product2 | handel }}') {
+    document.querySelectorAll('.product1, .product2').forEach(function(element) {
+      element.classList.add('height-0');
+    });
+    document.querySelector('.product2').classList.remove('height-0');
+  } 
+}
+
+</script>
+{% schema %}
+ {
+    "name": "Multi-product JS",
+    "settings": [
+	{
+      "type": "product",
+      "id": "product1",
+      "label": "Choose product 1"
+    },	
+      {
+      "type": "product",
+      "id": "product2",
+      "label": "Choose product 2"
+    }
+
+	],
+	
+	"presets": [
+		{
+			"name": "Multi-Product JS"
+		}
+	]
+  }
+{% endschema %}
+

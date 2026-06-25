@@ -1,0 +1,62 @@
+{% assign product = all_products[pHandle] %} 
+{% assign variant = product.selected_or_first_available_variant %}
+{% liquid
+  if product.selected_selling_plan
+    assign selected_selling_plan = product.selected_selling_plan
+  else
+    assign selected_selling_plan = variant.selling_plan_allocations.first.selling_plan
+  endif
+%}
+<div class="upsell-product-wrapper">
+  <div class="text-center"><h3 class="heaidng-3 py-2 theme-text">Goes well with ...</h3></div>
+  <div class="upsell-product">
+      
+      <div class="upsell-product-section">
+        <div class="up-product-img">
+          
+              <img class="w-100" src="{{all_products[pHandle].featured_image | product_img_url}}" alt="">
+           
+        </div>
+        
+        <div class="up-add-cart-option">
+          <div class="up-top">
+          <div class="up-title">
+            {{ settings.cart--upsell-product.title }}
+            <h4 class="theme-text">{{ all_products[pHandle].title }}</h4>
+            {% if all_products[pHandle].variants.first.metafields.metadata.includes %}
+              <p class="theme-text mb-1">Include: {{ all_products[pHandle].variants.first.metafields.metadata.includes }}</p>
+            {% endif %}
+          </div>
+          <div class="up-price">
+              <span class="upsell-price theme-text">{{ product.price | money }}</span>
+              <span style="font-size:12px; padding-left: 5px;">
+                     <small><del class="font-lausanne">{{ product.compare_at_price | money }}</del></small>
+              </span>
+          </div>
+      </div>
+          <form @submit.prevent="console.log('submitted')"   x-ref="product_form" enctype="multipart/form-data" accept-charset="UTF-8" id="product_form_{{product.id}}" class="shopify-product-form"  data-product-id="{{product.id}}" action="/cart/add">
+        <input type="hidden" name="id" value="{{ variant.id }}" data-plan-id="{{variant.selling_plan_allocations.first.selling_plan.id}}" data-include="{{variant.metafields.metadata.includes}}" data-subprice="{{ sub_discount_price | money }}" data-price="{{variant.price |  money}}">
+          <input type="hidden" name="selling_plan" value="{{selected_selling_plan.id}}">
+          <button class="btn theme-btn" x-on:click="Purdy.AddToCart($refs.product_form, false, '{{ product.title }}')">Add to Cart - {{ product.price  | money }}</button>
+       </form>
+          </div>
+        
+      </div>
+  </div>
+</div>
+<style>
+  .upsell-product-wrapper{margin:10px 0;}
+  .upsell-product{padding:10px;background:#fff;border-radius:10px;box-shadow:0 0 5px #ccc;}
+  .up-title p{font-size:11px;}
+  .up-top{display:flex; flex-wrap:wrap; justify-content:space-between;}
+  .up-top .up-title{width:calc(100% - 60px);}
+  .up-top .up-title h4{font-size:14px;}
+  .up-top .up-price{width:55px;display:flex;justify-content:space-between;}
+  .up-top .up-price .remove-product{position:static;}
+  .upsell-product-section{display:flex;justify-content:space-between;flex-wrap:wrap;}
+  .upsell-product-section .up-product-img{width:95px;}
+  .upsell-product-section .up-add-cart-option{width:calc(100% - 100px);}
+  .upsell-product-section .up-add-cart-option label{padding:8px;border:1px solid #555;border-radius:4px;margin-bottom:10px;width:100%;display:block;}
+  .upsell-product-section .up-add-cart-option button.btn{font-size:13px;}
+  .upsell-product-section .btn{padding:10px;margin-top:8px;}
+</style>

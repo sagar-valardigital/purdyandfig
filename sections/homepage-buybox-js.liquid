@@ -1,0 +1,87 @@
+{% assign swap = section.settings.swap %}
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script>
+ {% if swap %}
+     if (window.location.href.includes('?seasonal') || window.location.href.includes('&seasonal')) {
+ {% else %}
+if (window.location.href.includes('?refills') || window.location.href.includes('&refills')) {
+{% endif %}
+      const $scrollElement = $('#starterkit-product');
+    const $signatureTab = $('input[data-scent-type="s2"][data-index-order=3]');
+
+     $('html, body').animate({
+             scrollTop: $scrollElement.offset().top + 120
+     }, 300);
+      
+        $('.step-1.step-gallery').addClass('height-0');
+        $('.step-1.select-scents').addClass('height-0');
+        $('.step-2.step-gallery').removeClass('height-0');
+        $('.step-2.select-Plan').removeClass('height-0')
+        $('.step-2.step-gallery .link-to-plan').removeClass('show');
+        $('.ms-plan-wrapper .link-to-variant').removeClass('show');
+        $('.link-to-variant.seasonal-scents-1.pf-173-nature').removeClass('show');
+        $('.step-2.step-gallery .link-to-plan.g_variant_6').addClass('show');
+        $('.ms-plan-wrapper .link-to-variant.variant_2').addClass('show');
+        $('.link-to-variant.seasonal-scents-1.pf-173-nature.variant_4').addClass('show');
+      $('.pf-173-nature.variant_2').addClass('show');
+       $('.pf-173-nature.variant_1').removeClass('show');
+              if ($scrollElement.length) {
+       
+        $signatureTab.prop('checked', true);
+        $signatureTab.trigger('change');
+        $('.guarantee-sub-text').hide();
+      }
+        
+    }
+    {% if swap %}
+if (window.location.href.includes('?refills') || window.location.href.includes('&refills')) {
+    {%else %}
+  if (window.location.href.includes('?seasonal') || window.location.href.includes('&seasonal')) {
+  {% endif %}
+        const $scrollElement = $('#starterkit-product');
+        const $seasonalTab = $('input[data-scent-type="s1"][data-index-order=3]');
+
+        $('html, body').animate({
+                scrollTop: $scrollElement.offset().top + 120
+        }, 300);
+        
+          $('.step-1.step-gallery').addClass('height-0');
+          $('.step-1.select-scents').addClass('height-0');
+          $('.step-2.step-gallery').removeClass('height-0');
+          $('.step-2.select-Plan').removeClass('height-0')
+          $('.step-2.step-gallery .link-to-plan').removeClass('show');
+          $('.ms-plan-wrapper .link-to-variant').removeClass('show');
+          $('.step-2.step-gallery .link-to-plan.g_variant_3').addClass('show');
+          $('.ms-plan-wrapper .link-to-variant.variant_1').addClass('show');
+        $('.link-to-variant.seasonal-scents-1.pf-173-nature').removeClass('show');
+        $('.link-to-variant.seasonal-scents-1.pf-173-nature.variant_1').addClass('show');
+      
+        if ($scrollElement.length) {
+          
+          $seasonalTab.prop('checked', true);
+          $seasonalTab.trigger('change');
+          $('.guarantee-sub-text').hide();
+        }
+    }
+</script>
+
+
+{% schema %}
+{
+  "name": "Buy box 423",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "swap",
+      "label": "Products Swap",
+      "default": false
+    }
+  ],
+  "presets": [
+    {
+      "name": "Buy box JS",
+      "category": "JS"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,146 @@
+<div class="block-section py-80 icon-blocks-2 icon-blocks-9 {{ section.settings.class }}">
+  <div class="container">
+    <div>
+      <h2 class="heading-2 text-center m-text-left blue-text value-bold mt-0 ">
+        {{ section.settings.heading }}
+      </h2>
+      {% if section.settings.subtext != blank %}
+        <p class="gray-text normal-text value-medium text-center value-sans m-text-left" style="color:#434448;">
+          {{ section.settings.subtext }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="d-flex flex-wrap justify-content-between  theme-text my-1 icon-blocks-2-wrapper">
+      {% for block in section.blocks %}
+        <div class="w-25 p-3 icon-block-2">
+          <div class="text-center ">
+            {% if block.settings.heading != blank %}
+              <h3 class="heading-4 value-medium blue-text my-3 ">{{ block.settings.heading }}</h3>
+            {% endif %}
+            {% if block.settings.icon %}
+              <div class="block-img-wrappers mb-2">
+                {% assign image = block.settings.icon | img_url: 'master' %}
+                <img
+                  src="{{ image }}"
+                  width="57"
+                  height="56"
+                  alt="icon"
+                >
+              </div>
+            {% endif %}
+            {% if block.settings.details != blank %}
+              <p class="value-sans normal-text">
+                {{ block.settings.details }}
+              </p>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<style>
+  .icon-blocks-9 {
+    background: #f4f6fc;
+  }
+  .icon-blocks-9 .icon-blocks-2-wrapper {
+    overflow: hidden;
+  }
+  .icon-blocks-9 .icon-block-2 {
+    background: #fff;
+    padding: 32px 16px !important;
+  } 
+  .icon-blocks-9 .heading-2 {
+    color: #131e44 !important;
+  }
+  .icon-blocks-9 .w-25 {
+    width: 33.33%;
+  }
+  .icon-blocks-9 .block-img-wrappers {
+    height: 128px;
+    width: 128px;
+    display: flex;
+    margin: 12px auto 12px auto !important;
+  }
+  .icon-blocks-9 .block-img-wrappers img {
+    width: auto;
+    height: auto;
+    margin: auto;
+  }
+  @media (max-width: 768px) {
+    .icon-blocks-9 {
+      padding: 32px 0 !important;
+    }
+    .icon-blocks-9 .container {
+      padding: 0 16px !important;
+    }
+    .icon-blocks-9 .w-25 {
+      width: 100%;
+    }
+    .icon-blocks-9 .block-img-wrappers {
+      margin: 16px 0 16px 0;
+    }
+    .icon-block-2 {
+      padding: 24px 32px !important;
+    }
+    .icon-blocks-9 .heading-4 {
+      color: #131e44 !important;
+    }
+  }
+  .icon-blocks-9 .heading-4 {
+    margin-bottom: 0 !important;
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Icon Blocks 9",
+    "settings": [
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Add Class"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Sub heading"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "image",
+        "name": "accordion block",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "icon",
+            "label": "Choose Icon Image"
+          },
+          {
+            "type": "text",
+            "id": "details",
+            "label": "Text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Icon Blocks 9"
+      }
+    ]
+  }
+{% endschema %}

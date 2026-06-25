@@ -1,0 +1,39 @@
+{% capture varTags %}
+{% include 'shortcode-render' render:'tags' default:'purdy' %}
+{% endcapture %}
+
+{% assign varTags = varTags | strip_html %}
+
+{% if varTags contains "," %}
+<!--For multiple tags here-->
+{% else %}
+{% assign varTags = varTags | strip %}
+<div class="fluid {{varTags}}">
+  <h4 class="heading-2 text-center" >Bestsellers</h4>
+  <div class="colletion-products ">
+    <div class="colletion-products-list font-pier">
+      {%  assign counter = 0 %}
+      {% for product in collections.all.products %}
+        
+        {% if product.tags contains varTags %}
+          {% assign counter = counter | plus:1 %}
+      {%  if counter > 4 %} {% break %} {%  endif %}
+            {% render 'card-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  lazy_load: lazy_load
+                %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+  <div class="my-3 text-center">
+    <a href="https://purdyandfigg.com/collections" class="btn theme-btn">Shop Cleaning Products</a>
+  </div>
+</div>
+{% endif %}
+
+

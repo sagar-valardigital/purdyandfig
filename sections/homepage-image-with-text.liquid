@@ -1,0 +1,356 @@
+<style>
+  .hp-iwt-section {
+    padding: 60px 0;
+  }
+
+  .hp-iwt-section .hp-iwt-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .hp-iwt-section .hp-iwt-image {
+    width: 50%;
+    flex-shrink: 0;
+  }
+
+  .hp-iwt-section .hp-iwt-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .hp-iwt-section .hp-iwt-content {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .hp-iwt-section .hp-iwt-content .hp-iwt-heading {
+    font-family: 'Value Serif';
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 1.2;
+    margin: 0;
+    color: var(--theme-color, #3d5065);
+  }
+
+  .hp-iwt-section .hp-iwt-content .hp-iwt-subheading {
+    font-family: 'Pier Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.6;
+    margin: 0;
+    color: #444;
+  }
+
+  .hp-iwt-section .hp-iwt-content .hp-iwt-btn {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: 'Lausanne';
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 14px 32px;
+    border-radius: 4px;
+    text-decoration: none;
+    text-align: center;
+    transition: opacity 0.3s ease;
+    width: fit-content;
+  }
+
+  .hp-iwt-section .hp-iwt-content .hp-iwt-btn:hover {
+    opacity: 0.85;
+  }
+
+  @media (max-width: 991px) {
+    .hp-iwt-section {
+      padding: 40px 0;
+    }
+
+    .hp-iwt-section .hp-iwt-wrapper {
+      gap: 40px;
+    }
+
+    .hp-iwt-section .hp-iwt-content .hp-iwt-heading {
+      font-size: 32px;
+    }
+
+    .hp-iwt-section .hp-iwt-content .hp-iwt-subheading {
+      font-size: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .hp-iwt-section {
+      padding: 32px 0;
+    }
+
+    .hp-iwt-section .hp-iwt-wrapper {
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .hp-iwt-section .hp-iwt-image,
+    .hp-iwt-section .hp-iwt-content {
+      width: 100%;
+    }
+
+    .hp-iwt-section .hp-iwt-content .hp-iwt-heading {
+      font-size: 28px;
+    }
+
+    .hp-iwt-section .hp-iwt-content .hp-iwt-subheading {
+      font-size: 15px;
+    }
+
+    .hp-iwt-section .hp-iwt-content .hp-iwt-btn {
+      width: 100%;
+      text-align: center;
+    }
+  }
+</style>
+
+<div class="hp-iwt-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="container">
+    <div class="hp-iwt-wrapper">
+      <div class="hp-iwt-image">
+        {% if section.settings.image != blank %}
+          {% assign desktopImg = section.settings.image | image_url: width: 1200, crop: 'center' %}
+          {% if section.settings.mobile_image != blank %}
+            {% assign mobileImg = section.settings.mobile_image | image_url: width: 800, crop: 'center' %}
+            <picture>
+              <source media="(max-width: 768px)" srcset="{{ mobileImg }}">
+              <img
+                src="{{ desktopImg }}"
+                alt="{{ section.settings.image.alt | default: section.settings.heading }}"
+                width="600"
+                height="600"
+                loading="lazy"
+                class="img-responsive"
+              >
+            </picture>
+          {% else %}
+            <img
+              src="{{ desktopImg }}"
+              alt="{{ section.settings.image.alt | default: section.settings.heading }}"
+              width="600"
+              height="600"
+              loading="lazy"
+              class="img-responsive"
+            >
+          {% endif %}
+        {% else %}
+          {{ 'image' | placeholder_svg_tag: 'placeholder-svg' }}
+        {% endif %}
+      </div>
+
+      <div class="hp-iwt-content">
+        {% if section.settings.heading != blank %}
+          <h2 class="hp-iwt-heading" style="color: {{ section.settings.heading_color }};">
+            {{ section.settings.heading }}
+          </h2>
+        {% endif %}
+
+        {% if section.settings.subheading != blank %}
+          <div class="hp-iwt-subheading" style="color: {{ section.settings.text_color }};">
+            {{ section.settings.subheading }}
+          </div>
+        {% endif %}
+
+        {% if section.settings.btn_label != blank %}
+          {% if section.settings.scroll_to != blank %}
+            <span
+              class="hp-iwt-btn click-scroll"
+              style="background-color: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+              data-target="{{ section.settings.scroll_to }}"
+              data-top="{{ section.settings.scroll_top }}"
+              {% if section.settings.dataTrack %}
+                {% render 'ga4-events' %}
+              {% endif %}
+            >
+              {{ section.settings.btn_label }}
+            </span>
+          {% else %}
+            <a
+              href="{{ section.settings.btn_link }}"
+              class="hp-iwt-btn"
+              style="background-color: {{ section.settings.btn_bg_color }}; color: {{ section.settings.btn_text_color }};"
+              {% if section.settings.dataTrack %}
+                {% render 'ga4-events' %}
+              {% endif %}
+            >
+              {{ section.settings.btn_label }}
+            </a>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Homepage Image with Text",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image (optional)"
+    },
+    {
+      "type": "header",
+      "content": "Content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Transform Your Home Into a Spa"
+    },
+    {
+      "type": "richtext",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "<p>Our beautifully crafted, natural home fragrance products are designed to fill your space with long-lasting, luxurious scents. Join over 200,000 happy customers who have already made the switch.</p>"
+    },
+    {
+      "type": "header",
+      "content": "Colors"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#3d5065"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#444444"
+    },
+    {
+      "type": "header",
+      "content": "Button"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "Shop Now"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "text",
+      "id": "scroll_to",
+      "label": "Scroll to Section ID (overrides link)"
+    },
+    {
+      "type": "text",
+      "id": "scroll_top",
+      "label": "Scroll Top Offset",
+      "default": "0"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button Background Color",
+      "default": "#3d5065"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "GA4"
+    },
+    {
+      "id": "dataTrack",
+      "label": "Data Track",
+      "type": "checkbox"
+    },
+    {
+      "id": "targetUrl",
+      "label": "Target Url",
+      "type": "url"
+    },
+    {
+      "id": "index",
+      "label": "Index",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "funnel_stage",
+      "label": "Funnel Stage",
+      "type": "text",
+      "default": "landing_page"
+    },
+    {
+      "id": "dataModule",
+      "label": "Module",
+      "type": "text",
+      "default": "image_with_text"
+    },
+    {
+      "id": "dataTitle",
+      "label": "Event Label",
+      "type": "text",
+      "default": "shop_now"
+    },
+    {
+      "id": "eventValue",
+      "label": "Event Value",
+      "type": "text",
+      "default": "shop_anchor"
+    },
+    {
+      "id": "itemId",
+      "label": "Item Id",
+      "type": "text"
+    },
+    {
+      "id": "optionIndex",
+      "label": "Option Index",
+      "type": "text"
+    },
+    {
+      "id": "ItemName",
+      "label": "Item Name",
+      "type": "text"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Homepage Image with Text"
+    }
+  ]
+}
+{% endschema %}

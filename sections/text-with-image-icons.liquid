@@ -1,0 +1,78 @@
+<div class="product-benefit">
+  <div class="d-flex flex-wrap align-items-center justify-content-between">
+    <div class="w-50"><img class="w-100 vertical-middle" src="{{ section.settings.image | img_url: "1900x" }}"></div>
+    <div class="w-50 d-flex align-items-center justify-content-center">
+      <div class="col-12 col-md-11 col-lg-8">
+        <h1 class="mb-3 heading-2" style="color:{{ section.settings.content_color }};">
+          {{ section.settings.section_heading }}
+        </h1>
+        <div class="mb-3">
+          {% for block in section.blocks %}
+            <div class="d-flex align-items-center product-blocks mb-3">
+              <img class="me-3" src="{{ block.settings.item_img | img_url: "400x" }}">
+              <div class="pe-5">
+                <h4 class="mb-1" style="color:{{ section.settings.content_color }};">{{ block.settings.title }}</h4>
+                <span style="color:{{ section.settings.content_color }};">{{ block.settings.textId }}</span>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Text with Image icons",
+    "settings": [
+        {
+          "type": "text",
+          "id": "section_heading",
+          "label": "Enter section heading",
+          "default": "your section heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose product image"
+        },
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "Choose content color",
+          "default": "#334FB4"
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+    {
+      "type": "product_benefits",
+      "name": "product benefits",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "item_img",
+          "label": "Choose benefit image"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Enter benefit title",
+          "default": "your benefit title"
+        },
+        {
+          "type": "text",
+          "id": "textId",
+          "label": "Enter product benefit text",
+          "default": "your product benefit text"
+        }
+      ]
+    }
+  ],
+    "presets": [
+  {
+      "name" : "Text with Image icons"
+  }
+]
+  }
+{% endschema %}

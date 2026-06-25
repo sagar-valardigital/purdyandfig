@@ -1,0 +1,859 @@
+<style>
+
+  .empty-bundle-count{
+    background-image:url({{ 'bundle-bottle.png' | asset_img_url }} );
+    background-size:contain;
+    background-repeat:no-repeat;
+      color:#fff;
+  }
+  @media(max-width:768px){
+    .bundle-priceing-wrapper > *{
+    padding:0 2px !important;
+    }
+  }
+  
+  .checkout-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+</style>
+{% assign product = section.settings.cart_product %}
+{% assign boxProduct = section.settings.box_product %}
+{% assign box3Product = section.settings.box_product_3pack %}
+<script>
+var isOnIOS = navigator.userAgent.match(/iPad/i)|| navigator.userAgent.match(/iPhone/i);
+var eventName = isOnIOS ? "pagehide" : "beforeunload";
+window.addEventListener( eventName , function(event) {
+  // Remove the "loading" class from all checkout buttons
+  var checkoutButtons = document.getElementsByClassName('checkout-button');
+  for (var i = 0; i < checkoutButtons.length; i++) {
+   console.log('removing loaders..');
+    checkoutButtons[i].classList.remove('loading');
+  }
+});
+</script>
+{%  assign s_variant = product.selected_or_first_available_variant %}
+{% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+<div class="container bundle-section {{ section.settings.sectionClass }}"  x-init="{bundleItems:JSON.parse(localStorage.getItem('bundleItems')) || []},updateBundleItems();"
+ x-data="{
+  bundleItems: JSON.parse(localStorage.getItem('bundleItems')) || [],
+  updateBundleItems() {
+    if(this.calculateTotalQuantity() > this.totalCount) {
+       this.bundleItems = []
+       this.saveToLocalStorage();
+    }
+    const currentTime = new Date().getTime();
+    this.bundleItems.forEach(item => {
+              console.log(item.timestamp);
+    });
+    const updatedItems = this.bundleItems.filter(item => (currentTime - item.timestamp) < (60 * 60 * 1000));
+    this.bundleItems = updatedItems;
+    this.saveToLocalStorage();
+  },
+  totalCount:{{ section.settings.pack_size }},
+  isAddingToCart: false,
+  boxData: null,
+  boxIndex: 0,
+  oneTimeItems: null,
+  skioBABProductMapping: {
+    // Linden & Lavendar
+    43824862232803: 43989883125987,
+  
+    // Citronella & Niaouli Fly Away
+    43824862134499: 43989883617507,
+  
+    // Geranium & Ylang Ylang
+    43824861610211: 43989884076259,
+  
+    // Balancing Floral
+    43824861446371: 43989885550819,
+  
+    // Grounding Vetiver
+    43824861315299: 43989885845731,
+  
+    // Uplifting Citrus
+    43824860659939: 43989886107875,
+
+    // Patchouli & Cedarwood
+    43960619598051: 43989897478371,
+
+    // Juniper & Cardamom
+    43982357463267: 44009976463587,
+    
+    // Lavender & Chamomile
+    43982358741219: 44009976856803,
+
+    // Orange & Clove
+    44043051663587:44119214063843,
+
+    // Frankincense & Myrrh
+    44043053859043:44121341788387,
+
+    //Fir & Bergamot
+    44043052777699:44121344901347,
+  },
+  changeBanner(pack_size) {
+    if(pack_size == 3) {
+      desktop_banner = document.querySelector('.desktop-banner');
+      desktop_banner.setAttribute('src', desktop_banner.getAttribute('data-src-p1'));
+      mobile_banner = document.querySelector('.mobile-banner');
+      mobile_banner.setAttribute('src', mobile_banner.getAttribute('data-src-p1'));
+      document.querySelector('#scent_heading').innerHTML = 'For a limited time only,<br>   select 3 scents & save 50%'
+    }
+    else {
+      desktop_banner = document.querySelector('.desktop-banner');
+      desktop_banner.setAttribute('src', desktop_banner.getAttribute('data-src-p2'));
+      mobile_banner = document.querySelector('.mobile-banner');
+      mobile_banner.setAttribute('src', mobile_banner.getAttribute('data-src-p2'));
+      document.querySelector('#scent_heading').innerHTML = 'For a limited time only,<br>   select 6 scents & save 50%'
+    }
+  },
+  addToBundle(productId, productTitle, quantity, price, image, compareprice, sku) {
+        const newItem = {'id': productId, 'productTitle': productTitle, 'quantity': quantity, 'price':price, 'image':image, 'compareprice':compareprice, 'sku':sku,'timestamp':new Date().getTime()};
+        const existingItem = this.bundleItems.find(item => item.id === productId);
+     const totalQuantity = this.calculateTotalQuantity();
+        if (existingItem) {
+            if (totalQuantity+1 <= this.totalCount) {
+                existingItem.quantity += quantity;
+                this.saveToLocalStorage();
+            } else {
+            }
+        } else {
+            if (totalQuantity+1 <= this.totalCount) {
+                this.bundleItems.unshift(newItem);
+                this.saveToLocalStorage();
+            } else {
+            }
+        }
+    },
+    clearBundleItems(count) {
+      if (this.totalCount != count ) {
+        this.totalCount = count;
+        this.bundleItems = []; // Set the bundleItems array to an empty array to clear all items
+        this.saveToLocalStorage(); // Save the updated bundleItems to the local storage
+      }
+    },
+  getBundleBreakdown(){
+    let breakdown = []
+    this.bundleItems.forEach(item => {
+              breakdown.unshift(item.quantity+'x'+item.sku);
+    });
+    return breakdown.join('+');
+      
+  },
+    formatCurrency(amountPence) {
+        const amountInCurrency = (amountPence / 100).toFixed(2); // Convert pence to currency
+        return '£'+amountInCurrency;
+    },
+ removeFromBundle(index) {
+            if (index >= 0 && index < this.bundleItems.length) {
+                const item = this.bundleItems[index];
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                } else {
+                    this.bundleItems.splice(index, 1);
+                }
+                this.saveToLocalStorage();
+            }
+        },
+  getItemQuantity(productId) {
+            const item = this.bundleItems.find(item => item.id === productId);
+            return item ? item.quantity : 0;
+    },
+  calculateTotalQuantity() {
+            let totalQuantity = 0;
+            this.bundleItems.forEach(item => {
+                totalQuantity += item.quantity;
+            });
+            return totalQuantity;
+  },
+increaseQuantity(productId) {
+            const index = this.bundleItems.findIndex(item => item.id === productId);
+            if (index >= 0) {
+                const item = this.bundleItems[index];
+                const totalQuantity = this.calculateTotalQuantity();
+                if (totalQuantity + 1 <= this.totalCount) {
+                    item.quantity += 1;
+                } else {
+                    alert('The maximum total quantity for all items in the bundle is '+this.totalCount);
+                }
+                this.saveToLocalStorage();
+            }
+        },
+decreaseQuantity(productId) {
+            const index = this.bundleItems.findIndex(item => item.id === productId);
+            if (index >= 0) {
+                const item = this.bundleItems[index];
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                } else {
+                    this.bundleItems.splice(index, 1);
+                }
+                this.saveToLocalStorage();
+            }
+ },
+  saveToLocalStorage() {
+        localStorage.setItem('bundleItems', JSON.stringify(this.bundleItems));
+  },
+  bundleToAddCount() {
+    return this.totalCount - this.calculateTotalQuantity();
+  },
+  isItemAdded(productId) {
+            return this.bundleItems.some(item => item.id === productId);
+    },
+  isbundleCompleted() {
+    return this.calculateTotalQuantity() >= this.totalCount;
+  },
+ formatString(str) {
+  // Replace hyphens with spaces
+  var formattedStr = str.replace(/-/g, ' ');
+
+ // Capitalize the first letter of each word
+  formattedStr = formattedStr.replace(/\b\w/g, function(match) {
+    return match.toUpperCase();
+  });
+
+  return formattedStr;
+  },
+  getScentsBreakdown() {
+      let breakdown = []
+    this.bundleItems.forEach(item => {
+              breakdown.unshift(item.quantity+'x '+this.formatString(item.productTitle));
+    });
+    return breakdown.join(' + ');
+  },
+ async addBundleToCart(redirect=true) {
+   var checkoutButtons = document.getElementsByClassName('checkout-button');
+  for (var i = 0; i < checkoutButtons.length; i++) {
+   console.log('removing loaders..');
+    checkoutButtons[i].classList.add('loading');
+  }
+  this.isAddingToCart = true;
+ var bundleItems = this.bundleItems;
+ var lineItems = [];
+
+  const bundleLineItems = await this.getBundleLineItems();
+  const bundleOneTimeItems = await this.getOneTimeLineItems();
+
+  lineItems.push(...bundleLineItems);
+  lineItems.push(...bundleOneTimeItems);
+
+  // TODO: Create a second BAB or add an additional size option to this page
+  // if (this.calculateTotalQuantity() < 6) {
+  //   lineItems.push({
+  //     quantity: 1,
+  //     id: 43836262056163,
+  //     selling_plan: 3313041635,
+  //     properties: { '_is_bundle': 'Yes', '_breakdown': this.getBundleBreakdown(), 'scents': this.getScentsBreakdown() }
+  //   });
+  // } else {
+  //   lineItems.push({
+  //     quantity: 1,
+  //     id: 43920216621283,
+  //     selling_plan: 3401253091,
+  //     properties: { '_is_bundle': 'Yes', '_breakdown': this.getBundleBreakdown(), 'scents': this.getScentsBreakdown() }
+  //   });
+  // }
+
+ fetch('/cart/add.js', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify({ items: lineItems })
+  })
+  .then((response) => {
+    if (response.ok) {
+   var checkoutButtons = document.getElementsByClassName('checkout-button');
+  for (var i = 0; i < checkoutButtons.length; i++) {
+   console.log('removing loaders..');
+    checkoutButtons[i].classList.remove('loading');
+  }
+      console.log('Bundle added to cart');
+      this.isAddingToCart = false;
+      if(redirect) {
+        window.location.href = '/checkout/';
+      }
+      else {
+      window.dispatchEvent(new Event('toggle-cart', {'detail':response}));
+      window.dispatchEvent(new Event('cart-updated', {'detail':response}));
+      }
+    } else {
+      console.error('Failed to add bundle to cart:', response);
+    }
+    
+    this.boxIndex++;
+  })
+  .catch(function(error) {
+    console.error('Error adding bundle to cart:', error);
+  });
+},
+async init() {
+  Promise.all([this.getBox(), this.getBoxesInCart()])
+  .then((responses) => {
+    this.loading = false
+  })
+},
+async getBox() {
+  const productPlatformId = this.totalCount === 3 ? '{{ box3Product.id }}' : '{{ boxProduct.id }}';
+
+  return new Promise((resolve, reject) => {
+    fetch('https://api.skio.com/storefront-http/get-dynamic-box', {
+      method: 'POST',
+      body: JSON.stringify({
+        'productPlatformId': productPlatformId,
+      })
+    })
+    .then((response) => response.json())
+    .then((response) => {
+      if (!response.ok) throw new Error('Failed to get box');
+      const { DynamicBox } = response;
+      this.boxData = DynamicBox;
+      resolve();
+    })
+    .catch((error) => {
+      console.error(error);
+      reject(error);
+    });
+  });
+},
+  getBoxSwap(products) {
+    return products.reduce((obj, item) => {
+      let newKey = this.skioBABProductMapping[item.id];
+      if(!newKey) return obj;
+      return Object.assign(obj, { [newKey]: item.quantity })
+    }, {});
+  },
+  async getOneTimeLineItems() {
+    if(!this.boxData.oneTimeUpsells?.length) return [];
+
+    return this.boxData.oneTimeUpsells.map(item => {
+      return {
+        quantity: 1,
+        id: item.productVariants[0].platformId.replace('gid://shopify/ProductVariant/', ''),
+        properties: {
+          _dynamicBoxIndex: this.boxIndex,
+          'Build a Bundle': this.boxData.settings.header
+        }
+      };
+    });
+  },
+  async getBundleLineItems() {
+    return this.bundleItems.map((item, index) => {
+      return {
+        quantity: item.quantity,
+        id: item.id,
+        selling_plan: Number(Object.keys(this.boxData.sellingPlanGroup)[0].replace('gid://shopify/SellingPlan/', '')),
+        properties: {
+          _dynamicBoxIndex: this.boxIndex,
+          _dynamicBoxId: this.boxData.boxId,
+          'Build a Bundle': this.boxData.settings.header,
+          ...(index == 0 && {
+            _dynamicBoxSwapMapping: JSON.stringify(this.getBoxSwap(this.bundleItems))
+          })
+        }
+      };
+    });
+  },
+  async getBoxesInCart() {
+    return new Promise((resolve, reject) => {
+      fetch('/cart.js')
+      .then((response) => response.json())
+      .then((response) => {
+        const indexes = response.items.map(item => item.properties._dynamicBoxIndex).sort();
+        const newIndex = Math.max(...indexes) + 1;
+        if(newIndex > this.boxIndex) {
+          this.boxIndex = newIndex;
+        }
+        resolve();
+      })
+      .catch((error) => {
+        reject(error)
+      })
+    });
+  }
+}">
+{% if section.settings.pack_change %}
+  <div class="d-flex align-items-center justify-content-center py-2 bottle-length-btn">
+      <button class="productShowBtn"  :class="{ 'active': totalCount == 3 }" @click="clearBundleItems(3);init();changeBanner(3);">3 Pack</button>
+      <button class="productShowBtn" :class="{ 'active': totalCount == 6 }"  @click="clearBundleItems(6);init();changeBanner(6);">6 Pack</button>
+    </div>
+  {% endif %}
+  <div class="bundle-section-wraper" style="padding: {{ section.settings.section_padding }}px 0px;">
+  <template x-if="calculateTotalQuantity() < totalCount">
+    <h1
+      class="px-2 main-heading value-pro"
+      style="text-align:{{ section.settings.heading_position }}; margin-bottom:{{ section.settings.heading_mb }}px; font-size:{{ section.settings.heading_font }}px; color:{{ section.settings.heading_color }};"
+    >
+      {{ section.settings.bundle_heading }}
+    </h1>
+  </template>
+
+    <template x-if="calculateTotalQuantity() == totalCount">
+    <h1
+      class="px-2 main-heading value-pro" 
+      style="text-align:{{ section.settings.heading_position }}; margin-bottom:{{ section.settings.heading_mb }}px; font-size:{{ section.settings.heading_font }}px; color:{{ section.settings.heading_color }};"
+    >
+      You’re Ready to Clean!
+    </h1>
+  </template>
+  
+    <div class="row mx-0 px-0 bundle-row" >
+      <div class="col col-12 col-sm-12 col-md-8 px-0" id="{{ section.settings.sectionId }}">
+        <div class="row mx-0 px-2 px-md-0 row-cols-2 row-cols-md-3 row-cols-lg-4 w-100" >
+          {% for block in section.blocks %}
+            <div class="col mb-3">
+              <div class="bundle-item h-100 position-relative {% if block.settings.disabled %}disabled{% endif %} {%  if block.settings.ChooseProduct.available %}{% else %}disabled {%  endif %}" :class="{ 'border-show': isItemAdded({{  block.settings.ChooseProduct.variants.first.id}}) }">
+                <svg
+                  data-target="blend-popup-{{ forloop.index }}"
+                  data-index="{{ block.settings.popup_no }}"
+                  class="position-absolute info-icon blend-popup"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="48" stroke="#3541bf" stroke-width="4"/>
+                  <rect x="48" y="41" width="5" height="33" fill="#3541bf"/>
+                  <rect x="47" y="26" width="7" height="7" rx="3.5" fill="#3541bf"/>
+                </svg>
+
+                <img class="w-100" src="{{ block.settings.ChooseProduct.featured_image | img_url: "400x" }}">
+                <div class="card-body">
+                  <h3 class="value-sans" style="text-align:center; color:#3541bf; font-size:18px;">
+                    {{ block.settings.ChooseProduct.title }}
+                  </h3>
+                  <p class="col-12 col-sm-8 col-md-9 mx-auto value-sans" style="text-align:center; color:#3541bf;">
+                    {{ block.settings.bundle_text }}
+                  </p>                  
+                    <div class="add-product-btn d-flex align-items-center justify-content-center">
+                          <button class="px-0 product-count-btn" :class="{'d-none': !isItemAdded({{  block.settings.ChooseProduct.variants.first.id}}) }" @click="decreaseQuantity({{block.settings.ChooseProduct.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7     C446.7,361.1,361.1,446.7,256,446.7z"/></g></g><rect height="17" width="256" x="128" y="248"/></g></svg>
+                      </button>
+                      <button class="add-btn px-0 mx-1"  :class="{'disabled':isbundleCompleted()}"  @click=addToBundle({{block.settings.ChooseProduct.variants.first.id}},'{{block.settings.ChooseProduct.handle}}',1,{{ block.settings.ChooseProduct.price }},'{{ block.settings.ChooseProduct.featured_image|img_url:'200x' }}',{{block.settings.ChooseProduct.compare_at_price}},'{{block.settings.ChooseProduct.variants.first.sku}}'); data-product="{{block.settings.ChooseProduct.variants.first.id }}">
+                        <template x-if="getItemQuantity({{block.settings.ChooseProduct.variants.first.id}}) < 1">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="{{ block.settings.content_color }}"/>
+                        <rect x="50" y="32" width="2" height="35" fill="#D9D9D9"/>
+                        <rect x="68" y="48" width="2" height="35" transform="rotate(90 68 48)" fill="#D9D9D9"/>
+                      </svg>
+                          </template>
+                          <template x-if="getItemQuantity({{block.settings.ChooseProduct.variants.first.id}}) > 0">
+                            <span class="bundle-qty-counter" x-text="getItemQuantity({{block.settings.ChooseProduct.variants.first.id}})"></span>
+                          </template>
+                      </button>
+                        
+                          
+                  
+                          <button class="px-0 product-count-btn"  :class="{'disabled':isbundleCompleted(), 'd-none': !isItemAdded({{  block.settings.ChooseProduct.variants.first.id}}) }" @click="increaseQuantity({{block.settings.ChooseProduct.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7S150.9,65.3,256,65.3S446.7,150.9,446.7,256S361.1,446.7,256,446.7z"/></g></g><g><polygon points="264.1,128 247.3,128 247.3,247.9 128,247.9 128,264.7 247.3,264.7 247.3,384 264.1,384 264.1,264.7 384,264.7     384,247.9 264.1,247.9   "/></g></g></svg>
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+
+  <template x-if="calculateTotalQuantity() < totalCount">
+      <h1
+        class="px-2 main-heading-2 value-pro" 
+        style="text-align:{{ section.settings.heading_position }}; margin-bottom:{{ section.settings.heading_mb }}px; font-size:{{ section.settings.heading_font }}px; color:{{ section.settings.heading_color }};"
+      >
+        {{ section.settings.bundle_heading }}
+      </h1>
+  </template>
+ <template x-if="calculateTotalQuantity() == totalCount">
+  <h1
+        class="px-2 main-heading-2 value-pro"
+        style="text-align:{{ section.settings.heading_position }}; margin-bottom:{{ section.settings.heading_mb }}px; font-size:{{ section.settings.heading_font }}px; color:{{ section.settings.heading_color }};"
+      >
+         You’re Ready to Clean!
+      </h1>
+  </template>
+
+      <div class="col col-12 col-md-4 bundle-card-wraper">
+        <div class="bundle-card">
+          <div class="bundle-header" style="padding:{{ section.settings.card_padding }}px 10px;">
+            <h1
+              class="text-center mb-3 heading-3 blue-text font-value"
+              style="font-size:{{ section.settings.card_heading_font }}px; color:{{ section.settings.card_heading_color }}; "
+            >
+              {{ section.settings.card_heading }}
+            </h1>
+            <div class="d-flex align-items-center justify-content-center">
+              <div class="bundle-free">
+                <div class="">
+                  {% assign freeProductImg = section.settings.freeProductImg | img_url : '200x' %}
+                  <img src="{{ freeProductImg }}" width="120" height="120" class="img-responsive" loading="lazy">
+                </div>
+                <div>
+                  <div>
+                  <h3 class=" blue-text font-value">{{ section.settings.freeProductTitle }}</h3>
+                  <ul class="blue-text value-sans free-bundle-textlist">
+                    <li> <b style="-webkit-text-stroke:1px">FREE</b> Glass bottle for Life</li>
+                    <li> <b style="-webkit-text-stroke:1px">FREE</b> Microfibre Cloth</li>
+                    <li> Refills Billed & Shipped Quarterly</li>
+                  </ul>
+                </div>
+                </div>
+                
+              </div>
+             
+            </div>
+          </div>
+          <div class="bundle-card-body row mx-0 align-items-center justify-content-start">
+            <template x-for="(item, index) in bundleItems">
+               <template x-for="count in item.quantity">
+               <div class="col col-4 px-0">
+              <div class="d-flex align-items-center justify-content-center position-relative bundle-img-wrapper">
+                <span class="bundle-remove-icon" @click=removeFromBundle(index); ><img src="{{ 'remove.png' | asset_img_url }}" /></span>
+                <img :src="item.image" class="img-responsive"></div>
+              <span class="value-sans" x-text="item.productTitle.replace(/-/g, ' ')"></span>
+            </div>
+               </template>
+            </template>
+            <template x-if="calculateTotalQuantity() < totalCount">
+                <template x-for="index in totalCount-calculateTotalQuantity()">
+                  <div class="col col-4 px-0">
+                    <div class="d-flex align-items-center justify-content-center empty-bundle-count" x-text="calculateTotalQuantity()+index"></div>
+                    <span class="value-sans">Scent <span x-text="calculateTotalQuantity()+index"></span></span>
+                  </div>
+                </template>
+            </template>
+
+            
+          </div>
+          <div class="bundle-card-footer">
+            <div class="d-flex mb-2 align-items-center justify-content-between">
+              <template x-if="calculateTotalQuantity() == totalCount">
+              <span class="value-sans"><span x-text="totalCount"></span>{{ section.settings.sticky_atc_heading }}</span>
+              </template>
+              <template x-if="calculateTotalQuantity()+1 == totalCount">
+              <span class="value-sans">SELECT <span x-text="totalCount-calculateTotalQuantity()"></span> SCENT</span>
+              </template>
+              <template x-if="calculateTotalQuantity() < totalCount && calculateTotalQuantity()+1 != totalCount">
+              <span class="value-sans">SELECT <span x-text="totalCount-calculateTotalQuantity()"></span> SCENTS</span>
+              </template>
+              <div>
+              <template x-if="calculateTotalQuantity() == totalCount &  totalCount < 6">
+                 <del class="value-sans blue-text">{{ product.compare_at_price | money }}</del>
+              </template>
+              <template x-if="calculateTotalQuantity() == totalCount &  totalCount >= 6">
+              <del class="value-sans blue-text">{{ product.compare_at_price | times:2 | money }}</del>
+           </template>
+           <template x-if="calculateTotalQuantity() == totalCount & totalCount < 6">
+                 <span class="value-sans">{{ sub_discount_price | money }}</span>
+              </template>
+              <template x-if="calculateTotalQuantity() == totalCount &  totalCount >= 6">
+                 <span class="value-sans">{{ sub_discount_price | times:2 | money }}</span>
+              </template>
+            </div>
+               <template x-if="calculateTotalQuantity() < totalCount">
+                  <span class="value-sans">£0.00</span>
+               </template>
+            </div>
+      <template x-if="calculateTotalQuantity() >= totalCount">
+      <button @click="addBundleToCart" class="w-100 green-btn value-sans btn-loader checkout-button" type="button" :class="{ 'loading': isAddingToCart }">ADD TO CART FOR 50% OFF</button>
+      </template>
+      <template x-if="calculateTotalQuantity()+1 == totalCount">
+     <button class="w-100 value-sans" type="button">SELECT <span x-text="bundleToAddCount"></span> MORE SCENT & GET 50% OFF</button>
+      </template>
+      <template x-if="calculateTotalQuantity() < totalCount && calculateTotalQuantity()+1 != totalCount">
+      <button class="w-100 value-sans" type="button">SELECT <span x-text="bundleToAddCount"></span> MORE SCENTS & GET 50% OFF</button>
+      </template>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<div class="bundle-sticky-bar w-100 py-2">
+  <div class="container d-flex align-items-center justify-content-between">
+    <div>
+      <h3 class="m-0 value-pro"><span x-text="totalCount"></span>{{section.settings.sticky_atc_heading}}</h3>
+      <p class="m-0 value-sans">Subscription</p>
+    </div>
+    <div class="d-flex align-items-center justify-content-end">
+    <div class="me-4">
+      <div class="d-flex">
+     <template x-if="calculateTotalQuantity() == totalCount  &  totalCount < 6">
+      <del class="px-2 value-sans blue-text" style="text-decoration: line-through;">{{ section.settings.cart_product.compare_at_price |  money }}</del>
+     </template>
+     <template x-if="calculateTotalQuantity() == totalCount &  totalCount >= 6">
+          <del class="px-2 value-sans blue-text" style="text-decoration: line-through;">
+                {{ section.settings.cart_product.compare_at_price | times:2 |  money }}
+          </del>
+     </template>
+ <template x-if="calculateTotalQuantity() == totalCount  &  totalCount < 6">
+          <h3 class="m-0 value-sans">{{ sub_discount_price | money }}</h3>
+ </template>
+ <template x-if="calculateTotalQuantity() == totalCount &  totalCount >= 6">
+ <h3 class="m-0 value-sans">{{ sub_discount_price |times:2 | money }}</h3>
+</template>
+
+       <template x-if="calculateTotalQuantity() < totalCount">
+<h3 class="m-0 value-sans">£0.00</h3> 
+       </template>
+</div>
+      
+      <p class="m-0 value-sans">Free Bottle for Life</p>
+    </div>
+      <template x-if="calculateTotalQuantity() == totalCount">
+      <button @click="addBundleToCart" class="w-100 green-btn btn-loader value-sans checkout-button" type="button" :class="{ 'loading': isAddingToCart }">ADD TO CART FOR 50% OFF</button>
+      </template>
+      <template x-if="calculateTotalQuantity()+1 == totalCount">
+              <button class="w-100 value-sans" type="button">SELECT <span x-text="bundleToAddCount"></span> MORE SCENT & GET 50% OFF</button>  
+      </template>
+      <template  x-if="calculateTotalQuantity() < totalCount  && calculateTotalQuantity()+1 != totalCount">
+      <button class="w-100 value-sans" type="button">SELECT <span x-text="bundleToAddCount"></span> MORE SCENTS & GET 50% OFF</button>
+      </template>
+    </div>
+  </div>
+</div>
+  <div class="blends-popup">
+      <span class="overlay"></span>
+      <div class="slides-numbers text-white" style="display: block;">
+        <span class="active">1</span> of <span class="total"></span>
+      </div>
+      <div class="blend-popup-slider">
+        {% for block in section.blocks %}
+          {% if block.settings.nopopup %}
+          {% else %}
+            <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <div class="m-0 mt-2">{{ block.settings.pop_detail }}</div>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+</div>
+{% schema %}
+{
+  "name": "Bundle variant section",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "redirect_checkout",
+      "label": "Redirect to checkout",
+      "default": true
+    },
+{
+      "type": "checkbox",
+      "id": "pack_change",
+      "label": "Pack change option"
+    },
+    {
+          "type": "text",
+          "id": "sectionId",
+          "label": "Section ID"
+        },
+        {
+          "type": "text",
+          "id": "sectionClass",
+          "label": "Section Class"
+        },
+    {
+          "type": "text",
+          "id": "sticky_atc_heading",
+          "label": "Enter Sticky Banner heading",
+          "default": "3-Pack Bundle Starter Kit"
+        },
+    {
+          "type": "text",
+          "id": "bundle_heading",
+          "label": "Enter bundle heading",
+          "default": "Select your Scent"
+        },
+     {
+        "type": "range",
+        "id": "heading_font",
+        "min":  20,
+        "max":  38,
+        "step":  1,
+        "unit": "px" ,
+        "label": "main heading font size",
+        "default":  22
+      },
+    {
+        "type": "range",
+        "id": "heading_mb",
+        "min":  10,
+        "max":  70,
+        "step":  1,
+        "unit": "px" ,
+        "label": "heading bottom space",
+        "default":  20
+      },
+    {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Choose sub-heading color",
+          "default": "#000000"
+        },
+    {
+    "type": "select",
+    "id": "heading_position",
+    "label": "alignment your main heading",
+    "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+    "default": "left"
+  },
+    {
+      "type":"number",
+      "id":"pack_size",
+      "label":"Input the pack size i.e 6",
+      "default":3
+    },
+    {
+          "type": "text",
+          "id": "card_heading",
+          "label": "Enter build bundle heading",
+          "default": "Build Your Bundle"
+        },
+    {
+          "type": "color",
+          "id": "card_heading_color",
+          "label": "Choose card header-content color",
+          "default": "#ffffff"
+        },
+     {
+        "type": "range",
+        "id": "card_heading_font",
+        "min":  20,
+        "max":  38,
+        "step":  1,
+        "unit": "px" ,
+        "label": "card heading font size",
+        "default":  34
+      },
+    {
+        "type": "range",
+        "id": "card_padding",
+        "min":  10,
+        "max":  60,
+        "step":  1,
+        "unit": "px" ,
+        "label": "card padding",
+        "default":  20
+      },
+    {
+        "type": "range",
+        "id": "section_padding",
+        "min":  20,
+        "max":  100,
+        "step":  1,
+        "unit": "px" ,
+        "label": "section top bottom space",
+        "default":  50
+      },
+    {
+          "type": "text",
+          "id": "freeProductTitle",
+          "label": "Free Product Title"
+        },
+    {
+          "type": "image_picker",
+          "id": "freeProductImg",
+          "label": "Free Product Image"
+        },
+      {
+          "type": "product",
+          "id": "cart_product",
+          "label": "Choose product"
+      },
+    {
+          "type": "product",
+          "id": "box_product",
+          "label": "Choose SKIO BOX product"
+      },
+    {
+          "type": "product",
+          "id": "box_product_3pack",
+          "label": "Choose SKIO 3 BOX product"
+      }
+  ],
+  "blocks": [
+  {
+  "type": "product",
+  "name": "bundle item",
+  "settings": [
+    {
+          "type": "checkbox",
+          "id": "disabled",
+          "label": "Disable Product",
+          "default" : false
+        },    
+    {
+          "type": "product",
+          "id": "ChooseProduct",
+          "label": "Choose product"
+        },
+        {
+          "type": "text",
+          "id": "bundle_text",
+          "label": "Enter product text",
+          "default": "your product text"
+        },
+    {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         {
+           "type": "checkbox",
+           "id": "nopopup",
+           "label": "Check if block has no popup",
+           "default": false
+         },
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "html",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+  ]
+  }
+],
+  "presets": [
+  {
+      "name" : "Bundle variant section"
+  }
+]
+}
+{% endschema %}

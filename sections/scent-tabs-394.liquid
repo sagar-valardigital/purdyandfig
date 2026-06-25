@@ -1,0 +1,813 @@
+<style>
+    body.overflow-hidden{
+      overflow:hidden;
+    }
+   .pf-tab {
+   	padding: 16px 24px;
+   	cursor: pointer;
+   }
+    .tab-block-blend {
+      display: none;
+    }
+    .tab-block.first-block {
+      {% comment %} display: flex;
+      height: 100%;
+      align-items: end;
+      justify-content: flex-end; {% endcomment %}
+      padding: 12px;
+      background-size: cover;
+      border-radius: 4px;
+      {% comment %} flex-direction: column; {% endcomment %}
+    }
+    #body .signature-seasonal-tabs .first-block .heading-3 {
+      font-size: 40px !important;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 50px;
+    }
+    .sub-heading-3 {
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 200;
+      line-height: 160%;
+      color: #fff;
+    }
+    .tab-block:not(.first-block) {
+      padding-bottom: 0;
+    }
+   .hiw-tag {
+   	position: absolute;
+   	top: 16px;
+   	left: 16px;
+   	font-family: "Lausanne";
+   	font-size: 14px;
+   	font-style: normal;
+   	font-weight: 400;
+   	line-height: 128%;
+   	border-radius: 4px;
+   	border: 1px solid var(--Secondary-200, #F2D4B9);
+   	background: var(--Secondary-50, #FBF1E8);
+   	padding: 2px 4px;
+   	align-items: center;
+   }
+  .tab-block-content .heading {
+    font-size: 18px;
+    color: #212121;
+    line-height: 27px;
+  }
+  .tab-block-content p {
+    line-height: 25.6px;
+  }
+  label.open-tab-blend-popup {
+    font-size: 14px;
+    letter-spacing: 0.35px;
+    font-weight: 400;
+    line-height: 14px;
+  }
+  .scent-tabs-394 .pf-tab-content:not(.active) {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+  .scent-tabs-394 .pf-tab-content.active {
+    opacity: 1;
+    position: relative;
+    z-index: 10;
+  }
+
+  /* popup related css starts here */
+  .scent-tabs-optimized {
+  	width: 358px;
+  	background: #FFFFFF;
+  	border-radius: 16px;
+  	position: fixed;
+    top: 50%;
+    right: 0px;
+    z-index: 999999;
+    transform: translate(200%, -50%);
+    transition: transform 300ms ease-in-out, right 300ms ease-in-out;
+  	display: flex;
+  	flex-direction: column;
+  	align-items: flex-start;
+		height: auto;
+  	max-height: calc(100vh - 20px);
+  }
+  .scent-tabs-optimized.scents-easein-open {
+    right: 16px;
+    transform: translate(0%, -50%);
+  }
+  .scent-tabs-optimized .scent-blc-wrapper {
+    width: 100%;
+  }
+  .scent-tabs-optimized .scent-blc-inner {
+  	display: flex;
+  	padding: 0px 8px 24px 8px;
+  	flex-direction: column;
+  	align-items: flex-end;
+  	align-self: stretch;
+  }
+  .scent-tabs-optimized .scent-blc-top-block {
+  	display: flex;
+  	padding: 0 8px;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 12px;
+  	align-self: stretch;
+  }
+  .scent-tabs-optimized .scent-blc-title {
+  	display: flex;
+  	flex-direction: column;
+  	align-items: center;
+  	gap: 4px;
+  	align-self: stretch;
+  }
+  .scent-tabs-optimized .scent-blc-title h2 {
+  	color: #212121;
+  	font-family: "Lausanne";
+  	font-size: 24px;
+  	font-style: normal;
+  	font-weight: 400;
+  	line-height: 36px;
+  	margin-bottom: unset !important;
+  }
+  .scent-tabs-optimized .scent-blc-title p {
+  	color: #424242;
+  	text-align: center;
+  	font-family: "Lausanne";
+  	font-size: 16px;
+  	font-style: normal;
+  	font-weight: 200;
+  	line-height: 25.6px;
+  	margin-bottom: unset !important;
+  }
+  .scent-tabs-optimized .scent-blc-blends {
+  	display: flex;
+  	padding: 24px 16px;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 16px;
+  	align-self: stretch;
+  	border-top: 1px solid var(--opaque-dark-black-10, rgba(0, 0, 0, 0.10));
+  	background: var(--Neutral-50, #FAFAFA);
+		height: auto;
+		max-height: calc(45vh - 20px);
+		overflow: auto;
+		border-bottom-right-radius: 16px;
+    border-bottom-left-radius: 16px;
+  }
+  .scent-tabs-optimized .scent-blc-blends h5 {
+  	color: #212121;
+  	font-family: "Lausanne";
+  	font-size: 18px;
+  	font-style: normal;
+  	font-weight: 400;
+  	line-height: 27px;
+    margin-bottom: unset;
+    height: unset;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content {
+  	display: flex;
+  	width: 311px;
+  	flex-direction: column;
+  	align-items: flex-start;
+  	gap: 8px;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content span {
+  	color: #424242;
+  	font-family: "Lausanne";
+  	font-size: 14px;
+  	font-style: normal;
+  	font-weight: 400;
+  	line-height: 21px;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content ul {
+  	margin-top: 8px;
+    margin-left: -12px;
+  	margin-bottom: unset;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content ul li,
+  .scent-tabs-optimized .scent-blc-blend-content ul li span {
+  	color: #424242;
+  	font-family: "Lausanne";
+  	font-size: 16px;
+  	font-style: normal;
+  	font-weight: 200;
+  	line-height: 25.6px;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content ul li {
+    font-weight: 400;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content ul li:not(:last-child) {
+    margin-bottom: 4px;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content ul li span {
+    font-weight: 200 !important;
+  }
+  .scent-tabs-optimized .scent-blc-blend-content ul li span {
+  	display: block;
+  }
+  .scent-tabs-optimized .scent-blc-close {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    align-self: flex-end;
+  	width: 100%;
+  	height: 40px;
+  	padding: 4px 6px 4px 0;
+    padding-left: calc(100% - 28px);
+  }
+  .scent-tabs-optimized .scent-blc-close-icon {
+    display: flex;
+    height: 32px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    color: #212121;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Font Awesome 6 Pro";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 30px;
+    letter-spacing: -0.4px;
+    cursor: pointer;
+  }
+  .scentsbodyoverlay {
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+  }
+  .scentsbodyoverlay::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    opacity: 0.25;
+    z-index: 999998;
+    pointer-events: auto;
+  }
+	.scent-tabs-optimized .scent-blc-top-block img {
+    border-radius: 4px;
+  }
+  .scent-tabs-optimized .look-fwd {
+    font-family: "GT Super" !important;
+    font-style: italic;
+    font-weight: 600;
+  }
+  .scent-tabs-optimized .sct-img-blc {
+    width: 171px;
+    height: 171px;
+  }
+  .scent-tabs-optimized .sct-img-blc img {
+    object-fit: cover;
+    max-width: 171px;
+  }
+  /* popup related css ends here */
+
+	@media (max-width: 768px) {
+   	.tab-block-content {
+   		font-size: 14px;
+   	}
+   	#body .signature-seasonal-tabs .first-block .heading-3 {
+   		font-size: 27px !important;
+   		line-height: 33.75px;
+   	}
+    .tab-block-content .heading {
+      font-size: 14px;
+      line-height: 21px;
+    }
+    .tab-block-content p {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+    }
+    label.open-tab-blend-popup {
+      font-size: 12px;
+      letter-spacing: 0.3px;
+      line-height: 12px;
+    }
+    .tab-block.first-block {
+      max-width: calc(50% - 8px) !important;
+    }
+
+    /* popup related css starts here - mobile */
+    .scent-tabs-optimized {
+			width: calc(100% - 16px);
+      margin: 0 auto;
+		}
+		.scent-tabs-optimized.scents-easein-open {
+			right: 8px;
+      left: 8px;
+		}
+		.scent-tabs-optimized .scent-blc-title h2 {
+			font-size: 20px;
+			line-height: 30px;
+		}
+		.scent-tabs-optimized .scent-blc-title p {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		.scent-tabs-optimized .scent-blc-blends {
+			max-height: calc(50vh - 20px);
+		}
+		.scent-tabs-optimized .scent-blc-blends h5 {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.scent-tabs-optimized .scent-blc-blend-content span {
+			font-size: 12px;
+			line-height: 18px;
+			letter-spacing: 0.18px;
+		}
+		.scent-tabs-optimized .scent-blc-blend-content ul li, .scent-tabs-optimized .scent-blc-blend-content ul li span {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		.scent-tabs-optimized .scent-blc-blend-content {
+			width: 100%;
+		}
+    .scent-tabs-optimized h2.heading-2 {
+      max-width: 343px;
+    }
+    /* popup related css ends here - mobile */
+  }
+</style>
+<div class="signature-seasonal-tabs {{ section.settings.className }}">
+  <div class="container">
+    {% if section.settings.heading != blank %}
+      <div class="mb-4 heading-2-wrapper">
+        <h2 class="heading-2 blue-text-3 mt-0 text-center value-bold m-text-left">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+    {% endif %}
+    <div class="pf-tabs-wrapper">
+      <span
+        class="pf-tab pf-tab-2 tab-heading-1 {% if section.settings.active_tb == "1" %}active{% endif %}"
+        data-label="{{ section.settings.tabone | handle }}"
+        data-current="tab-heading-1"
+        data-target="tab-1"
+      >
+        {{- section.settings.tabone -}}
+      </span>
+      <span
+        class="pf-tab pf-tab-2 tab-heading-2 {% if section.settings.active_tb == "2" %}active{% endif %}"
+        data-label="{{ section.settings.tabtwo | handle }}"
+        data-current="tab-heading-2"
+        data-target="tab-2"
+      >
+        {{- section.settings.tabtwo -}}
+      </span>
+    </div>
+    <div class="pf-tabs-content position-relative">
+      <div id="tab-1" class="pf-tab-content tab-1 pf-tab-2-content {% if section.settings.active_tb == "1" %}active{% endif %}">
+        <div class="tab-blocks-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == 'tab-one' %}
+              {% if block.settings.first %}
+                <div class="tab-block first-block" style="background-image:url({{ block.settings.image | image_url: width: 600 }})">
+                  {% if block.settings.tag != '' -%}
+                    <span class="hiw-tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                  <div class="font-gtsuper heading-3 text-white white-text">{{ block.settings.heading }}</div>
+                  <div>
+                    <p class="fw-200 font-lausanne sub-heading-3">{{ block.settings.content }}</p>
+                  </div>
+                </div>
+              {% else %}
+                <div class="tab-block position-relative">
+                  <div class="tab-image">
+                    <picture>
+                      <source media="(min-width:650px)" srcset="{{ block.settings.image | image_url: width: 600 }}">
+                      <source media="(min-width:320px)" srcset="{{ block.settings.mobile_image | image_url: width: 400 }}">
+                      <img
+                        src="{{ block.settings.image | image_url: width: 600 }}"
+                        alt="{{ block.settings.image.alt }}"
+                        class="w-100 h-auto"
+                        width="300"
+                        height="250"
+                      >
+                    </picture>
+                  </div>
+                  <div class="tab-block-content mt-2">
+                    <div class="font-lausanne fw-400 heading">{{ block.settings.heading }}</div>
+                    <p class="fw-200 font-lausanne content ">{{ block.settings.content }}</p>
+                  </div>
+
+                  <div class="tab-block-blend">
+                    <div class="blc-det-div">
+                      <label
+                        for="{{ block.id }}"
+                        class="d-flex open-tab-blend-popup justify-content-between font-lausanne fw-400"
+                        >BLEND DETAILS
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268"
+                          width="15"
+                          height="15"
+                          alt="icon"
+                      ></label>
+                    </div>
+                    {% if block.settings.blend != '' %}
+                      <div class="blc-dupe" style="display: none;">
+                        <div class="scent-blc-wrapper">
+                          <div class="scent-blc-close">
+                            <div class="scent-blc-close-icon">&times;</div>
+                          </div>
+                          <div class="scent-blc-inner">
+                            <div class="scent-blc-top-block">
+                              <div class="scent-blc-title">
+                                <h2>{{ block.settings.heading }}</h2>
+                                <p>{{ block.settings.content }}</p>
+                              </div>
+                              <div class="sct-img-blc">
+                                <img src="{{ block.settings.image | image_url: width: 400 }}" width="171" height="171">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="scent-blc-blends">
+                            <h5>Blend Details</h5>
+                            {% if block.settings.top_notes != blank %}
+                              <div class="scent-blc-blend-content">
+                                <span>Top notes</span>
+                                <ul>
+                                  {{ block.settings.top_notes }}
+                                </ul>
+                              </div>
+                            {% endif %}
+                            {% if block.settings.middle_notes != blank %}
+                              <div class="scent-blc-blend-content">
+                                <span>Middle notes</span>
+                                <ul>
+                                  {{ block.settings.middle_notes }}
+                                </ul>
+                              </div>
+                            {% endif %}
+                            {% if block.settings.base_notes != blank %}
+                              <div class="scent-blc-blend-content">
+                                <span>Base notes</span>
+                                <ul>
+                                  {{ block.settings.base_notes }}
+                                </ul>
+                              </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div id="tab-2" class="pf-tab-content tab-2 pf-tab-2-content {% if section.settings.active_tb == "2" %}active{% endif %}">
+        <div class="tab-blocks-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == 'tab-two' %}
+              {% if block.settings.first %}
+                <div class="tab-block first-block" style="background-image:url({{ block.settings.image | image_url: width: 600 }})">
+                  {% if block.settings.tag != '' -%}
+                    <span class="hiw-tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                  <div class="font-gtsuper heading-3 text-white white-text">{{ block.settings.heading }}</div>
+                  <div>
+                    <p class="fw-200 font-lausanne sub-heading-3">{{ block.settings.content }}</p>
+                  </div>
+                </div>
+              {% else %}
+                <div class="tab-block position-relative">
+                  <div class="tab-image">
+                    <picture>
+                      <source media="(min-width:650px)" srcset="{{ block.settings.image | image_url: width: 600 }}">
+                      <source media="(min-width:320px)" srcset="{{ block.settings.mobile_image | image_url: width: 400 }}">
+                      <img
+                        src="{{ block.settings.image | image_url: width: 600 }}"
+                        alt="{{ block.settings.image.alt }}"
+                        class="w-100 h-auto"
+                        width="300"
+                        height="250"
+                      >
+                    </picture>
+                  </div>
+                  <div class="tab-block-content mt-2">
+                    <div class="font-lausanne fw-400 heading">{{ block.settings.heading }}</div>
+                    <p class="fw-200 font-lausanne content ">{{ block.settings.content }}</p>
+                  </div>
+                  <div class="tab-block-blend">
+                    <div class="">
+                      <label
+                        for="{{ block.id }}"
+                        class="d-flex open-tab-blend-popup justify-content-between font-lausanne fw-400"
+                        >BLEND DETAILS
+                        <img
+                          src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268"
+                          width="15"
+                          height="15"
+                          alt="icon"
+                      ></label>
+                    </div>
+                    {% if block.settings.blend != '' %}
+                      <div class="blc-dupe" style="display: none;">
+                        <div class="scent-blc-wrapper">
+                          <div class="scent-blc-close">
+                            <div class="scent-blc-close-icon">&times;</div>
+                          </div>
+                          <div class="scent-blc-inner">
+                            <div class="scent-blc-top-block">
+                              <div class="scent-blc-title">
+                                <h2>{{ block.settings.heading }}</h2>
+                                <p>{{ block.settings.content }}</p>
+                              </div>
+                              <div class="sct-img-blc">
+                                <img src="{{ block.settings.image | image_url: width: 400 }}" width="171" height="171">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="scent-blc-blends">
+                            <h5>Blend Details</h5>
+                            {% if block.settings.top_notes != blank %}
+                              <div class="scent-blc-blend-content">
+                                <span>Top notes</span>
+                                <ul>
+                                  {{ block.settings.top_notes }}
+                                </ul>
+                              </div>
+                            {% endif %}
+                            {% if block.settings.middle_notes != blank %}
+                              <div class="scent-blc-blend-content">
+                                <span>Middle notes</span>
+                                <ul>
+                                  {{ block.settings.middle_notes }}
+                                </ul>
+                              </div>
+                            {% endif %}
+                            {% if block.settings.base_notes != blank %}
+                              <div class="scent-blc-blend-content">
+                                <span>Base notes</span>
+                                <ul>
+                                  {{ block.settings.base_notes }}
+                                </ul>
+                              </div>
+                            {% endif %}
+                          </div>
+                        </div>
+                      </div>
+                    {% endif %}
+                  </div>
+                </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+	const mainscentcont = document.querySelector('.scent-tabs-394');
+
+  const createblcpopup = document.createElement('div');
+  createblcpopup.className = 'scent-tabs-optimized';
+  document.body.appendChild(createblcpopup);
+  
+	mainscentcont.querySelectorAll('.open-tab-blend-popup').forEach(function(blcbtn) {
+    blcbtn.addEventListener('click', function(event) {
+			let blccontainer = event.target.parentElement.nextElementSibling;
+			if(!blccontainer) {
+				blccontainer = event.target.parentElement.parentElement.nextElementSibling;
+			}
+
+			document.body.classList.add('scentsbodyoverlay');
+      document.querySelector('.scent-tabs-optimized').innerHTML = blccontainer.innerHTML;
+			document.querySelector('.scent-tabs-optimized').classList.add('scents-easein-open');
+
+      document.querySelector('.scent-tabs-optimized .scent-blc-close-icon').addEventListener('click', bindclickclose);
+    });
+	});
+
+  function bindclickclose(event) {
+    resetblendpopup();
+  }
+
+  document.addEventListener('click', function(event) {
+    const blendpopup = document.querySelector('.scent-tabs-optimized.scents-easein-open');
+    const alllabels = document.querySelectorAll('.open-tab-blend-popup');
+    const alllabelsicons = document.querySelectorAll('.open-tab-blend-popup img');
+    const clickedLabels = [...alllabels].some(trigger => trigger.contains(event.target));
+    const clickedLabelsIcons = [...alllabelsicons].some(trigger => trigger.contains(event.target));
+
+    if(blendpopup && (!clickedLabels && !clickedLabelsIcons && !blendpopup.contains(event.target))) {
+      resetblendpopup();
+    }
+  });
+
+  function resetblendpopup() {
+    document.body.classList.remove('scentsbodyoverlay');
+    document.querySelector('.scent-tabs-optimized').classList.remove('scents-easein-open');
+    setTimeout(function() {
+      document.querySelector('.scent-tabs-optimized').innerHTML = '';
+    }, 200);
+  }
+
+  document.querySelectorAll('.pf-tab').forEach((tab) => {
+    tab.addEventListener('click', function () {
+      // Remove active class from all .pf-tab elements
+      document.querySelectorAll('.pf-tab').forEach((tab) => tab.classList.remove('active'));
+
+      // Add active class to the clicked .pf-tab
+      this.classList.add('active');
+
+      // Remove active class from all target elements
+      document.querySelectorAll('.pf-tab-content').forEach((el) => el.classList.remove('active'));
+
+      // Get the data-target value and use it as an ID
+      const targetId = this.getAttribute('data-target');
+      if (targetId) {
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          // Add active class to the target element
+          targetElement.classList.add('active');
+        }
+      }
+    });
+  });
+
+  // Add a click event listener to the specified elements
+  document.querySelectorAll('.gp-5-variant-li input.global-product-19-wrapper').forEach((inputElement) => {
+    inputElement.addEventListener('click', function () {
+      // Get the value of "data-event-label" from the clicked element
+      const dataEventLabel = this.getAttribute('data-event-label');
+
+      if (dataEventLabel) {
+        // Convert the value to lowercase
+        const lowerCaseLabel = dataEventLabel.toLowerCase();
+
+        // Find the corresponding ".pf-tab" element with a matching "data-label"
+        const matchingTab = document.querySelector(`.pf-tab[data-label="${lowerCaseLabel}"]`);
+				console.log(matchingTab);
+
+        if (matchingTab) {
+          // Trigger a click event on the matching ".pf-tab" element
+          matchingTab.click();
+        }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Scent tabs 394",
+  "settings": [
+		{
+      "type": "text",
+      "id": "className",
+      "label": "Add section class"
+    },
+    {
+      "type": "text",
+      "id": "active_tb",
+      "label": "Active tab",
+      "default": "1",
+      "info": "1 or 2 based on the variant number"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "tabone",
+      "label": "Tab 1 Label",
+      "default": "Signature"
+    },
+    {
+      "type": "text",
+      "id": "tabtwo",
+      "label": "Tab 2 Label",
+      "default": "Seasonal"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "tab-one",
+      "name": "Tab 1",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "first",
+          "label": "First Block"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag Text"
+        },
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "html",
+          "id": "top_notes",
+          "label": "Top notes"
+        },
+        {
+          "type": "html",
+          "id": "middle_notes",
+          "label": "Middle notes"
+        },
+        {
+          "type": "html",
+          "id": "base_notes",
+          "label": "Base notes"
+        }
+      ]
+    },
+    {
+      "type": "tab-two",
+      "name": "Tab 2",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "first",
+          "label": "First Block"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag Text"
+        },
+        {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mobile_image",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "html",
+          "id": "content",
+          "label": "Content"
+        },
+        {
+          "type": "html",
+          "id": "top_notes",
+          "label": "Top notes"
+        },
+        {
+          "type": "html",
+          "id": "middle_notes",
+          "label": "Middle notes"
+        },
+        {
+          "type": "html",
+          "id": "base_notes",
+          "label": "Base notes"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Scent tabs 394"
+    }
+  ]
+}
+{% endschema %}

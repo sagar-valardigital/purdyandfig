@@ -1,0 +1,98 @@
+<div class="main-banner">
+      <div class="banner-text-wrapper">
+          <div class="container">
+            {% if section.settings.enablelink %}
+              <div class="banner-text">
+                  <div class="banner-review font-pier"><span class="star-img"><img loading="lazy" src="{{ 'w-star.svg' | asset_url }}" alt=""></span><span class="star-img"><img loading="lazy" src="{{ 'w-star.svg' | asset_url }}" alt=""></span><span class="star-img"><img loading="lazy" src="{{ 'w-star.svg' | asset_url }}" alt=""></span><span class="star-img"><img loading="lazy" src="{{ 'w-star.svg' | asset_url }}" alt=""></span><span class="star-img"><img loading="lazy" src="{{ 'w-star.svg' | asset_url }}" alt=""></span> <span class="total-reviews"> Over ({{settings.gloabalreviews}}+ reviews)</span></div>
+                  <div class="text-wrapper">
+                      <h1 class="heading-1 font-value m-0 mb-3">{{section.settings.title}}</h1>
+                      <p class="font-pier">{{section.settings.subtext}}</p>
+                  </div>
+                {% if section.settings.link %}
+                  <div class="banner-btn-wrapper text-center">
+                      <a href="{{section.settings.link}}" class="btn banner-btn w-100"><span>{{section.settings.btnText}}</span></a>
+                      <br>
+                      <small class="font-pier my-1 d-inline-block">{{section.settings.btnSubText}}</small>
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+          </div>
+      </div>
+  </div>
+<style>
+  {%- assign DimageURL = section.settings.desktopimage | img_url:"master" -%}
+  {%- assign MimageURL = section.settings.mobileimage | img_url:"master" -%}
+  .main-banner{
+    background-image:url({{DimageURL}})
+  }
+  .banner-btn{
+    color:{{section.settings.textcolor}};
+    background-color:{{section.settings.bgcolor}};
+  }
+  @media(max-width:768px){
+  	.main-banner{
+      background-image:url({{MimageURL}})
+    }
+  }
+</style>
+{% schema %}
+{
+  "name": "Home Page Banner",
+  "settings": [
+    {
+      "id": "desktopimage",
+      "label": "Desktop Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "mobileimage",
+      "label": "Mobile Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "enablelink",
+      "label": "Enable Banner Text",
+      "type": "checkbox"
+	},
+	{
+      "id": "title",
+      "label": "Banner Title",
+      "type": "text"
+    },
+	{
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "textarea"
+    },
+{
+      "id": "btnText",
+      "label": "Button Label",
+      "type": "text",
+	  "default" : "SHOP NOW"
+	},
+	{
+      "id": "link",
+      "label": "Link",
+      "type": "url"
+	},
+{
+      "id": "textcolor",
+      "label": "Button text color",
+      "type": "color"
+	},
+{
+      "id": "bgcolor",
+      "label": "Button Background color",
+      "type": "color"
+	},
+{
+      "id": "btnSubText",
+      "label": "Button Sub Text",
+      "type": "text"
+	}
+  ]
+}
+{% endschema %}
+
+

@@ -1,0 +1,108 @@
+<div class="video-block-wrapper">
+  <div class="{% if section.settings.full-width %} {% else %}container {%  endif %} custom-video-block">
+    <div class="video-inner-block position-relative">
+      {% assign image = section.settings.image | img_url: '2000x' %}
+      <img
+        src="{{ image }}"
+        class="img-responsive video-image w-100"
+        id="image-video"
+        width="2000px"
+        height="700px"
+        alt="video image"
+      >
+      <iframe
+        controls="true"
+        id="video"
+        src="{{ section.settings.video-url }}"
+        frameborder="0"
+        allowtransparency="true"
+        allowfullscreen
+        width="2000px"
+        height="700px"
+      ></iframe>
+      <div id="video-text" class="video-block-text position-absolute text-white">
+        <img
+          id="play-video"
+          onclick="playvideo();"
+          title="Play Video"
+          src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/707b7e70ba9bef3ead5af5b68ca606cc.png?v=1724243482"
+          class="play-icon"
+          width="88"
+          height="94"
+          alt="video image"
+        >
+        <h2>{{ section.settings.heading }}</h2>
+        <p class="play-sub-heading">{{ section.settings['sub-heading'] }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function playvideo() {
+    var link = document.getElementById("video").src;
+    if(link.includes("?")) {
+      link = link + "&autoplay=1";
+    } else {
+      link = link + "?autoplay=1";
+    }
+    document.querySelector(".video-inner-block").classList.add("active");
+    document.getElementById("video").src = link;
+   }
+</script>
+
+{% schema %}
+{
+  "name": "Our story video block",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video-url",
+      "label": "Video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Thumbnail",
+      "info": "2000 x 800px recommended"
+    },
+    {
+      "type": "checkbox",
+      "id": "full-width",
+      "label": "Full width",
+      "default": true,
+      "info": "Affects desktop/tablet layouts only, mobile defaults to full width"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Video"
+    },
+    {
+      "type": "textarea",
+      "id": "sub-heading",
+      "label": "Subheading",
+      "default": "Add a subheading here"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button text",
+      "default": "button"
+    },
+    {
+      "type": "url",
+      "id": "button-url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Our story video block",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

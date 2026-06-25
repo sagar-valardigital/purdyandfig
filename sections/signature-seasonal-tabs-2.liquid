@@ -1,0 +1,352 @@
+<style>
+body.overflow-hidden{
+  overflow:hidden;
+}
+
+  .pf-tab {
+     padding: 16px 24px;
+    cursor: pointer;
+  }
+  
+  .tab-block-blend {
+  display: none;
+}
+.tab-block.first-block {
+  display: flex;
+  height: 100%;
+  align-items: end;
+  justify-content: flex-end;
+  padding: 15px;
+  background-size: cover;
+  border-radius: 4px;
+  flex-direction: column;
+}
+.heading-3 {
+  font-size: 28px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 125%;
+}
+.sub-heading-3 {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 200;
+  line-height: 160%;
+  color: #fff;
+}
+.tab-block:not(.first-block) {
+  padding-bottom: 0;
+}
+@media (max-width: 768px) {
+  .tab-block-content {
+    font-size: 14px;
+  }
+  tab-block.first-block .heading-3 {
+        font-size: 22px !important;
+        line-height: 125%;
+    }
+}
+
+  .hiw-tag {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-family: "Lausanne";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128%;
+    border-radius: 4px;
+    border: 1px solid var(--Secondary-200, #F2D4B9);
+    background: var(--Secondary-50, #FBF1E8);
+    padding: 2px 4px;
+    align-items: center;
+}
+  }
+</style>
+<div class="signature-seasonal-tabs">
+  <div class="container">
+  {% if section.settings.heading != blank %}
+     <div class=" mb-4 container heading-2-wrapper">
+      
+        <h2 class="heading-2 blue-text-3 mt-0 text-center value-bold m-text-left">
+         {{ section.settings.heading }}
+        </h2>
+      
+    </div>
+    {% endif %}
+    <div class="pf-tabs-wrapper">
+        <span class="pf-tab pf-tab-2 tab-heading-1 active" data-label="{{ section.settings.tabone | handle }}"  data-current="tab-heading-1" data-target="tab-1">{{ section.settings.tabone }}</span>
+        <span class="pf-tab pf-tab-2 tab-heading-2" data-label="{{ section.settings.tabtwo | handle }}" data-current="tab-heading-2" data-target="tab-2">{{ section.settings.tabtwo }}</span>
+    </div>
+    <div class="pf-tabs-content position-relative">
+      <div id="tab-1" class="pf-tab-content tab-1 pf-tab-2-content active">
+        <div class="tab-blocks-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == "tab-one" %}
+              {% if block.settings.first %}
+              <div class="tab-block first-block" style="background-image:url({{ block.settings.image | img_url: '400x' }})">
+                 {% if block.settings.tag != "" %}<span class="hiw-tag">{{ block.settings.tag }}</span> {% endif %}
+                <div class="font-gtsuper heading-3 text-white white-text">{{ block.settings.heading }}</div>
+                <div> <p class="fw-200 font-lausanne sub-heading-3">{{ block.settings.content }}</p></div>
+              </div>
+              {% else %}
+              <div class="tab-block position-relative">
+                <div class="tab-image">
+                  <picture>
+  <source media="(min-width:650px)" srcset="{{ block.settings.image | img_url: '400x' }}">
+  <source media="(min-width:320px)" srcset="{{ block.settings.mobile_image | img_url: '400x'}}">
+  <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.image | img_url: '400x' }}" class="w-100 h-auto" width="300" height="250">
+</picture>
+                  
+                </div>
+                <div class="tab-block-content mt-2">
+                  <div class="font-lausanne fw-400 heading">{{ block.settings.heading }}</div>
+                  <p class="fw-200 font-lausanne content ">{{ block.settings.content }}</p>
+                </div>
+            
+                <div class="tab-block-blend">
+                  <input type="checkbox" id="{{ block.id }}">
+                  <div class="">
+                    <label for="{{ block.id }}" class="d-flex open-tab-blend-popup justify-content-between font-lausanne fw-400">BLEND DETAILS <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268"  width="15" height="15" alt="icon"></label> 
+                    
+                  </div>
+                  <div class="tab-blend-popup-wrapper">
+                    <label for="{{ block.id }}" class="tab-popup-overlay close-tab-blend-popup"></label>
+                    <div class="tab-blend-popup">
+                      <label class="tab-close-blend-popup close-tab-blend-popup d-block text-right px-2 pt-2" for="{{ block.id }}">
+                        <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/close.png?v=1736092528" width="32" height="32" alt="close">
+                      </label>
+                      <div class="overflow-auto">
+                      <div class="tab-block-content">
+                        <div class="font-lausanne fw-400 heading-3">{{ block.settings.heading }}</div>
+                        <p class="fw-200 font-lausanne">{{ block.settings.content }}</p>
+                      </div>
+                      <div class="tab-image">
+                        <img src="{{ block.settings.mobile_image | img_url: '300x'}}" class="w-100 h-auto" width="300" height="250" alt="image">
+                      </div>
+                      
+                      <div class="tab-blend-details">
+                        <h3 class="font-lausanne fw-400">Blend Details</h3>
+                        <div>{{ block.settings.blend }}</div>
+                      </div>
+                     
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              
+              </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div id="tab-2" class="pf-tab-content tab-2 pf-tab-2-content">
+        <div class="tab-blocks-wrapper">
+          {% for block in section.blocks %}
+            {% if block.type == "tab-two" %}
+              {% if block.settings.first %}
+              <div class="tab-block first-block" style="background-image:url({{ block.settings.image | img_url: '400x' }})">
+                {% if block.settings.tag != "" %}<span class="hiw-tag">{{ block.settings.tag }}</span> {% endif %}
+                <div class="font-gtsuper heading-3 text-white white-text">{{ block.settings.heading }}</div>
+                <div> <p class="fw-200 font-lausanne sub-heading-3">{{ block.settings.content }}</p></div>
+              </div>
+              {% else %}
+              <div class="tab-block position-relative">
+                <div class="tab-image">
+                  <picture>
+  <source media="(min-width:650px)" srcset="{{ block.settings.image | img_url: '400x' }}">
+  <source media="(min-width:320px)" srcset="{{ block.settings.mobile_image | img_url: '400x'}}">
+  <img src="{{ block.settings.image | img_url: '400x' }}" alt="{{ block.settings.image | img_url: '400x' }}" class="w-100 h-auto" width="300" height="250">
+</picture>
+                </div>
+                <div class="tab-block-content mt-2">
+                  <div class="font-lausanne fw-400 heading">{{ block.settings.heading }}</div>
+                  <p class="fw-200 font-lausanne content ">{{ block.settings.content }}</p>
+                </div>
+                {% if block.settings.blend != "" %}
+                <div class="tab-block-blend">
+                  <input type="checkbox" id="{{ block.id }}">
+                  <div class="">
+                    <label for="{{ block.id }}" class="d-flex open-tab-blend-popup justify-content-between font-lausanne fw-400">BLEND DETAILS <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268"  width="15" height="15" alt="icon"></label> 
+                    
+                  </div>
+                  <div class="tab-blend-popup-wrapper">
+                    <label for="{{ block.id }}" class="tab-popup-overlay close-tab-blend-popup"></label>
+                    <div class="tab-blend-popup">
+                      <label class="tab-close-blend-popup close-tab-blend-popup d-block text-right px-2 pt-2" for="{{ block.id }}">
+                        <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/close.png?v=1736092528" width="32" height="32" alt="close">
+                      </label>
+                      <div class="overflow-auto">
+                      <div class="tab-block-content">
+                        <h3 class="font-lausanne fw-400 heading-3">{{ block.settings.heading }}</h3>
+                        <p class="fw-200 font-lausanne">{{ block.settings.content }}</p>
+                      </div>
+                      <div class="tab-image">
+                        <img src="{{ block.settings.mobile_image | img_url: '300x' }}" class="w-100 h-auto" width="300" height="250" alt="image">
+                      </div>
+                      <div class="tab-blend-details">
+                        <h3 class="font-lausanne fw-400">Blend Details</h3>
+                        <div>{{ block.settings.blend }}</div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              </div>
+              {% endif %}
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".pf-tab").forEach(tab => {
+        tab.addEventListener("click", function () {
+            let targetClass = this.getAttribute("data-target"); 
+            let tabClass = this.getAttribute("data-current"); 
+
+            document.querySelectorAll(".pf-tab-content").forEach(content => {
+                content.classList.remove("active");
+            });
+
+            document.querySelectorAll("." + targetClass).forEach(targetElement => {
+                targetElement.classList.add("active");
+            });
+
+            document.querySelectorAll(".pf-tab").forEach(content => {
+                content.classList.remove("active");
+            });
+
+            document.querySelectorAll("." + tabClass).forEach(targetElement => {
+                targetElement.classList.add("active");
+            });
+        });
+    });
+});
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "Signature Seasonal Tabs 2",
+    "settings": [
+      {
+          "type":"text",
+          "id":"heading",
+          "label": "Heading"
+        },
+        {
+          "type":"text",
+          "id":"tabone",
+          "label": "Tab 1 Label",
+          "default": "Signature"
+        },
+      {
+          "type":"text",
+          "id":"tabtwo",
+          "label": "Tab 2 Label",
+          "default": "Seasonal"
+        }
+    ],
+    "blocks": [
+      {
+        "type": "tab-one",
+        "name": "Tab 1",
+        "settings": [ 
+          {
+            "type": "checkbox",
+            "id": "first",
+            "label": "First Block"
+          },
+          {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag Text"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "html",
+            "id": "blend",
+            "label": "Blend Details"
+          }
+
+        ]
+      },
+      {
+        "type": "tab-two",
+        "name": "Tab 2",
+        "settings": [ 
+          {
+            "type": "checkbox",
+            "id": "first",
+            "label": "First Block"
+          },
+          {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag Text"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mobile_image",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "content",
+            "label": "Content"
+          },
+          {
+            "type": "html",
+            "id": "blend",
+            "label": "Blend Details"
+          }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Signature Seasonal Tabs 2"
+		}
+	]
+  }
+{% endschema %}

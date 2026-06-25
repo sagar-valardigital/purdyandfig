@@ -1,0 +1,115 @@
+<style>
+	.newspaper-container {
+		padding: 80px 112px;
+	}
+	.newspaper-section {
+		width: 100%;
+		display: flex;
+		align-items: flex-start;
+		align-self: stretch;
+		gap: 32px;
+	}
+	.newspaper-blocks {
+		width: calc(25% - 32px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 8px;
+	}
+	.newspaper-img {
+		width: 120px;
+	}
+	.newspaper-details {
+		color: {{ section.settings.textcolor }};
+		text-align: center;
+		font-family: "Lausanne";
+		font-size: 12px;
+		font-style: normal;
+		font-weight: 400;
+		line-height: 18px;
+		letter-spacing: 0.18px;
+	}
+
+	@media (max-width: 768px) {
+		.newspaper-container {
+			padding: 16px 16px;
+		}
+		.newspaper-section {
+			gap: 16px;
+			flex-wrap: wrap;
+		}
+		.newspaper-blocks {
+			width: calc(50% - 10px);
+		}
+		.newspaper-img {
+			width: 96px;
+		}
+		.newspaper-img img {
+			width: 100%;
+		}
+		.newspaper-details {
+			font-size: 10px;
+			line-height: 15px;
+		}
+	}
+</style>
+
+<div class="newspaper-container {{ section.settings.class }}" style="background-color: {{ section.settings.bg }}">
+  <div class="newspaper-section">
+		{% for block in section.blocks %}
+		<div class="newspaper-blocks">
+			<div class="newspaper-img">
+				<img src="{{ block.settings.news_image | image_url: width: 400 }}" width="120" height="40">
+			</div>
+			<div class="newspaper-details">{{ block.settings.icon_block_description }}</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Newspaper section 394",
+  "settings": [
+    {
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Background Colour",
+    },
+    {
+      "type": "color",
+      "id": "textcolor",
+      "label": "Text Colour",
+    }
+  ],
+  "blocks": [
+    {
+      "type": "iconblocks",
+      "name": "Icon Block",
+      "limit": 4,
+      "settings": [
+				{
+          "type": "image_picker",
+          "id": "news_image",
+          "label": "Image"
+        },
+        {
+          "type": "textarea",
+          "id": "icon_block_description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Newspaper section 394"
+    }
+  ]
+}
+{% endschema %}

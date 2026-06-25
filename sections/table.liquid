@@ -1,0 +1,81 @@
+<style>
+/*   .p-table tr,.p-table td{background:#fff;} */
+/*   .p-table .table{border:1px solid #3d5065;border-radius:8px;overflow:hidden;} */
+  .p-table .table tr td:nth-child(2),.p-table .table tr th:nth-child(2){border:1px solid #3d5065;border-bottom:0;border-top:0;width:70px;}
+  .p-table .table tr th:nth-child(2){border-top:0}
+  .p-table .table tbody tr:nth-child(odd){
+    background-color:#e3f3fe;
+  }
+  .p-table .table tbody tr:nth-child(odd) td:nth-child(2){background-color:#fff;}
+  .p-table .table tr th:nth-child(2){border-top:1px solid #3d5065;}
+  .p-table .table tr:last-child td:nth-child(2){border-bottom:1px solid #3d5065;}
+  .p-table .table tr th:nth-child(2) .table-logo{height:auto; width:70px;max-width:50px}
+  .p-table .table{max-width:800px;}
+</style>
+<div class="py-5 tabel-section-wrapper p-table" style="background-color:#fff;">
+        <div class="container">
+            <h2 class="heading-2 theme-text mt-0 text-center ">
+               <span class="font-normal-value">How we compare</span>
+            </h2>
+            <div class="table-responsive my-5 ">
+                <table class="table product-details-table w-100 theme-text normal-text ">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="text-center"><img width="50px" height="50px"  loading="lazy" class="table-logo" src="{{'new-logo.png' | asset_url}}" alt=""></th>
+                            <th class="text-center">Method + Ecover</th>
+                            <th class="text-right">Flash</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                            <td>No Chemicals</td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'check-box.png' | asset_url}}" alt=""></td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                            <td class="text-right"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>Pure Essential Oil</td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'check-box.png' | asset_url}}" alt=""></td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                            <td class="text-right"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                        </tr>
+                        <tr>
+                            <td>No Single use Plastic</td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'check-box.png' | asset_url}}" alt=""></td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                            <td class="text-right"><img  width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                        </tr>
+                      <tr>
+                            <td>Natural Ingredients</td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'check-box.png' | asset_url}}" alt=""></td>
+                            <td class="text-center"><img width="28px" height="28px" loading="lazy" src="{{'check-box.png' | asset_url}}" alt=""></td>
+                            <td class="text-right"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                        </tr>
+                        
+                        <tr>
+                            <td>Made in the UK</td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'check-box.png' | asset_url}}" alt=""></td>
+                            <td class="text-center"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                            <td class="text-right"><img width="32px" height="32px" loading="lazy" src="{{'close-button.png' | asset_url}}" alt=""></td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+{% schema %}
+  {
+    "name": "Landing Table",
+    "settings": [],
+"presets": [
+		{
+			"name": "Landing Table"
+		}
+	]
+  }
+{% endschema %}
+
+

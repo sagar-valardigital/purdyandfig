@@ -1,0 +1,739 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "0f57bdbc-598d-4a28-8314-a8a104a6c061": {
+      "type": "homepage-banner-3",
+      "blocks": {
+        "eceb11be-1669-41a6-9a02-323368e17d4c": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Quick and convenient"
+          }
+        },
+        "4d166516-ea96-4780-86ac-8d8d56de522f": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Spa-like scents"
+          }
+        },
+        "77fd1354-cdf1-412b-aa40-525730dc0372": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "All Natural Ingredients"
+          }
+        }
+      },
+      "block_order": [
+        "eceb11be-1669-41a6-9a02-323368e17d4c",
+        "4d166516-ea96-4780-86ac-8d8d56de522f",
+        "77fd1354-cdf1-412b-aa40-525730dc0372"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".mb-3 {margin-bottom: 1rem!important;}",
+        ".product-info .w-50 h1 {font-size: 30px;}",
+        ".product-info .buy-btn {font-size: 14px; padding: 10px;}",
+        ".product-info .buy-btn, .shop-starter .container .buy-btn {font-size: 16px;color: #fff;background-color: #334FB4;"
+      ],
+      "settings": {
+        "scrollto": "",
+        "class": "",
+        "reviewtitle": "4.8/5.0 | Based on 7,000+ reviews",
+        "section_heading": "Harness the Power of Natural Cleaning",
+        "subheading": "Black Friday Offer: Get Three FREE Christmas Scents + Extra Bottle for Life",
+        "image": "shopify://shop_images/bf-hero-7.jpg",
+        "content_color": "#3d5065",
+        "btnLabel": "Get Started",
+        "scrollID": "",
+        "btnLink": "shopify://products/eco-concentrates-surface-cleaner-starter-kit-d"
+      }
+    },
+    "cd1d9787-bddd-41a4-93a9-3b5a835f9738": {
+      "type": "homepage-banner-4",
+      "blocks": {
+        "0c1298fe-808d-432b-b321-a14b8ae7ef2d": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Quick and convenient"
+          }
+        },
+        "cb230a38-b036-4f3c-a320-596c766b5e3d": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Spa-like scents"
+          }
+        },
+        "f44619e2-960e-40ba-8457-be912a83e5c7": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "All Natural Ingredients"
+          }
+        }
+      },
+      "block_order": [
+        "0c1298fe-808d-432b-b321-a14b8ae7ef2d",
+        "cb230a38-b036-4f3c-a320-596c766b5e3d",
+        "f44619e2-960e-40ba-8457-be912a83e5c7"
+      ],
+      "custom_css": [
+        ".product-info-1 {display: none;}",
+        ".product-subheading {color: #2d46ab;}",
+        ".mb-3 {margin-bottom: 1rem !important;}",
+        ".product-info .w-50 h1 {font-size: 35px; line-height: 40px; font-weight: 700;}",
+        ".product-info .buy-btn {font-size: 14px; padding: 10px;}",
+        ".product-info .buy-btn,.shop-starter .container .buy-btn {font-size: 16px; color: #fff; background-color: #334fb4;}"
+      ],
+      "settings": {
+        "scrollto": "shopify-section-template--16770230386915__29f3c2b8-fa66-4294-91d5-bda25cdc8300",
+        "class": "",
+        "reviewtitle": "4.8/5.0 | Based on 7,000+ reviews",
+        "section_heading": "Harness the Power of Natural Cleaning",
+        "subheading": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home.",
+        "image": "shopify://shop_images/EvergreenVarietyHero02.jpg",
+        "content_color": "#2d46ab",
+        "btnLabel": "Shop Now",
+        "scrollID": "",
+        "btnLink": "shopify://products/eco-concentrates-surface-cleaner-starter-kit-d",
+        "btnLabel2": "All Products",
+        "btnLink2": "shopify://collections"
+      }
+    },
+    "41aed963-51f7-4a7b-b97d-291cfe582b15": {
+      "type": "homepage-banner-5",
+      "blocks": {
+        "66ca873d-9f80-4689-b06c-141d64093fd1": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "100% effective cleaning power"
+          }
+        },
+        "968a50c7-94b4-4926-8fbb-9ec4d9bc9b14": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Blissfully scented essential oils"
+          }
+        },
+        "802481ed-790d-4a21-8179-fc98e129ca25": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Non-toxic to you & the environment"
+          }
+        }
+      },
+      "block_order": [
+        "66ca873d-9f80-4689-b06c-141d64093fd1",
+        "968a50c7-94b4-4926-8fbb-9ec4d9bc9b14",
+        "802481ed-790d-4a21-8179-fc98e129ca25"
+      ],
+      "custom_css": [
+        ".product-subheading {color: #2d46ab;}",
+        ".mb-3 {margin-bottom: 1rem !important;}",
+        ".product-info .w-50 h1 {font-size: 30px; line-height: 37px; font-weight: 700; margin-bottom: 1rem;}",
+        ".product-info .buy-btn {font-size: 14px; padding: 10px;}",
+        ".product-info .buy-btn,.shop-starter .container .buy-btn {font-size: 16px; color: #fff; background-color: #334fb4;}"
+      ],
+      "settings": {
+        "scrollto": "shopify-section-template--16886072770787__29f3c2b8-fa66-4294-91d5-bda25cdc8300",
+        "class": "",
+        "reviewtitle": "4.8/5.0 | Based on 7,000+ reviews",
+        "section_heading": "Unleash the Power of Christmas-Scented Cleaning",
+        "subheading": "Get a FREE Frankincense & Myrrh Concentrate With Limited Edition Christmas Starter Kits.",
+        "image": "shopify://shop_images/xmas-hero-web-4c.jpg",
+        "mobile_image": "shopify://shop_images/xmas-mob4c.jpg",
+        "content_color": "#2d46ab",
+        "btnLabel": "Get Offer",
+        "scrollID": "",
+        "btnLink": "shopify://products/christmas-variety-kit-2",
+        "btnLabel2": "All Products",
+        "btnLink2": "shopify://collections"
+      }
+    },
+    "1ff47de2-cb7d-4edf-81d2-32da7bcd9c42": {
+      "type": "Marquee-block-2",
+      "blocks": {
+        "ea9f64bc-3b9a-4f7b-9ff7-b4b8260ef108": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/63840647-0-Frame-12588.svg"
+          }
+        }
+      },
+      "block_order": [
+        "ea9f64bc-3b9a-4f7b-9ff7-b4b8260ef108"
+      ],
+      "custom_css": [
+        ".marquee-img {padding: 0 30px;}",
+        ".heading-3 {font-size: 1.3rem;"
+      ],
+      "settings": {
+        "enable": true,
+        "img_slider": true,
+        "color_bg": "#ab092b",
+        "color_text": "#ffffff",
+        "marqueeHTML": "As Seen in"
+      }
+    },
+    "1b94af88-737c-4587-8e62-ae977573286f": {
+      "type": "best-seller-section-2",
+      "blocks": {
+        "efed5610-0b96-4f9d-b4ca-73ea2e3eb763": {
+          "type": "product",
+          "settings": {
+            "new_product": false,
+            "product": "christmas-variety-kit-2"
+          }
+        },
+        "768dab62-842c-40fb-8874-f6d24843bf42": {
+          "type": "product",
+          "settings": {
+            "new_product": true,
+            "product": "christmas-booster-pack"
+          }
+        },
+        "29afd88a-3d65-4191-a48a-3ff49f37133e": {
+          "type": "product",
+          "settings": {
+            "new_product": true,
+            "product": "frankincense-myrrh-refill-booster-back"
+          }
+        },
+        "9e7ddffd-ad44-46e7-9fea-45bfd9dd25f9": {
+          "type": "product",
+          "settings": {
+            "new_product": false,
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        }
+      },
+      "block_order": [
+        "efed5610-0b96-4f9d-b4ca-73ea2e3eb763",
+        "768dab62-842c-40fb-8874-f6d24843bf42",
+        "29afd88a-3d65-4191-a48a-3ff49f37133e",
+        "9e7ddffd-ad44-46e7-9fea-45bfd9dd25f9"
+      ],
+      "custom_css": [
+        ".btn.theme-btn.bg-blue {border-color: transparent !important;}",
+        ".heading-2 {font-size: 30px; color: #3d5065 !important;}",
+        ".oke-sr-count > span {color: #334fb4 !important;}",
+        "#star-default--filled {fill: #334fb4 !important;}"
+      ],
+      "settings": {
+        "heading": "Shop our Best sellers",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "bc18236e-a7ba-4026-8f49-bba5668b772a": {
+      "type": "instagram-blocks-2",
+      "blocks": {
+        "8cb8faf5-8cd0-44b0-8b6f-4934c1ac8b1f": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/ezgif-4-c0c46b62bc_69295205-42a0-43c7-ac86-78a44d732879.gif",
+            "ig_username": "Pour 20ml concentrate into bottle",
+            "ig_url": ""
+          }
+        },
+        "574481e4-7f0b-470b-ad5b-36079a76c380": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/ezgif-5-9ce3317fd7-2.gif",
+            "ig_username": "Fill to top with water",
+            "ig_url": ""
+          }
+        },
+        "3896604b-a4ae-4149-8fb1-801f9c744004": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/ezgif-2-2926f188df.gif",
+            "ig_username": "Spray onto surface or cloth",
+            "ig_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "8cb8faf5-8cd0-44b0-8b6f-4934c1ac8b1f",
+        "574481e4-7f0b-470b-ad5b-36079a76c380",
+        "3896604b-a4ae-4149-8fb1-801f9c744004"
+      ],
+      "custom_css": [
+        "h2 {font-size: 30px; color: #3d5065 !important;}",
+        "p {color: #3d5065 !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "bgColor": "#e3f3fe",
+        "heading": "Three Simple Steps",
+        "details": "<p>See how Purdy & Figg ultra-concentrated eco-refills work</p>",
+        "followText": "",
+        "followLink": ""
+      }
+    },
+    "f80108e1-ae0b-4c04-83be-1ef8bdad1a49": {
+      "type": "landerbuybox-product",
+      "blocks": {
+        "0ba3f84c-92a1-4433-aca9-96575c3f3e47": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 FREE Frankincense & Myrrh Eco-Concentrate"
+          }
+        },
+        "6763c112-0c97-4a3f-9742-78bc300e4a8d": {
+          "type": "text",
+          "settings": {
+            "listItem": "3 Signature Eco-Concentrate Refills (delivered every 90 days)"
+          }
+        },
+        "0f679980-00fb-4aa6-a69d-42476d8b50ba": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 Glass Bottle for Life"
+          }
+        },
+        "e2321620-9e7d-4593-8c95-942e82e20c58": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 Purdy & Figg Cleaning Cloth"
+          }
+        },
+        "01c6273d-c1d9-4985-86c1-1b1bf3583f65": {
+          "type": "text",
+          "settings": {
+            "listItem": "30-Day Moneyback Guarantee"
+          }
+        },
+        "45ec25bc-69c3-4233-ae43-642edf5b714b": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-1.png"
+          }
+        },
+        "9218a7a8-c30e-48c2-a0b3-7c7b02bed745": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-2.png"
+          }
+        },
+        "2e82c5f0-c4bd-445d-a280-c01e586e35ce": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-3.png"
+          }
+        },
+        "1f15a207-1964-46c0-a9d6-588596a12e84": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-4.png"
+          }
+        },
+        "3aa742cd-38c3-404b-abfb-9328fe00514c": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/F_M-Starter-Kit2_cc4b6514-4f97-4cdd-95e2-77c6368375a5.jpg"
+          }
+        },
+        "3ab1b5da-15db-4ec1-95a0-3fdd818c7362": {
+          "type": "productImage",
+          "disabled": true,
+          "settings": {}
+        },
+        "71b901d5-a2b2-41a7-a6e7-775c3b285e6f": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/F_M_Variety_Kit3.jpg"
+          }
+        },
+        "82d0cffb-1be6-46c3-94d1-b859c1ed3cd8": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/F_M_Variety_Kit1.jpg"
+          }
+        },
+        "94136edd-0fc6-4fa5-bf51-268479409672": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/F_M_Variety_Kit2.jpg"
+          }
+        },
+        "542d773a-6be1-4065-ab5f-b8ab0c7adec9": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Xmas_Starter_Kit3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "0ba3f84c-92a1-4433-aca9-96575c3f3e47",
+        "6763c112-0c97-4a3f-9742-78bc300e4a8d",
+        "0f679980-00fb-4aa6-a69d-42476d8b50ba",
+        "e2321620-9e7d-4593-8c95-942e82e20c58",
+        "01c6273d-c1d9-4985-86c1-1b1bf3583f65",
+        "45ec25bc-69c3-4233-ae43-642edf5b714b",
+        "9218a7a8-c30e-48c2-a0b3-7c7b02bed745",
+        "2e82c5f0-c4bd-445d-a280-c01e586e35ce",
+        "1f15a207-1964-46c0-a9d6-588596a12e84",
+        "3aa742cd-38c3-404b-abfb-9328fe00514c",
+        "3ab1b5da-15db-4ec1-95a0-3fdd818c7362",
+        "71b901d5-a2b2-41a7-a6e7-775c3b285e6f",
+        "82d0cffb-1be6-46c3-94d1-b859c1ed3cd8",
+        "94136edd-0fc6-4fa5-bf51-268479409672",
+        "542d773a-6be1-4065-ab5f-b8ab0c7adec9"
+      ],
+      "custom_css": [
+        "h2 {font-size: 30px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "outOfStock": false,
+        "isSub": false,
+        "p_id": "lander_product_pf",
+        "tag": "Limited Edition",
+        "landingproduct": "christmas-variety-kit-2",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "py-4",
+        "mainheading": "Get a FREE Frankincense &amp; Myrrh Eco-Concentrate!",
+        "mainsubheading": "",
+        "heading": "Christmas Variety Kit",
+        "subtext": "",
+        "price": "17",
+        "delPrice": "34",
+        "ctaDetails": "100% Secure Checkout | Cancel or Pause Anytime",
+        "heading-position": false
+      }
+    },
+    "f0195ddd-bd9f-40f1-9397-c464b14c1dda": {
+      "type": "text-with-image-icons",
+      "blocks": {
+        "ed28c57e-7876-4d13-baae-4d301b92404c": {
+          "type": "product_benefits",
+          "settings": {
+            "item_img": "shopify://shop_images/Image_6_400x_f6e56e7b-6297-41b2-85d7-6e53aef5dc43.png",
+            "title": "Fantastic Aromas",
+            "textId": "Create the most fantastic smelling home with your surface cleaner."
+          }
+        },
+        "71f374d1-f9d3-4dfa-8872-c30fc45d1be2": {
+          "type": "product_benefits",
+          "settings": {
+            "item_img": "shopify://shop_images/image_7_2bb757a7-89ed-47b3-9c09.png",
+            "title": "Lasting Scents",
+            "textId": "Create the most fantastic smelling home with your surface cleaner."
+          }
+        },
+        "355ac1b1-3fe2-455c-a697-864fbd94ff75": {
+          "type": "product_benefits",
+          "settings": {
+            "item_img": "shopify://shop_images/image_88_400x_7a8f9573-a646-42a7-93c0-cd01d668d172.png",
+            "title": "Seasonal Scents",
+            "textId": "Create the most fantastic smelling home with your surface cleaner."
+          }
+        }
+      },
+      "block_order": [
+        "ed28c57e-7876-4d13-baae-4d301b92404c",
+        "71f374d1-f9d3-4dfa-8872-c30fc45d1be2",
+        "355ac1b1-3fe2-455c-a697-864fbd94ff75"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "h1 {font-size: 30px; font-family: value-serif-pro;}",
+        "h4 {font-family: value-sans;}"
+      ],
+      "settings": {
+        "section_heading": "A scent that transforms your home",
+        "image": "shopify://shop_images/home-hero-01.jpg",
+        "content_color": "#334fb4"
+      }
+    },
+    "29f3c2b8-fa66-4294-91d5-bda25cdc8300": {
+      "type": "review-slider-2",
+      "blocks": {
+        "da1e26c6-89c2-4098-8119-56066e7b9aad": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/test.png",
+            "heading": "Cleaning Heaven",
+            "review": "I adore this product, I’ve gifted to my friends for Christmas and they’re all converts. We don’t just clean our homes any more, we ‘Purdy and Figg’ them, it’s the new verb of 2022!! Thank you for making cleaning a joy",
+            "username": "Susan D.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "33b1a2de-4baf-439c-83f0-831dffddc786": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2023-10-26_at_14.05.31_aa5f77c4-23d6-4c55-9c7f-bf8b31372c93.png",
+            "heading": "Can’t Wait To Get Started",
+            "review": "Received my package yesterday and can’t wait to get started. The smells are adorable and don’t know which one to start with, my house will be glorious when I’m finished my clean today!! Even the cloth oozes class!",
+            "username": "Audrey C.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "30c2294c-925d-4015-875d-525ae18f2c7d": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Screenshot_2023-10-26_at_14.09.02.png",
+            "heading": "Wow",
+            "review": "I am in love with the smell, the quality of the cloth but most importantly, how good those tiny bottles are. Never in a million years did I expect it to clean my greasy hob and extractor.",
+            "username": "Andrea G.",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "da1e26c6-89c2-4098-8119-56066e7b9aad",
+        "33b1a2de-4baf-439c-83f0-831dffddc786",
+        "30c2294c-925d-4015-875d-525ae18f2c7d"
+      ],
+      "custom_css": [
+        ".heading-2 {font-size: 30px; margin-top: 0;}",
+        ".text-blue {color: #3d5065 !important; fill: #3d5065 !important;}",
+        ".review-section2 .review .position-absolute {bottom: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": false,
+        "className": "",
+        "sectionID": "",
+        "Review-Count": "",
+        "bgColor": "",
+        "heading": "Join 150,000 Happy Customers",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "54bc304b-77f2-4f18-a29d-095cb8e374ca": {
+      "type": "text-with-image-icons",
+      "blocks": {
+        "9c70c163-60a3-4f58-a442-a05a9160111d": {
+          "type": "product_benefits",
+          "settings": {
+            "item_img": "shopify://shop_images/Image_6_400x_f6e56e7b-6297-41b2-85d7-6e53aef5dc43.png",
+            "title": "100% effective",
+            "textId": "(Really) cleans all surfaces & (really) works"
+          }
+        },
+        "853fcd71-370d-4a1e-8859-d17a70240561": {
+          "type": "product_benefits",
+          "settings": {
+            "item_img": "shopify://shop_images/image_7_2bb757a7-89ed-47b3-9c09.png",
+            "title": "All natural",
+            "textId": "No toxins, non-gmo & no synthetic fragrances"
+          }
+        },
+        "df87ecc6-0019-4738-8a98-1a40578e9cae": {
+          "type": "product_benefits",
+          "settings": {
+            "item_img": "shopify://shop_images/image_88_400x_7a8f9573-a646-42a7-93c0-cd01d668d172.png",
+            "title": "Transformational scents",
+            "textId": "Sublime aroma that lingers long after the spray"
+          }
+        }
+      },
+      "block_order": [
+        "9c70c163-60a3-4f58-a442-a05a9160111d",
+        "853fcd71-370d-4a1e-8859-d17a70240561",
+        "df87ecc6-0019-4738-8a98-1a40578e9cae"
+      ],
+      "custom_css": [
+        "h1 {font-size: 30px; font-family: \"Value-Serif-Pro\";}",
+        "h4 {font-family: value-sans;}"
+      ],
+      "settings": {
+        "section_heading": "Strip away the stigmas of natural cleaning",
+        "image": "shopify://shop_images/A-scent-that-transforms-xmas.jpg",
+        "content_color": "#3d5065"
+      }
+    },
+    "cc9d3944-c28c-4175-bd81-c828b638d139": {
+      "type": "shop-starter",
+      "custom_css": [
+        "h1 {font-size: 30px;}"
+      ],
+      "settings": {
+        "bg_image": "shopify://shop_images/shop-xmas.jpg",
+        "bg_image2": "shopify://shop_images/shop-xmas-mobb.jpg",
+        "textId": "New to Purdy & Figg?",
+        "section_heading": "Shop Starter Kits",
+        "content_color": "#ffffff",
+        "content_align": "center",
+        "btnLabel": "Shop all",
+        "scrollID": "",
+        "btnLink": "shopify://collections/starter-kit-christmas"
+      }
+    },
+    "2320d5bc-f5a4-4a69-8309-5a2f16d24604": {
+      "type": "our-blends",
+      "blocks": {
+        "9e2a3677-36c7-4b13-bdd9-90b7b0cd206c": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/fnm_block_62b8f4db-014b-4734-8e93-be3fad63ccf0.png",
+            "heading": "Frankincense & Myrrh",
+            "detail": "A luxurious blend reminiscent of cosy winter evenings and the sweet scent of orange candlelight. Tap for more >",
+            "pop_heading": "Frankincense & Myrrh",
+            "pop_detail": "Top Notes <p> </p>Sweet Orange - a sweet, citrusy and uplifting aroma.  <p> </p> Pink Grapefruit - a sweet, tangy and cheerful aroma.  <p> </p>Middle Notes <p> </p> Coriander Seed - a herbaceous, spicy, woody and warm scent.   <p> </p>Base Notes <p> </p>Frankincense - a fresh-smelling essential oil with balsamic and resinous tones. <p> </p> Myrrh - a warm and woody-earthy aroma. <p> </p>Vetiver - a smoky and earthy oil with a slight herbaceous aroma. <p> </p>",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_7865474e-6fcc-412d-8da7-d03022fc2e77.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Pink_Grapefruit.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Frankincense.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Myrrh.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Myrrh.png?v=1697437755\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "c4893cbe-e0a8-4458-a5f6-9c08f60da3e4": {
+          "type": "text",
+          "settings": {
+            "popup_no": "2",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/fb_block_1_5144f254-7b4f-4af8-8693-f7991c7126c6.png",
+            "heading": "Fir & Bergamot",
+            "detail": "A fresh, coniferous aroma reminiscent of a winter forest morning, with notes of fresh evergreens and wreath-making festivities. <p>Tap for more ></p>",
+            "pop_heading": "Fir & Bergamot",
+            "pop_detail": "Top Notes <p> </p>Siberian Fir - coniferous, piney and woody with citrusy and camphoraceous nuances. <p> </p>Bergamot – fresh, sweet and citrusy with underlying floral notes. <p> </p>Middle Notes <p> </p>Lavender - fresh, floral, herbaceous, sweet, yet slightly camphoraceous.   <p> </p>Clary Sage – sweet, herbaceous, floral and slightly fruity.   <p> </p>Base Notes <p> </p>Patchouli – rich, deep, exotic, herbaceous with earthy and woody undertones. <p> </p>",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Siberian_Fir.png?v=1697438291\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Bergamot.png?v=1697438291\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lavender_f074c952-c570-4f8f-a670-af4d52771b40.png?v=1697438291\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Clary_Sage.png?v=1697438291\">\n        </div>\n<div>\n\n <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Patchouli_0dcea599-39e5-4d13-8cf9-47e19d2aba4c.png?v=1697438291\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "90560444-319a-4d2d-b6d8-061227353054": {
+          "type": "text",
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/oc_block_2_f9a93f2c-41b4-4aeb-83a6-45733e85a2dd.png",
+            "heading": "Orange & Clove",
+            "detail": "A quintessential Christmas aroma inspired by traditional Christmas pomanders and spicy orange and vanilla cake. Tap for more >",
+            "pop_heading": "Orange & Clove",
+            "pop_detail": "Top Notes <p> </p>Orange - sweet and citrusy; uplifting and cheerful. <p> </p>Middle Notes <p> </p>Clove - spicy, warming, slightly woody and sweet. <p> </p>Base Notes <p> </p>Benzoin – warm, rich and creamy, vanilla-like, sweet and balsamic. <p> </p>",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_1.png?v=1697438114\">\n        </div>\n<div>\n<img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_2.png?v=1697438114\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Benzoin.png?v=1697438114\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "6d8dfb89-c585-4a11-918e-97ce3428175f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "5",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/CNN_10.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves <p> Tap to Discover More ></p>",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Known for their cheerful aromas and mood-enhancing properties <p> </p> Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   <p> </p> Middle Notes <p> </p>   Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/grapefruit.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_orange_f71ff31f-0da6-41e8-8a6b-2f47ec7e7c4b.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "8b13ae67-4be4-4fca-9f36-c6e42882838b": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/CNN_8.png",
+            "heading": "Balancing Floral",
+            "detail": "A beautifully floral blend of rose<p> geranium, lemon peel and vetiver roots </p><p>Tap to Discover More ></p>",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma. <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent. <p> </p> Middle Notes <p> </p> Niaouli Leaves - A stimulating and fresh oil with an earthy aroma. ",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        },
+        "38e054a3-4c28-4709-9502-2ca195a601fb": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "4",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/CNN_11.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects. <p> Tap to Discover More ></p>",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Middle Notes   <p> </p> Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.<p> </p>  Base Notes   <p> </p> Vetiver A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        }
+      },
+      "block_order": [
+        "9e2a3677-36c7-4b13-bdd9-90b7b0cd206c",
+        "c4893cbe-e0a8-4458-a5f6-9c08f60da3e4",
+        "90560444-319a-4d2d-b6d8-061227353054",
+        "6d8dfb89-c585-4a11-918e-97ce3428175f",
+        "8b13ae67-4be4-4fca-9f36-c6e42882838b",
+        "38e054a3-4c28-4709-9502-2ca195a601fb"
+      ],
+      "custom_css": [
+        ".heading-2 {color: #3d5065; font-family: \"Value-Serif-Pro\"; font-size: 30px;}",
+        ".blends-wrapper {display: grid !important;}"
+      ],
+      "settings": {
+        "class": "",
+        "bgColor": "#e3f3fe",
+        "heading": "Find your favourite Christmas scent"
+      }
+    },
+    "c326c203-b7a3-4db7-9046-7df2530e8294": {
+      "type": "image-with-text",
+      "custom_css": [
+        "p,h3 {color: #3d5065;}",
+        "h3 {font-family: \"Value-Serif-Pro\";}",
+        "p {font-family: \"Value-Sans\";}",
+        ".text-blue {color: #3d5065 !important; fill: #3d5065 !important;}",
+        ".heading-2 {font-size: 30px; line-height: 1.2; font-family: \"Value-Serif-Pro\";}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Two Mum’s On A Mission To Change Cleaning Forever",
+        "image": "shopify://shop_images/THUMBNAIL_4.png",
+        "details": "<p>Purdy Rubin and Charlotte Figg teamed up with a chemist to develop a range of natural, beautifully-scented and refillable cleaning products that could stand up against the ‘big guns’.  </p><p></p><p>From a garage to 150,000 homes... The rest is history.</p>",
+        "link": "shopify://pages/about-us",
+        "btntext": "Read Our Story",
+        "btntype": "btn",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    }
+  },
+  "order": [
+    "0f57bdbc-598d-4a28-8314-a8a104a6c061",
+    "cd1d9787-bddd-41a4-93a9-3b5a835f9738",
+    "41aed963-51f7-4a7b-b97d-291cfe582b15",
+    "1ff47de2-cb7d-4edf-81d2-32da7bcd9c42",
+    "1b94af88-737c-4587-8e62-ae977573286f",
+    "bc18236e-a7ba-4026-8f49-bba5668b772a",
+    "f80108e1-ae0b-4c04-83be-1ef8bdad1a49",
+    "f0195ddd-bd9f-40f1-9397-c464b14c1dda",
+    "29f3c2b8-fa66-4294-91d5-bda25cdc8300",
+    "54bc304b-77f2-4f18-a29d-095cb8e374ca",
+    "cc9d3944-c28c-4175-bd81-c828b638d139",
+    "2320d5bc-f5a4-4a69-8309-5a2f16d24604",
+    "c326c203-b7a3-4db7-9046-7df2530e8294"
+  ]
+}

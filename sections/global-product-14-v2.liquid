@@ -1,0 +1,1594 @@
+<style>
+    .link-to-variant.show {
+      display: block !important;
+      height: auto;
+      margin-top: 4px;
+      margin-bottom: 4px;
+    }
+    .gp-14-2-text{
+      position: relative;
+      padding-left:25px;
+    }
+    .gp-14-2-text:before{
+      content:'';
+      position:absolute;
+      width:14px;
+      height:8px;
+      border-left:2px solid #434448;
+      border-bottom:2px solid #434448;
+      transform:rotate(-45deg);
+      left:0;
+      top:4px;
+    }
+    .global-product-10 .gp-10-input-buy input:checked + label .gp-14-2-text:before{
+       border-color:#2D469E;
+    }
+    .text-decoration-line-through {
+     display:inline-block;
+     position:relative;
+     margin-right: 10px;
+     font-weight: bold;
+  }
+
+    .text-decoration-line-through::before {
+      content:'';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background: #2c469d;
+      top: calc(50% - 2px);
+      left: 0;
+  }
+</style>
+
+{% assign product = section.settings.landingproduct %}
+{% assign s_variant = product.selected_or_last_available_variant %}
+
+<div
+  class="{{ section.settings.className }} global-product-5 gp-14 global-product-10 py-80"
+  id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};"
+  x-data="{qty:1}"
+>
+  <div class="">
+    <div class=" mb-4 container heading-2-wrapper">
+      {% if section.settings.mainheading != '' %}
+        <h2 style="color:#3350B4" class="heading-2  mt-0 text-center value-bold m-text-left">
+          {{ section.settings.mainheading }}
+        </h2>
+      {% endif %}
+    </div>
+    {% if section.settings['before-mobile'] %}
+      <div class="mb-3 container">
+        <div class="gp-5-top  desktop-hide ">
+          <h2 class="heading-3 blue-text-3 value-bold mb-0 mt-0">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.mainsubheading != '' -%}
+            <p class="value-sans mt-2 mb-2 gp-5-subheading" style="color:#434448;">
+              {{ section.settings.mainsubheading }}
+            </p>
+          {%- endif %}
+          <div class="text-left mt-2 reviews-scroll-block">
+            <div
+              class="value-sans theme-text mt-0 mb-3 stars-img-review click-scroll"
+              data-target="{{ section.settings.scrollto }}"
+            >
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                    <style>
+                      .clas-2 {
+                        fill: #2D469E;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="clas-2"
+                        d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                    <style>
+                      .clas-2 {
+                        fill: #2D469E;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="clas-2"
+                        d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                    <style>
+                      .clas-2 {
+                        fill: #2D469E;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="clas-2"
+                        d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                    <style>
+                      .clas-2 {
+                        fill: #2D469E;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="clas-2"
+                        d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs>
+                    <style>
+                      .clas-2 {
+                        fill: #2D469E;
+                      }
+                    </style>
+                  </defs>
+                  <g id="Layer_2" data-name="Layer 2">
+                    <g id="Layer_1-2" data-name="Layer 1">
+                      <path class="clas-2"
+                        d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                    </g>
+                  </g>
+                </svg>
+              </span>
+              <span class="total-reviews blue-text-3 value-medium">4.9</span> &nbsp;
+              <span class="value-sans" style="color:#434448; font-size:14px;">
+                {{- settings.gloabalreviews }} Reviews</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    {% endif %}
+    <div
+      class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container"
+      id="{{ section.settings.p_id }}"
+    >
+      <div
+        class="w-50 {% if section.settings.verticalThumbnails %}vertical-thumbnails-slider-wrapper{% endif %} {% if section.settings.layout %} order-2 {%endif%}"
+      >
+        <div class="two-women position-relative gp-14-2-sliders">
+          {% assign mediacount = 0 %}
+          <div class="link-to-variant variant_1 show position-relative">
+            {% if section.settings.media_tag_1 != blank %}
+              <span class="media_tag value-medium">{{ section.settings.media_tag_1 }}</span>
+            {% endif %}
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage' %}
+                  {% assign image = block.settings.image %}
+                  {% assign mimage = block.settings.mimage %}
+                  {% if block.settings.is_video %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: 'master'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: 'master' }}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: 'master'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="link-to-variant variant_2 position-relative">
+            {% if section.settings.media_tag_2 != blank -%}
+              <span class="media_tag value-medium">{{ section.settings.media_tag_2 }}</span>
+            {%- endif %}
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage2' %}
+                  {% assign image = block.settings.image_2 %}
+                  {% assign mimage = block.settings.mimage_2 %}
+                  {% if block.settings.is_video_2 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_2 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_2 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: 'master'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: 'master'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: 'master'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- slider 3 -->
+          <div class="link-to-variant variant_3 position-relative">
+            {% if section.settings.media_tag_3 != blank -%}
+              <span class="media_tag value-medium">{{ section.settings.media_tag_3 }}</span>
+            {%- endif %}
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage3' %}
+                  {% assign image = block.settings.image_3 %}
+                  {% assign mimage = block.settings.mimage_3 %}
+                  {% if block.settings.is_video_3 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_3 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_3 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: 'master'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: 'master'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: 'master'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- slider 4 -->
+          <div class="link-to-variant variant_4 position-relative">
+            {% if section.settings.media_tag_4 != blank -%}
+              <span class="media_tag value-medium">{{ section.settings.media_tag_4 }}</span>
+            {%- endif %}
+            <div class="gp-5-product-gallery  new-product-gallery-wrapper">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage4' %}
+                  {% assign image = block.settings.image_4 %}
+                  {% assign mimage = block.settings.mimage_4 %}
+                  {% if block.settings.is_video_4 %}
+                    <div class="main-product-img">
+                      <video
+                        class=" w-100 lazy"
+                        poster="{{ block.settings.poster_4 | img_url : '800x'}}"
+                        width="520"
+                        height="520"
+                        controls
+                      >
+                        <source src="{{ block.settings.videoURL_4 }}" type="video/mp4">
+                      </video>
+                    </div>
+                  {% else %}
+                    <div class="main-product-img ">
+                      <picture>
+                        <source media="(min-width:650px)" srcset="{{ image | img_url: 'master'}}">
+                        <source media="(max-width:650px)" srcset="{{ mimage | img_url: 'master'}}">
+                        <img
+                          {% if forloop.index == 1 %}
+                            skip-lazy
+                          {% else %}
+                            loading="lazy"
+                          {% endif %}
+                          data-id="{{image.id}}"
+                          class="img-responsive w-100 h-auto lazy"
+                          src="{{ image | img_url: 'master'}}"
+                          width="800"
+                          height="700"
+                          alt="{{ image }}"
+                        >
+                      </picture>
+                    </div>
+                  {% endif %}
+                {% endif %}
+                {% assign mediacount = mediacount | plus: '1' %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="w-50  d-flex justify-content-center">
+        <div class="w-90   bg-white gp-4-details">
+          <div class="gp-5-top {% if section.settings.before-mobile %} mobile-hide {% endif %}">
+            <h2 class="heading-3 blue-text-3 value-bold mb-0 mt-0">
+              {{ section.settings.heading }}
+            </h2>
+            {% if section.settings.mainsubheading != '' -%}
+              <p class="value-sans mt-2 mb-2 gp-5-subheading" style="color:#434448;">
+                {{ section.settings.mainsubheading }}
+              </p>
+            {%- endif %}
+            <div class="text-left mt-2 reviews-scroll-block">
+              <div
+                class="value-sans theme-text mt-0 mb-2 stars-img-review click-scroll"
+                data-target="{{ section.settings.scrollto }}"
+              >
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                      <style>
+                        .clas-2 {
+                          fill: #2D469E;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="clas-2"
+                          d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                      <style>
+                        .clas-2 {
+                          fill: #2D469E;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="clas-2"
+                          d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                      <style>
+                        .clas-2 {
+                          fill: #2D469E;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="clas-2"
+                          d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                      <style>
+                        .clas-2 {
+                          fill: #2D469E;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="clas-2"
+                          d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs>
+                      <style>
+                        .clas-2 {
+                          fill: #2D469E;
+                        }
+                      </style>
+                    </defs>
+                    <g id="Layer_2" data-name="Layer 2">
+                      <g id="Layer_1-2" data-name="Layer 1">
+                        <path class="clas-2"
+                          d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z" />
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <span class="total-reviews blue-text-3 value-medium">4.9</span> &nbsp;
+                <span class="value-sans" style="color:#434448; font-size:14px;">
+                  {{- settings.gloabalreviews }} Reviews</span
+                >
+              </div>
+            </div>
+          </div>
+          <div class="gp-5-bottom">
+            {% if section.settings.scent_label != blank %}
+              <div class="mb-2 mt-2 choose-secnt-label value-medium">{{ section.settings.scent_label }}</div>
+            {% endif %}
+
+            <ul class="list-unstyle   var_{{ product.variants | size  }}  gp-10-variants ">
+              {% assign checked = true %}
+              {% for block in section.blocks %}
+                {% if block.type == 'variant' %}
+                  {% assign product_v = block.settings.variantProduct %}
+                  {% assign s_variant_v = product_v.selected_or_first_available_variant %}
+                  {% assign sub_discount_price = s_variant_v.selling_plan_allocations[0].price_adjustments[0].price %}
+                  {% assign sub_discount_percentage = product_v.price
+                    | minus: sub_discount_price
+                    | times: 100
+                    | divided_by: product.price
+                  %}
+
+                  <li
+                    data-title="{{block.settings.text_heading | downcase }}"
+                    class="gp-5-variant-li gp-14-variant-li value-sans"
+                  >
+                    <input
+                      data-planid="{{block.settings.selling_plan}}"
+                      data-planid-2="{{block.settings.selling_plan_2}}"
+                      data-variantid="{{block.settings.variant_id}}"
+                      data-variantid-2="{{block.settings.variant_id_2}}"
+
+                      data-refill-variantid="{{section.settings.refill_variant_id}}"
+                      data-refill-variantid-2="{{section.settings.refill_variant_id_2}}"
+                      data-refill-sku="{{ section.settings.refill_sku }}"
+                      data-refill-sku2="{{ section.settings.refill_sku_2 }}"
+
+                      data-sku-1="{{ block.settings.sku }}"
+                      data-sku-2="{{ block.settings.sku2 }}"
+
+                      class="homepage_global_14_v2 {{ section.settings.className }} {{ block.settings.class }} "
+
+                      data-name="{{block.settings.text_heading}}"
+                      data-include="{{variant.metafields.metadata.includes}}"
+                      value="{{s_variant_v.id }}"
+                      data-subprice="{{ block.settings.sellPrice | money }}"
+                      data-price="{{block.settings.delPrice |  money}}"
+                      data-image="{{ block.settings.varImage | img_url : '100x'}}"
+
+                      data-productid="{{product_v.id}}"
+                      data-variantclass="variant_{{ block.settings.varCount }}"
+                      data-variantclassonce="variant_{{ block.settings.varCountOnce }}"
+                      data-discount="{{ block.settings.discount }}"
+                      data-discount-one-time="{{ block.settings.Oncediscount }}"
+                      {% if block.settings.onetimedisabled %}
+                        data-disabled="disabled"
+                      {% endif %}
+                      type="radio"
+                      name="id_{{ section.id }}"
+                      {% if block.settings.dataTrack %}
+                        data-tracked="true" data-page-url="{{ request.path }}"
+                        data-target-url="{{ block.settings.targetUrl }}" data-index="{{ block.settings.index }}"
+                        data-funnel-stage="{{ block.settings.funnel_stage }}"
+                        data-module="{{ block.settings.dataModule }}" data-event-label="{{ block.settings.dataTitle }}"
+                        data-event-value="{{ block.settings.eventValue }}" data-item-id="{{ block.settings.sku }}"
+                        data-option-index="{{ block.settings.optionIndex }}" data-item-name="{{ product_v.title }}"
+                      {% endif %}
+                      data-section="id_{{ section.id }}"
+                      id="id_{{ section.id }}_{{block.settings.text_heading | escape }}"
+                      {% if product_v.available and checked %}
+                        checked {% assign checked = false -%}
+                      {% else %}
+
+                      {% endif %}
+                    >
+                    {{ count }}
+                    <label
+                      style="background-image:url({{block.settings.varImage | img_url : '100x'}})"
+                      {% if product_v.available %}
+                        class="value-medium var_bg_{{ block.settings.text_heading | handle }} "
+                      {% else %}
+                        class="disabled  value-medium var_bg_{{ block.settings.text_heading | handle }}"
+                      {% endif %}
+                      for="id_{{ section.id }}_{{block.settings.text_heading | escape}}"
+                      data-include="{{variant.metafields.metadata.includes}}"
+                      data-value="{{block.settings.text_heading}}"
+                    >
+                      {{- block.settings.text_heading -}}
+                    </label>
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+            {% if section.settings.tab_description_1 != blank %}
+              <div
+                style="color:#434448; font-size:14px"
+                class="gp-10-tab-desc mt-3 mb-3 value-sans gp-5-var gp-5-var-ab link-to-variant variant_1 show"
+              >
+                {{ section.settings.tab_description_1 }}
+              </div>
+            {% endif %}
+            {% if section.settings.tab_description_2 != blank %}
+              <div
+                style="color:#434448; font-size:14px"
+                class="gp-10-tab-desc mt-3 mb-3 value-sans gp-5-var gp-5-var-ab link-to-variant variant_2 "
+              >
+                {{ section.settings.tab_description_2 }}
+              </div>
+            {% endif %}
+            <div class="gp-10-buyplan mt-0">
+              {% if section.settings.buyonce or section.settings.refillOnly %}
+                <div class="mb-3 mt-0 choose-secnt-label value-medium">Choose Your Plan</div>
+              {% else %}
+                <div class="mb-3 mt-0 choose-secnt-label value-medium">Your Plan</div>
+              {% endif %}
+              <div class="gp-10-subscribe gp-10-input-buy position-relative mt-1">
+                {% if section.settings.sub_tag != blank and section.settings.buyonce %}
+                  <span class="buybox-tag value-sans">{{ section.settings.sub_tag }}</span>
+                {%- endif %}
+                <input
+                  type="radio"
+                  id="buyplan_sub_{{ section.id }}"
+                  name="buyplan_{{ section.id }}"
+                  class="gp-10-buyoption buy_plan_radio gp-14-sub-option"
+                  data-option="subscription"
+                  data-section="id_{{ section.id }}"
+                  data-discount="{{ section.settings.discount }}"
+                  data-planid="{{ section.settings.selling_plan }}"
+                  data-variantid="{{ section.settings.variant_id }}"
+                  data-sku="{{ section.settings.sku }}"
+
+                  data-page-url="{{ request.path }}"
+                  data-target-url=""
+                  data-index="{{ section.settings.index }}"
+                  data-funnel-stage="{{ section.settings.funnel_stage }}"
+                  data-module="{{ section.settings.dataModule }}"
+                  data-event-label="subscription"
+                  data-event-value="plan_selector"
+                  data-item-id="{{ section.settings.sku }}"
+                  data-option-index="1"
+                  data-item-name="{{ product.title }}"
+                  data-price="{{ section.settings.price }}"
+                  data-id="{{ section.settings.variant_id }}"
+                  data-item-type="subscription"
+                  data-variantclass="variant_1"
+                  data-discount-price="{{ section.settings.delPrice }}"
+                  checked
+                >
+                <label
+                  for="buyplan_sub_{{ section.id }}"
+                  class="value-sans {% if section.settings.buyonce or section.settings.refillOnly %} {% else %} no-buy-once{% endif %}"
+                >
+                  {% if section.settings.buyonce or section.settings.refillOnly %}
+                    <div class="d-flex justify-content-between buy-block-text mt-1 mb-1">
+                      <span class="value-medium">90 Day Plan</span>
+                      <span class="d-flex justify-content-end">
+                        <span class="text-decoration-line-through gp-5-del-price">
+                          {{- section.settings.delPrice -}}
+                        </span>
+                        <span class="gp-5-sell-price value-medium"> {{ section.settings.price }}</span>
+                      </span>
+                    </div>
+                  {% endif %}
+                  <div
+                    class="d-flex"
+                    style="flex-direction: column; {% if section.settings.flipPoints %}margin-top: 6px;{% endif %}"
+                  >
+                    {% for block in section.blocks %}
+                      {% if block.type == 'text' %}
+                        <span class="d-none value-sans link-to-variant gp-14-2-text variant_{{ block.settings.listClass }}">
+                          {{ block.settings.listItem }}
+                        </span>
+                      {% endif %}
+                    {% endfor %}
+                    {% if section.settings.permanentPoint != '' %}
+                      <hr
+                        style="border:0; border-top:1px solid #DFE0E1; {% if section.settings.flipPoints %}order: -1;{% endif %}"
+                        class=""
+                      >
+
+                      <span class="value-sans" style="{% if section.settings.flipPoints %}order: -2;{% endif %}"
+                        ><img
+                          src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/repeat.png?v=1707886062"
+                          width="18px"
+                          height="19px"
+                          style="vertical-align:top"
+                          class="sub-repeat-img"
+                        >
+                        &nbsp;{{ section.settings.permanentPoint -}}
+                      </span>
+                    {% endif %}
+                  </div>
+                </label>
+              </div>
+              {% if section.settings.buyonce %}
+                <div class="gp-10-onetime gp-10-input-buy position-relative {% if section.settings.buyoncedisable %}disabled{% endif %}">
+                  <input
+                    type="radio"
+                    id="buyplan_onetime_{{ section.id }}"
+                    name="buyplan_{{ section.id }}"
+                    class="gp-10-buyoption buy_plan_radio "
+                    data-section="id_{{ section.id }}"
+                    data-option="oneoff"
+                    data-discount="{{ section.settings.Oncediscount }}"
+                    data-planid="{{ section.settings.selling_plan_2 }}"
+                    data-variantid="{{ section.settings.variant_id_2 }}"
+                    data-sku="{{ section.settings.sku2 }}"
+
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="payg"
+                    data-event-value="plan_selector"
+                    data-item-id="{{ section.settings.sku2 }}"
+                    data-option-index="2"
+                    data-item-name="{{ product.title }}"
+                    data-price="{{- section.settings.delPrice -}}"
+                    data-id="{{ section.settings.variant_id_2 }}"
+                    data-item-type="PAYG"
+                    data-discount-price=""
+                  >
+                  <label for="buyplan_onetime_{{ section.id }}">
+                    <div class="d-flex justify-content-between buy-block-text">
+                      <span class="value-medium">Buy Once</span>
+                      <span class="gp-5-del-price value-medium">
+                        {{- section.settings.delPrice -}}
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              {% endif %}
+              {% if section.settings.refillOnly %}
+                <div class="gp-10-refill-only gp-10-input-buy position-relative ">
+                  <input
+                    type="radio"
+                    id="buyplan_refill_{{ section.id }}"
+                    name="buyplan_{{ section.id }}"
+                    class="gp-10-buyoption buy_plan_radio gp-14-refill-option"
+                    data-section="id_{{ section.id }}"
+                    data-option="oneoff"
+                    data-variantclass="variant_3"
+                    data-variantid="{{ section.settings.refill_variant_id }}"
+                    data-sku="{{ section.settings.refill_sku }}"
+
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url=""
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="payg"
+                    data-event-value="plan_selector"
+                    data-item-id="{{ section.settings.refill_sku }}"
+                    data-option-index="2"
+                    data-item-name="3 Cleaning Concentrates only"
+                    data-price="{{- section.settings.refillPrice -}}"
+                    data-id="{{ section.settings.refill_variant_id }}"
+                    data-item-type="PAYG"
+                    data-discount-price=""
+                  >
+                  <label for="buyplan_onetime_{{ section.id }}">
+                    <div class="d-flex justify-content-between buy-block-text">
+                      <span class="value-medium">{{ section.settings.refillOnlyHeading }}</span>
+                      <span class=" value-medium">
+                        {{- section.settings.refillPrice -}}
+                      </span>
+                    </div>
+                  </label>
+                </div>
+              {% endif %}
+            </div>
+
+            <form
+              @submit.prevent="console.log('submitted')"
+              x-ref="product_form_{{ section.index}}"
+              enctype="multipart/form-data"
+              accept-charset="UTF-8"
+              id="product_form_{{ section.index}}"
+              class="shopify-product-form"
+              data-product-id="{{product.id}}"
+              action="/cart/add"
+            >
+              <input type="hidden" name="id" class="input_variant_id" value="{{ section.settings.variant_id }}">
+              <input type="hidden" class="discout_input" name="discount" value="{{ section.settings.discount }}">
+              <input type="hidden" name="quantity" value="1">
+              {% if section.settings.isSub %}
+                <input
+                  type="checkbox"
+                  name="purchase_type"
+                  value="subscription"
+                  checked
+                  class="d-none gp-10-buyoption-input"
+                >
+                <input
+                  class="input_selling_plan"
+                  type="hidden"
+                  name="selling_plan"
+                  value="{{ section.settings.selling_plan }}"
+                >
+              {% endif %}
+            </form>
+
+            <div class="text-left  g4-btn-wrapper m-auto">
+              {% if section.settings.redirectLink %}
+                <a
+                  class="btn w-100 blue-btn value-sans btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                  href="{{ section.settings.redirectLink }}"
+                >
+                  {% if section.settings.outOfStock %}
+                    Out of Stock
+                  {% else %}
+                    {{ section.settings.btnText }}
+                  {% endif -%}
+                </a>
+              {% else %}
+                {% if section.settings.isCheckout %}
+                  <span
+                    x-on:click="Purdy.CheckoutLandingV2($refs.product_form_{{ section.index}}, event)"
+                    class="btn w-100 blue-btn value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                    style="background-color:#2D469E"
+                    {% if section.settings.dataTrack %}
+                      data-add-to-cart="true" data-page-url="{{ request.path }}"
+                      data-target-url="{{ section.settings.targetUrl }}" data-index="{{ section.settings.index }}"
+                      data-funnel-stage="{{ section.settings.funnel_stage }}"
+                      data-module="{{ section.settings.dataModule }}"
+                      data-event-label="{{ section.settings.dataTitle }}"
+                      data-event-value="{{ section.settings.eventValue }}" data-item-id="{{ section.settings.sku }}"
+                      data-option-index="{{ section.settings.optionIndex }}" data-item-name="{{ product.title }}"
+                      data-quantity="{{ section.settings.quantity }}" data-price="{{ section.settings.price }}"
+                      data-item-type="subscription"
+                    {% endif %}
+                  >
+                    {% if section.settings.outOfStock %}
+                      Out of Stock
+                    {% else %}
+                      <span class="buy-text">{{ section.settings.btnText }}</span> |
+                      <span class="deleted-price value-sans white-text gp-5-del-price">
+                        {{- section.settings.delPrice -}}
+                      </span>
+                      <span class="value-sans white-text gp-5-sell-price">{{ section.settings.price }} </span>
+                    {% endif -%}
+                  </span>
+                {% else %}
+                  <span
+                    class="btn w-100 theme-btn value-sans btn-loader checkout-starterkit-btn ga4-checkout-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                    x-on:click="Purdy.AddToCart($refs.product_form, true, false, $event)"
+                    {% if section.settings.dataTrack %}
+                      data-add-to-cart="true" data-page-url="{{ request.path }}"
+                      data-target-url="{{ section.settings.targetUrl }}" data-index="{{ section.index }}"
+                      data-funnel-stage="{{ section.settings.funnel_stage }}"
+                      data-module="{{ section.settings.dataModule }}"
+                      data-event-label="{{ section.settings.dataTitle }}"
+                      data-event-value="{{ section.settings.eventValue }}" data-item-id="{{ section.settings.sku }}"
+                      data-option-index="{{ section.settings.optionIndex }}" data-item-name="{{ product.title }}"
+                      data-quantity="{{ section.settings.quantity }}" data-price="{{ section.settings.price }}"
+                      data-item-type="subscription"
+                    {% endif %}
+                  >
+                    {% if section.settings.outOfStock %}
+                      Out of Stock
+                    {% else %}
+                      {{ section.settings.btnText }}
+                    {% endif -%}
+                  </span>
+                {% endif %}
+              {% endif -%}
+              <!--
+                <div
+                  class="text-center value-sans theme-text mt-2 guarantee-text"
+                  style="font-size:14px; color:#434448;"
+                >
+                  30-Day Money-Back Guarantee
+                </div>
+              -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Global Product 14 V2",
+  "settings": [
+      {
+          "type": "checkbox",
+          "id": "buyoncedisable",
+          "label" : "One Time disable"
+      },
+      {
+          "type": "checkbox",
+          "id": "outOfStock",
+          "label": "Enable If product out Of Stock",
+          "default": true
+      },
+      {
+          "id": "isSub",
+          "label": "Product subscription",
+          "type": "checkbox",
+          "default": false
+      },
+      {
+          "id": "buyonce",
+          "label": "Product Buy Once",
+          "type": "checkbox",
+          "default": true
+      },
+      {
+          "id": "isCheckout",
+          "label": "Go to Checkout",
+          "type": "checkbox",
+          "default": false
+      },
+      {
+          "id": "flipPoints",
+          "label": "Flip Order of Points",
+          "type": "checkbox",
+          "default": false
+      },
+      {
+          "id": "refillOnly",
+          "label": "Refill Only",
+          "type": "checkbox",
+          "default": true
+      },
+      {
+          "id": "refillOnlyHeading",
+          "label": "Refill Pack Heading",
+          "type": "text",
+          "default": "3 Cleaning Concentrates only"
+      },
+      {
+        "id": "refill_variant_id",
+        "label": "Refill Variant Id",
+          "type": "text"
+      },
+      {
+        "id": "refill_variant_id_2",
+        "label": "Refill Variant Id 2",
+          "type": "text"
+      },
+      {
+        "id": "refill_sku",
+        "label": "Refill SKU",
+          "type": "text"
+      },
+      {
+        "id": "refill_sku_2",
+        "label": "Refill SKU 2",
+          "type": "text"
+      },
+      {
+          "id": "refillPrice",
+          "label": "Refill Price",
+          "type": "text"
+      },
+      {
+          "id": "permanentPoint",
+          "label": "Permanent Point With Image",
+          "type": "text",
+          "default": "3 Cleaning Concentrates (Every 3 months)"
+      },
+      {
+          "id": "scrollto",
+          "label": "Review Scroll to",
+          "type": "text"
+      },
+      {
+          "id": "background",
+          "label": "Background color",
+          "type": "color"
+      },
+      {
+          "id": "p_id",
+          "label": "Product Section Scroll ID",
+          "type": "text"
+      },
+      {
+          "id": "scent_label",
+          "label": "Choose scents label",
+          "type": "text",
+          "default" : "Choose your Scent"
+      },
+      {
+          "id": "landingproduct",
+          "label": "Choose the landing product",
+          "type": "product"
+      },
+      {
+          "type": "text",
+          "id": "discount",
+          "label": "Sub Discount Code"
+      },
+      {
+          "type": "text",
+          "id": "Oncediscount",
+          "label": "Once Discount Code"
+      },
+      {
+          "id": "tab_description_1",
+          "label": "Tab 1 Description",
+          "default": "Transform your home with new natural scents each season",
+          "type": "text"
+      },
+      {
+          "id": "media_tag_1",
+          "label": "Media Tag 1",
+          "type": "text"
+      },
+      {
+          "id": "tab_description_2",
+          "label": "Tab 2 Description",
+          "default": "Our best-selling citrus for a beautifully scented home",
+          "type": "text"
+      },
+      {
+          "id": "media_tag_2",
+          "label": "Media Tag 2",
+          "type": "text"
+      },
+    {
+          "id": "media_tag_3",
+          "label": "Media Tag 3",
+          "type": "text"
+      },
+    {
+          "id": "media_tag_4",
+          "label": "Media Tag 4",
+          "type": "text"
+      },
+      {
+          "id": "sub_tag",
+          "label": "Subscription Tag",
+          "type": "text"
+      },
+      {
+          "type": "text",
+          "id": "className",
+          "label": "Section Class"
+      },
+      {
+          "type": "html",
+          "id": "mainheading",
+          "label": "Main Heading"
+      },
+      {
+          "type": "html",
+          "id": "mainsubheading",
+          "label": "Sub Heading"
+      },
+      {
+          "type": "html",
+          "id": "heading",
+          "label": "Product Title"
+      },
+      {
+          "id": "subtext",
+          "label": "Banner Sub Text",
+          "type": "html"
+      },
+      {
+          "id": "price",
+          "label": "Price",
+          "type": "text"
+      },
+      {
+          "id": "delPrice",
+          "label": "Compare Price",
+          "type": "text"
+      },
+      {
+          "id": "btnText",
+          "label":"Button label",
+          "type": "text",
+          "default" : "BUY NOW"
+      },
+      {
+          "id": "redirectLink",
+          "label":"Button Link",
+          "type": "url"
+      },
+      {
+          "id": "ctaDetails",
+          "label":"Button Details Text",
+          "type": "html"
+      },
+      {
+          "type": "header",
+          "content": "Product config"
+      },
+      {
+          "id": "variant_id",
+          "label":"Variant Id",
+          "type": "text"
+      },
+      {
+          "id": "variant_id_2",
+          "label":"Variant Id 2",
+          "type": "text"
+      },
+      {
+          "id": "selling_plan",
+          "label":"Selling Plan",
+          "type": "text"
+      },
+      {
+          "id": "selling_plan_2",
+          "label":"Selling Plan 2",
+          "type": "text"
+      },
+      {
+          "id": "sku",
+          "label":"sku",
+          "type": "text"
+      },
+      {
+          "id": "sku2",
+          "label":"SKU 2",
+          "type": "text"
+      },
+      {
+          "type": "header",
+          "content": "Mobile"
+      },
+
+      {
+          "type": "checkbox",
+          "id": "heading-position",
+          "label": "Heading After Image"
+      },
+      {
+          "type": "checkbox",
+          "id": "before-mobile",
+          "label": "Heading before Image"
+      },
+      {
+          "type": "header",
+          "content": "GA4"
+      },
+      {
+          "id": "dataTrack",
+          "label":"Data Track",
+          "type": "checkbox"
+      },
+      {
+          "id": "targetUrl",
+          "label":"Target Url",
+          "type": "url"
+      },
+
+      {
+          "id": "index",
+          "label":"Index",
+          "type": "number",
+          "default" : 0
+      },
+      {
+          "id": "funnel_stage",
+          "label":"Funnel Stage",
+          "type": "text",
+          "default" : "landing_page"
+      },
+      {
+          "id": "dataModule",
+          "label":"Module",
+          "type": "text",
+          "default" : "announcement_bar"
+      },
+      {
+          "id": "dataTitle",
+          "label":"Event Label",
+          "type": "text",
+          "default": "get_your_offer"
+      }
+      ,
+      {
+          "id": "eventValue",
+          "label":"Event Value",
+          "type": "text",
+          "default" : "shop_anchor"
+      }
+      ,
+      {
+          "id": "optionIndex",
+          "label":"Option Index",
+          "type": "text"
+      }
+      ,
+      {
+          "id": "quantity",
+          "label":"Item Quantity",
+          "type": "number",
+          "default" : 1
+      }
+  ],
+  "blocks": [
+              {
+                "type": "text",
+                "name": "block",
+                "settings": [
+                              {
+                                "type": "text",
+                                "id": "listClass",
+                                "label": "Add list Class",
+                                "default" : "1 show",
+                                "info" : "add number 1, 2, 3 according to related variant number"
+                              },
+                              {
+                                "type": "text",
+                                "id": "listItem",
+                                "label": "Add Item"
+                              }
+                            ]
+                },
+                {
+                    "type": "productImage",
+                    "name": "Product Image",
+                    "settings": [
+                              {
+                                "type": "image_picker",
+                                "id": "image",
+                                "label": "Add Product Image"
+                              },
+                              {
+                                "type": "image_picker",
+                                "id": "mimage",
+                                "label": "Mobile Product Image"
+                              },
+                              {
+                                "type": "checkbox",
+                                "id": "is_video",
+                                "label": "Check if video added"
+                              },
+                              {
+                                "type": "url",
+                                "id": "videoURL",
+                                "label": "Add Video url"
+                              },
+                              {
+                                "type": "image_picker",
+                                "id": "poster",
+                                "label": "Add Video poster"
+                              }
+                            ]
+                },
+                {
+                "type": "productImage2",
+                "name": "Product Image 2",
+                "settings": [
+                  {
+                    "type": "image_picker",
+                    "id": "image_2",
+                    "label": "Add Product Image"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "mimage_2",
+                    "label": "Mobile Product Image"
+                  },
+                  {
+                    "type": "checkbox",
+                    "id": "is_video_2",
+                    "label": "Check if video added"
+                  },
+                  {
+                    "type": "url",
+                    "id": "videoURL_2",
+                    "label": "Add Video url"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "poster_2",
+                    "label": "Add Video poster"
+                  }
+
+                ]
+                }
+                ,
+    {
+                "type": "productImage3",
+                "name": "Product Image 3",
+                "settings": [
+                  {
+                    "type": "image_picker",
+                    "id": "image_3",
+                    "label": "Add Product Image"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "mimage_3",
+                    "label": "Mobile Product Image"
+                  },
+                  {
+                    "type": "checkbox",
+                    "id": "is_video_3",
+                    "label": "Check if video added"
+                  },
+                  {
+                    "type": "url",
+                    "id": "videoURL_3",
+                    "label": "Add Video url"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "poster_3",
+                    "label": "Add Video poster"
+                  }
+
+                ]
+                }
+                ,
+    {
+                "type": "productImage4",
+                "name": "Product Image 4",
+                "settings": [
+                  {
+                    "type": "image_picker",
+                    "id": "image_4",
+                    "label": "Add Product Image"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "mimage_4",
+                    "label": "Mobile Product Image"
+                  },
+                  {
+                    "type": "checkbox",
+                    "id": "is_video_4",
+                    "label": "Check if video added"
+                  },
+                  {
+                    "type": "url",
+                    "id": "videoURL_4",
+                    "label": "Add Video url"
+                  },
+                  {
+                    "type": "image_picker",
+                    "id": "poster_4",
+                    "label": "Add Video poster"
+                  }
+
+                ]
+                }
+                ,
+                {
+                "type": "variant",
+                "name": "Add Product",
+                "settings": [
+                              {
+                                "type": "text",
+                                "id": "class",
+                                "label": "Block Class "
+                              },
+                              {
+                                "type": "checkbox",
+                                "id": "onetimedisabled",
+                                "label" : "one time disable"
+                              },
+                              {
+                                  "type": "text",
+                                  "id": "varCount",
+                                  "label": "Variant Number"
+                              },
+                  {
+                                  "type": "text",
+                                  "id": "varCountOnce",
+                                  "label": "Variant Number for Once"
+                              },
+                              {
+                                  "type": "text",
+                                  "id": "text_heading",
+                                  "label": "Heading"
+                              },
+                              {
+                                  "type": "text",
+                                  "id": "discount",
+                                  "label": "Sub Discount Code"
+                              },
+                              {
+                                  "type": "text",
+                                  "id": "Oncediscount",
+                                  "label": "Once Discount Code"
+                              },
+                              {
+                                  "type": "product",
+                                  "id": "variantProduct",
+                                  "label": "Choose Product"
+                              },
+                              {
+                                  "type": "text",
+                                  "id": "delPrice",
+                                  "label": "Del Price"
+                              },
+                              {
+                                  "type": "text",
+                                  "id": "sellPrice",
+                                  "label": "Sell Price"
+                              },
+                              {
+                                  "type": "image_picker",
+                                  "id": "varImage",
+                                  "label": "Image"
+                              },
+                              {
+                                  "id": "variant_id",
+                                  "label":"Variant Id",
+                                  "type": "text"
+                              },
+                              {
+                                  "id": "variant_id_2",
+                                  "label":"Variant Id 2",
+                                  "type": "text"
+                              },
+                              {
+                                  "id": "selling_plan",
+                                  "label":"Selling Plan",
+                                  "type": "text"
+                              },
+                              {
+                                  "id": "selling_plan_2",
+                                  "label":"Selling Plan 2",
+                                  "type": "text"
+                              },
+                              {
+                                  "type": "header",
+                                  "content": "GA4"
+                              },
+                              {
+                                  "id": "dataTrack",
+                                  "label":"Data Track",
+                                  "type": "checkbox",
+                                  "default" : true
+                              },
+                              {
+                                  "id": "targetUrl",
+                                  "label":"Target Url",
+                                  "type": "url"
+                              },
+                              {
+                                  "id": "index",
+                                  "label":"Index",
+                                  "type": "number",
+                                  "default" : 0
+                              },
+                              {
+                                  "id": "funnel_stage",
+                                  "label":"Funnel Stage",
+                                  "type": "text",
+                                  "default" : "landing_page"
+                              },
+                              {
+                                  "id": "dataModule",
+                                  "label":"Module",
+                                  "type": "text",
+                                  "default" : "announcement_bar"
+                              },
+                              {
+                                  "id": "dataTitle",
+                                  "label":"Event Label",
+                                  "type": "text",
+                                  "default": "get_your_offer"
+                              }
+                              ,
+                              {
+                                  "id": "eventValue",
+                                  "label":"Event Value",
+                                  "type": "text",
+                                  "default" : "shop_anchor"
+                              }
+                              ,
+                              {
+                                  "id": "optionIndex",
+                                  "label":"Option Index",
+                                  "type": "text"
+                              }
+                                ,
+                              {
+                                  "id": "sku",
+                                  "label":"SKU 1",
+                                  "type": "text"
+                              }
+                                ,
+                              {
+                                  "id": "sku2",
+                                  "label":"SKU 2",
+                                  "type": "text"
+                              }
+                            ]
+                }
+            ],
+  "presets": [
+                {
+                "name": "Global Product 14 V2"
+                }
+  ]
+}
+{% endschema %}
+
+<script>
+      /**
+      document.addEventListener('DOMContentLoaded', function() {
+      updateCheckedStyles();
+
+      // Add event listeners to all radio inputs to update the styles on change
+      document.querySelectorAll('.gp-10-variants > li input[type="radio"]').forEach(function(radio) {
+        console.log('first method called');
+          radio.addEventListener('change', updateCheckedStyles);
+      });
+
+      // Ensure the styles are updated when navigating back to the page
+      window.addEventListener('popstate', updateCheckedStyles);
+  });
+
+      function updateCheckedStyles() {
+      // Remove the applied styles from all labels
+      document.querySelectorAll('.gp-10-variants > li label').forEach(function(label, index) {
+        label.classList.add('inactive-variant');
+      });
+
+      // Apply the styles to the label of the checked input
+      document.querySelectorAll('.gp-10-variants > li input[type="radio"]:checked').forEach(function(radio) {
+          var label = radio.nextElementSibling;
+          if (label) {
+            label.classList.remove('inactive-variant');
+            label.classList.add('active-variant');
+          }
+      });
+  }
+  **/
+
+
+    var screenSize = window.innerWidth;
+      var cta =  document.querySelector(".checkout-banner-btn.click-scroll");
+
+      if (screenSize > 768) {
+
+          cta.setAttribute('data-top', 0);
+      }
+
+    document.querySelectorAll('li.gp-5-variant-li.gp-14-variant-li.value-sans').forEach(function(li) {
+      var radioInput = li.querySelector('input[type="radio"]');
+
+      if (radioInput) {
+          radioInput.addEventListener('change', function() {
+              var dataAttributes = radioInput.dataset;
+            var variantSub = this.getAttribute('data-variantclass');
+            var variantOnce = this.getAttribute('data-variantclassonce');
+
+            var subInput = document.querySelector('.gp-14-sub-option');
+            var refillInput = document.querySelector('.gp-14-refill-option');
+            subInput.setAttribute("data-variantclass", variantSub);
+            refillInput.setAttribute("data-variantclass", variantOnce);
+            var element = document.querySelector('#' + dataAttributes['section'] + ' .gp-10-refill-only input');
+
+            if (dataAttributes['variantclass'] === 'variant_2') {
+              element.setAttribute("data-variantid", dataAttributes['refillVariantid-2']);
+              element.setAttribute("data-id", dataAttributes['refillVariantid-2']);
+              element.setAttribute("data-item-id", dataAttributes['refillSku2']);
+              element.setAttribute("data-sku", dataAttributes['refillSku2']);
+
+            } else {
+              element.setAttribute("data-variantid", dataAttributes['refillVariantid']);
+              element.setAttribute("data-id", dataAttributes['refillVariantid']);
+              element.setAttribute("data-item-id", dataAttributes['refillSku']);
+              element.setAttribute("data-sku", dataAttributes['refillSku']);
+            }
+
+              for (var key in dataAttributes) {
+                  if (dataAttributes.hasOwnProperty(key)) {
+                      console.log(key + ": " + dataAttributes[key]);
+                  }
+              }
+          });
+      }
+  });
+
+
+  document.querySelectorAll('.buy_plan_radio').forEach(function(element) {
+      element.addEventListener('change', function() {
+
+
+           var itemType = this.getAttribute('data-item-type');
+           var price = this.getAttribute('data-price');
+           var variant = this.getAttribute('data-variantclass');
+           const dicountedPrice = this.getAttribute('data-discount-price');
+
+          var allSlider = document.querySelectorAll('.gp-14-2-sliders .link-to-variant');
+          allSlider.forEach(function(slider){
+            slider.classList.remove('show');
+            if(slider.classList.contains(variant)){
+              slider.classList.add('show');
+            }
+          })
+          document.querySelectorAll('.checkout-starterkit-btn').forEach(function(btn) {
+
+              // Find the span with class name 'buy-text' inside the button
+              var buyTextSpan = btn.querySelector('.buy-text');
+              var buySellPrice = btn.querySelector('.gp-5-sell-price');
+              var buyPriceSpan = btn.querySelector('.deleted-price');
+
+
+              buyTextSpan.textContent = itemType == 'PAYG' ? "BUY ONCE" : "TRY IT RISK FREE";
+              if(itemType == 'PAYG') {
+                  buyPriceSpan.textContent = price;
+              } else {
+                  buyPriceSpan.textContent = dicountedPrice;
+                  buySellPrice.textContent = price;
+              }
+
+              btn.setAttribute('data-item-type', itemType);
+          });
+      });
+  });
+</script>

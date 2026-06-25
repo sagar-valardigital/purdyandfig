@@ -1,0 +1,1123 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "d4badf32-c61f-401d-aa84-d63b97856593": {
+      "type": "global-announcement-bar",
+      "custom_css": [
+        ".py-2 {padding-top: 0.125rem !important; padding-bottom: 0.125rem !important;}",
+        ".ladder-annoucment-bar .announcement-btn {padding: 3px;"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "logo": false,
+        "class": "",
+        "text": "VIP Launch: FREE Bottle for Life + Cloth",
+        "bb-color": "#fd7f03",
+        "text-color": "#ffffff",
+        "scrollto": "spring-banner2",
+        "annuText": "Click Here",
+        "landingproduct": ""
+      }
+    },
+    "8e8f585c-3f59-470f-80e9-ffb3bd04c2f6": {
+      "type": "global-announcement-bar",
+      "disabled": true,
+      "settings": {
+        "outOfStock": true,
+        "logo": false,
+        "class": "",
+        "text": "VIP Launch: FREE Bottle for Life + Cloth",
+        "bb-color": "#fd7f03",
+        "text-color": "#ffffff",
+        "scrollto": "spring-banner",
+        "annuText": "Click Here",
+        "landingproduct": "citronella-niaouli-fly-away-starter-kit-influencer-sample"
+      }
+    },
+    "deb2737b-1c47-4ccb-b8b6-dc927ef4f573": {
+      "type": "global-header",
+      "settings": {
+        "menu2": "header-2-summer-c-n",
+        "mobilemenu": "mobile-menu-2-summer-c-n",
+        "top_product_link": "geranium-ylang-ylang-bundle-pack-limited-edition"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "7be9e699-af9c-4f6f-91d3-ebb4e4ef67e3": {
+      "type": "global-header",
+      "disabled": true,
+      "settings": {
+        "menu2": "main-menu",
+        "mobilemenu": "main-menu",
+        "top_product_link": ""
+      }
+    },
+    "d13bfa42-935f-4e08-bdab-319584772b47": {
+      "type": "bb-banner",
+      "blocks": {
+        "7157e6a7-8abb-47b3-bb5c-4e3c68e5f31c": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a FREE Bottle for Life + Cloth "
+          }
+        },
+        "a8c07f20-70dc-4b94-a1eb-2068a2ab1402": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try our revolutionary ‘Fly Away’ blend"
+          }
+        },
+        "ec758a77-3916-4a03-862b-f31705b5a1b1": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP orders shipped the same day"
+          }
+        }
+      },
+      "block_order": [
+        "7157e6a7-8abb-47b3-bb5c-4e3c68e5f31c",
+        "a8c07f20-70dc-4b94-a1eb-2068a2ab1402",
+        "ec758a77-3916-4a03-862b-f31705b5a1b1"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px; padding-left: 1.5rem; text-align: left;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1rem; padding-top: 2rem;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "checkout": false,
+        "discount": "Free",
+        "className": "spring-banner",
+        "idName": "spring-banner",
+        "isSub": false,
+        "landingproduct": "citronella-niaouli-fly-away-starter-kit-influencer-sample",
+        "desktopimage": "shopify://shop_images/C_N-VIP-web-02.jpg",
+        "mobileimage": "shopify://shop_images/c_n--mob-05.jpg",
+        "title": "<span class=\"font-normal-value\">Unleash the Power of Citronella &amp; Niaouli for a Fly-Free Summer!\n</span>",
+        "subtext": "Exclusive VIP Launch Offer:",
+        "price": "21",
+        "delPrice": "30",
+        "textAfterPrice": "Offer ends in 48 hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "3a671705-1552-4a4c-87ab-367aba3cdc43": {
+      "type": "pf-usps",
+      "disabled": true,
+      "blocks": {
+        "bba09290-6ec6-4618-b4d1-e7555abae440": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6468.png",
+            "rounded": true,
+            "heading": "Effective On All Surfaces",
+            "details": "Effectively cleans Counters, Stone, Bath, Enamel, Glass, Mirrors, Wood and Floors replacing up to 15 different products.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "f5a46ab0-b2cc-4dce-aaac-a323b678f3ea": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6469.png",
+            "rounded": true,
+            "heading": "Re-usable Glass Bottles",
+            "details": "With a glass bottle for life and glass refills you can stop plastic junk going into landfill and our oceans.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "25052eed-72f7-4359-ab52-64c507de3a35": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6470.png",
+            "rounded": true,
+            "heading": "Long Lasting Scents",
+            "details": "Pure essential oils mean our scents smell natural and stick around to transform your home into a spa like bliss.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "a35698ca-477e-4730-8ad2-8c0c80ebdac5": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6471.png",
+            "rounded": true,
+            "heading": "Non Toxic & Natural",
+            "details": "Plant based, Non GMO, Paraben Free and no synthetic fragrances mean you can be sure you are putting your family first.",
+            "mbBlock": "mw-100"
+          }
+        }
+      },
+      "block_order": [
+        "bba09290-6ec6-4618-b4d1-e7555abae440",
+        "f5a46ab0-b2cc-4dce-aaac-a323b678f3ea",
+        "25052eed-72f7-4359-ab52-64c507de3a35",
+        "a35698ca-477e-4730-8ad2-8c0c80ebdac5"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": true,
+        "classname": "lander-wrapper-section section-ab-add height-0",
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "#3d5065",
+        "heading": "You don’t need a million cleaning products. You need one that works.",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "3f2d4330-290c-4fc3-9b26-25d976f44569": {
+      "type": "on-scroll-sticky",
+      "custom_css": [
+        "h2 {font-size: 33 px; font-family: \"Value-Serif-Pro\"; color: #fd7f03;}",
+        ".my-5 {margin-top: 1rem !important; margin-bottom: 0rem !important; padding: 1rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "NEW Fly-Repelling Scent with FREE Bottle for Life",
+        "subheading": ""
+      }
+    },
+    "65751f24-9297-4b68-9325-53721877f63a": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "h2 {font-family: Value-Serif-Pro; font-size: 24px;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-90",
+        "layout": false,
+        "heading": "",
+        "image": "shopify://shop_images/Image_53_copy.png",
+        "details": "<p>At the heart of this powerful, insect-repelling blend is citrusy Citronella Java, combined with the equally uplifting Eucalyptus Peppermint and camphorous Niaouli. The blend is softened by the inclusion of fragrant Lavender and Geranium. Organic Neem Oil boosts the insect-repelling properties to deter pesky flies this summer!</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "e31d891b-a81e-4edb-8cc7-788554e75902": {
+      "type": "slider",
+      "blocks": {
+        "815789d8-892c-4dd9-a481-d68d6babde50": {
+          "type": "text",
+          "settings": {
+            "heading": "\"Brilliant natural, environmentally friendly cleaning products\"",
+            "desktopimage": "shopify://shop_images/house_250x_de52c50f-7acd-4073-a97c-bcca2e25badf.png"
+          }
+        },
+        "fc68844d-483c-4cb1-bad4-d9074886de25": {
+          "type": "text",
+          "settings": {
+            "heading": "“They’re All Absolutely Delicious\"",
+            "desktopimage": "shopify://shop_images/sunday_250x_1b039bca-d6c3-48b1-b927-2e4cc0a5333d.png"
+          }
+        },
+        "4b64c456-1754-470e-b632-5aa8fb366bb9": {
+          "type": "text",
+          "settings": {
+            "heading": "\"Smitten by sweet smelling Purdy & Figg\"",
+            "desktopimage": "shopify://shop_images/daily_1eeddff2-a388-4d2b-872c-04bb2be38356.png"
+          }
+        }
+      },
+      "block_order": [
+        "815789d8-892c-4dd9-a481-d68d6babde50",
+        "fc68844d-483c-4cb1-bad4-d9074886de25",
+        "4b64c456-1754-470e-b632-5aa8fb366bb9"
+      ],
+      "custom_css": [
+        "h2 {font-size: 24px; font-family: \"Pier Sans\";}",
+        ".client-logo {padding: 25px 0px; padding-bottom: 0px;}",
+        ".clients-section {padding: 0px 20px; padding-bottom: 25px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "bg": false
+      }
+    },
+    "dc4d509a-68cb-4c6b-bdac-9c6587cf01eb": {
+      "type": "landing-blocks",
+      "blocks": {
+        "ab20587c-ab74-408d-8b0e-a54a7ef60633": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/shield.png",
+            "rounded": true,
+            "heading": "Create an invisible shield",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "4030e1a2-3880-4c5f-8820-519fa3f9643f": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/fly_free.png",
+            "rounded": true,
+            "heading": "Enjoy fly-free dining",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "b8f84172-7885-4532-8ad9-59e16dcf25c7": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/effortless.png",
+            "rounded": true,
+            "heading": "Clean effortlessly",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1416aa7b-1cd5-47e3-9562-0b5ad9766490": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/smell-02.png",
+            "rounded": true,
+            "heading": "Inhale the scent of summer",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "ab20587c-ab74-408d-8b0e-a54a7ef60633",
+        "4030e1a2-3880-4c5f-8820-519fa3f9643f",
+        "b8f84172-7885-4532-8ad9-59e16dcf25c7",
+        "1416aa7b-1cd5-47e3-9562-0b5ad9766490"
+      ],
+      "custom_css": [
+        ".heading-4.text-center,h3 {text-decoration: none !important; font-family: \"Value-Sans\"; font-size: 19px;}",
+        ".pb-5 {padding-bottom: 0rem !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "<span class=\"value-pro\">Banish flies with the power of citrus freshness! \n</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "73c5ae02-b71b-4f2a-a3fa-16e0d626ab06": {
+      "type": "bb-banner",
+      "blocks": {
+        "0ab78352-e4e7-44c8-b3b4-d419483286f0": {
+          "type": "text",
+          "settings": {
+            "listItem": "3x 20ml Citronella & Niaouli Concentrates "
+          }
+        },
+        "fc524024-94ef-4629-80f9-b1e355cefca3": {
+          "type": "text",
+          "settings": {
+            "listItem": "FREE Bottle for Life + Cloth"
+          }
+        },
+        "ab4e376c-c9c4-47db-ae1a-20af44ad98d2": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP Offer Valid for 48 Hours"
+          }
+        }
+      },
+      "block_order": [
+        "0ab78352-e4e7-44c8-b3b4-d419483286f0",
+        "fc524024-94ef-4629-80f9-b1e355cefca3",
+        "ab4e376c-c9c4-47db-ae1a-20af44ad98d2"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "checkout": false,
+        "discount": "Free",
+        "className": "",
+        "idName": "spring-banner2",
+        "isSub": false,
+        "landingproduct": "citronella-niaouli-fly-away-starter-kit-influencer-sample",
+        "desktopimage": "shopify://shop_images/C_N-Pr-block02.jpg",
+        "mobileimage": "shopify://shop_images/C_N-mob-Pr-block.jpg",
+        "title": "Citronella &amp; Niaouli Refill Booster + FREE Bottle for Life",
+        "subtext": "VIP Launch Offer:",
+        "price": "21",
+        "delPrice": "30",
+        "textAfterPrice": "Offer Ends in 48 Hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "1ce20526-fdb9-48e3-9014-6d33c6499829": {
+      "type": "bb-products",
+      "blocks": {
+        "3745a729-804c-43a0-bfad-b90fe3c240fe": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "c2f3fa51-5c8c-415a-80b0-7cf24b0287b0": {
+          "type": "product",
+          "settings": {
+            "product": "geranium-ylang-ylang-refill-booster-pack-limited-edition"
+          }
+        },
+        "610c5d33-7c33-4333-a891-37a4ba876d88": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        },
+        "199ed434-971f-49e8-ae47-383e02cf3620": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life"
+          }
+        }
+      },
+      "block_order": [
+        "3745a729-804c-43a0-bfad-b90fe3c240fe",
+        "c2f3fa51-5c8c-415a-80b0-7cf24b0287b0",
+        "610c5d33-7c33-4333-a891-37a4ba876d88",
+        "199ed434-971f-49e8-ae47-383e02cf3620"
+      ],
+      "custom_css": [
+        ".product-detail *,.btn {font-family: \"Value-Sans\";}",
+        ".py-5 {padding-top: 2rem !important; padding-bottom: 5px !important;}",
+        ".bg-white {margin: 9px;}",
+        ".colletion-products {margin-bottom: 0px;}",
+        ".heading-2 {padding-bottom: 1rem;}"
+      ],
+      "settings": {
+        "className": "bg-white add-more-bathroom-product",
+        "bgColor": "",
+        "heading": "<span class=\"value-pro\">Add extras to your cart</span>",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "b2957f79-f428-4c80-b404-1ffe801d0cbb": {
+      "type": "video-html-block",
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/965f4c6477f0492aa9387b444b33ee54.mp4",
+        "image": "shopify://shop_images/video-block02.jpg",
+        "poster": "shopify://shop_images/Mask_Group_382.png",
+        "full-width": true,
+        "heading": "Discover Fly Away with Purdy and Charlotte",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": ""
+      }
+    },
+    "2dcfd82e-d13e-496e-b9c1-b0f9cf25fdb8": {
+      "type": "landing-blocks",
+      "blocks": {
+        "285f494d-5491-4cd7-8026-027fde3b8cc4": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_15.png",
+            "rounded": true,
+            "heading": "30-day Money-Back Guarantee",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "86c7f91c-3117-406a-92ab-87914575689a": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_8374.png",
+            "rounded": true,
+            "heading": "Same-day shipping. Free delivery over £40.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "ce85a130-5601-4bae-8c29-dc7d969caa13": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Bottle_cb428e12-5219-40eb-b070-379b422adf85.png",
+            "rounded": true,
+            "heading": "FREE Bottle for Life",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "94d628c0-1bc7-4355-a0af-c7b9c9ed0415": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/48_2.png",
+            "rounded": true,
+            "heading": "Be the first to try!",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "285f494d-5491-4cd7-8026-027fde3b8cc4",
+        "86c7f91c-3117-406a-92ab-87914575689a",
+        "ce85a130-5601-4bae-8c29-dc7d969caa13",
+        "94d628c0-1bc7-4355-a0af-c7b9c9ed0415"
+      ],
+      "custom_css": [
+        "h3 {margin: 0; font-family: \"Value-Sans\"; font-size: 19px; padding-top: 0rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#ffd03c",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Your VIP Benefits: </span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "a9d27575-573e-416c-be67-9ba722d257d5": {
+      "type": "pf-usps",
+      "disabled": true,
+      "blocks": {
+        "ade29039-1dd5-4ce7-a4cb-2e50f31c7ac2": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6455.png",
+            "rounded": true,
+            "heading": "Transform Your Home",
+            "details": "100% Pure Essential Oils at high concentration are hand blended to give a long lasting and divine smell.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "8327a59f-df9f-4c5c-970e-34f6abf2a718": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6457.png",
+            "rounded": false,
+            "heading": "Saves Time and Space",
+            "details": "Effectviely cleans counters, stone, wood, floors, baths, mirrors and glass replacing up to 15 products.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "d7026243-1cf5-40fc-950c-474cd506a21c": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6456.png",
+            "rounded": true,
+            "heading": "Supports Health",
+            "details": "Plant-based, paraben-free, GMO-free and no synthetic fragrance supports gut health and immunity.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "039c4140-faac-4c14-b696-c4f32f18d5ce": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6458.png",
+            "rounded": true,
+            "heading": "It Makes Going Eco Easy",
+            "details": "Plastic free bottles, concentrate refills and low carbon deliveries make us the most sustainble option.",
+            "mbBlock": "mw-100"
+          }
+        }
+      },
+      "block_order": [
+        "ade29039-1dd5-4ce7-a4cb-2e50f31c7ac2",
+        "8327a59f-df9f-4c5c-970e-34f6abf2a718",
+        "d7026243-1cf5-40fc-950c-474cd506a21c",
+        "039c4140-faac-4c14-b696-c4f32f18d5ce"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": true,
+        "classname": "lander-benefits-switching arrow-white section-ab-remove",
+        "shadow": true,
+        "sectionbgColor": "#334fb4",
+        "sectionTextColor": "#ffffff",
+        "heading": "Benefits of Switching",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "ea3376b0-7624-42e3-a844-de9099db5603": {
+      "type": "lander-table",
+      "settings": {}
+    },
+    "4832967c-e3f5-4d99-b66b-aa59ab435fba": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "p {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".mobile-padding-y {padding-top: 30px; padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"value-pro\">Two women on  a mission to </span>transform cleaning",
+        "image": "shopify://shop_images/img-3_2x_91012b1b-cf84-43af-b451-e1e276a7b3e5.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "215d2870-5f88-4dcf-89f6-91dc25df9f79": {
+      "type": "pf-usps",
+      "blocks": {
+        "ce68adbf-acae-41db-bbb9-ad8bb46cf2cd": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6455.png",
+            "rounded": true,
+            "heading": "Transform Your Home",
+            "details": "100% Pure Essential Oils at high concentration are hand blended to give a long lasting and divine smell.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "8cd5c756-1b67-456e-90fc-e25bc84fc146": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6457.png",
+            "rounded": true,
+            "heading": "Saves Time and Space",
+            "details": "Effectviely cleans counters, stone, wood, floors, baths, mirrors and glass replacing up to 15 products.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "102b8c9f-21ac-4147-81f2-92879b8da232": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6456.png",
+            "rounded": true,
+            "heading": "Supports Health",
+            "details": "Plant-based, paraben-free, GMO-free and no synthetic fragrance supports gut health and immunity.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "fd9189f0-cb13-48ea-a6ba-4e8e9ffc42d8": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6458.png",
+            "rounded": true,
+            "heading": "It Makes Going Eco Easy",
+            "details": "Plastic free bottles, concentrate refills and low carbon deliveries make us the most sustainble option.",
+            "mbBlock": "mw-100"
+          }
+        }
+      },
+      "block_order": [
+        "ce68adbf-acae-41db-bbb9-ad8bb46cf2cd",
+        "8cd5c756-1b67-456e-90fc-e25bc84fc146",
+        "102b8c9f-21ac-4147-81f2-92879b8da232",
+        "fd9189f0-cb13-48ea-a6ba-4e8e9ffc42d8"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": true,
+        "classname": "section-ab-add lander-benefits-switching height-0",
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "#3d5065",
+        "heading": "Benefits of Switching",
+        "subtext": "",
+        "showBTN": true,
+        "btnLabel": "SHOP NOW",
+        "btnLink": "#lander_product_pf",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "2a162716-e863-486c-9934-44640d8df45a": {
+      "type": "bb-banner",
+      "blocks": {
+        "243abcaf-f11a-443f-aebf-dfc12a0d3d34": {
+          "type": "text",
+          "settings": {
+            "listItem": "3x 20ml Citronella & Niaouli Concentrates "
+          }
+        },
+        "3b6928af-79b2-4232-873d-beccb7bf66d2": {
+          "type": "text",
+          "settings": {
+            "listItem": "FREE Bottle for Life + Cloth"
+          }
+        },
+        "f6dfa37a-6ab4-4714-93df-aec27e76c85f": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP Offer Valid for 48 Hours"
+          }
+        }
+      },
+      "block_order": [
+        "243abcaf-f11a-443f-aebf-dfc12a0d3d34",
+        "3b6928af-79b2-4232-873d-beccb7bf66d2",
+        "f6dfa37a-6ab4-4714-93df-aec27e76c85f"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "checkout": false,
+        "discount": "Free",
+        "className": "",
+        "idName": "spring-banner",
+        "isSub": false,
+        "landingproduct": "citronella-niaouli-fly-away-starter-kit-influencer-sample",
+        "desktopimage": "shopify://shop_images/C_N-Pr-block-02.jpg",
+        "mobileimage": "shopify://shop_images/C_N-mob-Pr-block_1830d3c6-147e-454e-88da-48cb9f3170b2.jpg",
+        "title": "Citronella &amp; Niaouli Refill Booster + FREE Bottle for Life",
+        "subtext": "VIP Launch Offer:",
+        "price": "21",
+        "delPrice": "30",
+        "textAfterPrice": "Offer Ends in 48 Hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "92c0028e-580e-48a0-b1a3-b2546253f7b0": {
+      "type": "labder-review-slider",
+      "disabled": true,
+      "blocks": {
+        "a6e2cf26-9104-4c4f-9457-7b6e2aadb3c9": {
+          "type": "text",
+          "settings": {
+            "starafter": false,
+            "username": "Andrea M, Verified Buyer",
+            "heading": "",
+            "review": "\"This is a great starter kit, and all three scents are just lovely. Cleaning is no longer a chore and once I started I didn't wont to stop. So good to just need one product for every surface.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "daa86c70-a7c4-4b24-9ae4-2f6f5b5dc201": {
+          "type": "text",
+          "settings": {
+            "starafter": false,
+            "username": "Toulla T, Verified Buyer",
+            "heading": "",
+            "review": "\"Love the choice of scents and how you can use the product on various different surfaces. I changed due to being asthmatic, no nasty chemicals and I am able to breath properly without persistent coughing whilst cleaning. Love the lasting fragrance this gives off. Makes me want to clean\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "133425e6-0bc2-4a53-9329-71682858cf4e": {
+          "type": "text",
+          "settings": {
+            "starafter": false,
+            "username": "Ruth H, Verified Buyer",
+            "heading": "",
+            "review": "\"I've gone crazy cleaning. it smells gorgeous, no streaks and leaves all my surfaces sparkling and fresh. I really have ditched all other cleaners now, glass bottle is lovely.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "d5bd2e0b-4fdb-4201-9cc9-8eb0466e4e6e": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "starafter": false,
+            "username": "Susan D. Verified Buyer",
+            "heading": "",
+            "review": "\"l adore this product. I've gifted to my friends for Christmas and they're all converts, We don't just clean our homes any more, we 'purdy and Figg'them. it's the new verb of 2022!! Thank you for making cleaning a joy\"",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "a6e2cf26-9104-4c4f-9457-7b6e2aadb3c9",
+        "daa86c70-a7c4-4b24-9ae4-2f6f5b5dc201",
+        "133425e6-0bc2-4a53-9329-71682858cf4e",
+        "d5bd2e0b-4fdb-4201-9cc9-8eb0466e4e6e"
+      ],
+      "custom_css": [
+        ".heading-2,.total-reviews {color: #fff; display: none;}"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "arrow-white lander-reviews-section",
+        "Review-Count": "4.9/5.0 (63,63 reviews)",
+        "bgColor": "#3d5065",
+        "heading": "Over 6000+ Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "346ca757-c926-4219-aada-fad79012abd9": {
+      "type": "pf-usps",
+      "disabled": true,
+      "blocks": {
+        "998ce130-b390-43cc-94c3-91355597b9be": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/box.png",
+            "rounded": false,
+            "heading": "30 Day Money Back Guarantee 🔒",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "3f68ce4c-cfa9-4030-bfa3-f4b83090b61d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/hand_0c1ee47a-5810-4fa2-ba2a-5029c889f540.png",
+            "rounded": false,
+            "heading": "30 Day Trial",
+            "details": "",
+            "mbBlock": "mw-100"
+          }
+        },
+        "f47ec553-a07b-49a3-afc5-41335e71a704": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/truck.png",
+            "rounded": false,
+            "heading": "Ships in 1 Day",
+            "details": "",
+            "mbBlock": "mw-100"
+          }
+        },
+        "86a9294b-667f-46d5-bbaa-a02436f86af5": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/bottle_29af9fe7-0e2e-4b58-a628-26b8b58bdc3f.png",
+            "rounded": false,
+            "heading": "Free Bottle For Life",
+            "details": "",
+            "mbBlock": "mw-100"
+          }
+        }
+      },
+      "block_order": [
+        "998ce130-b390-43cc-94c3-91355597b9be",
+        "3f68ce4c-cfa9-4030-bfa3-f4b83090b61d",
+        "f47ec553-a07b-49a3-afc5-41335e71a704",
+        "86a9294b-667f-46d5-bbaa-a02436f86af5"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": true,
+        "classname": "lander-other-benefits  arrow-white",
+        "shadow": true,
+        "sectionbgColor": "#334fb4",
+        "sectionTextColor": "#ffffff",
+        "heading": "Other benefits",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "6ef2d946-ef26-4f4f-90fb-13d8705f3ec4": {
+      "type": "instagram-blocks",
+      "disabled": true,
+      "blocks": {
+        "768f294d-6627-4060-8bb0-8df6d4290f63": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/850_4006_2x_62c691cf-7907-452e-81ef-4a81d2f67222.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        },
+        "bc2fb38c-c021-41bc-b692-ad34c18b0863": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/image_1_2x_f706074a-eda7-4ac8-88a7-dca1404485b9.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        },
+        "00c1d3e4-a327-4ab5-9246-4c70e3fb4870": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/image_2_2x_be898a49-5d7a-4337-a515-0d1b1514eac0.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        }
+      },
+      "block_order": [
+        "768f294d-6627-4060-8bb0-8df6d4290f63",
+        "bc2fb38c-c021-41bc-b692-ad34c18b0863",
+        "00c1d3e4-a327-4ab5-9246-4c70e3fb4870"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "lander-instagram",
+        "bgColor": "#e3f3fe",
+        "heading": "Join 100,000 Real Customers",
+        "details": "Join our community and see Purdy & Figg in real life with real customers",
+        "followText": "FOLLOW US",
+        "followLink": "https://www.instagram.com/purdyandfigg/"
+      }
+    },
+    "d1fc3792-1def-4a58-aa64-e51227d2a890": {
+      "type": "faq-section",
+      "disabled": true,
+      "blocks": {
+        "3d12868e-dcb2-4150-9193-c123de49fd84": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>Each eco-concentrate dilutes to 300ml of Counter Clean. We recommend using one eco-concentrate per month. The Starter Kit is designed to last you 90 days.</p>"
+          }
+        },
+        "772613d3-6cdb-40a4-a467-f4af3df956a3": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this more expensive than a regular cleaner?",
+            "faq-ans": "<p>Counter Clean costs 16p per day which is 3p more than a typical bottle of supermarket cleaner. However, we replace up to 15 different products under your sink so end up saving you money.</p>"
+          }
+        },
+        "fdb51482-bfb5-461b-838c-79f9db18683a": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How can I be sure it works?",
+            "faq-ans": "<p>Our product has been independently tested and proven to be 100% effective at tackling grease, grim and dirt. 93% of our customers would recommend us for our cleaning power.</p>"
+          }
+        },
+        "eed257d4-58fa-44af-9aa3-63a88626d84b": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe around pets?",
+            "faq-ans": "<p>Our founders are pet fantatics and our products have been designed to be safe for use around dogs and other pets. We don't recommend cleaning pet beds or food bowls without rinsing afterwards. If you are worried about allergies, do contact your vet.</p>"
+          }
+        },
+        "a7917ddd-b7fb-4ca8-9bf4-cb6a655f9a5f": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it Cruelty Free?",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "86ebe38d-f956-4264-b4ce-22a9e661af75": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use on all my surfaces?",
+            "faq-ans": "<p>Counter Clean has been designed to be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "3d12868e-dcb2-4150-9193-c123de49fd84",
+        "772613d3-6cdb-40a4-a467-f4af3df956a3",
+        "fdb51482-bfb5-461b-838c-79f9db18683a",
+        "eed257d4-58fa-44af-9aa3-63a88626d84b",
+        "a7917ddd-b7fb-4ca8-9bf4-cb6a655f9a5f",
+        "86ebe38d-f956-4264-b4ce-22a9e661af75"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#e3f3fe",
+        "class": "",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "b475fbe3-fb9a-48c0-890a-c5a498914f46": {
+      "type": "lander-product",
+      "disabled": true,
+      "blocks": {
+        "b3f1651b-dc6a-4fe6-92c2-f5b739db6873": {
+          "type": "text",
+          "settings": {
+            "listItem": "90 Days Cleaning in 3 Eco-Concentrates"
+          }
+        },
+        "34b10b44-9015-4d7c-9adf-55eb6b23c0ee": {
+          "type": "text",
+          "settings": {
+            "listItem": "Delivery Quarterly, Pause or Cancel Anytime"
+          }
+        },
+        "aaec1f2f-fde7-4443-8396-cd4da4f17427": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try Three Bestselling Scents"
+          }
+        },
+        "330e4ba8-8b6d-4cc8-8215-87959551da9e": {
+          "type": "text",
+          "settings": {
+            "listItem": "Free Bottle For Life & Microfibre Cloth"
+          }
+        },
+        "7df7cbf3-f119-4a7b-82cd-4e0b61b50065": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-1.png"
+          }
+        },
+        "83b3b190-0b77-4d99-b9fa-b9545d71ed40": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-2.png"
+          }
+        },
+        "c9ef99c3-bde6-4484-b295-f005e4077b16": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-3.png"
+          }
+        },
+        "ccd27728-598c-41c2-ae4a-5c623f6bd8d8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-4.png"
+          }
+        },
+        "738291a6-920a-4272-ad89-25d3d52cefd5": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Big_Bottle_3_small_bottles_2x_6bd85e39-3106-4fe4-8b80-37bed8faabe8.png"
+          }
+        }
+      },
+      "block_order": [
+        "b3f1651b-dc6a-4fe6-92c2-f5b739db6873",
+        "34b10b44-9015-4d7c-9adf-55eb6b23c0ee",
+        "aaec1f2f-fde7-4443-8396-cd4da4f17427",
+        "330e4ba8-8b6d-4cc8-8215-87959551da9e",
+        "7df7cbf3-f119-4a7b-82cd-4e0b61b50065",
+        "83b3b190-0b77-4d99-b9fa-b9545d71ed40",
+        "c9ef99c3-bde6-4484-b295-f005e4077b16",
+        "ccd27728-598c-41c2-ae4a-5c623f6bd8d8",
+        "738291a6-920a-4272-ad89-25d3d52cefd5"
+      ],
+      "settings": {
+        "enable": true,
+        "outOfStock": false,
+        "isSub": false,
+        "p_id": "",
+        "tag": "",
+        "landingproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "pt-4",
+        "mainheading": "Shop Variety Starter Kit",
+        "mainsubheading": "Free Bottle for life (Worth £15)",
+        "heading": "Variety Starter Kit",
+        "subtext": "",
+        "price": "15",
+        "delPrice": "30",
+        "ctaDetails": "30 Days Money-Back Guarantee",
+        "heading-position": true
+      }
+    }
+  },
+  "order": [
+    "d4badf32-c61f-401d-aa84-d63b97856593",
+    "8e8f585c-3f59-470f-80e9-ffb3bd04c2f6",
+    "deb2737b-1c47-4ccb-b8b6-dc927ef4f573",
+    "main",
+    "7be9e699-af9c-4f6f-91d3-ebb4e4ef67e3",
+    "d13bfa42-935f-4e08-bdab-319584772b47",
+    "3a671705-1552-4a4c-87ab-367aba3cdc43",
+    "3f2d4330-290c-4fc3-9b26-25d976f44569",
+    "65751f24-9297-4b68-9325-53721877f63a",
+    "e31d891b-a81e-4edb-8cc7-788554e75902",
+    "dc4d509a-68cb-4c6b-bdac-9c6587cf01eb",
+    "73c5ae02-b71b-4f2a-a3fa-16e0d626ab06",
+    "1ce20526-fdb9-48e3-9014-6d33c6499829",
+    "b2957f79-f428-4c80-b404-1ffe801d0cbb",
+    "2dcfd82e-d13e-496e-b9c1-b0f9cf25fdb8",
+    "a9d27575-573e-416c-be67-9ba722d257d5",
+    "ea3376b0-7624-42e3-a844-de9099db5603",
+    "4832967c-e3f5-4d99-b66b-aa59ab435fba",
+    "215d2870-5f88-4dcf-89f6-91dc25df9f79",
+    "2a162716-e863-486c-9934-44640d8df45a",
+    "92c0028e-580e-48a0-b1a3-b2546253f7b0",
+    "346ca757-c926-4219-aada-fad79012abd9",
+    "6ef2d946-ef26-4f4f-90fb-13d8705f3ec4",
+    "d1fc3792-1def-4a58-aa64-e51227d2a890",
+    "b475fbe3-fb9a-48c0-890a-c5a498914f46"
+  ]
+}

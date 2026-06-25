@@ -1,0 +1,135 @@
+{% if section.settings.enable %}
+  <div
+    class="instagram-wrapper py-80  blocks-reskin {{ section.settings.className }}"
+    style="background-color:{{ section.settings.bgColor }}"
+  >
+    <div class="container">
+      {% if section.settings.heading != '' %}
+        <h2 class="heading-2 text-center theme-text mt-0 mb-4  font-gtsuper">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.details != '' %}
+        <div class="normal-text text-center theme-text mt-0 mb-4 font-lausanne fw-400  col-12 col-md-8 col-lg-6 m-auto  insta-2-details">
+          {{ section.settings.details }}
+        </div>
+      {% endif %}
+    </div>
+    <div class="container">
+      <div class="insta-blocks insta-blocks-2 custom-dots w-100 justify-content-center">
+        {% for block in section.blocks %}
+          <div class="insta-item py-1 px-3">
+            <div class="insta-post bg-transparent d-block" >
+              <div class="insta-img position-relative">
+                <img
+                  class="w-100 img-responsive"
+                  src="{{ block.settings.ig_image | img_url :'600x', crop : 'center' }}"
+                  alt="{{ block.settings.ig_image.alt }}"
+                >
+              </div>
+              {% if block.settings.ig_username != '' %}
+                <div class="pt-3">
+                 
+                  <div class="insta-post-username">
+                    <p class="m-0  heading-4 font-lausanne fw-400" style="color:{{ section.settings.textColor }}">
+                      {{ block.settings.ig_username }}
+                    </p>
+                    <p class="mt-2 detail-text font-lausanne fw-200" style="color:{{ section.settings.textColor }}">{{ block.settings.subtext }}</p>
+                  </div>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+  {% if section.settings.followLink %}
+      <div class="text-center mt-5">
+        
+          <a href="{{ section.settings.followLink }}" target="_blank" class="btn theme-border-btn">
+            {{- section.settings.followText -}}
+          </a>
+        
+      </div>
+    {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+ {
+   "name": "Blocks Reskin 385",
+   "settings": [
+{
+     "type": "checkbox",
+     "id": "enable",
+     "label": "Uncheck to hide the section",
+     "default": true
+   },
+     {
+     "type":"text",
+     "id":"className",
+     "label": "Section Class"
+   },
+     {
+     "type": "color",
+     "id": "bgColor",
+     "label": "Background Color"
+   },
+      {
+     "type": "color",
+     "id": "textColor",
+     "label": "Text Color",
+        "default": "#212121"
+   },
+    {
+     "type":"html",
+     "id":"heading",
+     "label": "Section Heading"
+   },
+     {
+     "type":"richtext",
+     "id":"details",
+     "label": "Section detail text"
+   },
+      {
+     "type":"text",
+     "id":"followText",
+     "label": "Button text"
+   } ,{
+     "type":"url",
+     "id":"followLink",
+     "label": "Instagram Link"
+   }
+   ],
+   "blocks":
+     [{
+     "type":"igblock",
+     "name":"IG block",
+     "settings":[
+         {
+           "type": "image_picker",
+           "id": "ig_image",
+           "label": "IG thumbnail"
+         },
+         {
+           "type": "text",
+           "id": "ig_username",
+           "label": "IG username"
+         },
+         {
+           "type": "url",
+           "id": "ig_url",
+           "label": "IG URL"
+         },
+         {
+           "type": "text",
+           "id": "subtext",
+           "label": "Sub Text"
+         }
+     ]
+   }],
+"presets": [
+	{
+		"name": "Blocks Reskin 385"
+	}
+]
+ }
+{% endschema %}

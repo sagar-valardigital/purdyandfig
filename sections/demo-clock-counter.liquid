@@ -1,0 +1,111 @@
+{% schema %}
+{
+  "name": "Demo Clock + Counter",
+  "tag": "section",
+  "class": "demo-clock-counter",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Store Demo Section"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "content_block",
+      "name": "Content Block",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Block Title",
+          "default": "Store Feature"
+        },
+        {
+          "type": "textarea",
+          "id": "description",
+          "label": "Description",
+          "default": "Add store specific content."
+        },
+        {
+          "type": "text",
+          "id": "headdata",
+          "label": "Heading",
+          "default": "Newly added heading."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Demo Clock + Counter",
+      "blocks": [
+        { "type": "content_block" },
+        { "type": "content_block" }
+      ]
+    }
+  ]
+}
+{% endschema %}
+
+<div class="demo-wrapper">
+
+  <h2>{{ section.settings.heading }}</h2>
+
+  <div class="demo-clock-box">
+    <p>Current Store Time:</p>
+    <h3 id="demo-clock">00:00:00</h3>
+  </div>
+  <div class="demo-counter-box">
+    <p>Button Click Count:</p>
+    <h3 id="demo-counter">0</h3>
+
+    <button id="demo-counter-btn">
+      Click to Increment
+    </button>
+  </div>
+
+  <div class="demo-blocks">
+    {% for block in section.blocks %}
+      <div class="demo-block">
+        <h4>{{ block.settings.title }}</h4>
+        <p>{{ block.settings.description }}</p>
+        <h3>{{ block.settings.headdata }}</h3>
+      </div>
+    {% endfor %}
+  </div>
+
+</div>
+
+{{ 'demo-clock-counter.js' | asset_url | script_tag }}
+
+<style>
+.demo-wrapper {
+  padding: 30px;
+  border: 2px dashed #4caf50;
+  margin: 20px 0;
+  background: #f9fff9;
+}
+
+.demo-clock-box,
+.demo-counter-box {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+button {
+  padding: 10px 18px;
+  background: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.demo-block {
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  background: #fff;
+}
+</style>

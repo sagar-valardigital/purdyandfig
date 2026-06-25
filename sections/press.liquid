@@ -1,0 +1,164 @@
+<style>
+ .press-slider{
+   max-width:800px;
+   margin:auto;
+ }
+  .press-content{
+    max-width:600px;
+    margin:auto;
+  }
+  .press-image{
+    padding:20px 20px 20px;
+  }
+  .press-wrapper .slick-slide.slick-current .press-image{
+    position:relative;
+  }
+  .press-wrapper .slick-slide.slick-current .press-image:after{
+    content:'';
+    width:calc(100% - 30px);
+    height:1px;
+    background-color:#212121;
+    position:absolute;
+    bottom:20px;
+    left:15px;
+  }
+  .press-wrapper .slick-slide:not(.slick-current) .press-image{
+    opacity:0.5;
+  }
+  .press-heading{
+    font-size:28px;
+    color:#0A1E1A;
+  }
+  .press-details{
+    font-size:18px;
+    color:#212121;
+  }
+  .press-slider .slick-arrow{
+    width:33%;
+    height:100%;
+    top:0;
+    transform:none;
+  }
+  @media(max-width:768px){
+    .press-wrapper.py-80{
+      padding-top:32px !important;
+      padding-bottom:32px !important;
+    }
+  }
+  @media(max-width:460px){
+    .press-slider .slick-arrow{
+    width:20%;
+    }
+    .press-image{
+    padding:0 20px 20px;
+  }
+    .press-heading{
+    font-size:24px;
+    color:#0A1E1A;
+  }
+  .press-details{
+    font-size:16px;
+    color:#212121;
+  }
+  }
+</style>
+<div class="press-wrapper py-80" style="background-color:{{ section.settings.background_color }}">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="heading-2 font-gtsuper">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="press-slider mt-4">
+      {% for block in section.blocks %}
+        <div class="press-slide">
+          <div class="press-image" data-title="{{ block.settings.heading }}" data-content="{{ block.settings.user_name }}">
+            <img src="{{ block.settings.user_image | image_url }}" alt="{{ block.settings.user_image.alt }}" width="200" height="300" class="w-100 h-auto">
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+    {% for block in section.blocks %}
+      {% if forloop.first %}
+    <div class="press-content text-center mt-2">
+            <p class="press-heading font-lausanne fw-400 mb-2">{{ block.settings.heading }}</p>
+            <p class="press-details font-lausanne fw-200 m-0">{{ block.settings.user_name }}</p>
+          </div>
+    {% endif %}
+      {% endfor %}
+      {% if section.settings.btn_link != blank %}
+        <div class="mt-5 text-center">
+          <a class="btn green-btn m-auto btn-loader font-lausanne click-scroll fw-400" data-top="120" data-target="{{ section.settings.btn_link }}" href="javascript:void(0);" style="baackground-color:{{ section.settings.btn_bg }}; color:{{ section.settings.color }}">
+            {{ section.settings.btn_label }}
+          </a>
+        </div>
+          {% endif %}
+  </div>
+</div>
+
+
+
+{% schema %}
+  {
+  "name": "Press",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "text",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button Background color"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Button Text Color"
+    },
+  ],
+  "blocks": [
+    {
+        "type": "text",
+        "name": "press",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "user_image",
+            "label": "Press Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Press Heading"
+          },
+          {
+            "type": "text",
+            "id": "user_name",
+            "label": "Pres content"
+          }
+
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Press"
+    }
+  ]
+}
+{% endschema %}

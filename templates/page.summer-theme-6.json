@@ -1,0 +1,784 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676": {
+      "type": "global-announcement-bar",
+      "settings": {
+        "outOfStock": true,
+        "logo": false,
+        "class": "",
+        "text": "Welcome to our store",
+        "bb-color": "#efc100",
+        "text-color": "#fff",
+        "scrollto": "",
+        "annuText": "",
+        "landingproduct": ""
+      }
+    },
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2": {
+      "type": "global-header",
+      "settings": {
+        "menu2": "header-2",
+        "mobilemenu": "header-2",
+        "top_product_link": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "e5996c06-8533-4d3c-8321-8492ae111911": {
+      "type": "bb-banner",
+      "blocks": {
+        "93094f51-f07d-4107-9935-3e953e94c29b": {
+          "type": "text",
+          "settings": {
+            "listItem": "Two NEW Spring Scents in one Booster Pack"
+          }
+        },
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c": {
+          "type": "text",
+          "settings": {
+            "listItem": "One FREE Bottle for Life"
+          }
+        },
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f": {
+          "type": "text",
+          "settings": {
+            "listItem": "FREE physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        },
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP orders shipped the same day"
+          }
+        }
+      },
+      "block_order": [
+        "93094f51-f07d-4107-9935-3e953e94c29b",
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c",
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f",
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px; padding-left: 1.5rem; text-align: left;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1rem; padding-top: 2rem;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "className": "spring-banner",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/Springhero1_15f0c471-f1cc-460e-ba37-1d30b63eaac9.jpg",
+        "mobileimage": "shopify://shop_images/heroimagething.png",
+        "title": "<span class=\"font-normal-value\">Make Cleaning a \nSpring-Scented Breeze</span>",
+        "subtext": "Exclusive VIP Launch Offer:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer ends in 48 hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "49d1d86a-4188-4863-8378-0a726527234c": {
+      "type": "on-scroll-sticky",
+      "custom_css": [
+        "h2 {font-size: 28px; font-family: \"Value-Serif-Pro\";}",
+        ".my-5 {margin-top: 2rem !important; margin-bottom: 0rem !important; padding: 1rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Two NEW Spring Scents in a Booster Pack",
+        "subheading": ""
+      }
+    },
+    "e13765db-04a1-4bad-957d-25ed753ffd9f": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "h2 {font-family: Value-Serif-Pro; font-size: 24px;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "Patchouli &amp; Cedarwood\n<p> </p>\n“Moth Magic”",
+        "image": "shopify://shop_images/Image_53.png",
+        "details": "<p>Moth-repellent essential oils star alongside natural insecticide Neem for moth-free wardrobes! The scent is a forest-walk blend of earthy Cedarwood with wafts of woody-citrus MayChang and Patchouli, followed by floral Palmarosa and sweet-balsamic Amyris. <br/></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "3ec202a7-9ec5-4c23-9346-6dd24f28530a": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "h2 {font-family: Value-Serif-Pro; font-size: 24px;}",
+        ".mobile-padding-y {padding-top: 1rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": true,
+        "heading": "Lemon &amp; Marjoram\n<p> </p>\n“Zingy Spring”",
+        "image": "shopify://shop_images/Image_54.png",
+        "details": "<p>A vibrant citrussy blend, softened by grassy palmarosa, sweet marjoram and soft clary sage, for cheerful thoughts of Spring in every room.<br/></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b": {
+      "type": "landing-blocks",
+      "blocks": {
+        "e9358ff1-a922-4541-acc2-5274872a4581": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_3_6da0fdbb-38ea-420f-b263-b0d4a495cca9.png",
+            "rounded": true,
+            "heading": "Enjoy fresh Spring scents",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/x_moth.png",
+            "rounded": true,
+            "heading": "Say ta-ta to moth holes",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_5_7bfb9627-15b0-4961-b8f6-cbeb26ee622a.png",
+            "rounded": true,
+            "heading": "Simplify your spring clean",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_6_6145b6b0-5aad-4bf5-b055-3d7a995ee914.png",
+            "rounded": true,
+            "heading": "Declutter cupboards",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "e9358ff1-a922-4541-acc2-5274872a4581",
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256",
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08",
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84"
+      ],
+      "custom_css": [
+        ".heading-4.text-center,h3 {text-decoration: none !important; font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".pb-5 {padding-bottom: 0rem !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "<span class=\"value-pro\">An Easier, Breezier Spring Clean</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "dcb1b499-7785-4926-98e9-8c795071403e": {
+      "type": "bb-banner",
+      "blocks": {
+        "0962baa7-3057-41ef-823e-9e163588749a": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lemon & Marjoram Eco-Concentrate"
+          }
+        },
+        "887bdc09-55a0-4425-84c6-ba94fca4bdcb": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Patchouli & Cedarwood Eco-Concentrate"
+          }
+        },
+        "939f5bc4-dc41-4b29-9c9d-555a0e2d241c": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x FREE Bottle for Life (worth £15!)"
+          }
+        },
+        "4f2c2a5d-5cc4-4dc8-99bd-80894169d1d7": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x Physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        }
+      },
+      "block_order": [
+        "0962baa7-3057-41ef-823e-9e163588749a",
+        "887bdc09-55a0-4425-84c6-ba94fca4bdcb",
+        "939f5bc4-dc41-4b29-9c9d-555a0e2d241c",
+        "4f2c2a5d-5cc4-4dc8-99bd-80894169d1d7"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "className": "bathroom-banner bb-last-banner-white",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/Untitled-1-_5.jpg",
+        "mobileimage": "shopify://shop_images/heroimage_Yellow_63132ecf-db62-4e58-b660-1659a0d8948f.png",
+        "title": "Two Spring Scents + FREE Bottle for Life",
+        "subtext": "VIP offer ends in 48 hours:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer Ends in 48 Hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "a3cb3b67-801b-468c-b903-e64218b2cab6": {
+      "type": "bb-banner",
+      "disabled": true,
+      "blocks": {
+        "6c9a8472-176c-4bf9-a785-169e5d4b9164": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lemon & Marjoram Eco-Concentrate"
+          }
+        },
+        "b7cfbf13-1e74-4e0d-b88d-83d18d8b868c": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Patchouli & Cedarwood Eco-Concentrate"
+          }
+        },
+        "fe4b4625-e012-49ab-9aca-2b0090d8342d": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x FREE Bottle for Life (worth £15!)"
+          }
+        },
+        "fdd64d5c-bb06-413e-80f4-7f891cfe25ae": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x Physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        }
+      },
+      "block_order": [
+        "6c9a8472-176c-4bf9-a785-169e5d4b9164",
+        "b7cfbf13-1e74-4e0d-b88d-83d18d8b868c",
+        "fe4b4625-e012-49ab-9aca-2b0090d8342d",
+        "fdd64d5c-bb06-413e-80f4-7f891cfe25ae"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "className": "spring-banner",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/Untitled-1-_5.jpg",
+        "mobileimage": "shopify://shop_images/heroimage_Yellow_93f8e5b9-194b-4d4e-906b-7d94e13ed761.png",
+        "title": "Two Spring Scents + FREE Bottle for Life",
+        "subtext": "VIP offer ends in 48 hours:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer ends in 48 hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "001f78c8-7d96-4a57-9895-00898748d6a3": {
+      "type": "bb-products",
+      "blocks": {
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "a2661355-29b7-48aa-b825-c8c24c82e94c": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        },
+        "9be19f9d-ac8f-45a3-8da5-099e1c06b8b2": {
+          "type": "product",
+          "settings": {
+            "product": "counter-clean-concentrates"
+          }
+        }
+      },
+      "block_order": [
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0",
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f",
+        "a2661355-29b7-48aa-b825-c8c24c82e94c",
+        "9be19f9d-ac8f-45a3-8da5-099e1c06b8b2"
+      ],
+      "custom_css": [
+        ".product-detail *,.btn {font-family: \"Value-Sans\";}",
+        ".py-5 {padding-top: 2rem !important; padding-bottom: 5px !important;}",
+        ".bg-white {margin: 9px;}",
+        ".colletion-products {margin-bottom: 0px;}",
+        ".heading-2 {padding-bottom: 1rem;}"
+      ],
+      "settings": {
+        "className": "bg-white add-more-bathroom-product",
+        "bgColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Add extras to your cart</span>",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "b59942de-50b9-419f-a1fc-e2454fded23c": {
+      "type": "video-block",
+      "disabled": true,
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36p; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/thumn.jpg",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4"
+      }
+    },
+    "183d6f8f-887d-47a0-abd6-badda41fccc2": {
+      "type": "video-html-block",
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36px; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/PF_Feb23_15.png",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4"
+      }
+    },
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8": {
+      "type": "landing-blocks",
+      "blocks": {
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Ellipse_178_8b33f4a6-a2f3-4890-ae38-0ab56ca86208.png",
+            "rounded": true,
+            "heading": "30-day Money-Back Guarantee",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_8374.png",
+            "rounded": true,
+            "heading": "1-Day Shipping",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/cleaning_guide-01.png",
+            "rounded": true,
+            "heading": "Free Spring Cleaning Guide",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Bottle_cb428e12-5219-40eb-b070-379b422adf85.png",
+            "rounded": true,
+            "heading": "Free Bottle for Life",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b",
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767",
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123",
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d"
+      ],
+      "custom_css": [
+        "h3 {margin: 0; font-family: \"Value-Sans\"; font-size: 16px; padding-top: 0rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#efc100",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Extra Benefits</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "ca9a0417-78db-4e8d-8f82-b785e14896be": {
+      "type": "select-scent",
+      "disabled": true,
+      "blocks": {
+        "b72f3078-6ac5-4961-8f57-f5999fcb2a5f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/THUMBNAIL_2.jpg",
+            "details": "",
+            "link": ""
+          }
+        },
+        "9606fad0-654e-4910-a8f6-a317ae66c53f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/THUMBNAIL_3.jpg",
+            "details": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b72f3078-6ac5-4961-8f57-f5999fcb2a5f",
+        "9606fad0-654e-4910-a8f6-a317ae66c53f"
+      ],
+      "settings": {
+        "enable": true,
+        "class": "",
+        "heading": "About the blends",
+        "subheading": "",
+        "ctalabel": "",
+        "ctalink": ""
+      }
+    },
+    "b73293e2-35b3-464c-aa9c-e829bf1326ae": {
+      "type": "our-blends",
+      "disabled": true,
+      "blocks": {
+        "7355e80e-0f32-40f9-b2f2-88f84398e7d4": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "click-none white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_0427fb75-4121-41b4-bbc2-5654d0e2f1cf.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties.",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        },
+        "f7716969-0bbf-4474-b38e-ee963a000fdb": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "click-none white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_d78b4754-830e-4bde-845e-33440dba783b.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        }
+      },
+      "block_order": [
+        "7355e80e-0f32-40f9-b2f2-88f84398e7d4",
+        "f7716969-0bbf-4474-b38e-ee963a000fdb"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}"
+      ],
+      "settings": {
+        "class": "show-2-blocks",
+        "bgColor": "#e3f3fe",
+        "heading": "Making Scents Of The World"
+      }
+    },
+    "9394c6b1-be55-4a62-9aa3-0ea37e49655e": {
+      "type": "making-scents",
+      "disabled": true,
+      "blocks": {
+        "7439dfb1-9f5a-426c-b723-62d3c06ba532": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_2_e36732b5-f721-42d8-ad01-eedd48165650.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "68ccaf7f-c116-4a22-ad24-6649a142de65": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_4_6c28498a-5eb6-4261-b869-ac3fc89fc599.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "5498cf2a-1a31-44ca-b15e-82450778f18d": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_3_de571dcd-7ec9-4077-a930-359c8d11cadb.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "ec386922-cab0-440d-b97c-10c1dcfd5fcf": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_5_26f391ca-1082-4765-8227-5c015cbf0e92.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "891a56e6-3228-4710-a210-e6649ea49702": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_6_a211e93d-e1f3-4d01-b7d8-89a37138ab10.png",
+            "details": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7439dfb1-9f5a-426c-b723-62d3c06ba532",
+        "68ccaf7f-c116-4a22-ad24-6649a142de65",
+        "5498cf2a-1a31-44ca-b15e-82450778f18d",
+        "ec386922-cab0-440d-b97c-10c1dcfd5fcf",
+        "891a56e6-3228-4710-a210-e6649ea49702"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        "p {font-family: \"Value-Sans\";}"
+      ],
+      "settings": {
+        "class": "",
+        "bgColor": "#e3f3fe",
+        "heading": "Making Scents Of The World",
+        "ctalabel": "",
+        "ctalink": ""
+      }
+    },
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1": {
+      "type": "landing-table",
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        "td,th {font-family: \"Value-Sans\";}"
+      ],
+      "settings": {}
+    },
+    "a44f955d-a20d-4cbc-ad19-3d887a7d3115": {
+      "type": "table",
+      "settings": {}
+    },
+    "99ccde11-5760-4852-bf3d-835fd6a67eae": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "p {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".mobile-padding-y {padding-top: 30px; padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"value-pro\">Two women on  a mission to </span>transform cleaning",
+        "image": "shopify://shop_images/THUMBNAIL_4.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "95fa3dad-ef89-470e-a137-c5a613946612": {
+      "type": "bb-banner",
+      "blocks": {
+        "1d828f07-66a2-4098-be88-a3e3a104453b": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lemon & Marjoram Eco-Concentrate"
+          }
+        },
+        "8cc13cba-a7b6-486e-b6b2-f35c16988415": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Patchouli & Cedarwood Eco-Concentrate"
+          }
+        },
+        "b81e878c-2bb6-4351-958d-96484d4984c9": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x FREE Bottle for Life (worth £15!)"
+          }
+        },
+        "39565a76-0829-4277-8172-f07089251a77": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x Physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        }
+      },
+      "block_order": [
+        "1d828f07-66a2-4098-be88-a3e3a104453b",
+        "8cc13cba-a7b6-486e-b6b2-f35c16988415",
+        "b81e878c-2bb6-4351-958d-96484d4984c9",
+        "39565a76-0829-4277-8172-f07089251a77"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "className": "bathroom-banner bb-last-banner-white",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/Untitled-1-_5.jpg",
+        "mobileimage": "shopify://shop_images/heroimage_Yellow_63132ecf-db62-4e58-b660-1659a0d8948f.png",
+        "title": "Two Spring Scents + FREE Bottle for Life",
+        "subtext": "VIP offer ends in 48 hours:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer Ends in 48 Hours!",
+        "btnText": "SHOP NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "6671dea9-5325-43f0-85d1-35cf11ee6181": {
+      "type": "on-scroll-sticky",
+      "settings": {
+        "enable": true,
+        "heading": "",
+        "subheading": ""
+      }
+    }
+  },
+  "order": [
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676",
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2",
+    "main",
+    "e5996c06-8533-4d3c-8321-8492ae111911",
+    "49d1d86a-4188-4863-8378-0a726527234c",
+    "e13765db-04a1-4bad-957d-25ed753ffd9f",
+    "3ec202a7-9ec5-4c23-9346-6dd24f28530a",
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b",
+    "dcb1b499-7785-4926-98e9-8c795071403e",
+    "a3cb3b67-801b-468c-b903-e64218b2cab6",
+    "001f78c8-7d96-4a57-9895-00898748d6a3",
+    "b59942de-50b9-419f-a1fc-e2454fded23c",
+    "183d6f8f-887d-47a0-abd6-badda41fccc2",
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8",
+    "ca9a0417-78db-4e8d-8f82-b785e14896be",
+    "b73293e2-35b3-464c-aa9c-e829bf1326ae",
+    "9394c6b1-be55-4a62-9aa3-0ea37e49655e",
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1",
+    "a44f955d-a20d-4cbc-ad19-3d887a7d3115",
+    "99ccde11-5760-4852-bf3d-835fd6a67eae",
+    "95fa3dad-ef89-470e-a137-c5a613946612",
+    "6671dea9-5325-43f0-85d1-35cf11ee6181"
+  ]
+}

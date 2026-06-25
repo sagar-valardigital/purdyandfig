@@ -1,0 +1,380 @@
+{% if section.settings.enable %}
+  {% assign product = section.settings.landingproduct %}
+  {% assign s_variant = product.selected_or_first_available_variant %}
+  <div
+    class="{{ section.settings.className }} lander-product-section"
+    id="{{ section.settings.p_id }}"
+    style="background-color:{{section.settings.background}};"
+    x-data="{qty:1}"
+  >
+    <div class="mobile-padding-y image-with-text">
+      <div class=" mb-4">
+        {% if section.settings.mainheading != '' %}
+          <h2 class="heading-2 theme-text mt-0 text-center value-pro">
+            {{ section.settings.mainheading }}
+          </h2>
+        {% endif %}
+        {% if section.settings.mainsubheading != '' %}
+          <p class="normal-text theme-text mt-0 text-center value-sans">
+            {{ section.settings.mainsubheading }}
+          </p>
+        {% endif %}
+      </div>
+      <div class="text-center">
+        <div class="font-pier theme-text mt-3 mb-2 stars-img-review desktop-hide">
+          <span class="star-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+              <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+            </svg>
+          </span>
+          <span class="star-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+              <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+            </svg>
+          </span>
+          <span class="star-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+              <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+            </svg>
+          </span>
+          <span class="star-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+              <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+            </svg>
+          </span>
+          <span class="star-img">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+              <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+            </svg>
+          </span>
+          <span class="total-reviews value-sans">{{- settings.gloabalreviews }} Reviews</span>
+        </div>
+      </div>
+
+      <div class="d-flex flex-wrap justify-content-between align-items-center container">
+        <div class="w-50 {% if section.settings.layout %} order-2 {%endif%}">
+          <div class="two-women position-relative">
+            {% if section.settings.tag != '' %}
+              <span class="tag theme-text">{{ section.settings.tag }}</span>
+            {% endif %}
+            <div class="product-gallery">
+              {% for block in section.blocks %}
+                {% if block.type == 'productImage' %}
+                  {% assign image = block.settings.image %}
+                  <div class="main-product-img">
+                    <picture>
+                      <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                      <source media="(max-width:650px)" srcset="{{ image | img_url: '500x'}}">
+                      <img
+                        {% if forloop.index == 1 %}
+                          skip-lazy
+                        {% else %}
+                          loading="lazy"
+                        {% endif %}
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 lazy"
+                        src="{{ image | img_url: '800x'}}"
+                        width="800px"
+                        height="700px"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+        <div class="w-50  d-flex justify-content-center {% if section.settings.layout %} order-1 {%endif%} ">
+          <div class="two-women-details  pb-2 {{section.settings.width}}">
+            <h2 class="heading-3 lander-product-heading {{section.settings.textcolor}} value-sans">
+              {{ section.settings.heading }}
+            </h2>
+            <div class="text-left">
+              <div class="font-pier theme-text mt-3 mb-2 stars-img-review mobile-hide">
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                    <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                  </svg>
+                </span>
+                <span class="total-reviews value-sans">{{- settings.gloabalreviews }} Reviews</span>
+              </div>
+            </div>
+            <div class="theme-text text-left">
+              <h2 class="heading-3 value-sans">
+                £{{ section.settings.price }}
+                {% if section.settings.delPrice != '' -%}
+                  <small class="text-gray"
+                    ><del>£{{ section.settings.delPrice }}</del></small
+                  >
+                {% endif %}
+              </h2>
+            </div>
+            <div class="theme-text">
+              <h3 class="font-value mt-4 bb-points">{{ section.settings.subtext }}</h3>
+              <ul class="lander-points">
+                {% for block in section.blocks %}
+                  {% if block.type == 'text' %}
+                    <li style="background-image:url({{ 'lander-check.png' | asset_img_url }})" class="value-sans">
+                      {{ block.settings.listItem }}
+                    </li>
+                  {% endif %}
+                {% endfor %}
+              </ul>
+            </div>
+
+            <form
+              @submit.prevent="console.log('submitted')"
+              x-ref="product_form"
+              enctype="multipart/form-data"
+              accept-charset="UTF-8"
+              id="product_form_{{ section.id }}"
+              class="shopify-product-form"
+              data-product-id="{{product.id}}"
+              action="/cart/add"
+            >
+              <input type="hidden" name="id" value="{{ s_variant.id }}">
+              <input type="hidden" name="quantity" value="1">
+              {% if section.settings.isSub %}
+                <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                <input
+                  type="hidden"
+                  name="selling_plan"
+                  value="{{s_variant.selling_plan_allocations.first.selling_plan.id}}"
+                >
+              {% endif %}
+            </form>
+            <div class="text-left mt-3" style="max-width:400px">
+              <span
+                class="btn w-100 theme-btn value-sans btn-loader checkout-lander-btn checkout-lander-product-btn{% if section.settings.outOfStock %} bb-disable {% endif %}"
+                x-on:click="Purdy.PurdyCheckout($refs.product_form, '{{ section.settings.discount }}', $event)"
+              >
+                {% if section.settings.outOfStock %} Out of Stock {% else %} Buy Now {% endif -%}</span
+              ><br>
+              <small class="theme-text d-block text-center value-sans w-100">{{ section.settings.ctaDetails }}</small>
+            </div>
+            <div class="text-center mt-3" style="max-width:400px">
+              <img src="{{ 'payment-lander.png' | asset_img_url : 'master' }}" class="mx-auto lander-payment-img">
+            </div>
+            <div class="lander-usp-icons" style="max-width:400px;">
+              {% for block in section.blocks %}
+                {% if block.type == 'image' %}
+                  <div class="lander-usp p-2">
+                    {% assign landerIcon = block.settings.image | img_url: '200x' %}
+                    <img src="{{ landerIcon }}" class="w-100">
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Global Product 1",
+  "settings": [
+  {
+    "type": "checkbox",
+    "id": "enable",
+    "label": "Uncheck to hide the section",
+    "default": true
+  },
+    {
+    "type": "checkbox",
+    "id": "outOfStock",
+    "label": "Enable If product out Of Stock",
+    "default": true
+  },
+    {
+    "id": "isSub",
+    "label": "Product subscription",
+    "type": "checkbox",
+    "default": false
+  },
+    {
+    "id": "p_id",
+    "label": "Product Section Scroll ID",
+    "type": "text"
+  },
+    {
+    "id": "tag",
+    "label": "Product Tag",
+    "type": "text"
+  }, {
+      "id": "landingproduct",
+      "label": "Choose the landing product",
+      "type": "product"
+    },
+    {
+    "type": "text",
+    "id": "discount",
+    "label": "Discount Code"
+  },
+  {
+      "type": "select",
+      "id": "textcolor",
+      "label": "Select text color",
+      "options": [
+        {
+          "value": "white-text",
+          "label": "White color"
+        },
+        {
+          "value": "theme-text",
+          "label": "Theme color"
+        }
+      ],
+      "default": "white-text"
+        },
+
+        {
+          "type": "select",
+          "id": "width",
+          "label": "Select text area width",
+          "options": [
+            {
+              "value": "w-90",
+              "label": "90%"
+            },
+            {
+              "value": "w-80",
+              "label": "80%"
+            },
+{
+              "value": "w-70",
+              "label": "70%"
+            },
+            {
+              "value": "w-60",
+              "label": "60%"
+            }
+          ],
+          "default": "w-80"
+        },
+{
+          "type": "checkbox",
+          "id": "layout",
+          "label": "Image on right"
+
+        },
+{
+    "type": "text",
+    "id": "className",
+    "label": "Section Class"
+  },
+    {
+    "type": "html",
+    "id": "mainheading",
+    "label": "Main Heading"
+  },
+    {
+    "type": "html",
+    "id": "mainsubheading",
+    "label": "Sub Heading"
+  },
+   {
+    "type": "html",
+    "id": "heading",
+    "label": "Product Title"
+  },
+    {
+    "id": "subtext",
+    "label": "Banner Sub Text",
+    "type": "html"
+  },
+    {
+    "id": "price",
+    "label": "Price",
+    "type": "text"
+  },
+  {
+    "id": "delPrice",
+    "label": "Compare Price",
+    "type": "text"
+  },{
+"id": "ctaDetails",
+"label":"Button Details Text",
+"type": "html"
+    },
+{
+    "type": "header",
+    "content": "Mobile"
+  },
+
+{
+          "type": "checkbox",
+          "id": "heading-position",
+          "label": "Heading After Image"
+
+        }
+  ],
+      "blocks": [
+    {
+      "type": "text",
+      "name": "block",
+      "settings": [
+
+            {
+    "type": "text",
+    "id": "listItem",
+    "label": "Add Item"
+  }
+
+      ]
+    },
+        {
+      "type": "image",
+      "name": "lander usp",
+      "settings": [
+            {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Add Image"
+  }
+
+      ]
+    },
+        {
+      "type": "productImage",
+      "name": "Product Image",
+      "settings": [
+            {
+    "type": "image_picker",
+    "id": "image",
+    "label": "Add Product Image"
+  }
+
+      ]
+    }
+  ],
+  "presets": [
+      {
+          "name": "Global Product 1"
+      }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,144 @@
+{{ 'theme.min.css' | asset_url | stylesheet_tag }}
+{{ 'bathroom-bliss.css' | asset_url | stylesheet_tag }}
+<div class="banner bundle-banner-section position-relative {{ section.settings.sectionClass }}" style="">
+  <img class="w-100 desktop-banner" src="{{ section.settings.banner_img_1 | img_url: "1900x" }}" data-src-p1="{{ section.settings.banner_img_1 | img_url: "1900x" }}" data-src-p2="{{ section.settings.banner_img_3 | img_url: "1900x" }}">
+  <img class="w-100 mobile-banner" src="{{ section.settings.banner_img_2 | img_url: "800x" }}" data-src-p1="{{ section.settings.banner_img_2 | img_url: "800x" }}" data-src-p2="{{ section.settings.banner_img_4 | img_url: "800x" }}">
+  <div class="container position-absolute h-100">
+    <div class="col-12 col-md-7 d-flex align-items-center justify-content-center h-100">
+      <div class="col-xl-8 col-lg-9 col-md-11 col-12 col-sm-9">
+        <h1
+          class="font-value heading-2"
+          style="text-align:{{ section.settings.heading_position }}; color:{{ section.settings.heading_color }};"
+        >
+          {{ section.settings.banner_title }}
+        </h1>
+        {% for block in section.blocks %}
+          <p class="d-flex align-items-center mb-0 text-center justify-content-{{ block.settings.subheading_position }}">
+            {% comment %}
+              <svg
+                style="fill:{{ block.settings.sub_heading_color }};"
+                class="me-2"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 512 512"
+              >
+                <!--! Font Awesome Pro 6.4.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM369 209L241 337c-9.4 9.4-24.6 9.4-33.9 0l-64-64c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L335 175c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/>
+              </svg>
+            {% endcomment %}
+            <span class="value-sans" id="scent_heading" style="color:{{ block.settings.sub_heading_color }};">
+              {{- block.settings.sub_heading -}}
+            </span>
+          </p>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "Bundle Banner",
+  "settings": [
+    {
+          "type": "text",
+          "id": "sectionClass",
+          "label": "Section Class"
+        },
+    {
+          "type": "image_picker",
+          "id": "banner_img_1",
+          "label": "Select Desktop banner image"
+        },
+    {
+          "type": "image_picker",
+          "id": "banner_img_2",
+          "label": "Select Mobile banner image"
+        },
+    {
+          "type": "image_picker",
+          "id": "banner_img_3",
+          "label": "Select Desktop banner image"
+        },
+    {
+          "type": "image_picker",
+          "id": "banner_img_4",
+          "label": "Select Mobile banner image"
+        },
+    {
+          "type": "text",
+          "id": "banner_title",
+          "label": "Enter banner title",
+          "default": "Build Your Bundle & Save*"
+        },
+    {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Choose sub-heading color",
+          "default": "#ffffff"
+        },
+    {
+    "type": "select",
+    "id": "heading_position",
+    "label": "alignment your heading",
+    "options": [
+      {
+        "value": "left",
+        "label": "Left"
+      },
+      {
+        "value": "center",
+        "label": "Center"
+      },
+      {
+        "value": "right",
+        "label": "Right"
+      }
+    ],
+    "default": "center"
+  }
+  ],
+  "blocks": [
+  {
+  "type": "text",
+  "name": "banner sub-heading",
+  "settings": [
+        {
+          "type": "text",
+          "id": "sub_heading",
+          "label": "Enter banner sub-heading",
+          "default": "your banner sub-heading"
+        },
+        {
+          "type": "color",
+          "id": "sub_heading_color",
+          "label": "Choose sub-heading color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "select",
+          "id": "subheading_position",
+          "label": "alignment your sub-heading",
+          "options": [
+            {
+              "value": "start",
+              "label": "Start"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "end",
+              "label": "End"
+            }
+    ],
+    "default": "center"
+  }
+  ]
+  }
+],
+  "presets": [
+  {
+      "name" : "Bundle Banner"
+  }
+]
+}
+{% endschema %}

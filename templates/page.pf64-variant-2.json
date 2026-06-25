@@ -1,0 +1,1108 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "c9f1f3e7-752b-49be-947e-50b113a0dec9": {
+      "type": "instapage-announcement-bar",
+      "settings": {
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "instapage_banner_2_BJTHzL": {
+      "type": "instapage-banner-2",
+      "settings": {
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "eventLabel": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "501b9c5b-fca9-4a44-8535-87a78ce103ce": {
+      "type": "instapage-banner",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "className": "",
+        "desktopimage": "shopify://shop_images/64607529-0-02-bfl_b66d178f-1253-41dc-97b9-3ba10a0bd26e.webp",
+        "mobileimage": "shopify://shop_images/64607571-0-bfl-instapage-hero-m.webp",
+        "title": "Transform Your Into A Spa",
+        "subtext": "Limited Time Offer: Get a free Bottle for Life worth £15 with your first order.",
+        "btnText": "GET OFFER",
+        "scrollto": "buy-now"
+      }
+    },
+    "f938af7e-3128-40fc-b0f7-fdeaecb72baf": {
+      "type": "instapage-featured",
+      "settings": {}
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33": {
+      "type": "bb-products",
+      "blocks": {
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14": {
+          "type": "product",
+          "settings": {
+            "product": "charlottes-floral-hand-wash-250ml"
+          }
+        }
+      },
+      "block_order": [
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "ec21f2d5-a068-440d-96df-3f231dc22ee7": {
+      "type": "instapage",
+      "settings": {
+        "discount": "FREESPA55"
+      }
+    },
+    "74d1173c-0c0f-4bfb-a869-b715e942c791": {
+      "type": "instapage-info",
+      "blocks": {
+        "a7e884f6-d73a-43ec-806d-f2f1f31f8b22": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/63592226-0-power-1.webp",
+            "heading": "CLEANING POWER",
+            "info": "Super concentrated eco-cleaning power effortlessly leaves every surface gleaming and streak free."
+          }
+        },
+        "565f6668-374c-4f0b-beb7-4b5d1c4a5b42": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/63592195-0-sense.webp",
+            "heading": "SCENT",
+            "info": "Made with pure essential oils for a divine natural scent that lingers for hours. A treat to use that leaves your house smelling like a 5* spa."
+          }
+        },
+        "c22b57ec-dde2-4aec-a255-db65f5f30b40": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/63593209-0-world.webp",
+            "heading": "GUILT FREE",
+            "info": "Sustainable cleaning for modern times. Reusable glass bottles that replace multiple plastic cleaning bottles in your home. All recyclable with zero single use plastic. "
+          }
+        }
+      },
+      "block_order": [
+        "a7e884f6-d73a-43ec-806d-f2f1f31f8b22",
+        "565f6668-374c-4f0b-beb7-4b5d1c4a5b42",
+        "c22b57ec-dde2-4aec-a255-db65f5f30b40"
+      ],
+      "settings": {
+        "heading": "You've never enjoyed cleaning this much"
+      }
+    },
+    "7b978e3e-93e0-42e1-9bf3-be454c9f857f": {
+      "type": "instapage-info-2",
+      "settings": {
+        "image": "shopify://shop_images/60526100-0-scientific-researche.webp",
+        "heading": "100% Effective + Third-Party Tested",
+        "info": "The innovative eco-concentrate developed by PHD chemist Dr Anna Stastanova has been designed to work effectively on all your homes surfaces whilst retaining maximum scent.  Over 97% of customers say it works better than their regular cleaner."
+      }
+    },
+    "global_product_5_wgyHM6": {
+      "type": "global-product-5",
+      "blocks": {
+        "product_image_LEHzbc": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Winter-Variety-Kit_2_1_4d6f6246-81c7-49b4-9a63-07c1a099f71b.png",
+            "mimage": "shopify://shop_images/Winter-Variety-Kit_2_1_4d6f6246-81c7-49b4-9a63-07c1a099f71b.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_HPVANa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Core-scent--label4_637e296c-ae2c-476f-a6b5-f88b71a02c6e.png",
+            "mimage": "shopify://shop_images/Core-scent--label4_637e296c-ae2c-476f-a6b5-f88b71a02c6e.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_JbVTiy": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/winter-how-it-works_7.png",
+            "mimage": "shopify://shop_images/winter-how-it-works_7.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_NBzxbc": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/StarterKit5.jpg",
+            "mimage": "shopify://shop_images/StarterKit5.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_b7rPt6": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Winter_Studio_30015_S5_Wi5_4_84419f67-2226-44b9-977a-2abc2adeee53.png",
+            "mimage": "shopify://shop_images/Winter_Studio_30015_S5_Wi5_3.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_MLXDfF": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/m-product-6.png",
+            "mimage": "shopify://shop_images/m-product-6.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "text_xzcJYm": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        },
+        "text_9dKQbL": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth"
+          }
+        },
+        "text_PapywA": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Change or Cancel Anytime"
+          }
+        },
+        "text_gFWcnX": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_LEHzbc",
+        "product_image_HPVANa",
+        "product_image_JbVTiy",
+        "product_image_NBzxbc",
+        "product_image_b7rPt6",
+        "product_image_MLXDfF",
+        "text_xzcJYm",
+        "text_9dKQbL",
+        "text_PapywA",
+        "text_gFWcnX"
+      ],
+      "custom_css": [
+        ".gp-5-points li {padding-bottom: 12px;}",
+        ".gp-5-price-points > ul {position: relative; margin: 0; padding-bottom: 0px;}",
+        ".heading-2-wrapper .heading-2 {font-size: 30px; color: #3d5065 !important; font-family: \"Value-Serif-Pro\";}",
+        ".btn {border-radius: 999px !important;}",
+        ".gp-5-top .heading-3 {}",
+        ".checkout-starterkit-btn {display: flex !important; padding: 13.6px 28px !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "review-section",
+        "background": "#ffffff",
+        "p_id": "starterkit-product",
+        "landingproduct": "counter-clean-starter-kit",
+        "discount": "FREESPA55",
+        "tab_description_1": "Transform your home with new natural scents each season",
+        "tab_description_2": "Our best-selling citrus for a beautifully scented home",
+        "className": "",
+        "mainheading": "New Customer Offer: SAVE £15 On A Starter Kit Plan",
+        "mainsubheading": "Ultra-concentrated, eco-friendly cleaning",
+        "heading": "Counter Clean Starter Kit",
+        "subtext": "",
+        "price": "£15.00",
+        "delPrice": "£30.00",
+        "btnText": "BUY NOW",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": false,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "buy_now",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "045292ee-cba7-4c92-ac22-6d6aac776be0": {
+      "type": "instapage-product-1",
+      "blocks": {
+        "b8efb933-096a-415b-9f67-ef6075b5b10c": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-1.png",
+            "mimage": "shopify://shop_images/m-product-1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "85db2fba-f602-4cd4-ab1a-dad439edd800": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-2.png",
+            "mimage": "shopify://shop_images/m-product-2.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "5971fdb8-353e-409c-8372-13c784d2ab6e": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-3.png",
+            "mimage": "shopify://shop_images/m-product-3.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "95c02eec-0a76-445a-b0c8-b4ef5eb85337": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-4.png",
+            "mimage": "shopify://shop_images/m-product-4.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "0e0d76cc-2e6f-4286-aafc-92eff8a187d4": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-5.png",
+            "mimage": "shopify://shop_images/m-product-5-1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "662be28f-54f2-4038-b1b0-da4ea6389e46": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-6.png",
+            "mimage": "shopify://shop_images/m-product-6.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "0191acdb-1849-457e-9af8-be0d59f922ac": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        },
+        "5f0d18d0-43c3-437f-a7b9-b3cad2409cd1": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth"
+          }
+        },
+        "5b52b042-0881-4684-84f6-e8024f055e1e": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Change or Cancel Subscription Anytime."
+          }
+        },
+        "85b5b324-cd83-4c7e-9598-51856a1588fc": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "1 Extra Peppermint & Eucalyptus Winter Scent"
+          }
+        },
+        "6d080cea-d411-4535-bd06-42cc5b1f3b36": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        },
+        "255ab5dd-7477-4b85-b394-7bdc168e7bd7": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth"
+          }
+        },
+        "871e3169-cd58-4b1c-835b-2b300d2eb793": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Change or Cancel Subscription Anytime."
+          }
+        },
+        "6d3926a4-1873-4ebc-ac20-ce9f221fd2fe": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/w-product-1.png",
+            "mimage_2": "shopify://shop_images/w-m-product-2.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "8c55415a-8a5b-45d5-987d-9db249e8d510": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-2-1.png",
+            "mimage_2": "shopify://shop_images/m-product-2-1.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "c72044ab-7839-4b3e-82b8-30dc70fc6899": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-3.png",
+            "mimage_2": "shopify://shop_images/m-product-3.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "e4f08ab1-e0dc-42bd-85a4-767232e4cf91": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-4-1.png",
+            "mimage_2": "shopify://shop_images/m-product-4-1.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "64be0d3c-224a-4a93-8f45-053f72c5f84f": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/w-product-4.png",
+            "mimage_2": "shopify://shop_images/w-m-product-4.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "9cad78f2-8373-42b2-ac4c-3ccc1d588500": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-6.png",
+            "mimage_2": "shopify://shop_images/m-product-6.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "b8efb933-096a-415b-9f67-ef6075b5b10c",
+        "85db2fba-f602-4cd4-ab1a-dad439edd800",
+        "5971fdb8-353e-409c-8372-13c784d2ab6e",
+        "95c02eec-0a76-445a-b0c8-b4ef5eb85337",
+        "0e0d76cc-2e6f-4286-aafc-92eff8a187d4",
+        "662be28f-54f2-4038-b1b0-da4ea6389e46",
+        "0191acdb-1849-457e-9af8-be0d59f922ac",
+        "5f0d18d0-43c3-437f-a7b9-b3cad2409cd1",
+        "5b52b042-0881-4684-84f6-e8024f055e1e",
+        "85b5b324-cd83-4c7e-9598-51856a1588fc",
+        "6d080cea-d411-4535-bd06-42cc5b1f3b36",
+        "255ab5dd-7477-4b85-b394-7bdc168e7bd7",
+        "871e3169-cd58-4b1c-835b-2b300d2eb793",
+        "6d3926a4-1873-4ebc-ac20-ce9f221fd2fe",
+        "8c55415a-8a5b-45d5-987d-9db249e8d510",
+        "c72044ab-7839-4b3e-82b8-30dc70fc6899",
+        "e4f08ab1-e0dc-42bd-85a4-767232e4cf91",
+        "64be0d3c-224a-4a93-8f45-053f72c5f84f",
+        "9cad78f2-8373-42b2-ac4c-3ccc1d588500"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "* {font-family: \"EB Garamond\";}",
+        ".checkout-starterkit-btn {display: flex !important; padding: 13.6px 28px !important;}",
+        ".cls-1 {fill: #fca71a;}",
+        ".total-reviews {font-size: 14px; color: #37465a; font-family: \"Pier Sans\";}",
+        ".stars-img-review span {font-family: \"Pier Sans\";}",
+        ".btn {background-color: #fca71a !important; font-size: 17.8px !important;}",
+        ".btn span {font-size: 17.8px;}",
+        ".heading-2 {color: #37465a; font-family: EB Garamond; font-size: 41.6px; font-weight: 500;}",
+        ".heading-3 {color: #37465a; font-family: EB Garamond; font-size: 30px; font-weight: 700;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "page-block-zw74e7kpmxb",
+        "background": "#faf3ee",
+        "p_id": "instapage-product-1",
+        "landingproduct": "counter-clean-acquisition",
+        "discount": "",
+        "className": "",
+        "mainheading": "New Customer Offer - Free Starter Kit With a New Counter Clean Plan",
+        "mainsubheading": "Ultra-concentrated, naturally scented eco-friendly cleaning",
+        "heading": "Counter Clean",
+        "subtext": "",
+        "price": "£15.00",
+        "delPrice": "£30.00",
+        "btnText": "BUY NOW",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": false
+      }
+    },
+    "b1fab0f9-2332-47e3-a747-135c2a8f05c5": {
+      "type": "instapage-surfaces",
+      "blocks": {
+        "82a09c50-e9ef-48a7-8b9f-4d142ecace78": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60605805-0-marble-g1b146c652-19.webp",
+            "name": "COUNTERS & STONE"
+          }
+        },
+        "602a23f2-aec8-4448-9469-83b5d18e4081": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60605810-0-bathroom-g548d63134.webp",
+            "name": "BATH & ENAMEL"
+          }
+        },
+        "9043296b-8f26-4c42-93ee-cab0c78df80b": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60605830-0-shower-g0c3d1f3c0-19.webp",
+            "name": "GLASS & MIRRORS"
+          }
+        },
+        "19a9f7b8-115b-449c-b8f1-fc07a62273e4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60605820-0-vintage-g7d9755dbb-1.webp",
+            "name": "WOOD & FLOORS"
+          }
+        }
+      },
+      "block_order": [
+        "82a09c50-e9ef-48a7-8b9f-4d142ecace78",
+        "602a23f2-aec8-4448-9469-83b5d18e4081",
+        "9043296b-8f26-4c42-93ee-cab0c78df80b",
+        "19a9f7b8-115b-449c-b8f1-fc07a62273e4"
+      ],
+      "settings": {
+        "title": "One Non Toxic Cleaner For All Surfaces",
+        "subtitle": "Ultra-concentrated,  naturally scented eco-friendly cleaning power that you dilute at home with tap water, designed to clean all the surfaces in your home. ",
+        "bottom-text": "Safe for your home. Safe for your family. Safe for the planet."
+      }
+    },
+    "4dc6e754-a22c-42de-9b85-1fb1aa7b6dac": {
+      "type": "instapage-info-blocks-2",
+      "blocks": {
+        "a4c0d4be-f276-49aa-9d63-241fb769516e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60713350-0-orange-gd412b53ab-19.webp",
+            "heading": "The Best Essential Oils",
+            "info": "Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don't be surprised when your guests comment on it. All that you need to decide is which scent to use."
+          }
+        },
+        "5357a7f0-3cf1-4c46-82ca-fe786ff02b12": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60616225-0-DSCF4867-min.webp",
+            "heading": "Perfectly Blended",
+            "info": "Purdy & Charlotte have had over 30 years of blending experience and have put all of their years of work into creating the most incredible smelling cleaner you will ever use."
+          }
+        }
+      },
+      "block_order": [
+        "a4c0d4be-f276-49aa-9d63-241fb769516e",
+        "5357a7f0-3cf1-4c46-82ca-fe786ff02b12"
+      ],
+      "settings": {
+        "title": "A scent that transforms your whole home",
+        "subtitle": "'They’re all absolutely delicious, which is not a thing I have found myselfsaying about cleaning products before.' - SUNDAY TIMES",
+        "show-offer-btn": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 4,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "dfd5d74a-d873-42a4-b67f-0d58fc69a935": {
+      "type": "instapage-reviews",
+      "blocks": {
+        "ea66d39e-0a6d-43cd-8818-3636fc07ea55": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/61996928-0-selfie-of-young-woma.jpg",
+            "review": "I normally hate cleaning but I’m totally addicted to the heavenly smell. The floral one is divine, and I’m just starting on the citrus. A big bonus with me is it’s also safe for my pets too. ",
+            "name": "Alice"
+          }
+        },
+        "2932a7f0-6bb6-4fc1-af98-96f6cc577e1f": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60605915-0-Screenshot-2022-01-1.webp",
+            "review": "Absolutely Fabulous! It’s addictive too I’m using it everywhere & smells so so good!!",
+            "name": "Clare"
+          }
+        },
+        "efea264e-4edf-460d-8929-497da2ef6a21": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/61996940-0-portrait-of-young-wo.webp",
+            "review": "This should come with a warning, I am addicted, help! I absolutely love all the essential oils. I need to slow down with my cleaning, it’s out of control!",
+            "name": "Jayne"
+          }
+        }
+      },
+      "block_order": [
+        "ea66d39e-0a6d-43cd-8818-3636fc07ea55",
+        "2932a7f0-6bb6-4fc1-af98-96f6cc577e1f",
+        "efea264e-4edf-460d-8929-497da2ef6a21"
+      ],
+      "settings": {
+        "heading": "6,000+ 5 Star Reviews on Trustpilot"
+      }
+    },
+    "89f7223e-f789-4b27-afc8-c0e84caf6b1e": {
+      "type": "instapage-info-blocks-3",
+      "blocks": {
+        "2e8762aa-3676-4082-918c-0ff0dc3de0b9": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/64618891-0-reusable4.webp",
+            "heading": "Reusable Glass Bottles",
+            "info": "You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans. "
+          }
+        },
+        "44482f62-abc0-4fe0-bc99-6ea0243aee78": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/62829729-0-green.webp",
+            "heading": "14x Lower Carbon Emissions",
+            "info": "Generic Surface Cleaners are made of 90% water and over 1 billion of these heavy bottles are transported around the world every year to get to our homes. Purdy & Figg Eco-Concentrates are 97% lighter than a bulk cleaner to ship and you dilute the concentrates with water coming out of your tap at home."
+          }
+        },
+        "25bcae65-5251-4959-b087-617afbdffed4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/62830338-0-Screen-Shot-2022-10.webp",
+            "heading": "Non-Toxic",
+            "info": "It is our mission to put your family first which is why our Eco-Concentrates are completely plant-based, paraben-free and GMO-free with natural essential oils and no synthetic fragrance or dangerous preservatives. "
+          }
+        }
+      },
+      "block_order": [
+        "2e8762aa-3676-4082-918c-0ff0dc3de0b9",
+        "44482f62-abc0-4fe0-bc99-6ea0243aee78",
+        "25bcae65-5251-4959-b087-617afbdffed4"
+      ],
+      "settings": {
+        "title": "Welcome to a chemical-free cleaning revolution",
+        "subtitle": "",
+        "show-offer-btn": true,
+        "discount": "FREESPA55",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 5,
+        "funnel_stage": "landing_page",
+        "dataModule": "surfaces",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "24a2dc11-b0e6-436c-843d-69795296d356": {
+      "type": "instapage-compare",
+      "custom_css": [
+        ".x_c610ae00 {font-size: 1.381rem !important;}"
+      ],
+      "settings": {
+        "discount": "FREESPA55",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 6,
+        "funnel_stage": "landing_page",
+        "dataModule": "comparison_table",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "cab14b2d-f2f8-4379-983f-fea62cd54682": {
+      "type": "instapage-info-blocks-1",
+      "blocks": {
+        "af12272c-c8c2-4af3-bc7f-1545e421e725": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60526015-0-Screenshot-2022-01-1.webp",
+            "heading": "By PHD Scientist and Award Winning Horticultralist",
+            "info": "Dr Anna Stastanova PHD and Honorary Research Fellow in Surfactant Chemistry is responsible for the worlds most advanced scent extraction ever achieved in a cleaning product. Professional and multi-award-winning Horticultralist Charlotte Figg has created the essential oil blends as a culmination of 30 years of work. "
+          }
+        },
+        "71e9cc79-809b-4a11-b3be-06a8f80dd1ab": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/60339455-0-union-jack-g5dd8d256.webp",
+            "heading": "Manufactured in The UK",
+            "info": "We manufacture Purdy & Figg Eco-Concentrates in England, where we are subject to stringent health regulations. Every Purdy & Figg Eco-Concentrate is manufactured in a state of the art laboratory in England. Rest easy knowing we don't cut corners. Your safety is important to us."
+          }
+        }
+      },
+      "block_order": [
+        "af12272c-c8c2-4af3-bc7f-1545e421e725",
+        "71e9cc79-809b-4a11-b3be-06a8f80dd1ab"
+      ],
+      "settings": {
+        "title": "Two Women On A Mission",
+        "subtitle": "Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.",
+        "show-offer-btn": false
+      }
+    },
+    "318d34c3-c43b-4901-b5ac-ad11e081041f": {
+      "type": "instapage-product-1",
+      "blocks": {
+        "9e9f876f-8978-41e5-8921-fb9571fbf59a": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-1.png",
+            "mimage": "shopify://shop_images/m-product-1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "adf6fa68-7f77-4e45-9ccb-e9dfddacf617": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-2.png",
+            "mimage": "shopify://shop_images/m-product-2.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "599d5c0e-a720-4a2c-a21c-f79413f5b473": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-3.png",
+            "mimage": "shopify://shop_images/m-product-3.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "8abbe493-0022-4ef7-9b18-f108306208b1": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-4.png",
+            "mimage": "shopify://shop_images/m-product-4-1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "2c9188b0-6b15-49ab-8366-aa98ff93632b": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-5.png",
+            "mimage": "shopify://shop_images/m-product-5.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "45497adc-4c88-4375-b3d2-9768c20e52c8": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/product-6.png",
+            "mimage": "shopify://shop_images/m-product-6.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "20ae67dd-0e67-442d-9840-8e106ee0da04": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        },
+        "18f1af2b-5332-4dbe-9622-fb654833a86b": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth"
+          }
+        },
+        "5e7498c7-9f5e-452f-97f7-ac35883fe325": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Change or Cancel Subscription Anytime."
+          }
+        },
+        "f6767cc4-eacc-485a-b40c-7c3a44b2360b": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "1 Extra Peppermint & Eucalyptus Winter Scent"
+          }
+        },
+        "61863b20-39de-4e6c-8807-b080a8669811": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        },
+        "741a98ab-2b7c-43bc-9552-b417e8f67df6": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth"
+          }
+        },
+        "aa97a1c1-7343-498a-b05b-66c43dff4979": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Change or Cancel Subscription Anytime."
+          }
+        },
+        "d20748a6-fd8e-4783-a38d-69907f7dcc21": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/w-product-1.png",
+            "mimage_2": "shopify://shop_images/w-m-product-2.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "06f4cbdd-fba5-4e5a-8ad3-241897cd18f9": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-2-1.png",
+            "mimage_2": "shopify://shop_images/m-product-2-1.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "59d43a61-e80e-46ee-8518-8c122d1406ff": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-3.png",
+            "mimage_2": "shopify://shop_images/m-product-3.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "04374fcd-b7a7-4468-a8fb-fbefa670681a": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-4-1.png",
+            "mimage_2": "shopify://shop_images/m-product-4-1.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "df1c2488-6de2-4cf8-a757-acbc034061ba": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/w-product-4.png",
+            "mimage_2": "shopify://shop_images/w-m-product-4.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "39ca65aa-e06e-4f62-8d2e-843e42f0645a": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/product-6.png",
+            "mimage_2": "shopify://shop_images/m-product-6.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "9e9f876f-8978-41e5-8921-fb9571fbf59a",
+        "adf6fa68-7f77-4e45-9ccb-e9dfddacf617",
+        "599d5c0e-a720-4a2c-a21c-f79413f5b473",
+        "8abbe493-0022-4ef7-9b18-f108306208b1",
+        "2c9188b0-6b15-49ab-8366-aa98ff93632b",
+        "45497adc-4c88-4375-b3d2-9768c20e52c8",
+        "20ae67dd-0e67-442d-9840-8e106ee0da04",
+        "18f1af2b-5332-4dbe-9622-fb654833a86b",
+        "5e7498c7-9f5e-452f-97f7-ac35883fe325",
+        "f6767cc4-eacc-485a-b40c-7c3a44b2360b",
+        "61863b20-39de-4e6c-8807-b080a8669811",
+        "741a98ab-2b7c-43bc-9552-b417e8f67df6",
+        "aa97a1c1-7343-498a-b05b-66c43dff4979",
+        "d20748a6-fd8e-4783-a38d-69907f7dcc21",
+        "06f4cbdd-fba5-4e5a-8ad3-241897cd18f9",
+        "59d43a61-e80e-46ee-8518-8c122d1406ff",
+        "04374fcd-b7a7-4468-a8fb-fbefa670681a",
+        "df1c2488-6de2-4cf8-a757-acbc034061ba",
+        "39ca65aa-e06e-4f62-8d2e-843e42f0645a"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "* {font-family: \"EB Garamond\";}",
+        ".checkout-starterkit-btn {display: flex !important; padding: 13.6px 28px !important;}",
+        ".cls-1 {fill: #fca71a;}",
+        ".total-reviews {font-size: 14px; color: #37465a; font-family: \"Pier Sans\";}",
+        ".stars-img-review span {font-family: \"Pier Sans\";}",
+        ".btn {background-color: #fca71a !important; font-size: 17.8px !important;}",
+        ".btn span {font-size: 17.8px;}",
+        ".heading-2 {color: #37465a; font-family: EB Garamond; font-size: 41.6px; font-weight: 500;}",
+        ".heading-3 {color: #37465a; font-family: EB Garamond; font-size: 30px; font-weight: 700;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "page-block-zw74e7kpmxb",
+        "background": "#faf3ee",
+        "p_id": "",
+        "landingproduct": "counter-clean-acquisition",
+        "discount": "",
+        "className": "",
+        "mainheading": "New Customer Offer - Free Starter Kit With a New Counter Clean Plan ",
+        "mainsubheading": "Ultra-concentrated, naturally scented eco-friendly cleaning",
+        "heading": "Counter Clean",
+        "subtext": "",
+        "price": "£15",
+        "delPrice": "£30",
+        "btnText": "BUY NOW",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": false
+      }
+    },
+    "global_product_5_iqMewz": {
+      "type": "global-product-5",
+      "blocks": {
+        "product_image_LEHzbc": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Winter-Variety-Kit_2_1_4d6f6246-81c7-49b4-9a63-07c1a099f71b.png",
+            "mimage": "shopify://shop_images/Winter-Variety-Kit_2_1_4d6f6246-81c7-49b4-9a63-07c1a099f71b.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_HPVANa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Core-scent--label4_637e296c-ae2c-476f-a6b5-f88b71a02c6e.png",
+            "mimage": "shopify://shop_images/Core-scent--label4_637e296c-ae2c-476f-a6b5-f88b71a02c6e.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_JbVTiy": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/winter-how-it-works_7.png",
+            "mimage": "shopify://shop_images/winter-how-it-works_7.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_NBzxbc": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/StarterKit5.jpg",
+            "mimage": "shopify://shop_images/StarterKit5.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_b7rPt6": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Winter_Studio_30015_S5_Wi5_4_84419f67-2226-44b9-977a-2abc2adeee53.png",
+            "mimage": "shopify://shop_images/Winter_Studio_30015_S5_Wi5_3.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_MLXDfF": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/m-product-6.png",
+            "mimage": "shopify://shop_images/m-product-6.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "text_xzcJYm": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        },
+        "text_9dKQbL": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth"
+          }
+        },
+        "text_PapywA": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Change or Cancel Anytime"
+          }
+        },
+        "text_gFWcnX": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 Signature Eco-Concentrate Refills (Delivered Every 3 Months)"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_LEHzbc",
+        "product_image_HPVANa",
+        "product_image_JbVTiy",
+        "product_image_NBzxbc",
+        "product_image_b7rPt6",
+        "product_image_MLXDfF",
+        "text_xzcJYm",
+        "text_9dKQbL",
+        "text_PapywA",
+        "text_gFWcnX"
+      ],
+      "custom_css": [
+        ".gp-5-points li {padding-bottom: 12px;}",
+        ".gp-5-price-points > ul {position: relative; margin: 0; padding-bottom: 0px;}",
+        ".heading-2-wrapper .heading-2 {font-size: 30px; color: #3d5065 !important; font-family: \"Value-Serif-Pro\";}",
+        ".btn {border-radius: 999px !important;}",
+        ".gp-5-top .heading-3 {}",
+        ".checkout-starterkit-btn {display: flex !important; padding: 13.6px 28px !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "review-section",
+        "background": "#ffffff",
+        "p_id": "starterkit-product",
+        "landingproduct": "counter-clean-starter-kit",
+        "discount": "FREESPA55",
+        "tab_description_1": "Transform your home with new natural scents each season",
+        "tab_description_2": "Our best-selling citrus for a beautifully scented home",
+        "className": "",
+        "mainheading": "New Customer Offer: SAVE £15 On A Starter Kit Plan",
+        "mainsubheading": "Ultra-concentrated, eco-friendly cleaning",
+        "heading": "Counter Clean Starter Kit",
+        "subtext": "",
+        "price": "£15.00",
+        "delPrice": "£30.00",
+        "btnText": "BUY NOW",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": false,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_2",
+        "dataTitle": "buy_now",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    }
+  },
+  "order": [
+    "c9f1f3e7-752b-49be-947e-50b113a0dec9",
+    "instapage_banner_2_BJTHzL",
+    "501b9c5b-fca9-4a44-8535-87a78ce103ce",
+    "f938af7e-3128-40fc-b0f7-fdeaecb72baf",
+    "main",
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33",
+    "ec21f2d5-a068-440d-96df-3f231dc22ee7",
+    "74d1173c-0c0f-4bfb-a869-b715e942c791",
+    "7b978e3e-93e0-42e1-9bf3-be454c9f857f",
+    "global_product_5_wgyHM6",
+    "045292ee-cba7-4c92-ac22-6d6aac776be0",
+    "b1fab0f9-2332-47e3-a747-135c2a8f05c5",
+    "4dc6e754-a22c-42de-9b85-1fb1aa7b6dac",
+    "dfd5d74a-d873-42a4-b67f-0d58fc69a935",
+    "89f7223e-f789-4b27-afc8-c0e84caf6b1e",
+    "24a2dc11-b0e6-436c-843d-69795296d356",
+    "cab14b2d-f2f8-4379-983f-fea62cd54682",
+    "318d34c3-c43b-4901-b5ac-ad11e081041f",
+    "global_product_5_iqMewz"
+  ]
+}

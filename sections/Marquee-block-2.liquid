@@ -1,0 +1,124 @@
+{% if section.settings.enable %}
+  <div class="marquee-section-wraper position-relative py-4">
+    {% if section.settings.marqueeHTML != '' %}
+      <div>
+        <h2 class="heading-3 text-center font-value white-text mb-4">{{ section.settings.marqueeHTML }}</h2>
+      </div>
+    {% endif %}
+    <div class="marquee-section d-flex" style="">
+      <div class="marquee-block d-flex">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img"><img src="{{ block.settings.usp_img | img_url: "200x" }}"></div>
+          {% else %}
+            <div class="marquee-text">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img"><img src="{{ block.settings.usp_img | img_url: "200x" }}"></div>
+          {% else %}
+            <div class="marquee-text">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img"><img src="{{ block.settings.usp_img | img_url: "200x" }}"></div>
+          {% else %}
+            <div class="marquee-text">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img"><img src="{{ block.settings.usp_img | img_url: "200x" }}"></div>
+          {% else %}
+            <div class="marquee-text">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img"><img src="{{ block.settings.usp_img | img_url: "200x" }}"></div>
+          {% else %}
+            <div class="marquee-text">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<style>
+    /* marquee section */
+  .marquee-section{padding:8px 10px;overflow: hidden;}.marquee-text{color: #fff;font-size: 1rem;font-family: 'Pier Sans';padding: 0 35px;position: relative;}.marquee-text:after{content: '';position: absolute;width: 2px;height: 100%;background-color: #fff;right:0;top:0;}.marquee-block{flex: 1 0 auto;-webkit-animation: e 35s linear infinite ;animation: e 35s linear infinite ;}@-webkit-keyframes e {0% {transform: translateX(0);}to {transform: translateX(-100%);}}@keyframes e {0% {transform: translateX(0);}to {transform: translateX(-100%);}}.marquee-section{background-color:{{section.settings.color_bg}}}.marquee-text{color:{{section.settings.color_text}};}.marquee-text:after{background-color:{{section.settings.color_text}}}
+  .marquee-section-wraper{
+    background-color: {{ section.settings.color_bg }};
+  }
+</style>
+{% schema %}
+ {
+    "name": "Marquee Block",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "checkbox",
+      "id": "img_slider",
+      "label": "enable image slider",
+      "default": false
+    },
+      {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Background color",
+          "default": "#3D5065"
+        },
+{
+          "type": "color",
+          "id": "color_text",
+          "label": "Text color",
+          "default": "#fff"
+        }
+,
+{
+          "type": "html",
+          "id": "marqueeHTML",
+          "label": "marque text"
+        }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "usp",
+        "settings": [
+          {
+            "type": "text",
+            "id": "usp",
+            "label": "USP lable"
+          },
+          {
+            "type": "image_picker",
+            "id": "usp_img",
+            "label": "USP image"
+          }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Marquee Block"
+		}
+	]
+  }
+{% endschema %}

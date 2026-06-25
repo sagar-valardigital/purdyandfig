@@ -1,0 +1,208 @@
+{% if section.settings.enable %}
+  {% assign product = section.settings.landingproduct %}
+  {% assign s_variant = product.selected_or_first_available_variant %}
+<div class="{{ section.settings.className }}" style="background-color:{{section.settings.background}};" 
+   x-data="{qty:1}">
+        <div class="mobile-padding-y image-with-text">
+            <div class="">
+                <h2 class="heading-2  {{section.settings.textcolor}} {% if section.settings.heading-position%} mobile-hide {% endif %} desktop-hide mt-0 text-center">
+                    {{section.settings.heading}}
+                </h2>
+              <div class="d-flex flex-wrap justify-content-between align-items-center">
+                <div class="w-50 {% if section.settings.layout %} order-2 {%endif%}">
+                    <div class="two-women">
+                      {% if section.settings.image %}
+                      	{% assign dImage = section.settings.image | img_url: '800x' %}
+                        {% assign mImage = section.settings.mimage | img_url: '800x' %}
+                        <img loading="lazy" src="{{dImage}}" width="800px" height="800px" class="img-responsive w-100 mobile-hide" alt="">
+                      <img loading="lazy" src="{{mImage}}" width="800px" height="800px" class="img-responsive w-100 desktop-hide" alt="">
+                  	  {%endif%}  
+                  </div>
+                </div>
+                <div class="w-50  d-flex justify-content-center {% if section.settings.layout %} order-1 {%endif%} ">
+                    <div class="two-women-details  pb-2 {{section.settings.width}}">
+                        
+                            <h2 class="heading-2 {{section.settings.textcolor}} {% if section.settings.heading-position%} {% else %}mobile-hide{% endif %}">{{section.settings.heading}}
+                            </h2>
+                            <div class="theme-text">
+                              
+                <h3 class="font-value mt-4 bb-points">{{ section.settings.subtext }}</h3>
+                <ul class="bb-points">
+                  {% for block in section.blocks %}
+                  <li>{{ block.settings.listItem }}</li>
+                    {% endfor %}
+                  
+                </ul>
+            </div>
+             <div class="theme-text text-left">
+              <h2 class="heading-2 bb-price">
+  {% if section.settings.delPrice != '' %}<small><del>£{{ section.settings.delPrice }}</del></small> {% endif %} £{{ section.settings.price }}
+  </h2>
+            </div>
+            <form @submit.prevent="console.log('submitted')"  x-ref="product_form"  enctype="multipart/form-data" accept-charset="UTF-8" id="product_form_{{product.id}}" class="shopify-product-form"  data-product-id="{{product.id}}" action="/cart/add">
+              <input type="hidden" name="id" value={{ s_variant.id }}>
+              <input type="hidden" name="quantity" value="1">
+            </form>
+          <div class="text-left mt-3">
+            <span  class="btn w-100 theme-btn checkout-au-btn {% if section.settings.outOfStock %} bb-disable {% endif %}" {% if section.settings.isSub %}  {% else %} x-on:click="Purdy.AddToCart($refs.product_form)" {% endif %}> {% if section.settings.outOfStock %} Out of Stock {% else %} BUY NOW {% endif %}</span><br>
+              <small class="theme-text text-center w-100">{{ section.settings.ctaDetails }}</small>
+          </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}
+
+
+{% schema %}
+  {
+    "name": "Landing BB product",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "checkbox",
+      "id": "outOfStock",
+      "label": "Enable If product out Of Stock",
+      "default": true
+    },
+      {
+      "id": "isSub",
+      "label": "Product subscription",
+      "type": "checkbox",
+      "default": false
+    },
+      {
+      "id": "landingproduct",
+      "label": "Choose the landing product",
+      "type": "product"
+    },
+    {
+        "type": "select",
+        "id": "textcolor",
+        "label": "Select text color",
+        "options": [
+          {
+            "value": "white-text",
+            "label": "White color"
+          },
+          {
+            "value": "theme-text",
+            "label": "Theme color"
+          }
+        ],
+        "default": "white-text"
+          },
+         
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Select text area width",
+            "options": [
+              {
+                "value": "w-90",
+                "label": "90%"
+              },
+              {
+                "value": "w-80",
+                "label": "80%"
+              },
+{				
+                "value": "w-70",
+                "label": "70%"
+              },
+              {
+                "value": "w-60",
+                "label": "60%"
+              }
+            ],
+            "default": "w-80"
+          },
+{
+            "type": "checkbox",
+            "id": "layout",
+            "label": "Image on right"
+            
+          },
+{
+      "type": "text",
+      "id": "className",
+      "label": "Section Class"
+    },
+      {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+      {
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "html"
+    },
+{
+      "type": "image_picker",
+      "id": "image",
+      "label": "Add Desktop Image"
+    },
+      {
+      "type": "image_picker",
+      "id": "mimage",
+      "label": "Add Mobile Image"
+    },
+      {
+      "id": "price",
+      "label": "Price",
+      "type": "text"
+    },
+    {
+      "id": "delPrice",
+      "label": "Compare Price",
+      "type": "text"
+    },{
+  "id": "ctaDetails",
+  "label":"Button Details Text",
+  "type": "html"
+      },
+{
+      "type": "header",
+      "content": "Mobile"
+    },
+
+{
+            "type": "checkbox",
+            "id": "heading-position",
+            "label": "Heading After Image"
+            
+          }
+	],
+		"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [ 
+
+{
+      "type": "text",
+      "id": "listItem",
+      "label": "Add Item"
+    }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Landing BB product"
+		}
+	]
+  }
+{% endschema %}
+
+

@@ -1,0 +1,898 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_reskin_rbhtVb": {
+      "type": "announcement-bar-219",
+      "disabled": true,
+      "settings": {
+        "class": "announcement-219-inner",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Save £25 today",
+        "scrollto": "starterkit-product",
+        "btn-bg": "#212121",
+        "btn-text": "#ffffff",
+        "annuText": "GET OFFER",
+        "top": "0",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "announcement_bar_reskin_NEErpW": {
+      "type": "announcement-bar-reskin",
+      "settings": {
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Save <span class=\"market-place-currency\"></span>25 including FREE bottle &amp; cloth",
+        "scrollto": "starterkit-product",
+        "btn-bg": "#212121",
+        "btn-text": "#ffffff",
+        "annuText": "GET OFFER",
+        "top": "0",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_4mHyG8": {
+      "type": "banner-10",
+      "custom_css": [
+        "@media (max-width: 480px) {.banner-section.banner-10 {height: 560px; }}",
+        "@media (max-width: 768px) {.banner-section.banner-10 {height: 600px; }}",
+        "@media (min-width: 1100px) {.banner-section.banner-10 {height: 650px; }}",
+        "@media (min-width: 1600px) {.banner-section.banner-10 {height: 90vh; }}"
+      ],
+      "settings": {
+        "txt-color": "#ffffff",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktop_82ba098b-b74a-438c-8ef9-a0e4fe334420.jpg",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobile_19f10bf2-a9c1-43b5-b02a-4401c250f8f8.jpg",
+        "heading": "Give your home its signature scent",
+        "sub_heading": "Limited time offer: Save £25 on Starter Kits, including FREE Bottle for Life &amp; cloth",
+        "btn-bg": "#ffffff",
+        "btn-txt-color": "#11322c",
+        "button_label": "GET OFFER",
+        "button_link": "starterkit-product",
+        "top": "0",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_listing_gAWD66": {
+      "type": "image-with-listing",
+      "blocks": {
+        "text_ehqGFz": {
+          "type": "text",
+          "settings": {
+            "heading": "A powerful cleaning formula"
+          }
+        },
+        "text_QEYzKQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Natural, non-toxic ingredients"
+          }
+        },
+        "text_ayQGtm": {
+          "type": "text",
+          "settings": {
+            "heading": "One spray for every surface"
+          }
+        },
+        "text_i7aafF": {
+          "type": "text",
+          "settings": {
+            "heading": "Pure essential oil scents"
+          }
+        }
+      },
+      "block_order": [
+        "text_ehqGFz",
+        "text_QEYzKQ",
+        "text_ayQGtm",
+        "text_i7aafF"
+      ],
+      "settings": {
+        "bgImage": "shopify://shop_images/BG---Desktop.png",
+        "heading": "The only natural cleaning spray that does it all",
+        "image": "shopify://shop_images/b_36e066c5-4698-420b-8999-ff4c87e2f090.png",
+        "icon": "shopify://shop_images/Tick_82ab0702-7f1e-4ca3-9f1d-3af426533376.png"
+      }
+    },
+    "how_it_works_tabs_pwDHaa": {
+      "type": "how-it-works-tabs",
+      "blocks": {
+        "tab_one_eQDcGd": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "heading_image": "shopify://shop_images/Media_12.svg",
+            "heading": "Receive our 3 best sellers",
+            "content": "Clean with our most popular scents."
+          }
+        },
+        "tab_one_nYVNiy": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "heading_image": "shopify://shop_images/Media_13.svg",
+            "heading": "Decide which one is your favourite",
+            "content": "Choose your home’s perfect match."
+          }
+        },
+        "tab_one_W9Mg7D": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "heading_image": "shopify://shop_images/Media_14.svg",
+            "heading": "Customise your membership",
+            "content": "Easily update to receive only the scents you like."
+          }
+        },
+        "tab_two_BaACGw": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "heading_image": "shopify://shop_images/Media_12.svg",
+            "heading": "Receive this season's scents",
+            "content": "Wait for your seasonal scents to arrive."
+          }
+        },
+        "tab_two_dfXabe": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "heading_image": "shopify://shop_images/Media_13.svg",
+            "heading": "Enjoy each unique blend every season",
+            "content": "Clean with each blend."
+          }
+        },
+        "tab_two_wVeAGq": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "heading_image": "shopify://shop_images/Media_14.svg",
+            "heading": "Stick or twist",
+            "content": "Stick with Seasonal or easily switch to Signature."
+          }
+        }
+      },
+      "block_order": [
+        "tab_one_eQDcGd",
+        "tab_one_nYVNiy",
+        "tab_one_W9Mg7D",
+        "tab_two_BaACGw",
+        "tab_two_dfXabe",
+        "tab_two_wVeAGq"
+      ],
+      "settings": {
+        "heading": "How it works",
+        "tabone": "Signature",
+        "t1_title": "Best for consistency",
+        "t1_d_image": "shopify://shop_images/Title_1.png",
+        "t1_m_image": "shopify://shop_images/Title_3.png",
+        "tabtwo": "Seasonal",
+        "t2_title": "Best for variety",
+        "t2_d_image": "shopify://shop_images/Title_2.png",
+        "t2_m_image": "shopify://shop_images/Title_4.png"
+      }
+    },
+    "signature_seasonal_tabs_2_7JX9rQ": {
+      "type": "signature-seasonal-tabs-2",
+      "blocks": {
+        "tab_one_YbRq7T": {
+          "type": "tab-one",
+          "settings": {
+            "first": true,
+            "tag": "",
+            "heading": "Find your home’s signature scents",
+            "image": "shopify://shop_images/Signature_title_card.png",
+            "content": "Try our three favourites in your first order",
+            "blend": "Try our three favourites in your first order"
+          }
+        },
+        "tab_one_6t6Gik": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Uplifting Citrus",
+            "image": "shopify://shop_images/Image_8_50699cdf-fe4f-4e9a-8db8-ff5ceec96579.png",
+            "mobile_image": "shopify://shop_images/Image_8_50699cdf-fe4f-4e9a-8db8-ff5ceec96579.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_one_QUxQwH": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Balancing Floral",
+            "image": "shopify://shop_images/Image_9_785ce913-8d85-43d2-b32d-8a9c71db6264.png",
+            "mobile_image": "shopify://shop_images/Image_9_785ce913-8d85-43d2-b32d-8a9c71db6264.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_one_CYfEJc": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Grounding Vetiver",
+            "image": "shopify://shop_images/Image_10_25458635-fb4a-41f7-88b1-686bb849cbfe.png",
+            "mobile_image": "shopify://shop_images/Image_10_25458635-fb4a-41f7-88b1-686bb849cbfe.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_KQpNcY": {
+          "type": "tab-two",
+          "settings": {
+            "first": true,
+            "tag": "Winter Scents",
+            "heading": "Change your scents with the seasons",
+            "image": "shopify://shop_images/Seasonal_title_card.png",
+            "content": "Get three new, unique scents this winter",
+            "blend": ""
+          }
+        },
+        "tab_two_NcH4UY": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Peppermint & Eucalyptus",
+            "image": "shopify://shop_images/Image_11_98197155-2208-4a71-8013-c8b797c7e9fb.png",
+            "mobile_image": "shopify://shop_images/Image_11_98197155-2208-4a71-8013-c8b797c7e9fb.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_WDMTRL": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Fir & Bergamot",
+            "image": "shopify://shop_images/Image_12.png",
+            "mobile_image": "shopify://shop_images/Image_12.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_8PcjKm": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Cedarwood & Lavender",
+            "image": "shopify://shop_images/Image_13.png",
+            "mobile_image": "shopify://shop_images/Image_13.png",
+            "content": "",
+            "blend": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_one_YbRq7T",
+        "tab_one_6t6Gik",
+        "tab_one_QUxQwH",
+        "tab_one_CYfEJc",
+        "tab_two_KQpNcY",
+        "tab_two_NcH4UY",
+        "tab_two_WDMTRL",
+        "tab_two_8PcjKm"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.tab-block.first-block .heading-3 {font-size: 22px; line-height: 125%; } .sub-heading-3 {font-size: 14px; }}"
+      ],
+      "settings": {
+        "heading": "",
+        "tabone": "Signature",
+        "tabtwo": "Seasonal"
+      }
+    },
+    "global_product_20_hpPjcT": {
+      "type": "global-product-219",
+      "blocks": {
+        "product_image_pAeVQQ": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_-_Desktop_01.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_-_Mobile_01.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image_TAwqPa": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_-_Desktop_02.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_-_Mobile_02.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image_phNNax": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_-_Desktop_03.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_-_Mobile_03.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image_bw4xtz": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_-_Desktop_04.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_-_Mobile_04.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image_wzpCJp": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_-_Desktop_05.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_-_Mobile_05.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_QykkHC": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_-_Desktop_01.jpg",
+            "mimage": "shopify://shop_images/Signature_-_Mobile_01.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_djFrbn": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_-_Desktop_02.jpg",
+            "mimage": "shopify://shop_images/Signature_-_Mobile_02.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_MQjXK6": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_-_Desktop_03.jpg",
+            "mimage": "shopify://shop_images/Signature_-_Mobile_03.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_iA6AHF": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_-_Desktop_04.jpg",
+            "mimage": "shopify://shop_images/Signature_-_Mobile_04.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_DA6fi9": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_-_Desktop_05.jpg",
+            "mimage": "shopify://shop_images/Signature_-_Mobile_05.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "variant_FCCqdL": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "variantBadge": "",
+            "varCount": "1",
+            "text_heading": "Signature",
+            "discount": "SIGNATURE261a",
+            "variantProduct": "counter-clean-pf99-test",
+            "delPrice": "4000",
+            "sellPrice": "1500",
+            "varaiantid": "54882187444604",
+            "sellingid": "4158095587",
+            "sku": "FG1096s",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "hp",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "2"
+          }
+        },
+        "variant_dBichG": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "variantBadge": "",
+            "varCount": "2",
+            "text_heading": "Seasonal",
+            "discount": "SEASONAL261a",
+            "variantProduct": "seasonal-starter-kit-winter",
+            "delPrice": "4000",
+            "sellPrice": "1500",
+            "varaiantid": "54819059237244",
+            "sellingid": "710094782844",
+            "sku": "FG1208a",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Seasonal",
+            "eventValue": "product_anchor",
+            "optionIndex": "1"
+          }
+        },
+        "text_PMM83R": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 rotating seasonal scent concentrates lasting 2-3 months <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>21)</span>"
+          }
+        },
+        "text_a6hNWF": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "FREE glass Bottle for Life &amp; cloth <span class=\"fw-400\">(worth <span class=\"market-place-currency\">19</span>)</span>"
+          }
+        },
+        "text_tDGEyp": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_jMEdfp": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "30-day money-back guarantee"
+          }
+        },
+        "text_CLHPa6": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 signature scent concentrates lasting 2-3 months <span class=\"fw-400\">(worth <span class=\"market-place-currency\">21</span>)</span>"
+          }
+        },
+        "text_i47nwb": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "FREE glass Bottle for Life &amp; cloth <span class=\"fw-400\">(worth <span class=\"market-place-currency\">19</span>)</span>"
+          }
+        },
+        "text_VBM9G6": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_WakeXg": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "30-day money-back guarantee"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_pAeVQQ",
+        "product_image_TAwqPa",
+        "product_image_phNNax",
+        "product_image_bw4xtz",
+        "product_image_wzpCJp",
+        "product_image2_QykkHC",
+        "product_image2_djFrbn",
+        "product_image2_MQjXK6",
+        "product_image2_iA6AHF",
+        "product_image2_DA6fi9",
+        "variant_FCCqdL",
+        "variant_dBichG",
+        "text_PMM83R",
+        "text_a6hNWF",
+        "text_tDGEyp",
+        "text_jMEdfp",
+        "text_CLHPa6",
+        "text_i47nwb",
+        "text_VBM9G6",
+        "text_WakeXg"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".global-product-19-wrapper .gp-4-details .gp-5-bottom .gp-5-variant-li label {border-color: #edc6a2;}",
+        ".link-to-variant {font-family: \"Lausanne\";}",
+        "li.gp-5-variant-li.value-sans {font-family: \"Lausanne\";}",
+        "@media (max-width: 768px) {.stars-img-review span {font-size: 12px !important; } .global-product-5 .star-img {width: 12px; } .global-product-19-wrapper .gp-5-price-points {background-color: #f5f5f5; }}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": false,
+        "guaranteeDescription": "30-day money-back guarantee",
+        "guaranteeTextColor": "#212121",
+        "scrollto": "",
+        "background": "#fbf1e8",
+        "p_id": "starterkit-product",
+        "landingproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "varaiantid": "54882187444604",
+        "sellingid": "4158095587",
+        "sku": "FG1096s",
+        "discount": "SIGNATURE261a",
+        "tab_description_1": "Enjoy our three best-selling scents all year round",
+        "tab_description_2": "New limited edition scents every season",
+        "className": "gp-5-ab global-product-19-wrapper  gp-219",
+        "mainheading": "New customer offer: FREE Starter Kit",
+        "mainsubheading": "One powerful cleaner for your entire home",
+        "choosescent": "Choose your scent",
+        "heading": "Counter Clean Starter Kit",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "40.00",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "38,325",
+        "reviews_desktop": "1,734",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 6,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "transformational_scents_pf150_rwUVii": {
+      "type": "transformational-scents-pf150",
+      "blocks": {
+        "image_CQMDtW": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/d-little-1.png",
+            "mBlockImage": "shopify://shop_images/m-little-1.png",
+            "tag": "",
+            "heading": "Stone",
+            "details": "Spray on granite, marble, quartz and other sealed surfaces daily to keep them sparkling."
+          }
+        },
+        "image_LdadRF": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/d-little-2.png",
+            "mBlockImage": "shopify://shop_images/m-little-2.png",
+            "tag": "",
+            "heading": "Glass",
+            "details": "Work downwards to eliminate streaks on vertical surfaces like mirrors, screens and windows."
+          }
+        },
+        "image_J7ikPe": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/d-little-3.png",
+            "mBlockImage": "shopify://shop_images/m-little-3.png",
+            "tag": "",
+            "heading": "Wood",
+            "details": "Wipe away dust and grime, spray to clean, then pat dry for an even finish."
+          }
+        }
+      },
+      "block_order": [
+        "image_CQMDtW",
+        "image_LdadRF",
+        "image_J7ikPe"
+      ],
+      "custom_css": [
+        ".heading-2 {margin-bottom: 12px;}",
+        "@media (min-width: 768px) {.heading-2 br {display: none; }}"
+      ],
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#f6f1e5",
+        "class": "pf-173-nature show pf-173-little mobile-container-0",
+        "linkVariant": "",
+        "heading": "One spray for your whole home",
+        "subtext": "Safe to use on every surface in the home for a simple cleaning routine"
+      }
+    },
+    "video_with_text_DwfNr7": {
+      "type": "video-with-text",
+      "blocks": {
+        "text_bexDwb": {
+          "type": "text",
+          "settings": {
+            "width": "w-60",
+            "layout": true,
+            "heading": "Excellent at multitasking",
+            "image": "shopify://shop_images/Video.png",
+            "video": "https://cdn.shopify.com/videos/c/o/v/54acbadaebc843be9258328664354790.mp4",
+            "details": "Counter Clean is effective on stone, wood and glass, replacing dozens of other products.",
+            "dataTrack": false,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "announcement_bar",
+            "dataTitle": "get_your_offer",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "",
+            "ItemName": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_bexDwb"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "",
+        "textcolor": "#e7ebea",
+        "background": "#11322c"
+      }
+    },
+    "icon_blocks_reskin_rGjmBX": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_eafBfy": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More convenient",
+            "icon_block_description": "3 refills delivered to your door every 3 months so you never run out",
+            "icon_block_image": "shopify://shop_images/convenient.png"
+          }
+        },
+        "iconblocks_VbrfzY": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More flexible",
+            "icon_block_description": "Bring forward, delay, or cancel online, with one easy click. No questions asked",
+            "icon_block_image": "shopify://shop_images/flex.png"
+          }
+        },
+        "iconblocks_RQ79Dx": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More rewarding",
+            "icon_block_description": "Members-only access to new offers, scents, products, and prices",
+            "icon_block_image": "shopify://shop_images/rewarding.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_eafBfy",
+        "iconblocks_VbrfzY",
+        "iconblocks_RQ79Dx"
+      ],
+      "settings": {
+        "class": "pf-219-icon-block",
+        "bg": "#ffffff",
+        "textcolor": "#212121",
+        "heading": "A membership to change the way you clean forever",
+        "show_hide_block": true
+      }
+    },
+    "full_width_image_text_Ppn6wx": {
+      "type": "full-width-image-text",
+      "custom_css": [
+        ".founders-p1 {font-size: 18px !important;}",
+        ".founders-p2 {font-size: 16px !important;}",
+        "@media (max-width: 768px) {.founders-p1 {font-size: 16px !important; } .founders-p2 {font-size: 14px !important; }}"
+      ],
+      "settings": {
+        "className": "about-pf",
+        "textcolor": "#212121",
+        "background": "#ffffff",
+        "backgroundImage": "shopify://shop_images/BG_-_Desktop.jpg",
+        "layout": true,
+        "heading": "Meet our founders",
+        "image": "shopify://shop_images/Founders.jpg",
+        "details": "<b class=\"fw-500 d-block mb-2 founders-p1\">Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning even more effective, more effortless, and more enjoyable.</b>\n<span class=\"founders-p2\">\nFrom a Hertfordshire garage to millions of homes, their multipurpose way spray, scented with essential oils, is on the way to changing the way we feel about cleaning for good.</span>"
+      }
+    },
+    "quote_reviews_XRw9fM": {
+      "type": "quote-reviews",
+      "blocks": {
+        "quote_iUKyzy": {
+          "type": "quote",
+          "settings": {
+            "heading": "The best smelling",
+            "quotetext": "'This is so brilliant - it’s a delicious-smelling cleaner that you can use on everything'",
+            "quoteby": "The Sunday Times"
+          }
+        },
+        "quote_cQhYjK": {
+          "type": "quote",
+          "settings": {
+            "heading": "The most enjoyable",
+            "quotetext": "'If you’re looking for luxurious cleaning vibes then Purdy & Figg take home the gold'",
+            "quoteby": "The Daily Mail"
+          }
+        },
+        "quote_FRq3fD": {
+          "type": "quote",
+          "settings": {
+            "heading": "The hardest working",
+            "quotetext": "'It left our tiles spotless and the cleaner cut through grease on our countertop without leaving any sticky residue behind'",
+            "quoteby": "Good Housekeeping"
+          }
+        }
+      },
+      "block_order": [
+        "quote_iUKyzy",
+        "quote_cQhYjK",
+        "quote_FRq3fD"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "",
+        "bgColor": "#fafafa",
+        "heading": "Hear what the papers are saying about us...",
+        "details": "",
+        "followText": "GET OFFER TODAY",
+        "followLink": "starterkit-product"
+      }
+    },
+    "faq_section_reskin_ALn44g": {
+      "type": "faq-section-reskin",
+      "blocks": {
+        "text_QygHrY": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of cleaning concentrate into your Bottle for Life and slowly fill to the top (just below the neck) with tap water. Give the bottle a gentle shake to mix, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "text_HkQc97": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to say that Counter Clean is pH neutral, which means it’s safe to use on most surfaces. That includes softer materials like aluminium, wood, stone, quartz and other sealed surfaces. We do recommend patch testing first on any particularly sensitive or precious surfaces you’re concerned about. Just spray onto a cloth and wipe a small patch to see the results. </p>"
+          }
+        },
+        "text_TLFd9j": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>We offer lots of subscription options, including switching your scent refill pack, changing the frequency of your deliveries or cancelling your membership altogether. Subscriptions are set to a 90-day frequency by default, but you can always move your next billing date if you need to in a few easy steps. We understand there might be times when you need to stop your deliveries, and we’ll always respect your decision to leave - even if we’ll miss you. <br/><br/>If you have any trouble managing your subscription, our Customer Experience Team is always on hand to respond to your questions and requests as soon as possible. They’re very friendly.</p>"
+          }
+        },
+        "text_wwqHGw": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What's the difference between Signature & Seasonal?",
+            "faq-ans": "<p>We offer two different scent collections with your Counter Clean subscription - Signature and Seasonal Scents. Our Signature Scent pack is available all year round, and contains our three best-selling scents - Uplifting Citrus, Balancing Floral, and Grounding Vetiver. Our Seasonal Scent pack contains three limited edition new scents blended for every season. </p>"
+          }
+        },
+        "text_KaAzJT": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>A 300ml bottle of Counter Clean (including one 20ml concentrate) contains about 230 sprays. A typical household will get through one of our 300ml bottles in two to four weeks, unless you get a bit addicted to wiping down your surfaces like we have!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_QygHrY",
+        "text_HkQc97",
+        "text_TLFd9j",
+        "text_wwqHGw",
+        "text_KaAzJT"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": true,
+        "scrollBtnText": "GET  OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 10,
+        "funnel_stage": "landing_page",
+        "dataModule": "faq",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_kGNHfT": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_reskin_rbhtVb",
+    "announcement_bar_reskin_NEErpW",
+    "banner_10_4mHyG8",
+    "image_with_listing_gAWD66",
+    "how_it_works_tabs_pwDHaa",
+    "signature_seasonal_tabs_2_7JX9rQ",
+    "global_product_20_hpPjcT",
+    "transformational_scents_pf150_rwUVii",
+    "video_with_text_DwfNr7",
+    "icon_blocks_reskin_rGjmBX",
+    "full_width_image_text_Ppn6wx",
+    "quote_reviews_XRw9fM",
+    "faq_section_reskin_ALn44g",
+    "footer_2_kGNHfT"
+  ]
+}

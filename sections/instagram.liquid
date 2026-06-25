@@ -1,0 +1,109 @@
+{% if section.settings.enable%}
+<div class="review-section instagram-wrapper py-5  {{ section.settings.className }}" style="background-color:{{ section.settings.bgColor }}">
+        <div class="container">
+          {% if section.settings.heading !='' %}
+            <h2 class="heading-2 text-center theme-text mt-0 mb-3">{{section.settings.heading}}</h2>
+            {% endif %}
+  {% if section.settings.details !='' %}
+            <h2 class="normal-text text-center theme-text mt-0 mb-4">{{section.settings.details}}</h2>
+            {% endif %}
+        </div>
+  <div class="container">
+        <div class="insta-slider">
+
+          {%  for block in section.blocks %}
+          <div class="insta-item py-1 px-3">
+            <a class="insta-post d-block" target="_blank" href="{{ block.settings.ig_url }}">
+              <div class="insta-img position-relative" >
+                <img class="w-100 img-responsive" src="{{ block.settings.ig_image | img_url :'400x400', crop : 'center' }}">
+                <img class="reel-icon position-absolute img-responsive" src="{{ 'reel.png' | asset_img_url :'30x' }}" alt="reel">
+              </div>
+            {% if block.settings.ig_username !='' %}
+              <div class="insta-post-details p-3">
+                <div class="insta-post-user-img">
+                  <img class="w-100 img-responsive" src="{{ block.settings.ig_image | img_url :'50x' }}" alt="insta">
+                </div>
+                <div class="insta-post-username">
+                  <p class="m-0 text-black">{{ block.settings.ig_username }}</p>
+                </div>
+              </div>
+              {% endif %}
+            </a>
+          </div>
+        {%  endfor %}
+        </div>
+        <div class="text-center mt-5">
+          {% if section.settings.followLink %}
+              <a href="{{ section.settings.followLink }}" class="btn theme-border-btn">{{ section.settings.followText }}</a>
+          {% endif %}
+        </div>                   
+    </div>
+</div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Instagram",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "color",
+      "id": "bgColor",
+      "label": "Background Color"
+    },
+     {
+      "type":"text",
+      "id":"heading",
+      "label": "Section Heading"
+    },
+      {
+      "type":"text",
+      "id":"details",
+      "label": "Section detail text"
+    },
+       {
+      "type":"text",
+      "id":"followText",
+      "label": "Button text"
+    } ,{
+      "type":"url",
+      "id":"followLink",
+      "label": "Instagram Link"
+    }
+    ],
+    "blocks":
+      [{
+      "type":"igblock",
+      "name":"IG block",
+      "settings":[
+          {
+            "type": "image_picker",
+            "id": "ig_image",
+            "label": "IG thumbnail"
+          },
+          {
+            "type": "text",
+            "id": "ig_username",
+            "label": "IG username"
+          },
+          {
+            "type": "url",
+            "id": "ig_url",
+            "label": "IG URL"
+          }
+      ]
+    }],
+	"presets": [
+		{
+			"name": "Instagram"
+		}
+	]
+  }
+{% endschema %}
+
+

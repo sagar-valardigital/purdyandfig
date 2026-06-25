@@ -1,0 +1,305 @@
+{% assign current_total = cart.total_price | money_without_currency %}
+{% assign free_shipping_total = settings.free_shipping_amount | minus: current_total %}
+{% assign free_product_total = settings.free_product_amount | minus: current_total %}
+{% assign free_shipping_progress = current_total | divided_by: settings.free_shipping_amount | times: 100 %}
+{% assign free_shipping_progress = free_shipping_progress | divided_by: 1 %}
+{% assign free_product_progress = current_total | divided_by: settings.free_product_amount | times: 100 %}
+
+{% if free_shipping_progress > 100 %}
+  {% assign free_shipping_progress = 100 %}
+{% endif %}
+
+<span class="cart-overlay" x-on:click="showCartDrawer = false;  $dispatch('cart-close');"></span>
+
+<div class="min-cart-wrapper position-relative" data-shipping-progress="{{ free_shipping_progress }}">
+  <div class="min-cart-header cart-header-2">
+    <div class="d-flex align-items-center position-relative">
+      <div class="cart-heading">
+        <h2 class="heading-3-5  m-0 text-center font-lausanne fw-400">Cart</h2>
+      </div>
+      <div class="cart-arrow" x-on:click="showCartDrawer = false; $dispatch('cart-close');">
+        <img
+          width="16px"
+          height="16px"
+          src="{{'close-line-icon.svg' | asset_url}}"
+          alt=""
+        >
+      </div>
+    </div>
+  </div>
+  <div class="min-cart-body pt-0">
+    {% if settings.cartAnnouncementShow %}
+      <div class="p-2 theme-text text-center font-lausanne fw-400 cart-top-bar">
+        <small>
+          {{- settings.cartAnnouncement }}
+          <a
+            href="{{ settings.cartAnnouncementLink }}"
+            class="theme-text font-lausanne fw-400"
+            ><u>Shop Now</u></a
+          ></small
+        >
+      </div>
+    {% endif %}
+    <div class="cart-price-slider theme-text  {% if free_shipping_total > 0 %}  {% else %} gradient-bg {% endif %}">
+      {% if cart.items == 0 %}
+        <div class="d-flex justify-content-center">
+          <div class="free-delivery-limit font-lausanne fw-400 free-limit-check  {% if free_shipping_total <= 0 %} checked {%  endif %}">
+            <b>Free Shipping</b>
+          </div>
+        </div>
+      {% endif %}
+      {% if free_shipping_total > 0 %}
+        <p style="font-size:16px;text-align:center;margin-top:10px; margin-bottom:8px;" class="font-lausanne fw-400">
+          Add {{ free_shipping_total | times: 100 | money }} to unlock free shipping!
+        </p>
+        <div class="free-limit-progress-bar"><span class="progress-bar"></span></div>
+
+      {% else %}
+        <p style="font-size:16px;text-align:center;margin-top:10px;margin-bottom:8px;" class="font-lausanne fw-400">
+          {{ settings.freeShippingOption }}
+        </p>
+        <div class="free-limit-progress-bar"><span class="progress-bar" style="width:100%"></span></div>
+      {% endif %}
+    </div>
+
+    <div class="cart-products-wrapper">
+      {% if cart.item_count == 0 %}
+        <div class="py-2 mt-3">
+          <h2 class="m-0 heading-3 text-center theme-text font-lausanne fw-400" style="color:#161718; font-size:14px;">
+            Your cart is empty
+          </h2>
+          <p class="theme-text text-center font-lausanne fw-200 mt-1" style="color:#161718; font-size:12px;">
+            Add your favourite items to your cart
+          </p>
+        </div>
+
+        <div class="mt-1 empty-cart-wrapper">
+          <div class="empty-cart-products">
+            {%- for product in settings.emptycoll.products -%}
+              {% if product.available %}
+                {% render 'cart-product',
+                  card_product: product,
+                  media_aspect_ratio: section.settings.image_ratio,
+                  show_secondary_image: section.settings.show_secondary_image,
+                  show_vendor: section.settings.show_vendor,
+                  show_rating: section.settings.show_rating,
+                  lazy_load: lazy_load
+                %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      {% endif %}
+
+      {% for item in cart.items %}
+        <div class="cart-product">
+          <div class="d-flex flex-wrap">
+            {% if item.image %}
+              <div class="cart-product-image">
+                {{ item.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'img-responsive w-100' }}
+              </div>
+            {% endif %}
+
+            <div class="cart-product-details font-lausanne theme-text">
+              <div class="">
+                <h4 class="p-category m-0 font-lausanne fw-600">{{ item.product.title }}</h4>
+
+                {% if item.product.variants.size > 1 %}
+                  <h4 class="cart-v-title normal-text font-lausanne fw-200 mt-1 mb-0">{{ item.variant.title }}</h4>
+                {% endif %}
+                {% if item.product.type != blank %}
+                  <h3 class="p-title my-1 font-lausanne fw-400">{{ item.product.type }}</h3>
+                {% endif %}
+              </div>
+              <small class="subscription-details font-lausanne fw-400">
+                {{ item.selling_plan_allocation.selling_plan.name }}
+              </small>
+              {% assign isBoxItem = false %}
+              {% assign boxIndex = null %}
+
+              {% for property in item.properties %}
+                {% if property.first contains '_dynamicBoxIndex' %}
+                  {% assign isBoxItem = true %}
+                  {% assign boxIndex = property.last | plus: 0 %}
+                {% endif %}
+
+                {% unless property.first contains '_' %}
+                  <div class="line-item-property">
+                    <small class="property-name">{{ property.first }}:</small>
+                    <small class="property-value">{{ property.last }}</small>
+                  </div>
+                {% endunless %}
+              {% endfor %}
+
+              <div
+                class="d-flex align-items-center justify-content-between my-2"
+                x-data="{ qty: {{ item.quantity }}}"
+                {% if item.price <= 0 %}
+                  style="justify-content: flex-end;"
+                {% endif %}
+              >
+                {% if item.price > 0 %}
+                  <div class="qty-wrapper">
+                    <button
+                      {% if isBoxItem %}
+                        disabled
+                      {% endif %}
+                      class="qty-minus"
+                      @click.debounce="loading = true; Purdy.updateQuantity({{ forloop.index }}, --qty);"
+                    ></button>
+                    <input class="qty font-lausanne fw-400" type="text" value="1" x-model="qty">
+                    <button
+                      {% if isBoxItem %}
+                        disabled
+                      {% endif %}
+                      class="qty-plus"
+                      @click.debounce="loading = true; Purdy.updateQuantity({{ forloop.index }}, ++qty)"
+                    ></button>
+                  </div>
+                {% endif %}
+                <div class="p-price">
+                  <h3 class="m-0 font-lausanne fw-400">
+                    {{ item.price | money }}
+                    {% if item.variant.compare_at_price > item.price %}
+                      <small
+                        ><del class="font-lausanne">{{ item.variant.compare_at_price | money }}</del></small
+                      >
+                    {% endif %}
+                  </h3>
+                </div>
+              </div>
+
+              {% if item.selling_plan_allocation.price > 0
+                and item.selling_plan_allocation.selling_plan.price_adjustments[0].value > 0
+              %}
+                {% assign value_discount = item.product.price
+                  | minus: item.selling_plan_allocation.selling_plan.price_adjustments[0].value
+                %}
+                {% assign value_discount_comp = value_discount | plus: 0 %}
+                {% assign value_discount_comp = value_discount_comp | times: item.quantity %}
+
+                {% if value_discount_comp > 0 %}
+                  <div class="cart_subscription d-none text-sm">
+                    <span class="cart_subscription--discount font-semibold text-green-700">
+                      You saved
+                      {% if item.selling_plan_allocation.selling_plan.price_adjustments[0].value_type == 'percentage' %}
+                        {{ item.selling_plan_allocation.selling_plan.price_adjustments[0].value }}%
+                      {% else %}
+                        {{ value_discount_comp | money }}
+                      {% endif %}
+                    </span>
+                  </div>
+                {% endif %}
+              {% endif %}
+              <div
+                class="remove-product"
+                title="remove {{ item.product.title }}"
+                @click="loading = true; {% if isBoxItem %}removeBundle({{ boxIndex }}){% else %}Purdy.updateQuantity({{ forloop.index }}, 0){% endif %}"
+              >
+                <i class="fa-regular fa-trash"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+
+      {% if settings['cart--show-mini'] %}
+        {% assign upsell_product_string = '' %}
+        {% for product in settings.upsellcoll.products %}
+          {% if forloop.last %}
+            {% assign upsell_product_string = upsell_product_string | append: product.handle %}
+          {% else %}
+            {% assign upsell_product_string = upsell_product_string | append: product.handle | append: ', ' %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign upsell_product_array = upsell_product_string | split: ', ' %}
+
+        {% for product in settings.upsellcoll.products %}
+          {% if forloop.last %}
+            {% assign last_product = product.handle %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in cart.items %}
+          {% if upsell_product_array contains item.product.handle %}
+            {% if item.product.handle == last_product %}
+              {% assign item_handle = item.product.handle %}
+            {% else %}
+              {% assign item_handle = item.product.handle | append: ', ' %}
+            {% endif %}
+            {% assign upsell_product_string = upsell_product_string | remove: item_handle %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign upsell_products = upsell_product_string | split: ', ' %}
+        {% if cart.item_count > 0 %}
+          {% for uproduct in upsell_products %}
+            {% if forloop.index == 1 %}
+              <div class="text-center">
+                <h3
+                  class="heaidng-3 py-2 theme-text font-lausanne fw-200"
+                  style="color:#212121; font-size:14px;  margin-top:10px"
+                >
+                  {{ settings['cart--upsell-product-heading'] }}
+                </h3>
+              </div>
+            {% endif %}
+
+            <div class="cart--upsell show {{ upsell_product_string }}">
+              {% render 'upsell-product-2', pHandle: uproduct %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    </div>
+  </div>
+  {% comment %}
+    {% if cart.item_count == 0 %}
+    <div class="text-center">
+      <div class="checkout-btn-wrap" style="margin:auto;">
+        <a href="{{settings.btnLink}}" type="submit" class="btn checkout-btn theme-btn">Shop Cleaning Products</a>
+      </div>
+    </div>
+    {% endif %}
+  {% endcomment %}
+  <div class="min-cart-footer cart-footer-2">
+    <form action="/checkout/" name="checkout_form">
+      <div class="">
+        <div class="d-flex font-lausanne fw-400 justify-content-between theme-text mb-1" style="color:#2D4053;">
+          <div style="color:#161718;">
+            Subtotal ({{ cart.item_count }}
+            {{ cart.item_count | pluralize: 'item', 'items' }})
+          </div>
+          <div style="color:#161718;">
+            {{ cart.total_price | money }}
+          </div>
+        </div>
+        <div class="w-100">
+          <button
+            {% if cart.item_count == 0 %}
+              disabled
+            {% endif %}
+            type="submit"
+            class="btn checkout-btn green-btn theme-btn btn-loader"
+            style="padding: 14px 20px;"
+            data-page-url="{{ request.path }}"
+            data-target-url="https://shop.app/checkout/"
+            data-funnel-stage="sliding_cart"
+            data-module="cart"
+            data-price="{{ cart.total_price | money }}"
+            data-event-label="checkout"
+            data-event-value="begin_checkout"
+            data-quantity="{{ cart.item_count }}"
+            data-item-id="{% for item in cart.items %}{{ item.sku }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+            data-item-name="{% for item in cart.items %}{{ item.title }}{% unless forloop.last %},{% endunless %}{% endfor %}"
+            onclick="trackCheckout(event)"
+            data-purchase="true"
+          >
+            CHECKOUT
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

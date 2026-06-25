@@ -1,0 +1,38 @@
+{% layout none %} 
+
+<script>
+
+  if(document.referrer.includes('/checkouts/')) {
+    
+    history.back();
+    
+  }
+  
+  else {
+
+items = [
+  {
+    quantity: 1,
+    id: 43209603875043,
+    selling_plan: 3103260899
+  },
+  {
+   quantity: 1,
+    id: 41361684824228,
+    selling_plan: 3088416995 
+  }
+]
+  data = {'items':items}
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4){
+          window.location.href = '/checkout/?discount=FREESPA4';
+      }
+  };
+  xhr.open('POST', '/cart/add.js');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(data));
+    
+  }
+
+</script>

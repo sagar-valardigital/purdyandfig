@@ -1,0 +1,310 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "f230c82c-ce39-4f8a-ae7d-d4cb882eea9b": {
+      "type": "black-friday-header",
+      "settings": {
+        "scrollto": "black-friday-products"
+      }
+    },
+    "164b3217-5652-4828-895c-5420a70907a3": {
+      "type": "black-friday-banner",
+      "settings": {
+        "title": "Exclusive VIP Black Friday Sale",
+        "subtitle": "Save up to 50% in your exclusive Black Friday VIP deals.",
+        "cta_text": "SHOP BLACK FRIDAY DEALS",
+        "end_date": "2023-11-25 00:00:00",
+        "image": "shopify://shop_images/black-friday-hero-new-02_ac5b4664-405b-46f0-b610-d7a6370b4343.jpg",
+        "mobile_image": "shopify://shop_images/black-friday-hero-new-mobile-02.jpg",
+        "scrollto": "black-friday-products",
+        "container_color": "#2a83e9"
+      }
+    },
+    "b7e02bc7-a4a4-4e0d-bbf7-cf8c1aeea0db": {
+      "type": "black-friday-products",
+      "blocks": {
+        "8351b076-1ac5-4506-95da-85ec0605c5b8": {
+          "type": "bf-product-card",
+          "settings": {
+            "product": "bathroom-bundle-bf-edition",
+            "no_stock": false,
+            "is_sub": true,
+            "discount": "",
+            "promo": "50% OFF",
+            "image_1": "shopify://shop_images/Bathroom_Bundle2.jpg",
+            "image_2": "shopify://shop_images/Bathroom_Bundle5.jpg",
+            "image_3": "shopify://shop_images/Bathroom-Bundle6_d0409a9a-f90f-40a4-817c-c7b56c9a4165.jpg",
+            "title": "Bathroom Bundle",
+            "description": "For sparkling, streak-free bathrooms!",
+            "bulletpoint_1": "Limescale-busting Bathroom Bliss Starter Kit",
+            "bulletpoint_2": "Lime & Lemongrass Scented Oh! de Loo Drops",
+            "bulletpoint_3": "Bathroom Bliss refills delivered every 90 days",
+            "subscription_info": "then £17.85 every 90 days",
+            "included_item_1": "Bathroom Bliss Bottle for Life",
+            "included_item_2": "3 x Bathroom Bliss Lime & Lemongrass Concentrates",
+            "included_item_3": "Purdy & Figg Microfibre Cloth",
+            "included_item_4": "100ml Lime & Lemongrass Oh! de Loo"
+          }
+        },
+        "15c7b11a-1f62-4731-a28d-b43c97fa0f5f": {
+          "type": "bf-product-card",
+          "settings": {
+            "product": "frankincense-myrrh-variety-kit-gift-wrap",
+            "no_stock": false,
+            "is_sub": false,
+            "discount": "",
+            "promo": "FREE Gift Wrapping",
+            "image_1": "shopify://shop_images/fm-variety-kit-blue-box-04.png",
+            "image_2": "shopify://shop_images/Purdy___Figg_-_Christmas_Studio4280.png",
+            "image_3": "shopify://shop_images/fm-variety-kit-blue-box-02.png",
+            "title": "Frankincense & Myrrh Starter Kit",
+            "description": "Give the gift of clean this Christmas",
+            "bulletpoint_1": "Limited Edition Christmas Counter Clean Gift Set ",
+            "bulletpoint_2": "Free Gift Wrap included",
+            "bulletpoint_3": "One-time purchase offer!",
+            "subscription_info": "",
+            "included_item_1": "4 x Concentrates (Frankincense & Myrrh, Uplifting Citrus, Balancing Floral & Grounding Vetiver) ",
+            "included_item_2": "Counter Clean Bottle for Life",
+            "included_item_3": "Purdy & Figg Microfibre Cloth",
+            "included_item_4": "FREE Purdy & Figg Gift Wrap"
+          }
+        },
+        "dffbfded-1fc8-4eef-8919-36b8c77ab610": {
+          "type": "bf-product-card",
+          "settings": {
+            "product": "3-x-fab-fir-oh-de-loo",
+            "no_stock": false,
+            "is_sub": false,
+            "discount": "",
+            "promo": "3 for 2",
+            "image_1": "shopify://shop_images/3x-ODL-5.png",
+            "image_2": "shopify://shop_images/Purdy___Figg_Christmas_Location3696.png",
+            "image_3": "shopify://shop_images/3x-ODL-1.png",
+            "title": "Fab Fir Oh! de Loo",
+            "description": "The ultimate stocking filler!",
+            "bulletpoint_1": "Christmas-scented deodorising drops for lovely-smelling loos",
+            "bulletpoint_2": "Limited Edition festive scent",
+            "bulletpoint_3": "Get 3 for the price of 2!",
+            "subscription_info": "",
+            "included_item_1": "3 x 100ml Fab Fir Oh! de Loo",
+            "included_item_2": "",
+            "included_item_3": "",
+            "included_item_4": ""
+          }
+        },
+        "d6e5d475-ee3b-48f0-8cf9-2f8942186b88": {
+          "type": "bf-product-card",
+          "settings": {
+            "product": "christmas-refill-booster-pack-bf",
+            "no_stock": false,
+            "is_sub": false,
+            "discount": "",
+            "promo": "Save 15%",
+            "image_1": "shopify://shop_images/Xmas_Scents4.png",
+            "image_2": "shopify://shop_images/Xmas-Scents5.png",
+            "image_3": "shopify://shop_images/Xmas_Scents2.png",
+            "title": "Christmas Booster Pack",
+            "description": "Infuse Your Cleaning with Festive Spirit",
+            "bulletpoint_1": "Each of our new Christmas scents in a Limited Edition Refill Booster Pack",
+            "bulletpoint_2": "One-time purchase offer!",
+            "bulletpoint_3": "",
+            "subscription_info": "",
+            "included_item_1": "1 x Frankincense & Myrrh Counter Clean Concentrate",
+            "included_item_2": "1 x Fir & Bergamot Counter Clean Concentrate",
+            "included_item_3": "1 x Orange & Clove Counter Clean Concentrate",
+            "included_item_4": ""
+          }
+        }
+      },
+      "block_order": [
+        "8351b076-1ac5-4506-95da-85ec0605c5b8",
+        "15c7b11a-1f62-4731-a28d-b43c97fa0f5f",
+        "dffbfded-1fc8-4eef-8919-36b8c77ab610",
+        "d6e5d475-ee3b-48f0-8cf9-2f8942186b88"
+      ],
+      "settings": {
+        "sectionID": "black-friday-products",
+        "title": "Browse your VIP Customer Deals"
+      }
+    },
+    "b2abb431-e94e-4063-a846-a220cca6df47": {
+      "type": "scent-blocks",
+      "blocks": {
+        "9d406583-8c2f-4704-b66a-2c25737eb47f": {
+          "type": "image",
+          "settings": {
+            "scent_image": "shopify://shop_images/Fir_Bergamot_1433c69b-85c0-4d16-94ba-66a9f616ab48.png",
+            "scent_heading": "Fir & Bergamot",
+            "scent_details": "A fresh, coniferous aroma reminiscent of a winter forest morning, with notes of fresh evergreens and wreath-making festivities."
+          }
+        },
+        "78f2f13e-5464-422c-8c8e-68fc28e21a4d": {
+          "type": "image",
+          "settings": {
+            "scent_image": "shopify://shop_images/F_M_copy_1.png",
+            "scent_heading": "Frankincense & Myrrh",
+            "scent_details": "A luxurious blend reminiscent of cosy winter evenings and the sweet scent of orange candlelight."
+          }
+        },
+        "17e00743-fb58-48de-baef-03f6e7684934": {
+          "type": "image",
+          "settings": {
+            "scent_image": "shopify://shop_images/Orange_Clove_fa95326a-84a6-4e88-8048-43d5756c8747.png",
+            "scent_heading": "Orange & Clove",
+            "scent_details": "A quintessential Christmas aroma inspired by traditional Christmas pomanders and spicy orange and vanilla cake."
+          }
+        },
+        "1342a193-c79b-42d6-90c1-9c562a0e2a42": {
+          "type": "image",
+          "settings": {
+            "scent_image": "shopify://shop_images/Balancing_Floral_5e16749c-2588-418e-9d6d-89052bae844c.png",
+            "scent_heading": "Balancing Floral",
+            "scent_details": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots."
+          }
+        },
+        "9ef2c462-d793-4ab9-85f1-ca4a4a4607a2": {
+          "type": "image",
+          "settings": {
+            "scent_image": "shopify://shop_images/Uplifting_Citrus.png",
+            "scent_heading": "Uplifting Citrus",
+            "scent_details": "A fresh and uplifting blend of sweet orange and grapefruit peels and niaouli leaves."
+          }
+        },
+        "ab16cc63-ec3a-4358-bf80-aa741f0f9732": {
+          "type": "image",
+          "settings": {
+            "scent_image": "shopify://shop_images/Grounding_Vetiver.png",
+            "scent_heading": "Grounding Vetiver",
+            "scent_details": "An earthy blend of sweet orange, coriander seed, and vetiver."
+          }
+        }
+      },
+      "block_order": [
+        "9d406583-8c2f-4704-b66a-2c25737eb47f",
+        "78f2f13e-5464-422c-8c8e-68fc28e21a4d",
+        "17e00743-fb58-48de-baef-03f6e7684934",
+        "1342a193-c79b-42d6-90c1-9c562a0e2a42",
+        "9ef2c462-d793-4ab9-85f1-ca4a4a4607a2",
+        "ab16cc63-ec3a-4358-bf80-aa741f0f9732"
+      ],
+      "settings": {
+        "bg_color": "#ffffff",
+        "heading": "Festive-infused scents to transform your home this Christmas",
+        "subheading": "Get guest-ready with these 100% natural aromas."
+      }
+    },
+    "0c0d58f4-6718-4e81-a9ad-ea6025409252": {
+      "type": "black-friday-faq",
+      "blocks": {
+        "49004b4c-54e7-4ab0-9e9e-de57bad60d91": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Why can’t I see these offers on your website?",
+            "faq-ans": "<p>These VIP Black Friday deals are only available to VIP customers via a secret shopping link and therefore are not available on our main website.</p>"
+          }
+        },
+        "f1c45acf-8f3f-4b15-bc9c-d6e792eb7005": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "When can I expect to receive my order?",
+            "faq-ans": "<p>We endeavour to ship all orders within 48 hours via your chosen shipping method. Occasionally during busy periods we experience delays in shipping, but you will be notified if your order is affected.</p>"
+          }
+        },
+        "e9872b6d-3908-41ef-accc-3dac4438f4b0": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Are these offers for subscription or buy-once?",
+            "faq-ans": "<p>All of our VIP Black Friday offers are buy-once offers with the exception of our Bathroom Bundle, which involves subscribing to Bathroom Bliss refills every quarter. These offers are the best prices we offer all year round on buy-once items.</p>"
+          }
+        },
+        "00422814-abe8-4a78-a623-29558dce5534": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Do all products come gift wrapped?",
+            "faq-ans": "<p>Only the Frankincense & Myrrh Starter Kit comes with a Purdy & Figg gift wrap sleeve for the perfect ready-to-give gift.</p>"
+          }
+        },
+        "7ef808af-163d-4599-90e1-eaeedc108391": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Are Christmas scents included in the Black Friday offers?",
+            "faq-ans": "<p>You can save 15% on a refill pack with each of our three Limited Edition Christmas Scents in our Black Friday deals. Our Frankincense & Myrrh Counter Clean is also included in the Frankincense & Myrrh gift wrapped Starter Kit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "49004b4c-54e7-4ab0-9e9e-de57bad60d91",
+        "f1c45acf-8f3f-4b15-bc9c-d6e792eb7005",
+        "e9872b6d-3908-41ef-accc-3dac4438f4b0",
+        "00422814-abe8-4a78-a623-29558dce5534",
+        "7ef808af-163d-4599-90e1-eaeedc108391"
+      ],
+      "settings": {
+        "color_bg": "#f4f6fc",
+        "class": "",
+        "heading": "Frequently asked questions"
+      }
+    },
+    "a2d4a33d-c99b-49ee-960c-0018bf83c482": {
+      "type": "black-friday-footer",
+      "settings": {
+        "color_bg": "#131e44",
+        "year": "2023"
+      }
+    },
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33": {
+      "type": "bb-products",
+      "blocks": {
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14": {
+          "type": "product",
+          "settings": {
+            "product": "charlottes-floral-hand-wash-250ml"
+          }
+        }
+      },
+      "block_order": [
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "f230c82c-ce39-4f8a-ae7d-d4cb882eea9b",
+    "164b3217-5652-4828-895c-5420a70907a3",
+    "b7e02bc7-a4a4-4e0d-bbf7-cf8c1aeea0db",
+    "b2abb431-e94e-4063-a846-a220cca6df47",
+    "0c0d58f4-6718-4e81-a9ad-ea6025409252",
+    "a2d4a33d-c99b-49ee-960c-0018bf83c482",
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33",
+    "main"
+  ]
+}

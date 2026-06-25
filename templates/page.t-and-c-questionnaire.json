@@ -1,0 +1,32 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "custom_html_DkmDP8": {
+      "type": "custom-html",
+      "settings": {
+        "heading": "Customer Research Summer 2024",
+        "content": "<h2><strong><br/>Prize Draw Terms and Conditions</strong></h2><h3><strong><br/>When Is the Prize Draw  Happening?</strong></h3><p>The competition opens at 0:01 on July 30th 2024, and closes once we have 5,000 entries, or by 23:59 on August 23rd 2024 - whichever happens first.<br/></p><p></p><h3><strong>How Do I Enter?</strong></h3><p>Entrants must be aged 18 or over and receive a survey invitation from Purdy & Figg. Entry to the prize draw is made available to customers who complete the survey; however if you don’t want to be included in the prize draw you can opt out. Customers who enter the survey but do not meet qualifying criteria are also offered the option to enter the prize draw.<br/><br/>Customers who are invited but do not take part in the survey can enter the prize draw by emailing <a href=\"mailto:customer_research2024@purdyandfigg.com\" title=\"mailto:customer_research2024@purdyandfigg.com\">customer_research2024@purdyandfigg.com</a>. If you enter by email, you must enter with an email address that you use with Purdy & Figg, provide full name and full address including postcode. To complete your entry, you’ll need to give us a valid email address. Surveys completed or entries into the prize draw after the survey has closed will not be taken into account.<br/><br/>Only one entry per household and per email address. Entries that don’t comply with these terms and conditions will be invalid.</p><h3><strong><br/>What’s the Prize?</strong></h3><p>The following prizes will be John Lewis e-vouchers and will be awarded to nine randomly selected lucky winners:</p><ul><li>Two vouchers worth £150</li><li>Three vouchers worth £50</li><li>Four vouchers worth £25<br/></li></ul><p>These prizes will be given on the basis of one prize per winner.</p><h3><strong><br/>How Will the Prizes Be Allocated?</strong></h3><p>Yonder Data Solutions will draw the nine winners at random on September 10th 2024 from all valid entries. For the prize draw, a further nine (9) entrants will also be drawn and held in reserve for any prize winners who do not take up their prize for the reasons set out in these terms and conditions. Details of the winners will be available for the period of one calendar month of the draw date by emailing <a href=\"mailto:customer_research2024@purdyandfigg.com\" title=\"mailto:customer_research2024@purdyandfigg.com\">customer_research2024@purdyandfigg.com</a>. For each prize only the first name, initial of the surname and county of the winner will be provided. Participants can object to disclosure, or request that disclosure be limited in scope by contacting <a href=\"mailto:customer_research2024@purdyandfigg.com\" title=\"mailto:customer_research2024@purdyandfigg.com\">customer_research2024@purdyandfigg.com</a>. Purdy & Figg may nevertheless disclose the information to the Advertising Standards Authority if required to do so. Prizes are non-exchangeable, non-transferable and not redeemable for cash or any other prize. The judge’s decision is final and Purdy & Figg won’t enter into any correspondence beyond notifying the winners. We’ll let the winners know by email within 6 weeks of the draw date, using the email address provided with their entry. Any winner contacted by us will need to claim their prize within 28 calendar days of that contact date. Any prize unclaimed after 28 days of notification will be forfeited and another winner will be picked in accordance with the process described in these terms and conditions. These terms and conditions will apply to any replacement winner.</p><h3><strong><br/>The Legal Bit</strong></h3><p>English law will govern this free prize draw and entrants submit to exclusive jurisdiction of the English courts. The organiser of the free prize draw is Purdy & Figg Ltd, whose registered office is: 9 Heron Business Park Eastman Way, Hemel Hempstead Industrial Estate, Hemel Hempstead, England, HP2 7FW. The organiser reserves the right to alter, amend or foreclose this promotion without prior notice.<br/><br/>This Prize Draw is open to UK residents, excluding employees of Purdy & Figg Ltd, or any of its subsidiary companies, their families, agents or anyone else connected with this promotion. No third party entries, bulk entries or entries submitted by agents will be accepted. Purdy & Figg Ltd reserves the right to verify the eligibility of entrants. Purdy & Figg Ltd may require such information as it considers reasonably necessary for the purpose of verifying the eligibility of an entry and the prize may be withheld until and unless Purdy & Figg Ltd is satisfied with the verification.</p><p><br/>© Purdy & Figg Ltd. Registered at 9 Heron Business Park Eastman Way, Hemel Hempstead Industrial Estate, Hemel Hempstead, England, HP2 7FW. Company number: 12477148</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "custom_html_DkmDP8"
+  ]
+}

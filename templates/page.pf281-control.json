@@ -1,0 +1,801 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_reskin_NEErpW": {
+      "type": "announcement-bar-reskin",
+      "custom_css": [
+        ".ann-bar-text-2 {height: 37px;}",
+        ".ann-bar-text-2 p {padding: 6px 0px;}"
+      ],
+      "settings": {
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Save <span class=\"market-place-currency\"></span>25 including FREE bottle &amp; cloth",
+        "scrollto": "starterkit-product",
+        "btn-bg": "#212121",
+        "btn-text": "#ffffff",
+        "annuText": "GET YOUR OFFER",
+        "top": "0",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_4mHyG8": {
+      "type": "banner-10",
+      "custom_css": [
+        "@media (max-width: 480px) {.banner-section.banner-10 {height: 560px; }}",
+        "@media (max-width: 768px) {.banner-section.banner-10 {height: 600px; }}",
+        "@media (min-width: 1100px) {.banner-section.banner-10 {height: 650px; }}",
+        "@media (min-width: 1600px) {.banner-section.banner-10 {height: 90vh; }}"
+      ],
+      "settings": {
+        "txt-color": "#0a1e1a",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktop_3185307e-fa1c-4934-b595-b71bf51831a7.jpg",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobile_9ceebd39-a53a-4ecb-8a4c-24e984e88f33.jpg",
+        "heading": "Clean with new scents, every season",
+        "sub_heading": "Limited time offer: Save <span class=\"market-place-currency\"></span>25 on Starter Kits, including FREE Bottle for Life &amp; cloth",
+        "btn-bg": "#11322c",
+        "btn-txt-color": "#ffffff",
+        "button_label": "GET YOUR OFFER",
+        "button_link": "starterkit-product",
+        "top": "0",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_listing_gAWD66": {
+      "type": "image-with-listing",
+      "blocks": {
+        "text_ehqGFz": {
+          "type": "text",
+          "settings": {
+            "heading": "Powerful clean"
+          }
+        },
+        "text_QEYzKQ": {
+          "type": "text",
+          "settings": {
+            "heading": "Natural scent"
+          }
+        },
+        "text_ayQGtm": {
+          "type": "text",
+          "settings": {
+            "heading": "Non-toxic ingredients"
+          }
+        },
+        "text_i7aafF": {
+          "type": "text",
+          "settings": {
+            "heading": "Multipurpose"
+          }
+        }
+      },
+      "block_order": [
+        "text_ehqGFz",
+        "text_QEYzKQ",
+        "text_ayQGtm",
+        "text_i7aafF"
+      ],
+      "settings": {
+        "bgImage": "shopify://shop_images/BG---Desktop.png",
+        "heading": "The only natural cleaning spray that does it all",
+        "image": "shopify://shop_images/b_36e066c5-4698-420b-8999-ff4c87e2f090.png",
+        "icon": "shopify://shop_images/Tick_82ab0702-7f1e-4ca3-9f1d-3af426533376.png"
+      }
+    },
+    "reskin_scent_tabs_bbTVPk": {
+      "type": "reskin-scent-tabs",
+      "blocks": {
+        "tab_one_8NndxU": {
+          "type": "tab-one",
+          "settings": {
+            "first": true,
+            "tag": "",
+            "heading": "New seasonal scents for your home",
+            "image": "shopify://shop_images/Seasonal_title_card.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_one_fy3m8L": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Patchouli & Cedarwood",
+            "image": "shopify://shop_images/Patchouli_Cedarwood_7b30fc22-f4de-44d3-b910-9afd74fe3946.png",
+            "mobile_image": "shopify://shop_images/Patchouli_Cedarwood_1_aa624522-e8cc-409f-9246-8aaa1924c997.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_one_K99izt": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Lemon & Marjoram",
+            "image": "shopify://shop_images/Lemon_Marjoram_2b70e9dc-ace2-483a-b858-347594dca30f.png",
+            "mobile_image": "shopify://shop_images/Lemon_Marjoram_1_d2fb035d-a107-4cf5-bba0-eb9ca2b57108.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_one_hDXGmk": {
+          "type": "tab-one",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Orange & Petitgrain",
+            "image": "shopify://shop_images/Orange_Petitgrain_55ca5daf-2a7a-47c3-b5ee-8fd2e4388712.png",
+            "mobile_image": "shopify://shop_images/Orange_Petitgrain_1_3c99597f-05a5-4cd6-aeba-54e295dbe1a6.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_QpHxxw": {
+          "type": "tab-two",
+          "settings": {
+            "first": true,
+            "tag": "",
+            "heading": "Find your home’s signature scent",
+            "image": "shopify://shop_images/Signature_title_card.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_eaYxtJ": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Uplifting Citrus",
+            "image": "shopify://shop_images/Uplifting_Citrus_807667ea-5d4c-4778-aabd-d7fdcd2a921c.png",
+            "mobile_image": "shopify://shop_images/Uplifting_Citrus_1_ea4ae2f3-fdb2-4d82-b178-c42db7d318c3.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_Ytz38G": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Balancing Floral",
+            "image": "shopify://shop_images/Balancing_Floral_df3d34db-59aa-4f1f-9db5-829f48929f9d.png",
+            "mobile_image": "shopify://shop_images/Balancing_Floral_1_7ab64f0d-8324-4a3b-9453-897e19ef95b1.png",
+            "content": "",
+            "blend": ""
+          }
+        },
+        "tab_two_HgjpE9": {
+          "type": "tab-two",
+          "settings": {
+            "first": false,
+            "tag": "",
+            "heading": "Grounding Vetiver",
+            "image": "shopify://shop_images/Grounding_Vetiver_f7ff829d-1776-48df-bbfa-8ccda203b385.png",
+            "mobile_image": "shopify://shop_images/Grounding_Vetiver_1_e73d3714-7f05-4a86-89c9-8c711a270d80.png",
+            "content": "",
+            "blend": ""
+          }
+        }
+      },
+      "block_order": [
+        "tab_one_8NndxU",
+        "tab_one_fy3m8L",
+        "tab_one_K99izt",
+        "tab_one_hDXGmk",
+        "tab_two_QpHxxw",
+        "tab_two_eaYxtJ",
+        "tab_two_Ytz38G",
+        "tab_two_HgjpE9"
+      ],
+      "custom_css": [
+        "/* .tab-block-content {margin-bottom: 3rem;}",
+        " */.tab-block-blend {display: block;}",
+        ".heading-2 {/* letter-spacing: 0px; */}",
+        ".pf-tabs-wrapper {display: flex; justify-content: center; align-items: center;}",
+        ".pf-tabs-wrapper .pf-tab {width: 240px;}",
+        ".first-block .heading-3 {letter-spacing: 0px; font-size: 40px !important;}",
+        "@media (max-width: 768px) {.pf-tabs-wrapper .pf-tab {width: 195px; } .first-block .heading-3 {font-size: 27px !important; line-height: 125%; } .pf-tab {font-size: 16px; } .heading-2-wrapper {margin-bottom: 1rem !important; }}"
+      ],
+      "settings": {
+        "heading": "Discover our memberships",
+        "tabone": "Seasonal",
+        "badgeone": "Spring",
+        "tabtwo": "Signature",
+        "badgetwo": ""
+      }
+    },
+    "global_product_310_GFjq9j": {
+      "type": "global-product-310",
+      "blocks": {
+        "variant_WKJJrQ": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "variantBadge": "New spring scents",
+            "varCount": "1",
+            "text_heading": "Seasonal",
+            "discount": "SEASONAL322b",
+            "variantProduct": "seasonal-starter-kit-spring-1",
+            "delPrice": "4000",
+            "sellPrice": "1500",
+            "varaiantid": "54955853807996",
+            "sellingid": "710189416828",
+            "sku": "FG1227b",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 5,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Seasonal",
+            "eventValue": "product_toggle",
+            "optionIndex": "1"
+          }
+        },
+        "text_QiLG77": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 rotating Seasonal scent concentrates lasting 2-3 months <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>21)</span>"
+          }
+        },
+        "text_7pPJGA": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "FREE glass Bottle for Life &amp; cloth <span class=\"fw-400\">(worth <span class=\"market-place-currency\">19</span>)</span>"
+          }
+        },
+        "text_pa7KM7": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_expT9t": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "30-day money-back guarantee"
+          }
+        },
+        "product_image_wRetpy": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Seasonal_-_Desktop_01_d02ae1aa-8630-44bd-8ee1-1ba8922d4e09.jpg",
+            "mimage": "shopify://shop_images/Seasonal_-_Mobile_01_11fe6dff-8d77-404b-92f9-e2a207f5c72b.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_V4M3wF": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Seasonal_-_Desktop_02_fb0feb0d-fcf5-4a41-aa61-5cd9ab46d35d.jpg",
+            "mimage": "shopify://shop_images/Seasonal_-_Mobile_02_fa41af83-f0fb-423e-91d8-656cf7ff1e4a.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_y6QGBE": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Seasonal_-_Desktop_03_fcd6dc29-b9e8-4b83-9ba8-5b7fa1977224.jpg",
+            "mimage": "shopify://shop_images/Seasonal_-_Mobile_03_f1ca80b8-df7c-40a7-9f97-265c078f2872.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_AkppVT": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Seasonal_-_Desktop_04_c729c7d9-f756-4468-b64e-196ae9b2c1f7.jpg",
+            "mimage": "shopify://shop_images/Seasonal_-_Mobile_04_a622b1f1-486c-424e-939f-179c96e39ae9.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_XXLDeL": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Seasonal_-_Desktop_05_a0a03864-42cd-46fa-be66-594cf74b3bb8.jpg",
+            "mimage": "shopify://shop_images/Seasonal_-_Mobile_05_37df0a47-86ae-43ad-a67a-62d4a241c6a4.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "variant_ffXUqL": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "variantBadge": "",
+            "varCount": "2",
+            "text_heading": "Signature",
+            "discount": "SIGNATURE322B",
+            "variantProduct": "counter-clean-pf99-test",
+            "delPrice": "4000",
+            "sellPrice": "1500",
+            "varaiantid": "55074784444796",
+            "sellingid": "4158095587",
+            "sku": "FG1096",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 5,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "2"
+          }
+        },
+        "text_LTyUED": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 Signature scent concentrates lasting 2-3 months <span class=\"fw-400\">(worth <span class=\"market-place-currency\">21</span>)</span>"
+          }
+        },
+        "text_RGJA6G": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "FREE glass Bottle for Life &amp; cloth <span class=\"fw-400\">(worth <span class=\"market-place-currency\">19</span>)</span>"
+          }
+        },
+        "text_gVUDb6": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_fdbAVB": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "30-day money-back guarantee"
+          }
+        },
+        "product_image2_Qjtz8a": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Signature_-_Desktop_01_4fe40d61-c509-4816-89e4-98357c88e58a.jpg",
+            "mimage_2": "shopify://shop_images/Signature_-_Mobile_01_55f04c59-a2a5-4aa2-a004-5c65d1533545.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_qPre9D": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Signature_-_Desktop_02_7a8b0b60-6ef8-4ea9-8e16-765c0eac98ff.jpg",
+            "mimage_2": "shopify://shop_images/Signature_-_Mobile_02_f5fbf15e-f769-4047-81a0-73633227f386.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_NKd3Dj": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Signature_-_Desktop_03_6e3b97c3-7fdc-4ed2-a1a2-93861ba03c47.jpg",
+            "mimage_2": "shopify://shop_images/Signature_-_Mobile_03_8038125c-1da8-4374-bda2-b0a526f4c8b3.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_3XFgRW": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Signature_-_Desktop_04_cb811070-012c-49c3-8591-032de3668fa7.jpg",
+            "mimage_2": "shopify://shop_images/Signature_-_Mobile_04_077633d0-5f5d-4f84-a89e-fc9c85baa742.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_bWErby": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Signature_-_Desktop_05_6b33b7c5-ed11-41da-b618-7f6143edc091.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_-_Mobile_05_37df0a47-86ae-43ad-a67a-62d4a241c6a4.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "variant_WKJJrQ",
+        "text_QiLG77",
+        "text_7pPJGA",
+        "text_pa7KM7",
+        "text_expT9t",
+        "product_image_wRetpy",
+        "product_image_V4M3wF",
+        "product_image_y6QGBE",
+        "product_image_AkppVT",
+        "product_image_XXLDeL",
+        "variant_ffXUqL",
+        "text_LTyUED",
+        "text_RGJA6G",
+        "text_gVUDb6",
+        "text_fdbAVB",
+        "product_image2_Qjtz8a",
+        "product_image2_qPre9D",
+        "product_image2_NKd3Dj",
+        "product_image2_3XFgRW",
+        "product_image2_bWErby"
+      ],
+      "custom_css": [
+        ".variant-badge{text-transform:unset;}",
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".global-product-19-wrapper .gp-4-details .gp-5-bottom .gp-5-variant-li label {border-color: #edc6a2;}",
+        "@media (max-width: 768px) {.stars-img-review span {font-size: 12px !important; } .global-product-5 .star-img {width: 12px; } .global-product-19-wrapper .gp-5-price-points {background-color: #f5f5f5; } .variant-badge {font-size: 10px; top: -8px !important; letter-spacing: 0.15px; } .gp-5-variants > li {margin: 16px 8px; }}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": true,
+        "guaranteeDescription": "30-day money-back guarantee",
+        "guaranteeTextColor": "#212121",
+        "scrollto": "",
+        "background": "#fbf1e8",
+        "p_id": "starterkit-product",
+        "landingproduct": "seasonal-starter-kit-spring-1",
+        "varaiantid": "54955853807996",
+        "sellingid": "710189416828",
+        "sku": "FG1227b",
+        "discount": "SEASONAL322b",
+        "tab_description_1": "New limited edition scents every season",
+        "tab_description_2": "Enjoy our three bestselling scents all year round",
+        "className": "gp-5-ab global-product-19-wrapper  gp-219",
+        "mainheading": "New customer offer: FREE Starter Kit",
+        "mainsubheading": "One powerful cleaner for your entire home",
+        "choosescent": "",
+        "heading": "Counter Clean Starter Kit",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "40.00",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "38,325",
+        "reviews_desktop": "1,734",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": false,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 5,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "pf281_blocks_87b8d9": {
+      "type": "pf281-blocks",
+      "blocks": {
+        "text_eY7tib": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Spring_Scents_d233711c-8a38-4f1c-9f02-8cfc37533da3.png",
+            "badge": "Available Now",
+            "heading": "Spring Scents",
+            "details": "For the most soothing spring clean"
+          }
+        },
+        "text_iqiFxj": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Summer_Scents_8bc4d54b-59ed-4e5b-8e9d-b258ff7ef4c0.png",
+            "badge": "Coming June - August",
+            "heading": "Summer Scents",
+            "details": "Bring summer’s most glorious scents inside"
+          }
+        },
+        "text_pjPicp": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Autumn_Scents_904a933e-fbf1-4387-a9a9-35aae53e0fa3.png",
+            "badge": "Coming September - November",
+            "heading": "Autumn Scents",
+            "details": "Re-energise your home with uplifting blends"
+          }
+        },
+        "text_7e8dER": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Winter_Scents_33ce222e-a57b-4c29-9ee0-ce57a9e96d50.png",
+            "badge": "Coming December - February",
+            "heading": "Winter Scents",
+            "details": "Welcome in cosy and warming aromas"
+          }
+        }
+      },
+      "block_order": [
+        "text_eY7tib",
+        "text_iqiFxj",
+        "text_pjPicp",
+        "text_7e8dER"
+      ],
+      "custom_css": [
+        "@media (max-width: 768px) {.block-section.py-80 {padding-bottom: 60px; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "background": "#ffffff",
+        "textcolor": "#212121",
+        "heading": "Enjoy new scents in every delivery",
+        "subtext": "Exclusive to Seasonal memberships",
+        "buttontext": "GET YOUR OFFER",
+        "buttonbg": "#11322c",
+        "buttontxtcolor": "#ffffff",
+        "scrollto": "starterkit-product",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 6,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_268_6cXK7F": {
+      "type": "image-with-text-268",
+      "custom_css": [
+        ".normal-text {font-weight: 200;}",
+        ".heading-2,.normal-text {color: #e7ebea !important; letter-spacing: 0px;}"
+      ],
+      "settings": {
+        "className": "",
+        "textcolor": "#e7ebea",
+        "background": "#11322c",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Effective on all surfaces",
+        "is_video": true,
+        "videoURL": "https://cdn.shopify.com/videos/c/o/v/12de7a9f2faf4ea695a9af17f5857cb9.mp4",
+        "poster": "shopify://shop_images/Video_a7b5f53f-0dcc-4ad9-8046-963e57c6a7b0.png",
+        "details": "Counter Clean is designed to effectively clean stone, wood and glass, whilst retaining maximum scent. Our customers say it replaces dozens of other products.",
+        "shop_now_cta": "",
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "heading-position": false,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "reskin_icon_blocks_KUfeUR": {
+      "type": "reskin-icon-blocks",
+      "blocks": {
+        "iconblocks_mXWJBb": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More convenient",
+            "icon_block_description": "3 refills delivered to your door every 3 months so you never run out",
+            "icon_block_image": "shopify://shop_images/convenient.png"
+          }
+        },
+        "iconblocks_zExan6": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More flexible",
+            "icon_block_description": "Bring forward, delay, or cancel online, with one easy click. No questions asked",
+            "icon_block_image": "shopify://shop_images/flex.png"
+          }
+        },
+        "iconblocks_jzdaPr": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More rewarding",
+            "icon_block_description": "Members-only access to new offers, scents, products, and prices",
+            "icon_block_image": "shopify://shop_images/rewarding.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_mXWJBb",
+        "iconblocks_zExan6",
+        "iconblocks_jzdaPr"
+      ],
+      "custom_css": [
+        ".new-blc-btn {margin-top: 40px;}",
+        "@media (max-width: 768px) {.new-blc-btn {margin-top: 24px; }}"
+      ],
+      "settings": {
+        "class": "pf-219-icon-block",
+        "bg": "#fcfaf6",
+        "textcolor": "#212121",
+        "heading": "A membership to change the way you clean forever",
+        "buttontext": "GET YOUR OFFER",
+        "buttonbg": "#11322c",
+        "buttontxtcolor": "#ffffff",
+        "scrollto": "starterkit-product",
+        "show_hide_block": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 8,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "full_width_image_text_Ppn6wx": {
+      "type": "full-width-image-text",
+      "custom_css": [
+        ".founders-p1 {font-size: 18px !important;}",
+        ".founders-p2 {font-size: 16px !important;}",
+        "@media (max-width: 768px) {.founders-p1 {font-size: 16px !important; } .founders-p2 {font-size: 14px !important; }}"
+      ],
+      "settings": {
+        "className": "about-pf",
+        "textcolor": "#212121",
+        "background": "#ffffff",
+        "backgroundImage": "shopify://shop_images/BG_-_Desktop.jpg",
+        "layout": true,
+        "heading": "Meet our founders",
+        "image": "shopify://shop_images/Founders.jpg",
+        "details": "<b class=\"fw-500 d-block mb-2 founders-p1\">Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning even more effective, more effortless, and more enjoyable.</b>\n<span class=\"founders-p2\">\nFrom a Hertfordshire garage to millions of homes, their multipurpose way spray, scented with essential oils, is on the way to changing the way we feel about cleaning for good.</span>"
+      }
+    },
+    "faq_section_reskin_ALn44g": {
+      "type": "faq-section-reskin",
+      "blocks": {
+        "text_J4Vcp9": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "open": true,
+            "faq-question": "Why do I get a free Gentle Chamomile scent?",
+            "faq-ans": "<p>For a limited time we’re giving all our new members an extra scent for free, to help you take a gentle approach to cleaning this spring.</p>"
+          }
+        },
+        "text_QygHrY": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of cleaning concentrate into your Bottle for Life and slowly fill to the top (just below the neck) with tap water. Give the bottle a gentle shake to mix, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "text_HkQc97": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to say that Counter Clean is pH neutral, which means it’s safe to use on most surfaces. That includes softer materials like aluminium, wood, stone, quartz and other sealed surfaces. We do recommend patch testing first on any particularly sensitive or precious surfaces you’re concerned about. Just spray onto a cloth and wipe a small patch to see the results.</p>"
+          }
+        },
+        "text_TLFd9j": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>We offer lots of subscription options, including switching your scent refill pack, changing the frequency of your deliveries or cancelling your membership altogether. Subscriptions are set to a 90-day frequency by default, but you can always move your next billing date if you need to in a few easy steps. We understand there might be times when you need to stop your deliveries, and we’ll always respect your decision to leave - even if we’ll miss you.<br/><br/>If you have any trouble managing your subscription, our Customer Experience Team is always on hand to respond to your questions and requests as soon as possible. They’re very friendly.They’re very friendly.</p>"
+          }
+        },
+        "text_wwqHGw": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What's the difference between Signature & Seasonal?",
+            "faq-ans": "<p>We offer two different scent collections with your Counter Clean subscription - Signature and Seasonal Scents. Our Signature Scent pack is available all year round, and contains our three best-selling scents - Uplifting Citrus, Balancing Floral, and Grounding Vetiver. Our Seasonal Scent pack contains three limited edition new scents blended for every season.</p>"
+          }
+        },
+        "text_KaAzJT": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>A 300ml bottle of Counter Clean (including one 20ml concentrate) contains about 230 sprays. A typical household will get through one of our 300ml bottles in two to four weeks, unless you get a bit addicted to wiping down your surfaces like we have!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_J4Vcp9",
+        "text_QygHrY",
+        "text_HkQc97",
+        "text_TLFd9j",
+        "text_wwqHGw",
+        "text_KaAzJT"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": true,
+        "scrollBtnText": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 10,
+        "funnel_stage": "landing_page",
+        "dataModule": "faq",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_kGNHfT": {
+      "type": "footer-2",
+      "custom_css": [
+        "@media (max-width: 768px) {.common-font-size {text-align: left; }}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_reskin_NEErpW",
+    "banner_10_4mHyG8",
+    "image_with_listing_gAWD66",
+    "reskin_scent_tabs_bbTVPk",
+    "global_product_310_GFjq9j",
+    "pf281_blocks_87b8d9",
+    "image_with_text_268_6cXK7F",
+    "reskin_icon_blocks_KUfeUR",
+    "full_width_image_text_Ppn6wx",
+    "faq_section_reskin_ALn44g",
+    "footer_2_kGNHfT"
+  ]
+}

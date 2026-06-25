@@ -1,0 +1,117 @@
+<header class="bf-header" x-data>
+  <div class="bf-header-inner px-4">
+    <a class="d-flex my-auto" href="/" target="_blank">
+      <img class="logo mobile-hide my-auto" src="{{ 'pf-logo-1.svg' | asset_url }}" width="191" height="32">
+    </a>
+
+    <a class="d-flex my-auto" style="margin-right: auto;" href="/" target="_blank">
+      <img class="logo desktop-hide my-auto" src="{{ 'pf-logo-mobile.svg' | asset_url }}" width="59" height="24">
+    </a>
+
+    <div class="d-flex">
+      <span class="btn btn-bf-cta value-sans {% if section.settings.scrollto !=''%}click-scroll{% endif %}" {% if section.settings.scrollto !=''%} data-target="{{ section.settings.scrollto }}" {% endif %}>
+          SHOP BLACK FRIDAY DEALS
+      </span>
+
+      <div class="cart-toggle my-auto" @click="$dispatch('toggle-cart')">
+        <div class="d-flex position-relative">
+            {% render "icon-cart-3" %}
+            <span class="cart-item-count">
+              {%- if cart.item_count > 0 %}
+                {{ cart.item_count -}}
+              {%- endif -%}
+            </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+  {
+    "name": "Black Friday Header",
+    "settings": [
+      {
+        "type": "text",
+        "id": "scrollto",
+        "label": "Scroll To Section",
+        "default": "black-friday-products"
+      }
+    ],
+    "presets": [
+		{
+			"name": "Black Friday Header"
+		}
+	]
+  }
+{% endschema %}
+
+{% style %}
+  .cart-toggle {
+    z-index: 998 !important;
+  }
+  
+  .bf-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 64px;
+  }
+
+  .bf-header .cart-item-count {
+    top: 0px;
+    right: 0px;
+  }
+
+  .bf-header .bf-header-inner {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+  .bf-header .btn-bf-cta {
+    display: inline-flex;
+    align-items: center;
+    color: #ffffff;
+    font-size: 18px;
+    background: #161718;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    margin-right: 16px;
+    padding: 16px 24px 16px 24px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+
+  .bf-header .btn-bf-cta:hover {
+    background: #3350B4;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .bf-header {
+      height: 56px;
+    }
+    
+    .bf-header .bf-header-inner {
+      padding-left: 16px !important;
+      padding-right: 16px !important;
+    }
+
+    .bf-header .btn-bf-cta {
+      font-size: 14px;
+      padding: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 355px) {
+    .bf-header .btn-bf-cta {
+      font-size: 12px;
+    }
+  }
+{% endstyle %}

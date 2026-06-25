@@ -1,0 +1,40 @@
+<script>
+  const joininterval = setInterval(addjointodaytext, 100);
+
+  function addjointodaytext() {
+    const targetSpan = document.querySelector('span[data-testid="typography"].Typography_text-small-bold__fwESJ');
+
+    console.log(location.pathname.includes('/a/account/login'));
+    if (targetSpan && !document.querySelector('.skio-join-today') && location.pathname.includes('/a/account/login')) {
+      let joinToday = document.createElement('div');
+      joinToday.className = 'skio-join-today fw-300';
+      joinToday.innerHTML = `Not a member yet? <a href="${window.Shopify.routes.root}#starterkit-product" style="text-decoration: underline;" class="fire-join-skio-event fw-600">Join today</a> and get full access to our most exclusive offers and scents`;
+      joinToday.style.marginTop = '0.5rem';
+
+      targetSpan.parentElement.appendChild(joinToday);
+
+      document.querySelector('.fire-join-skio-event').addEventListener('click', firejointoday);
+
+      clearInterval(joininterval);
+      console.log('Interval cleared.');
+    }
+
+    function firejointoday(event) {
+      event.preventDefault();
+
+      try {
+        gtag('event', 'click_custom', {
+          'page_url': `${window.Shopify.routes.root}a/account/login`,
+          'target_url': `${window.Shopify.routes.root}`,
+          'event_label': 'Join today'
+        });
+
+        console.log('Join today event sent.');
+      } catch(error) {
+        console.log('You are on preview so event will not be fired.');
+      } finally {
+        window.location.href = event.target.href;
+      }
+    }
+  }
+</script>

@@ -1,0 +1,173 @@
+body {
+  background: #f6f1e5 !important;
+}
+.main-art {
+  width: 65%;
+}
+.more-related {
+  width: 85%;
+}
+.blog-title {
+  font-size: 28px;
+  color: #212121;
+  line-height: 35px;
+  letter-spacing: 0.392px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-family: "Lausanne";
+}
+.article-content {
+  font-size: 15px;
+  color: #212121;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  font-family: "Lausanne";
+}
+.article-content p {
+  line-height: 21px;
+  margin-bottom: 14px;
+}
+.readmore {
+  color: #11322c;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: solid 1px #11322c;
+  font-family: "Lausanne";
+}
+.blog-type {
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #f6e3d1;
+  border: unset;
+  font-size: 14px;
+}
+.blog-date-new {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 21px;
+  text-transform: uppercase;
+}
+.blog-separator {
+  color: #bdbdbd;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 10px;
+}
+.article-common-info heading-2 {
+  color: #0c231f;
+  font-size: 40px;
+  font-weight: 400;
+}
+.article-common-info .cmt {
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 18px;
+}
+.article-common-info .smtxt {
+  color: #bdbdbd;
+}
+.article-common-info .article-author,
+.article-common-info .article-time {
+  color: #212121;
+}
+.textile h3 {
+  color: #212121;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 1.5rem;
+}
+.textile p {
+  color: #212121;
+  font-size: 18px;
+  font-weight: 200;
+  line-height: 27px;
+}
+.textile p span {
+  font-weight: 200 !important;
+}
+.banner-setion {
+  width: 100%;
+  min-height: unset;
+  height: 70vh;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.learn-more {
+  font-family: "GT Super";
+  font-size: 40px;
+  text-align: center;
+}
+
+@media (max-width: 1024px) {
+  .faq-banner-text {
+    bottom: 80px;
+  }
+  .banner-setion {
+    min-height: unset;
+    height: 35vh;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .main-art {
+    width: 100%;
+  }
+  .more-related {
+    width: 100%;
+  }
+  .blog-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .blog-type,
+  .blog-date-new {
+    font-size: 12px;
+  }
+  .readmore {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .desktop-hidden {
+    display: flex;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .blog-load-more {
+    width: 100%;
+  }
+  .menu-toggle {
+    height: 25px;
+  }
+  .cart-icon {
+    height: 45px;
+  }
+  .banner-setion {
+    min-height: unset;
+    height: 30vh;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-setion {
+    min-height: unset;
+    height: 25vh;
+    padding: 5px;
+  }
+}
+
+@media (max-width: 430px) {
+  .banner-setion {
+    min-height: unset;
+    height: 20vh;
+    padding: 5px;
+  }
+}

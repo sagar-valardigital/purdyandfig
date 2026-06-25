@@ -1,0 +1,376 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "611924ae-b2d3-484e-a7a5-a48ee56197bb": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "",
+            "open": "close",
+            "DescriptionHeading": "Overview",
+            "description": "A 3-pack of Hand &amp; Body Wash in our three original unique scents for a nourishing, beautifully-scented cleanse.\n<p> </p>\nPump a pea-sized amount into wet hands and rub for 20 seconds to create a lather. Rinse off with warm water and enjoy the lingering spa-like scents and clean, nourished hands."
+          }
+        },
+        "3c8b0d76-955c-4132-9200-d16920b6ffc8": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Uplifting Citrus: A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nBalancing Floral: A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects."
+          }
+        },
+        "3a3e6ff2-8b66-4b2f-8db2-ee6e1619167b": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "3 x 285ml Refillable Hand Wash in each of our signature scents:\n- Original Citrus \n- Charlotte's Floral\n- Wild Woody"
+          }
+        },
+        "cdda6805-8bed-4c0f-ae27-0574eadb0818": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "hand-body-wash",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Our luxurious Hand &amp; Body Wash available in each of our three original unique scents for a nourishing, beautifully-scented cleanse.\n<p> </p>\nPump a pea-sized amount into wet hands and rub for 20 seconds to create a lather. Rinse off with warm water and enjoy the lingering spa-like scent and clean, nourished hands."
+          }
+        },
+        "c388fdbf-0da0-4032-b2f9-c9a1d032cff6": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "hand-body-wash",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Uplifting Citrus: A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nBalancing Floral: A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects."
+          }
+        },
+        "d5011a1e-481d-4774-9d82-025529744a72": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "hand-body-wash",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "285ml Refillable Hand wash in one of our three core scents."
+          }
+        }
+      },
+      "block_order": [
+        "611924ae-b2d3-484e-a7a5-a48ee56197bb",
+        "3c8b0d76-955c-4132-9200-d16920b6ffc8",
+        "3a3e6ff2-8b66-4b2f-8db2-ee6e1619167b",
+        "cdda6805-8bed-4c0f-ae27-0574eadb0818",
+        "c388fdbf-0da0-4032-b2f9-c9a1d032cff6",
+        "d5011a1e-481d-4774-9d82-025529744a72"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "ce3ed11d-98a5-46ce-a9b2-178f4904d7c2": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "84615448-9898-4c22-b438-1f9de9b09e76": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/daily.png",
+            "details": ""
+          }
+        },
+        "6ae1fa14-ce64-4720-8ae1-6420eaf404a4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday.png",
+            "details": ""
+          }
+        },
+        "d1e512bd-7760-4b1d-86dd-24b2b0b9ac7b": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/house.png",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "84615448-9898-4c22-b438-1f9de9b09e76",
+        "6ae1fa14-ce64-4720-8ae1-6420eaf404a4",
+        "d1e512bd-7760-4b1d-86dd-24b2b0b9ac7b"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": false,
+        "bgColor": "",
+        "heading": "Hand &amp; Body Wash with a difference",
+        "logoDetailText": "<p>Cleanse your skin with our gentle, all-natural formula. </p><p>Available in Purdy & Figg’s signature blends, the luxurious formula can be used either as a hand or body wash, leaving skin soft, rejuvenated and beautifully scented. </p>"
+      }
+    },
+    "8294cee8-66e6-419a-be91-a7d5d1be6f1e": {
+      "type": "landing-blocks",
+      "blocks": {
+        "c5e5aa1a-bb3d-4ec8-a453-7388772628af": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-05.png",
+            "rounded": true,
+            "heading": "Lathering lusciousness",
+            "details": "Premium ingredients for an indulgent lather.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "02ca153d-0841-4633-a009-08c183621501": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-06.png",
+            "rounded": true,
+            "heading": "Environmentally Friendly",
+            "details": "Reduce waste with our plastic-free refills.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "edcd3cf5-3e73-4050-99ff-edfa91841c40": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-02_c00fa913-5845-4c8c-b91d-09280a38e43b.png",
+            "rounded": true,
+            "heading": "Pure essential oils",
+            "details": "Contains pure essential oils for a long-lasting scent.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "059f35b0-4fd5-48c1-afc8-069cfae52410": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-07.png",
+            "rounded": true,
+            "heading": "Moisturising & nourishing",
+            "details": "Contains natural moisturising agents including Vitamin E.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "c5e5aa1a-bb3d-4ec8-a453-7388772628af",
+        "02ca153d-0841-4633-a009-08c183621501",
+        "edcd3cf5-3e73-4050-99ff-edfa91841c40",
+        "059f35b0-4fd5-48c1-afc8-069cfae52410"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "Cleanse and nourish your skin",
+        "subtext": "Say hello to a spa for your hands and body. A unique formula that maintains and protects the natural balance of your skin.",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "14bb498f-c678-45ac-80ed-9f102f85d9b1": {
+      "type": "bb-products",
+      "blocks": {
+        "237379a0-c835-4097-89cf-563013e3089c": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "pillow-spray"
+          }
+        },
+        "ff4fbb91-7fa0-4abd-a394-3e3d034af04a": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        },
+        "a91708de-f091-4585-965b-30a80acd6f5f": {
+          "type": "product",
+          "settings": {
+            "product": "eco-concentrates-surface-cleaner-starter-kit-d"
+          }
+        },
+        "271b84bc-9379-4282-a618-9b41f36f7703": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "bathroom-bundle"
+          }
+        },
+        "a2b32de6-9245-43a7-b847-fac977ca1e39": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        }
+      },
+      "block_order": [
+        "237379a0-c835-4097-89cf-563013e3089c",
+        "ff4fbb91-7fa0-4abd-a394-3e3d034af04a",
+        "a91708de-f091-4585-965b-30a80acd6f5f",
+        "271b84bc-9379-4282-a618-9b41f36f7703",
+        "a2b32de6-9245-43a7-b847-fac977ca1e39"
+      ],
+      "settings": {
+        "className": "add-more-bathroom-product",
+        "bgColor": "#e3f3fe",
+        "heading": "Add extras to your cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "8d5f46ba-df1e-4815-96f3-6c0e02705d34": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "How to Use",
+        "image": "shopify://shop_images/02-2036_christmasweb_body-shower.jpg",
+        "details": "<p>For washing hands: Pump a pea-sized amount into wet hands and rub for 20 seconds to create a lather. Rinse off with warm water and enjoy the lingering spa-like scent and clean, nourished hands. </p><p>In the shower: use as an alternative to shower gel for a naturally scented lift whilst you cleanse. </p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "dataModule": "",
+        "dataTitle": ""
+      }
+    },
+    "57a9dfc2-bd64-42e2-bdf0-a1835b86aa2e": {
+      "type": "landing-blocks",
+      "blocks": {
+        "599382d5-9a7b-4449-9a50-34be514329ba": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/scent_image-03.png",
+            "rounded": false,
+            "heading": "Uplifting Citrus",
+            "details": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "722f0ca5-171a-4374-a54e-31438c7cc3ee": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/scent_image-04.png",
+            "rounded": false,
+            "heading": "Balancing Floral",
+            "details": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots, known for their comforting & balancing properties",
+            "mbBlock": "mw-50"
+          }
+        },
+        "8a02c369-eb69-4792-8d9e-b67e4cf34380": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/scent_image-02.png",
+            "rounded": false,
+            "heading": "Grounding Vetiver",
+            "details": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "599382d5-9a7b-4449-9a50-34be514329ba",
+        "722f0ca5-171a-4374-a54e-31438c7cc3ee",
+        "8a02c369-eb69-4792-8d9e-b67e4cf34380"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "Scent Details",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "165423464702cd9638": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Two women on a mission to transform cleaning",
+        "image": "shopify://shop_images/p-2.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg wanted to make household products that they felt good using; both for themselves and the environment. What started as a hobby and garage-based workshops, quickly became a movement of over 200,000 customers who are demanding more from their homecare products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "dataModule": "",
+        "dataTitle": ""
+      }
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "ce3ed11d-98a5-46ce-a9b2-178f4904d7c2",
+    "8294cee8-66e6-419a-be91-a7d5d1be6f1e",
+    "14bb498f-c678-45ac-80ed-9f102f85d9b1",
+    "8d5f46ba-df1e-4815-96f3-6c0e02705d34",
+    "57a9dfc2-bd64-42e2-bdf0-a1835b86aa2e",
+    "165423464702cd9638",
+    "16644285387cfa3d71"
+  ]
+}

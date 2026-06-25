@@ -1,0 +1,412 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: width: 32, height: 32 }}">
+    <!--
+      allow assets to be loaded and open links in the app itself, see: http://phonegap.com/blog/2012/03/20/access-tags/
+    -->
+    <!-- Issue 204079: Allow retrieval of any resource. Custom widgets can point to anything. -->
+    <access origin="*" />
+    <allow-navigation href="*://*youtube.com" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="{{ 'PPPierSans-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'PPPierSans-Regular.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <style>
+              @font-face {font-family: 'Value-Medium-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-med-fixed.woff?v=1716379982") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+              @font-face {font-family: 'Value-Sans-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-sans-fixed.woff?v=1716380462") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+
+              @font-face {font-family: 'Value Serif';src: url({{'ValueSerifPro-Bold.woff2' | asset_url }}) format('woff2'), url({{'ValueSerifPro-Bold.woff' | asset_url }}) format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+              @font-face {font-family: 'Pier Sans';src: url({{'PPPierSans-Regular.woff2' | asset_url }}) format('woff2'), url({{'PPPierSans-Regular.woff' | asset_url }}) format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+              @font-face {font-family: 'Value-Sans';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/ninja_Value.woff?v=1675460636") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+              @font-face {font-family: 'Value-Serif-Pro';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Serif-Pro-Regular.woff?v=1675460754") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+              @font-face {font-family: 'Value-Bold';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-bold.woff?v=1692609179") format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+            @font-face {font-family: 'Value-Medium';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Medium.woff?v=1699626333") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+              .value-medium{font-family: 'Value-Medium';}
+            @font-face {
+          font-family: 'GT Super';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Rg_e230aeaf-e9ba-49d8-a39f-557fa581ea9a.woff2?v=1721328313') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Rg_ed23a175-fce6-4baf-91c6-4034a442c4a2.woff?v=1721328313') format('woff');
+          font-weight: 400;
+          font-style: normal;
+          font-display: swap;
+      }
+
+      @font-face {
+          font-family: 'GT Super';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Lt_a51b20bf-b685-49d1-80f6-0b6535318c33.woff2?v=1721328313') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Lt_c7d2cc39-c4d3-4c1d-a6af-45f9c5996cdd.woff?v=1721328313') format('woff');
+          font-weight: 300;
+          font-style: normal;
+          font-display: swap;
+      }
+      @font-face {
+          font-family: 'GT Super';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-RgIt.woff2?v=1721328313') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-RgIt.woff?v=1721328313') format('woff');
+          font-weight: 300;
+          font-style: italic;
+          font-display: swap;
+      }
+      @font-face {
+          font-family: 'Lausanne';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-400_9ecb13f5-b86b-4c02-9b3f-1296ea764918.woff2?v=1721328281') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-400_5aafb95f-9754-48c2-b6f6-c5af5cab25a1.woff?v=1721328282') format('woff');
+          font-weight: 400;
+          font-style: normal;
+      }
+      @font-face {
+          font-family: 'Lausanne';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-500.woff2?v=1721328281') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-500.woff?v=1721328281') format('woff');
+          font-weight: 500;
+          font-style: normal;
+      }
+      @font-face {
+          font-family: 'Lausanne';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-200.woff2?v=1721328281') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-200.woff?v=1721328282') format('woff');
+          font-weight: 200;
+          font-style: normal;
+      }
+      @font-face {
+          font-family: 'GT Super Txt Trial Rg';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-Rg.woff2?v=17218867072') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-Rg.woff?v=1721886708') format('woff');
+          font-weight: normal;
+          font-style: normal;
+          font-display: swap;
+      }
+
+      @font-face {
+          font-family: 'GT Super Txt Trial Rg It';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-RgIt.woff2?v=1721886707') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-RgIt.woff?v=1721886707') format('woff');
+          font-weight: normal;
+          font-style: italic;
+          font-display: swap;
+      }
+      @font-face {
+          font-family: 'GT Super Ds Trial Lt It';
+          src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-LtIt.woff2?v=1722489379') format('woff2'),
+              url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-LtIt.woff?v=1722489379') format('woff');
+          font-weight: 300;
+          font-style: italic;
+          font-display: swap;
+      }
+            #page-block-u7mmwsnnmra{margin-top:0 !important;}
+             .market-place-currency::before {
+               content: "{{ localization.country.currency.symbol }}";
+            }
+    </style>
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% if handle contains 'clear-cart-redirect' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+    {% capture modified_content_for_header %}{{ content_for_header }}{% endcapture %}
+
+    {% if request.path == '/pages/starterkit-offer-4' or request.path == '/pages/starterkit-offer-christmas-4' %}
+      <!-- Rokt integration -->
+      <script src="https://apps.rokt.com/integrations/referral-tag/referral-tag.js" async></script>
+    {% endif %}
+
+    {% if template.suffix == 'complete-starter-kit' %}
+      {% assign modified_content_for_header = modified_content_for_header
+        | remove: '"https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=H7J3FA\u0026shop=purdy-figg.myshopify.com","https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=H7J3FA\u0026shop=purdy-figg.myshopify.com","\/\/shopify.privy.com\/widget.js?shop=purdy-figg.myshopify.com","https:\/\/live.bb.eight-cdn.com\/script.js?shop=purdy-figg.myshopify.com","https:\/\/geolocation-recommendations.shopifyapps.com\/locale_bar\/script.js?shop=purdy-figg.myshopify.com","https:\/\/api.socialsnowball.io\/js\/referral.js?shop=purdy-figg.myshopify.com"'
+      %}
+    {% endif %}
+    <!-- If you have a lot of templates you are checking, a case/when using template.name might be appropriate -->
+    {{ modified_content_for_header }}
+
+    <!-- Begin: Northbeam pixel -->
+    <script>
+      (function(){var r;(n=r=r||{}).A="identify",n.B="trackPageView",n.C="fireEmailCaptureEvent",n.D="fireCustomGoal",n.E="firePurchaseEvent";var n="//j.northbeam.io/ota-sp/d7459989-f379-4317-bb15-f2f712fd1f27.js";function t(n){for(var e=[],r=1;r<arguments.length;r++)e[r-1]=arguments[r];a.push({fnName:n,args:e})}var a=[],e=((e={_q:a})[r.A]=function(n,e){return t(r.A,n,e)},e[r.B]=function(){return t(r.B)},e[r.C]=function(n,e){return t(r.C,n,e)},e[r.D]=function(n,e){return t(r.D,n,e)},e[r.E]=function(n){return t(r.E,n)},window.Northbeam=e,document.createElement("script"));e.async=!0,e.src=n,document.head.appendChild(e);})()
+    </script>
+    <!-- End: Northbeam pixel -->
+
+    <!-- Podscribe pixel -->
+    <script>
+      (function (w, d) {
+          var id = 'podscribe-capture',
+          n = 'script';
+          var e = d.createElement(n);
+          e.id = id;
+          e.async = true;
+          e.src = 'https://d34r8q7sht0t9k.cloudfront.net/tag.js';
+          var s = d.getElementsByTagName(n)[0];
+          s.parentNode.insertBefore(e, s);
+          e.addEventListener('load', function() {
+            w.podscribe('init', { user_id: '30a6f746-1c4d-44d2-8996-3528316e9313', advertiser: 'purdyfiggltd2' });
+            w.podscribe('view');
+          })
+        })(window, document);
+    </script>
+    <!-- /Podscribe pixel -->
+
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
+    <link rel="stylesheet" href="{{'fontawesome-all.css' | asset_url}}">
+    <link rel="stylesheet" href="{{'theme.min.css' | asset_url}}">
+    <link rel="stylesheet" href="{{'bathroom-bliss.css' | asset_url}}">
+    {%- unless settings.type_body_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                })(window,document,'script','dataLayer','GTM-M8483VP');
+    </script>
+    <!-- End Google Tag Manager -->
+     {% assign google_ads_product = page.metafields.custom.google_ads_product.value %}
+{% if google_ads_product %}
+      <script type="application/ld+json">
+{
+  "@context": "http://schema.org/",
+  "@type": "Product",
+  "name": "{{ google_ads_product.title }}",
+  "url": {{ request.origin | append: request.path | json }},
+  "description": "",
+  "sku": "{{ google_ads_product.variants.first.sku }}",
+  "image": ["{{ google_ads_product.featured_image | image_url }}"],
+  "brand": {
+    "@type": "Thing",
+    "name": "Purdy & Figg"
+  },
+  "offers": [{
+    "@type": "Offer",
+    "sku": "{{ google_ads_product.variants.first.sku }}",
+    "availability": "http://schema.org/InStock",
+    "price": {{ page.metafields.custom.google_ads_product_price  }},
+    "priceCurrency": {{ cart.currency.iso_code | json }},
+    "url": {{ request.origin | append: request.path | json }},
+    "priceSpecification": {
+      "@type": "PriceSpecification",
+      "price": {{ page.metafields.custom.google_ads_product_price  }},
+      "priceCurrency": {{ cart.currency.iso_code | json }}
+    }
+    {% if page.metafields.custom.google_ads_product_discount_code %}
+,
+    "eligibleQuantity": {
+      "@type": "QuantitativeValue",
+      "value": 1
+    },
+    "additionalProperty": [
+      {
+        "@type": "PropertyValue",
+        "name": "discountCode",
+        "value": "{{ page.metafields.custom.google_ads_product_discount_code }}"
+      },
+      {
+        "@type": "PropertyValue",
+        "name": "discountAmount",
+        "value": "{{ page.metafields.custom.google_ads_product_discount_amount }}",
+        "unitCode": "GBP"
+      }
+    ]
+    {% endif %}
+  }],
+  "additionalProperty": {
+    "@type": "PropertyValue",
+    "name": "compareAtPrice",
+    "value": "{{ page.metafields.custom.google_ads_product_compare_price}}",
+    "unitCode": {{ cart.currency.iso_code | json }}
+  },
+  {% if google_ads_product.metafields.okendo.summaryData.reviewCount > 0 %}
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "description": "Okendo Reviews",
+            "ratingValue": "{{ google_ads_product.metafields.okendo.summaryData.reviewAverageValue }}",
+            "ratingCount": "{{ google_ads_product.metafields.okendo.summaryData.reviewCount }}"
+          }
+          {% elsif google_ads_product.metafields.okendo.ReviewCount > 0 %}
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "description": "Okendo Reviews",
+            "ratingValue": "{{ google_ads_product.metafields.okendo.ReviewAverageValue }}",
+            "ratingCount": "{{ google_ads_product.metafields.okendo.ReviewCount }}"
+          }
+          {% endif %}
+}
+</script>
+      {% endif %}
+
+      {% if localization.market.handle == 'en-us' and page.metafields.custom.hide_from_us %}
+<script>
+  window.location.href = '{{ routes.root_url }}';
+</script>
+  {% endif %}
+
+  <!-- Cart improvement snippets -->
+    {% render 'selling-plan-toggle' %}
+    {% render 'cart-qty-guard' %}
+  
+  </head>
+  <script src="{{ 'alpine.min.js' | asset_url}}" defer></script>
+
+  {% assign optionalclass = '' %}
+  {% if template.suffix == 'pf210'
+    or template.suffix == 'pf222-variant-1'
+    or template.suffix == 'pf222-variant-2'
+    or template.suffix == 'pf235-variant'
+    or template.suffix == 'pf235-control'
+    or template.suffix == 'Rokt-EV-LP'
+    or template.suffix == 'pf244-variant'
+    or template.suffix == 'pf251-control'
+    or template.suffix == 'rokt-ev-lp-2'
+    or template.suffix == 'PF231-duplicate-of-starterkit-offer'
+    or template.suffix == 'pf275-test'
+    or template.suffix == 'pf282'
+    or template.suffix == 'PF288'
+    or template.suffix == 'PF288-ROKT'
+    or template.suffix == 'PF288-PROACTION'
+    or template.suffix == 'pf290-evg-control' 
+    or template.suffix == 'pf284-rokt-lp' 
+    or template.suffix == 'pf276'
+    or template.suffix == 'pf336'
+     or template.suffix == 'pf336-rkot'
+     or template.suffix == 'pf336-proaction'
+  %}
+    {% assign optionalclass = 'pf-174' %}
+  {% endif %}
+  <body id="body" class="p-0 m-0 pt-0 {{ template.suffix | handle }} {{ optionalclass }}">
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    <div class="cart-drawer-wrapper-sections legacy-cart">
+      {% if request.path contains 'pages/black-friday-vip-offer' %}
+        {% render 'cart-drawer-3' %}
+      {% elsif template.suffix == 'pf-225-christmas' %}
+        {% render 'cart-drawer-4' %}
+      {% elsif template.suffix == 'pf-229-bf' %}
+        {% render 'cart-drawer-5' %}
+      {% elsif template.suffix == 'pf253-duplicate-of-pf225' %}
+        {% render 'cart-drawer-6' %}
+      {% elsif template.suffix == 'pf-225-christmas-variant' %}
+        {% render 'cart-drawer-7' %}
+      {% elsif template.suffix == 'pf-260' %}
+        {% render 'cart-drawer-260' %}
+      {% else %}
+        {% render 'cart-drawer-2' %}
+      {% endif %}
+    </div>
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    </ul>
+
+    <script>
+      document.body.addEventListener('submit', (e) => {
+        const checkoutForm = e.target.closest('form[name="checkout_form"]');
+        if (!checkoutForm) return;
+
+        const checkoutBtn = checkoutForm.querySelector('.checkout-btn');
+        if (checkoutBtn) {
+          setTimeout(function(){
+            checkoutBtn.classList.remove('loading');
+          }, 300);
+        }
+      });
+    </script>
+
+    <script src="{{ 'theme.min.js' | asset_url }}" async></script>
+
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {% render 'ga4' %}
+    {% render 'ga4-tracking' %}
+
+    {% if request.path == '/pages/starterkit-offer-7' %}
+
+    <script>
+      if (!localStorage.getItem('session_landing_page')) {
+          localStorage.setItem('session_landing_page', window.location.pathname);
+          localStorage.setItem('landed_on_starterkit_timestamp', Date.now().toString());
+      }
+
+      // Set LP flag only if this page was the landing page
+      if (localStorage.getItem('session_landing_page') && 
+          localStorage.getItem('session_landing_page').includes('/pages/starterkit-offer-7')) {
+          localStorage.setItem('landed_on_starterkit', 'true');
+      }
+    </script>
+
+    {% endif %}
+
+    <script>
+    // Wait for fbq to be available
+function waitForFbq(callback, maxAttempts = 10, interval = 500) {
+  let attempts = 0;
+  
+  const checkFbq = function() {
+    if (typeof fbq !== 'undefined') {
+      // fbq exists, execute the callback
+      callback();
+      return;
+    } else if (attempts < maxAttempts) {
+      // fbq doesn't exist yet, try again after interval
+      attempts++;
+      setTimeout(checkFbq, interval);
+    } else {
+      // Give up after max attempts
+      console.log('Facebook Pixel not loaded after maximum attempts');
+    }
+  };
+  
+  checkFbq();
+}
+
+// Use the function to safely call fbq
+waitForFbq(function() {
+  fbq('track', 'ViewContent');
+});
+    </script>
+  </body>
+</html>

@@ -1,0 +1,408 @@
+<div class="mobile-menu mobile-menu-1-0 desktop-hide">
+  <div class="mobile-menu--full-wrapper">
+    <div class="mobile-menu-top-wrapper">
+      <div class="mobile-menu-header pb-3 d-flex justify-content-between">
+        <div>{% render 'pf-logo' %}</div>
+        <div class="menu-toggle close-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M1.4813 1.48124C1.8798 1.08286 2.4202 0.85907 2.98368 0.85907C3.54715 0.85907 4.08756 1.08286 4.48605 1.48124L12.0001 8.99524L19.5141 1.48124C19.9148 1.09415 20.4516 0.879967 21.0088 0.884809C21.5659 0.88965 22.0989 1.11313 22.4929 1.50713C22.8869 1.90112 23.1104 2.4341 23.1152 2.99126C23.1201 3.54843 22.9059 4.08521 22.5188 4.48599L15.0048 12L22.5188 19.514C22.9059 19.9148 23.1201 20.4515 23.1152 21.0087C23.1104 21.5659 22.8869 22.0989 22.4929 22.4929C22.0989 22.8868 21.5659 23.1103 21.0088 23.1152C20.4516 23.12 19.9148 22.9058 19.5141 22.5187L12.0001 15.0047L4.48605 22.5187C4.08527 22.9058 3.54849 23.12 2.99132 23.1152C2.43416 23.1103 1.90118 22.8868 1.50719 22.4929C1.1132 22.0989 0.889711 21.5659 0.88487 21.0087C0.880028 20.4515 1.09422 19.9148 1.4813 19.514L8.9953 12L1.4813 4.48599C1.08293 4.0875 0.859131 3.54709 0.859131 2.98362C0.859131 2.42014 1.08293 1.87974 1.4813 1.48124Z" fill="#314F66"/>
+          </svg>
+        </div>
+      </div>
+      <div class="mobile-menus-wrapper">
+        <ul class="list-unstyle font-value menu-1 ">
+          {%- for mobilelink in section.settings.mobilemenu.links -%}
+            {% if mobilelink.links.size > 0 %}
+              <li class="have-submenu">
+                <span class="mobile-menu-item font-value submenu-toggle new-theme-text">
+                  {{- mobilelink.title | escape -}}
+                </span>
+                <ul class="list-unstyle submenu pb-3">
+                  {% for childlink in mobilelink.links %}
+                    <li class="position-relative">
+                      <a
+                        href="{{childlink.url}}"
+                        class="mobile-submenu-item font-value new-theme-text"
+                        {% if section.settings.dataTrack %}
+                          data-tracked="true"
+                          data-page-url="{{ request.path }}"
+                          data-target-url="{{childlink.url}}"
+                          data-index="{{ section.settings.index }}"
+                          data-funnel-stage="{{ section.settings.funnel_stage }}"
+                          data-module="{{ section.settings.dataModule }}"
+                          data-event-label="{{ childlink.title | escape}}"
+                          data-event-value="{{ section.settings.eventValue }}"
+                          data-item-id=""
+                          data-option-index=""
+                          data-item-name=""
+                        {% endif %}
+                      >
+                        {% assign collection_handle = childlink.url | split: '/' | last %}
+                        {% assign selected_collection = collections[collection_handle] %}
+
+                        <img
+                          width="65"
+                          height="65"
+                          src="{% if collection_handle == 'collections' %} https://cdn.shopify.com/s/files/1/0360/1347/3931/files/collection_roundel_copy.png?v=1701156006 {% else %}{{ selected_collection.image.src | img_url: 'medium' }}{% endif %}"
+                        >
+                        {{ childlink.title | escape -}}
+                      </a>
+                      <span class="menu-tag new d-none {{ childlink.title | handle }}">New</span>
+                      <span class="menu-tag best-seller d-none {{ childlink.title | handle }}">Bestsellers</span>
+                      <span class="menu-tag limited d-none {{ childlink.title | handle }}">Limited Edition</span>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="no-submenu position-relative">
+                <a
+                  href="{{mobilelink.url}}"
+                  class="mobile-menu-item new-theme-text font-value"
+                  {% if section.settings.dataTrack %}
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url="{{mobilelink.url}}"
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="{{ mobilelink.title  | escape}}"
+                    data-event-value="{{ section.settings.eventValue }}"
+                    data-item-id=""
+                    data-option-index=""
+                    data-item-name=""
+                  {% endif %}
+                >
+                  {{- mobilelink.title | escape -}}
+                </a>
+                <span class="menu-tag new d-none {{ mobilelink.title | handle }}">New</span>
+                <span class="menu-tag best-seller d-none {{ mobilelink.title | handle }}">Bestsellers</span>
+                <span class="menu-tag limited d-none {{ mobilelink.title | handle }}">Limited Edition</span>
+              </li>
+            {% endif %}
+          {% endfor %}
+
+          {% if section.settings.ctaScrollTo != blank %}
+            <li class="no-submenu position-relative">
+              <a
+                {% if section.settings.dataTrack %}
+                  data-tracked="true"
+                  data-page-url="{{ request.path }}"
+                  data-target-url=""
+                  data-index="{{ section.settings.index }}"
+                  data-funnel-stage="{{ section.settings.funnel_stage }}"
+                  data-module="{{ section.settings.dataModule }}"
+                  data-event-label="Shop Starter Kit"
+                  data-event-value="shop_anchor"
+                  data-item-id=""
+                  data-option-index=""
+                  data-item-name=""
+                {% endif %}
+
+                {% if template.name == "index" %} 
+                  href="javascript:void(0);"
+                  data-target="{{ section.settings.ctaScrollTo }}"
+                  {% else %}
+                   href="/pages/homepage-new#{{ section.settings.ctaScrollTo }}"
+                {% endif %}
+                class="mobile-menu-item new-theme-text font-value click-scroll menu-toggle close-toggle w-100 h-100"
+              >
+                Shop Starter Kit
+              </a>
+              <span class="menu-tag new d-none {{ mobilelink.title | handle }}">New</span>
+              <span class="menu-tag best-seller d-none {{ mobilelink.title | handle }}">Bestsellers</span>
+              <span class="menu-tag limited d-none {{ mobilelink.title | handle }}">Limited Edition</span>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-menu-bottom-wrapper">
+      <ul class="list-unstyle font-value menu-2">
+        {%- for mobilelink in section.settings.mobilemenu2.links -%}
+          <li>
+            <a
+              href="{{mobilelink.url}}"
+              class="mobile-menu-item value-sans new-theme-text"
+              {% if section.settings.dataTrack %}
+                data-tracked="true"
+                data-page-url="{{ request.path }}"
+                data-target-url="{{mobilelink.url}}"
+                data-index="{{ section.settings.index }}"
+                data-funnel-stage="{{ section.settings.funnel_stage }}"
+                data-module="{{ section.settings.dataModule }}"
+                data-event-label="{{ mobilelink.title | escape}}"
+                data-event-value="{{ section.settings.eventValue }}"
+                data-item-id=""
+                data-option-index=""
+                data-item-name=""
+              {% endif %}
+            >
+              {{- mobilelink.title | escape -}}
+            </a>
+          </li>
+        {% endfor %}
+        <li>
+          {% if customer %}
+            <a href="{{ routes.account_url }}" class="mobile-menu-item value-sans new-theme-text">My account</a>
+          {% else %}
+            <a
+              {% if section.settings.dataTrack %}
+                data-tracked="true"
+                data-page-url="{{ request.path }}"
+                data-target-url="/a/account/login"
+                data-index="{{ section.settings.index }}"
+                data-funnel-stage="{{ section.settings.funnel_stage }}"
+                data-module="{{ section.settings.dataModule }}"
+                data-event-label="Log in"
+                data-event-value="{{ section.settings.eventValue }}"
+                data-item-id=""
+                data-option-index=""
+                data-item-name=""
+              {% endif %}
+              href="/a/account/login"
+              class="mobile-menu-item value-sans"
+              id="customer_login_link"
+              >Log in</a
+            >
+          {% endif %}
+        </li>
+      </ul>
+      <div class="menu-our-story-block text-center theme-text my-3">
+        <h2 class="font-value new-theme-text">{{ section.settings.ourstoryheading }}</h2>
+        <p class="new-theme-text">{{ section.settings.ourstorytext }}</p>
+        <a
+          href="{{ section.settings.ourstorylink }}"
+          {% if section.settings.dataTrack %}
+            data-tracked="true"
+            data-page-url="{{ request.path }}"
+            data-target-url="{{ section.settings.ourstorylink }}"
+            data-index="{{ section.settings.index }}"
+            data-funnel-stage="{{ section.settings.funnel_stage }}"
+            data-module="{{ section.settings.dataModule }}"
+            data-event-label="Our Story"
+            data-event-value="{{ section.settings.eventValue }}"
+            data-item-id=""
+            data-option-index=""
+            data-item-name=""
+          {% endif %}
+          class="text-blue"
+          >Our Story</a
+        >
+      </div>
+      <div class="mobile-menu-footer">
+        <div class="text-center">
+          <div class="social-link d-flex justify-content-center menu-social-icon">
+            <a href="https://www.instagram.com/purdyandfigg/?hl=en" class=" social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="#314F66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 6.5H17.51M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5932 15.1514 13.8416 15.5297C13.0901 15.9079 12.2385 16.0396 11.4078 15.9059C10.5771 15.7723 9.80977 15.3801 9.21485 14.7852C8.61993 14.1902 8.22774 13.4229 8.09408 12.5922C7.96042 11.7616 8.09208 10.9099 8.47034 10.1584C8.8486 9.40685 9.4542 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="#314F66" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+            <a href="https://www.facebook.com/purdyandfigg/" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M14 13.5H16.5L17.5 9.5H14V7.5C14 6.47 14 5.5 16 5.5H17.5V2.14C17.174 2.097 15.943 2 14.643 2C11.928 2 10 3.657 10 6.7V9.5H7V13.5H10V22H14V13.5Z" fill="#314F66"/>
+              </svg>
+            </a>
+            <a href="https://twitter.com/purdyfigg" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M22.212 5.656C21.4489 5.9936 20.6396 6.21538 19.811 6.314C20.6841 5.79114 21.3373 4.96874 21.649 4C20.829 4.488 19.93 4.83 18.994 5.015C18.3646 4.34158 17.5304 3.89497 16.621 3.74459C15.7116 3.59421 14.7779 3.74849 13.9653 4.18346C13.1526 4.61842 12.5064 5.30969 12.1271 6.1498C11.7478 6.9899 11.6568 7.93178 11.868 8.829C10.2049 8.7458 8.57797 8.31373 7.09274 7.56087C5.60752 6.808 4.29724 5.75117 3.247 4.459C2.87529 5.09745 2.67996 5.82323 2.681 6.562C2.681 8.012 3.42 9.293 4.541 10.043C3.87702 10.0221 3.22765 9.84275 2.647 9.52V9.571C2.64697 10.5369 2.98104 11.473 3.59253 12.2207C4.20403 12.9683 5.05532 13.4814 6.002 13.673C5.38564 13.8402 4.7393 13.8648 4.112 13.745C4.37893 14.5764 4.89922 15.3035 5.6 15.8244C6.30078 16.3453 7.14696 16.634 8.02 16.65C7.15236 17.3315 6.15889 17.8352 5.09641 18.1324C4.03393 18.4296 2.92329 18.5144 1.828 18.382C3.73972 19.6114 5.96511 20.2641 8.238 20.262C15.932 20.262 20.138 13.889 20.138 8.362C20.138 8.182 20.134 8 20.126 7.821C20.9444 7.22936 21.6508 6.49556 22.212 5.656Z" fill="#314F66"/>
+              </svg>
+            </a>
+          </div>
+          <div class="pf-contact-menu theme-text">
+            <p class="m-0 new-theme-text">
+              <a target="_blank" href="{{ settings.help_link }}" class="text-white"
+                >Have a question? Visit our <span class="help-center-link text-blue">Help Centre</span></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="mobile-menu mobile-menu-2-0 hide-mobile-menu desktop-hide">
+  <div class="mobile-menu--full-wrapper">
+    <div class="mobile-menu-top-wrapper">
+      <div class="mobile-menu-header pb-3 d-flex justify-content-between">
+        <div class="mobile-menu-open-logo">{% render 'pf-logo' %}</div>
+        <div class="menu-toggle close-toggle">
+          <svg xmlns="http://www.w3.org/2000/svg" width="19" height="18" viewBox="0 0 19 18" fill="none">
+            <path d="M2.11628 17.8717L0.711182 16.4666L8.17785 8.99994L0.711182 1.53327L2.11628 0.128174L9.58295 7.59484L17.0496 0.128174L18.4547 1.53327L10.988 8.99994L18.4547 16.4666L17.0496 17.8717L9.58295 10.405L2.11628 17.8717Z" fill="#707279"/>
+          </svg>
+        </div>
+      </div>
+      <div class="mobile-menus-wrapper">
+        <ul class="list-unstyle value-sans menu-1 ">
+          <li class="no-submenu position-relative mobile-item-wrap">
+            <a href="{{section.settings.shopall}}" class="mobile-menu-item blue-text-2 value-medium">
+              Shop All
+              <span class="mobile-menu-arrow">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                  <mask id="mask0_32_8147" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                    <rect x="40" width="40" height="40" transform="rotate(90 40 0)" fill="#D9D9D9"/>
+                  </mask>
+                  <g mask="url(#mask0_32_8147)">
+                    <path d="M14.9359 12.0683L16.4273 10.5769L25.8503 19.9999L16.4444 29.423L14.953 27.9316L22.8846 19.9999L14.9359 12.0683Z" fill="#707279"/>
+                  </g>
+                </svg>
+              </span>
+            </a>
+          </li>
+          {% for block in section.blocks %}
+            <li class="block-menu position-relative">
+              {% if block.settings.menulink %}
+                <a
+                  href="{{block.settings.menulink}}"
+                  class="mobile-block-menu value-medium black-text d-block {{ block.settings.title | handle }}"
+                  style="background-image:url({{ block.settings.menuImage | img_url : 'master' }})"
+                >
+                  {{ block.settings.title }}
+                  {% if block.settings.tagColor != blank %}
+                    <span class="menu-tag new" style="background-color:{{ block.settings.tagColor }}; color:#2d469e;">
+                      {{- block.settings.tag -}}
+                    </span>
+                  {% endif %}
+                </a>
+              {% else %}
+                <span class="mobile-menu-item-block value-medium blue-text-2">
+                  {{- block.settings.title -}}
+                </span>
+              {% endif %}
+            </li>
+          {% endfor %}
+          {%- for mobilelinkAB in section.settings.mobilemenuAB.links -%}
+            {% if mobilelinkAB.links.size > 0 %}
+              <li class="have-submenu mobile-item-wrap">
+                <span class="mobile-menu-item value-medium submenu-toggle blue-text-2">
+                  {{- mobilelinkAB.title | escape -}}
+                  <span class="mobile-menu-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                      <mask id="mask0_32_8147" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                        <rect x="40" width="40" height="40" transform="rotate(90 40 0)" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_32_8147)">
+                        <path d="M14.9359 12.0683L16.4273 10.5769L25.8503 19.9999L16.4444 29.423L14.953 27.9316L22.8846 19.9999L14.9359 12.0683Z" fill="#707279"/>
+                      </g>
+                    </svg>
+                  </span>
+                </span>
+                <ul class="list-unstyle submenu pb-3">
+                  {% for childlinkAB in mobilelinkAB.links %}
+                    <li class="position-relative ">
+                      <a
+                        href="{{childlinkAB.url}}"
+                        class="mobile-submenu-item value-medium {{ childlinkAB.title | handle }}"
+                      >
+                        {% assign collection_handle_AB = childlinkAB.url | split: '/' | last %}
+                        {% assign selected_collection = collections[collection_handle_AB] %}
+                        {{ childlinkAB.title }}
+                        <span class="menu-tag new d-none {{ childlinkAB.title | handle }}">New</span>
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="no-submenu position-relative mobile-item-wrap">
+                <a href="{{mobilelinkAB.url}}" class="mobile-menu-item blue-text-2 value-medium">
+                  {{- mobilelinkAB.title | escape -}}
+                  <span class="mobile-menu-arrow">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40" fill="none">
+                      <mask id="mask0_32_8147" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="40" height="40">
+                        <rect x="40" width="40" height="40" transform="rotate(90 40 0)" fill="#D9D9D9"/>
+                      </mask>
+                      <g mask="url(#mask0_32_8147)">
+                        <path d="M14.9359 12.0683L16.4273 10.5769L25.8503 19.9999L16.4444 29.423L14.953 27.9316L22.8846 19.9999L14.9359 12.0683Z" fill="#707279"/>
+                      </g>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+    <div class="mobile-menu-bottom-wrapper">
+      <ul class="list-unstyle value-medium menu-2">
+        <li>
+          {% if customer %}
+            <a href="{{ routes.account_url }}" class="my-account-btn value-sans white-text">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4.02308 15.2923C4.87308 14.6615 5.79903 14.1635 6.80095 13.7981C7.80287 13.4327 8.86921 13.25 9.99998 13.25C11.1307 13.25 12.1971 13.4327 13.199 13.7981C14.2009 14.1635 15.1269 14.6615 15.9769 15.2923C16.5987 14.609 17.0913 13.8179 17.4548 12.9192C17.8182 12.0205 18 11.0474 18 9.99998C18 7.78331 17.2208 5.89581 15.6625 4.33748C14.1041 2.77914 12.2166 1.99998 9.99998 1.99998C7.78331 1.99998 5.89581 2.77914 4.33748 4.33748C2.77914 5.89581 1.99998 7.78331 1.99998 9.99998C1.99998 11.0474 2.18171 12.0205 2.54518 12.9192C2.90864 13.8179 3.40128 14.609 4.02308 15.2923ZM10.0003 10.75C9.08726 10.75 8.31729 10.4366 7.69038 9.80988C7.06346 9.18314 6.75 8.41328 6.75 7.50028C6.75 6.58726 7.06336 5.81729 7.69008 5.19038C8.31681 4.56346 9.08668 4.25 9.99968 4.25C10.9127 4.25 11.6827 4.56336 12.3096 5.19008C12.9365 5.81681 13.25 6.58668 13.25 7.49968C13.25 8.41269 12.9366 9.18266 12.3099 9.80958C11.6831 10.4365 10.9133 10.75 10.0003 10.75ZM9.99998 19.5C8.68074 19.5 7.44325 19.2519 6.2875 18.7557C5.13173 18.2596 4.12628 17.5839 3.27115 16.7288C2.41603 15.8737 1.7404 14.8682 1.24425 13.7125C0.748083 12.5567 0.5 11.3192 0.5 9.99998C0.5 8.68074 0.748083 7.44325 1.24425 6.2875C1.7404 5.13173 2.41603 4.12628 3.27115 3.27115C4.12628 2.41603 5.13173 1.7404 6.2875 1.24425C7.44325 0.748084 8.68074 0.5 9.99998 0.5C11.3192 0.5 12.5567 0.748084 13.7125 1.24425C14.8682 1.7404 15.8737 2.41603 16.7288 3.27115C17.5839 4.12628 18.2596 5.13173 18.7557 6.2875C19.2519 7.44325 19.5 8.68074 19.5 9.99998C19.5 11.3192 19.2519 12.5567 18.7557 13.7125C18.2596 14.8682 17.5839 15.8737 16.7288 16.7288C15.8737 17.5839 14.8682 18.2596 13.7125 18.7557C12.5567 19.2519 11.3192 19.5 9.99998 19.5ZM9.99998 18C10.9025 18 11.7727 17.8548 12.6105 17.5644C13.4484 17.274 14.1923 16.8679 14.8423 16.3461C14.1923 15.8436 13.458 15.4519 12.6394 15.1711C11.8208 14.8903 10.941 14.75 9.99998 14.75C9.05894 14.75 8.17753 14.8887 7.35573 15.1663C6.53393 15.4439 5.80123 15.8371 5.15765 16.3461C5.80765 16.8679 6.55157 17.274 7.3894 17.5644C8.22722 17.8548 9.09741 18 9.99998 18ZM9.99998 9.25C10.4974 9.25 10.9134 9.08269 11.2481 8.74808C11.5827 8.41344 11.75 7.99741 11.75 7.49998C11.75 7.00254 11.5827 6.58651 11.2481 6.25188C10.9134 5.91726 10.4974 5.74995 9.99998 5.74995C9.50254 5.74995 9.08651 5.91726 8.75187 6.25188C8.41726 6.58651 8.24995 7.00254 8.24995 7.49998C8.24995 7.99741 8.41726 8.41344 8.75187 8.74808C9.08651 9.08269 9.50254 9.25 9.99998 9.25Z" fill="white"/>
+              </svg>
+              <span>My account</span></a
+            >
+          {% else %}
+            <a href="/a/account/login" class="my-account-btn value-sans white-text" id="customer_login_link">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M4.02308 15.2923C4.87308 14.6615 5.79903 14.1635 6.80095 13.7981C7.80287 13.4327 8.86921 13.25 9.99998 13.25C11.1307 13.25 12.1971 13.4327 13.199 13.7981C14.2009 14.1635 15.1269 14.6615 15.9769 15.2923C16.5987 14.609 17.0913 13.8179 17.4548 12.9192C17.8182 12.0205 18 11.0474 18 9.99998C18 7.78331 17.2208 5.89581 15.6625 4.33748C14.1041 2.77914 12.2166 1.99998 9.99998 1.99998C7.78331 1.99998 5.89581 2.77914 4.33748 4.33748C2.77914 5.89581 1.99998 7.78331 1.99998 9.99998C1.99998 11.0474 2.18171 12.0205 2.54518 12.9192C2.90864 13.8179 3.40128 14.609 4.02308 15.2923ZM10.0003 10.75C9.08726 10.75 8.31729 10.4366 7.69038 9.80988C7.06346 9.18314 6.75 8.41328 6.75 7.50028C6.75 6.58726 7.06336 5.81729 7.69008 5.19038C8.31681 4.56346 9.08668 4.25 9.99968 4.25C10.9127 4.25 11.6827 4.56336 12.3096 5.19008C12.9365 5.81681 13.25 6.58668 13.25 7.49968C13.25 8.41269 12.9366 9.18266 12.3099 9.80958C11.6831 10.4365 10.9133 10.75 10.0003 10.75ZM9.99998 19.5C8.68074 19.5 7.44325 19.2519 6.2875 18.7557C5.13173 18.2596 4.12628 17.5839 3.27115 16.7288C2.41603 15.8737 1.7404 14.8682 1.24425 13.7125C0.748083 12.5567 0.5 11.3192 0.5 9.99998C0.5 8.68074 0.748083 7.44325 1.24425 6.2875C1.7404 5.13173 2.41603 4.12628 3.27115 3.27115C4.12628 2.41603 5.13173 1.7404 6.2875 1.24425C7.44325 0.748084 8.68074 0.5 9.99998 0.5C11.3192 0.5 12.5567 0.748084 13.7125 1.24425C14.8682 1.7404 15.8737 2.41603 16.7288 3.27115C17.5839 4.12628 18.2596 5.13173 18.7557 6.2875C19.2519 7.44325 19.5 8.68074 19.5 9.99998C19.5 11.3192 19.2519 12.5567 18.7557 13.7125C18.2596 14.8682 17.5839 15.8737 16.7288 16.7288C15.8737 17.5839 14.8682 18.2596 13.7125 18.7557C12.5567 19.2519 11.3192 19.5 9.99998 19.5ZM9.99998 18C10.9025 18 11.7727 17.8548 12.6105 17.5644C13.4484 17.274 14.1923 16.8679 14.8423 16.3461C14.1923 15.8436 13.458 15.4519 12.6394 15.1711C11.8208 14.8903 10.941 14.75 9.99998 14.75C9.05894 14.75 8.17753 14.8887 7.35573 15.1663C6.53393 15.4439 5.80123 15.8371 5.15765 16.3461C5.80765 16.8679 6.55157 17.274 7.3894 17.5644C8.22722 17.8548 9.09741 18 9.99998 18ZM9.99998 9.25C10.4974 9.25 10.9134 9.08269 11.2481 8.74808C11.5827 8.41344 11.75 7.99741 11.75 7.49998C11.75 7.00254 11.5827 6.58651 11.2481 6.25188C10.9134 5.91726 10.4974 5.74995 9.99998 5.74995C9.50254 5.74995 9.08651 5.91726 8.75187 6.25188C8.41726 6.58651 8.24995 7.00254 8.24995 7.49998C8.24995 7.99741 8.41726 8.41344 8.75187 8.74808C9.08651 9.08269 9.50254 9.25 9.99998 9.25Z" fill="white"/>
+              </svg>
+              &nbsp; <span> My account</span></a
+            >
+          {% endif %}
+        </li>
+        <li>
+          <a href="{{ section.settings.blog }}" class="blog-link value-medium blue-text-2" style="color:#2D469E;">
+            <u style="text-decoration:underline;" class="value-medium">Cleaning Tips</u></a
+          >
+        </li>
+      </ul>
+      <div class="menu-our-story-block text-center theme-text my-3">
+        <h2 class="value-medium blue-text-2" style="color:#2D469E;">{{ section.settings.ourstoryheading }}</h2>
+        <p class="value-sans new-theme-text">{{ section.settings.ourstorytext }}</p>
+        <a href="{{ section.settings.ourstorylink }}" class="blue-text-2">Our Story</a>
+      </div>
+      <div class="mobile-menu-footer">
+        <div class="text-center">
+          <div class="social-link d-flex justify-content-center menu-social-icon">
+            <a href="https://www.facebook.com/purdyandfigg/" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <g clip-path="url(#clip0_25_6139)">
+                <path d="M24.5 12C24.5 5.37258 19.1274 0 12.5 0C5.87258 0 0.5 5.37258 0.5 12C0.5 17.9895 4.8882 22.954 10.625 23.8542V15.4688H7.57812V12H10.625V9.35625C10.625 6.34875 12.4166 4.6875 15.1576 4.6875C16.4701 4.6875 17.8438 4.92188 17.8438 4.92188V7.875H16.3306C14.84 7.875 14.375 8.80008 14.375 9.75V12H17.7031L17.1711 15.4688H14.375V23.8542C20.1118 22.954 24.5 17.9895 24.5 12Z" fill="#707279"/>
+                <path d="M17.1711 15.4688L17.7031 12H14.375V9.75C14.375 8.80102 14.84 7.875 16.3306 7.875H17.8438V4.92188C17.8438 4.92188 16.4705 4.6875 15.1576 4.6875C12.4166 4.6875 10.625 6.34875 10.625 9.35625V12H7.57812V15.4688H10.625V23.8542C11.8674 24.0486 13.1326 24.0486 14.375 23.8542V15.4688H17.1711Z" fill="white"/>
+                </g>
+                <defs>
+                <clipPath id="clip0_25_6139">
+                <rect width="24" height="24" fill="white" transform="translate(0.5)"/>
+                </clipPath>
+                </defs>
+              </svg>
+            </a>
+
+            <a href="https://www.instagram.com/purdyandfigg/?hl=en" class=" social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path d="M17 2H7C4.23858 2 2 4.23858 2 7V17C2 19.7614 4.23858 22 7 22H17C19.7614 22 22 19.7614 22 17V7C22 4.23858 19.7614 2 17 2Z" stroke="#707279" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M17.5 6.5H17.51M16 11.37C16.1234 12.2022 15.9813 13.0522 15.5938 13.799C15.2063 14.5458 14.5932 15.1514 13.8416 15.5297C13.0901 15.9079 12.2385 16.0396 11.4078 15.9059C10.5771 15.7723 9.80977 15.3801 9.21485 14.7852C8.61993 14.1902 8.22774 13.4229 8.09408 12.5922C7.96042 11.7616 8.09208 10.9099 8.47034 10.1584C8.8486 9.40685 9.4542 8.79374 10.201 8.40624C10.9478 8.01874 11.7978 7.87659 12.63 8C13.4789 8.12588 14.2649 8.52146 14.8717 9.12831C15.4785 9.73515 15.8741 10.5211 16 11.37Z" stroke="#707279" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </a>
+
+            <a href="https://twitter.com/purdyfigg" class="social-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="25" height="26" viewBox="0 0 25 26" fill="none">
+                <path d="M12.5 25C19.1274 25 24.5 19.6274 24.5 13C24.5 6.37258 19.1274 1 12.5 1C5.87258 1 0.5 6.37258 0.5 13C0.5 19.6274 5.87258 25 12.5 25Z" fill="#707279" stroke="#707279" stroke-miterlimit="10"/>
+                <path d="M5.10793 6.04736L10.8438 13.7166L5.07178 19.9521H6.37093L11.4244 14.4927L15.5074 19.9521H19.9281L13.8694 11.8515L19.242 6.04736H17.9429L13.289 11.0752L9.52868 6.04736H5.10793ZM7.01838 7.00421H9.04926L18.0174 18.9952H15.9865L7.01838 7.00421Z" fill="white"/>
+              </svg>
+            </a>
+          </div>
+          <div class="pf-contact-menu theme-text">
+            <p class="m-0">
+              <a target="_blank" href="{{ settings.help_link }}" class="text-black value-sans"
+                >Have a question?<br>
+                Visit our <span class="help-center-link blue-text-2">Help Centre</span></a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .help-center-link {
+    text-decoration: underline !important;
+  }
+</style>

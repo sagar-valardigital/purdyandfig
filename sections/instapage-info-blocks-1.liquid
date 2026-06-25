@@ -1,0 +1,104 @@
+<section class="section section-relative " id="page-block-582cyo6ynpl" data-at="section">
+    <div class="section-holder-border item-block item-absolute" data-at="section-border"></div>
+    <div class="section-holder-overlay item-block item-absolute" data-at="section-overlay"></div>
+    <div class="section-block">
+        <div class="section-inner section-fit section-relative">
+            <div class="widget item-absolute headline  " id="element-801" data-at="headline">
+                <div class="contents">
+                    <h1>
+                        <span class="x_f0b77de1 x_1edd7d29"><span class="x_a269ab78">{{ section.settings.title }}</span></span>
+                    </h1>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1001" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_e6507cf2 x_bcbce646">{{ section.settings.subtitle }}</p>
+                    <br><br>
+                </div>
+            </div>
+            <div class="widget item-absolute " id="element-797">
+                <div class="contents shape box figure" data-at="shape" data-src="{{ section.blocks[0].settings.image | img_url: '800x' }}" style="background-image: url({{ section.blocks[0].settings.image | img_url: '800x' }});"></div>
+            </div>
+            <div class="widget item-absolute headline  " id="element-794" data-at="headline">
+                <div class="contents">
+                    <h3>
+                        <span class="x_b6ee196c x_446dab97">{{ section.blocks[0].settings.heading }}</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-793" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_8c071feb x_e6507cf2">{{ section.blocks[0].settings.info }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute headline  " id="element-799" data-at="headline">
+                <div class="contents">
+                    <h3>
+                        <span class="x_fdb43ad0 x_06e86a31">{{ section.blocks[1].settings.heading }}</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="widget item-absolute " id="element-800">
+                <div class="contents shape box figure" data-at="shape" data-src="{{ section.blocks[1].settings.image | img_url: '800x' }}" style="background-image: url({{ section.blocks[1].settings.image | img_url: '1800x' }});"></div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-798" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_695a2def x_bcbce646">{{ section.blocks[1].settings.info }}</p>
+                    <br><br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Instapage Info Blocks 1",
+    "settings": [
+      {
+        "id": "title",
+        "label": "Title",
+        "type": "text"
+      },
+      {
+        "id": "subtitle",
+        "label": "Subtitle",
+        "type": "text"
+      },
+      {
+        "id": "show-offer-btn",
+        "label": "Show Offer Button",
+        "type": "checkbox"
+      }
+    ],
+    "max_blocks": 2,
+    "blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "info",
+            "label": "Information"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instapage Info Blocks 1"
+      }
+	]
+  }
+{% endschema %}

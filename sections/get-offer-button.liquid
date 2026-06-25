@@ -1,0 +1,120 @@
+<div class="get-offer-cta-wrapper" style="background-color:{{ section.settings.bgColor }}; padding-top:{{ section.settings.paddingTop }}; padding-bottom: {{ section.settings.paddingBottom }};">
+  <div class="container">
+    <span
+        class="d-block text-center blue-starterkit-btn m-auto click-scroll"
+        data-target="{{ section.settings.scrollto }}"
+        data-top="{{ section.settings.top }}"
+        {% if section.settings.dataTrack %}
+            {% render "ga4-events" %}
+        {% endif %}>
+        {{ section.settings.cta_text }}
+    </span>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Get Offer Button",
+    "settings": [
+      {
+        "type": "text",
+        "id": "cta_text",
+        "label": "CTA Text",
+        "default": "GET YOUR OFFER"
+      },
+      {
+        "type": "text",
+        "id": "scrollto",
+        "label": "Scroll to section id",
+        "default": "javascript:void(0);"
+      },
+      {
+        "type": "text",
+        "id": "top",
+        "label": "On scroll top position",
+        "default": "0"
+      },
+      {
+        "type": "color",
+        "id": "bgColor",
+        "label": "Background color"
+      },
+      {
+        "type": "number",
+        "id": "paddingTop",
+        "label": "Top Padding",
+        "default": 0
+      },
+      {
+        "type": "number",
+        "id": "paddingBottom",
+        "label": "Bottom Padding",
+        "default": 0
+      },
+      {
+        "type": "header",
+        "content": "GA4"
+      },
+      {
+        "id": "dataTrack",
+        "label": "Data Track",
+        "type": "checkbox"
+      },
+      {
+        "id": "targetUrl",
+        "label": "Target Url",
+        "type": "url"
+      },
+      {
+        "id": "index",
+        "label": "Index",
+        "type": "number",
+        "default": 0
+      },
+      {
+        "id": "funnel_stage",
+        "label": "Funnel Stage",
+        "type": "text",
+        "default": "landing_page"
+      },
+      {
+        "id": "dataModule",
+        "label": "Module",
+        "type": "text",
+        "default": "announcement_bar"
+      },
+      {
+        "id": "dataTitle",
+        "label": "Event Label",
+        "type": "text",
+        "default": "get_your_offer"
+      },
+      {
+        "id": "eventValue",
+        "label": "Event Value",
+        "type": "text",
+        "default": "shop_anchor"
+      },
+      {
+        "id": "itemId",
+        "label": "Item Id",
+        "type": "text"
+      },
+      {
+        "id": "optionIndex",
+        "label": "Option Index",
+        "type": "text"
+      },
+      {
+        "id": "ItemName",
+        "label": "Item Name",
+        "type": "text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Get Offer Button"
+      }
+    ]
+  }
+{% endschema %}

@@ -1,0 +1,515 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.bathroom-bliss",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "e5996c06-8533-4d3c-8321-8492ae111911": {
+      "type": "bb-banner",
+      "blocks": {
+        "93094f51-f07d-4107-9935-3e953e94c29b": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a Free Bottle For Life (worth £15)"
+          }
+        },
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c": {
+          "type": "text",
+          "settings": {
+            "listItem": "Simplifies your cleaning routine"
+          }
+        },
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f": {
+          "type": "text",
+          "settings": {
+            "listItem": "Reduces your single use plastic waste"
+          }
+        },
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd": {
+          "type": "text",
+          "settings": {
+            "listItem": "Natural ingredients for a healthier home"
+          }
+        }
+      },
+      "block_order": [
+        "93094f51-f07d-4107-9935-3e953e94c29b",
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c",
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f",
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "className": "",
+        "isSub": true,
+        "landingproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "desktopimage": "shopify://shop_images/gmf12.jpg",
+        "mobileimage": "shopify://shop_images/mob3.jpg",
+        "title": "<span class=\"font-normal-value\"> You don’t need a million cleaning products. You need one that works.</span>",
+        "subtext": "",
+        "price": "15",
+        "delPrice": "30",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout      Risk-free trial, cancel anytime"
+      }
+    },
+    "b00b2b7a-393e-4052-9052-e2a4cf33660c": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "537feab1-a4ad-4720-8e86-75a348105123": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_f2b2c7a0-296d-4b2e-904b-470d975027a3.png",
+            "details": ""
+          }
+        },
+        "d51a6f5f-363f-41e0-a96c-69a4313994c3": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/daily_7278b071-867c-43ac-846e-e8a0e539ed9a.png",
+            "details": ""
+          }
+        },
+        "25acb515-f264-47c4-8d3d-1b880465c87c": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/house.png",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "537feab1-a4ad-4720-8e86-75a348105123",
+        "d51a6f5f-363f-41e0-a96c-69a4313994c3",
+        "25acb515-f264-47c4-8d3d-1b880465c87c"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": false,
+        "bgColor": "#ffffff",
+        "heading": "<span class=\"font-normal-value\"> Why Purdy &amp; Figg</span>",
+        "logoDetailText": "<p>Ultra-concentrated,  naturally scented eco-friendly cleaning power that you dilute at home with tap water, designed to clean all the surfaces in your home. Beautiful stylish, refillable glass bottles that look great on your counter top. <br/></p>"
+      }
+    },
+    "334c97f6-edba-4904-b455-009baf7b9317": {
+      "type": "bb-product",
+      "blocks": {
+        "25dd2633-0b94-4460-9c83-c8bc3df46971": {
+          "type": "text",
+          "settings": {
+            "listItem": "Free Bottle For Life (worth £15)"
+          }
+        },
+        "53d24af2-e518-4abb-8332-94c66cd02259": {
+          "type": "text",
+          "settings": {
+            "listItem": "90 Days Cleaning with 3 Eco-Concentrates"
+          }
+        },
+        "85aeb37d-32d3-4183-9a0e-1d636ad2cb35": {
+          "type": "text",
+          "settings": {
+            "listItem": "Delivery Quarterly, Pause or Cancel Anytime"
+          }
+        },
+        "7440e476-72e3-4d92-9c51-9875f368267a": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try Three Bestselling Scents"
+          }
+        },
+        "d0538895-66ca-4d8d-a96b-4814218164f2": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a Microfibre Cloth"
+          }
+        }
+      },
+      "block_order": [
+        "25dd2633-0b94-4460-9c83-c8bc3df46971",
+        "53d24af2-e518-4abb-8332-94c66cd02259",
+        "85aeb37d-32d3-4183-9a0e-1d636ad2cb35",
+        "7440e476-72e3-4d92-9c51-9875f368267a",
+        "d0538895-66ca-4d8d-a96b-4814218164f2"
+      ],
+      "settings": {
+        "enable": true,
+        "outOfStock": false,
+        "isSub": false,
+        "landingproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "textcolor": "theme-text",
+        "width": "w-60",
+        "layout": false,
+        "className": "bb-product-section bg-white",
+        "heading": "Get a Free Bottle For Life",
+        "subtext": "Variety Starter Kit",
+        "image": "shopify://shop_images/Big_Bottle_3_small_bottles_2x_9ce50c5b-9d26-4e80-ad75-f13ba7902301.png",
+        "mimage": "shopify://shop_images/Big_Bottle_3_small_bottles_2x_9ce50c5b-9d26-4e80-ad75-f13ba7902301.png",
+        "price": "15",
+        "delPrice": "30",
+        "ctaDetails": "100% secure checkout      Risk-free trial, cancel anytime",
+        "heading-position": false
+      }
+    },
+    "001f78c8-7d96-4a57-9895-00898748d6a3": {
+      "type": "bb-products",
+      "disabled": true,
+      "blocks": {
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f": {
+          "type": "product",
+          "settings": {
+            "product": "juniper-cardamom-refill-limited-edition"
+          }
+        },
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0": {
+          "type": "product",
+          "settings": {
+            "product": "charlottes-floral-hand-wash-250ml"
+          }
+        },
+        "a2661355-29b7-48aa-b825-c8c24c82e94c": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        }
+      },
+      "block_order": [
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f",
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0",
+        "a2661355-29b7-48aa-b825-c8c24c82e94c"
+      ],
+      "settings": {
+        "className": "bg-light-green add-more-bathroom-product",
+        "bgColor": "",
+        "heading": "<span class=\"font-normal-value\">Add extras to your cart</span>",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "b59942de-50b9-419f-a1fc-e2454fded23c": {
+      "type": "video-block",
+      "disabled": true,
+      "settings": {
+        "video-url": "https://youtube.com/embed/C3KavhT2Lec",
+        "image": "shopify://shop_images/Group_714.png",
+        "full-width": true,
+        "heading": "WATCH NEW BATHROOM BLISS IN ACTION",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": ""
+      }
+    },
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b": {
+      "type": "landing-blocks",
+      "blocks": {
+        "e9358ff1-a922-4541-acc2-5274872a4581": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-01.png",
+            "rounded": true,
+            "heading": "100% Effective On All Surfaces",
+            "details": "Designed to clean all the surfaces in your home including Counters, Stone, Bath, Enamel, Glass, Mirrors, Wood and Floors.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-03.png",
+            "rounded": true,
+            "heading": "Re-usable Glass Bottles",
+            "details": "Eco-concentrates that you add tap water to mean you just need one re-useable glass bottle which you can use over and over again. No more plastic junk going into landfill.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-02.png",
+            "rounded": true,
+            "heading": "Amazing Long Lasting Scents",
+            "details": "Pure essential oils mean our scents smell natural and stick around to transform your home into a spa like bliss.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-04.png",
+            "rounded": true,
+            "heading": "Non Toxic and Natural",
+            "details": "100% natural ingredients and no toxins mean you can be sure you are putting your family first and not impacting you immunity or gut health.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "e9358ff1-a922-4541-acc2-5274872a4581",
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256",
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08",
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "<span class=\"font-normal-value\">Designed to make your home sparkle </span>",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1": {
+      "type": "landing-table",
+      "settings": {}
+    },
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8": {
+      "type": "landing-blocks",
+      "blocks": {
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-06.png",
+            "rounded": true,
+            "heading": "Free Returns",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-05.png",
+            "rounded": true,
+            "heading": "30 Day Trial",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-07.png",
+            "rounded": true,
+            "heading": "Ships in 1 Day",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-08.png",
+            "rounded": true,
+            "heading": "Free Bottle For Life",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b",
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767",
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123",
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#e6f2fe",
+        "sectionTextColor": "",
+        "heading": "<span class=\"font-normal-value\">Extra Benefits</span>",
+        "subtext": "Money Back Gaurantee if it doesn’t tackle bathroom issues",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "99ccde11-5760-4852-bf3d-835fd6a67eae": {
+      "type": "landing-text-with-image",
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "theme-gradient",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"font-normal-value\">Two women on </span> a mission to transform cleaning",
+        "image": "shopify://shop_images/block.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "95fa3dad-ef89-470e-a137-c5a613946612": {
+      "type": "bb-banner",
+      "blocks": {
+        "1d828f07-66a2-4098-be88-a3e3a104453b": {
+          "type": "text",
+          "settings": {
+            "listItem": "Free Bottle For Life (worth £15)"
+          }
+        },
+        "8cc13cba-a7b6-486e-b6b2-f35c16988415": {
+          "type": "text",
+          "settings": {
+            "listItem": "90 Days Cleaning with 3 Eco-Concentrates"
+          }
+        },
+        "b81e878c-2bb6-4351-958d-96484d4984c9": {
+          "type": "text",
+          "settings": {
+            "listItem": "Delivery Quarterly, Pause or Cancel Anytime"
+          }
+        },
+        "39565a76-0829-4277-8172-f07089251a77": {
+          "type": "text",
+          "settings": {
+            "listItem": "Money-back guarantee"
+          }
+        },
+        "d597ba77-d440-490f-9aa9-99fa7b4450c5": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try Three Bestselling Scents"
+          }
+        },
+        "5948e784-ab1b-479b-be93-a5dac7ef2eb1": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a Microfibre Cloth"
+          }
+        }
+      },
+      "block_order": [
+        "1d828f07-66a2-4098-be88-a3e3a104453b",
+        "8cc13cba-a7b6-486e-b6b2-f35c16988415",
+        "b81e878c-2bb6-4351-958d-96484d4984c9",
+        "39565a76-0829-4277-8172-f07089251a77",
+        "d597ba77-d440-490f-9aa9-99fa7b4450c5",
+        "5948e784-ab1b-479b-be93-a5dac7ef2eb1"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "className": "bathroom-banner bb-last-banner bg-white",
+        "isSub": false,
+        "landingproduct": "bathroom-bliss-bundle-kit",
+        "desktopimage": "shopify://shop_images/gmf12.jpg",
+        "mobileimage": "shopify://shop_images/mob3.jpg",
+        "title": "Get A Free Bottle For Life",
+        "subtext": "Variety Starter Kit:",
+        "price": "15",
+        "delPrice": "30",
+        "btnText": "SHOP NOW",
+        "ctaDetails": "30-day money back guarantee  \n    |             100% secure checkout"
+      }
+    },
+    "908908f3-2ca2-4385-a271-e5e3a437ef39": {
+      "type": "faq-section",
+      "blocks": {
+        "bc576db1-ab1d-460a-ab68-d1c03cbbb4c6": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>Each eco-concentrate dilutes to 300ml of Counter Clean. We recommend using one eco-concentrate per month. The Starter Kit is designed to last you 3 months. <br/></p>"
+          }
+        },
+        "c8521687-4627-464d-8ccc-dba23e3635a3": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this more expensive than a regular cleaner?",
+            "faq-ans": "<p>Counter Clean will cost you around 16p per day which is 3p more than a typical bottle of supermarket cleaner. However, we replace up to 16 different products under your sink so end up saving you money. <br/></p>"
+          }
+        },
+        "b144c367-d9af-4fee-8901-3e2a634ef272": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How can I be sure it works?",
+            "faq-ans": "<p>Our product has been independently tested and proven to be 100% effective at tackling grease, grim and dirt. What’s more,. 93% of our 100k customers would recommend us for our cleaning power. </p>"
+          }
+        },
+        "d1c26423-e811-47f7-9f5a-4d76284eaf65": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe around pets?",
+            "faq-ans": "<p>Our products are safe to use around dogs and other pets, however, it’s best not to use them to clean beds or food bowls without rinsing afterwards. If you are worried about allergies, do contact your vet. </p>"
+          }
+        },
+        "b9c5f551-3e72-4565-8e96-69928933cfed": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it Cruelty Free?",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "021c4534-3673-4703-8b5a-783e243a7746": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use on all my surfaces?",
+            "faq-ans": "<p>Counter Clean can be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "bc576db1-ab1d-460a-ab68-d1c03cbbb4c6",
+        "c8521687-4627-464d-8ccc-dba23e3635a3",
+        "b144c367-d9af-4fee-8901-3e2a634ef272",
+        "d1c26423-e811-47f7-9f5a-4d76284eaf65",
+        "b9c5f551-3e72-4565-8e96-69928933cfed",
+        "021c4534-3673-4703-8b5a-783e243a7746"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#e3f3fe",
+        "heading": "Frequently Asked Questions"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "e5996c06-8533-4d3c-8321-8492ae111911",
+    "b00b2b7a-393e-4052-9052-e2a4cf33660c",
+    "334c97f6-edba-4904-b455-009baf7b9317",
+    "001f78c8-7d96-4a57-9895-00898748d6a3",
+    "b59942de-50b9-419f-a1fc-e2454fded23c",
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b",
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1",
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8",
+    "99ccde11-5760-4852-bf3d-835fd6a67eae",
+    "95fa3dad-ef89-470e-a137-c5a613946612",
+    "908908f3-2ca2-4385-a271-e5e3a437ef39"
+  ]
+}

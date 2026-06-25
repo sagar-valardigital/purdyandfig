@@ -1,0 +1,135 @@
+# we use Shopify as our ecommerce platform
+{%- comment -%}
+  # Caution! Please read https://help.shopify.com/en/manual/promoting-marketing/seo/editing-robots-txt before proceeding to make changes to this file.
+{%- endcomment -%}
+{% for group in robots.default_groups %}
+  {{- group.user_agent -}}
+
+  {% for rule in group.rules %}
+    {{- rule -}}
+  {% endfor %}
+
+  {%- if group.user_agent.value == '*' -%}
+    {{ 'Disallow: /pages/memberoffer-summer' }}
+    {{ 'Disallow: /*/pages/memberoffer-summer' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-4' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-4' }}
+    {{ 'Disallow: /pages/starterkit-offer-4b' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-4b' }}
+
+    {{ 'Disallow: /pages/completestarterkit-4' }}
+    {{ 'Disallow: /*/pages/completestarterkit-4' }}
+    {{ 'Disallow: /pages/completestarterkit-8' }}
+    {{ 'Disallow: /*/pages/completestarterkit-8' }}
+    {{ 'Disallow: /pages/completestarterkit-v0' }}
+    {{ 'Disallow: /*/pages/completestarterkit-v0' }}
+    {{ 'Disallow: /pages/ starterkit-offer-v0' }}
+    {{ 'Disallow: /*/pages/ starterkit-offer-v0' }}
+    {{ 'Disallow: /pages/starterkit-offer-8' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-8' }}
+    {{ 'Disallow: /blogs/welcome/' }}
+    {{ 'Disallow: /*/blogs/welcome/' }}
+    {{ 'Disallow: /pages/memberoffer*' }}
+    {{ 'Disallow: /*/pages/memberoffer*' }}
+
+    # This pattern will block any URL that starts with /pages/, contains pf followed by any characters, then
+    -lp-variant, and optionally more characters after -lp-variant
+    {{ 'Disallow: /pages/pf*-lp-variant*' }}
+    {{ 'Disallow: /*/pages/pf*-lp-variant*' }}
+
+    # This pattern will block any URL that starts with /pages/, contains pf followed by any characters, then -variant,
+    and optionally more characters after -variant
+    {{ 'Disallow: /pages/pf*-variant*' }}
+    {{ 'Disallow: /*/pages/pf*-variant*' }}
+
+    # This pattern will block any URL that starts with /pages/, contains pf followed by any characters, then
+    -lp-control, and optionally more characters after -lp-control
+    {{ 'Disallow: /pages/pf*-lp-control*' }}
+    {{ 'Disallow: /*/pages/pf*-lp-control*' }}
+
+    # This pattern will block any URL that starts with /pages/, contains pf followed by any characters, then -control,
+    and optionally more characters after -control
+    {{ 'Disallow: /pages/pf*-control*' }}
+    {{ 'Disallow: /*/pages/pf*-control*' }}
+
+    {{ 'Disallow: /pages/acquisition-landing-variant' }}
+    {{ 'Disallow: /*/pages/acquisition-landing-variant' }}
+
+    {{ 'Disallow: /blogs/natural-tips-and-tricks/purdy-figg-sees-320-increase-in-hand-sanitiser-sales-following-omicron-outbreak' }}
+    {{ 'Disallow: /*/blogs/natural-tips-and-tricks/purdy-figg-sees-320-increase-in-hand-sanitiser-sales-following-omicron-outbreak' }}
+
+    {{ 'Disallow: /pages/memberoffer-christmas' }}
+    {{ 'Disallow: /*/pages/memberoffer-christmas' }}
+
+    {{ 'Disallow: /pages/memberoffer-lava' }}
+    {{ 'Disallow: /*/pages/memberoffer-lava' }}
+
+    {{ 'Disallow: /pages/memberoffer-bathroombliss-special-edition' }}
+    {{ 'Disallow: /*/pages/memberoffer-bathroombliss-special-edition' }}
+
+    {{ 'Disallow: /pages/memberoffer-duoloo-oh' }}
+    {{ 'Disallow: /*/pages/memberoffer-duoloo-oh' }}
+
+    {{ 'Disallow: /pages/homepage-8' }}
+    {{ 'Disallow: /*/pages/homepage-8' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-383' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-383' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-7' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-7' }}
+
+    {{ 'Disallow: /pages/homepage-7' }}
+    {{ 'Disallow: /*/pages/homepage-7' }}
+
+    {{ 'Disallow: /pages/homepage-8' }}
+    {{ 'Disallow: /*/pages/homepage-8' }}
+
+    {{ 'Disallow: /pages/luxurystaysweepstake-terms-of-services' }}
+    {{ 'Disallow: /*/pages/luxurystaysweepstake-terms-of-services' }}
+
+    {{ 'Disallow: /pages/win-retreat-natural-cleaning' }}
+    {{ 'Disallow: /*/pages/win-retreat-natural-cleaning' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-winter-*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-winter-*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-autumn-*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-autumn-*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-summer-*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-summer-*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-spring-*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-spring-*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-christmas-*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-christmas-*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-christmas-*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-christmas-*' }}
+
+    {{ 'Disallow: /pages/returning-customer-offer*' }}
+    {{ 'Disallow: /*/pages/returning-customer-offer*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-four-seasons*' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-four-seasons*' }}
+
+    {{ 'Disallow: /pages/starterkit-scent-discovery-*' }}
+    {{ 'Disallow: /*/pages/starterkit-scent-discovery-*' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-winter' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-winter' }}
+
+    {{ 'Disallow: /pages/valentines-waitlist-confirmation' }}
+    {{ 'Disallow: /*/pages/valentines-waitlist-confirmation' }}
+
+    {{ 'Disallow: /pages/starterkit-offer-seasonal-winter-new' }}
+    {{ 'Disallow: /*/pages/starterkit-offer-seasonal-winter-new' }}
+  {%- endif -%}
+
+  {%- if group.sitemap != blank -%}
+    {{ group.sitemap }}
+  {%- endif -%}
+{% endfor %}

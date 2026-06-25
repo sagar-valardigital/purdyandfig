@@ -1,0 +1,280 @@
+{% comment %} {% if blog.metafields.custom.store == 'us-blog'%}
+  {% if localization.market.handle != 'en-us' %}
+    <script>
+        window.location.href = '{{ routes.root_url }}';
+    </script>
+  {% endif %}
+{% else %}
+  {% if localization.market.handle == 'en-us' %}
+    <script>
+        window.location.href = '{{ routes.root_url }}';
+    </script>
+  {% endif %}
+{% endif %} {% endcomment %}
+
+
+<link rel="stylesheet" href="{{'blogs-reskin.css' | asset_url}}">
+
+
+{%- assign DimageURL = section.settings.bannerimage | img_url : '2400x' -%}
+{%- assign MMimageURL = section.settings.mobilebannerimage | img_url:"500x" -%}
+
+
+{% style %}
+  .blog-banner {
+    width: 100%;
+    overflow: hidden;
+  }
+  .banner-image {
+    width: 100%;
+    max-height: 350px;
+    position: relative;
+  }
+  .banner-image .deskimage {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+  .banner-image .mobimage {
+    display: none;
+    width: 100%;
+    height: auto;
+  }
+  @media(min-width: 768px) {
+    .banner-image .deskimage {
+      display: block;
+    }
+  }
+  @media(max-width: 400px){
+    .banner-image .deskimage {
+      display: none;
+    }
+    .banner-image .mobimage {
+      display: block;
+    }
+  }
+{% endstyle %}
+<div class="blog-banner">
+    <div class="banner-image position-relative ">
+        <img src="{{ DimageURL }}" class="deskimage" width="1440" height="350">
+        <img src="{{ MMimageURL }}" class="mobimage" width="1440" height="350">
+        <div class="mobile-hidden banner-text">
+            <h3 class="heading-2 white-text position-absolute" style="color: #FFFFFF !important;">{{ blog.title | remove: 'P&F' }}</h3>
+        </div>
+    </div>
+</div>
+
+
+<div class="content-box">
+    <div class="container">
+        {% if blog.all_tags.size > 0  %}
+        <div class="blog--filter--root mb-3">
+            <div class="blog--filter--header mb-3 desktop-hidden">
+              <h3 class="heading-2 white-text">{{ blog.title | remove: 'P&F' }}</h3>
+              <!-- <h3 class="heading-2 theme-text">{{ page_title }}</h3> -->
+            </div>
+    
+            <nav class="blog--filter--body mobile-hidden" id="blog-filters">
+                <ul class="m-0 p-0 d-flex flex-wrap" style="list-style:none;">
+                    <li
+                      class="blog--filter--menu-item {% if current_tags == blank %}active font-md{% endif %}"
+                      data-selected="{% if current_tags == blank %}true{% endif %}"
+                    >
+                        <a class="d-inline-block p-2 theme-text" href="{{ blog.url }}#blog-filters">
+                          All
+                        </a>
+                    </li>
+    
+                    {% for tag in blog.all_tags %}
+                        {% assign first_char = tag | slice: 0 %}
+                        {% if first_char == ":" %}
+                        {% else %}
+                          {% assign downcasetag1 = tag | downcase %}
+                        
+                        {% if 
+                            downcasetag1 != 'homepage' and 
+                            downcasetag1 != 'hand sanitiser spray' and 
+                            downcasetag1 != 'hand balm' and 
+                            downcasetag1 != 'featured'
+                        %}
+                            {% assign temp_tag = tag | downcase | escape %}
+                            {% assign skip = false %}
+        
+                            {% for hidden_tag in hidden_tags %}
+                                {% assign formatted_hidden_tag = hidden_tag | downcase | escape | strip %}
+                                {% if temp_tag == formatted_hidden_tag %}
+                                    {% assign skip = true %}
+                                {% endif %}
+                            {% endfor %}
+        
+                            {% if skip %}
+                                {% continue %}
+                            {% endif %}
+                        <li
+                          class="blog--filter--menu-item {% if current_tags contains tag %}active font-md{% endif %}"
+                          data-selected="{% if current_tags contains tag %}true{% endif %}"
+                        >
+                            <a class="d-inline-block p-2 theme-text" href="{{ blog.url }}/tagged/{{ tag | handleize }}#blog-filters">
+                              {{ tag | capitalize }}
+                            </a>
+                        </li>
+                        {% endif %}
+                        {% endif %}
+                        
+                    {% endfor %}
+                </ul>
+                <button class="blog-sort-button" id="blog-sort-button-one" type="button" title="Sort by - date ascending">
+                    Sort
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.25 1.25C0.25 0.851562 0.578125 0.5 1 0.5H10C10.3984 0.5 10.75 0.851562 10.75 1.25C10.75 1.67188 10.3984 2 10 2H1C0.578125 2 0.25 1.67188 0.25 1.25ZM0.25 5C0.25 4.60156 0.578125 4.25 1 4.25H7C7.39844 4.25 7.75 4.60156 7.75 5C7.75 5.42188 7.39844 5.75 7 5.75H1C0.578125 5.75 0.25 5.42188 0.25 5ZM4 9.5H1C0.578125 9.5 0.25 9.17188 0.25 8.75C0.25 8.35156 0.578125 8 1 8H4C4.39844 8 4.75 8.35156 4.75 8.75C4.75 9.17188 4.39844 9.5 4 9.5Z" fill="#616161"/>
+                    </svg>
+                </button>
+            </nav>
+    
+            <nav class="blog--filter--body desktop-hidden mob-sort" id="blog-filters">
+                <select class="blog-list-tag">
+                    <option value="{{ blog.url }}">All categories</option>
+                    {% for tag in blog.all_tags %}
+                        {% assign downcasetag = tag | downcase %}
+                        {% if 
+                            downcasetag1 != 'homepage' and 
+                            downcasetag1 != 'hand sanitiser spray' and 
+                            downcasetag1 != 'hand balm' and 
+                            downcasetag1 != 'featured'
+                        %}
+                            {% assign temp_tag = tag | downcase | escape %}
+                            {% assign skip = false %}
+        
+                            {% for hidden_tag in hidden_tags %}
+                                {% assign formatted_hidden_tag = hidden_tag | downcase | escape | strip %}
+                                {% if temp_tag == formatted_hidden_tag %}
+                                    {% assign skip = true %}
+                                {% endif %}
+                            {% endfor %}
+        
+                            {% if skip %}
+                                {% continue %}
+                            {% endif %}
+    
+                            <option value="{{ blog.url }}/tagged/{{ tag | handleize }}#blog-filters">{{ tag | capitalize }}</option>
+                        {% endif %}
+                    {% endfor %}
+                </select>
+                <button class="blog-sort-button" id="blog-sort-button-two" type="button" title="Sort by - date ascending">
+                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.25 1.25C0.25 0.851562 0.578125 0.5 1 0.5H10C10.3984 0.5 10.75 0.851562 10.75 1.25C10.75 1.67188 10.3984 2 10 2H1C0.578125 2 0.25 1.67188 0.25 1.25ZM0.25 5C0.25 4.60156 0.578125 4.25 1 4.25H7C7.39844 4.25 7.75 4.60156 7.75 5C7.75 5.42188 7.39844 5.75 7 5.75H1C0.578125 5.75 0.25 5.42188 0.25 5ZM4 9.5H1C0.578125 9.5 0.25 9.17188 0.25 8.75C0.25 8.35156 0.578125 8 1 8H4C4.39844 8 4.75 8.35156 4.75 8.75C4.75 9.17188 4.39844 9.5 4 9.5Z" fill="#616161"/>
+                    </svg>
+                </button>
+            </nav>
+        </div>
+        {% endif %}
+      
+        <!-- <h3 class="heading-2 font-value theme-text">Latest</h3> -->
+        {% paginate blog.articles by 20 -%}
+        <div class="blog-list-wrapper d-flex flex-wrap justify-content-between">
+            {% assign article_count = 0 %}
+            
+            {% for article in blog.articles %}
+                {% comment %} Determine if this article should be shown based on market rules {% endcomment %}
+                {% assign show_this_article = false %}
+                
+                {% comment %} Check if article should be shown on all stores {% endcomment %}
+                {% if article.metafields.custom.show_on_all_stores %}
+                    {% comment %} Article is for all stores - show it regardless of market {% endcomment %}
+                    {% assign show_this_article = true %}
+                {% else %}
+                    {% comment %} Article is not for all stores - check specific market conditions {% endcomment %}
+                    {% if article.metafields.custom.is_article_for_us_store %}
+                        {% comment %} Article is for US store {% endcomment %}
+                        {% if localization.market.handle == 'en-us' %}
+                            {% comment %} US article in US market - show article {% endcomment %}
+                            {% assign show_this_article = true %}
+                        {% else %}
+                            {% comment %} US article in non-US market - hide from listing {% endcomment %}
+                            {% assign show_this_article = false %}
+                        {% endif %}
+                    {% else %}
+                        {% comment %} Article is NOT for US store {% endcomment %}
+                        {% if localization.market.handle == 'en-us' %}
+                            {% comment %} Non-US article in US market - hide from listing {% endcomment %}
+                            {% assign show_this_article = false %}
+                        {% else %}
+                            {% comment %} Non-US article in non-US market - show article {% endcomment %}
+                            {% assign show_this_article = true %}
+                        {% endif %}
+                    {% endif %}
+                {% endif %}
+
+                {% comment %} Only render article if it should be shown {% endcomment %}
+                {% if show_this_article %}
+                    {% assign article_count = article_count | plus: 1 %}
+                    
+                    <div class="blog-wrapper">  
+                        <a href="{{ article.url }}" class="theme-text">
+                            <img class="img-responsive w-100" src="{{ article.image | img_url: "600x280", crop: 'center' }}">
+                            <div class="blog-post" >
+                                <span class="blog-type">{{ blog.title | remove: 'P&F' }}</span>
+                                <!-- <span class="blog-type">{{page_title}}</span> -->
+                                <span class="blog-separator">|</span>
+                                {% assign date = article.created_at %}
+                                {% assign day = date | date: "%-d" %}
+                                
+                                {% case day %}
+                                  {% when '1', '21', '31' %}
+                                    {% assign suffix = 'st' %}
+                                  {% when '2', '22' %}
+                                    {% assign suffix = 'nd' %}
+                                  {% when '3', '23' %}
+                                    {% assign suffix = 'rd' %}
+                                  {% else %}
+                                    {% assign suffix = 'th' %}
+                                {% endcase %}
+                                <span class="blog-date-new" data-date-value="{{ article.created_at | date: '%B %d, %Y' }}">{{ date | date: "%B" }} {{ day }}{{ suffix }} {{ date | date: "%Y" }}</span>
+                                <!-- <span class="blog-date-new">{{article.created_at | date: '%B %d, %Y'}}</span> -->
+                                <div class="blog-title heading-3">{{ article.title }}</div>
+                                <div class="article-content">
+                                    {{ article.content | strip_html | truncate: 150 }}
+                                </div>
+                                <a href="{{ article.url }}" target="_self" class="readmore">Continue Reading</a>
+                            </div>
+                        </a>
+                    </div>  
+                {% endif %}
+            {% endfor %}
+            
+            {% if article_count == 0 %}
+                <script>
+                    window.location.href = '{{ routes.root_url }}';
+                </script>
+            {% endif %}
+        </div>
+        {% if paginate.pages > 1 %}
+        <div class="load-more-container">
+            <input type="hidden" value="{{ paginate.next.url }}" class="blog_next_page_url">
+            <input type="hidden" value="{{ paginate.pages }}" class="total_blogs_count">
+            <input type="hidden" value="{{ paginate.current_page }}" class="blog_current_page">
+            <button class="blog-load-more">MORE {{ blog.title | remove: 'P&F' }}</button>
+        </div>
+        {% endif %}
+        {% endpaginate %}
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Blog pages",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bannerimage",
+      "label": "Page Bannner - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobilebannerimage",
+      "label": "Page Bannner - Mobile"
+    }
+  ]
+}
+{% endschema %}

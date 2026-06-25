@@ -1,0 +1,1303 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676": {
+      "type": "global-announcement-bar",
+      "custom_css": [
+        ".ladder-annoucment-bar p {font-size: 15px;}",
+        ".ladder-annoucment-bar .announcement-btn {padding: 11px; margin-left: 5px; font-size: 15px; padding-top: 10px; padding-bottom: 7px;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "logo": false,
+        "class": "",
+        "text": "2 Free Autumn Scents",
+        "bb-color": "#fd5f0c",
+        "text-color": "#ffffff",
+        "scrollto": "lander_product_pf",
+        "annuText": "GET OFFER",
+        "landingproduct": ""
+      }
+    },
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2": {
+      "type": "global-header",
+      "disabled": true,
+      "settings": {
+        "menu2": "mega-menu",
+        "mobilemenu": "header-2",
+        "top_product_link": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "eb1cb571-42d1-4525-a09d-46ee88c78dc6": {
+      "type": "homepage-banner-1",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "class": "",
+        "desktopimage": "shopify://shop_images/custom_resized_618b244f-7527-411a-8998-93a59440aaee-copy.jpg",
+        "mobileimage": "shopify://shop_images/Product_images_5a3e5d68-9baf-47b6-a9a1-291dec479948.png",
+        "mobileImgLoc": "img-center",
+        "enablelink": true,
+        "reviewShow": false,
+        "title": "A trip to paradise,     every time you clean",
+        "titlecolor": "#ffffff",
+        "subtext": "Save £15 and try our tropical, summer scent for FREE. ",
+        "subtextcolor": "#ffffff",
+        "btnText": "GET OFFER",
+        "link": "shopify://products/balancing-floral",
+        "linkText": "",
+        "textcolor": "#ffffff",
+        "bgcolor": "#ff9038",
+        "btnSubText": "Offer ends in 48 hours!"
+      }
+    },
+    "7a63401c-59c8-4071-bd5d-b6e82a20e592": {
+      "type": "lander-banner",
+      "disabled": true,
+      "custom_css": [
+        "h2 {color: #ffffff; line-height: 1.5rem;}",
+        "h3 {color: #ffffff;}",
+        "p {color: #ffffff;}",
+        ".theme-text {color: #ffffff;}",
+        ".cls-1 {fill: #ffffff;}",
+        ".checkout-lander-btn {background: #ff9038; border-color: #ff9038 !important;}",
+        ".lander-banner-wrapper .banner-inner-container .bb-points {margin-top: 20px !important; font-size: 17px;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "className": "text-white",
+        "landingproduct": "geranium-ylang-ylang-bundle-pack-limited-edition",
+        "desktopimage": "shopify://shop_images/testmm-hero-02.jpg",
+        "mobileimage": "shopify://shop_images/MM-ACQUISITION--mob-hero-01.jpg",
+        "title": "Moth-Proof your Home \n <p> </p>with Limited Edition \n<p> </p> ‘Moth Magic’",
+        "subtext": "Get a FREE Moth Magic with Limited Edition Starter Kits.",
+        "price": "",
+        "delPrice": "",
+        "btnText": "GET OFFER",
+        "ctaDetails": "",
+        "scrollto": "lander_product_pf"
+      }
+    },
+    "82cad06f-c3da-48e0-a8f0-45fe753a7946": {
+      "type": "homepage-banner-3",
+      "blocks": {
+        "1927feba-2b72-4952-852a-d9399187b681": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "Effective Autumnal Scent"
+          }
+        },
+        "b43f938c-9ed7-498f-8659-15403ccb7e27": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "100% Pure Essential Oils"
+          }
+        },
+        "00e07071-d6fc-4091-95e9-83938fe89e9e": {
+          "type": "product_benefits",
+          "settings": {
+            "title": "One Cleaner for all Surfaces"
+          }
+        }
+      },
+      "block_order": [
+        "1927feba-2b72-4952-852a-d9399187b681",
+        "b43f938c-9ed7-498f-8659-15403ccb7e27",
+        "00e07071-d6fc-4091-95e9-83938fe89e9e"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".product-info .buy-btn, .shop-starter .container .buy-btn {font-size: 16px;color: #fff;background-color: #fd5f0c;"
+      ],
+      "settings": {
+        "scrollto": "",
+        "class": "",
+        "reviewtitle": "4.8/5.0 | Based on 6,400 5* reviews)",
+        "section_heading": "Autumnal Reverie: Two New Scents for a Clean, Crisp Home",
+        "subheading": "Get Two Autumn Scents for FREE With Every Limited Edition Starter Kit.",
+        "image": "shopify://shop_images/acq-autumn-hero-01-copy.jpg",
+        "content_color": "#334fb4",
+        "btnLabel": "Get Offer",
+        "scrollID": "lander_product_pf",
+        "btnLink": ""
+      }
+    },
+    "6671dea9-5325-43f0-85d1-35cf11ee6181": {
+      "type": "on-scroll-sticky",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "heading": "Limited Edition Summer Starter Kit",
+        "subheading": ""
+      }
+    },
+    "c5ce1369-4dae-4eed-a73f-4e964d10abeb": {
+      "type": "lander-banner",
+      "custom_css": [
+        "h2 {color: #ffffff; line-height: 2.5rem;}",
+        "h3 {color: #ffffff;}",
+        "p {color: #ffffff;}",
+        ".theme-text {color: #ffffff;}",
+        ".cls-1 {fill: #ffffff;}",
+        ".checkout-lander-btn {background: #fdc30c; border-color: #fdc30c !important;}",
+        ".lander-banner-wrapper .banner-inner-container .bb-points {margin-top: 20px !important; font-size: 17px;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "className": "text-white",
+        "landingproduct": "autumn-variety-kit",
+        "desktopimage": "shopify://shop_images/acq-autumn-var-hero-03-copy.jpg",
+        "mobileimage": "shopify://shop_images/acq-mobautumn-var-hero-01-copy.jpg",
+        "title": "Autumnal Reverie: <br> Two New Scents for a <br> Clean Crisp home",
+        "subtext": "Get Two Autumn Scents for FREE With Every <p>Limited Edition Starter Kit.\n</p>",
+        "price": "",
+        "delPrice": "",
+        "btnText": "BUY NOW",
+        "ctaDetails": "",
+        "scrollto": "lander_product_pf"
+      }
+    },
+    "90b7fe50-14af-4cb9-9599-c2184709f60a": {
+      "type": "global-product-3",
+      "blocks": {
+        "218c5635-fe7e-49cd-a614-0230f3a1ddcb": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": ""
+          }
+        },
+        "50dd896f-d043-468b-9d9f-35a3ab899412": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "3 x Signature Eco Concentrates, Delivered Quarterly (Pause or Cancel Anytime)"
+          }
+        },
+        "588ad252-28e8-4508-a499-e9d843cbc145": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "Free Starter Kit: Bottle for Life & Cleaning Cloth"
+          }
+        },
+        "7ef6afa2-fae3-4a85-a2e1-737ea1703b41": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "30 Day Money Back Guarantee"
+          }
+        },
+        "9dcf8c85-f770-4474-ae39-0f591af3df0d": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Variety-Kit.jpg"
+          }
+        },
+        "bfdd2ac7-73ae-4847-bd85-eb8c1d94fe01": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/autumn-how-it-works.jpg"
+          }
+        },
+        "d66c9912-795b-44a0-b94a-9a556743acd0": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Varirty-Benefit-Images.jpg"
+          }
+        },
+        "d0866031-4b56-4078-a702-f558effb4ef6": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Juniper-_-Cardamom-Benefit.jpg"
+          }
+        },
+        "7fbf1fbe-99eb-4c2d-86f9-82d160f62173": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Lavender-_-Chamomile-Benefit.jpg"
+          }
+        },
+        "eca1468b-2740-4abe-a970-fe452fb5b7af": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn_Variety_Kit8.jpg"
+          }
+        },
+        "54f23b57-2b9f-4395-94ed-7c55c10a4885": {
+          "type": "productImage",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Autumn_Variety_Kit12.jpg"
+          }
+        },
+        "7949a1aa-16fb-4ad5-8981-4d4b4dfb1e25": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a 3-month supply of Counter Clean; plus two NEW Autumn Scents, Juniper & Cardamom and Lavender & Chamomile for FREE, a free glass Bottle for Life and 1 premium microfibre cloth."
+          }
+        }
+      },
+      "block_order": [
+        "218c5635-fe7e-49cd-a614-0230f3a1ddcb",
+        "50dd896f-d043-468b-9d9f-35a3ab899412",
+        "588ad252-28e8-4508-a499-e9d843cbc145",
+        "7ef6afa2-fae3-4a85-a2e1-737ea1703b41",
+        "9dcf8c85-f770-4474-ae39-0f591af3df0d",
+        "bfdd2ac7-73ae-4847-bd85-eb8c1d94fe01",
+        "d66c9912-795b-44a0-b94a-9a556743acd0",
+        "d0866031-4b56-4078-a702-f558effb4ef6",
+        "7fbf1fbe-99eb-4c2d-86f9-82d160f62173",
+        "eca1468b-2740-4abe-a970-fe452fb5b7af",
+        "54f23b57-2b9f-4395-94ed-7c55c10a4885",
+        "7949a1aa-16fb-4ad5-8981-4d4b4dfb1e25"
+      ],
+      "custom_css": [
+        ".landing-offer-one .lander-points li:before {width: 0px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "verticalThumbnails": false,
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": false,
+        "p_id": "lander_product_pf",
+        "tag": "Limited Edition",
+        "landingproduct": "autumn-variety-kit",
+        "discount": "AUTUMNSPA",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "pt-5 pb-4 landing-offer-one d-non",
+        "mainheading": "Limited Edition Offer: 2 FREE Autumn Scents",
+        "mainsubheading": "Clean every surface in your home with our ultra-concentrated, naturally-scented, eco-friendly cleaning products.",
+        "heading": "Autumn Starter Kit Plan",
+        "subtext": "",
+        "price": "20",
+        "delPrice": "44",
+        "btnText": "Add to Cart",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "Shop Starter Kits",
+        "shopbtnLink": "shopify://collections/starter-kit_",
+        "heading-position": false
+      }
+    },
+    "1a1e5003-0e54-4557-9768-dccf5973f326": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16698546749667__1a1e5003-0e54-4557-9768-dccf5973f326-16847746492fca0ae8-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span class=\"value-pro\">Why</span> Purdy &amp; Figg?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16698546749667__1a1e5003-0e54-4557-9768-dccf5973f326-16847746492fca0ae8-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Purdy & Figg makes ultra-concentrated, naturally scented eco-friendly cleaning power that you dilute at home with tap water. Designed to clean all the surfaces in your home this magical cleaner transforms cleaning from a chore to a joy saving you time, money and space at home.</p>"
+          }
+        },
+        "template--16698546749667__1a1e5003-0e54-4557-9768-dccf5973f326-16847746492fca0ae8-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16698546749667__1a1e5003-0e54-4557-9768-dccf5973f326-16847746492fca0ae8-0",
+        "template--16698546749667__1a1e5003-0e54-4557-9768-dccf5973f326-16847746492fca0ae8-1",
+        "template--16698546749667__1a1e5003-0e54-4557-9768-dccf5973f326-16847746492fca0ae8-2"
+      ],
+      "custom_css": [
+        "h2 {font-size: 2rem;}",
+        "p {margin-top: 0; margin-bottom: 1rem; font-size: 17px; text-align: center;}"
+      ],
+      "settings": {
+        "color_scheme": "#e3f3fe",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 0
+      }
+    },
+    "2bd5ae5f-b2b6-4cf7-88a2-ac85bbeaef39": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "adc148a0-ee2e-4c92-ba67-b34d89046719": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/evening.png",
+            "details": "“Stripping back the jargon associated with cleaning products, family-run business Purdy & Figg has designed a cleaning system that will be effective and yet has a beautiful essential oil-based aroma, cuts back single-use plastic and supports your immune system."
+          }
+        },
+        "6bf5863b-3add-43e1-9794-bdeb66aaa4cc": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ideal_Home_logo_wordmark_copy.png",
+            "details": "“They smell nothing like a traditional cleaner, they’re quite luxurious aromatherapy style scents. I was surprised how efficient it was at cleaning my kitchen with just a couple of sprays and the counters smell like I’ve had an expensive candle burning in there afterwards”"
+          }
+        },
+        "3fa37758-c4e0-4dd7-ae4d-19e292b6c78b": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_7a2db430-135f-446b-befd-89447572228d.png",
+            "details": "“This is so brilliant — it’s a superconcentrated, eco-friendly, delicious-smelling cleaner that you can use on everything, from worktops to marble to wooden floors to baths to glass”"
+          }
+        }
+      },
+      "block_order": [
+        "adc148a0-ee2e-4c92-ba67-b34d89046719",
+        "6bf5863b-3add-43e1-9794-bdeb66aaa4cc",
+        "3fa37758-c4e0-4dd7-ae4d-19e292b6c78b"
+      ],
+      "custom_css": [
+        "{font-size: 14px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": true,
+        "bgColor": "",
+        "heading": "",
+        "logoDetailText": ""
+      }
+    },
+    "8da09017-fb7d-4165-9eb4-128cfdfdc768": {
+      "type": "pf-usps",
+      "blocks": {
+        "3ca11bd9-c25f-499a-8852-eb605f99c2ad": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9255.png",
+            "rounded": false,
+            "heading": "Smells like a Spa",
+            "details": "Made with pure essential oils for a divine natural scent that lingers for hours. A treat to use that leaves your house smelling like a 5* spa.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "b1034589-0569-4fd7-914d-59f1416573d1": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9256.png",
+            "rounded": false,
+            "heading": "Convenient & Effective",
+            "details": "It’s super-effective on every surface, so you can replace up to 15 bottles and speed up your routine!",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1e8c7d96-86d5-4597-b35d-d251e7914770": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9257.png",
+            "rounded": false,
+            "heading": "Guilt Free",
+            "details": "Sustainable cleaning for modern times. Reusable glass bottles that are refilled with toxic-free concentrates.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "86ccb8b5-00e1-483b-b39d-c59b5a5ea9cf": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/switch-03.png",
+            "rounded": false,
+            "heading": "It Makes Going Eco Easy",
+            "details": "Plastic free bottles, concentrate refills and low carbon deliveries make us the most sustainable option.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "3ca11bd9-c25f-499a-8852-eb605f99c2ad",
+        "b1034589-0569-4fd7-914d-59f1416573d1",
+        "1e8c7d96-86d5-4597-b35d-d251e7914770",
+        "86ccb8b5-00e1-483b-b39d-c59b5a5ea9cf"
+      ],
+      "custom_css": [
+        "h2 {font-size: 2rem; font-family: Value-Serif-Pro;}"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": true,
+        "classname": "lander-benefits-switching arrow-white section-ab-remove",
+        "shadow": false,
+        "sectionbgColor": "#334fb4",
+        "sectionTextColor": "#ffffff",
+        "heading": "Benefits of Switching",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b": {
+      "type": "landing-blocks",
+      "blocks": {
+        "e9358ff1-a922-4541-acc2-5274872a4581": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9364.png",
+            "rounded": true,
+            "heading": "Create a calm & cosy home",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9365.png",
+            "rounded": true,
+            "heading": "Naturally-Scented Home Care",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9367.png",
+            "rounded": true,
+            "heading": "The Crisp Scent of Autumn",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9366.png",
+            "rounded": true,
+            "heading": "Enjoy a Warm, Familiar Scent",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "e9358ff1-a922-4541-acc2-5274872a4581",
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256",
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08",
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84"
+      ],
+      "custom_css": [
+        ".heading-4.text-center,h3 {text-decoration: none !important; font-family: \"Value-Sans\"; font-size: 20px;}",
+        ".pb-5 {padding-bottom: 0rem !important;}",
+        "h2 {font-size: 2rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#fd5f0c",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Embrace the Golden Season With Autumn-Scented Notes\n</span>",
+        "subtext": "Try our 2x new Autumn Scents for FREE with our Starter Kit. Strictly whilst stock lasts!",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "ba22ea4f-bc70-46ff-9b8c-a31acfe8b0d7": {
+      "type": "our-blends",
+      "blocks": {
+        "9adbb6d9-9348-4ee2-9bd6-da160aea40a0": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "theme-text mobile-hide",
+            "nopopup": true,
+            "heading": "Check out our New Seasonal Scent",
+            "detail": "",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": false,
+            "PoopupIconCode": ""
+          }
+        },
+        "4204bb1e-d4f0-434f-83d4-a727ccea81d4": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/J_C_02_6ad22edd-b376-4c3e-a769-87f30e5be6a5.jpg",
+            "heading": "Juniper & Cardamom",
+            "detail": "Like a crisp, Autumnal walk this scent combines warm and spicy cardamom with uplifting lemon and purifying Juniper berry. Tap more more >",
+            "pop_heading": "Juniper & Cardamom",
+            "pop_detail": "Top Notes  Lemon - a fresh, citrus oil with uplifting benefits  Middle Notes  Cardamom - a spicy and comforting oil     Juniper - a purifying oil with a fresh and clean scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lemon_1242e2d1-72c9-4c00-a273-51701b4d60fb.png?v=1694682410\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Cardamom.png?v=1694682411\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Juniper.png?v=1694682410\">\n        </div>\n<div></div>"
+          }
+        },
+        "56421523-0b15-4ba1-9c4d-7f49e5f95944": {
+          "type": "text",
+          "settings": {
+            "popup_no": "2",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/L_C_01_bb0fd0c5-a0a2-466b-b9b7-2952f6251c05.jpg",
+            "heading": "Lavender & Chamomile",
+            "detail": "This calming floral-herbal scent will cleanse and restore your home for Autumn. <p> Tap more more ></p>",
+            "pop_heading": "Lavender & Chamomile",
+            "pop_detail": "Lavender - A delicate, floral scent with grassy, herbal notes. Famed for its calming, sedative properties    Geranium - a sweet floral, sweet oil that supports emotions by creating a calming and grounding effect.   Clary Sage - a sweet and herbaceous oil promotes inner tranquillity and dispels negativity.    Roman Chamomile - a calming, warm and grounding aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lacvender.png?v=1694682410\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Gerabium.png?v=1694682410\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage_f900de13-37dd-459a-880e-f4a782005f4e.png?v=1694682411\">\n\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Chamomile.png?v=1694682411\">\n        </div>\n<div></div>\n</div>"
+          }
+        },
+        "e61ac350-85ff-400a-b0c3-dc399a957749": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/P_C_4.jpg",
+            "heading": "Patchouli & Cedarwood  ‘Moth Magic’ LIMITED EDITION",
+            "detail": "A forest-walk blend of earthy Cedarwood with wafts of woody-citrus MayChang and Patchouli. Tap more more >",
+            "pop_heading": "Patchouli & Cedarwood ‘Moth Magic’",
+            "pop_detail": "Top Notes  MayChang - an intense fresh and citrusy aroma with insecticidal and calming properties.   Middle Notes   Palmarosa - a sweet, floral-rosy oil that’s antimicrobial and acts as an insect repellent.     Base Notes  Red Cedar - a woody aroma with sweet balsamic scent that masks the scent of Keratin.  Patchouli - a rich, sweet, herbaceous and aromatic aroma traditionally used as a moth and insect repellent.  Amyris - a subtle, woody and sweet balsamic scent with antiseptic and sedative qualities.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Red_Cedar.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Patchouli.png?v=1692882966\">\n        </div>\n<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Palmarosa.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Amyris.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Maychang.png?v=1692882966\">\n        </div>\n\n<div></div>"
+          }
+        },
+        "6a01b723-b9b7-4116-8555-f12791806f88": {
+          "type": "text",
+          "settings": {
+            "popup_no": "4",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_78b7601f-6199-4ab6-93de-54b001d37fbd.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties Tap more more >",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Known for their cheerful aromas and mood-enhancing properties <p> </p> Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   <p> </p> Middle Notes <p> </p>   Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/grapefruit.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/naouli.png?v=1678288097\">\n        </div>\n<div></div>"
+          }
+        },
+        "c8cf2625-d58e-4c78-8a33-e550c639a275": {
+          "type": "text",
+          "settings": {
+            "popup_no": "5",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6305_2x_0d102c8f-ce11-4ea4-af59-808c6273c773.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects. Tap more more >",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Middle Notes   <p> </p> Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.<p> </p>  Base Notes   <p> </p> Vetiver A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "283735cf-474c-45ff-8f4f-da2362b6e0d1": {
+          "type": "text",
+          "settings": {
+            "popup_no": "6",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_d322e237-a8aa-4913-816a-4cd80c324742.png",
+            "heading": "Balancing Floral",
+            "detail": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots, known for their comforting & balancing properties Tap more more >",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma. <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent. <p> </p> Middle Notes <p> </p> Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        }
+      },
+      "block_order": [
+        "9adbb6d9-9348-4ee2-9bd6-da160aea40a0",
+        "4204bb1e-d4f0-434f-83d4-a727ccea81d4",
+        "56421523-0b15-4ba1-9c4d-7f49e5f95944",
+        "e61ac350-85ff-400a-b0c3-dc399a957749",
+        "6a01b723-b9b7-4116-8555-f12791806f88",
+        "c8cf2625-d58e-4c78-8a33-e550c639a275",
+        "283735cf-474c-45ff-8f4f-da2362b6e0d1"
+      ],
+      "custom_css": [
+        "h2 {font-size: 1.5rem; font-family: Value-Serif-Pro;}"
+      ],
+      "settings": {
+        "class": "moth-magic-blends",
+        "bgColor": "",
+        "heading": "Get to know our blends:"
+      }
+    },
+    "71cd58d0-1ad6-4f4d-9571-5217d5dc1132": {
+      "type": "review-slider-2",
+      "blocks": {
+        "7b3c67fc-6423-4005-8456-916e41b53d10": {
+          "type": "text",
+          "settings": {
+            "heading": "Amazing!",
+            "review": "Amazing scent loved it use it all over the house shame it’s only a limited edition or would order more!",
+            "username": "Louise C.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "873687de-ccdb-4d80-8624-c105ab2e07aa": {
+          "type": "text",
+          "settings": {
+            "heading": "Please keep making it!",
+            "review": "I didn’t think a moth deterrent could smell so nice. Compared to anything else, it’s amazing, I love it!",
+            "username": "Karen O.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "824b0702-e86a-40a8-9fbe-ff3c5e850023": {
+          "type": "text",
+          "settings": {
+            "heading": "Seems to do the job!",
+            "review": "Pleasant, subtle scent and seemingly effective. I have not seen any baby moths yet so I am hopeful. Thank you Purdy & Figg.",
+            "username": "Sylvia K.",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "7b3c67fc-6423-4005-8456-916e41b53d10",
+        "873687de-ccdb-4d80-8624-c105ab2e07aa",
+        "824b0702-e86a-40a8-9fbe-ff3c5e850023"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "white-text",
+        "sectionID": "white-text",
+        "Review-Count": "4.9/5.0 (6,363 reviews)",
+        "bgColor": "#e3f3fe",
+        "heading": "Over 6300 5-Star Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "#ffffff",
+        "btnTextColor": ""
+      }
+    },
+    "ddb189a1-6517-42dc-a409-715c4d37da17": {
+      "type": "lander-table",
+      "custom_css": [
+        "h2 {font-size: 2rem; margin-top: 0rem;}",
+        ".py-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {}
+    },
+    "183d6f8f-887d-47a0-abd6-badda41fccc2": {
+      "type": "video-html-block",
+      "disabled": true,
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36px; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/summer_web_02Artboard_3.jpg",
+        "full-width": true,
+        "heading": "Find out more about our bestselling, tropical blend",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4"
+      }
+    },
+    "c20cb185-a88c-4129-871d-31e7490d964d": {
+      "type": "pf-usps",
+      "blocks": {
+        "702213dd-8b51-4267-bd3b-effb2bcaed7e": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6468.png",
+            "rounded": true,
+            "heading": "Effective On All Surfaces",
+            "details": "Effectively cleans Counters, Stone, Bath, Enamel, Glass, Mirrors, Wood and Floors replacing up to 15 different products.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "82499a3b-f4a2-4a4d-a91d-d1f49d060f9a": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6469.png",
+            "rounded": true,
+            "heading": "Re-usable Glass Bottles",
+            "details": "With a glass bottle for life and glass refills you can stop plastic junk going into landfill and our oceans.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "63d60ea1-dbac-4f62-9231-e5511bfe253e": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6470.png",
+            "rounded": true,
+            "heading": "Long Lasting Scents",
+            "details": "Pure essential oils mean our scents smell natural and stick around to transform your home into a spa like bliss.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "12db1813-322a-4ac7-a86c-9edf643df00b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6471.png",
+            "rounded": true,
+            "heading": "Non Toxic & Natural",
+            "details": "Plant based, Non GMO, Paraben Free and no synthetic fragrances mean you can be sure you are putting your family first.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "702213dd-8b51-4267-bd3b-effb2bcaed7e",
+        "82499a3b-f4a2-4a4d-a91d-d1f49d060f9a",
+        "63d60ea1-dbac-4f62-9231-e5511bfe253e",
+        "12db1813-322a-4ac7-a86c-9edf643df00b"
+      ],
+      "custom_css": [
+        "h2 {font-size: 2rem; font-family: value-serif-pro; padding-top: 0rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": true,
+        "classname": "lander-wrapper-section section-ab-remove",
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "You don’t need a million cleaning products. You need one that works.",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "99ccde11-5760-4852-bf3d-835fd6a67eae": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "p {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".mobile-padding-y {padding-top: 30px; padding-bottom: 0px;}",
+        "h2 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"value-pro\">Two women on  a mission to </span>transform cleaning",
+        "image": "shopify://shop_images/THUMBNAIL_4.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "a5c10e97-628d-4c3c-8934-1fba2110e563": {
+      "type": "global-product-3",
+      "blocks": {
+        "384d3305-2bbb-4e4a-b8fa-ba1705cd427d": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a 3-month supply of Counter Clean; plus two NEW Autumn Scents, Juniper & Cardamom and Lavender & Chamomile for FREE, a free glass Bottle for Life and 1 premium microfibre cloth."
+          }
+        },
+        "bcbffdeb-891a-4efb-8ab3-3775f6b046d8": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": ""
+          }
+        },
+        "4a701744-1865-4d90-9a26-2b66c8e3fcc3": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "3 x Signature Eco Concentrates, Delivered Quarterly (Pause or Cancel Anytime)"
+          }
+        },
+        "e8bebafe-ea7e-4b51-86b7-15cccf33cadd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "Free Starter Kit: Bottle for Life & Cleaning Cloth"
+          }
+        },
+        "4880ec61-2f29-49d6-b4e2-3a1ce4c2a1a5": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "30 Day Money Back Guarantee"
+          }
+        },
+        "c1144510-0df8-4d1a-a749-8453e282d940": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Variety-Kit.jpg"
+          }
+        },
+        "853243db-47a8-47ab-9a79-65bd90be4e11": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Benefit-Images04_46b6dc8e-5e32-424e-b4a9-e907f78f6a2e.jpg"
+          }
+        },
+        "6a8914f9-e8c6-4919-8d5c-fbf5801b3eef": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Lavender-Benefit-Images.jpg"
+          }
+        },
+        "20e4e789-1e5f-4e76-afdd-f63f5157708d": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/juniper-benefit.jpg"
+          }
+        },
+        "6418c536-3138-45c4-93b5-938295c624a4": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variety-Benefit-Images.jpg"
+          }
+        },
+        "48cf3f38-bcc7-4a60-be58-22306696f239": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn_Variety_Kit8.jpg"
+          }
+        },
+        "fd7de3ba-499b-4f46-bf35-cf71f4c1a9c7": {
+          "type": "productImage",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Autumn_Variety_Kit12.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "384d3305-2bbb-4e4a-b8fa-ba1705cd427d",
+        "bcbffdeb-891a-4efb-8ab3-3775f6b046d8",
+        "4a701744-1865-4d90-9a26-2b66c8e3fcc3",
+        "e8bebafe-ea7e-4b51-86b7-15cccf33cadd",
+        "4880ec61-2f29-49d6-b4e2-3a1ce4c2a1a5",
+        "c1144510-0df8-4d1a-a749-8453e282d940",
+        "853243db-47a8-47ab-9a79-65bd90be4e11",
+        "6a8914f9-e8c6-4919-8d5c-fbf5801b3eef",
+        "20e4e789-1e5f-4e76-afdd-f63f5157708d",
+        "6418c536-3138-45c4-93b5-938295c624a4",
+        "48cf3f38-bcc7-4a60-be58-22306696f239",
+        "fd7de3ba-499b-4f46-bf35-cf71f4c1a9c7"
+      ],
+      "custom_css": [
+        ".landing-offer-one .lander-points li:before {width: 0px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "verticalThumbnails": false,
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": false,
+        "p_id": "lander_product_pf",
+        "tag": "Limited Edition",
+        "landingproduct": "autumn-variety-kit",
+        "discount": "AUTUMNSPA",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "pt-5 pb-4 landing-offer-one d-non",
+        "mainheading": "Limited Edition Offer: 2 FREE Autumn Scents",
+        "mainsubheading": "Clean every surface in your home with our ultra-concentrated, naturally-scented, eco-friendly cleaning products.",
+        "heading": "Autumn Starter Kit Plan",
+        "subtext": "",
+        "price": "20",
+        "delPrice": "44",
+        "btnText": "Add to Cart",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "Shop Starter Kits",
+        "shopbtnLink": "shopify://collections/starter-kit_",
+        "heading-position": false
+      }
+    },
+    "136b25a9-f9a2-49c0-b9a2-ca153597cb19": {
+      "type": "global-lander-product",
+      "blocks": {
+        "acbfe211-2e9f-48c5-9c3f-12b99f3757d2": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 FREE Patchouli & Cedarwood Eco-Concentrate"
+          }
+        },
+        "3e78eefc-d2ee-4bf9-8f1e-a90bce61be48": {
+          "type": "text",
+          "settings": {
+            "listItem": "3 x Signature Eco Concentrates, Delivered Quarterly (Pause or Cancel Anytime)"
+          }
+        },
+        "cce3f546-1c10-4c6a-88d3-2690c0463a9b": {
+          "type": "text",
+          "settings": {
+            "listItem": "Free Starter Kit: Bottle for Life & Cleaning Cloth"
+          }
+        },
+        "15787960-b57f-41ec-af99-9705fcd5ffa3": {
+          "type": "text",
+          "settings": {
+            "listItem": "30 Day Money Back Guarantee"
+          }
+        },
+        "7304ac00-160d-4c8e-b865-a04341824d0a": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-1.png"
+          }
+        },
+        "d786eaac-f88a-4314-a045-45cb6a27cca2": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-2.png"
+          }
+        },
+        "0cf3b365-4101-44de-9a98-c7a043c1e13f": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-3.png"
+          }
+        },
+        "d7acc8df-89b8-440f-ad09-9c4dfcb63339": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-4.png"
+          }
+        },
+        "6cd06c07-74a0-4d6a-bd7d-92f79a180362": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/P_C-STARTER-KIT_cloth.jpg"
+          }
+        },
+        "51e12191-f498-4db0-ae87-ab6555ab0329": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/MM-prd-2.jpg"
+          }
+        },
+        "8923c3fd-76e5-4297-9e50-24b7969fc28d": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Product-Pages-2023-_4.jpg"
+          }
+        },
+        "d46349eb-1690-45e7-8518-273c3194aa69": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/MM-prd.jpg"
+          }
+        },
+        "a750b84e-d098-43f7-b578-383ab915fef7": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Product-Pages-2023-_2.jpg"
+          }
+        },
+        "0e7e9b95-56c4-41f2-87e5-80867957efdd": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Autumn-Product-PTages-2023-_1_e213b4e8-96a5-4568-8404-c9d92877b4e1.jpg"
+          }
+        },
+        "cc403dd4-d14e-4c38-a611-e46ab37d7c34": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/MM-prd-3.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "acbfe211-2e9f-48c5-9c3f-12b99f3757d2",
+        "3e78eefc-d2ee-4bf9-8f1e-a90bce61be48",
+        "cce3f546-1c10-4c6a-88d3-2690c0463a9b",
+        "15787960-b57f-41ec-af99-9705fcd5ffa3",
+        "7304ac00-160d-4c8e-b865-a04341824d0a",
+        "d786eaac-f88a-4314-a045-45cb6a27cca2",
+        "0cf3b365-4101-44de-9a98-c7a043c1e13f",
+        "d7acc8df-89b8-440f-ad09-9c4dfcb63339",
+        "6cd06c07-74a0-4d6a-bd7d-92f79a180362",
+        "51e12191-f498-4db0-ae87-ab6555ab0329",
+        "8923c3fd-76e5-4297-9e50-24b7969fc28d",
+        "d46349eb-1690-45e7-8518-273c3194aa69",
+        "a750b84e-d098-43f7-b578-383ab915fef7",
+        "0e7e9b95-56c4-41f2-87e5-80867957efdd",
+        "cc403dd4-d14e-4c38-a611-e46ab37d7c34"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "checkout": true,
+        "outOfStock": false,
+        "isSub": true,
+        "discount": "SUMMEROFFER",
+        "p_id": "lander_product_pf",
+        "tag": "",
+        "landingproduct": "geranium-ylang-ylang-bundle-pack-limited-edition",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "py-4",
+        "mainheading": "Save 50% and get a FREE Moth Magic",
+        "mainsubheading": "",
+        "heading": "Limited Edition Starter Kit Plan",
+        "subtext": "",
+        "price": "17",
+        "delPrice": "34",
+        "ctaDetails": "100% Secure Checkout | Cancel or Pause Anytime",
+        "heading-position": false
+      }
+    },
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8": {
+      "type": "landing-blocks",
+      "blocks": {
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Ellipse_178_8b33f4a6-a2f3-4890-ae38-0ab56ca86208.png",
+            "rounded": true,
+            "heading": "No questions asked money back guarantee if you’re not satisfied.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_8374.png",
+            "rounded": true,
+            "heading": "Ships in 1-2 Days guaranteed. Free delivery over £40.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_8375.png",
+            "rounded": true,
+            "heading": "Save 10 plastic bottles per year from entering landfill.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_17.png",
+            "rounded": true,
+            "heading": "Easy top up refills whenever you need.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b",
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767",
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123",
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d"
+      ],
+      "custom_css": [
+        "h3 {margin: 0; font-family: \"Value-Sans\"; font-size: 16px; padding-top: 0rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#fd5f0c",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Extra Benefits</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "182f34ef-c7eb-4a0b-9aaa-02012e2a7148": {
+      "type": "faq-section",
+      "blocks": {
+        "c639baa8-6681-4210-a5d0-06541624b7c4": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>Each eco-concentrate dilutes to 300ml of Counter Clean. We recommend using one eco-concentrate per month. The Starter Kit is designed to last you 90 days.</p>"
+          }
+        },
+        "205907d0-322e-4a48-a10d-6f0af4f22b3a": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this more expensive than a regular cleaner?",
+            "faq-ans": "<p>Counter Clean costs 16p per day which is 3p more than a typical bottle of supermarket cleaner. However, we replace up to 15 different products under your sink so end up saving you money.</p>"
+          }
+        },
+        "ed6dac56-3ba6-4770-b5b6-42db976880be": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How can I be sure it works?",
+            "faq-ans": "<p>Our product has been independently tested and proven to be 100% effective at tackling grease, grim and dirt. 93% of our customers would recommend us for our cleaning power.</p>"
+          }
+        },
+        "1e307f14-419d-4517-a3f8-4aa52ea34c45": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe around pets?",
+            "faq-ans": "<p>Our founders are pet fantatics and our products have been designed to be safe for use around dogs and other pets. We don't recommend cleaning pet beds or food bowls without rinsing afterwards. If you are worried about allergies, do contact your vet.</p>"
+          }
+        },
+        "30c5ce6d-69e0-42ae-84ad-5d341242e4a7": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it cruelty Free?",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "dbbd1958-c5e5-48db-9fb7-a114bd501189": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use on all my surfaces?",
+            "faq-ans": "<p>Counter Clean has been designed to be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "c639baa8-6681-4210-a5d0-06541624b7c4",
+        "205907d0-322e-4a48-a10d-6f0af4f22b3a",
+        "ed6dac56-3ba6-4770-b5b6-42db976880be",
+        "1e307f14-419d-4517-a3f8-4aa52ea34c45",
+        "30c5ce6d-69e0-42ae-84ad-5d341242e4a7",
+        "dbbd1958-c5e5-48db-9fb7-a114bd501189"
+      ],
+      "custom_css": [
+        "h3 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "caabca34-98ed-4769-acb9-383a769c2aed": {
+      "type": "instagram-blocks",
+      "blocks": {
+        "1f8d215c-5c60-4f7f-8aa0-81ecdb87091e": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/Asset_6_3x_e53b7797-dd20-430e-8fbc-fca4c17a2a75.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/?hl=en"
+          }
+        },
+        "b499d294-f0a8-488d-979a-e31e1f8dbc65": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/Asset_4_3x_a62c4f4f-7cfa-45ce-aff4-abf4aab362a5.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/?hl=en"
+          }
+        },
+        "886af06a-59c3-46e0-aa62-b91f2f3c7d14": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/Asset_5_3x_ee3ef02a-f785-4987-839c-ac5d629770c4.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        }
+      },
+      "block_order": [
+        "1f8d215c-5c60-4f7f-8aa0-81ecdb87091e",
+        "b499d294-f0a8-488d-979a-e31e1f8dbc65",
+        "886af06a-59c3-46e0-aa62-b91f2f3c7d14"
+      ],
+      "custom_css": [
+        "h3 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "lander-instagram",
+        "bgColor": "#e3f3fe",
+        "heading": "Join 100,000 Real Customers",
+        "details": "Join our community and see Purdy & Figg in real life with real customers",
+        "followText": "FOLLOW US",
+        "followLink": "https://www.instagram.com/purdyandfigg/?hl=en"
+      }
+    }
+  },
+  "order": [
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676",
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2",
+    "main",
+    "eb1cb571-42d1-4525-a09d-46ee88c78dc6",
+    "7a63401c-59c8-4071-bd5d-b6e82a20e592",
+    "82cad06f-c3da-48e0-a8f0-45fe753a7946",
+    "6671dea9-5325-43f0-85d1-35cf11ee6181",
+    "c5ce1369-4dae-4eed-a73f-4e964d10abeb",
+    "90b7fe50-14af-4cb9-9599-c2184709f60a",
+    "1a1e5003-0e54-4557-9768-dccf5973f326",
+    "2bd5ae5f-b2b6-4cf7-88a2-ac85bbeaef39",
+    "8da09017-fb7d-4165-9eb4-128cfdfdc768",
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b",
+    "ba22ea4f-bc70-46ff-9b8c-a31acfe8b0d7",
+    "71cd58d0-1ad6-4f4d-9571-5217d5dc1132",
+    "ddb189a1-6517-42dc-a409-715c4d37da17",
+    "183d6f8f-887d-47a0-abd6-badda41fccc2",
+    "c20cb185-a88c-4129-871d-31e7490d964d",
+    "99ccde11-5760-4852-bf3d-835fd6a67eae",
+    "a5c10e97-628d-4c3c-8934-1fba2110e563",
+    "136b25a9-f9a2-49c0-b9a2-ca153597cb19",
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8",
+    "182f34ef-c7eb-4a0b-9aaa-02012e2a7148",
+    "caabca34-98ed-4769-acb9-383a769c2aed"
+  ]
+}

@@ -1,0 +1,495 @@
+<style>
+  .seasonal-scents-1 .tss-block {
+    height: max-content !important;
+  }
+
+  .seasonal-scents-1 .tss-heading {
+    color: #161718;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #DFE0E1;
+  }
+  
+  .seasonal-scents-1 .tss-details {
+    color: #434448;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 8px;
+    margin-bottom: 24px;
+    transition: height 0.2s ease, -webkit-line-clamp 0.2s ease;
+    height: calc(1.5em * 3);
+  }
+
+  .seasonal-scents-1 .tss-details.expanded {
+    -webkit-line-clamp: unset;
+    display: block;
+    height: auto;
+  }
+
+  .seasonal-scents-1 .see-more-container {
+    padding-top: 12px;
+    border-top: 1px solid #DFE0E1;
+    cursor: pointer;
+  }
+  
+  .seasonal-scents-1 .see-more {
+    color: #2D469E;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .seasonal-scents-1 .plus-minus {
+    margin-left: auto;
+  }
+
+  .seasonal-scents-1 .plus-minus svg {
+    margin: auto;
+  }
+
+  .tss-block-228 .tss-first-image {
+    width: 348px;
+    /* height: 416px; */
+  }
+
+  /* .tss-first-image img {
+    height: 385px !important;
+  } */
+
+  .tss-block-228 .tss-first-heading {
+    color: #FFFFFF !important;
+    font-size: 18px !important;
+    line-height: 27px !important;
+    font-weight: 200 !important;
+    border-bottom: unset !important;
+    position: absolute !important;
+    bottom: 48px !important;
+    right: 16px !important;
+    left: 16px !important;
+    /* padding: 10px !important; */
+  }
+
+  .tss-block-228 .tss-tag {
+    top: 16px !important;
+    right: 16px !important;
+  }
+
+  .tss-block-228 .tss-tag-first {
+    background: #fbf1e8;
+    color: #212121;
+    border-radius: 4px;
+    border: solid 1px #f2d4b9;
+  }
+
+  .tss-block-228 .tss-scent-name {
+    padding-left: 16px;
+    letter-spacing: 1.35px;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+  }
+  
+  @media (max-width: 768px) {
+    .tss-block-228 .tss-first-image {
+      width: unset !important;
+    }
+    .tss-block-228 .tss-block {
+      width: 273px !important;
+      /* height: 362px !important; */
+    }
+    .tss-block-228 .tss-first-heading {
+      font-size: 16px !important;
+      bottom: 40px !important;
+    }
+  }
+</style>
+
+{% assign count = 0 %}
+{% for block in section.blocks %}
+  {% assign count = count | plus: 1 %}
+{% endfor %}
+<div id="{{ section.settings.sectionId }}">
+  <div
+    style="background-color:{{ section.settings.bgcolor }}"
+    class="py-80 transformational-scents-section link-to-variant seasonal-scents-1 variant_{{ section.settings.linkVariant }} {{ section.settings.class }} tss-block-228"
+  >
+    <div class="container">
+      <div
+        {% if count < 2 %}
+          class="d-flex align-items-center justify-content-between tss-one-block-wrapper"
+        {% endif %}
+      >
+        <div class="tss-main-header">
+          <h2 class="heading-2 text-center white-text value-bold mt-0 ">{{ section.settings.heading }}</h2>
+          <p style="color:#EAEAEB" class="normal-text value-sans text-center">
+            {{ section.settings.subtext }}
+          </p>
+        </div>
+        <div class="mt-4">
+          <div class="seasonal-block-scent">
+            <h5 class="tss-scent-name">SEASONAL SCENTS</h5>
+            <div class="transformational-scents-slider {% if count > 2 %}tss-slider{% endif %}">
+                <div class="tss-block">
+                  <div class="tss-image position-relative tss-first-image">
+                    <picture>
+                      {% assign image = section.settings.blockImage %}
+                      {% assign mimage = section.settings.mBlockImage %}
+  
+                      <source media="(min-width:769px)" srcset="{{ image | img_url: '1200x'}}">
+                      <source media="(max-width:768px)" srcset="{{ mimage | img_url: '1200x' }}">
+                      <img
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ image | img_url: '1200x'}}"
+                        width="800"
+                        height="700"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                    {% if section.settings.blockImageDetails != blank %}
+                      <span class="tss-first-heading">{{ section.settings.blockImageDetails }}</span>
+                    {% endif %}
+                    {% if section.settings.blockImageTag != blank %}
+                      <span class="tss-tag tss-tag-first">{{ section.settings.blockImageTag }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+              {% for block in section.blocks %}
+                {% if block.type == 'seasonal' %}
+                <div class="tss-block">
+                  <div class="tss-image position-relative">
+                    <picture>
+                      {% assign image = block.settings.blockImage %}
+                      {% assign mimage = block.settings.mBlockImage %}
+  
+                      <source media="(min-width:769px)" srcset="{{ image | img_url: 'master'}}">
+                      <source media="(max-width:768px)" srcset="{{ mimage | img_url: 'master' }}">
+                      <img
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ image | img_url: 'master'}}"
+                        width="400"
+                        height="300"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                    {% if block.settings.tag != blank %}
+                      <span class="tss-tag">{{ block.settings.tag }}</span>
+                    {% endif %}
+                  </div>
+                  <div class="tss-content">
+                    <h3 class="tss-heading blue-text-3 value-sans">{{ block.settings.heading }}</h3>
+                    <p class="tss-details black-text normal-text value-sans" id="details-{{ forloop.index }}">{{ block.settings.details }}</p>
+                    {% if block.settings.expendable-content != blank %}   
+                    <div class="see-more-blend--container d-flex w-100" >
+                      <div>
+                        <span class="see-more-blend-text value-sans">{{ block.settings.expend-label }}</span>
+                      </div>
+                      <div class="plus-minus d-flex">
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <g clip-path="url(#clip0_1172_318)">
+                            <path d="M9 6V12M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2D469E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1172_318">
+                              <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" style="display: none;">
+                          <g clip-path="url(#clip0_1172_318)">
+                            <path d="M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2D469E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1172_318">
+                              <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                    {% endif %}
+                    <div class="expendable-content">
+                      {{ block.settings.expendable-content }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+
+          <div class="signature-block-scent">
+            <h5 class="tss-scent-name">SIGNATURE SCENTS</h5>
+            <div class="transformational-scents-slider {% if count > 2 %}tss-slider{% endif %}">
+                <div class="tss-block">
+                  <div class="tss-image position-relative tss-first-image">
+                    <picture>
+                      {% assign image = section.settings.blockImage1 %}
+                      {% assign mimage = section.settings.mBlockImage1 %}
+  
+                      <source media="(min-width:769px)" srcset="{{ image | img_url: '1200x'}}">
+                      <source media="(max-width:768px)" srcset="{{ mimage | img_url: '1200x' }}">
+                      <img
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ image | img_url: '1200x'}}"
+                        width="800"
+                        height="700"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                    {% if section.settings.blockImageDetails != blank %}
+                      <span class="tss-first-heading">{{ section.settings.blockImageDetails1 }}</span>
+                    {% endif %}
+                    {% if section.settings.blockImageTag != blank %}
+                      <span class="tss-tag tss-tag-first">{{ section.settings.blockImageTag1 }}</span>
+                    {% endif %}
+                  </div>
+                </div>
+              {% for block in section.blocks %}
+                {% if block.type == 'signature' %}
+                <div class="tss-block">
+                  <div class="tss-image position-relative">
+                    <picture>
+                      {% assign image = block.settings.blockImage1 %}
+                      {% assign mimage = block.settings.mBlockImage1 %}
+  
+                      <source media="(min-width:769px)" srcset="{{ image | img_url: 'master'}}">
+                      <source media="(max-width:768px)" srcset="{{ mimage | img_url: 'master' }}">
+                      <img
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ image | img_url: 'master'}}"
+                        width="400"
+                        height="300"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                    {% if block.settings.tag1 != blank %}
+                      <span class="tss-tag">{{ block.settings.tag1 }}</span>
+                    {% endif %}
+                  </div>
+                  <div class="tss-content">
+                    <h3 class="tss-heading blue-text-3 value-sans">{{ block.settings.heading1 }}</h3>
+                    <p class="tss-details black-text normal-text value-sans" id="details-{{ forloop.index }}">{{ block.settings.details1 }}</p>
+                    {% if block.settings.expendable-content1 != blank %}   
+                    <div class="see-more-blend--container d-flex w-100" >
+                      <div>
+                        <span class="see-more-blend-text value-sans">{{ block.settings.expend-label1 }}</span>
+                      </div>
+                      <div class="plus-minus d-flex">
+                        <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                          <g clip-path="url(#clip0_1172_318)">
+                            <path d="M9 6V12M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2D469E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1172_318">
+                              <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                        <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" style="display: none;">
+                          <g clip-path="url(#clip0_1172_318)">
+                            <path d="M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2D469E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </g>
+                          <defs>
+                            <clipPath id="clip0_1172_318">
+                              <rect width="18" height="18" fill="white"/>
+                            </clipPath>
+                          </defs>
+                        </svg>
+                      </div>
+                    </div>
+                    {% endif %}
+                    <div class="expendable-content">
+                      {{ block.settings.expendable-content1 }}
+                    </div>
+                  </div>
+                </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "PF228 scent blocks",
+    "settings": [
+      {
+        "type": "text",
+        "id": "sectionId",
+        "label": "Section ID"
+      },
+      {
+        "type": "color",
+        "id": "bgcolor",
+        "label": "Background color"
+      },
+      {
+        "type": "text",
+        "id": "class",
+        "label": "Section Class"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "subtext",
+        "label": "Sub Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "blockImage",
+        "label": "Seasonal Scent Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mBlockImage",
+        "label": "Seasonal Scent Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "blockImageTag",
+        "label": "Seasonal Scent Tag"
+      },
+      {
+        "type": "text",
+        "id": "blockImageDetails",
+        "label": "Seasonal Scent text"
+      },
+      {
+        "type": "image_picker",
+        "id": "blockImage1",
+        "label": "Signature Scent Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mBlockImage1",
+        "label": "Signature Scent Mobile Image"
+      },
+      {
+        "type": "text",
+        "id": "blockImageTag1",
+        "label": "Signature Scent Tag"
+      },
+      {
+        "type": "text",
+        "id": "blockImageDetails1",
+        "label": "Signature Scent text"
+      },
+    ],
+    "blocks": [
+      {
+        "type": "seasonal",
+        "name": "Seasonal Scent block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "blockImage",
+            "label": "Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mBlockImage",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "details",
+            "label": "text"
+          }
+          ,
+          {
+            "type": "text",
+            "id": "expend-label",
+            "label": "Expend Label",
+            "default" : "SEE MORE"
+          },
+          {
+            "type": "html",
+            "id": "expendable-content",
+            "label": "Expend Content"
+          }
+        ]
+      },
+      {
+        "type": "signature",
+        "name": "Signature Scent block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "blockImage1",
+            "label": "Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mBlockImage1",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "tag1",
+            "label": "Tag"
+          },
+          {
+            "type": "text",
+            "id": "heading1",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "details1",
+            "label": "text"
+          }
+          ,
+          {
+            "type": "text",
+            "id": "expend-label1",
+            "label": "Expend Label",
+            "default" : "SEE MORE"
+          },
+          {
+            "type": "html",
+            "id": "expendable-content1",
+            "label": "Expend Content"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "PF228 scent blocks"
+      }
+    ]
+  }
+{% endschema %}

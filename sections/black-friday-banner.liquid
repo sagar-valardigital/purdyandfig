@@ -1,0 +1,359 @@
+<style>
+  .bf-banner .image-container {
+    background: {{ section.settings.container_color }};
+  }
+
+  .bf-banner .image-bg-desktop {
+    display: block;
+  }
+
+  .bf-banner .image-bg-mobile {
+    display: none;
+  }
+
+  @media only screen and (max-width: 488px) {
+    .bf-banner .image-bg-desktop {
+      display: none;
+    }
+
+    .bf-banner .image-bg-mobile {
+      display: block;
+    }
+  }
+</style>
+
+{{ section.settings.image | image_url: width: 4096, format: 'pjpg' | preload_tag: as: 'image' }}
+{{ section.settings.mobile_image | image_url: width: 2444, format: 'pjpg' | preload_tag: as: 'image' }}
+
+<div class="bf-banner">
+  <div class="bf-banner-inner d-flex mx-auto value-sans">
+    <h1 class="title mx-auto value-bold">{{ section.settings.title }}</h1>
+
+    <div class="w-fit mx-auto">
+      <h2 class="subtitle">{{ section.settings.subtitle }}</h2>
+      <div
+        class="btn btn-bf-cta mx-auto {% if section.settings.scrollto !=''%}click-scroll{% endif %}"
+        {% if section.settings.scrollto != '' %}
+          data-target="{{ section.settings.scrollto }}"
+        {% endif %}
+      >
+        {{ section.settings.cta_text }}
+      </div>
+    </div>
+
+    <div
+      id="bf-countdown"
+      class="bf-countdown d-flex mx-auto mt-auto {% if section.settings.scrollto !=''%}click-scroll{% endif %}"
+      data-time="{{ section.settings.end_date }}"
+      {% if section.settings.scrollto != '' %}
+        data-target="{{ section.settings.scrollto }}"
+      {% endif %}
+    >
+      <span class="content value-bold"></span>
+    </div>
+  </div>
+
+  <div class="image-container">
+    <div
+      class="image-bg image-bg-desktop"
+      style='background-image: url("{{ section.settings.image | image_url: width: 4096, format: 'pjpg' }}")'
+    ></div>
+    <div
+      class="image-bg image-bg-mobile"
+      style='background-image: url("{{ section.settings.mobile_image | image_url: width: 2444, format: 'pjpg' }}")'
+    ></div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "Black Friday Banner",
+   "settings": [
+     {
+       "type": "text",
+       "id": "title",
+       "label": "Title",
+       "default": "Purdy & Figg's VIP Black Friday Offers"
+     },
+     {
+       "type": "text",
+       "id": "subtitle",
+       "label": "Subtitle",
+       "default": "Shop exclusive Black Friday deals. Strictly whilst stock lasts!"
+     },
+     {
+       "type": "text",
+       "id": "cta_text",
+       "label": "Button Text",
+       "default": "SHOP BLACK FRIDAY DEALS"
+     },
+     {
+       "type": "text",
+       "id": "end_date",
+       "label": "Deals End Date and Time (YYYY-MM-DD HH:MM:SS)",
+       "default": "2023-11-30 23:59:59"
+     },
+     {
+       "type": "image_picker",
+       "id": "image",
+       "label": "Choose product image"
+     },
+     {
+       "type": "image_picker",
+       "id": "mobile_image",
+       "label": "Choose product image for mobile"
+     },
+     {
+       "type": "text",
+       "id": "scrollto",
+       "label": "Scroll To Section",
+       "default": "black-friday-products"
+     },
+     {
+       "type": "color",
+       "id": "container_color",
+       "label": "Container background color",
+       "default": "#2A83E9"
+     }
+   ],
+   "presets": [
+	{
+         "name": "Black Friday Banner"
+	}
+]
+ }
+{% endschema %}
+
+{% style %}
+  .bf-banner {
+    position: relative;
+    display: flex !important;
+  }
+
+  .bf-banner-inner {
+    max-width: 1440px;
+    flex-direction: column;
+    padding: 24px;
+    padding-top: 131px;
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .bf-banner .btn-bf-cta {
+    background: #ffffff;
+    color: #161718;
+    width: 100%;
+    font-size: 18px;
+    line-height: 32px;
+    padding: 16px 28px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  }
+
+  .bf-banner .btn-bf-cta:hover {
+    background: #161718;
+    color: #ffffff;
+  }
+
+  .bf-banner .bf-countdown {
+    width: 100%;
+    max-width: 340px !important;
+    justify-content: center;
+    align-items: center;
+    background: #B42318;
+    height: 40px;
+    padding: 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    font-size: 14px;
+  }
+
+  .bf-banner .bf-countdown .content {
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+  }
+
+  .bf-banner h1 {
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 60px;
+    letter-spacing: -0.96px;
+  }
+
+  .bf-banner .title {
+    width: 100%;
+    max-width: 388px;
+    margin-bottom: 8px;
+  }
+
+  .bf-banner h2 {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+  }
+
+  .bf-banner .subtitle {
+    color: #EAEAEB;
+    margin-bottom: 16px;
+  }
+
+  .bf-banner .image-container {
+    position: absolute;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .bf-banner, .bf-banner .image-container {
+    height: 720px;
+  }
+
+  .bf-banner .image-bg {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% -890px;
+    width: 100%;
+    height: 2300px;
+  }
+
+  .bf-banner .w-fit {
+    width: fit-content;
+  }
+
+  @media only screen and (max-width: 488px) {
+    .bf-banner, .bf-banner .image-container {
+      height: 610px;
+    }
+
+    .bf-banner .image-bg {
+      background-position: 50% -890px;
+    }
+  }
+
+  @media only screen and (max-width: 416px) {
+    .bf-banner-inner {
+      padding: 16px;
+      padding-top: 40px;
+      text-align: left;
+    }
+
+    .bf-banner .image-bg {
+      background-position: 60% 50%;
+      width: 100%;
+      height: 735px;
+    }
+
+    .bf-banner .title {
+      font-size: 36px;
+      line-height: 44px;
+      letter-spacing: 0.72px;
+      margin-bottom: 8px;
+    }
+
+    .bf-banner .subtitle {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 0px;
+    }
+
+    .bf-banner .btn-bf-cta {
+      margin-top: 24px;
+      font-size: 16px;
+    }
+  }
+
+  @media only screen and (max-width: 390px) {
+    .bf-banner, .bf-banner .image-container {
+      height: 600px;
+    }
+
+    .bf-banner .image-bg {
+      background-position: 60% 0px;
+      height: 691px;
+    }
+  }
+
+  @media only screen and (max-width: 375px) {
+    .bf-banner, .bf-banner .image-container {
+      height: 551px;
+    }
+
+    .bf-banner .image-bg {
+      background-position: 60% 0px;
+      height: 690px;
+    }
+
+    .bf-banner .bf-countdown {
+      font-size: 12px;
+    }
+  }
+{% endstyle %}
+
+{% javascript %}
+  const updateCountdown = (targetTimestamp, countdownElement) => {
+    try {
+      /* Calculate the remaining time in seconds */
+      const currentTime = Math.floor(Date.now() / 1000);
+      const remainingTime = targetTimestamp - currentTime;
+
+      if (isNaN(currentTime) || isNaN(remainingTime)) {
+        countdownElement.style.display = "none";
+        return;
+      }
+    
+      if (remainingTime <= 0) {
+        countdownElement.textContent = "Black Friday deals end in: 00h : 00m : 00s";
+        return;
+      }
+    
+      let formattedTime;
+    
+      if (remainingTime > 604800) {
+        /* Calculate days, hours, and minutes */
+        const days = Math.floor(remainingTime / 86400);
+        const hours = Math.floor((remainingTime % 86400) / 3600);
+        const minutes = Math.floor((remainingTime % 3600) / 60);
+    
+        /* Format the time for more than 168 hours */
+        formattedTime = `${String(days).padStart(2, "0")}d : ${String(hours).padStart(2, "0")}h : ${String(minutes).padStart(2, "0")}m`;
+      } else {
+        /* Calculate hours, minutes, and seconds */
+        const hours = Math.floor(remainingTime / 3600);
+        const minutes = Math.floor((remainingTime % 3600) / 60);
+        const seconds = remainingTime % 60;
+    
+        /* Format the time for less than 168 hours */
+        formattedTime = `${String(hours).padStart(2, "0")}h : ${String(minutes).padStart(2, "0")}m : ${String(seconds).padStart(2, "0")}s`;
+      }
+    
+      /* Update the countdown element */
+      countdownElement.textContent = "Black Friday deals end in: " + formattedTime;
+    } catch (e) {
+      countdownElement.style.display = "none";
+      console.error(e);
+    }
+  };
+  
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const countdownElement = document.getElementById("bf-countdown");
+  
+    if (countdownElement) {
+      /* Set your target UTC timestamp (in seconds since epoch) */
+      const endDateTimeString = countdownElement.dataset.time;
+      const targetDate = new Date(endDateTimeString.replace(/-/g, "/"));
+      const targetTimestamp = Math.floor(targetDate.getTime() / 1000);
+  
+      /* Call the updateCountdown function initially and set an interval to update it every second */
+      updateCountdown(targetTimestamp, countdownElement);
+      setInterval(() => {
+        updateCountdown(targetTimestamp, countdownElement);
+      }, 1000);
+    }
+  });
+{% endjavascript %}

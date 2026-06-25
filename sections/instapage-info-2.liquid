@@ -1,0 +1,63 @@
+<section class="section section-relative " id="page-block-1orxwqqsz7f" data-at="section">
+    <div class="section-holder-border item-block item-absolute" data-at="section-border"></div>
+    <div class="section-holder-overlay item-block item-absolute" data-at="section-overlay"></div>
+    <div class="section-block">
+        <div class="section-inner section-fit section-relative">
+            <div class="widget item-absolute hidden-mobile" id="element-719">
+                <div class="contents shape box figure" data-at="shape" data-src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/60526015-0-Screenshot-2022-01-1.webp" style="background-image: url(&quot;https://cdn.shopify.com/s/files/1/0360/1347/3931/files/60526015-0-Screenshot-2022-01-1.webp&quot;);"></div>
+            </div>
+            <div class="widget item-absolute " id="element-819">
+                <div class="contents shape box figure" data-at="shape" data-src="{{ section.settings.image | img_url: '1200x' }}" style="background-image: url({{ section.settings.image | img_url: '1200x' }});"></div>
+            </div>
+            <div class="widget item-absolute headline  " id="element-718" data-at="headline">
+                <div class="contents">
+                    <h1>
+                        <span class="x_00345689 x_beb06eea">{{ section.settings.heading }}</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="widget item-absolute hidden-mobile " id="element-720">
+                <div class="contents cropped item-block" data-at="image-cropp">
+                    <a class="popup-link item-content-box item-block" id="link-fa9c4totgvq" data-at="image-link" data-link-fa9c4totgvq="" data-popup-link-fa9c4totgvq="" tabindex="0" role="button">
+                    <img class="item-content-box item-block image" data-at="image" alt="" src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/47752815-0-ic-play-circle-fille.svg?v=1702556094" data-src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/47752815-0-ic-play-circle-fille.svg?v=1702556094" data-retina-src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/47752815-0-ic-play-circle-fille.svg?v=1702556094" srcset="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/47752815-0-ic-play-circle-fille.svg?v=1702556094 2x">
+                    </a>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-927" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_8ae9aa76 x_b6c3675a"><span class="x_a269ab78">{{ section.settings.info }}</span></p>
+                    <p class="x_8ae9aa76 x_b6c3675a"><span class="x_a269ab78"><br></span></p>
+                    <p class="x_8ae9aa76 x_b6c3675a"><span class="x_a269ab78"><br></span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Instapage Info 2",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Image"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "text",
+        "id": "info",
+        "label": "Information"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instapage Info 2"
+      }
+	]
+  }
+{% endschema %}

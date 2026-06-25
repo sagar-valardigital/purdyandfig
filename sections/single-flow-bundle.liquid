@@ -1,0 +1,1487 @@
+<style>
+  .empty-product-bottle,.empty-bundle-count{
+    background-image:url({{ 'bundle-bottle.png' | asset_img_url: 'master' }});
+    background-size:cover;
+      background-repeat:no-repeat;
+  }
+  #next_btn {
+      cursor:pointer;
+  }
+  .bundle-qty-counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: #334FB4;
+    color: #fff;
+    width: 50px;
+    height: 50px;
+    font-size: 22px;
+}
+</style>
+
+<div class="single-flow-bundle-section"  x-init="{bundleItems:JSON.parse(localStorage.getItem('sbundleItems')) || []},updateBundleItems();"
+ x-data="{
+  activeTab:'tab1',
+  tabs: ['tab1', 'tab2', 'tab3', 'tab4', 'tab5'],
+  tabIndex:0,
+  minCounts: {
+    tab1: 0, // Update with the minimum count for tab1
+    tab2: 0, // Update with the minimum count for tab2
+    tab3: 0, // Update with the minimum count for tab3
+    tab4: 0,
+    tab5: 0,
+  },
+  autonext: {
+    tab1: false,
+    tab2: true,
+    tab3: false, 
+    tab4: true,
+    tab5: false,
+  },
+  maxCounts: {
+    tab1: 3,
+    tab2: 1,
+    tab3: 3,
+    tab4: 1,
+    tab5: 3,
+  },
+  bundleItems: JSON.parse(localStorage.getItem('sbundleItems')) || [],
+  totalCount:6,
+  isAddingToCart: false,
+  updateBundleItems() {
+    const currentTime = new Date().getTime();
+    const updatedItems = this.bundleItems.filter(item => (currentTime - item.timestamp) < (60 * 60 * 1000));
+    this.bundleItems = updatedItems;
+    this.saveToLocalStorage();
+  },
+  addToBundle(productId, productTitle, quantity, price, image, compareprice, sku, pid, sid, tab) {
+        const newItem = {'id': productId, 'productTitle': productTitle, 'quantity': quantity, 'price':price, 'image':image, 'compareprice':compareprice, 'sku':sku, 'pid':pid, 'sid':sid, 'tab':tab, 'timestamp':new Date().getTime()};
+       // const existingItem = this.bundleItems.find(item => item.id === productId);
+       // const totalQuantity = this.calculateTotalQuantity();
+       /* if (existingItem) {
+            if (totalQuantity+1 <= this.totalCount) {
+                existingItem.quantity += quantity;
+                this.saveToLocalStorage();
+            } else {
+            }
+        } else {
+            if (totalQuantity+1 <= this.totalCount) {
+                this.bundleItems.unshift(newItem);
+                this.saveToLocalStorage();
+            } else {
+            }
+        } */
+        this.bundleItems.unshift(newItem);
+         this.saveToLocalStorage();
+        if(this.autonext[this.activeTab]){
+              this.switchToNextTabWithDelay();
+        }
+    },
+    getScentsBreakdown() {
+  let breakdown = [];
+  const tab1Items = this.getItemsByTab('tab1');
+  tab1Items.forEach(item => {
+    breakdown.unshift(item.quantity + 'x ' + this.formatString(item.productTitle));
+  });
+  return breakdown.join(' + ');
+},
+  switchToNextTabWithDelay() {
+    setTimeout(() => {
+      const currentIndex = this.tabs.indexOf(this.activeTab);
+      const nextIndex = currentIndex + 1;
+      
+      if (nextIndex < this.tabs.length) {
+        this.activeTab = this.tabs[nextIndex];
+        this.tabIndex = nextIndex;
+        console.log(this.activeTab);
+        console.log(this.tabIndex);
+      }
+    }, 500);
+  },
+getBundleBreakdown() {
+  let breakdown = [];
+  const tab1Items = this.getItemsByTab('tab1');
+  tab1Items.forEach(item => {
+    breakdown.unshift(item.quantity + 'x' + item.sku);
+  });
+  return breakdown.join('+');
+},
+  formatCurrency(amountPence) {
+        const amountInCurrency = (amountPence / 100).toFixed(2); // Convert pence to currency
+        return '£'+amountInCurrency;
+    },
+ calculateTotalPrice() {
+  let totalPrice = 0;
+  let tab1Price = 0;
+  let tab1ProductCount = 0;
+
+  this.bundleItems.forEach(item => {
+    totalPrice += item.price * item.quantity;
+
+    if (item.tab === 'tab1') {
+      tab1Price = item.price;
+      tab1ProductCount += item.quantity;
+    }
+  });
+
+  if (tab1ProductCount > 0) {
+    totalPrice -= (tab1Price * (tab1ProductCount - 1));
+  }
+  if(totalPrice == 0) {
+    return 1500
+  }
+  return totalPrice;
+},
+
+totalSavedPrice() {
+  let totalSaved = 0;
+  let tab1Price = 0;
+  let tab1ComparePrice = 0;
+  let tab1ProductCount = 0;
+
+  this.bundleItems.forEach(item => {
+    const savedPerItem = (item.compareprice - item.price) * item.quantity;
+    totalSaved += savedPerItem;
+
+    if (item.tab === 'tab1') {
+      tab1Price = item.price;
+      tab1ComparePrice = item.compareprice;
+      tab1ProductCount += item.quantity;
+    }
+  });
+
+  if (tab1ProductCount > 0) {
+    totalSaved -= ((tab1ComparePrice - tab1Price) * (tab1ProductCount - 1));
+  }
+
+  if(totalSaved == 0) {
+    return 1500
+  }
+
+  return totalSaved;
+},
+
+ removeFromBundle(index) {
+            if (index >= 0 && index < this.bundleItems.length) {
+                const item = this.bundleItems[index];
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                } else {
+                    this.bundleItems.splice(index, 1);
+                }
+                this.saveToLocalStorage();
+            }
+        },
+  getItemQuantity(productId) {
+  const items = this.bundleItems.filter(item => item.id === productId);
+  let totalQuantity = 0;
+  items.forEach(item => {
+    totalQuantity += item.quantity;
+  });
+  return totalQuantity;
+},
+  getItemsByTab(tab) {
+  return this.bundleItems.filter(item => item.tab === tab);
+},
+  getItemsCountByTab(tab) {
+    const items = this.bundleItems.filter(item => item.tab === tab);
+    return items.reduce((total, item) => total + item.quantity, 0);
+},
+  calculateTotalQuantity() {
+            let totalQuantity = 0;
+            this.bundleItems.forEach(item => {
+                totalQuantity += item.quantity;
+            });
+            return totalQuantity;
+  },
+increaseQuantity(productId) {
+/*             const index = this.bundleItems.findIndex(item => item.id === productId);
+            if (index >= 0) {
+                const item = this.bundleItems[index];
+                const totalQuantity = this.calculateTotalQuantity();
+                if (totalQuantity + 1 <= this.totalCount) {
+                    item.quantity += 1;
+                } else {
+                    alert('The maximum total quantity for all items in the bundle is '+this.totalCount);
+                }
+                this.saveToLocalStorage();
+            } */
+            const index = this.bundleItems.findIndex(item => item.id === productId);
+            if (index >= 0) {
+              const item = this.bundleItems[index];
+              item.quantity += 1;
+              this.saveToLocalStorage();
+            }
+            
+        },
+decreaseQuantity(productId) {
+            const index = this.bundleItems.findIndex(item => item.id === productId);
+            if (index >= 0) {
+                const item = this.bundleItems[index];
+                if (item.quantity > 1) {
+                    item.quantity -= 1;
+                } else {
+                    this.bundleItems.splice(index, 1);
+                }
+                this.saveToLocalStorage();
+            }
+ },
+  saveToLocalStorage() {
+        localStorage.setItem('sbundleItems', JSON.stringify(this.bundleItems));
+  },
+  bundleToAddCount() {
+    return this.totalCount - this.calculateTotalQuantity();
+  },
+  isItemAdded(productId) {
+            return this.bundleItems.some(item => item.id === productId);
+    },
+  isbundleCompleted() {
+    return this.calculateTotalQuantity() >= this.totalCount;
+  },
+ formatString(str) {
+  // Replace hyphens with spaces
+  var formattedStr = str.replace(/-/g, ' ');
+
+ // Capitalize the first letter of each word
+  formattedStr = formattedStr.replace(/\b\w/g, function(match) {
+    return match.toUpperCase();
+  });
+
+  return formattedStr;
+  },
+  openTab(target) {
+      $('.tab-button').removeClass('active');
+      $(this).addClass('active');
+      $('.tab-pane').removeClass('active');
+      $('#'+target).addClass('active');
+  },
+ addBundleToCart() {
+  this.isAddingToCart = true;
+  var bundleItems = this.bundleItems;
+  var lineItems = [];
+  
+  const tab1Items = this.getItemsByTab('tab1');
+  if (tab1Items.length === 0) {
+    lineItems.push({
+      quantity: 1,
+      id: 43836262056163,
+      properties: {
+        '_is_bundle': 'Yes',
+        '_breakdown': '1xFG1030+1xFG1029+1xFG1031',
+        '_single_flow':'Yes',
+        'scents': '1x Balancing Floral + 1x Original Citrus + 1x Grounding Vetiver'
+      },
+      selling_plan: 3313041635
+    });
+  }
+
+  this.bundleItems.forEach(item => {
+    var lineItem = {
+      quantity: item.quantity,
+      id: item.pid,
+      properties: {}
+    };
+
+    if (item.tab === 'tab1') {
+      lineItem.selling_plan = item.sid;
+      lineItem.properties = {
+        '_is_bundle': 'Yes',
+        '_single_flow':'Yes',
+        '_breakdown': this.getBundleBreakdown(item),
+        'scents': this.getScentsBreakdown(item),
+      };
+    } else if (item.tab === 'tab5') {
+      lineItem.properties = {
+      };
+    } else {
+      lineItem.selling_plan = item.sid;
+      lineItem.properties = {
+      };
+    }
+
+    // Check if a line item with the same product ID (pid) is already added
+    const existingLineItemIndex = lineItems.findIndex(lineItem => lineItem.id === item.pid);
+    if (existingLineItemIndex === -1) {
+      lineItems.push(lineItem);
+    }
+  });
+
+  fetch('/cart/add.js', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({ items: lineItems })
+  })
+    .then(response => {
+      if (response.ok) {
+        console.log('Bundle added to cart');
+        this.isAddingToCart = false;
+        window.location.href = '/checkout/';
+      } else {
+        console.error('Failed to add bundle to cart:', response);
+      }
+    })
+    .catch(error => {
+      console.error('Error adding bundle to cart:', error);
+    });
+}
+
+}" >
+<div class="bundle-nav py-3 w-100" >
+  <div class="bundle-nav-wraper d-flex align-items-center justify-content-center">
+  <a href="/">
+    <img class="header-logo desktop-only" src="{{ section.settings.desktopLogo | img_url: "600x" }}">
+    <img class="header-logo mobile-only" src="{{ section.settings.mobileLogo | img_url: "600x" }}">
+  </a>
+  <div class="button-container d-flex align-items-center">
+    
+  <button :class="{ 'active': activeTab === 'tab1' }" @click="activeTab = 'tab1'; tabIndex = 0;" class="tab-button active me-5">
+    <div class="image-container"><img src="{{ 'starterkit.png' | asset_img_url: '300x' }}" />
+    <p class="value-sans">Starter Kit</p>
+    </div>
+  </button>
+  <button :class="{ 'active': activeTab === 'tab2' }" @click="activeTab = 'tab2'; tabIndex = 1;" class="tab-button mx-5">
+    <div class="image-container"><img src="{{ 'bathrom-bliss.png' | asset_img_url: '300x' }}" />
+    <p class="value-sans">Bathroom Bliss</p>
+    </div>
+  </button>
+  <button :class="{ 'active': activeTab === 'tab3' }" @click="activeTab = 'tab3'; tabIndex = 2;" class="tab-button mx-5">
+    <div class="image-container"><img src="{{ 'hand-wash.png' | asset_img_url: '300x' }}" />
+    <p class="value-sans">Hand Wash</p>
+    </div>
+  </button>
+  <button :class="{ 'active': activeTab === 'tab4' }" @click="activeTab = 'tab4'; tabIndex = 3;" class="tab-button mx-5">
+    <div class="image-container"><img src="{{ 'oh-de-loo.png' | asset_img_url: '300x' }}" />
+    <p class="value-sans">Oh de Loo!</p>
+    </div>
+  </button>
+  <button :class="{ 'active': activeTab === 'tab5' }" @click="activeTab = 'tab5'; tabIndex = 4;" class="tab-button ms-5">
+    <div class="image-container"><img src="{{ 'add-on.png' | asset_img_url: '300x' }}" />
+    <p class="value-sans">Add Ons</p>
+    </div>
+  </button>
+</div>
+  </div>
+</div>
+
+
+<div class="tab-content pt-1">
+  <div id="content-1" class="tab-pane active"  :class="{ 'active': activeTab === 'tab1' }">
+    {%  comment %}
+    <div class="d-flex align-items-center justify-content-center mb-3 bottle-length-btn">
+      <button class="productShowBtn"  :class="{ 'active': totalCount == 3 }" @click="totalCount = 3;">3 Bottles</button>
+      <button class="productShowBtn" :class="{ 'active': totalCount == 6 }"  @click="totalCount = 6;">6 Bottles</button>
+      <button class="productShowBtn" :class="{ 'active': totalCount == 9 }"  @click="totalCount = 9;">9 Bottles</button>
+    </div>
+    {%  endcomment %}
+
+<div class="main-bundle-section pt-4">
+  <div class="container bundle-section">
+  <div class="bundle-section-wraper">
+    <h1
+      class="px-3 bundle-main-heading d-flex align-items-center value-pro">
+      <img class="me-3" src="{{ 'starterkit.png' | asset_img_url: '300x' }}" />
+     {{section.settings.heading_1}}
+      
+    </h1>
+    <ul class="px-3 mb-0">
+      <li class="d-flex align-items-center value-sans">
+        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" viewBox="0 0 24 24"><path fill="#3541bf" d="M12 4C9.25144 4 6.82508 5.38626 5.38443 7.5H8V9.5H2V3.5H4V5.99936C5.82381 3.57166 8.72764 2 12 2C17.5228 2 22 6.47715 22 12H20C20 7.58172 16.4183 4 12 4ZM4 12C4 16.4183 7.58172 20 12 20C14.7486 20 17.1749 18.6137 18.6156 16.5H16V14.5H22V20.5H20V18.0006C18.1762 20.4283 15.2724 22 12 22C6.47715 22 2 17.5228 2 12H4Z"></path></svg>
+        <span><b>Billed & Shipped Quarterly</b></span>
+      </li> 
+      <li class="d-flex align-items-center value-sans mobile-hide">
+        <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" fill="#3541BF"/>
+                </svg>
+        <span>FREE Glass Bottle for Life</span>
+      </li>
+      <li class="d-flex align-items-center value-sans mobile-hide">
+        <svg class="me-2" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" fill="#3541BF"/>
+                </svg>
+        <span>FREE Microfibre Cloth</span>
+      </li>
+    </ul>
+    <div class="row mx-0 px-0 bundle-row mt-2">
+      <div class="col col-12 col-sm-12 col-md-7 col-xl-8 px-0">
+        <div class="row mx-0 px-2 px-md-0 row-cols-2 row-cols-sm-3 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 w-100">
+          {% for block in section.blocks %}
+            {% if block.type == "product1" %}
+            <div class="col mb-3">
+              <div class="bundle-item h-100 position-relative {% if block.settings.disabled %}disabled{% endif %}">
+                {% if block.settings.tag != '' %}
+                <span class="tag">{{ block.settings.tag }}</span>
+                {% endif %}
+                <svg
+                  data-target="single-popup-{{ forloop.index }}"
+                  data-index="{{ block.settings.popup_no }}"
+                  data-popup="single-product-1"
+                  class="position-absolute info-icon single-flow-popup"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="48" stroke="{{ section.settings.content_color }}" stroke-width="4"/>
+                  <rect x="48" y="41" width="5" height="33" fill="{{ section.settings.content_color }}"/>
+                  <rect x="47" y="26" width="7" height="7" rx="3.5" fill="{{ section.settings.content_color }}"/>
+                </svg>
+
+                <img class="w-100" src="{{ block.settings.product_1.featured_image | img_url: "400x" }}">
+                <div class="card-body">
+                  <h3  class="value-sans" style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }};">
+                    {{ block.settings.product_1.title }}
+                  </h3>
+                 <p style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }}">
+                    {{ block.settings.description }}
+                  </p> 
+                    <div class="add-product-btn d-flex align-items-center justify-content-center">
+                      
+                      <button class="px-0 product-count-btn" :class="{'d-none': !isItemAdded({{  block.settings.product_1.variants.first.id}}) }" @click="decreaseQuantity({{block.settings.product_1.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7     C446.7,361.1,361.1,446.7,256,446.7z"/></g></g><rect height="17" width="256" x="128" y="248"/></g></svg>
+                      </button>
+                      <button class="add-btn px-0 mx-1" :disabled="getItemsCountByTab('tab1') >= maxCounts['tab1']"  @click=addToBundle({{block.settings.product_1.variants.first.id}},"{{block.settings.product_1.handle}}",1,{{ block.settings.cart_product.variants.first.selling_plan_allocations[0].price_adjustments[0].price }},'{{ block.settings.product_1.featured_image|img_url:'200x' }}',{{block.settings.cart_product.variants.first.price}},"{{block.settings.product_1.variants.first.sku}}",{{ block.settings.cart_product.variants.first.id }},{{ block.settings.cart_product.variants.first.selling_plan_allocations.first.selling_plan.id}},"tab1"); data-product="{{block.settings.product_1.variants.first.id }}">
+                       <template x-if="getItemQuantity({{block.settings.product_1.variants.first.id}}) < 1">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="{{ block.settings.content_color }}"/>
+                        <rect x="50" y="32" width="2" height="35" fill="#D9D9D9"/>
+                        <rect x="68" y="48" width="2" height="35" transform="rotate(90 68 48)" fill="#D9D9D9"/>
+                      </svg>
+                        </template>
+                        <template x-if="getItemQuantity({{block.settings.product_1.variants.first.id}}) > 0">
+                            <span class="bundle-qty-counter" x-text="getItemQuantity({{block.settings.product_1.variants.first.id}})"></span>
+                        </template>
+                      </button>
+                      <button class="px-0 product-count-btn" :class="{'d-none': !isItemAdded({{  block.settings.product_1.variants.first.id}}) }":disabled="getItemsCountByTab('tab1') >= maxCounts['tab1']" @click="increaseQuantity({{block.settings.product_1.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7S150.9,65.3,256,65.3S446.7,150.9,446.7,256S361.1,446.7,256,446.7z"/></g></g><g><polygon points="264.1,128 247.3,128 247.3,247.9 128,247.9 128,264.7 247.3,264.7 247.3,384 264.1,384 264.1,264.7 384,264.7     384,247.9 264.1,247.9   "/></g></g></svg>
+                      </button>
+                    </div>
+                </div>
+              </div>
+            </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+      <div class="col col-12 col-md-5 col-xl-4 bundle-card-wraper single-flow-bundle">
+        <div class="bundle-card pt-3">
+          <div class="bundle-header px-3 mb-3">
+            <h1
+              class="text-center mb-3 heading-2 value-pro"
+              style="font-size:{{ section.settings.card_heading_font }}px; color:{{ section.settings.card_heading_color }}; "
+            >
+              {{ section.settings.card_heading }}
+            </h1>
+            <div class="d-flex align-items-center justify-content-between bundle-inner-header p-2">
+              <div class="col-4">
+                <img class="w-100" src="{{ section.settings.card_img | img_url: "400x" }}">
+              </div>
+              <div class="col-8 mb-1">
+                <h5 style="color:{{ section.settings.card_heading_color }};" class="">Includes:</h5>
+                <p style="color:{{ section.settings.card_heading_color }};" class=" d-flex align-items-center mb-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" fill="#3541BF"/>
+                </svg>
+                  <b class="mx-1">FREE </b>  Glass Bottle for Life
+                </p>
+                  <p style="color:{{ section.settings.card_heading_color }};" class=" d-flex align-items-center mb-0"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 22C6.47715 22 2 17.5228 2 12C2 6.47715 6.47715 2 12 2C17.5228 2 22 6.47715 22 12C22 17.5228 17.5228 22 12 22ZM11.0026 16L18.0737 8.92893L16.6595 7.51472L11.0026 13.1716L8.17421 10.3431L6.75999 11.7574L11.0026 16Z" fill="#3541BF"/>
+                </svg>
+                  <b class="mx-1">FREE </b> Microfibre Cloth
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="bundle-card-body mb-3 row mx-0 align-items-center justify-content-between bundle-added-products-section" id="bottle-3-row">
+    
+             <template x-for="(item, index) in getItemsByTab('tab1')">
+               <template x-for="count in item.quantity">
+               <div class="col col-4 px-0">
+              <div class="d-flex align-items-center justify-content-center position-relative bundle-img-wrapper">
+                <span class="bundle-remove-icon" @click=removeFromBundle(index); ><img src="{{ 'remove.png' | asset_img_url }}" /></span>
+                <img :src="item.image" class="img-responsive"></div>
+              <span class="value-sans" x-text="item.productTitle.replace(/-/g, ' ')"></span>
+            </div>
+               </template>
+            </template>
+            <template x-if="getItemsCountByTab('tab1') < maxCounts['tab1']">
+                <template x-for="index in  maxCounts['tab1']-getItemsCountByTab('tab1') ">
+                  <div class="col col-4 px-0">
+                    <div class="d-flex align-items-center justify-content-center empty-bundle-count" x-text="getItemsCountByTab('tab1') +index"></div>
+                    <span class="value-sans">Scent <span x-text="getItemsCountByTab('tab1') +index"></span></span>
+                  </div>
+                </template>
+            </template>
+          </div>
+          <div class="bundle-card-footer">
+            <div class="d-flex mb-2 align-items-center justify-content-between">
+              <span>3-Pack Variety Kit</span>
+              <span>£15.00 <span>(£15 Saved)</span></span>
+            </div>
+            <button class="w-100" type="button" @click="activeTab = 'tab2';tabIndex=1;">NEXT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+  <div id="content-2" class="tab-pane"  :class="{ 'active': activeTab === 'tab2' }"> 
+<div class="main-bundle-section pt-4">
+  <div class="container bundle-section">
+  <div class="bundle-section-wraper">
+    <h1
+      class="px-3 bundle-main-heading d-flex align-items-center value-pro">
+      <img class="me-3" src="{{ 'bathrom-bliss.png' | asset_img_url: '300x' }}" />
+  {{section.settings.heading_2}}
+      
+    </h1>
+    <ul class="px-3">
+      <li class="d-flex align-items-center value-sans" >
+        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" viewBox="0 0 24 24"><path fill="#3541bf" d="M12 4C9.25144 4 6.82508 5.38626 5.38443 7.5H8V9.5H2V3.5H4V5.99936C5.82381 3.57166 8.72764 2 12 2C17.5228 2 22 6.47715 22 12H20C20 7.58172 16.4183 4 12 4ZM4 12C4 16.4183 7.58172 20 12 20C14.7486 20 17.1749 18.6137 18.6156 16.5H16V14.5H22V20.5H20V18.0006C18.1762 20.4283 15.2724 22 12 22C6.47715 22 2 17.5228 2 12H4Z"></path></svg>
+        <span>Billed & Shipped Quarterly</span>
+      </li>
+    </ul>
+        <div class="row mx-0 px-2 px-md-0 row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 w-100">
+          {% for block in section.blocks %}
+            {% if block.type == "product2" %}
+            <div class="col mb-3">
+              <div class="bundle-item h-100 position-relative {% if block.settings.disabled %}disabled{% endif %}">
+              {% if block.settings.tag != '' %}
+                <span class="tag">{{ block.settings.tag }}</span>
+                {% endif %}
+                <svg
+                  data-target="single-popup-{{ forloop.index }}"
+                  data-index="{{ block.settings.popup_no }}"
+                  data-popup="single-product-2"
+                  class="position-absolute info-icon single-flow-popup"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="48" stroke="{{ section.settings.content_color }}" stroke-width="4"/>
+                  <rect x="48" y="41" width="5" height="33" fill="{{ section.settings.content_color }}"/>
+                  <rect x="47" y="26" width="7" height="7" rx="3.5" fill="{{ section.settings.content_color }}"/>
+                </svg>
+
+                <img class="w-100" src="{{ block.settings.product_2.featured_image | img_url: "400x" }}">
+                <div class="card-body">
+                  <h3 style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }};" class="value-sans">
+                    {{ block.settings.product_2.title }}
+                  </h3>
+                <p style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }}">
+                    {{ block.settings.description }}
+                  </p> 
+                    <div class="add-product-btn d-flex align-items-center justify-content-center">
+                      
+                  <button class="px-0 product-count-btn" :class="{'d-none': !isItemAdded({{  block.settings.product_2.variants.first.id}}) }" @click="decreaseQuantity({{block.settings.product_2.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7     C446.7,361.1,361.1,446.7,256,446.7z"/></g></g><rect height="17" width="256" x="128" y="248"/></g></svg>
+                      </button>
+                      <button  :disabled="getItemsCountByTab('tab2') >= maxCounts['tab2']" class="add-btn px-0 mx-1" @click=addToBundle({{block.settings.product_2.variants.first.id}},"{{block.settings.product_2.handle}}",1,{{block.settings.cart_product.variants.first.selling_plan_allocations[0].price_adjustments[0].price }},'{{ block.settings.product_2.featured_image|img_url:'200x' }}',{{block.settings.cart_product.variants.first.price}},"{{block.settings.product_2.variants.first.sku}}",{{ block.settings.cart_product.variants.first.id }},{{ block.settings.cart_product.variants.first.selling_plan_allocations.first.selling_plan.id}},"tab2"); data-product="{{block.settings.product_2.variants.first.id }}">
+                       <template x-if="getItemQuantity({{block.settings.product_2.variants.first.id}}) < 1">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="{{ block.settings.content_color }}"/>
+                        <rect x="50" y="32" width="2" height="35" fill="#D9D9D9"/>
+                        <rect x="68" y="48" width="2" height="35" transform="rotate(90 68 48)" fill="#D9D9D9"/>
+                      </svg>
+                        </template>
+                        <template x-if="getItemQuantity({{block.settings.product_2.variants.first.id}}) > 0">
+                            <span class="bundle-qty-counter" x-text="getItemQuantity({{block.settings.product_2.variants.first.id}})"></span>
+                        </template>
+                      </button>
+                      <button :class="{'d-none': !isItemAdded({{  block.settings.product_2.variants.first.id}}) }"  :disabled="getItemsCountByTab('tab2') >= maxCounts['tab2']" class="px-0 product-count-btn" @click="increaseQuantity({{block.settings.product_2.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7S150.9,65.3,256,65.3S446.7,150.9,446.7,256S361.1,446.7,256,446.7z"/></g></g><g><polygon points="264.1,128 247.3,128 247.3,247.9 128,247.9 128,264.7 247.3,264.7 247.3,384 264.1,384 264.1,264.7 384,264.7     384,247.9 264.1,247.9   "/></g></g></svg>
+                      </button>
+                    </div>
+                      
+                </div>
+              </div>
+            </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+  </div>
+</div>
+</div>
+  </div>
+  <div id="content-3" class="tab-pane"  :class="{ 'active': activeTab === 'tab3' }">
+    <div class="main-bundle-section pt-4">
+  <div class="container bundle-section">
+  <div class="bundle-section-wraper">
+    <h1
+      class="px-3 bundle-main-heading d-flex align-items-center value-pro">
+      <img class="me-3" src="{{ 'hand-wash.png' | asset_img_url: '300x' }}" />
+  {{section.settings.heading_3}}
+      
+    </h1>
+    <ul class="px-3">
+      <li class="d-flex align-items-center value-sans">
+        <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" viewBox="0 0 24 24"><path fill="#3541bf" d="M12 4C9.25144 4 6.82508 5.38626 5.38443 7.5H8V9.5H2V3.5H4V5.99936C5.82381 3.57166 8.72764 2 12 2C17.5228 2 22 6.47715 22 12H20C20 7.58172 16.4183 4 12 4ZM4 12C4 16.4183 7.58172 20 12 20C14.7486 20 17.1749 18.6137 18.6156 16.5H16V14.5H22V20.5H20V18.0006C18.1762 20.4283 15.2724 22 12 22C6.47715 22 2 17.5228 2 12H4Z"></path></svg>
+        <span>Billed & Shipped Quarterly</span>
+      </li>
+    </ul>
+        <div class="row mx-0 px-2 px-md-0 row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 w-100">
+          {% for block in section.blocks %}
+            {% if block.type == "product3" %}
+            <div class="col mb-3">
+              <div class="bundle-item h-100 position-relative {% if block.settings.disabled %}disabled{% endif %}">
+                {% if block.settings.tag != '' %}
+                <span class="tag">{{ block.settings.tag }}</span>
+                {% endif %}
+                <svg
+                  data-target="single-popup-{{ forloop.index }}"
+                  data-index="{{ block.settings.popup_no }}"
+                  data-popup="single-product-3"
+                  class="position-absolute info-icon single-flow-popup"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="48" stroke="{{ section.settings.content_color }}" stroke-width="4"/>
+                  <rect x="48" y="41" width="5" height="33" fill="{{ section.settings.content_color }}"/>
+                  <rect x="47" y="26" width="7" height="7" rx="3.5" fill="{{ section.settings.content_color }}"/>
+                </svg>
+
+                <img class="w-100" src="{{ block.settings.product_3.featured_image | img_url: "400x" }}">
+                <div class="card-body">
+                  <h3 style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }};" class="value-sans">
+                    {{ block.settings.product_3.title }}
+                  </h3>
+                 <p style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }}">
+                    {{ block.settings.description }}
+                  </p> 
+                    <div class="add-product-btn d-flex align-items-center justify-content-center">
+                      
+      <button class="px-0 product-count-btn" :class="{'d-none': !isItemAdded({{  block.settings.product_3.variants.first.id}}) }"@click="decreaseQuantity({{block.settings.product_3.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7     C446.7,361.1,361.1,446.7,256,446.7z"/></g></g><rect height="17" width="256" x="128" y="248"/></g></svg>
+                      </button>
+                      <button class="add-btn px-0 mx-1" :disabled="getItemsCountByTab('tab3') >= maxCounts['tab3']"   @click=addToBundle({{block.settings.product_3.variants.first.id}},"{{block.settings.product_3.handle}}",1,{{ block.settings.cart_product.variants.first.selling_plan_allocations[0].price_adjustments[0].price}},'{{ block.settings.product_3.featured_image|img_url:'200x' }}',{{block.settings.cart_product.variants.first.price}},"{{block.settings.product_3.variants.first.sku}}",{{ block.settings.cart_product.variants.first.id }},{{ block.settings.cart_product.variants.first.selling_plan_allocations.first.selling_plan.id}},"tab3"); data-product="{{block.settings.product_3.variants.first.id }}">
+                         <template x-if="getItemQuantity({{block.settings.product_3.variants.first.id}}) < 1">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="{{ block.settings.content_color }}"/>
+                        <rect x="50" y="32" width="2" height="35" fill="#D9D9D9"/>
+                        <rect x="68" y="48" width="2" height="35" transform="rotate(90 68 48)" fill="#D9D9D9"/>
+                      </svg>
+                        </template>
+                        <template x-if="getItemQuantity({{block.settings.product_3.variants.first.id}}) > 0">
+                            <span class="bundle-qty-counter" x-text="getItemQuantity({{block.settings.product_3.variants.first.id}})"></span>
+                        </template>
+                      </button>
+                      <button class="px-0 product-count-btn" :disabled="getItemsCountByTab('tab3') >= maxCounts['tab3']"  :class="{'d-none': !isItemAdded({{  block.settings.product_3.variants.first.id}}) }"@click="increaseQuantity({{block.settings.product_3.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7S150.9,65.3,256,65.3S446.7,150.9,446.7,256S361.1,446.7,256,446.7z"/></g></g><g><polygon points="264.1,128 247.3,128 247.3,247.9 128,247.9 128,264.7 247.3,264.7 247.3,384 264.1,384 264.1,264.7 384,264.7     384,247.9 264.1,247.9   "/></g></g></svg>
+                      </button> 
+                    </div>
+                      
+                </div>
+              </div>
+            </div>
+              {% endif %}
+          {% endfor %}
+        </div>
+  </div>
+</div>
+</div>
+  </div>
+  <div id="content-4" class="tab-pane"  :class="{ 'active': activeTab === 'tab4' }">
+    <div class="main-bundle-section pt-4">
+      <div class="container bundle-section">
+        <div class="bundle-section-wraper">
+          <div class="mt-3 oh-de-loo row row-cols-1 row-cols-sm-2 col-12 col-sm-10 col-md-8 col-lg-7 col-xl-6 py-3 px-1 oh-de-loo-wrapper">
+            <div class="col">
+              <h1
+              class="px-3 mb-0 bundle-main-heading d-flex align-items-center value-pro">
+              <img class="me-3" src="{{ 'oh-de-loo.png' | asset_img_url: '300x' }}" />
+              {{section.settings.title}}
+            </h1>
+              <ul class="px-3">
+                <li class="d-flex align-items-center value-sans">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="me-2" width="16" height="16" viewBox="0 0 24 24"><path fill="#3541bf" d="M12 4C9.25144 4 6.82508 5.38626 5.38443 7.5H8V9.5H2V3.5H4V5.99936C5.82381 3.57166 8.72764 2 12 2C17.5228 2 22 6.47715 22 12H20C20 7.58172 16.4183 4 12 4ZM4 12C4 16.4183 7.58172 20 12 20C14.7486 20 17.1749 18.6137 18.6156 16.5H16V14.5H22V20.5H20V18.0006C18.1762 20.4283 15.2724 22 12 22C6.47715 22 2 17.5228 2 12H4Z"></path></svg>
+                  <span class="oh-deloo-subheading-text">Billed & Shipped Quarterly</span>
+                </li> 
+              </ul>
+              <div>
+                <div class="bundle-item col-10 m-auto shadow-none position-relative ">
+                  {% if section.settings.tag != '' %}
+                <span class="tag">{{ section.settings.tag }}</span>
+                {% endif %}
+                <svg
+                  data-target="single-popup-{{ forloop.index }}"
+                  data-index="{{ block.settings.popup_no }}"
+                  data-popup="single-product-4"
+                  class="position-absolute info-icon single-flow-popup"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="48" stroke="{{ section.settings.content_color }}" stroke-width="4"/>
+                  <rect x="48" y="41" width="5" height="33" fill="{{ section.settings.content_color }}"/>
+                  <rect x="47" y="26" width="7" height="7" rx="3.5" fill="{{ section.settings.content_color }}"/>
+                </svg> 
+
+                <img class="w-100" src="{{ section.settings.wizardfour.featured_image | img_url: "400x" }}">
+                <div class="card-body">
+                  <h3 style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }};" class="value-sans">
+                    {{ section.settings.wizardfour.title }}
+                  </h3>
+                <p style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }}">
+                    {{ section.settings.description }}
+                  </p> 
+                    <div class="add-product-btn d-flex align-items-center justify-content-center">
+      <button :class="{'d-none': !isItemAdded({{  section.settings.wizardfour.variants.first.id}}) }" class="px-0 product-count-btn" @click="decreaseQuantity({{section.settings.wizardfour.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7     C446.7,361.1,361.1,446.7,256,446.7z"/></g></g><rect height="17" width="256" x="128" y="248"/></g></svg>
+                      </button>
+                      
+                      <button class="add-btn px-0 mx-1" :disabled="getItemsCountByTab('tab4') >= maxCounts['tab4']"  @click=addToBundle({{section.settings.wizardfour.variants.first.id}},"{{section.settings.wizardfour.handle}}",1,{{section.settings.wizardfour_cart_product.variants.first.selling_plan_allocations[0].price_adjustments[0].price }},'{{ section.settings.wizardfour.featured_image|img_url:'200x' }}',{{section.settings.wizardfour.price}},"{{section.settings.wizardfour.variants.first.sku}}",{{ section.settings.wizardfour_cart_product.variants.first.id }},{{ section.settings.wizardfour_cart_product.variants.first.selling_plan_allocations.first.selling_plan.id}},"tab4"); data-product="{{section.settings.wizardfour.variants.first.id }}">
+                        <template x-if="getItemQuantity({{section.settings.wizardfour.variants.first.id}}) < 1">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="{{ block.settings.content_color }}"/>
+                        <rect x="50" y="32" width="2" height="35" fill="#D9D9D9"/>
+                        <rect x="68" y="48" width="2" height="35" transform="rotate(90 68 48)" fill="#D9D9D9"/>
+                      </svg>
+                        </template>
+                        <template x-if="getItemQuantity({{ section.settings.wizardfour.variants.first.id}}) > 0">
+                            <span class="bundle-qty-counter" x-text="getItemQuantity({{section.settings.wizardfour.variants.first.id}})"></span>
+                        </template>
+                      </button>
+                      <button class="px-0 product-count-btn" :disabled="getItemsCountByTab('tab4') >= maxCounts['tab4']"  :class="{'d-none': !isItemAdded({{  section.settings.wizardfour.variants.first.id}}) }" @click="increaseQuantity({{section.settings.wizardfour.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7S150.9,65.3,256,65.3S446.7,150.9,446.7,256S361.1,446.7,256,446.7z"/></g></g><g><polygon points="264.1,128 247.3,128 247.3,247.9 128,247.9 128,264.7 247.3,264.7 247.3,384 264.1,384 264.1,264.7 384,264.7     384,247.9 264.1,247.9   "/></g></g></svg>
+                      </button> 
+                    </div>
+                      
+                </div>
+              </div>
+              </div>
+            </div>
+            <div class="col">
+              <img class="w-100" src="{{ section.settings.wizardfourImage | img_url: "300x" }}">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="content-5" class="tab-pane"  :class="{ 'active': activeTab === 'tab5' }">
+    <div class="main-bundle-section pt-4">
+  <div class="container bundle-section">
+  <div class="bundle-section-wraper">
+    <h1
+      class="px-3 bundle-main-heading d-flex align-items-center value-pro">
+      <img class="me-3" src="{{ 'add-on.png' | asset_img_url: '300x' }}" />
+  {{section.settings.heading_5}}
+      
+    </h1>
+    <ul class="px-3">
+      <li class="d-flex align-items-center value-sans">
+       <span>Only sent with your first shipment</span>
+      </li>
+    </ul>
+        <div class="row mx-0 px-2 px-md-0 row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-lg-4 row-cols-xl-5 w-100">
+         
+            {% for block in section.blocks %}
+              {% if block.type == "product5" %}
+            <div class="col mb-3">
+              <div class="bundle-item h-100 position-relative {% if block.settings.disabled %}disabled{% endif %}">
+                {% if block.settings.tag != '' %}
+                <span class="tag">{{ block.settings.tag }}</span>
+                {% endif %}
+                <svg 
+                  data-target="single-popup-{{ forloop.index }}"
+                  data-index="{{ block.settings.popup_no }}"
+                  data-popup="single-product-5"
+                  class="position-absolute info-icon single-flow-popup"
+                  width="25"
+                  height="25"
+                  viewBox="0 0 100 100"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle cx="50" cy="50" r="48" stroke="{{ section.settings.content_color }}" stroke-width="4"/>
+                  <rect x="48" y="41" width="5" height="33" fill="{{ section.settings.content_color }}"/>
+                  <rect x="47" y="26" width="7" height="7" rx="3.5" fill="{{ section.settings.content_color }}"/>
+                </svg>
+
+                <img class="w-100" src="{{ block.settings.product_5.featured_image | img_url: "400x" }}">
+                <div class="card-body">
+                  <h3 style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }};" class="value-sans">
+                    {{ block.settings.product_5.title }}
+                  </h3>
+                <p style="text-align:{{ section.settings.content_align }}; color:{{ section.settings.content_color }}">
+                    {{ block.settings.description }}
+                  </p> 
+                    <div class="add-product-btn d-flex align-items-center justify-content-center">
+                      <button class="px-0 product-count-btn" :class="{'d-none': !isItemAdded({{  block.settings.product_5.variants.first.id}}) }"@click="decreaseQuantity({{block.settings.product_5.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7c0-105.1,85.5-190.7,190.7-190.7c105.1,0,190.7,85.5,190.7,190.7     C446.7,361.1,361.1,446.7,256,446.7z"/></g></g><rect height="17" width="256" x="128" y="248"/></g></svg>
+                      </button>
+                      <button :disabled="getItemsCountByTab('tab5') >= maxCounts['tab5']"  class="add-btn px-0 mx-1" @click=addToBundle({{block.settings.product_5.variants.first.id}},"{{block.settings.product_5.handle}}",1,{{ block.settings.product_5.price }},'{{ block.settings.product_5.featured_image|img_url:'200x' }}',{{block.settings.product_5.price}},"{{block.settings.product_5.variants.first.sku}}",{{ block.settings.cart_product.variants.first.id }},false,"tab5"); data-product="{{block.settings.product_5.variants.first.id }}">
+                         <template x-if="getItemQuantity({{block.settings.product_5.variants.first.id}}) < 1">
+                        <svg width="50" height="50" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="50" fill="{{ block.settings.content_color }}"/>
+                        <rect x="50" y="32" width="2" height="35" fill="#D9D9D9"/>
+                        <rect x="68" y="48" width="2" height="35" transform="rotate(90 68 48)" fill="#D9D9D9"/>
+                      </svg>
+                        </template>
+                        <template x-if="getItemQuantity({{block.settings.product_5.variants.first.id}}) > 0">
+                            <span class="bundle-qty-counter" x-text="getItemQuantity({{block.settings.product_5.variants.first.id}})"></span>
+                        </template>
+                      </button>
+  <button class="px-0 product-count-btn" :disabled="getItemsCountByTab('tab5') >= maxCounts['tab5']"  :class="{'d-none': !isItemAdded({{  block.settings.product_5.variants.first.id}}) }"@click="increaseQuantity({{block.settings.product_5.variants.first.id}})">
+                        <?xml version="1.0" ?><!DOCTYPE svg  PUBLIC '-//W3C//DTD SVG 1.1//EN'  'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'><svg height="512px" id="Layer_1" style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="512px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><g><g><g><path d="M256,48C141.1,48,48,141.1,48,256s93.1,208,208,208c114.9,0,208-93.1,208-208S370.9,48,256,48z M256,446.7     c-105.1,0-190.7-85.5-190.7-190.7S150.9,65.3,256,65.3S446.7,150.9,446.7,256S361.1,446.7,256,446.7z"/></g></g><g><polygon points="264.1,128 247.3,128 247.3,247.9 128,247.9 128,264.7 247.3,264.7 247.3,384 264.1,384 264.1,264.7 384,264.7     384,247.9 264.1,247.9   "/></g></g></svg>
+                      </button> 
+                      
+                    </div>
+                      
+                </div>
+              </div>
+            </div>
+                {% endif %}     
+              {% endfor %}
+        </div>
+  </div>
+</div>
+</div>
+  </div>
+</div>
+
+
+<div class="bundle-sticky-bar w-100">
+  <div class="bundle-sticky-bar-header py-1">
+    <div class="container bundle-count-bar">
+      <div>
+      <p class="mb-0" x-show="tabIndex == 0">
+        <span x-text="getItemsCountByTab('tab1')"></span> of 3 Selected
+    </p>
+
+    <p class="mb-0" x-show="tabIndex == 1">
+        <span x-text="getItemsCountByTab('tab2')"></span> Selected
+    </p>
+    <p class="mb-0" x-show="tabIndex == 2">
+        <span x-text="getItemsCountByTab('tab3')"></span> Selected
+    </p>
+    <p class="mb-0" x-show="tabIndex == 3">
+        <span x-text="getItemsCountByTab('tab4')"></span> Selected
+    </p>
+    <p class="mb-0" x-show="tabIndex == 4">
+        <span x-text="getItemsCountByTab('tab5')"></span> Selected
+    </p>
+    </div>
+    <span id="bundle-down-arrow" class="bundle-down-arrow {% if section.settings.show %}open{% endif %}"></span>
+    </div>
+    <div>
+    <div class="container">
+   <div class="bundle-card-body row mx-0 align-items-center justify-content-start bundle-added-products-section {% if section.settings.show %}show{% endif %}" id="bundle-added-products-section">
+  <template x-for="(item, index) in getItemsByTab(activeTab)">
+    <template x-for="count in item.quantity">
+      <div class="col col-4 px-0">
+        <div class="d-flex align-items-center justify-content-center position-relative bundle-img-wrapper">
+          <span class="bundle-remove-icon" @click="removeFromBundle(index)"><img src="{{ 'remove-white.png' | asset_img_url }}" /></span>
+          <img :src="item.image" class="img-responsive">
+        </div>
+        <span class="value-sans white-text" x-text="item.productTitle.replace(/-/g, ' ')"></span>
+      </div>
+    </template>
+  </template>
+  <template x-if="getItemsCountByTab(activeTab) < maxCounts[activeTab] && ( activeTab == 'tab1' || activeTab == 'tab2' || activeTab == 'tab4' )">
+    <template x-for="index in maxCounts[activeTab] - getItemsCountByTab(activeTab)">
+      <div class="col col-4 px-0 empty-bundle-count-sticky">
+        <div class="d-flex align-items-center justify-content-center empty-bundle-count" x-text="getItemsCountByTab(activeTab) + index"></div>
+        <span class="value-sans white-text">Scent <span x-text="getItemsCountByTab(activeTab) + index"></span></span>
+      </div>
+    </template>
+  </template>
+
+  <template x-if="getItemsCountByTab(activeTab) < maxCounts[activeTab] && ( activeTab == 'tab3' || activeTab == 'tab5' )">
+    <template x-for="index in 1">
+      <div class="col col-4 px-0 empty-bundle-count-sticky">
+        <div class="d-flex align-items-center justify-content-center empty-bundle-count" x-text="getItemsCountByTab(activeTab) + index"></div>
+        <span class="value-sans white-text">Scent <span x-text="getItemsCountByTab(activeTab) + index"></span></span>
+      </div>
+    </template>
+  </template>
+  
+</div>
+    </div>
+    </div>
+  </div>
+  <div class="container pt-3 pb-4 d-flex align-items-center justify-content-between bundle-sticky-bar-footer">
+    <div>
+      <h3 class="m-0 value-sans">Total <span x-text="formatCurrency(calculateTotalPrice())"></span> <span class="text-green">(<span x-text="formatCurrency(totalSavedPrice())"></span> Saved)</span></span></h3>
+    </div>
+    <div class="sticky-bundle-btn">
+    <template x-if="tabIndex > 0">
+    <span class="prev-wizar" @click="tabIndex = (tabIndex - 1) % tabs.length; activeTab = tabs[tabIndex];">&#10142;</span>
+    </template>
+    <template x-if="tabIndex < 4">
+    <button id="next_btn" :class="{'first_btn':tabIndex == 0, 'light-blue': getItemsCountByTab(activeTab) < 1}" class="col-6 col-md-4 next-without" type="button" @click="tabIndex = (tabIndex + 1) % tabs.length; activeTab = tabs[tabIndex];"><span x-show="tabIndex == 0 || getItemsCountByTab(activeTab) > 0">NEXT</span><span x-show="tabIndex > 0 && tabIndex < 4 && getItemsCountByTab(activeTab) == 0">SKIP</span></button>
+    </template>
+    <template x-if="activeTab == 'tab5'">
+    <button :class="{'light-blue': getItemsCountByTab(activeTab) < 1 && tabIndex != 4 }" id="next_btn" class="col-6 col-md-4 " type="button" @click="addBundleToCart();">FINISH</button>
+    </template>
+    </div>
+    </div>
+</div>
+</div>
+
+  <div class="single-flow-popup-wrapper single-product-1">
+      <span class="overlay"></span>
+      <div class="blend-popup-slider">
+        {% for block in section.blocks %}
+          {% if block.type == "product1" %}
+          <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <p class="m-0 mt-2">{{ block.settings.pop_detail }}</p>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  <div class="single-flow-popup-wrapper single-product-2">
+      <span class="overlay"></span>
+      <div class="blend-popup-slider">
+        {% for block in section.blocks %}
+          {% if block.type == "product2" %}
+          <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <p class="m-0 mt-2">{{ block.settings.pop_detail }}</p>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  <div class="single-flow-popup-wrapper single-product-3">
+      <span class="overlay"></span>
+      <div class="blend-popup-slider">
+        {% for block in section.blocks %}
+          {% if block.type == "product3" %}
+          <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <p class="m-0 mt-2">{{ block.settings.pop_detail }}</p>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  <div class="single-flow-popup-wrapper single-product-5">
+      <span class="overlay"></span>
+      <div class="blend-popup-slider">
+        {% for block in section.blocks %}
+          {% if block.type == "product5" %}
+          <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <p class="m-0 mt-2">{{ block.settings.pop_detail }}</p>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  <div class="single-flow-popup-wrapper single-product-4">
+      <span class="overlay"></span>
+      <div class="blend-popup-slider-no">
+          {% for block in section.blocks %}
+          {% if block.type == "product4" %}
+          <div class="blend-popup-content item blend-popup-{{ forloop.index }} text-left theme-text {% if block.settings.nopopup %} {%  else %} blend-pop {%  endif %}">
+              <div class="blend-popup-content-inner">
+                <span class="close-blend-popup">&#10005;</span>
+                <h3 class="heading-3 m-0">{{ block.settings.pop_heading }}</h3>
+                <p class="m-0 mt-2">{{ block.settings.pop_detail }}</p>
+                {% if block.settings.PoopupIconCode != '' %}
+                  <hr>
+                  <div class="blend-popup-blocks">
+                    {{ block.settings.PoopupIconCode }}
+                  </div>
+                {% endif %}
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+      </div>
+    </div>
+{% schema %}
+{
+  "name": "Bundle section",
+  "settings": [
+    {
+          "type": "checkbox",
+          "label": "Open sticky bar",
+          "id" : "show"
+      },
+    {
+          "type": "image_picker",
+          "label": "Desktop Logo",
+          "id" : "desktopLogo"
+      },
+    {
+          "type": "image_picker",
+          "label": "Mobile Logo",
+          "id" : "mobileLogo"
+      },
+        {
+        "type": "header",
+        "content": "First wizard"
+      },
+    {
+          "type": "text",
+          "id": "heading_1",
+          "label": "Heading",
+          "default": "Starter Kit"
+        },
+    {
+          "type": "text",
+          "id": "card_heading",
+          "label": "Enter build bundle heading",
+          "default": "Build Your Bundle"
+        },
+      {
+          "type": "image_picker",
+          "label": "bundle card image",
+          "id" : "card_img"
+      },
+    {
+          "type": "color",
+          "id": "card_heading_color",
+          "label": "Choose card header-content color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "collection",
+          "id": "wizardone",
+          "label": "Choose collection wizard one"
+        },
+    {
+        "type": "header",
+        "content": "Second wizard"
+      },
+    {
+          "type": "text",
+          "id": "heading_2",
+          "label": "Heading",
+          "default": "Bathroom Bliss"
+        },
+        {
+          "type": "collection",
+          "id": "wizardtwo",
+          "label": "Choose collection wizard two"
+        },
+    {
+        "type": "header",
+        "content": "Third wizard"
+      },
+    {
+          "type": "text",
+          "id": "heading_3",
+          "label": "Heading",
+          "default": "Hand Wash"
+        },
+        {
+          "type": "collection",
+          "id": "wizardthree",
+          "label": "Choose collection wizard three"
+        },
+    {
+        "type": "header",
+        "content": "Fourth wizard"
+      },
+    {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default" : "Oh de Loo!"
+        },
+         {
+      "type": "text",
+      "id": "tag",
+      "label": "Add tag"
+    },
+        {
+          "type": "product",
+          "id": "wizardfour",
+          "label": "Choose product wizard four"
+        },
+    {
+          "type": "product",
+          "id": "wizardfour_cart_product",
+          "label": "Cart product for Wizard 4"
+        },
+          {
+      "type": "text",
+      "id": "description",
+      "label": "Add description"
+    },
+    {
+          "type": "image_picker",
+          "id": "wizardfourImage",
+          "label": "Choose product wizard four Image"
+        },
+   
+    {
+        "type": "header",
+        "content": "Fifth wizard"
+      },
+    {
+          "type": "text",
+          "id": "heading_5",
+          "label": "Heading",
+          "default": "Add Ons"
+        },
+        {
+          "type": "collection",
+          "id": "wizardfive",
+          "label": "Choose collection wizard five"
+        },
+        
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "Choose product content color",
+          "default": "#3541bf"
+        },
+        {
+          "type": "select",
+          "id": "content_align",
+          "label": "alignment your product content",
+          "options": [
+            {
+              "value": "start",
+              "label": "Start"
+            },
+            {
+              "value": "center",
+              "label": "Center"
+            },
+            {
+              "value": "end",
+              "label": "End"
+            }
+    ],
+    "default": "center"
+  }
+  ],
+  "blocks": [
+      {
+        "type": "product1",
+        "name": "First Wizard Product",
+        "settings": [ 
+ {
+          "type": "checkbox",
+          "id": "disabled",
+          "label": "Disable Product",
+          "default" : false
+        },
+    {
+      "type": "product",
+      "id": "product_1",
+      "label": "Add Product"
+    },
+    {
+      "type":"product",
+      "id": "cart_product",
+      "label": "The product to attach with cart"
+    },
+               {
+      "type": "text",
+      "id": "tag",
+      "label": "Add tag"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Add description"
+    },
+    {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "html",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+
+        ]
+      },
+    {
+        "type": "product2",
+        "name": "Second Wizard Product",
+        "settings": [ 
+ {
+          "type": "checkbox",
+          "id": "disabled",
+          "label": "Disable Product",
+          "default" : false
+        },
+{
+      "type": "product",
+      "id": "product_2",
+      "label": "Add Product"
+    },
+           {
+      "type":"product",
+      "id": "cart_product",
+      "label": "The product to attach with cart"
+    },
+               {
+      "type": "text",
+      "id": "tag",
+      "label": "Add tag"
+    },
+          {
+      "type": "text",
+      "id": "description",
+      "label": "Add description"
+    },
+    {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "html",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+
+        ]
+      },
+    {
+        "type": "product3",
+        "name": "Third Wizard Product",
+        "settings": [ 
+ {
+          "type": "checkbox",
+          "id": "disabled",
+          "label": "Disable Product",
+          "default" : false
+        },
+  {
+      "type": "product",
+      "id": "product_3",
+      "label": "Add Product"
+    },
+               {
+      "type": "text",
+      "id": "tag",
+      "label": "Add tag"
+    },
+           {
+      "type":"product",
+      "id": "cart_product",
+      "label": "The product to attach with cart"
+    },
+          {
+      "type": "text",
+      "id": "description",
+      "label": "Add description"
+    },
+    {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "html",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+
+        ]
+      },
+    {
+        "type": "product4",
+        "name": "Fourth Wizard Product",
+        "settings": [ 
+ {
+          "type": "checkbox",
+          "id": "disabled",
+          "label": "Disable Product",
+          "default" : false
+        },
+{
+      "type": "product",
+      "id": "product_4",
+      "label": "Add Product"
+    },
+           {
+      "type":"product",
+      "id": "cart_product",
+      "label": "The product to attach with cart"
+    },
+               {
+      "type": "text",
+      "id": "tag",
+      "label": "Add tag"
+    },
+          {
+      "type": "text",
+      "id": "description",
+      "label": "Add description"
+    },
+    {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "html",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+
+        ]
+      },
+    {
+        "type": "product5",
+        "name": "Fifth Wizard Product",
+        "settings": [ 
+ {
+          "type": "checkbox",
+          "id": "disabled",
+          "label": "Disable Product",
+          "default" : false
+        },
+{
+      "type": "product",
+      "id": "product_5",
+      "label": "Add Product"
+    },
+           {
+      "type":"product",
+      "id": "cart_product",
+      "label": "The product to attach with cart"
+    },
+           {
+      "type": "text",
+      "id": "tag",
+      "label": "Add tag"
+    },
+          {
+      "type": "text",
+      "id": "description",
+      "label": "Add description"
+    },
+    {
+           "type": "text",
+           "id": "popup_no",
+           "label": "Target Block Number"
+         },
+         
+         {
+           "type": "text",
+           "id": "pop_heading",
+           "label": "Popup Heading"
+         },
+         {
+           "type": "html",
+           "id": "pop_detail",
+           "label": "Popup Text"
+         },
+         
+         {
+           "type": "html",
+           "id": "PoopupIconCode",
+           "label": "Popup Icon Code"
+         }
+
+        ]
+      }
+	],
+  "presets": [
+  {
+      "name" : "Bundle section"
+  }
+]
+}
+{% endschema %}

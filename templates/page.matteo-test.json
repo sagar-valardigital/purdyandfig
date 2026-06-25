@@ -1,0 +1,999 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "a512ad02-ae17-423d-a8a0-476423a1618f": {
+      "type": "announcement-bar-2",
+      "custom_css": [
+        ".announcement-btn-2,.bg-blue {background-color: #fff !important; color: #2d469e; font-family: \"Value-Medium\";}",
+        ".annoucment-bar-logo .logo_path {fill: #fff !important;}"
+      ],
+      "settings": {
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "class": "scroll-here-link",
+        "text": "FREE Summer Scent + Bottle for Life",
+        "bb-color": "#c63c5e",
+        "text-color": "#ffffff",
+        "scrollto": "scroll-here-link",
+        "annuText": "GET YOUR OFFER",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "4866bb75-ded3-4a93-8a25-ab2a787a280e": {
+      "type": "banner-3",
+      "custom_css": [
+        "@media (max-width: 768px) {.banner-3 .heading-2 {font-weight: bold; font-size: 30px !important; }}",
+        ".blue-btn {font-family: \"Value-Medium\";}"
+      ],
+      "settings": {
+        "className": "",
+        "desktopimage": "shopify://shop_images/HERO1-DRAFT_1.png",
+        "mobileimage": "shopify://shop_images/HEROMOB-DRAFT_1.png",
+        "title": "Clean with Summer’s Most Glorious Scents",
+        "subtext": "Limited Time Offer: Bring summer into your home and SAVE £21 with a FREE summer scent and FREE Bottle for Life",
+        "btnText": "GET YOUR OFFER",
+        "scrollto": "scroll-here-link",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "6266e1b4-19ad-4de9-ab77-aed46daddc44": {
+      "type": "common-usp-icons",
+      "blocks": {
+        "uspicons_BBHa8d": {
+          "type": "uspicons",
+          "settings": {
+            "usp_icon_name": "Free Bottle for Life",
+            "usp_icon_image": "shopify://shop_images/icon-bottle.svg"
+          }
+        },
+        "uspicons_AKLP73": {
+          "type": "uspicons",
+          "settings": {
+            "usp_icon_name": "Money Back Guarantee",
+            "usp_icon_image": "shopify://shop_images/icon-money.svg"
+          }
+        },
+        "uspicons_MwFfCN": {
+          "type": "uspicons",
+          "settings": {
+            "usp_icon_name": "Eco Packaging",
+            "usp_icon_image": "shopify://shop_images/icon-cube.svg"
+          }
+        }
+      },
+      "block_order": [
+        "uspicons_BBHa8d",
+        "uspicons_AKLP73",
+        "uspicons_MwFfCN"
+      ],
+      "custom_css": [
+        ".ms-2.value-sans {color: #161718;}"
+      ],
+      "settings": {
+        "show_hide_usp": true
+      }
+    },
+    "90d960e2-da13-4b49-9a83-dee9cb9d7c80": {
+      "type": "marquee-block-3",
+      "blocks": {
+        "ff5c3f25-8cdd-4228-b6af-aebf066f5e81": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/daily_aa82addf-d2ba-421d-baaf-bc5289713fe1.png"
+          }
+        },
+        "66442b87-53c7-4e16-87d8-d6d545c1064e": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/evening_d5ee7f86-a40e-4816-b79b-0e0feb6138a5.png"
+          }
+        },
+        "20da87c4-6282-4515-b92e-5bdbea59514e": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/women-hea.png"
+          }
+        },
+        "a3532e2b-5387-41d9-8a32-a1bc314b3029": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/the-sun.png"
+          }
+        },
+        "c5d4785f-67c2-4a6f-abf7-79a6eda76c31": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/ideal-home.png"
+          }
+        },
+        "1c984d63-7c64-429d-a600-2251b43088c3": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/vogue.png"
+          }
+        }
+      },
+      "block_order": [
+        "ff5c3f25-8cdd-4228-b6af-aebf066f5e81",
+        "66442b87-53c7-4e16-87d8-d6d545c1064e",
+        "20da87c4-6282-4515-b92e-5bdbea59514e",
+        "a3532e2b-5387-41d9-8a32-a1bc314b3029",
+        "c5d4785f-67c2-4a6f-abf7-79a6eda76c31",
+        "1c984d63-7c64-429d-a600-2251b43088c3"
+      ],
+      "settings": {
+        "enable": true,
+        "img_slider": true,
+        "color_bg": "#f4f6fc",
+        "color_text": "#161718",
+        "marqueeHTML": "FEATURED IN PRESS",
+        "followers": ""
+      }
+    },
+    "icon_blocks_7_UzPC8H": {
+      "type": "common-icon-blocks",
+      "blocks": {
+        "iconblocks_gjnwkL": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Powerful Clean",
+            "icon_block_description": "Super concentrated formula that cleans effortlessly, contained within one versatile bottle suitable for every room in your house.",
+            "icon_block_image": "shopify://shop_images/Frame_48096340_1_png.png"
+          }
+        },
+        "iconblocks_8BJQrC": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Natural Seasonal Scents",
+            "icon_block_description": "Discover new, limited edition essential oil blends that reflect each season, leaving your home smelling like a luxurious spa all year round.",
+            "icon_block_image": "shopify://shop_images/Frame_48096340_3_png.png"
+          }
+        },
+        "iconblocks_g4D7xz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Refillable & Reusable",
+            "icon_block_description": "Sustainable, convenient cleaning products. Reusable glass bottles and three monthly deliveries of seasonal scents. Fully recyclable with zero single use plastic.",
+            "icon_block_image": "shopify://shop_images/Frame_48096340_png.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_gjnwkL",
+        "iconblocks_8BJQrC",
+        "iconblocks_g4D7xz"
+      ],
+      "settings": {
+        "heading": "Transform Cleaning into a Summer Breeze",
+        "show_hide_block": true
+      }
+    },
+    "transformational_scents_2_4jn7xY": {
+      "type": "transformational-scents-2",
+      "blocks": {
+        "image_iHiUAQ": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/spring_png.png",
+            "mBlockImage": "shopify://shop_images/winter_5b0627a1-cbdc-4637-96d9-87ac96f4f566_png.png",
+            "tag": "",
+            "heading": "Spring",
+            "details": "Fresh and citrusy, like a fresh Mediterranean garden."
+          }
+        },
+        "image_hHE3YV": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/summer_png.png",
+            "mBlockImage": "shopify://shop_images/spring_cb076a7f-990c-48c8-ac8f-1369d81f2b7a_png.png",
+            "tag": "",
+            "heading": "Summer",
+            "details": "Transform your kitchen into a tranquil tropical paradise."
+          }
+        },
+        "image_iDrBwk": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/autumn_f664de46-5efc-4deb-bbd3-52aa770969d6_png.png",
+            "mBlockImage": "shopify://shop_images/autumn_d6005dfe-3e17-4ea6-9389-9ee550af32c4.png",
+            "tag": "",
+            "heading": "Autumn",
+            "details": "Create a calming & cosy home, like a warming cup of tea."
+          }
+        },
+        "image_rnJRta": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/winter_png.png",
+            "mBlockImage": "shopify://shop_images/Winter-square.jpg",
+            "tag": "",
+            "heading": "Winter",
+            "details": "Bring a calming, breath of fresh air into your home."
+          }
+        }
+      },
+      "block_order": [
+        "image_iHiUAQ",
+        "image_hHE3YV",
+        "image_iDrBwk",
+        "image_rnJRta"
+      ],
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#2d469e",
+        "class": "show",
+        "linkVariant": "1",
+        "heading": "Let the scents of the season into your home",
+        "subtext": "Members get exclusive access to expertly blended, essential-oil based scents, enriching your home with the best of every season."
+      }
+    },
+    "image_with_text_2_9pCyPg": {
+      "type": "image-with-text-2",
+      "custom_css": [
+        ".image-with-text-2 > .container {padding-top: 3rem;}"
+      ],
+      "settings": {
+        "className": "sklp-image-text",
+        "textcolor": "#3541bf",
+        "background": "#f4f6fc",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Summer Offer: FREE Summer Scent with all orders",
+        "image": "shopify://shop_images/Group_4_800x_png_800x_png_cf9744a9-68e3-473a-b1a1-1e6d1612b63f.png",
+        "mimage": "shopify://shop_images/Group_2_800x_png_800x_png.png",
+        "details": "Transform your home into a tropical paradise every time you clean with a FREE Geranium &amp; Ylang Ylang scent. Our bestselling summer scent comes FREE with all Starter Kits for a limited time only.",
+        "heading-position": false
+      }
+    },
+    "global_product_15_tFNqBD": {
+      "type": "global-product-15",
+      "blocks": {
+        "product_image_J9tcFr": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/sp3-pf69.jpg",
+            "mimage": "shopify://shop_images/mob-sp3-pf69.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_HtNMVx": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/4200_2.png",
+            "mimage": "shopify://shop_images/buybox-1.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_krWCVU": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/buy-box-1.png",
+            "mimage": "shopify://shop_images/buy-box-2_79146dfc-215d-46ee-9cc8-632f6e3be8ee.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_NCafck": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/P_F-02-8205-S8-WI-5_2_79628a66-d561-42bb-976c-6119202ac36b.png",
+            "mimage": "shopify://shop_images/m-P_F-02-8205-S8-WI-5_1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_PLCz9V": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/buy-box-2.png",
+            "mimage": "shopify://shop_images/buybox-3.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_D7xrwF": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/image_62_b2ed3ce9-10de-4485-852d-77ae6f398321.png",
+            "mimage": "shopify://shop_images/m-Group_47311.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "text_tjLff6": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "FREE Summer Cleaning Concentrate"
+          }
+        },
+        "text_ygETdG": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "FREE Starter Kit: Glass Bottle for Life & Cloth (£15 Value)"
+          }
+        },
+        "text_AnfCwJ": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Change or Cancel Anytime"
+          }
+        },
+        "text_TkiTyN": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "30-Day Moneyback Guarantee"
+          }
+        },
+        "text_cGpNyw": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "FREE Summer Cleaning Concentrate"
+          }
+        },
+        "text_LeDknW": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Free Starter Kit: Glass Bottle for Life & Cloth (£15 Value)"
+          }
+        },
+        "text_QYbiYY": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Change or Cancel Anytime"
+          }
+        },
+        "text_qEjMx9": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "30-Day Moneyback Guarantee"
+          }
+        },
+        "product_image2_6NYLHG": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Starter-Kit-_-Cloth-brown_abb25d30-3821-46db-94fa-820d1aa13c41.png",
+            "mimage_2": "shopify://shop_images/Winter-Variety-Kit_1_672c5af4-5201-4f13-b6d4-d1e21163441d.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_6q39Nb": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/buy-box-3.jpg",
+            "mimage_2": "shopify://shop_images/Core-scent--label_3_a27438c1-dfd1-4b30-9af2-27cfcb9bb0c8.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_JF7wcH": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/buy-box-4.jpg",
+            "mimage_2": "shopify://shop_images/m-winter-how-it-works_3.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_LbkLPb": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/buy-box-2.jpg",
+            "mimage_2": "shopify://shop_images/4_28_d6ff4956-91ba-4d4b-820c-3e43680eb77f.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_TeJaJ6": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/buy-box-1.jpg",
+            "mimage_2": "shopify://shop_images/Winter_Studio_30015_S5_Wi5_3_49585dcd-4a45-4df9-97c7-e60e544fef78.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_i6VEGD": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/image_61_098bd8bf-266a-4ff7-b873-0908f4da1c53.png",
+            "mimage_2": "shopify://shop_images/Group_47309.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "variant_CbUxJi": {
+          "type": "variant",
+          "settings": {
+            "varCount": "1",
+            "text_heading": "Seasonal",
+            "discount": "SPRING1169",
+            "variantProduct": "test-seasonal-starter-kit",
+            "delPrice": "3600",
+            "sellPrice": "1500",
+            "varImage": "shopify://shop_images/seasonal-spring.png",
+            "varaiantid": "44758085566691",
+            "sellingid": "4158030051",
+            "sku": "FG1208b",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "seasonal",
+            "eventValue": "product_toggle",
+            "optionIndex": "1"
+          }
+        },
+        "variant_bxpKGJ": {
+          "type": "variant",
+          "settings": {
+            "varCount": "2",
+            "text_heading": "Signature",
+            "discount": "SPRING2269",
+            "variantProduct": "counter-clean-starter-kit",
+            "delPrice": "3600",
+            "sellPrice": "1500",
+            "varImage": "shopify://shop_images/Core_scents_2.png",
+            "varaiantid": "44758082420963",
+            "sellingid": "4158095587",
+            "sku": "FG1096",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "2"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_J9tcFr",
+        "product_image_HtNMVx",
+        "product_image_krWCVU",
+        "product_image_NCafck",
+        "product_image_PLCz9V",
+        "product_image_D7xrwF",
+        "text_tjLff6",
+        "text_ygETdG",
+        "text_AnfCwJ",
+        "text_TkiTyN",
+        "text_cGpNyw",
+        "text_LeDknW",
+        "text_QYbiYY",
+        "text_qEjMx9",
+        "product_image2_6NYLHG",
+        "product_image2_6q39Nb",
+        "product_image2_JF7wcH",
+        "product_image2_LbkLPb",
+        "product_image2_TeJaJ6",
+        "product_image2_i6VEGD",
+        "variant_CbUxJi",
+        "variant_bxpKGJ"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "gp-5-reviews",
+        "background": "#f4f6fc",
+        "p_id": "scroll-here-link",
+        "landingproduct": "test-seasonal-starter-kit",
+        "varaiantid": "44758085566691",
+        "sellingid": "4158030051",
+        "sku": "FG1208b",
+        "discount": "SPRING1169",
+        "tab_description_1": "3 NEW limited edition scents blended for every season",
+        "tab_description_2": "Enjoy our 3 signature scents all year round",
+        "className": "gp-5-ab global-product-5-block",
+        "mainheading": "New Customer Offer: FREE Summer Scent + Bottle for Life worth £21",
+        "mainsubheading": "One powerful cleaner for your entire home",
+        "heading": "Counter Clean",
+        "subtext": "",
+        "price": "£15.00",
+        "delPrice": "£36.00",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "buy_now",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "11e26e64-5410-48f9-9c9a-3698a74d1770": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}"
+      ],
+      "settings": {
+        "className": "two-women-wrapper-2",
+        "background": "",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "Best friends Charlotte Figg and Purdy Rubin got together to create natural cleaning products that are powerful, \n <br>safe and inspired by beautiful seasonal scents.",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<div class=\"value-sans\">\n<p class=\"blue-text value-medium\">Fed up with unpleasant, highly toxic cleaning products, the two friends decided to do something about it.\n\n</p>\n<span class=\"gray-text\">They both firmly believe in the power and joy of natural cleaning, so they started experimenting with formulas in their garage. It's there that they conjured up their multi-surface cleaner infused with pure essential oils.\n</span>\n</div>"
+      }
+    },
+    "c83a693e-aafd-4c68-991d-125137360e48": {
+      "type": "toggle-image-block",
+      "blocks": {
+        "b72d3871-0676-400d-af99-fb17fb10ed3f": {
+          "type": "text",
+          "settings": {
+            "toggle_image": "https://cdn.shopify.com/videos/c/o/v/e73e6df584d04914929339b0a61b2add.mp4",
+            "toggle_text": "Counter and Stone"
+          }
+        },
+        "7531a47a-8a94-4111-bdd1-83d697de207a": {
+          "type": "text",
+          "settings": {
+            "toggle_image": "https://cdn.shopify.com/videos/c/o/v/54b47e4c4aa74e48ad6164581c1f6497.mp4",
+            "toggle_text": "Bath and Enamel"
+          }
+        },
+        "4494e90c-2b2c-4dca-bc9c-c61a3264a355": {
+          "type": "text",
+          "settings": {
+            "toggle_image": "https://cdn.shopify.com/videos/c/o/v/81f56eee154147558e5f97856699bd71.mp4",
+            "toggle_text": "Glass and Mirror"
+          }
+        },
+        "ba906120-786e-460a-aa27-a88e4342b059": {
+          "type": "text",
+          "settings": {
+            "toggle_image": "https://cdn.shopify.com/videos/c/o/v/0b18cd8c3e24418099eb0a141341322b.mp4",
+            "toggle_text": "Wood and Floors"
+          }
+        }
+      },
+      "block_order": [
+        "b72d3871-0676-400d-af99-fb17fb10ed3f",
+        "7531a47a-8a94-4111-bdd1-83d697de207a",
+        "4494e90c-2b2c-4dca-bc9c-c61a3264a355",
+        "ba906120-786e-460a-aa27-a88e4342b059"
+      ],
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        ".blue-starterkit-btn {font-family: \"Value-Medium\";}"
+      ],
+      "settings": {
+        "scrollto": "scroll-here-link",
+        "top": "60",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 9,
+        "funnel_stage": "landing_page",
+        "dataModule": "surfaces",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "4f5b5391-b1ab-4116-9ae8-7c2e152c9c8d": {
+      "type": "review-slider-3",
+      "blocks": {
+        "d68c0270-9f27-4238-bdf0-1ea41155f1a5": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Mhairi_screenshot.png",
+            "heading": "Makes cleaning an absolute pleasure!",
+            "review": "\"These scents are so nice. I love having different seasonal scents\"",
+            "userName": "Emma.",
+            "poster": "shopify://shop_images/poster-1_b5f8777d-1a0b-4fa7-ae4d-6069c23e7a54.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/f1aedf74105d424a814090708def7086.mp4"
+          }
+        },
+        "b61362f4-49c7-4865-ab91-c3f0e90c998e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Lara_screenshot.png",
+            "heading": "Perfect aromas for the season",
+            "review": "\"Arrived just in time for me to refresh and refill. My home smells delicious.\"",
+            "userName": "Lara.",
+            "poster": "shopify://shop_images/poster-6.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/d99e4cf5e2af4261873e4f03c604ad58.mp4"
+          }
+        },
+        "e77e13cc-7b69-4b41-982c-6a94724f7795": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Emma_screenshot.png",
+            "heading": "Totally gorgeous seasonal scents",
+            "review": "\"Just wonderful. Gorgeous scents that fill the room and linger for several hours.\"",
+            "userName": "Mhairi.",
+            "poster": "shopify://shop_images/poster-3_f89a79dc-f25e-4c20-a6f8-9ec90700bf72.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/fdbab72202c24b309c70f0ba6f3450d0.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "d68c0270-9f27-4238-bdf0-1ea41155f1a5",
+        "b61362f4-49c7-4865-ab91-c3f0e90c998e",
+        "e77e13cc-7b69-4b41-982c-6a94724f7795"
+      ],
+      "custom_css": [
+        ".cls-1 {fill: #fec84b;}",
+        ".blue-text {color: #2d469e !important;}",
+        ".blue-starterkit-btn {background-color: #2d469e; font-family: \"Value-Medium\";}"
+      ],
+      "settings": {
+        "heading": "Join 200k+ happy customers who are transforming their homes to spa",
+        "scrollto": "scroll-here-link",
+        "top": "80",
+        "className": "",
+        "bgColor": "#f4f6fc",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 10,
+        "funnel_stage": "landing_page",
+        "dataModule": "reviews_slider",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "0d7b4809-b3f0-4552-b395-2a0fcac97820": {
+      "type": "table-2",
+      "blocks": {
+        "2b9d9cc5-9b39-4b0d-9834-50025977aefa": {
+          "type": "text",
+          "settings": {
+            "featureName": "No Toxic Chemicals",
+            "pfIcon": "shopify://shop_images/check_circle_1.png",
+            "methodIcon": "shopify://shop_images/cancel.png",
+            "flashIcon": "shopify://shop_images/cancel.png"
+          }
+        },
+        "a0f8f9dd-3a49-4ece-aa0e-98b962cedbfc": {
+          "type": "text",
+          "settings": {
+            "featureName": "Pure Essential Oils",
+            "pfIcon": "shopify://shop_images/check_circle_1.png",
+            "methodIcon": "shopify://shop_images/cancel.png",
+            "flashIcon": "shopify://shop_images/cancel.png"
+          }
+        },
+        "4f5a780d-924f-4791-bec4-edbeb832405e": {
+          "type": "text",
+          "settings": {
+            "featureName": "Single Use Plastic-Free",
+            "pfIcon": "shopify://shop_images/check_circle_1.png",
+            "methodIcon": "shopify://shop_images/cancel.png",
+            "flashIcon": "shopify://shop_images/cancel.png"
+          }
+        },
+        "a601bf08-b110-4819-bf5c-87e28d5716d5": {
+          "type": "text",
+          "settings": {
+            "featureName": "Natural Ingredients",
+            "pfIcon": "shopify://shop_images/check_circle_1.png",
+            "methodIcon": "shopify://shop_images/check_circle_1.png",
+            "flashIcon": "shopify://shop_images/cancel.png"
+          }
+        },
+        "1e9f7254-8595-4439-a93a-e3cd36b6587f": {
+          "type": "text",
+          "settings": {
+            "featureName": "Made In The UK",
+            "pfIcon": "shopify://shop_images/check_circle_1.png",
+            "methodIcon": "shopify://shop_images/cancel.png",
+            "flashIcon": "shopify://shop_images/cancel.png"
+          }
+        },
+        "text_ke4tFU": {
+          "type": "text",
+          "settings": {
+            "featureName": "Seasonal Scent Ranges",
+            "pfIcon": "shopify://shop_images/check_circle_1.png",
+            "methodIcon": "shopify://shop_images/cancel.png",
+            "flashIcon": "shopify://shop_images/cancel.png"
+          }
+        }
+      },
+      "block_order": [
+        "2b9d9cc5-9b39-4b0d-9834-50025977aefa",
+        "a0f8f9dd-3a49-4ece-aa0e-98b962cedbfc",
+        "4f5a780d-924f-4791-bec4-edbeb832405e",
+        "a601bf08-b110-4819-bf5c-87e28d5716d5",
+        "1e9f7254-8595-4439-a93a-e3cd36b6587f",
+        "text_ke4tFU"
+      ],
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}"
+      ],
+      "settings": {
+        "heading": "We really are different",
+        "subheading": "No chemicals, no plastic waste. Just plant-based cleaning power with natural pure essential oils."
+      }
+    },
+    "transformational_scents_MfTtfk": {
+      "type": "transformational-scents",
+      "blocks": {
+        "image_7kgEht": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Citrus_4496eba5-4731-4584-8a68-58300316cfc7.jpg",
+            "tag": "",
+            "heading": "Uplifting Citrus",
+            "details": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves"
+          }
+        },
+        "image_zLUirN": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Floral_c7bca877-eaa7-4c23-adc9-061ac88e4c34.jpg",
+            "tag": "",
+            "heading": "Balancing Floral",
+            "details": "A beautifully floral blend of rosegeranium, lemon peel and vetiver roots"
+          }
+        },
+        "image_EVLnfh": {
+          "type": "image",
+          "disabled": true,
+          "settings": {
+            "tag": "",
+            "heading": "",
+            "details": ""
+          }
+        },
+        "image_CxAiLU": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Vetiver_5b099c49-4775-4fac-af98-450c5182572b.jpg",
+            "tag": "",
+            "heading": "Grounding Vetiver",
+            "details": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming effects."
+          }
+        }
+      },
+      "block_order": [
+        "image_7kgEht",
+        "image_zLUirN",
+        "image_EVLnfh",
+        "image_CxAiLU"
+      ],
+      "disabled": true,
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#131e44",
+        "class": "show",
+        "linkVariant": "2",
+        "heading": "Signature scents to transform your home",
+        "subtext": "Make cleaning a pleasure with beautiful essential oil scents. "
+      }
+    },
+    "a2194449-184e-4118-8225-9a59caeea728": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of eco-concentrate into your Bottle for Life and fill to the top (just below the neck) with ordinary tap water. Give the bottle a gentle shake to combine, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "text_A3DYFX": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What’s the difference between Seasonal and Signature? ",
+            "faq-ans": "<p>With our Seasonal plan, you’ll receive our latest limited edition seasonal scents in every quarterly shipment. With Signature, you’ll enjoy our three best selling signature scents in every delivery.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to confirm that Counter Clean is PH neutral so is safe to use on all surfaces, including softer surfaces like aluminium, wood, stone, quartz or any other porous surfaces. As always, we recommend patch testing first on any particularly sensitive or precious surfaces that you might be concerned about. Simply spray onto our microfibre cloth and wipe a small patch to see the results. Unless the manufacturer of your surface in question has provided specific guidelines for you to follow, Counter Clean is extremely safe to use.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I cancel my subscription?",
+            "faq-ans": "<p>To manage or cancel your subscription, simply log into your account using the email address which you used to place your original order. Once logged in, you will be able to edit your subscription accordingly. We also offer the ability to skip your next delivery or change your billing date to your preferred date.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Where to find my order?",
+            "faq-ans": "<p>We endeavour to dispatch your order within 1 working day of receiving it. Once your order has been dispatched, we aim to deliver within a maximum of 48 hours (for orders being shipped to Europe, please kindly allow 2-7 working days from dispatch). If you’ve tracked your order and it’s been 5 working days or more since the last tracking scan, please kindly submit your query and a member of our Customer Service team will get back to you as soon as possible.</p>"
+          }
+        },
+        "29134be3-da11-47cf-a53b-7f88d2bbe596": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Are your products safe for pets?",
+            "faq-ans": "<p>We would like to reassure you that our products are safe to use around dogs and other domestic pets. If you are worried about allergies, please do contact your vet first, and if you have a pet bird or birds, you will know that they are particularly sensitive to airborne substances, so it is best to take them out of the room while you clean. Additionally, it's important to note that Ylang Ylang and Citronella are toxic to dogs when they are ingested or applied topically, which we would never recommend. Please do not let your pets lick or drink Counter Clean.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_A3DYFX",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff",
+        "29134be3-da11-47cf-a53b-7f88d2bbe596"
+      ],
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently asked questions"
+      }
+    },
+    "1616c4c5-6d10-4f48-a274-122128027936": {
+      "type": "social-video",
+      "blocks": {
+        "56412b87-968a-4cd1-9c22-06ec6ce1e30d": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-1_b5f8777d-1a0b-4fa7-ae4d-6069c23e7a54.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/f1aedf74105d424a814090708def7086.mp4"
+          }
+        },
+        "2ccd4b4d-84d2-4704-821d-7d731da142b9": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-2_8b448a1e-68b5-4ec4-9c43-a86011468829.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/c86d9d9c47184413add35753bb3083bc.mp4"
+          }
+        },
+        "7457efd6-fef5-4871-a74f-d46ac8c384f4": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-3_f89a79dc-f25e-4c20-a6f8-9ec90700bf72.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/fdbab72202c24b309c70f0ba6f3450d0.mp4"
+          }
+        },
+        "a65d022c-29ac-4508-a7d9-4da5c6a7cada": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-4.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/314b505e303c4e9eb72e2ebea67bbc7c.mp4"
+          }
+        },
+        "8f1a6802-3cd1-400b-86b8-714a30042bc1": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-5.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/6c87e8a78c4a4b518adfc5cbd589cb0c.mp4"
+          }
+        },
+        "844d2d82-2941-4403-8078-d2f39d4eb801": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-6.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/d99e4cf5e2af4261873e4f03c604ad58.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "56412b87-968a-4cd1-9c22-06ec6ce1e30d",
+        "2ccd4b4d-84d2-4704-821d-7d731da142b9",
+        "7457efd6-fef5-4871-a74f-d46ac8c384f4",
+        "a65d022c-29ac-4508-a7d9-4da5c6a7cada",
+        "8f1a6802-3cd1-400b-86b8-714a30042bc1",
+        "844d2d82-2941-4403-8078-d2f39d4eb801"
+      ],
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        ".blue-starterkit-btn {background-color: #2d469e; font-family: \"Value-Medium\";}"
+      ],
+      "settings": {
+        "scrollto": "scroll-here-link-1",
+        "top": "80",
+        "bgColor": "#f4f6fc",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 16,
+        "funnel_stage": "landing_page",
+        "dataModule": "social_video_slider",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "dadf1b77-90f5-4fe1-be9d-b69a959fdae0": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "a512ad02-ae17-423d-a8a0-476423a1618f",
+    "4866bb75-ded3-4a93-8a25-ab2a787a280e",
+    "6266e1b4-19ad-4de9-ab77-aed46daddc44",
+    "90d960e2-da13-4b49-9a83-dee9cb9d7c80",
+    "icon_blocks_7_UzPC8H",
+    "transformational_scents_2_4jn7xY",
+    "image_with_text_2_9pCyPg",
+    "global_product_15_tFNqBD",
+    "11e26e64-5410-48f9-9c9a-3698a74d1770",
+    "c83a693e-aafd-4c68-991d-125137360e48",
+    "4f5b5391-b1ab-4116-9ae8-7c2e152c9c8d",
+    "0d7b4809-b3f0-4552-b395-2a0fcac97820",
+    "transformational_scents_MfTtfk",
+    "a2194449-184e-4118-8225-9a59caeea728",
+    "1616c4c5-6d10-4f48-a274-122128027936",
+    "dadf1b77-90f5-4fe1-be9d-b69a959fdae0"
+  ]
+}

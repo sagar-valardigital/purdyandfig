@@ -1,0 +1,194 @@
+<style>
+
+.desktop-only {
+  display: block;
+}
+
+.mobile-only {
+  display: none;
+}
+
+  .image-badge {
+    display: inline-flex;
+    padding: 2px 4px;
+    align-items: center;
+    border-radius: 4px;
+    border: 1px solid var(--Secondary-200, #F2D4B9);
+    background: var(--Secondary-50, #FBF1E8);
+    position: relative;
+    left: 18px;
+    top: 22px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 128%;
+}
+
+.icon-blocks-reskin .heading-2 {
+  font-size: 40px;
+  letter-spacing: 0px;
+  margin-bottom: 40px !important;
+}
+.icon-blocks-reskin.py-80 .icon-blocks-2-wrapper .icon-block-2 {
+  border-color: #b3d57d !important;
+}
+.icon-block-2 .block-img-wrappers {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 24px !important;
+}
+
+.icon-block-2 .sub-text {
+}
+
+
+@media (max-width: 768px) {
+
+.desktop-only { 
+    display: none; 
+  }
+.mobile-only { 
+    display: block; 
+  }
+
+  .icon-blocks-reskin .heading-2 {
+    margin-bottom: 24px !important;
+    font-size: 32px !important;
+  }
+  .icon-blocks-2-wrapper .icon-block-2 {
+    padding: 32px 16px !important;
+  }
+
+.icon-block-2 .sub-text {
+    font-size: 14px !important;
+}
+
+.icon-blocks-reskin.py-80 {
+    padding: 32px 0 !important;
+}
+
+}
+
+</style>
+{% if section.settings.show_hide_block %}
+<div class="block-section py-80 icon-blocks-2 icon-blocks-reskin  {{ section.settings.class }}" style="background-color:{{ section.settings.bg }}">
+  <div class="container">
+    <h2 class="heading-2 text-center m-text-left blue-text font-gtsuper fw-400 mt-0 desktop-only">
+      {{ section.settings.heading }}
+    </h2>
+    <h2 class="heading-2 text-center m-text-left blue-text font-gtsuper fw-400 mt-0 mobile-only">
+      {{ section.settings.headingMobile }}
+    </h2>
+    <div class="d-flex flex-wrap justify-content-between  theme-text my-1 icon-blocks-2-wrapper">
+    
+        {% for block in section.blocks %}
+        <div class="w-33 p-3 icon-block-2">
+          <div class="text-center ">
+            {% if block.settings.icon_block_image %}
+              
+            <div class="block-img-wrappers mb-1">
+              <img
+                src="{{ block.settings.icon_block_image | image_url }}"
+                width="57"
+                height="56"
+                alt="{{ block.settings.icon_block_image.alt }}"
+              >
+            </div>
+            {% endif %}
+            <div>
+            {% if block.settings.icon_block_title != blank %}
+            <h3 class="heading-4 font-lausanne fw-400 mb-2" style="color:{{ section.settings.textcolor }}">{{ block.settings.icon_block_title }}</h3>
+            {% endif %}
+            
+            
+
+            {% if block.settings.icon_block_description != blank %}
+            <p class="font-lausanne fw-200 sub-text m-0 style="color:{{ section.settings.textcolor }}">
+              {{ block.settings.icon_block_description }}
+            </p>
+            {% endif %}
+            </div>
+          </div>
+        </div>
+        {% endfor %}  
+    </div>
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+ {
+   "name": "PF388 Icon blocks",
+   "settings": [
+     {
+          "type": "text",
+          "id" : "class",
+          "label": "Section Class"
+      },
+     {
+          "type": "color",
+          "id" : "bg",
+          "label": "Background Colour",
+          "default": "#ffffff"
+      },
+     {
+          "type": "color",
+          "id" : "textcolor",
+          "label": "TextColour",
+          "default": "#212121"
+      },
+      {
+          "type": "text",
+          "id" : "heading",
+          "label": "Heading",
+          "default": "You've never enjoyed cleaning this much"
+      },
+      {
+          "type": "html",
+          "id" : "headingMobile",
+          "label": "Heading Mobile",
+          "default": "You've never enjoyed cleaning this much"
+      },
+      {
+          "type": "checkbox",
+          "id": "show_hide_block",
+          "label": "Show Icon Block",
+          "default": true
+      }
+    ],
+    "blocks": [
+      {
+          "type": "iconblocks",
+          "name": "Icon Block",
+          "limit": 3,
+          "settings": [
+              {
+                "type": "text",
+                "id": "icon_block_title",
+                "label": "Title"
+              },
+              {
+                "type": "textarea",
+                "id": "icon_block_description",
+                "label": "Description"
+              },
+              {
+                "type": "image_picker",
+                "id": "icon_block_image",
+                "label": "Icon Image"
+              },
+              {
+                "type": "number",
+                "id": "badge_left_position",
+                "label": "Badge Left Position"
+              }
+          ]
+      }
+    ],
+    "presets": [
+      {
+          "name": "PF388 Icon blocks"
+      }
+    ]
+ }
+{% endschema %}

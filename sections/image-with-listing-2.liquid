@@ -1,0 +1,100 @@
+<style>
+.image-with-listing .image-listing li{
+  background-image:url({{ section.settings.icon | image_url }});
+}
+  .image-with-listing .image-listing li{
+    border-color:#BA936F;
+  }
+  .iwl-2-wrapper{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+  }
+  @media(max-width:768px){
+    .image-with-listing .d-grid.image-listing-wrapper{
+      grid-template-columns: 1.2fr 1fr;
+    }
+    .iwl-2-wrapper.py-80{
+      padding-top:32px !important;
+      padding-bottom:32px !important;
+    }
+    .image-with-listing .image-listing{
+      margin-top:5px;
+    }
+  }
+</style>
+<div style="" class=" image-with-listing iwl-2 position-relative">
+  <picture>
+  <source media="(min-width:768px)" srcset="{{ section.settings.desktop_image | image_url }}">
+  <source media="(min-width:320px)" srcset="{{ section.settings.mobile_image | image_url }}">
+  <img src="{{ section.settings.desktop_image | image_url }}" alt="{{ section.settings.desktop_image }}" class="w-100 h-auto" style="vertical-align:top;">
+</picture>
+  <div class="iwl-2-wrapper py-80">
+  <div class="container">
+    <div class="desktop-hide">
+      <h2 class="heading-2 font-gtsuper" style="color:#fff !important">{{ section.settings.heading }}</h2>
+    </div>
+    <div class="d-grid image-listing-wrapper justify-content-between mt-4">
+      
+      <div class="image-listing-text">
+          <div class="mobile-hide">
+            <h2 class="heading-2 font-gtsuper" style="color:#fff !important">{{ section.settings.heading }}</h2>
+          </div>
+        <ul class="image-listing">
+          {% for block in section.blocks %}
+            <li class="fw-200 font-lausanne" style="color:#fff !important">{{ block.settings.heading }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Image with listing 2",
+    "settings": [
+      {
+        "type" : "image_picker",
+        "id": "desktop_image",
+        "label" : "Desktop Image"
+      },
+      {
+        "type" : "image_picker",
+        "id": "mobile_image",
+        "label" : "Mobile Image"
+      },
+      {
+        "type" : "text",
+        "id": "heading",
+        "label" : "Heading"
+      },
+     
+      {
+        "type" : "image_picker",
+        "id": "icon",
+        "label" : "Choose Listing Icon"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+          {
+        "type" : "text",
+        "id": "heading",
+        "label" : "Heading"
+      }
+        ]
+      }
+    ], 
+	"presets": [
+		{
+			"name": "Image with listing 2"
+		}
+	]
+  }
+{% endschema %}

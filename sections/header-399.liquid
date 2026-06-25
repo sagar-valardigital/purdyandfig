@@ -1,0 +1,411 @@
+<style>
+#body .header-2 .main-menu-right{
+    width:55px;
+}
+.header_tag{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translateX(-50%) translateY(-50%);
+    padding:8px 10px;
+    line-height:1.2;
+    border-radius:20px;
+    font-size:12px;
+    display:inline-block;
+    background-color:#C8393C;
+    color:#fff;
+}
+@media(max-width:768px){
+    .header_tag{
+    position:absolute;
+    width:calc(100% + 30px);
+    top:auto;
+    bottom:-30px;
+    left:-15px;
+    text-align:center;
+    transform:translateX(0%) translateY(0%);
+    padding:8px 10px;
+    line-height:1.2;
+    border-radius:0px;
+    font-size:12px;
+}
+ .mobile-menu-top-wrapper .mobile-menus-wrapper .no-submenu a  {
+    background-color: tranparent !important;
+    }
+}
+</style>
+<div class="position-relative pf-header-wrapper top-sticky annoucment_bar_2 sticky">
+  <header
+    class="header-2  header  bg-header"
+    style="position:relative;"
+  >
+    <div class="container" x-data>
+      <div class="d-flex justify-content-between align-items-center py-1 position-relative">
+        {% if section.settings.header_tag != blank %}
+            <span class="header_tag">
+                {{ section.settings.header_tag }}
+            </span>
+          {% endif %}
+        <div class="menu-toggle desktop-hide">
+          <span
+            {% if section.settings.toggle_dataTrack %}
+              data-tracked="true"
+              data-page-url="{{ request.path }}"
+              data-target-url=""
+              data-index="{{ section.settings.toggle_index }}"
+              data-funnel-stage="{{ section.settings.toggle_funnel_stage }}"
+              data-module="{{ section.settings.toggle_dataModule }}"
+              data-event-label="{{ section.settings.toggle_dataTitle }}"
+              data-event-value="{{ section.settings.toggle_eventValue }}"
+              data-item-id=""
+              data-option-index=""
+              data-item-name=""
+            {% endif %}
+            class="toggle-icon"
+          >
+          </span>
+        </div>
+
+        <div class="logo-wrapper">
+          <a
+            href="{% if template.name == 'index' %}javascript:void(0);{% else %}{{ routes.root_url }}{% endif %}"
+            class="header__heading-link link link--text d-block focus-inset"
+          >
+            <img
+              class="w-100 d-block"
+              src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/pf-new-logo.svg?v=1722508905"
+              alt="logo"
+            >
+          </a>
+        </div>
+        <div class="main-menu-left mobile-hide ">
+          
+          <ul class="list-unstyle d-flex  justify-content-end align-items-center">
+            {%- for link in section.settings.menu2.links -%}
+              <li>
+                <a
+                  {% if section.settings.dataTrack %}
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url="{{link.url}}"
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="{{ link.title | escape}}"
+                    data-event-value="{{ section.settings.eventValue }}"
+                    data-item-id=""
+                    data-option-index=""
+                    data-item-name=""
+                  {% endif %}
+                  href="{{link.url}}"
+                  class="menu-item menu_{{ link.title| handle }}"
+                >
+                  {% if template.suffix == 'pf513' and link.title == "Member Zone"  %}
+                    Members Offers
+                  {% else %}
+                  {{- link.title | escape -}}
+                  {% endif %}
+                </a>
+              </li>
+            {% endfor %}
+            {% if template.name != 'product'
+              and template.name != 'collection'
+              and template.name != 'list-collections'
+            %}
+              <li style="margin-left:20px;">
+                <a
+                  
+                    href="{% if section.settings.top_product_link %} {{ section.settings.top_product_link }} {% else %} javascript:void(0) {% endif %}"
+             
+                  class="menu-item starter-kit-btn {% if section.settings.top_product_link == blank %}click-scroll{% endif %}"
+                  {% if section.settings.dataTrack %}
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-target-url="shop_anchor"
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="{{ section.settings.dataModule }}"
+                    data-event-label="get_started"
+                    data-event-value="shop_anchor"
+                    data-item-id=""
+                    data-option-index=""
+                    data-item-name=""
+                  {% endif %}
+                  data-target="{{ section.settings.ctaScrollTo }}"
+                >
+                  {% if template.suffix == 'pf513' %}
+                    Join Us
+                  {% else %}
+                  {{- section.settings.ctaText }}
+                  {% endif %}
+                  <span class="btn-arrow_" style="font-size:16px;">
+                  <i class="fa-regular fa-arrow-right"></i>
+                </span>
+                </a>
+              </li>
+            {% endif %}
+          </ul>
+        </div>
+        {% if section.settings['cart-login'] %}
+          <div class="main-menu-right mobile-hide" x-data>
+            {% assign globalloginicon = '<i class="fa-solid fa-user"></i>' %}
+            {% assign globalcarticon = '<i class="fa-solid fa-cart-shopping"></i>' %}
+
+            {% if settings.global_login_icon != blank %}
+              {% assign globalloginicon = settings.global_login_icon %}
+            {% endif %}
+            {% if settings.global_cart_icon  != blank %}
+                {% assign globalcarticon = settings.global_cart_icon  %}
+            {% endif %}
+
+            <ul class="list-unstyle d-flex justify-content-end">
+              {% if section.settings.login %}
+                <li>
+                  {% if customer %}
+                    <a href="/a/account/subscriptions" class="menu-item header-icon">
+                      {{globalloginicon}}
+                    </a>
+                  {% else %}
+                    <a href="/a/account/login" class="menu-item header-icon" id="customer_login_link">
+                      {{globalloginicon}}
+                    </a>
+                  {% endif %}
+                </li>
+              {% endif %}
+              {% if section.settings.cart %}
+                <li @click="$dispatch('toggle-cart')">
+                  <a class="menu-item cart-toggle position-relative header-icon">
+                    {{globalcarticon }}
+                    <span class="cart-item-count">
+                      {%- if cart.item_count > 0 %}
+                        {{ cart.item_count -}}
+                      {%- endif -%}
+                    </span></a
+                  >
+                </li>
+              {% endif %}
+            </ul>
+          </div>
+        {% endif %}
+
+        <div class="cart-toggle desktop-hide" @click="$dispatch('toggle-cart')">
+          {% if section.settings.cart %}
+            <span class="cart-icon position-relative">
+              {{globalcarticon }}
+              <span class="cart-item-count">
+                {%- if cart.item_count > 0 %}{{ cart.item_count }}{% endif -%}
+              </span>
+            </span>
+          {% endif %}
+        </div>
+      </div>
+
+      {% render 'mobile-menu-399' %}
+    </div>
+  </header>
+</div>
+
+{% schema %}
+{
+  "name": "Header 399",
+  "class": "section-header top-sticky annoucment_bar_2",
+  "settings": [
+    {
+        "type": "text",
+        "id": "header_tag",
+        "label": "Header Tag"
+    },
+    {
+      "type": "checkbox",
+      "id": "cart-login",
+      "label": "Enable Cart & Login",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "login",
+      "label": "Enable Login",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "cart",
+      "label": "Enable Cart",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "help_link",
+      "label": "Enable Help Link",
+      "default": true
+    },
+    {
+      "type": "url",
+      "id": "shopall",
+      "label": "Shop All Link"
+    },
+    {
+      "type": "link_list",
+      "id": "menu2",
+      "default": "main-menu",
+      "label": "Desktop Menu"
+    },
+    {
+      "type": "link_list",
+      "id": "mobilemenu",
+      "default": "main-menu",
+      "label": "Mobile menu"
+    },
+
+    {
+      "type": "text",
+      "id": "ourstoryheading",
+      "label": "Our Story Heading"
+    },
+    {
+      "type": "text",
+      "id": "ourstorytext",
+      "label": "Our Story Text"
+    },
+    {
+      "type": "url",
+      "id": "ourstorylink",
+      "label": "Our Story Link"
+    },
+    {
+      "type": "url",
+      "id": "blog",
+      "label": "Blogs Link"
+    },
+    {
+      "type": "text",
+      "id": "ctaText",
+      "label": "CTA Text",
+      "default": "Shop Starter Kit"
+    },
+    {
+      "type": "text",
+      "id": "ctaScrollTo",
+      "label": "CTA Scroll to ID"
+    },
+    {
+      "type": "url",
+      "id": "top_product_link",
+      "label": "Header  CTA link"
+    },
+    {
+      "type": "header",
+      "content": "Hamburger GA4"
+    },
+    {
+      "id": "toggle_dataTrack",
+      "label": "Data Track",
+      "type": "checkbox"
+    },
+
+    {
+      "id": "toggle_index",
+      "label": "Index",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "toggle_funnel_stage",
+      "label": "Funnel Stage",
+      "type": "text",
+      "default": "hp"
+    },
+    {
+      "id": "toggle_dataModule",
+      "label": "Module",
+      "type": "text",
+      "default": "announcement_bar"
+    },
+    {
+      "id": "toggle_dataTitle",
+      "label": "Event Label",
+      "type": "text",
+      "default": "get_your_offer"
+    },
+    {
+      "id": "toggle_eventValue",
+      "label": "Event Value",
+      "type": "text",
+      "default": "shop_anchor"
+    },
+    {
+      "type": "header",
+      "content": "Menu GA4"
+    },
+    {
+      "id": "dataTrack",
+      "label": "Data Track",
+      "type": "checkbox"
+    },
+
+    {
+      "id": "index",
+      "label": "Index",
+      "type": "number",
+      "default": 0
+    },
+    {
+      "id": "funnel_stage",
+      "label": "Funnel Stage",
+      "type": "text",
+      "default": "hp"
+    },
+    {
+      "id": "dataModule",
+      "label": "Module",
+      "type": "text",
+      "default": "announcement_bar"
+    },
+    {
+      "id": "eventValue",
+      "label": "Event Value",
+      "type": "text",
+      "default": "shop_anchor"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "menu",
+      "name": "Starter Kit Menu",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag"
+        },
+        {
+          "type": "color",
+          "id": "tagColor",
+          "label": "Tag Background"
+        },
+        {
+          "type": "url",
+          "id": "menulink",
+          "label": "Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "menuImage",
+          "label": "Choose Image"
+        }
+      ]
+    }
+  ],
+
+  "presets": [
+    {
+      "name": "Header 399"
+    }
+  ]
+}
+{% endschema %}

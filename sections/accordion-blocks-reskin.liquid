@@ -1,0 +1,202 @@
+<div
+  class="py-80 accordion-blocks-wrapper {{ section.settings.class }}"
+  style="background-color:{{ section.settings.bgcolor }}"
+>
+  <div class="container">
+    <div>
+      <h2 class="heading-2 text-center font-gtsuper mt-0 ">{{ section.settings.heading }}</h2>
+     {% if section.settings.subtext != blank %}
+      <p class="gray-text normal-text value-medium text-center">
+        {{ section.settings.subtext }}
+      </p>
+      {% endif %}
+    </div>
+    <div class="mt-4">
+      <div class="accordion-blocks-2">
+        {% for block in section.blocks %}
+          <div class="accordion-block-2  font-lausanne {% if section.settings.accordian%} desktop-event-none make-accordion {% else %} event-none{% endif %}">
+            <details
+              {% if forloop.first %}
+                class="stay-open"
+              {% endif %}
+              open
+            >
+              <summary class="font-lausanne fw-400">{{ block.settings.accordion_heading }}</summary>
+              <div>
+                <div class=" accordion-block-img">
+                  <img
+                    class="img-responsive w-100 h-auto"
+                    width="400"
+                    height="400"
+                    src="{{ block.settings.accordion_image | img_url : '800x' }}"
+                    alt="image"
+                  >
+                </div>
+                <p class="font-lausanne fw-200 gray-text accordion-text">{{ block.settings.accordion_details }}</p>
+              </div>
+            </details>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if section.settings.showbtn %}
+      <div class="mt-4 text-center">
+        <span
+          class="d-block text-center blue-starterkit-btn green-btn m-auto click-scroll"
+          data-target="{{ section.settings.scrollto }}"
+          data-top="{{ section.settings.top }}"
+          {% if section.settings.dataTrack %}
+            {% render "ga4-events" %}
+          {% endif %}
+          >GET YOUR OFFER</span
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "accordion Blocks Reskin",
+   "settings": [
+     {
+          "type": "text",
+          "id": "scrollto",
+          "label": "Scroll to section id",
+          "default": "javascript:void(0);"
+      },
+     {
+          "type": "text",
+          "id": "top",
+          "label": "On scroll top position",
+          "default": "0"
+      },
+     {
+      "type": "checkbox",
+      "id": "accordian",
+      "label": "Is Accordion",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "showbtn",
+      "label": "Show btn",
+      "default": false
+    },
+     {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+     {
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+     {
+      "type": "text",
+      "id": "subtext",
+      "label": "Sub Heading"
+    },
+    {
+    "type": "header",
+    "content": "GA4"
+  },
+    {
+"id": "dataTrack",
+"label":"Data Track",
+"type": "checkbox"
+    },
+    {
+"id": "targetUrl",
+"label":"Target Url",
+"type": "url"
+    },
+    {
+"id": "index",
+"label":"Index",
+"type": "number",
+"default" : 0
+    },
+    {
+"id": "funnel_stage",
+"label":"Funnel Stage",
+"type": "text",
+ "default" : "landing_page"
+    },
+    {
+"id": "dataModule",
+"label":"Module",
+"type": "text",
+ "default" : "announcement_bar"
+    },
+      {
+"id": "dataTitle",
+"label":"Event Label",
+"type": "text",
+"default": "get_your_offer"
+    }
+    ,
+      {
+"id": "eventValue",
+"label":"Event Value",
+"type": "text",
+"default" : "shop_anchor"
+    },
+      {
+"id": "itemId",
+"label":"Item Id",
+"type": "text"
+    }
+    ,
+      {
+"id": "optionIndex",
+"label":"Option Index",
+"type": "text"
+    }
+    ,
+      {
+"id": "ItemName",
+"label":"Item Name",
+"type": "text"
+    }
+   ],
+   "blocks": [
+      {
+        "type": "image",
+        "name": "accordion block",
+        "settings": [
+          {
+      "type": "image_picker",
+      "id": "accordion_image",
+      "label": "Add Image"
+    },
+
+{
+      "type": "text",
+      "id": "accordion_heading",
+      "label": "Heading"
+    }
+          ,
+
+{
+      "type": "text",
+      "id": "accordion_details",
+      "label": "text"
+    }
+        ]
+      }
+	],
+"presets": [
+	{
+		"name": "accordion Blocks Reskin"
+	}
+]
+ }
+{% endschema %}

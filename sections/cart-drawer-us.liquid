@@ -1,0 +1,786 @@
+
+  <style>
+          .cart-ab-2 .empty-cart-block .min-cart-body {
+              height: calc(100vh - 230px);
+          }
+      .cart-ab-2 .qty-wrapper{
+        border-radius:0;
+        border:1px solid #ccc;
+      }
+      .christmas-cart.cart-ab-2 .qty-wrapper{
+        border-radius:0;
+        border:1px solid #EDE3CA;
+      }
+        .cart-ab-2 .min-cart-body{
+          height:calc(100vh - 171px);
+        }
+        @media(max-width:768px){
+          .cart-ab-2 .min-cart-body{
+          height:calc(100vh - 184px);
+        }
+        }
+        .cart-ab-2 .qty-wrapper .qty-minus,.cart-ab-2 .qty-wrapper .qty-plus,.cart-ab-2 .qty-wrapper{
+          height:32px;
+        }
+       .cart-ab-2 .qty-wrapper .qty{
+          height:33px;
+
+        }
+        .cart-ab-2 .qty-wrapper .qty-minus:after,.cart-ab-2 .qty-wrapper .qty-plus:after,.cart-ab-2 .qty-wrapper .qty-plus:before{
+          background:#212121;
+        }
+        .cart-ab-2 .qty-wrapper .qty{
+          color:#212121;
+          font-weight:400;
+        }
+          .cart-ab-2 .empty-cart-block .product-img img {
+              max-width: 100%
+          }
+
+         .cart-ab-2 .empty-cart-wrapper {
+              display: flex;
+              align-items: center
+          }
+
+          .cart-ab-2 .empty-cart-wrapper .empty-cart-products {
+              width: 100%;
+          }
+
+          .cart-ab-2 .free-limit-check {
+              text-align: center;
+          }
+
+          .cart-ab-2 .free-limit-check span {
+              display: inline-block;
+              width: 22px;
+          }
+
+          .cart-ab-2 .free-limit-check span svg {
+              width: 100%;
+              fill: #ccc;
+          }
+
+          .cart-ab-2 .free-limit-check.checked span svg {
+              width: 100%;
+              fill: #435CA7;
+          }
+
+          .cart-ab-2 .free-limit-check span~b {
+              font-size: 12px;
+          }
+
+          .cart-ab-2 .free-limit-progress-bar {
+              width: 100%;
+              height: 10px;
+              border-radius: 15px;
+              background: #fff;
+              margin-top: 5px;
+          }
+
+          .cart-ab-2 .progress-bar {
+              width: 0%;
+              height: 10px;
+              display: block;
+              background: #E9B88B;
+              border-radius: 15px;
+              transition: all 1s ease;
+          }
+
+          .cart-ab-2 .cart-price-slider {
+              margin: -0px -15px 0 -15px;
+              padding: 6px 15px 10px 15px;
+            background:#F0E8D3;
+          }
+      .cart-ab-2 .min-cart-body{
+        background:#F6F1E5;
+      }
+          .cart-ab-2 .cart-price-slider.gradient-bg {
+              /* background-image: linear-gradient(to top, #EAE6FF, #F2F5FF) !important; */
+              background-color: #F0E8D3;
+          }
+
+          .cart-ab-2 .cart-top-bar {
+              margin: 0px -15px 0px -15px;
+              font-size: 15px;
+              padding: 12px !important;
+          }
+
+          .cart-ab-2 .cart-product-details input.qty {
+              border-left: 1px solid #ccc;
+              border-right: 1px solid #ccc;
+          }
+      .christmas-cart.cart-ab-2 .cart-product-details input.qty {
+              border-left: 1px solid #EDE3CA;
+              border-right: 1px solid #EDE3CA;
+          }
+
+          .cart-ab-2 .cart-products-wrapper .cart-product {
+              background: #F6F1E5;
+              margin-left: -15px;
+              margin-right: -15px;
+          }
+        .cart-ab-2 .cart-products-wrapper .cart-product .p-price h3{
+          font-size:14px;
+          color:#212121;
+          font-weight:bold;
+        }
+    .cart-ab-2 .cart-products-wrapper .cart-product .p-price h3 del{
+       font-size:12px;
+          color:#212121;
+          font-weight:400;
+    }
+        .cart-ab-2 .min-cart-wrapper{
+          height: 100%;
+          overflow-x: hidden;
+          display: flex;
+          flex-direction: column;
+          -webkit-box-pack: justify;
+          justify-content: space-between;
+          -webkit-box-align: center;
+          align-items: center;
+        }
+        .cart-ab-2 .min-cart-header{
+          width:100%;
+        }
+        .cart-ab-2 .min-cart-footer{
+          position:relative;
+          padding-bottom:20px;
+          width:100%;
+        }
+        .cart-ab-2 .min-cart-body{
+          width: 100%;
+          height: 100%;
+          -webkit-box-flex: 1;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;
+          -webkit-box-pack: justify;
+          overflow-x: hidden;
+          padding-top:70px !important;
+        }
+        .cart-price-slider{
+          position: fixed;
+        top: 53px;
+        z-index: 1;
+        right: 0;
+        right: 15px;
+        width: 400px;
+        max-width: 100%;
+        }
+        .min-cart-footer .checkout-btn{
+          width:370px;
+        }
+        @media (max-width:560px) {
+          .cart-ab-2 .min-cart-footer{
+          position:relative;
+          padding-bottom:20px;
+        }
+        }
+
+        button.qty-minus, button.qty-plus {
+          background: #F6F1E5;
+          border: none;
+        }
+
+        .qty-minus:disabled, .qty-plus:disabled {
+          opacity: 0.3;
+          cursor: not-allowed;
+        }
+
+      .p-category{
+      font-size:14px;
+      line-height:1.5;
+      color:#212121;
+      font-weight:600;
+    }
+      .subscription-details{
+        color:#212121;
+        font-size:12px;
+      }
+      .qty-wrapper .qty{background:#F6F1E5}
+
+      .christmas-cart .cart-product{
+        padding-bottom:0;
+      }
+      .christmas-cart .cart-product:last-child{
+        padding-bototm:15px;
+      }
+      .christmas-cart .cart-upsell-wrapper{
+        background-color:#EDE3CA;
+        padding:2px 15px 15px 15px;
+        margin-top:15px;
+        margin-left:-15px;
+        margin-right:-15px;
+        width:calc(100% + 30px)
+      }
+
+      .christmas-cart .cart-product-details {padding-right:0;
+      }
+      .upsell-2 .upsell-product{
+          padding:8px;
+          background:#fff;
+          margin-bottom:5px;
+        }
+        .upsell-product-wrapper{margin:10px 0; border-radius:4px;}
+        .upsell-2 .upsell-product{background:#FCFAF6;border-radius:4px;box-shadow:none;}
+        .upsell-2 .up-title p{font-size:12px;}
+        .upsell-2 .up-top{display:grid; flex-wrap:wrap; justify-content:space-between; grid-template-columns:calc(100% - 88px) 80px; height:100%;grid-gap:8px; }
+        .upsell-2 .up-top .up-title{width:calc(100% - 5px);}
+        .upsell-2 .up-top .up-title h4{font-size:14px; font-weight:600;}
+        .upsell-2 .up-top .up-price{width:55px;display:flex;justify-content:space-between;}
+        .upsell-2 .up-top .up-price .remove-product{position:static;}
+        .upsell-2 .upsell-product-section{display:flex;justify-content:space-between;flex-wrap:wrap;}
+        .upsell-2 .upsell-product-section .up-product-img{width:75px;}
+        .upsell-2 .upsell-product-section .up-add-cart-option{width:calc(100% - 85px);}
+        .upsell-2 .upsell-product-section .up-add-cart-option label{padding:8px;border:1px solid #555;border-radius:4px;margin-bottom:10px;width:100%;display:block;}
+        .upsell-2 .upsell-product-section .up-add-cart-option button.btn{font-size:13px;}
+        .upsell-2 .upsell-product-section .btn{padding:10px;margin-top:0px;}
+        .upsell-2 .okendo-cart-review .okeReviews[data-oke-container].oke-sr .oke-sr-count{
+          font-size:14px;
+        }
+        .upsell-2 .up-top form{
+          align-self:center;
+        }
+      .stars-img-review.empty-stars .star-img{
+        width:12px;
+        margin-right:-0.6px;
+      }
+  </style>
+  {% for block in section.blocks %}
+    {% if block.type == 'product' and block.settings.product != blank %}
+      <div id="okendo-widget-{{ block.settings.variant }}" style="display: none;">
+        {% render 'okendo-reviews-product-rating-summary', product: block.settings.product %}
+      </div>
+    {% endif %}
+  {% endfor %}
+
+  <!-- Liquid Template Section -->
+  <script type="application/json" id="upsellConfig">
+    {
+      "products": [
+        {% assign valid_products = false %}
+        {% for block in section.blocks %}
+          {% if block.type == 'product' and block.settings.product != blank %}
+            {% if valid_products %},{% endif %}
+            {
+              "product_title": {{ block.settings.product.title | json }},
+              "handle": {{ block.settings.product.handle | json }},
+              "url": {{ block.settings.product.url | json }},
+              "image_url": {{ block.settings.product.featured_image | img_url: '280x200', crop: 'center' | json }},
+              {% if block.settings.variant_image %}
+              "variant_image": {{ block.settings.variant_image | img_url: '280x200', crop: 'center' | json }},
+              {% else %}
+                "variant_image" : null,
+              {% endif %}
+              "variant_id": {{ block.settings.variant | json }},
+              {% if block.settings.subscription %}
+              "selling_plan_id": {{ block.settings.selling_plan | json }},
+              {% endif %}
+              "discount": {{ block.settings.discount | json }},
+              "price": {{ block.settings.price | json }},
+              "compare_price": {{ block.settings.compare_price | json }},
+              "button_text": {{ block.settings.button_text | default: 'ADD' | json }},
+              "includes": {{ block.settings.product.variants.first.metafields.metadata.includes | default: "" | json }},
+              "tags": {{ block.settings.product.tags | json }}
+            }
+            {% assign valid_products = true %}
+          {% endif %}
+        {% endfor %}
+      ],
+      "empty_products": [
+        {% assign valid_empty_products = false %}
+        {% for block in section.blocks %}
+          {% if block.type == 'empty_cart' and block.settings.product != blank %}
+            {% if valid_empty_products %},{% endif %}
+            {
+              "product_title": {{ block.settings.product.title | json }},
+              "handle": {{ block.settings.product.handle | json }},
+              "url": {{ block.settings.product.url | json }},
+              "image_url": {{ block.settings.product.featured_image | img_url: '280x200', crop: 'center' | json }},
+              {% if block.settings.variant_image %}
+              "variant_image": {{ block.settings.variant_image | img_url: '280x200', crop: 'center' | json }},
+              {% else %}
+                "variant_image" : null,
+              {% endif %}
+              "variant_id": {{ block.settings.variant | json }},
+              {% if block.settings.subscription %}
+              "selling_plan_id": {{ block.settings.selling_plan | json }},
+              {% endif %}
+              "discount": {{ block.settings.discount | json }},
+              "price": {{ block.settings.price | json }},
+              "compare_price": {{ block.settings.compare_price | json }},
+              "button_text": {{ block.settings.button_text | default: 'ADD' | json }},
+              "includes": {{ block.settings.product.variants.first.metafields.metadata.includes | default: "" | json }},
+              "tags": {{ block.settings.product.tags | json }}
+            }
+            {% assign valid_empty_products = true %}
+          {% endif %}
+        {% endfor %}
+      ]
+    }
+  </script>
+  <div class="cart-drawer-wrapper-sections ">
+    {% render 'cart-drawer-us', cart_blocks: section.blocks %}
+  </div>
+  <script>
+    /**
+     * Utility functions
+     */
+    const UpsellUtils = {
+      // Get upsell configuration from JSON script
+      getUpsellConfig() {
+        try {
+          const configElement = document.getElementById('upsellConfig');
+          if (!configElement) {
+            console.error('Upsell config not found');
+            return { products: [], empty_products: [] };
+          }
+          return JSON.parse(configElement.textContent);
+        } catch (error) {
+          console.error('Error parsing upsell config:', error);
+          return { products: [], empty_products: [] };
+        }
+      },
+
+      // Format price display
+      formatPrice(price) {
+        if (!price) return '';
+        return typeof price === 'string' ? price : `$${price}`;
+      },
+
+      // Format compare price display
+      formatComparePrice(compare_price) {
+        if (!compare_price) return '';
+        return typeof compare_price === 'string' ? compare_price : `$${compare_price}`;
+      },
+
+      // Create product tags HTML
+      createTagsHTML(tags) {
+        if (!tags || !Array.isArray(tags)) return '';
+
+        return tags
+          .filter((tag) => tag.includes('tag:'))
+          .map((tag) => `<span class="collection-tag">${tag.split(':')[1]}</span>`)
+          .join('');
+      },
+
+      // Create form inputs for subscription/one-time purchase
+      createPurchaseTypeInputs(product) {
+        if (product.selling_plan_id) {
+          return `
+        <input type="checkbox" name="purchase_type" value="subscription" checked>
+        <div class="selling_plan_wrapper d-none">
+          <input type="hidden" name="selling_plan" value="${product.selling_plan_id}">
+        </div>
+      `;
+        }
+        return '<input type="checkbox" name="purchase_type" value="one-time" checked>';
+      },
+
+      // Check if product is already in cart
+      isProductInCart(cart, variantId) {
+        return cart.items && cart.items.some((item) => item.variant_id === parseInt(variantId));
+      },
+
+      // Initialize Okendo widgets with error handling
+      initializeOkendoWidgets(products) {
+        if (typeof window.okeWidgetApi === 'undefined') {
+          console.warn('Okendo widget API not available');
+          return;
+        }
+
+        setTimeout(() => {
+          products.forEach((product) => {
+            try {
+              const widgetElement = document.querySelector(`[data-oke-widget-${product.variant_id}]`);
+              if (widgetElement) {
+                window.okeWidgetApi.setProduct(widgetElement, `shopify-${product.variant_id}`);
+              }
+            } catch (error) {
+              console.error(`Error initializing Okendo widget for product ${product.variant_id}:`, error);
+            }
+          });
+        }, 100);
+      },
+    };
+
+    /**
+     * Render empty cart products
+     */
+    const renderEmptyCartProducts = () => {
+  const config = UpsellUtils.getUpsellConfig();
+  const emptyUpsells = config.empty_products;
+
+  if (!emptyUpsells || emptyUpsells.length === 0) return '';
+
+  let html = '';
+
+  emptyUpsells.forEach((product) => {
+    const formattedPrice = UpsellUtils.formatPrice(product.price);
+    const formattedComparePrice = UpsellUtils.formatComparePrice(product.compare_price);
+    const safeTitleForJS = product.product_title.replace(/'/g, "\\'");
+
+    html += `
+      <div class="cart--upsell show">
+        <div class="upsell-product-wrapper upsell-2 ${product.handle}">
+          <div class="upsell-product">
+            <div class="upsell-product-section">
+              <div class="up-product-img">
+                <img
+                  class="w-100 h-auto"
+                  src="${product.variant_image || product.image_url}"
+                  alt="${product.product_title}"
+                  width="75"
+                  height="75"
+                  loading="lazy"
+                >
+              </div>
+              <div class="up-add-cart-option">
+                <div class="up-top">
+                  <div class="up-title">
+                    <h4 class="theme-text font-lausanne fw-600">${product.product_title}</h4>
+                    <div class="up-price" style="align-items:baseline;">
+                      <span class="upsell-price theme-text font-lausanne fw-400" style="font-size:12px;">
+                        ${formattedPrice}
+                      </span>
+                      ${formattedComparePrice ? `
+                        &nbsp;
+                        <span class="upsell-compare-price theme-text font-lausanne fw-400"
+                          style="font-size:10px; text-decoration:line-through; vertical-align:bottom;">
+                          ${formattedComparePrice}
+                        </span>
+                      ` : ''}
+                    </div>
+                  </div>
+                  <form
+                    @submit.prevent
+                    x-ref="product_form_${product.variant_id}_e"
+                    enctype="multipart/form-data"
+                    accept-charset="UTF-8"
+                    id="product_form_${product.variant_id}_e"
+                    class="shopify-product-form"
+                    data-product-id="${product.variant_id}"
+                    action="/cart/add"
+                  >
+                    <input type="hidden" name="id" value="${product.variant_id}">
+                    <input type="hidden" name="quantity" value="1">
+                    <input autocomplete="off" type="hidden" name="discount" value="${product.discount || ''}">
+                    ${product.selling_plan_id ? `
+                      <input type="hidden" name="selling_plan" value="${product.selling_plan_id}">
+                      <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                    ` : `
+                      <input type="checkbox" name="purchase_type" value="one-time" checked class="d-none">
+                    `}
+                    <button
+                      type="button"
+                      class="btn green-btn theme-btn btn-loader"
+                      x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_${product.variant_id}_e, false, '${safeTitleForJS}', $event)"
+                    >
+                      ADD
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+  });
+
+  return html;
+};
+
+    /**
+     * Render upsell products
+     */
+    const renderUpsells = (cart) => {
+      console.log('Cart data:', cart);
+
+      if (!cart || cart.item_count === 0) {
+        const emptyContainer = document.querySelector('.empty-cart-products');
+        if (emptyContainer) {
+          emptyContainer.innerHTML = renderEmptyCartProducts();
+        }
+        return;
+      }
+
+      const upsellContainer = document.querySelector('[data-upsells-container]');
+      if (!upsellContainer) {
+        console.warn('Upsell container not found');
+        return;
+      }
+
+      const config = UpsellUtils.getUpsellConfig();
+      const upsells = config.products;
+
+      if (!upsells || upsells.length === 0) {
+        console.warn('No upsell products configured');
+        return;
+      }
+
+      // Filter out products already in cart
+      const availableUpsells = upsells.filter((upsell) => !UpsellUtils.isProductInCart(cart, upsell.variant_id));
+
+      // Hide upsell heading if no products to show
+      const upsellHeading = document.querySelector('.cart-upsell-heading');
+      if (availableUpsells.length === 0) {
+        if (upsellHeading) {
+          upsellHeading.classList.add('d-none');
+        }
+        upsellContainer.innerHTML = '';
+        return;
+      }
+
+      // Show upsell heading if products are available
+      if (upsellHeading) {
+        upsellHeading.classList.remove('d-none');
+      }
+
+      let upsellHTML = '<div class="cart--upsell show">';
+
+      availableUpsells.forEach((upsell) => {
+        const formattedPrice = UpsellUtils.formatPrice(upsell.price);
+        const formattedComparePrice = UpsellUtils.formatPrice(upsell.compare_price);
+        const safeTitleForJS = upsell.product_title.replace(/'/g, "\\'");
+
+        upsellHTML += `
+      <div class="upsell-product-wrapper upsell-2 ${upsell.handle}">
+        <div class="upsell-product">
+          <div class="upsell-product-section">
+            <div class="up-product-img">
+              <img 
+                class="w-100" 
+                src="${upsell.variant_image || upsell.image_url}" 
+                alt="${upsell.product_title}"
+                loading="lazy"
+              >
+            </div>
+            <div class="up-add-cart-option">
+              <div class="up-top">
+                <div class="up-title">
+                  <h4 class="theme-text font-lausanne fw-600">${upsell.product_title}</h4>
+                  ${
+                    upsell.includes
+                      ? `
+                    <p class="theme-text font-lausanne fw-200 mb-1">
+                      Include: ${upsell.includes}
+                    </p>
+                  `
+                      : ''
+                  }
+                  <div class="up-price" style="align-items: baseline;">
+                    <span class="upsell-price theme-text font-lausanne fw-400" style="font-size: 12px;">
+                      ${formattedPrice}
+                    </span>
+                    ${
+                      formattedComparePrice
+                        ? `
+                      &nbsp;
+                      <span class="upsell-compare-price theme-text font-lausanne fw-400" 
+                            style="font-size: 10px; text-decoration: line-through; vertical-align: bottom;">
+                        ${formattedComparePrice}
+                      </span>
+                    `
+                        : ''
+                    }
+                  </div>
+                </div>
+
+                <form 
+                  @submit.prevent
+                  x-ref="product_form_${upsell.variant_id}"
+                  enctype="multipart/form-data"
+                  accept-charset="UTF-8"
+                  id="product_form_${upsell.variant_id}"
+                  class="shopify-product-form"
+                  data-product-id="${upsell.variant_id}"
+                  action="/cart/add"
+                >
+                  <input type="hidden" name="id" value="${upsell.variant_id}">
+                  <input type="hidden" name="quantity" value="1">
+                  ${
+                    upsell.discount
+                      ? `
+                    <input type="hidden" name="discount" value="${upsell.discount}">
+                  `
+                      : ''
+                  }
+                  ${
+                    upsell.selling_plan_id
+                      ? `
+                    <input type="hidden" name="selling_plan" value="${upsell.selling_plan_id}">
+                    <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                  `
+                      : ''
+                  }
+
+                  <button 
+                    type="button"
+                    class="btn green-btn theme-btn btn-loader"
+                    x-on:click="typeof Purdy !== 'undefined' && Purdy.AddToCartWithDiscount ? Purdy.AddToCartWithDiscount($refs.product_form_${
+                      upsell.variant_id
+                    }, false, '${safeTitleForJS}', $event) : console.error('Purdy.AddToCartWithDiscount not available')"
+                    aria-label="Add ${upsell.product_title} to cart"
+                  >
+                    ADD
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    `;
+      });
+
+      upsellHTML += '</div>';
+      upsellContainer.innerHTML = upsellHTML;
+    };
+
+    // Export functions for global access (if needed)
+    window.UpsellModule = {
+      renderUpsells,
+      renderEmptyCartProducts,
+      getUpsellConfig: UpsellUtils.getUpsellConfig,
+    };
+  </script>
+
+{% schema %}
+{
+  "name": "Cart Drawer US",
+  "settings": [
+    
+  ],
+  "blocks": [
+    {
+      "type": "product",
+      "name": "Cart Upsell Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "customImage",
+          "label": "Add Custom Image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "variant_image",
+          "label": "Choose Variant Image",
+          "visible_if": "{{ block.settings.customImage }}"
+        },
+        {
+          "type": "text",
+          "id": "variant",
+          "label": "Variant ID"
+        },
+        {
+          "type": "checkbox",
+          "id": "subscription",
+          "label": "Add Subscription",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "selling_plan",
+          "label": "Selling Plan",
+          "visible_if": "{{ block.settings.subscription }}"
+        },
+        {
+          "type": "text",
+          "id": "discount",
+          "label": "discount Code"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Upsell Price"
+        },
+        {
+          "type": "text",
+          "id": "compare_price",
+          "label": "Upsell Compare Price"
+        },
+
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "CTA Text"
+        }
+      ]
+    },
+    {
+      "type": "empty_cart",
+      "name": "Empty Cart Upsell Product",
+      "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "checkbox",
+          "id": "customImage",
+          "label": "Add Custom Image",
+          "default": false
+        },
+        {
+          "type": "image_picker",
+          "id": "variant_image",
+          "label": "Choose Variant Image",
+          "visible_if": "{{ block.settings.customImage }}"
+        },
+        {
+          "type": "text",
+          "id": "variant",
+          "label": "Variant ID"
+        },
+        {
+          "type": "checkbox",
+          "id": "subscription",
+          "label": "Add Subscription",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "selling_plan",
+          "label": "Selling Plan",
+          "visible_if": "{{ block.settings.subscription }}"
+        },
+        {
+          "type": "text",
+          "id": "discount",
+          "label": "discount Code"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Upsell Price"
+        },
+        {
+          "type": "text",
+          "id": "compare_price",
+          "label": "Upsell Compare Price"
+        },
+
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "CTA Text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cart Drawer US",
+      "category": "Cart"
+    }
+  ]
+}
+{% endschema %}

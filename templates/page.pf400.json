@@ -1,0 +1,213 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.article-layout",
+  "sections": {
+    "article_400_gWjeEV": {
+      "type": "article-400",
+      "blocks": {
+        "share_XEnnpg": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.instagram.com/purdyandfigg?igsh=MWo1OHUxOTJ6dXpiZg%3D%3D",
+            "share_icon": "shopify://shop_images/Social_64e4d0d8-969d-40cd-a8ac-aa6ebe6b9e18.png",
+            "share_link": "https://purdyandfigg.com/pages/the-cleaning-hack-that-changed-everything",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_tAqntJ": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.tiktok.com/@purdyandfigg?_t=ZN-8wylO6Jc4og&_r=1",
+            "share_icon": "shopify://shop_images/Social_1.png",
+            "share_link": "https://purdyandfigg.com/pages/the-cleaning-hack-that-changed-everything",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_ictGpN": {
+          "type": "share",
+          "settings": {
+            "redirect": false,
+            "redirect_link": "",
+            "share_icon": "shopify://shop_images/Social_2.png",
+            "share_link": "https://purdyandfigg.com/pages/the-cleaning-hack-that-changed-everything",
+            "share_icon_class": "copy-link"
+          }
+        },
+        "press_7ibaEV": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/Daily_Mail.svg"
+          }
+        },
+        "press_etxHAC": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/The_Sunday_Times.svg"
+          }
+        },
+        "press_dmQ8dq": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/Ideal_Home.svg"
+          }
+        },
+        "article_content_fk8hW6": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Tom and I agree on almost nothing when it comes to the house. He’s a “wipe as you go” type. I’m more of a “leave it till the weekend” person. He thinks one product can do everything. I thought you needed a bottle for every surface.</p><p>But this autumn, we’ve both found ourselves raving about the same thing: a simple, natural cleaning spray that’s completely changed the way we tackle our seasonal reset, and for once, we’re not arguing about it.</p>"
+          }
+        },
+        "article_image_mi9WqY": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_02_c13c7b5b-41c4-4099-b993-756a6ac09496.png"
+          }
+        },
+        "article_content_E6D4QX": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>It’s called Counter Clean, a plant-based, all-in-one spray from Purdy & Figg that replaces an entire cupboard of bottles. And for both of us, it’s turned cleaning from a point of tension into something easy (and dare I say it… enjoyable).</p>"
+          }
+        },
+        "article_heading_XH7LWr": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "Tom’s breaking point: <span class=\"article-heading-italic\">“the cupboard was chaos…”</span>"
+          }
+        },
+        "article_content_WwqKkL": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Tom had always been baffled by the jumble of bottles under the sink.</p><p>Tom had always been at his wits' end with the collection of half-empty sprays under the sink. \"It was driving me mental, we had about ten different bottles bursting out of the cupboard and I still never knew which one to use.\"</p>"
+          }
+        },
+        "article_image_TphHMA": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_03_2d8b1545-9c7d-446f-930a-5183efd73042.png"
+          }
+        },
+        "article_content_WKRWB3": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>When our youngest started school this September, Tom decided it was time for a big autumn reset. That’s when he found Purdy & Figg’s Autumn Reset Starter Kit.</p><p>“Honestly, I didn’t think one spray could do everything. But it cut through greasy fingerprints in the kitchen, sorted the dust on the shelves, and left the whole house smelling fresh. I was impressed.”</p>"
+          }
+        },
+        "article_heading_gt9fWG": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "My side of the story: <span class=\"article-heading-italic\">“I used to dread the blitz”</span>"
+          }
+        },
+        "article_content_UcWQy7": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>I’ve always been a “save it all for one big clean” kind of person. The problem? By the time I got round to it, it felt like climbing a mountain.</p><p>But once Purdy & Figg arrived, it was different. The bottle was so stylish we kept it out on the counter, and I started using it for little wipe-downs throughout the day.</p><p>“No chemical stink, no sticky residue, just a fresh, uplifting scent that makes the house feel finished,” I say.</p>"
+          }
+        },
+        "article_image_qBhDk9": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_04_6de34258-468c-4695-83bf-5ce63ef6d504.png"
+          }
+        },
+        "article_content_bmtnFh": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Now, instead of bickering about who cleans what and when, we both just grab the same spray and get on with it.</p>"
+          }
+        },
+        "article_heading_HybJzB": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "Our Autumn Reset Routine (The Hacks That Work For Us)"
+          }
+        },
+        "article_content_RLtEFW": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>When we sat down to plan our autumn reset this year, we realised it wasn’t just about cleaning, it was about making the house feel ready for the season. Here’s what we do together:</p><p><strong>1. Clear and clean</strong></p><ul><li>We both declutter the house first, then blitz surfaces with Purdy & Figg.</li></ul><p><strong>2. Cosy lighting</strong></p><ul><li>Tom’s big on swapping out bright bulbs for warm lamps for an instant mood shift.</li></ul><p><strong>3. Layering textures</strong></p><ul><li>drag out the chunky knits and throws (Tom pretends not to care, but always ends up wrapped in one).</li></ul><p><strong>4. Bringing outdoors in</strong></p><ul><li>We both love houseplants, so we always add to our collection when the temperature dips.</li></ul><p><strong>5. Switch up scents</strong></p><ul><li>Candle, diffusers and Purdy & Figg’s gorgeous Ginger & Citrus scent create the perfect autumn vibe.</li></ul>"
+          }
+        },
+        "article_heading_BFG7Hi": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "<span class=\"article-heading-italic\">“For once, we agree”</span>"
+          }
+        },
+        "article_content_efane7": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Whether it’s Tom wiping down the kitchen after breakfast or me freshening up the bathroom before guests arrive, we’ve both discovered the same thing. One natural spray can replace an entire cupboard of chemical cleaners, making autumn cleaning feel like a fresh start.</p><p>Try the Autumn Reset Starter Kit for yourself for just £23, and see why this clever cleaning hack has already won over thousands of homes this season.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "share_XEnnpg",
+        "share_tAqntJ",
+        "share_ictGpN",
+        "press_7ibaEV",
+        "press_etxHAC",
+        "press_dmQ8dq",
+        "article_content_fk8hW6",
+        "article_image_mi9WqY",
+        "article_content_E6D4QX",
+        "article_heading_XH7LWr",
+        "article_content_WwqKkL",
+        "article_image_TphHMA",
+        "article_content_WKRWB3",
+        "article_heading_gt9fWG",
+        "article_content_UcWQy7",
+        "article_image_qBhDk9",
+        "article_content_bmtnFh",
+        "article_heading_HybJzB",
+        "article_content_RLtEFW",
+        "article_heading_BFG7Hi",
+        "article_content_efane7"
+      ],
+      "custom_css": [],
+      "name": "Article 400",
+      "settings": {
+        "tag": "ADVERTORIAL",
+        "article-heading": "“We Couldn’t Agree on Anything Until This Clever Cleaning Hack”",
+        "article-subheading": "How one £23 autumn cleaning trick finally got us on the same page",
+        "article-info": "By Harriet M. | Friday, 12th September, 2025",
+        "main_image": "shopify://shop_images/Image_01_da36b915-ff56-4ae5-ae10-667d5e9ea187.png",
+        "press_heading": "FEATURED IN PRESS",
+        "explore-heading": "<strong>Try Purdy & Figg</strong> for yourself with the Autumn Reset Starter Kit for <strong>just £23</strong> and start your seasonal clean the easy way.",
+        "explore_image": "shopify://shop_images/Image_05_5a950743-1d31-4e6a-86e7-1dcac92b2518.png",
+        "btn_label": "Explore Offer",
+        "btn_link": "https://purdyandfigg.com/pages/starterkit-offer-seasonal-autumn",
+        "btn_bg": "#0085de",
+        "btn_text_color": "#ffffff",
+        "showancbar": false,
+        "ancbgcolor": "#0a1e1a",
+        "anctxtcolor": "#ffffff",
+        "anctext": "Limited Time Offer: Get 60% off all Purdy & Figg Starter Kits"
+      }
+    },
+    "articel_footer_kFGjeb": {
+      "type": "article-footer",
+      "name": "Article Footer",
+      "settings": {
+        "background-color": "#212121",
+        "text-color": "#bdbdbd",
+        "footer": "© 2025 All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "article_400_gWjeEV",
+    "articel_footer_kFGjeb"
+  ]
+}

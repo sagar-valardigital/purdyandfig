@@ -1,0 +1,703 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "cfce42e2-4ceb-4988-82bc-b5024542f18b": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-2",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Try our best selling festive scent, Frankincense &amp; Myrrh, alongside our three signature blends in this Limited Edition Starter Kit. <p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "4cc01513-34b5-45cf-b953-06211932584a": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-2",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Frankincense &amp; Myrrh (Limited Edition): A luxurious blend reminiscent of cosy winter evenings and the sweet scent of orange candlelight. <p> </p>\nBalancing Floral: An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability. <p> </p>\nUplifting Citrus: A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties. <p> </p>\nGrounding Vetiver: A complex and invigorating scent with wood, earthy notes for a calming and grounding effect."
+          }
+        },
+        "563eeda1-b6c6-4adf-9764-f118bc95a0ea": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-2",
+            "open": "close",
+            "DescriptionHeading": "What's inside the Box?",
+            "description": "1 x FREE Frankincense &amp; Myrrh Counter Clean Eco-Concentrate <p> </p>\n3 x Signature Scents (Floral, Citrus, Vetiver) Counter Clean Eco-Concentrates <p> </p> \n1 x Bottle for Life <p> </p>\n1 x Purdy &amp; Figg Cloth"
+          }
+        },
+        "75b8ac61-26c6-4c7e-9805-3474a2ec0a22": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-limited-edition-copy",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Try our best selling festive scent, Frankincense &amp; Myrrh, alongside our three signature blends in this Limited Edition Starter Kit. <p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "8b257fb8-6a7f-49d5-8420-cb77da99af90": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-limited-edition-copy",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Frankincense &amp; Myrrh (Limited Edition): A luxurious blend reminiscent of cosy winter evenings and the sweet scent of orange candlelight. <p> </p>\nBalancing Floral: An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability. <p> </p>\nUplifting Citrus: A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties. <p> </p>\nGrounding Vetiver: A complex and invigorating scent with wood, earthy notes for a calming and grounding effect."
+          }
+        },
+        "cf2c4c7c-daa6-46e5-9525-ebe906802484": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-limited-edition-copy",
+            "open": "close",
+            "DescriptionHeading": "What's inside the Box?",
+            "description": "1 x FREE Frankincense &amp; Myrrh Counter Clean Eco-Concentrate <p> </p>\n3 x Signature Scents (Floral, Citrus, Vetiver) Counter Clean Eco-Concentrates <p> </p> \n1 x Bottle for Life <p> </p>\n1 x Purdy &amp; Figg Cloth"
+          }
+        },
+        "3a5e3a5b-be72-441a-9282-c28e9ecd4600": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "frankincense-myrrh-variety-kit-gift-wrap",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Try our best selling festive scent, Frankincense &amp; Myrrh, alongside our three signature blends in this Limited Edition Starter Kit.\n <p> </p>\nFREE Gift Wrap for the perfect ready-to-give Christmas Gift."
+          }
+        },
+        "3f37872a-87c0-45c5-bae0-6cb430e16f1c": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "frankincense-myrrh-variety-kit-gift-wrap",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Frankincense &amp; Myrrh (Limited Edition): A luxurious blend reminiscent of cosy winter evenings and the sweet scent of orange candlelight. <p> </p>\nBalancing Floral: An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability. <p> </p>\nUplifting Citrus: A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties. <p> </p>\nGrounding Vetiver: A complex and invigorating scent with wood, earthy notes for a calming and grounding effect."
+          }
+        },
+        "254a8be1-aafb-4ecc-a31c-fc29e7e93e4f": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "frankincense-myrrh-variety-kit-gift-wrap",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "1 x FREE Frankincense &amp; Myrrh Counter Clean Eco-Concentrate <p> </p>\n3 x Signature Scents (Floral, Citrus, Vetiver) Counter Clean Eco-Concentrates <p> </p> \n1 x Bottle for Life <p> </p>\n1 x Purdy &amp; Figg Cloth"
+          }
+        },
+        "41f21b4d-d560-4f0c-9312-27d40373675d": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-a",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Try our best selling festive scent, Frankincense &amp; Myrrh, alongside our three signature blends in this Limited Edition Starter Kit. <p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "6c105c18-eb6e-4ced-b748-1cb9b9506909": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-a",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Frankincense &amp; Myrrh (Limited Edition): A luxurious blend reminiscent of cosy winter evenings and the sweet scent of orange candlelight. <p> </p>\nBalancing Floral: An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability. <p> </p>\nUplifting Citrus: A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties. <p> </p>\nGrounding Vetiver: A complex and invigorating scent with wood, earthy notes for a calming and grounding effect."
+          }
+        },
+        "ffc501da-132e-45fa-b3fc-ed91e8cbe0c8": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-a",
+            "open": "close",
+            "DescriptionHeading": "What's inside the box?",
+            "description": "1 x FREE Frankincense &amp; Myrrh Counter Clean Eco-Concentrate <p> </p>\n3 x Signature Scents (Floral, Citrus, Vetiver) Counter Clean Eco-Concentrates <p> </p> \n1 x Bottle for Life <p> </p>\n1 x Purdy &amp; Figg Cloth <p> </p>\nFREE Gift Wrap Included"
+          }
+        }
+      },
+      "block_order": [
+        "cfce42e2-4ceb-4988-82bc-b5024542f18b",
+        "4cc01513-34b5-45cf-b953-06211932584a",
+        "563eeda1-b6c6-4adf-9764-f118bc95a0ea",
+        "75b8ac61-26c6-4c7e-9805-3474a2ec0a22",
+        "8b257fb8-6a7f-49d5-8420-cb77da99af90",
+        "cf2c4c7c-daa6-46e5-9525-ebe906802484",
+        "3a5e3a5b-be72-441a-9282-c28e9ecd4600",
+        "3f37872a-87c0-45c5-bae0-6cb430e16f1c",
+        "254a8be1-aafb-4ecc-a31c-fc29e7e93e4f",
+        "41f21b4d-d560-4f0c-9312-27d40373675d",
+        "6c105c18-eb6e-4ced-b748-1cb9b9506909",
+        "ffc501da-132e-45fa-b3fc-ed91e8cbe0c8"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "26b90ab9-3bec-4eb2-be5a-c85d13642910": {
+      "type": "review-slider",
+      "blocks": {
+        "fed71fbc-9522-42c9-a764-fd30ff1b9ca9": {
+          "type": "text",
+          "settings": {
+            "username": "Posy",
+            "heading": "",
+            "review": "\"It just makes me feel good! It also makes my kitchen island look and smell better than anything else I've tried before.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "2e09ed65-3166-4334-ae98-471852c001e0": {
+          "type": "text",
+          "settings": {
+            "username": "Emma",
+            "heading": "",
+            "review": "\"I love using Purdy & Figg as it's just one simple product that does so much, stops the clutter of products & it's kinder to the environment.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "b6efc711-000c-4e24-8d54-937abed5e177": {
+          "type": "text",
+          "settings": {
+            "username": "Flora",
+            "heading": "",
+            "review": "\"A weird transformation has taken place.…. I look forward to wiping the surfaces of my kitchen after supper. What have you done to me?\"",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "fed71fbc-9522-42c9-a764-fd30ff1b9ca9",
+        "2e09ed65-3166-4334-ae98-471852c001e0",
+        "b6efc711-000c-4e24-8d54-937abed5e177"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": false,
+        "className": "p-reviews whiteDots",
+        "Review-Count": "",
+        "bgColor": "#3d5065",
+        "heading": "",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "9d2abaa4-f8b4-4b9f-8f07-b5e991b9e1b6": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "f926d722-e842-4db3-8680-e7321fbb23a8": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "54ed3d5e-9171-479c-80f9-c300cd1c3dc5": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "d1c93f40-69ac-4dbb-838f-fd1d1f2c3d2c": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        }
+      },
+      "block_order": [
+        "f926d722-e842-4db3-8680-e7321fbb23a8",
+        "54ed3d5e-9171-479c-80f9-c300cd1c3dc5",
+        "d1c93f40-69ac-4dbb-838f-fd1d1f2c3d2c"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "d-none",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "image": "shopify://shop_images/Request_2.1_desktop.png",
+        "mimage": "shopify://shop_images/Request_2.1_mobiel_8228443f-9267-4dd0-ae52-cd037837a10d.png",
+        "details": "<p></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "b9b5c861-fb60-45fc-aea5-d3570615c757": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "370b2427-779d-4210-b4f8-25772a2cc4de": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "23678f71-6f2b-4970-8cc8-17916fbf7e70": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "cf204f0f-7ce3-48c3-9dfd-31318a65f811": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        }
+      },
+      "block_order": [
+        "370b2427-779d-4210-b4f8-25772a2cc4de",
+        "23678f71-6f2b-4970-8cc8-17916fbf7e70",
+        "cf204f0f-7ce3-48c3-9dfd-31318a65f811"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "image": "shopify://shop_images/F_M-PDP-Icons.jpg",
+        "mimage": "shopify://shop_images/FM-Icons-mob_copy_ecd5b081-8728-4074-a17c-bb8e30a5237f.jpg",
+        "details": "",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "1654230729996fed8d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 5,
+        "alignment": "justify-content-start",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "15",
+        "mainheading": "A scent that transforms your home",
+        "heading": "The Best Essential Oils",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "mobileShow": false,
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "cdb6a624-8e86-4d7d-ab6a-25b0aa7d6237": {
+      "type": "our-blends",
+      "blocks": {
+        "4bb01e3f-01a2-47da-b78d-bed15bfbdc37": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "theme-text",
+            "nopopup": true,
+            "heading": "New Bestselling Scents",
+            "detail": "",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": false,
+            "PoopupIconCode": ""
+          }
+        },
+        "c140274e-41fd-4098-98ec-9b8bc347c0b5": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/fnm_block5.png",
+            "heading": "Frankincense & Myrrh",
+            "detail": "A luxuriously comforting, warm and citrusy blend with woody undertones – just like a cosy festive evening at home. <p>Tap to Discover more ></p>",
+            "pop_heading": "Frankincense & Myrrh",
+            "pop_detail": "Top Notes  Sweet Orange - a sweet, citrusy and uplifting aroma.   Pink Grapefruit - a sweet, tangy and cheerful aroma.   Middle Notes  Coriander Seed - a herbaceous, spicy, woody and warm scent.    Base Notes  Frankincense - a fresh-smelling essential oil with balsamic and resinous tones.   Myrrh - a warm and woody-earthy aroma.  Vetiver - a smoky and earthy oil with a slight herbaceous aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_7865474e-6fcc-412d-8da7-d03022fc2e77.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Pink_Grapefruit.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Frankincense.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Myrrh.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Myrrh.png?v=1697437755\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "0b570a7e-a2a7-49b4-844c-cce68caa074c": {
+          "type": "text",
+          "settings": {
+            "popup_no": "2",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/CNN_8.png",
+            "heading": "Balancing Floral",
+            "detail": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots <p> Tap to Discover More ></p>",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes   Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.   Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   Middle Notes   Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        },
+        "1a6bfe6d-9901-49f9-b8d8-11bea6b54e12": {
+          "type": "text",
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/CNN_11.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects. <p> Tap to Discover More ></p>",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes    Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.    Middle Notes     Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.   Base Notes     Vetiver A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "79bbf979-e7c7-4eb2-8d54-187539b17314": {
+          "type": "text",
+          "settings": {
+            "popup_no": "4",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/CNN_10.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves <p> Tap to Discover More ></p>",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Known for their cheerful aromas and mood-enhancing properties   Top Notes    Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.    Grapefruit Peel - An energy-boosting with a sweet, fruity scent.     Middle Notes     Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/grapefruit.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_orange_f71ff31f-0da6-41e8-8a6b-2f47ec7e7c4b.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "7f8f22f0-a9cc-4844-ac50-cd185ae1e518": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/O_C.jpg",
+            "heading": "Orange & Clove",
+            "detail": "",
+            "pop_heading": "Orange & Clove",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        }
+      },
+      "block_order": [
+        "4bb01e3f-01a2-47da-b78d-bed15bfbdc37",
+        "c140274e-41fd-4098-98ec-9b8bc347c0b5",
+        "0b570a7e-a2a7-49b4-844c-cce68caa074c",
+        "1a6bfe6d-9901-49f9-b8d8-11bea6b54e12",
+        "79bbf979-e7c7-4eb2-8d54-187539b17314",
+        "7f8f22f0-a9cc-4844-ac50-cd185ae1e518"
+      ],
+      "custom_css": [
+        ".heading-2 {color: #3d5065; font-family: \"Value-Serif-Pro\"; font-size: 30px;}",
+        ".blends-wrapper {display: grid !important;}"
+      ],
+      "settings": {
+        "class": "",
+        "bgColor": "#e3f3fe",
+        "heading": "Get to know our blends:"
+      }
+    },
+    "e02d8316-44b9-4e26-804d-7687aae3977a": {
+      "type": "landing-blocks",
+      "blocks": {
+        "9a966d3b-3229-4900-a331-9b89035788fd": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9049.png",
+            "rounded": true,
+            "heading": "Opulent Scent, All-Natural Ingredients",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "d94fc246-5ce3-43a1-a3b0-c8987c0098cb": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9050.png",
+            "rounded": true,
+            "heading": "Greet Guests with Festive Fragrance",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "80c397e4-c22d-4435-b5d1-eee752c24eca": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9051.png",
+            "rounded": true,
+            "heading": "A Spa-like Experience at Home",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1f6c95f6-7ec8-4eba-ab2e-7ff468d3ab8e": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9052.png",
+            "rounded": true,
+            "heading": "A Toxin-free Christmas Clean ",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "9a966d3b-3229-4900-a331-9b89035788fd",
+        "d94fc246-5ce3-43a1-a3b0-c8987c0098cb",
+        "80c397e4-c22d-4435-b5d1-eee752c24eca",
+        "1f6c95f6-7ec8-4eba-ab2e-7ff468d3ab8e"
+      ],
+      "custom_css": [
+        ".heading-2 {color: #3d5065; font-family: \"Value-Serif-Pro\"; font-size: 35px;}",
+        ".blends-wrapper {display: grid !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#f8941c",
+        "sectionTextColor": "#ffffff",
+        "heading": "Get in the Spirit: Limited Edition Festive Scent, Same Efficient Cleaning",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "b75aae2e-0259-4fbc-b226-25c828049e04": {
+      "type": "table",
+      "custom_css": [
+        ".heading-2 {color: #3d5065; font-family: \"Value-Serif-Pro\"; font-size: 35px;}",
+        ".blends-wrapper {display: grid !important;}"
+      ],
+      "settings": {}
+    },
+    "90705208-2c45-412a-ba45-68b3d813da78": {
+      "type": "faq-section",
+      "blocks": {
+        "a89f47bc-90ad-4dd8-b204-62ce88a093b2": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Do I have to sign up for a subscription?",
+            "faq-ans": "<p>No - all our products can be purchased as one-off orders by selecting ‘One Time Purchase’ option before checking out. We recommend opting to subscribe to get the best value for money. </p>"
+          }
+        },
+        "e96a2d85-84a2-443d-946e-85e4e29541d1": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How long does delivery usually take?",
+            "faq-ans": "<p>We aim to ship all orders from our UK factory within 48 hours of receiving them. You will receive an email with tracking information as soon as your order has been dispatched. Depending on the delivery method you choose, orders should arrive 24-48 hours from the time of dispatch. We offer free standard delivery on all orders over £40. </p>"
+          }
+        },
+        "d429c9e6-f87a-4b22-b7bb-a4166f81a4a8": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Which surfaces is Counter Clean suitable for? ",
+            "faq-ans": "<p>Counter Clean can be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces. As always, we recommend patch testing on any particularly sensitive or precious surfaces that you might be concerned about. Spray onto a cloth and wipe a small patch to see results. </p>"
+          }
+        },
+        "5b9c1a88-5f02-4de9-baa0-064e369300d4": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How do I use the concentrate?",
+            "faq-ans": "<p>Simply pour the whole 20ml bottle into your Bottle for Life and fill to the top (just below the neck) with ordinary tap water. Give the bottle a gentle shake to combine, then enjoy your uplifting clean! </p>"
+          }
+        },
+        "39cc195a-313d-49d0-ae6d-346020ef89cf": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use around pets? ",
+            "faq-ans": "<p>Our products are safe to use around dogs and other pets, however, it's best not to use them to clean beds or food bowls without rinsing afterwards. Also, don't spray it directly on them (not that you would!). If you are worried about allergies, do contact your vet. Finally, if you have pet birds, you will know that they are particularly sensitive to airborne substances, so it is best to take them out of the room while you clean.</p>"
+          }
+        },
+        "05485ee1-1de8-45a2-9243-0bcc5e04808e": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this product Cruelty Free? ",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "62c9e104-64ea-4073-aa56-e762d04acab2": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is Counter Clean antibacterial? ",
+            "faq-ans": "<p>Counter Clean does not contain specific antibacterial agents. It works by actively removing grease, grime and dirt along with bacteria, viruses and mould to create a healthy home. Whilst antibacterial products will kill bacteria (if left to work for the appropriate amount of time), they won’t remove the bacteria from the surface. You wouldn’t wash your body with strong, highly toxic products every two weeks and it’s the same concept with cleaning; use a gentle cleaner little and often. For more information, read Dr Anna’s blog <a href=\"https://purdyandfigg.com/blogs/natural-tips-and-tricks/myth-busting-with-dr-anna-we-need-antibacterial-products-to-clean-properly\" target=\"_blank\" title=\"https://purdyandfigg.com/blogs/natural-tips-and-tricks/myth-busting-with-dr-anna-we-need-antibacterial-products-to-clean-properly\">here</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "a89f47bc-90ad-4dd8-b204-62ce88a093b2",
+        "e96a2d85-84a2-443d-946e-85e4e29541d1",
+        "d429c9e6-f87a-4b22-b7bb-a4166f81a4a8",
+        "5b9c1a88-5f02-4de9-baa0-064e369300d4",
+        "39cc195a-313d-49d0-ae6d-346020ef89cf",
+        "05485ee1-1de8-45a2-9243-0bcc5e04808e",
+        "62c9e104-64ea-4073-aa56-e762d04acab2"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "1654234422b9cdd91c": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": true,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 3,
+        "alignment": "justify-content-end",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "25",
+        "mainheading": "Welcome to a chemical-free cleaning revolution",
+        "heading": "Reusable Glass Bottles",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "mobileShow": false,
+        "textcolor": "#ffffff",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165423535626bc9759": {
+      "type": "table",
+      "disabled": true,
+      "settings": {}
+    },
+    "1654234744e17a4ce6": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-bottom",
+        "spacem": "250",
+        "mainheading": "",
+        "heading": "Two women on a mission",
+        "details": "<p>Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.</p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165423464702cd9638": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Made by a PHD Scientist, NHS Nurse and Horticulturist",
+        "image": "shopify://shop_images/p-2.png",
+        "details": "<p>Dr Anna Stastanova PHD and Honorary Research Fellow in Surfactant Chemistry is responsible for the worlds most advanced scent extraction ever achieved in a cleaning product. Professional and multi-award-winning Horticultralist Charlotte Figg has created the essential oil blends as a culmination of 30 years of work.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16542346954792a369": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "Manufactured in the UK",
+        "image": "shopify://shop_images/poster-2.png",
+        "details": "<p>We manufacture Purdy & Figg Eco-Concentrates in England, where we are subject to stringent health regulations. Every Purdy & Figg Eco-Concentrate is manufactured in a state of the art laboratory in England. Rest easy knowing we don’t cut corners. Your safety is important to us.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "26b90ab9-3bec-4eb2-be5a-c85d13642910",
+    "product-recommendations",
+    "9d2abaa4-f8b4-4b9f-8f07-b5e991b9e1b6",
+    "b9b5c861-fb60-45fc-aea5-d3570615c757",
+    "1654230729996fed8d",
+    "cdb6a624-8e86-4d7d-ab6a-25b0aa7d6237",
+    "e02d8316-44b9-4e26-804d-7687aae3977a",
+    "b75aae2e-0259-4fbc-b226-25c828049e04",
+    "90705208-2c45-412a-ba45-68b3d813da78",
+    "1654234422b9cdd91c",
+    "165423535626bc9759",
+    "1654234744e17a4ce6",
+    "165423464702cd9638",
+    "16542346954792a369",
+    "16644285387cfa3d71"
+  ]
+}

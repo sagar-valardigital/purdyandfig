@@ -1,0 +1,517 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <style>
+      @font-face {font-family: 'Value-Medium-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-med-fixed.woff?v=1716379982") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+
+      @font-face {font-family: 'Value-Sans-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-sans-fixed.woff?v=1716380462") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+
+      @font-face {font-family: 'Value Serif';src: url({{'ValueSerifPro-Bold.woff2' | asset_url }}) format('woff2'), url({{'ValueSerifPro-Bold.woff' | asset_url }}) format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+
+      @font-face {font-family: 'Value-Sans';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/ninja_Value.woff?v=1675460636") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Serif-Pro';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Serif-Pro-Regular.woff?v=1675460754") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Bold';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-bold.woff?v=1692609179") format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Medium';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Medium.woff?v=1699626333") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+      .value-medium{font-family: 'Value-Medium';}
+    </style>
+    {% if request.path contains 'a/account' %}
+      <style>
+        #shopify-section-announcement-bar {
+          display:none;
+        }
+      </style>
+    {% endif %}
+
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+    {{ content_for_header }}
+
+    <link rel="stylesheet" href="{{'fontawesome_optimised.min.css' | asset_url}}">
+    <link rel="stylesheet" href="{{'fa-light.min.css' | asset_url}}">
+   <!--  <link rel="stylesheet" href="{{'fontawesome-all_old.css' | asset_url}}"> -->
+    <link rel="stylesheet" href="{{'theme.min.css' | asset_url}}">
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+
+    {% if product.tags contains 'no_follow' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% if request.path contains 'collections/all' %}
+      <script>
+        window.location.href = '/collections';
+      </script>
+    {% endif %}
+
+    {% if request.path contains 'cart' %}
+      <script>
+        // Redirect user from the /cart page back to the homepage
+        window.location.href = '/';
+      </script>
+    {% endif %}
+
+    {% if request.path contains '/' %}
+      <script>
+        // Get the current domain and path
+        let currentDomain = window.location.protocol + '//' + window.location.host;
+
+        // Check if the user has been redirected from a page with a /cart path
+        if (document.referrer === currentDomain + '/cart') {
+          document.addEventListener('DOMContentLoaded', () => {
+            // Code inside this block will run after the page has fully loaded
+            setTimeout(() => {
+              // Toggle the cart drawer for them
+              window.dispatchEvent(new Event('toggle-cart'));
+            }, 500);
+          });
+        }
+      </script>
+    {% endif %}
+
+    <!-- Begin: Northbeam pixel -->
+    <script>
+      (function () {
+        var r;
+        ((n = r = r || {}).A = 'identify'),
+          (n.B = 'trackPageView'),
+          (n.C = 'fireEmailCaptureEvent'),
+          (n.D = 'fireCustomGoal'),
+          (n.E = 'firePurchaseEvent');
+        var n = '//j.northbeam.io/ota-sp/d7459989-f379-4317-bb15-f2f712fd1f27.js';
+        function t(n) {
+          for (var e = [], r = 1; r < arguments.length; r++) e[r - 1] = arguments[r];
+          a.push({ fnName: n, args: e });
+        }
+        var a = [],
+          e =
+            (((e = { _q: a })[r.A] = function (n, e) {
+              return t(r.A, n, e);
+            }),
+            (e[r.B] = function () {
+              return t(r.B);
+            }),
+            (e[r.C] = function (n, e) {
+              return t(r.C, n, e);
+            }),
+            (e[r.D] = function (n, e) {
+              return t(r.D, n, e);
+            }),
+            (e[r.E] = function (n) {
+              return t(r.E, n);
+            }),
+            (window.Northbeam = e),
+            document.createElement('script'));
+        (e.async = !0), (e.src = n), document.head.appendChild(e);
+      })();
+    </script>
+    <!-- End: Northbeam pixel -->
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function (w, d, s, l, i) {
+        w[l] = w[l] || [];
+        w[l].push({ 'gtm.start': new Date().getTime(), event: 'gtm.js' });
+        var f = d.getElementsByTagName(s)[0],
+          j = d.createElement(s),
+          dl = l != 'dataLayer' ? '&l=' + l : '';
+        j.async = true;
+        j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+        f.parentNode.insertBefore(j, f);
+      })(window, document, 'script', 'dataLayer', 'GTM-M8483VP');
+    </script>
+    <!-- End Google Tag Manager -->
+    {% include 'talkable-partial' %}
+
+    <!-- Skio Redirect Native Account Pages -->
+    <script>
+      if (
+       {% if localization.market.handle == 'en-us' %}
+         window.location.pathname.startsWith('/en-us/account') &&
+       {% else %}
+         window.location.pathname.startsWith('/account') &&
+       {% endif %}
+         !window.location.href.includes('?return_url=/a/account/shopify-login')
+       ) {
+       {% if localization.market.handle == 'en-us' %}
+         window.location.href = '{{ routes.root_url }}/a/account/login';
+       {% else %}
+         window.location.href = '{{ routes.root_url }}a/account/login';
+       {% endif %}
+       }
+    </script>
+
+    <!-- Skio Hide Link To Account Page -->
+    <style>
+      a[href="/account?full_order_history=1"] {
+        display: none;
+      }
+       .market-place-currency::before {
+         content: "{{ localization.country.currency.symbol }}";
+      }
+    </style>
+
+    {% if template.name == 'product' %}
+      {% if product.handle == 'eco-concentrates-surface-cleaner-starter-kit-d'
+        or product.handle == 'ultimate-cleaning-kit'
+        or product.handle == 'refill-booster-packs'
+        or product.handle == 'hand-body-wash'
+        or product.handle == '1-year-supply-eco-concentrate-cleaner'
+        or product.handle == 'the-complete-starter-kit-1'
+        or product.handle == 'seasonal-starter-kit-autumn'
+        or product.handle == 'seasonal-starter-kit-spring-1'
+        or product.handle == 'seasonal-refill-pack-spring'
+        or product.handle == 'seasonal-refill-booster-pack-autumn'
+      %}
+        <script type="text/javascript">
+          const getproductHandle = '{{ product.handle }}';
+          const searchParams = new URLSearchParams(window.location.search);
+          const searchParamsString = searchParams.toString();
+          const queryStrings = searchParamsString ? '?' + searchParamsString : '';
+
+          console.log('Query strings', queryStrings);
+
+          if (getproductHandle == 'eco-concentrates-surface-cleaner-starter-kit-d') {
+            window.location.href = `${window.location.origin}/pages/starterkit-offer` + queryStrings;
+          } else if (getproductHandle == 'ultimate-cleaning-kit') {
+            window.location.href = `${window.location.origin}/pages/completestarterkit` + queryStrings;
+          } else if (getproductHandle == 'refill-booster-packs') {
+            window.location.href =
+              `${window.location.origin}` + queryStrings + (searchParamsString ? '&refills' : '?refills');
+          } else if (getproductHandle == 'seasonal-refill-pack-spring') {
+            window.location.href =
+              `${window.location.origin}` + queryStrings + (searchParamsString ? '&seasonal' : '?seasonal');
+          } else if (getproductHandle == 'seasonal-starter-kit-spring-1') {
+            window.location.href = `${window.location.origin}/pages/starterkit-offer-seasonal-spring` + queryStrings;
+          } else if (getproductHandle == 'the-complete-starter-kit-1') {
+            window.location.href = `${window.location.origin}/pages/completestarterkit` + queryStrings;
+          } else if (getproductHandle == 'seasonal-starter-kit-autumn') {
+            window.location.href = `${window.location.origin}/pages/starterkit-offer-seasonal-autumn` + queryStrings;
+          } else if (getproductHandle == 'seasonal-refill-booster-pack-autumn') {
+            window.location.href =
+              `${window.location.origin}` + queryStrings + (searchParamsString ? '&seasonal' : '?seasonal');
+          } else {
+            window.location.href = `${window.location.origin}` + queryStrings + '#starterkit-product';
+          }
+        </script>
+      {% endif %}
+    {% endif %}
+
+    {% if template.suffix == 'Our Story' %}
+      <link rel="stylesheet" href="{{ 'our-story-reskin.css' | asset_url }}">
+    {% endif %}
+
+    {% if page.handle == 'reviews' %}
+      <link rel="stylesheet" href="{{ 'reviews-reskin.css' | asset_url }}">
+    {% endif %}
+
+    <!-- End cookieyes banner -->
+    {% if localization.market.handle == 'en-us' %}
+      <script type="text/javascript">
+        function updateSubscriptionBanner() {
+            if (window.location.href.includes('a/account')) {
+                const subscriptionBanner = document.querySelector('img[alt="Subscription banner"]');
+
+                if (subscriptionBanner) {
+                    subscriptionBanner.src = '{{ settings.skio_banner | image_url  }}';
+
+                    const parentLink = subscriptionBanner.parentElement;
+                    if (parentLink && parentLink.tagName.toLowerCase() === 'a') {
+                        parentLink.href = '{{ settings.banner_link }}';
+                        {% if settings.show_banner == false %}
+                          parentLink.style.display = "none";
+                        {% endif %}
+                        console.log('Parent link URL updated successfully');
+                    }
+
+                    console.log('Subscription banner image updated successfully');
+                    return true;
+                } else {
+                    console.log('Image with alt="Subscription banner" not found');
+                    return false;
+                }
+            } else {
+                console.log('Current page does not contain "a/account" in URL');
+                return true;
+            }
+        }
+
+        function watchForApiCalls() {
+            const originalFetch = window.fetch;
+            window.fetch = function(...args) {
+                const url = args[0];
+                const promise = originalFetch.apply(this, args);
+                if (typeof url === 'string' &&
+                    (url.includes('skio.com') || url.includes('subscription'))) {
+                    console.log('Skio API call detected:', url);
+                    promise.then(() => {
+                        setTimeout(updateSubscriptionBanner, 500);
+                    });
+                }
+
+                return promise;
+            };
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Starting Skio content detection...');
+
+            setTimeout(updateSubscriptionBanner, 10);
+
+            watchForApiCalls();
+
+            setTimeout(updateSubscriptionBanner, 2000);
+        });
+      </script>
+    {% endif %}
+    {% if localization.market.handle == 'en-us' and page.metafields.custom.hide_from_us %}
+      <script>
+        window.location.href = '{{ routes.root_url }}';
+      </script>
+    {% endif %}
+
+    {% if request.path contains '/a/account/login' %}
+      <style>
+        #skio-root .KO4.l7T.zI7.iyn.Hsu {
+          padding-left: 20px !important;
+          padding-right: 20px !important;
+        }
+      </style>
+    {% endif %}
+
+    <!-- Cart improvement snippets -->
+    {% render 'selling-plan-toggle' %}
+    {% render 'cart-qty-guard' %}
+  </head>
+  <script src="{{ 'alpine.min.js' | asset_url}}" defer></script>
+  {% render 'skio-manage-subscription-link' -%}
+  {%- render 'skio-head' %}
+  <body
+    data-currency="{{ localization.country.currency.iso_code }}"
+    data-locale="{{ localization.market.handle }}"
+    data-template="{{ template.name }}"
+    data-template-name="{{ template.suffix }}"
+    id="body"
+    data-page="{{ request.path | handle }}"
+    class="
+      m-0 {% if template.suffix == 'multi-variety-product-xma' %}multi-variety-product {% endif %}{{ template.suffix }} {{ template.name }} {% if template.name == "" %} {% endif %} {% if template.name == "index" %}home-page  pf-173-reskin-homepage{%endif%} {% if template contains 'collection' %}
+          collection-page
+      {% endif %}
+    "
+  >
+    {% if localization.market.handle != 'en-us' %}
+      {% if template.name == 'collection' and collection.handle == 'black-friday-vip' %}
+      {% elsif template.suffix == '329' %}
+        {% section 'announcement-bar-329' %}
+      {% elsif template.suffix == 'pf378' %}
+        {% section 'announcement-bar-378' %}
+      {% elsif template.suffix == 'pf431-home-lp' %}
+        {% section 'announcement-bar-431' %}
+      {% else %}
+        {% section 'announcement-bar-slider' %}
+      {% endif %}
+      <div class="position-relative pf-header-wrapper top-sticky annoucment_bar_2 sticky">
+        {% section 'header' %}
+      </div>
+    {% endif %}
+    {% if settings.us_store or localization.market.handle == 'en-us' %}
+      {% sections 'announcement-us-bar' %}
+      <div class="position-relative pf-header-wrapper top-sticky annoucment_bar_2 sticky">
+        {% sections 'header-us-shop' %}
+      </div>
+    {% endif %}
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+
+      {% if request.path contains '/a/account/login' %}
+        {% render 'join-today-skio' %}
+      {% endif %}
+    </main>
+
+    {% section 'footer-us' %}
+
+    <div class="cart-drawer-wrapper-sections legacy-cart">
+      {% section 'cart-drawer-us' %}
+    </div>
+
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    </ul>
+
+    <script>
+      document.body.addEventListener('submit', (e) => {
+        const checkoutForm = e.target.closest('form[name="checkout_form"]');
+        if (!checkoutForm) return;
+
+        const checkoutBtn = checkoutForm.querySelector('.checkout-btn');
+        if (checkoutBtn) {
+          setTimeout(function () {
+            checkoutBtn.classList.remove('loading');
+          }, 300);
+        }
+      });
+    </script>
+
+    <script src="{{ 'theme.min.js' | asset_url }}" async></script>
+
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {% render 'ga4' %}
+    {% if request.path contains '/a/account' %}
+      {{ 'skio-customer-portal.css' | asset_url | stylesheet_tag }}
+      <script src="{{ 'skio-customer-portal.js' | asset_url }}"></script>
+    {% endif %}
+
+    <!-- Podscribe pixel -->
+    <script>
+      (function (w, d) {
+        var id = 'podscribe-capture',
+          n = 'script';
+        var e = d.createElement(n);
+        e.id = id;
+        e.async = true;
+        e.src = 'https://d34r8q7sht0t9k.cloudfront.net/tag.js';
+        var s = d.getElementsByTagName(n)[0];
+        s.parentNode.insertBefore(e, s);
+        e.addEventListener('load', function () {
+          w.podscribe('init', { user_id: '30a6f746-1c4d-44d2-8996-3528316e9313', advertiser: 'purdyfiggltd2' });
+          w.podscribe('view');
+        });
+      })(window, document);
+    </script>
+    <!-- /Podscribe pixel -->
+
+    {% render 'ga4-tracking' %}
+    {% if request.path contains '/a/account/' %}
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          function handleSkioElements() {
+            let done = true;
+
+            // 1. Convert <p> to <a>
+            const pTag = document.querySelector('p[data-skio-name="login-password-link-prompt"]');
+            if (pTag) {
+              const aTag = document.createElement('a');
+              aTag.innerHTML =
+                "<span style='font-weight:400;'>Having trouble getting your login code? <b style='color:#000;font-weight:700;'>Click here</b> to contact customer support.</span>";
+              aTag.href = 'mailto:info@us.purdyandfigg.com';
+              aTag.className = pTag.className;
+              aTag.setAttribute('data-skio-name', 'login-password-link-prompt');
+              aTag.style.color = '#222222';
+
+              pTag.replaceWith(aTag);
+            } else {
+              if (!document.querySelector('a[data-skio-name="login-password-link-prompt"]')) {
+                done = false;
+              }
+            }
+
+            // 2. Update element (remove class + add margin + update href)
+            const linkEl = document.querySelector('[data-skio-name="login-password-link"]');
+            if (linkEl) {
+              // remove class
+              if (linkEl.classList.contains('whitespace-nowrap')) {
+                linkEl.classList.remove('whitespace-nowrap');
+              }
+
+              // add margin-top
+              linkEl.style.marginTop = '10px';
+              linkEl.style.display = 'block';
+              // update href to homepage
+              linkEl.setAttribute('href', 'https://us.purdyandfigg.com/'); // Shopify homepage
+              linkEl.innerHTML =
+                'Not a member yet? <b>Join today</b> and get full access to our most exclusive offers and scents';
+
+              var old_element = document.querySelector('a[data-skio-name="login-password-link"]');
+              var new_element = old_element.cloneNode(true);
+              old_element.parentNode.replaceChild(new_element, old_element);
+            } else {
+              done = false;
+            }
+
+            // 3. Apply CSS to login page
+            const loginPage = document.querySelector('[data-skio-name="login-page"]');
+            if (loginPage) {
+              loginPage.style.maxWidth = '400px';
+              loginPage.style.margin = '0 auto';
+            } else {
+              done = false;
+            }
+
+            return done;
+          }
+
+          if (handleSkioElements()) return;
+
+          const observer = new MutationObserver(() => {
+            const isDone = handleSkioElements();
+            if (isDone) {
+              observer.disconnect();
+            }
+          });
+
+          observer.observe(document.body, {
+            childList: true,
+            subtree: true,
+          });
+        });
+      </script>
+    {% endif %}
+    {% if template.suffix == 'pf490-variant' %}
+      <script>
+        const storefrontUserId = localStorage.getItem('storefrontUserId');
+        if (storefrontUserId) {
+          const memberLinks = document.querySelectorAll('a.menu_members-offers');
+
+          // Update each link's href and innerText
+          memberLinks.forEach((link) => {
+            link.href = '/pages/memberoffer-winter-collection';
+          });
+        } else {
+          const memberLinks = document.querySelectorAll('a.menu_members-offers');
+          memberLinks.forEach((link) => {
+            link.href = '/pages/member-zone?view=pf513';
+          });
+        }
+      </script>
+    {% endif %}
+  </body>
+</html>

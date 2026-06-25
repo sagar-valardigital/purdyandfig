@@ -1,0 +1,249 @@
+.main-page-title {
+  display: none !important;
+}
+.rte.theme-text {
+  margin-top: 150px;
+}
+.oke-w-recommendsModule .oke-w-recommendsModule-value,
+.oke-w-recommendsModule .oke-w-recommendsModule-text,
+.oke-w-ratingAverageModule-rating-average,
+.oke-reviewContent-title {
+  color: #212121 !important;
+  font-size: 24px !important;
+  line-height: 36px !important;
+  font-weight: 400 !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-ratingAverageModule-count {
+  color: #212121 !important;
+  font-size: 18px !important;
+  line-height: 27px !important;
+  font-weight: 200 !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-breakdownModule-distribution-count,
+.oke-w-breakdownModule-distribution-label-number {
+  color: #212121 !important;
+  font-size: 16px !important;
+  line-height: 25.6px;
+  font-weight: 400;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-breakdownModule-distribution-bar-fill {
+  background-color: #212121 !important;
+  border-radius: 4px !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-breakdownModule-distribution-bar {
+  background-color: #f4f4f6 !important;
+  border-radius: 4px !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-reviews-count,
+.oke-sortSelect-label,
+.oke-sortSelect-sort.oke-select,
+.oke-product-details-title,
+.oke-w-reviewerRecommendation-text,
+.oke-reviewContent-date span,
+.oke-helpful-label {
+  color: #212121 !important;
+  font-size: 16px !important;
+  line-height: 25.6px;
+  font-weight: 400 !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-reviews-main oke-w-reviews-main--nav-divider {
+  border-top: solid 1px #212121 !important;
+  font-family: "Lausanne" !important;
+}
+
+.okeReviews[data-oke-container] .oke-w-review-side,
+div.okeReviews .oke-w-review-side {
+  border: solid 1px #212121 !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-reviewer-name,
+.oke-w-reviewer-verified {
+  color: #212121 !important;
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  line-height: 25.6px !important;
+  font-family: "Lausanne" !important;
+}
+
+div.okeReviews .oke-w-reviewer-verified-icon:before {
+  color: #708480 !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-product-details-name {
+  color: #212121 !important;
+  font-size: 16px !important;
+  font-weight: 200 !important;
+  line-height: 25.6px !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-w-reviewerRecommendation--yes:before {
+  background-color: #415b56 !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-reviewContent-body.oke-bodyText,
+.oke-reviewContent-body.oke-bodyText p {
+  color: #212121 !important;
+  font-size: 18px !important;
+  font-weight: 200 !important;
+  line-height: 27px !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-helpful-vote-button.oke-helpful-vote-button--positive span,
+.oke-helpful-vote-button.oke-helpful-vote-button--negative span {
+  color: #212121 !important;
+  font-size: 16px !important;
+  font-weight: 200 !important;
+  line-height: 19.2px !important;
+  font-family: "Pier Sans" !important;
+}
+
+.oke-helpful-vote-button--positive:before,
+.oke-helpful-vote-button--negative:before {
+  color: #212121 !important;
+  font-family: "Lausanne" !important;
+}
+
+div.okeReviews .oke-media-image {
+  border-radius: 4px !important;
+  font-family: "Lausanne" !important;
+}
+
+div.okeReviews .oke-w-reviews-list-item {
+  border-bottom: 0px !important;
+  padding-bottom: 32px !important;
+  font-family: "Lausanne" !important;
+}
+
+[data-oke-container] .oke-w-review-footer,
+div.okeReviews .oke-w-review-footer {
+  justify-content: unset !important;
+}
+
+.okeReviews[data-oke-container].oke-w,
+div.okeReviews.oke-w {
+  padding-top: unset !important;
+}
+
+.oke-reviewContent-readMore {
+  padding-top: 32px !important;
+  font-family: "Lausanne" !important;
+}
+.oke-reviewContent-readMore-text.oke-bodyText {
+  color: #212121 !important;
+  font-size: 18px !important;
+  font-weight: 600 !important;
+  line-height: 28.8px !important;
+  font-family: "Lausanne" !important;
+}
+
+.oke-showMore-button.oke-button {
+  width: 343px !important;
+  height: 48px;
+  background: #11322c !important;
+  border-radius: 4px !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  text-transform: uppercase;
+  font-family: "Lausanne" !important;
+}
+.oke-w-reviews-footer {
+  padding-top: 32px !important;
+  padding-bottom: 32px !important;
+}
+@media (max-width: 768px) {
+  .main-page-title {
+    display: block !important;
+    padding: 25px !important;
+  }
+  .main-page-title {
+    font-size: 36px !important;
+    font-weight: 400 !important;
+    line-height: 45px !important;
+    font-family: "GT Super Display" !important;
+  }
+  .rte.theme-text {
+    margin-top: unset !important;
+  }
+  .oke-w-main,
+  .oke-w-header {
+    padding: 0px 25px 25px 25px !important;
+  }
+  .oke-w-ratingAverageModule-rating-average {
+    line-height: 30px !important;
+  }
+  .oke-w-ratingAverageModule.oke-w-ratingAverageModule--oneLine.oke-w-ratingAverageModule--left {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .oke-w-ratingAverageModule-rating {
+    display: flex !important;
+    flex-flow: column !important;
+  }
+  .oke-w-ratingAverageModule-count {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+  }
+  .oke-w-breakdownModule-distribution-label-number,
+  .oke-w-breakdownModule-distribution-count,
+  .oke-w-reviews-count,
+  .oke-w-reviews-sort {
+    line-height: 24px !important;
+  }
+  .oke-w-recommendsModule .oke-w-recommendsModule-value,
+  .oke-w-recommendsModule .oke-w-recommendsModule-text {
+    line-height: 30px !important;
+  }
+  .oke-w-recommendsModule .oke-w-recommendsModule-text {
+    width: 90% !important;
+    margin: 0 auto !important;
+  }
+  .oke-w-reviewer-name,
+  .oke-w-reviewer-verified .oke-product-details-title,
+  .oke-product-details-name,
+  .oke-reviewContent-date span,
+  .oke-reviewContent-title.oke-title,
+  .oke-helpful-label {
+    line-height: 24px !important;
+  }
+  .oke-reviewContent-body.oke-bodyText,
+  .oke-reviewContent-body.oke-bodyText p {
+    font-size: 16px !important;
+    line-height: 24px !important;
+  }
+  .oke-reviewContent-readMore-text.oke-bodyText {
+    font-size: 16px !important;
+    font-weight: 400 !important;
+    line-height: 24px !important;
+  }
+  .oke-reviewContent-readMore {
+    padding-top: 8px !important;
+  }
+  .oke-w-reviews-footer {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  .oke-showMore-button.oke-button {
+    width: 100% !important;
+  }
+}

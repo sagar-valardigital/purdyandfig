@@ -1,0 +1,108 @@
+<div
+  class="colletion-product position-relative cart-empty-slider"
+  x-data="
+    {
+      qty:1
+    }
+  "
+>
+  <form
+    @submit.prevent="console.log('submitted')"
+    x-ref="product_form_{{card_product.id}}"
+    enctype="multipart/form-data"
+    accept-charset="UTF-8"
+    id="product_form_{{card_product.id}}"
+    class="shopify-product-form"
+    data-product-id="{{card_product.id}}"
+    action="/cart/add"
+  >
+    {% assign product =  card_product.handle %}
+    {% assign discounts = '' %}
+    {% assign variant = '' %}
+    {% assign sellingplan = '' %}
+    {% if  product == 'orange-clove-refill-pack' %}
+        {% assign discounts = 'ORANGECLOVEREF229CX' %}
+        {% assign variant = '54817560494460' %}
+        {% assign new_price = '£20.40'%}
+    {% elsif  product == 'frankincense-myrrh-counter-clean-refill-copy' %}  
+        {% assign discounts = 'F&MREF229CX' %}
+        {% assign new_price = '£20.40'%}
+        {% assign variant = '54824765784444' %}
+    {% elsif  product == 'mini-christmas-gifting-bundle' %}  
+        {% assign discounts = 'MINIBUNDLE229CX' %}
+         {% assign new_price = '£20.99'%}
+        {% assign variant = '54802874368380' %}
+    {% elsif  product == 'bathroom-bliss-bundle-kit' %}  
+        {% assign discounts = 'BATHROOMBLISS229CX' %}
+        {% assign variant = '54818998452604' %}
+       {% assign new_price = '£15.00'%}
+        {% assign sellingplan = '4327440611' %} 
+    {% elsif  product == 'oh-de-loo' %}  
+        {% assign discounts = 'ODL229CX' %}
+       {% assign new_price = '£13.56'%}
+        {% assign variant = '54819160490364' %}
+    {% endif %}
+    <div class="product-varient-selection d-none">
+      <input type="hidden" name="id" value="{{variant}}">
+      <input type="hidden" name="quantity" value="1">
+      <input autocomplete="off"  type="hidden" name="discount" value="{{ discounts }}">
+       {% if  product == 'bathroom-bliss-bundle-kit' %}  
+      <input type="checkbox" name="purchase_type" value="subscription" checked>
+      
+      <div class="selling_plan_wrapper d-none">
+       
+        <input type="hidden" name="selling_plan" value="{{sellingplan}}">
+        
+      </div>
+         {% endif %}
+    </div>
+    <input type="hidden" name="quantity" value="1">
+  </form>
+
+  <div class="product-img position-relative">
+    <a href="{{ card_product.url }}">
+      <div class="coll-tag-wrap">
+        {% for tag in card_product.tags %}
+          {% if tag contains 'tag' %}
+            {% assign stag = tag | split: ':' %}
+            <span class="collection-tag">{{ stag[1] }} </span>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <img
+        src="{{ card_product.featured_media | image_url: width: 280, height: 200 }}"
+        alt="{{ card_product.featured_media.alt | escape }}"
+        class="img-responsive w-100"
+      >
+    </a>
+    {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+    <!--
+      <a href="{{ card_product.url }}"><img src="{{'product-img.png' | asset_url }}" class="img-responsive w-100"> </a>  x-on:click="Purdy.AddToCart($refs.product_form_{{card_product.id}})"
+    -->
+  </div>
+
+  <div class="product-detail">
+    <span class="heading-4 font-lausanne fw-600 coll-product-title new-theme-text">{{ card_product.title | escape }}</span>
+    <div class="product-footer">
+      {% render 'okendo-reviews-product-rating-summary', product: card_product %}
+      <div class="d-flex justify-content-between theme-text align-items-center">
+        <p class="product-price font-lausanne fw-400 new-theme-text m-0 d-none">
+          {% if sub_discount_price %}
+            {{ sub_discount_price | money }}
+          {% else -%}
+            {{- card_product.price | money }}
+          {% endif %}
+          <small
+            ><del>{{ card_product.compare_at_price | money }}</del></small
+          >
+        </p>
+      </div>
+      <span
+        @click="Purdy.AddToCartWithDiscount($refs.product_form_{{card_product.id}}, false, 'empty-cart', $event)"
+        class="colletion-add btn-loader font-lausanne fw-400 new-theme-text"
+        >{% if  product == 'bathroom-bliss-bundle-kit' %}ADD 90-DAY PLAN{% else %} ADD TO CART {% endif %}&nbsp;
+            {{ new_price }}
+      </span>
+    </div>
+  </div>
+</div>

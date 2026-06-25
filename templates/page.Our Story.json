@@ -1,0 +1,237 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "our_story_reskin_video_block_ktnxfh": {
+      "type": "our-story-reskin-video-block",
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/04ae416a893b4ec1bdbcb8c046fb60eb.mp4",
+        "image": "shopify://shop_images/two_women_on_a_mission.png",
+        "full-width": true,
+        "heading": "Two Women on a Mission",
+        "sub-heading": "Click here to play",
+        "button-text": "button",
+        "button-url": ""
+      }
+    },
+    "165893023294cc757d": {
+      "type": "text-over-image",
+      "custom_css": [],
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-60",
+        "sp": 1,
+        "alignment": "justify-content-start",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "",
+        "mainheading": "",
+        "heading": "Back in 2018, best friends Purdy Rubin and Charlotte Figg decided to make cleaning products they'd actually feel good using – both for themselves and for the environment.",
+        "details": "",
+        "mobileShow": false,
+        "textcolor": "#0c231f",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "our_story_image_with_text_reskin_rgyPKj": {
+      "type": "our-story-image-with-text-reskin",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Fed up with highly toxic cleaning products in plastic packaging, they decided to do something about it.",
+        "image": "shopify://shop_images/e589bfa52a5549f1bdf894216adbcbb6-800x800.png",
+        "details": "<p>They both firmly believed in the power of natural cleaning and its benefit to health & home, so they started experimenting with formulas in their garage. It's there that they conjured up their first product, a multi-surface cleaner infused with pure essential oils, Counter Clean.</p>",
+        "link": "",
+        "btntext": "",
+        "scrollID": "",
+        "top": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "our_story_image_with_text_reskin_hiPeHb": {
+      "type": "our-story-image-with-text-reskin",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "",
+        "image": "shopify://shop_images/1ae05e1c12800d4ca1ac2c5aa5325f83-800x800.png",
+        "details": "<p>Spurred on by Purdy’s two sons, Charlie and Jack, the duo teamed up with Chemist Dr Anna Slastanova to develop a range of natural, beautifully-scented and refillable cleaning products that could stand up against the ‘big guns’. </p><p>We launched our hero product, Counter Clean, at the beginning of 2022 and haven’t looked back since. The game changing cleaner has been designed to clean all surfaces in the home whilst leaving behind the most incredible spa-like scent. </p>",
+        "link": "",
+        "btntext": "",
+        "scrollID": "",
+        "top": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "our_story_image_with_text_reskin_kf3Wfd": {
+      "type": "our-story-image-with-text-reskin",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "",
+        "image": "shopify://shop_images/601680ec025760d1da07b475ddd3bc0b-800x800.png",
+        "details": "<p>We’ve since scaled up production at our Hertfordshire-based factory to help meet the demand for a planet-friendly cleaner that’s both effective and a pleasure to use.</p><p>We’re a growing family business with Charlie and Jack at the helm whilst Purdy and Charlotte work in the ‘lab’ with Dr Anna to develop new products that transform the way the world thinks about cleaning - from a chore to a pleasure! </p>",
+        "link": "",
+        "btntext": "",
+        "scrollID": "",
+        "top": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "our_story_image_with_text_reskin_maKtDN": {
+      "type": "our-story-image-with-text-reskin",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "2023",
+        "details": "<p>We relocate our humble factory in Oxfordshire to a bigger plant in Hertfordshire, to keep up with orders and give us control over the quality of our product. Manufacturing in the UK takes miles off the road and lowers our emissions, and doing things our way means we can be sure our factory is a great place to work.</p>",
+        "link": "",
+        "btntext": "",
+        "scrollID": "",
+        "top": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "our_story_image_with_text_reskin_pRkxYB": {
+      "type": "our-story-image-with-text-reskin",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "2024",
+        "details": "<p>Today, we’re a growing team with offices in London and Hertfordshire, employees all over the world, two office dogs, and a very passionate rounders team. We’re heading into this next bit of our journey with a shiny new look, and a continued commitment to transforming the world of cleaning into a more sustainable, joyful place, one gloriously scented spray at a time. </p>",
+        "link": "",
+        "btntext": "",
+        "scrollID": "",
+        "top": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "shop_now_cta_49HWAy": {
+      "type": "shop-now-cta",
+      "settings": {
+        "shopnowctaHeading": "Shop Now",
+        "shopnowctaColor": "#ffffff",
+        "shopnowctaBackground": "#11322c",
+        "shopnowctaBorderColor": "#11322c",
+        "shownowctaRadius": 4
+      }
+    }
+  },
+  "order": [
+    "main",
+    "our_story_reskin_video_block_ktnxfh",
+    "165893023294cc757d",
+    "our_story_image_with_text_reskin_rgyPKj",
+    "our_story_image_with_text_reskin_hiPeHb",
+    "our_story_image_with_text_reskin_kf3Wfd",
+    "our_story_image_with_text_reskin_maKtDN",
+    "our_story_image_with_text_reskin_pRkxYB",
+    "shop_now_cta_49HWAy"
+  ]
+}

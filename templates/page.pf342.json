@@ -1,0 +1,628 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_3_UrPRa6": {
+      "type": "announcement-bar-3",
+      "custom_css": [
+        ".announcement-btn-2,.bg-blue {background-color: #212121 !important; color: #ffffff; font-family: \"Lausanne\"; font-weight: 400;}",
+        ".annoucment-bar-logo .logo_path {fill: #11322c !important;}",
+        ".annoucment-bar-2 {padding-top: 7px !important; padding-bottom: 7px !important;}",
+        "@media (max-width: 768px) {.ann-bar-text-2 {background: #0a1e1a !important; font-size: 12px; } .announcement-btn-2 {background: #212121 !important; } .ann-bar-text-2 {height: 37px; } .ann-bar-text-2 p {padding: 6px; }}"
+      ],
+      "settings": {
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "class": "",
+        "text": "Brand New Trial Kit Only £11.99!",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "scrollto": "starterkit-product",
+        "annuText": "GET MY OFFER",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_my_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_310_LYXXAC": {
+      "type": "global-product-342",
+      "blocks": {
+        "text_AdcFYR": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 Patchouli &amp; Cedarwood concentrate  <b>(worth £7)</b>"
+          }
+        },
+        "text_YTfPWa": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 Uplifting Citrus concentrate <b>(worth £7)</b>"
+          }
+        },
+        "text_dim9LA": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Glass Bottle for Life &amp; cloth <b>(worth £19)</b>"
+          }
+        },
+        "text_nRtW8X": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 seasonal scents every 3 months thereafter*"
+          }
+        },
+        "product_image_tNN9yU": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Image_1_50520749-d419-43cd-9603-adabf1f94bd6.png",
+            "mimage": "shopify://shop_images/Image_1_55f5bcd4-6d13-4afa-b524-593f6908f7bc.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_GzG8Ca": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Image_2_04d155b5-bef0-42ae-8406-d95a426313ad.png",
+            "mimage": "shopify://shop_images/Image_2_c1f3bdcd-bf9f-485f-8b00-83b16f59b78b.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_bGEziV": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Image_3_9391b34a-3bad-488a-8aea-f19b113ce8b0.png",
+            "mimage": "shopify://shop_images/Image_3_84fc70e5-d81e-470e-92e1-144e337ff96e.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_AHrrNU": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Image_4_c47db4be-0b58-4b34-b4e8-2571aabb503a.png",
+            "mimage": "shopify://shop_images/Image_4_710cd77e-0150-490a-958e-215c37b4bca4.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_kN4gBG": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Image_5_327d4a99-5799-443f-ba10-2ef63b3d885e.png",
+            "mimage": "shopify://shop_images/Image_5_5ad365f0-61a9-4f08-9473-d113017180ec.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_AdcFYR",
+        "text_YTfPWa",
+        "text_dim9LA",
+        "text_nRtW8X",
+        "product_image_tNN9yU",
+        "product_image_GzG8Ca",
+        "product_image_bGEziV",
+        "product_image_AHrrNU",
+        "product_image_kN4gBG"
+      ],
+      "custom_css": [
+        ".gp-5-points {padding-right: 0;}",
+        ".global-product-19-wrapper .gp-4-details .blue-btn .deleted-price {color: #ddd !important;}",
+        "@media (max-width: 768px) {.stars-img-review span {font-size: 12px !important; } .global-product-5 .star-img {width: 12px; } .gp-5-variants > li {margin: 5px 8px 5px 0; }}"
+      ],
+      "settings": {
+        "link-section": true,
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": true,
+        "guaranteeDescription": "*Delay or cancel any time",
+        "guaranteeTextColor": "#212121",
+        "scrollto": "",
+        "background": "#fafafa",
+        "p_id": "starterkit-product",
+        "landingproduct": "counter-clean-starter-kit-free-patchouli-cedarwood-copy",
+        "varaiantid": "55251273023868",
+        "sellingid": "710559859068",
+        "sku": "FG1263",
+        "discount": "TRIALKIT342b",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "className": "gp-5-ab global-product-19-wrapper  gp-219",
+        "mainheading": "Limited time offer: Trial Kit",
+        "mainsubheading": "Save £21 including a free bottle and cloth",
+        "choosescent": "",
+        "heading": "Counter Clean Trial Kit",
+        "subtext": "",
+        "price": "11.99",
+        "delPrice": "33",
+        "btn_bg": "#d3671f",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "38,325",
+        "reviews_desktop": "1,734",
+        "heading-position": false,
+        "before-mobile": false,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "image_with_listing_gAWD66": {
+      "type": "image-with-listing",
+      "blocks": {
+        "text_ehqGFz": {
+          "type": "text",
+          "settings": {
+            "heading": "Powerful clean"
+          }
+        },
+        "text_QEYzKQ": {
+          "type": "text",
+          "settings": {
+            "heading": "100% pure essential oil blends"
+          }
+        },
+        "text_ayQGtm": {
+          "type": "text",
+          "settings": {
+            "heading": "Non-toxic ingredients"
+          }
+        },
+        "text_i7aafF": {
+          "type": "text",
+          "settings": {
+            "heading": "Cleans 15+ surfaces"
+          }
+        }
+      },
+      "block_order": [
+        "text_ehqGFz",
+        "text_QEYzKQ",
+        "text_ayQGtm",
+        "text_i7aafF"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".click-scroll {background-color: #d3671f !important;}"
+      ],
+      "settings": {
+        "bgImage": "shopify://shop_images/BG---Desktop.png",
+        "heading": "One simple cleaning kit that does it all",
+        "image": "shopify://shop_images/b_36e066c5-4698-420b-8999-ff4c87e2f090.png",
+        "icon": "shopify://shop_images/Tick_82ab0702-7f1e-4ca3-9f1d-3af426533376.png",
+        "addScrollBtn": true,
+        "scrollBtnText": "GET MY OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "one_simple_cleaning_kit",
+        "dataTitle": "get_my_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "video_with_text_DwfNr7": {
+      "type": "video-with-text",
+      "blocks": {
+        "text_bexDwb": {
+          "type": "text",
+          "settings": {
+            "width": "w-60",
+            "layout": true,
+            "heading": "Effective on all surfaces",
+            "image": "shopify://shop_images/Video.png",
+            "video": "https://cdn.shopify.com/videos/c/o/v/54acbadaebc843be9258328664354790.mp4",
+            "details": "Counter Clean is designed to effectively clean stone, wood and glass, whilst retaining maximum scent. Our customers say it replaces dozens of other products.",
+            "dataTrack": false,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "announcement_bar",
+            "dataTitle": "get_your_offer",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "",
+            "ItemName": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_bexDwb"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}"
+      ],
+      "settings": {
+        "className": "",
+        "textcolor": "#11322c",
+        "background": "#ffffff"
+      }
+    },
+    "review_blocks_343_dJTAAN": {
+      "type": "review-blocks-342",
+      "blocks": {
+        "text_JYUbeR": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_1_Social_Proof_Media.png",
+            "heading": "",
+            "review": "“Patchouli & Cedarwood now my all time favourite!”",
+            "userName": "Lisa, UK"
+          }
+        },
+        "text_xiKYa7": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_2_Social_Proof_Media.png",
+            "heading": "",
+            "review": "\"I now use the spray on all counter tops, bathroom and toilets.\"",
+            "userName": "Nina, UK"
+          }
+        },
+        "text_ipxBwf": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_3_Social_Proof_Media.png",
+            "heading": "",
+            "review": "“I adore the citrus scent. It makes everything smell so clean and fresh and it really lasts.”",
+            "userName": "Jade, UK"
+          }
+        },
+        "text_8GHUwp": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_4_Social_Proof_Media.png",
+            "heading": "",
+            "review": "\"I like that it's one product for all surfaces, a glass bottle not plastic.\"",
+            "userName": "Colton, UK"
+          }
+        }
+      },
+      "block_order": [
+        "text_JYUbeR",
+        "text_xiKYa7",
+        "text_ipxBwf",
+        "text_8GHUwp"
+      ],
+      "custom_css": [
+        ".heading-2,p {color: #fff !important;}",
+        ".heading-2 {margin-bottom: 25px !important;}"
+      ],
+      "name": "Review Blocks 343",
+      "settings": {
+        "heading": "Join over 1 million happy customers",
+        "scrollto": "",
+        "top": "0",
+        "className": "",
+        "bgColor": "#0f2d28",
+        "btn_text": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "review_block",
+        "dataTitle": "get_my_free_scent",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "full_width_image_text_Ppn6wx": {
+      "type": "full-width-image-text",
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.heading-2 {font-size: 32px !important; }}"
+      ],
+      "settings": {
+        "className": "about-pf",
+        "textcolor": "#212121",
+        "background": "#ffffff",
+        "backgroundImage": "shopify://shop_images/BG_-_Desktop.webp",
+        "layout": true,
+        "heading": "Meet our founders",
+        "image": "shopify://shop_images/download_2f0800ca-dadc-4e23-bb97-f72c38f04b8b.jpg",
+        "details": "<b class=\"fw-500 d-block mb-2\">Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning more effective, more effortless, and more enjoyable.</b>\nFrom a Hertfordshire garage to millions of homes, their multipurpose spray, scented with essential oils, is on the way to changing the way we all feel about cleaning - for good."
+      }
+    },
+    "icon_blocks_reskin_290_PcDTCm": {
+      "type": "icon-blocks-reskin-290",
+      "blocks": {
+        "iconblocks_KJeCCc": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More convenient",
+            "icon_block_description": "3 refills delivered to your door every 3 months so you never run out",
+            "icon_block_image": "shopify://shop_images/convenient.png"
+          }
+        },
+        "iconblocks_eY3HLE": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More flexible",
+            "icon_block_description": "Bring forward, delay, or cancel online, with one easy click. No questions asked",
+            "icon_block_image": "shopify://shop_images/flex.png"
+          }
+        },
+        "iconblocks_e6pAMP": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More rewarding",
+            "icon_block_description": "Members-only access to new offers, scents, products, and prices",
+            "icon_block_image": "shopify://shop_images/rewarding.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_KJeCCc",
+        "iconblocks_eY3HLE",
+        "iconblocks_e6pAMP"
+      ],
+      "custom_css": [
+        ".green-btn {width: 343px; padding: 12px 16px; border-radius: 4px; margin-top: 40px; background-color: #d3671f !important;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: unset; }}"
+      ],
+      "settings": {
+        "class": "pf-219-icon-block",
+        "bg": "#fcfaf6",
+        "textcolor": "#212121",
+        "heading": "A membership to change the way you clean forever",
+        "show_hide_block": true,
+        "showbtn": true,
+        "btnbgcolor": "#d3671f",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET MY OFFER",
+        "scrollto": "starterkit-product",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_my_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "pf281_blocks_GpJyXG": {
+      "type": "pf281-blocks",
+      "blocks": {
+        "text_W6tdiG": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_1_bbd2faca-f61f-4c5b-9875-df8f85a46223.png",
+            "badge": "June - August",
+            "heading": "Summer Scents",
+            "details": "Bring summer’s most glorious scents inside"
+          }
+        },
+        "text_eXmYYG": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_2_44fbd9c1-698c-487e-972e-eb9bca0f94f2.png",
+            "badge": "September - November",
+            "heading": "Autumn Scents",
+            "details": "Re-energise your home with uplifting blends"
+          }
+        },
+        "text_9WweAC": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_3_db3e5daa-e14a-4668-8f93-02e1cd8c4cd6.png",
+            "badge": "December - February",
+            "heading": "Winter Scents",
+            "details": "Welcome in cosy and warming aromas"
+          }
+        },
+        "text_pjYBWU": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/IMAGE_4_129d3e88-7d6b-4e5d-b369-ebeb206e2b72.png",
+            "badge": "March - May",
+            "heading": "Spring Scents",
+            "details": "For the most soothing spring clean"
+          }
+        }
+      },
+      "block_order": [
+        "text_W6tdiG",
+        "text_eXmYYG",
+        "text_9WweAC",
+        "text_pjYBWU"
+      ],
+      "custom_css": [
+        ".click-scroll {background-color: #d3671f !important;}",
+        ".image-wrapper-section {border-radius: 6px; overflow: hidden;}"
+      ],
+      "name": "PF281 Image blocks",
+      "settings": {
+        "enable": true,
+        "background": "",
+        "textcolor": "",
+        "heading": "Enjoy new scents in every delivery",
+        "subtext": "",
+        "buttontext": "GET MY OFFER",
+        "buttonbg": "#d3671f",
+        "buttontxtcolor": "#ffffff",
+        "scrollto": "starterkit-product",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 8,
+        "funnel_stage": "landing_page",
+        "dataModule": "enjoy_new_scents",
+        "dataTitle": "get_my_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_reskin_ALn44g": {
+      "type": "faq-section-reskin",
+      "blocks": {
+        "text_wTfKj6": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "What happens after my trial period?",
+            "faq-ans": "<p>We’ll automatically send you 3 new seasonal scent refills every 90 days unless you pause or cancel your subscription. You can also switch to signature scents at any time in your member portal.</p>"
+          }
+        },
+        "text_epNbLd": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What’s included in my first delivery?",
+            "faq-ans": "<p>You’ll get one glass Bottle for Life, one luxurious microfibre cloth and two of our best-selling cleaning concentrates – Patchouli & Cedarwood and Uplifting Citrus.</p>"
+          }
+        },
+        "text_QygHrY": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of cleaning concentrate into your Bottle for Life and slowly fill to the top (just below the neck) with tap water. Give the bottle a gentle shake to mix, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "text_HkQc97": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to say that Counter Clean is pH neutral, which means it’s safe to use on most surfaces. That includes softer materials like aluminium, wood, stone, quartz and other sealed surfaces. We do recommend patch testing first on any particularly sensitive or precious surfaces you’re concerned about. Just spray onto a cloth and wipe a small patch to see the results. </p>"
+          }
+        },
+        "text_TLFd9j": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>We offer lots of subscription options, including switching your scent refill pack, changing the frequency of your deliveries or cancelling your membership altogether. Subscriptions are set to a 90-day frequency by default, but you can always move your next billing date if you need to in a few easy steps. We understand there might be times when you need to stop your deliveries, and we’ll always respect your decision to leave - even if we’ll miss you. <br/><br/>If you have any trouble managing your subscription, our Customer Experience Team is always on hand to respond to your questions and requests as soon as possible. They’re very friendly.</p>"
+          }
+        },
+        "text_LRHJtC": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We endeavour to dispatch your order within 1 working day of receiving it. Once your order has been dispatched, we aim to deliver within a maximum of 48 hours (for orders being shipped to Europe, please kindly allow 2-7 working days from dispatch). If you’ve tracked your order and it’s been 5 working days or more since the last tracking scan, please kindly submit your query and a member of our Customer Service team will get back to you as soon as possible.</p>"
+          }
+        },
+        "29134be3-da11-47cf-a53b-7f88d2bbe596": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Are your products safe for pets?",
+            "faq-ans": "<p>We would like to reassure you that our products are safe to use around dogs and other domestic pets. If you are worried about allergies, please do contact your vet first, and if you have a pet bird or birds, you will know that they are particularly sensitive to airborne substances, so it is best to take them out of the room while you clean. Additionally, it's important to note that Ylang Ylang and Citronella are toxic to dogs when they are ingested or applied topically, which we would never recommend. Please do not let your pets lick or drink Counter Clean.</p>"
+          }
+        },
+        "text_wwqHGw": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What's the difference between Signature & Seasonal?",
+            "faq-ans": "<p>We offer two different scent collections with your Counter Clean subscription - Signature and Seasonal Scents. Our Signature Scent pack is available all year round, and contains our three best-selling scents - Uplifting Citrus, Balancing Floral, and Grounding Vetiver. Our Seasonal Scent pack contains three limited edition new scents blended for every season. </p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_wTfKj6",
+        "text_epNbLd",
+        "text_QygHrY",
+        "text_HkQc97",
+        "text_TLFd9j",
+        "text_LRHJtC",
+        "29134be3-da11-47cf-a53b-7f88d2bbe596",
+        "text_wwqHGw"
+      ],
+      "custom_css": [
+        ".green-btn {background-color: #d3671f !important; margin-top: 80px !important;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: 32px !important; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#f6f1e5",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollBtnText": "GET OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_kGNHfT": {
+      "type": "footer-2",
+      "custom_css": [
+        "@media (max-width: 768px) {.footer-2 .d-flex > div {text-align: left; }}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_3_UrPRa6",
+    "global_product_310_LYXXAC",
+    "image_with_listing_gAWD66",
+    "video_with_text_DwfNr7",
+    "review_blocks_343_dJTAAN",
+    "full_width_image_text_Ppn6wx",
+    "icon_blocks_reskin_290_PcDTCm",
+    "pf281_blocks_GpJyXG",
+    "faq_section_reskin_ALn44g",
+    "footer_2_kGNHfT"
+  ]
+}

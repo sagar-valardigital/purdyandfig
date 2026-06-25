@@ -1,0 +1,348 @@
+<style>
+
+
+.table-2 .table-responsive {
+  margin-top: 32px !important;
+}
+
+
+  .common-btn-width {
+  width: 343px;
+}
+  .blue-starterkit-btn {
+  margin-top: 40px !important;
+  font-family: 'Lausanne';
+  font-size: 16px;
+    border: 0;
+    font-weight: 400;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+  .comparison-table .heading-2 {
+  letter-spacing: 0;
+  text-align: center !important;
+}
+  .comparison-table tbody tr:nth-child(odd) {
+  background-color: #fafafa !important;
+}
+  .comparison-table tbody tr td {
+  border-bottom: none !important;
+}
+  .comparison-table table {
+  border-bottom: none !important;
+}
+  .comparison-table .table-reskin thead tr th:nth-child(2) {
+  border-left: 1px solid #11322C !important;
+  border-right: 1px solid #11322C !important;
+  border-top: 1px solid #11322C !important;
+}
+  .comparison-table tbody tr:last-child td:nth-child(2) {
+  border-bottom: 1px solid #11322C !important;
+}
+  .comparison-table .product-details-table th {
+  font-weight: 600 !important;
+}
+
+  .comparison-table tbody td img {
+    width: 32px;
+    height: 32px;
+    max-width: 32px;
+}
+
+  .table-logo {
+    width:136px !important;
+    height:auto;
+    max-width:136px !important;
+  }
+
+.comparison-table tbody tr:nth-child(odd) {
+  background-color: #86ad3f !important;
+}
+.product-details-table {
+  color: #212121 !important;
+}
+
+.green-starterkit-btn {
+  margin-top: 40px !important;
+  font-family: 'Lausanne';
+  font-size: 16px;
+    border: 0;
+    font-weight: 400;
+    border-radius: 4px;
+    color: #fff;
+    padding: 10px 15px;
+}
+
+@media (max-width: 768px) {
+
+
+.table-2 .table-responsive {
+  width: inherit !important;.green-starterkit-btn
+}
+
+  .comparison-table .product-details-table th {
+  font-size: 12px !important;
+}
+  .comparison-table tbody td img {
+    width: 20px !important;
+    height: 20px !important;
+    max-width: 20px !important;
+}
+  .table-logo {
+    width:95px !important;
+    height:auto;
+    max-width:95px;
+  }
+
+.table-outer-container {
+padding-left: 16px;
+padding-right: 16px;
+}
+
+.table-2 tbody tr td, .table-2 thead tr th {
+    padding: 16px 8px !important;
+}
+
+.table-2 thead tr th:last-child, .table-2 tbody tr td:last-child {
+width: inherit !important;
+}
+
+.table-2.table-reskin .subheading {
+display: none;
+}
+
+.green-starterkit-btn {
+  margin: 0 -15px !important;
+  width: auto;
+
+}
+
+}
+</style>
+<div class="table-outer-container" style="background-color: {{ section.settings.pagecolor }};">
+<div class="container comparison-table">
+<div class="table-2 table-reskin" style="background-color: {{ section.settings.pagecolor }};">
+    <div class="table-heading text-center">
+      <h2 class="heading-2 table-heading mt-0  font-gtsuper">{{ section.settings.heading }}</h2>
+      <p class="subheading font-lausanne fw-400">{{ section.settings.subheading }}</p>
+    </div>
+
+    <div class="table-responsive ">
+      <table class="table product-details-table w-100 theme-text normal-text ">
+        <thead>
+          <tr>
+            <th class="font-lausanne fw-500 gray-text text-left">Features</th>
+            <th class="text-center">
+              <div style="display: flex; justify-content: center; align-items: center; height: 100%;">
+              <img
+                width="78px"
+                height="32px"
+                loading="lazy"
+                class="table-logo"
+                src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Logo.svg?v=1722248252"
+                alt="logo"
+              >
+              </div>
+            </th>
+            <th class="text-center font-lausanne fw-500">Method + Ecover</th>
+            <th class="text-center font-lausanne fw-500">Flash + Zoflora</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for block in section.blocks %}
+            {% assign icon1 = block.settings.pfIcon | img_url: '50x' %}
+            {% assign icon2 = block.settings.methodIcon | img_url: '50x' %}
+            {% assign icon3 = block.settings.flashIcon | img_url: '50x' %}
+            <tr>
+              <td class="font-lausanne fw-500 featured-name">{{ block.settings.featureName }}</td>
+              <td class="text-center">
+                <img width="32px" height="32px" loading="lazy" src="{{icon1}}" alt="{{ block.settings.pfIcon.alt }}">
+              </td>
+              <td class="text-center">
+                <img width="32px" height="32px" loading="lazy" src="{{icon2}}" alt="{{ block.settings.methodIcon.alt }}">
+              </td>
+              <td class="text-center">
+                <img width="32px" height="32px" loading="lazy" src="{{icon3}}" alt="{{ block.settings.flashIcon.alt }}">
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    {% if section.settings.addScrollBtn %}
+    <div class="mt-lg-40">
+      <span
+        class="d-block text-center green-starterkit-btn font-lausanne fw-400 click-scroll m-auto common-btn-width"
+        style="background-color: {{ section.settings.btncolor }}"
+        data-target="{{ section.settings.scrollto }}"
+        data-top="{{ section.settings.top }}"
+        {% if section.settings.button_bg %}
+                      style="background-color:{{ section.settings.button_bg }} !important"
+                      {% endif %}
+        {% if section.settings.dataTrack %}
+            {% render "ga4-events" %}
+          {% endif %}
+        >{{ section.settings.btntext }}</span
+      >
+    </div>
+    {% endif %}
+  </div>
+</div>
+</div>
+
+{% schema %}
+  {
+    "name": "Table PF388",
+    "settings": [
+    {
+          "type": "color",
+          "id": "pagecolor",
+          "label": "Page BG color",
+          "default": "#FFFFFF"
+      },
+    {
+          "type": "color",
+          "id": "btncolor",
+          "label": "Button BG color",
+          "default": "#11322c"
+      },
+      {
+          "type": "checkbox",
+          "id": "addScrollBtn",
+          "label": "Show Scroll to Btn",
+          "default": false
+        },
+      {
+          "type": "text",
+          "id": "btntext",
+          "label": "Button text"
+        },
+         {
+      "id": "button_bg",
+      "label": "Button background color",
+      "type": "color"
+    },
+      {
+          "type": "html",
+          "id": "heading",
+          "label": "Heading"
+        },
+      {
+          "type": "text",
+          "id": "subheading",
+          "label": "Heading"
+        },
+      {
+          "type": "text",
+          "id": "scrollto",
+          "label": "Scroll to section id",
+          "default": "javascript:void(0);"
+      }
+     ,
+     {
+          "type": "text",
+          "id": "top",
+          "label": "On scroll top position",
+          "default": "0"
+      },
+    {
+    "type": "header",
+    "content": "GA4"
+  },
+    {
+"id": "dataTrack",
+"label":"Data Track",
+"type": "checkbox"
+    },
+    {
+"id": "targetUrl",
+"label":"Target Url",
+"type": "url"
+    },
+    {
+"id": "index",
+"label":"Index",
+"type": "number",
+"default" : 0
+    },
+    {
+"id": "funnel_stage",
+"label":"Funnel Stage",
+"type": "text",
+ "default" : "landing_page"
+    },
+    {
+"id": "dataModule",
+"label":"Module",
+"type": "text",
+ "default" : "announcement_bar"
+    },
+      {
+"id": "dataTitle",
+"label":"Event Label",
+"type": "text",
+"default": "get_your_offer"
+    }
+    ,
+      {
+"id": "eventValue",
+"label":"Event Value",
+"type": "text",
+"default" : "shop_anchor"
+    },
+      {
+"id": "itemId",
+"label":"Item Id",
+"type": "text"
+    }
+    ,
+      {
+"id": "optionIndex",
+"label":"Option Index",
+"type": "text"
+    }
+    ,
+      {
+"id": "ItemName",
+"label":"Item Name",
+"type": "text"
+    }
+    ],
+    "blocks": [
+      {
+        "type": "text",
+        "name": "Table row",
+        "settings": [
+          {
+            "type": "text",
+            "id": "featureName",
+            "label": "Feature Name"
+          },
+          {
+            "type": "image_picker",
+            "id": "pfIcon",
+            "label": "P&F Icon"
+          },
+          {
+            "type": "image_picker",
+            "id": "methodIcon",
+            "label": "Method Icon"
+          },
+          {
+            "type": "image_picker",
+            "id": "flashIcon",
+            "label": "Flash Icon"
+          }
+
+        ]
+      }
+	],
+"presets": [
+		{
+			"name": "Table PF388"
+		}
+	]
+  }
+{% endschema %}

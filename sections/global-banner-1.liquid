@@ -1,0 +1,216 @@
+<style>
+  {%- assign DimageURL = section.settings.desktopimage | img_url:"2000x" -%}
+  {%- assign MimageURL = section.settings.mobileimage | img_url:"768x" -%}
+  .lander-banner-wrapper{
+    height:calc(100vh - 150px);
+  }
+  @media(min-width:768px){
+  .bath{{ section.id }}{background-image:url({{DimageURL}})}
+  }
+  @media(max-width:768px){
+  .bath{{ section.id }}{background-image:url({{MimageURL}});}
+    .lander-banner-wrapper{
+    height:calc(100vh - 150px);
+     background-position:center bottom;
+  }
+  }
+  @media(min-height:800px)and (max-width: 768px){
+    .lander-banner-wrapper{
+      height:calc(100vh - 250px);
+    }
+  }
+</style>
+{% assign product = section.settings.landingproduct %}
+{% assign s_variant = product.selected_or_first_available_variant %}
+<div
+  class="pt-5 position-relative lander-banner-wrapper bathroom-banner bath{{ section.id }} {{ section.settings.className }}"
+  x-data="{qty:1}"
+>
+  <div class="">
+    <div class="banner-inner-container">
+      <div class="d-flex justify-content-between flex-wrap">
+        <div class="lander-banner-details">
+          <h2 class="heading-2 theme-text value-pro">{{ section.settings.title }}</h2>
+          <div class="theme-text px-2">
+            <h3 class="value-sans mt-4 bb-points">{{ section.settings.subtext }}</h3>
+          </div>
+          <div class="text-left">
+            <div class="font-pier theme-text mt-0 mb-3 stars-img-review">
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3D5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="total-reviews value-sans">6300+ Reviews</span>
+            </div>
+          </div>
+
+          <form
+            @submit.prevent="console.log('submitted')"
+            x-ref="product_form"
+            enctype="multipart/form-data"
+            accept-charset="UTF-8"
+            id="product_form_{{product.id}}"
+            class="shopify-product-form"
+            data-product-id="{{product.id}}"
+            action="/cart/add"
+          >
+            <input type="hidden" name="id" value="{{ s_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            {% if section.settings.isSub %}
+              <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+              <input
+                type="hidden"
+                name="selling_plan"
+                value="{{s_variant.selling_plan_allocations.first.selling_plan.id}}"
+              >
+            {% endif %}
+          </form>
+
+          <div class=" mt-3">
+            <a
+              {% if section.settings.landingproduct != '' %}
+                x-on:click="Purdy.PurdyCheckout($refs.product_form, '{{ section.settings.discount }}', $event)"
+
+              {% else %}
+                {% if section.settings.scrollto != '' %}data-target="{{ section.settings.scrollto }}" {% endif -%}
+                {
+              {% endif %}
+              href="javascript:void(0);"
+
+              class="btn w-100 btn-loader theme-btn value-sans checkout-lander-btn {% if section.settings.scrollto !='' %}click-scroll{% endif %} {% if section.settings.outOfStock %} bb-disable {% endif %}"
+            >
+              {%- if section.settings.outOfStock %}
+                Out of Stock
+              {% else %}
+                {{ section.settings.btnText }}
+              {% endif -%}</a
+            ><br>
+            {% if section.settings.ctaDetails != '' -%}
+              <small class="theme-text"
+                ><img src="{{ 'lander-check.png' | asset_img_url }}" style="width:20px; vertical-align:bottom;">&nbsp;
+                {{ section.settings.ctaDetails }}
+              </small>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    class="arrow-bottom {% if section.settings.scrollto != '' %} click-scroll{% endif %}"
+    {% if section.settings.scrollto != '' %}
+      data-target="{{ section.settings.scrollto }}"
+    {% endif %}
+  ></span>
+</div>
+
+{% schema %}
+{
+  "name": "Global Banner 1",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "outOfStock",
+      "label": "Enable If product out Of Stock",
+      "default": true
+    },
+    {
+      "id": "className",
+      "label": "Section Class",
+      "type": "text"
+    },
+{
+    "id": "isSub",
+    "label": "Product subscription",
+    "type": "checkbox",
+    "default": false
+  },
+    {
+      "id": "landingproduct",
+      "label": "Choose the landing product",
+      "type": "product"
+    },
+     {
+    "type": "text",
+    "id": "discount",
+    "label": "Discount Code"
+  },
+    {
+      "id": "desktopimage",
+      "label": "Desktop Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "mobileimage",
+      "label": "Mobile Image",
+      "type": "image_picker"
+    },
+
+	{
+      "id": "title",
+      "label": "Banner Title",
+      "type": "html"
+    },
+
+	{
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "html"
+    },
+    {
+      "id": "price",
+      "label": "Price",
+      "type": "text"
+    },
+    {
+      "id": "delPrice",
+      "label": "Compare Price",
+      "type": "text"
+    },
+{
+      "id": "btnText",
+      "label": "Button Label",
+      "type": "text",
+	  "default" : "BUY NOW"
+	},
+{
+  "id": "ctaDetails",
+  "label":"Button Details Text",
+  "type": "html"
+},
+    {
+  "id": "scrollto",
+  "label":"Scroll to ID",
+  "type": "text",
+      "default":"javascript:void(0);"
+}
+  ],
+
+  "presets": [
+		{
+			"name": "Global Banner 1"
+		}
+	]
+}
+{% endschema %}

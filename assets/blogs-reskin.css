@@ -1,0 +1,246 @@
+body {
+  background: #f6f1e5 !important;
+}
+.content-box {
+  padding-top: 80px;
+  margin-bottom: 1.5rem;
+}
+.blog--filter--menu-item.active {
+  border-bottom: 1px solid #212529;
+}
+.blog--filter--menu-item a.theme-text {
+  font-size: 16px;
+  font-weight: 400;
+}
+.blog--filter--menu-item.active a.theme-text {
+  color: #11322c;
+}
+.blog--filter--menu-item:not(.active) a.theme-text {
+  /* color: #9E9E9E; */
+  color: #616161;
+}
+.blog-wrapper img {
+  border-radius: 4px;
+}
+.blog--filter--body {
+  display: flex;
+  /* justify-content: space-between; */
+  justify-content: center;
+}
+.blog-sort-button {
+  font-family: "Lausanne";
+  border: solid 1px #e0e0e0;
+  border-radius: 4px;
+  padding: 9px 16px 9px 16px;
+  background: #fcfaf6;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: 0.35px;
+  color: #212121;
+  text-transform: uppercase;
+  display: none;
+}
+.blog-sort-button svg {
+  margin-left: 5px;
+}
+.blog-title {
+  font-size: 28px;
+  color: #212121;
+  line-height: 35px;
+  letter-spacing: 0.392px;
+  font-weight: 400;
+  margin-bottom: 8px;
+  font-family: "Lausanne";
+}
+.article-content {
+  font-size: 15px;
+  color: #212121;
+  font-weight: 200;
+  margin-bottom: 1rem;
+  font-family: "Lausanne";
+}
+.article-content p {
+  line-height: 21px;
+  margin-bottom: 14px;
+}
+.readmore {
+  /* color: #11322C; */
+  color: #11322c;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+  text-transform: uppercase;
+  border-bottom: solid 1px #11322c;
+  font-family: "Lausanne";
+}
+.blog-type {
+  padding: 5px 8px;
+  border-radius: 4px;
+  background: #f6e3d1;
+  border: unset;
+  font-size: 14px;
+}
+.blog-date-new {
+  color: #757575;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 21px;
+  /* text-transform: uppercase; */
+}
+.blog-separator {
+  color: #bdbdbd;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 18px;
+  margin: 0 10px;
+}
+.desktop-hidden {
+  display: none;
+}
+.blog-list-tag {
+  height: 45px;
+  border: solid 1px #e0e0e0;
+  border-radius: 4px;
+  padding: 5px 10px 5px 10px;
+  background-color: #ffffff !important;
+  width: 100%;
+  color: #616161;
+  font-size: 16px;
+  font-weight: 400;
+  -webkit-appearance: none; /* Safari and Chrome */
+  -moz-appearance: none; /* Firefox */
+  appearance: none; /* Standard */
+  background: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/chevron-down.svg?v=1723715886")
+    no-repeat right 10px center;
+  padding-right: 20px; /* Adjust padding to make room for the icon */
+}
+.mob-sort .blog-sort-button svg {
+  margin-left: unset;
+}
+.blog-load-more {
+  background: #f6f1e5;
+  border: solid 1px #11322c;
+  border-radius: 4px;
+  width: 343px;
+  text-align: center;
+  padding: 12px 16px 12px 16px;
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 400;
+  letter-spacing: 0.4px;
+  color: #11322c;
+  margin: 1.3rem auto;
+}
+.banner-setion {
+  width: 100%;
+  box-sizing: border-box;
+  padding-bottom: 32px;
+}
+.load-more-container {
+  text-align: center;
+}
+.blog--filter--body {
+  position: relative;
+  z-index: 9;
+}
+.blog-list-tag {
+  font-family: "Lausanne";
+}
+.blog-list-wrapper {
+  gap: 16px;
+}
+.blog-wrapper {
+  flex: 1 1 100%;
+  box-sizing: border-box;
+}
+.faq-banner-text {
+  bottom: 32px;
+}
+.banner-text {
+  margin-left: 10%;
+}
+.blog-banner .heading-2 {
+  bottom: 32px;
+}
+
+@media (max-width: 1024px) {
+  .content-box {
+    padding-top: unset;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .faq-banner-text {
+    bottom: 80px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-box {
+    padding-top: unset;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .blog-title {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .blog-type,
+  .blog-date-new {
+    font-size: 12px;
+  }
+  .readmore {
+    font-size: 14px;
+    line-height: 14px;
+  }
+  .desktop-hidden {
+    display: flex;
+  }
+  .mobile-hidden {
+    display: none;
+  }
+  .blog-load-more {
+    width: 100%;
+  }
+  /* .menu-toggle {
+    height: 25px;
+  } */
+  .cart-icon {
+    height: 45px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content-box {
+    padding-top: unset;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .content-box {
+    padding-top: unset;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .blog-wrapper {
+    flex: 1 1 50%;
+  }
+  /* .menu-toggle {
+    height: 25px;
+  } */
+  .cart-icon {
+    height: 45px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .blog-wrapper {
+    flex: 1 1 33.333%;
+  }
+}

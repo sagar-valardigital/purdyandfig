@@ -1,0 +1,631 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_8iCwzJ": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant": "55210538434940",
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSCU306",
+            "price": "£15.00",
+            "compare_price": "£40.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_8GcqGE": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "variant": "55210652139900",
+            "selling_plan": "",
+            "discount": "3PackMicrofiberClothCU306",
+            "price": "£5.00",
+            "compare_price": "£12.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_8iCwzJ",
+        "product_8GcqGE"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "pf313_announcement_bar_Tn3kXg": {
+      "type": "pf313-announcement-bar",
+      "custom_css": [
+        ".anc-main-container .anc-text-with-icon {gap: 5px;}",
+        "@media (max-width: 767px) {.anc-mob-bar {gap: 5px; }}"
+      ],
+      "name": "Announcement bar 313",
+      "settings": {
+        "class": "",
+        "logoColor": "#11322c",
+        "logoURL": "",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Member exclusive: 50% off NEW Lava",
+        "scrollto": "starterkit-product",
+        "btn-bg": "#212121",
+        "btn-text": "#ffffff",
+        "annuText": "GET YOUR OFFER",
+        "top": "0",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_313_kFdARB": {
+      "type": "banner-313",
+      "blocks": {
+        "image_VXPtUa": {
+          "type": "image",
+          "settings": {
+            "desktop_img": "shopify://shop_images/Hero_-_Desktop_60e2ea2b-91eb-4f4f-b2d0-ad97b00c48e7.png",
+            "mobile_img": "shopify://shop_images/Hero_-_Mobile_7d7c1ac5-be7f-4512-876e-5d4cf82c8ab0.png"
+          }
+        }
+      },
+      "block_order": [
+        "image_VXPtUa"
+      ],
+      "custom_css": [
+        ".slick-dots {display: none !important;}",
+        ".banner-section-wrapper {background: linear-gradient(180deg, #eeddcb 0%, #eddccc 46.8%, #edd8c7 100%);}",
+        ".slick-dotted.slick-slider {margin-bottom: unset;}",
+        "@media (max-width: 500px) {img {min-height: 400px; } .ds-block {display: block; }}"
+      ],
+      "name": "Banner 313",
+      "settings": {
+        "bg": "#ffffff",
+        "txt-color": "#212121",
+        "sub-txt-color": "#0a1e1a",
+        "heading": "Bye bye bleach <span class=\"font-gtsuperItalic ds-block\">Hello Lava</span>",
+        "sub_heading": "Show your loo some love with <span class=\"fw-600\">50% off</span> our <span class=\"fw-600\">new</span> and <span class=\"fw-600\">exclusive</span> foaming toilet cleaner",
+        "btn-bg": "#11322c",
+        "btn-txt-color": "#ffffff",
+        "button_label": "CLAIM INTRO OFFER",
+        "button_link": "starterkit-product",
+        "top": "",
+        "showreview": false,
+        "star_color": "",
+        "star_text_color": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "benifit_block_313_khNYpY": {
+      "type": "benifit-block-313",
+      "custom_css": [
+        ".ds-block {display: block;}",
+        ".ps-block {display: block; font-family: \"GT Super\";}"
+      ],
+      "name": "Benefit block 313",
+      "settings": {
+        "className": "",
+        "textcolor": "#11322c",
+        "subtextcolor": "#212121",
+        "background": "#ffffff",
+        "heading": "Welcome to your <span class=\"ps-block\">bathroom’s new era</span>",
+        "image": "shopify://shop_images/Benefits_-_Desktop_a2a0eb08-3d09-4418-8cde-9ed43f1972ae.png",
+        "mimage": "shopify://shop_images/Benefits_-_Mobile_db9594c3-7dba-4b94-b159-3d1cf8e99bcc.png",
+        "details": "Lava is a powerful <span class=\"fw-600\">natural alternative to bleach</span> <span class=\"ds-block\">for perfect porcelain and sparkling surfaces.</span>",
+        "btn-bg": "#11322c",
+        "btn-text": "#ffffff",
+        "shop_now_cta": "GET 50% OFF",
+        "scrollto": "starterkit-product",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "pf313_video_text_mfTKGG": {
+      "type": "pf313-video-text",
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".ds-block {font-family: \"GT Super\"; display: block;}",
+        "video {border-radius: 4px;}",
+        ".videoctabtn {margin-top: unset;}",
+        ".ps-block {display: block;}",
+        "@media (max-width: 768px) {}"
+      ],
+      "name": "Video With Text 313",
+      "settings": {
+        "className": "",
+        "textcolor": "#ffffff",
+        "subtextcolor": "#ffffff",
+        "background": "#11322c",
+        "heading": "Revolutionary <span class=\"ds-block\">deep cleaning</span>",
+        "image": "shopify://shop_images/Feature_-_Desktop_22f17516-07fe-46df-82f0-63f564637777.png",
+        "video": "https://cdn.shopify.com/videos/c/o/v/5d2a3f1d9e7a4d9da9abf7fb1a267fb2.mp4",
+        "details": "Water transforms Lava into a <span class=\"fw-600\">fast-acting foam</span> <span class=\"ps-block\">that fizzes away limescale, grime and stubborn stains on surfaces throughout your bathroom.</span>",
+        "btn-bg": "#fafafa",
+        "btn-text": "#11322c",
+        "shop_now_cta": "GET 50% OFF",
+        "scrollto": "starterkit-product",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "video_with_text",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "pf313_buy_box_Md9QUk": {
+      "type": "pf313-buy-box",
+      "blocks": {
+        "product_image_gxzYRV": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Buybox_Image_-_Desktop_01.png",
+            "mimage": "shopify://shop_images/Buybox_Image_-_Mobile_01.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_x6UBck": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Buybox_Image_-_Desktop_02.png",
+            "mimage": "shopify://shop_images/Buybox_Image_-_Mobile_02.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_T8x8gE": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Buybox_Image_-_Desktop_03.png",
+            "mimage": "shopify://shop_images/Buybox_Image_-_Mobile_03.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_R4agbK": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Buybox_Image_-_Desktop_04.png",
+            "mimage": "shopify://shop_images/Buybox_Image_-_Mobile_04.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_xrfUUh": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Buybox_Image_-_Desktop_05.png",
+            "mimage": "shopify://shop_images/Buybox_Image_-_Mobile_05.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "text_TJLTrr": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "90-day supply of Lava <span class=\"fw-600\">(worth <span class=\"market-place-currency\"></span>15)</span>"
+          }
+        },
+        "text_BmQcd8": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<span class=\"fw-600\">FREE</span> Container for Life <span class=\"fw-600\">(worth <span class=\"market-place-currency\"></span>9)</span>"
+          }
+        },
+        "text_RTjTBF": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<span class=\"fw-600\">FREE</span> luxury metal scoop <span class=\"fw-600\">(worth <span class=\"market-place-currency\"></span>6)</span>"
+          }
+        },
+        "text_HdaLkM": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery every 90 days. Delay or cancel anytime."
+          }
+        }
+      },
+      "block_order": [
+        "product_image_gxzYRV",
+        "product_image_x6UBck",
+        "product_image_T8x8gE",
+        "product_image_R4agbK",
+        "product_image_xrfUUh",
+        "text_TJLTrr",
+        "text_BmQcd8",
+        "text_RTjTBF",
+        "text_HdaLkM"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".new-bar {padding: 4px 7px; background: #eaff65; border-radius: 30px; font-size: 14px; margin-top: 4px; margin-bottom: 4px;}",
+        ".block-title-bar {font-size: 14px;}",
+        ".nxt-bar {margin-top: 4px; margin-bottom: 4px;}",
+        ".gp-5-points li {font-size: 14px; padding-bottom: 8px;}",
+        ".gp-5-price-points > ul {padding: 4px 0 0 0;}",
+        ".checkout-starterkit-btn {gap: 4px;}",
+        "@media (max-width: 768px) {.new-bar, .gp-5-points li, .block-title-bar {font-size: 12px; } .gp-5-price-points > ul li.gray-text {background-size: 16px 20px; }}"
+      ],
+      "name": "PF313 buy box",
+      "settings": {
+        "moneyback": "30-day money-back guarantee",
+        "reviewCount": "9,500+",
+        "outOfStock": true,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": false,
+        "guaranteeDescription": "",
+        "guaranteeTextColor": "#434448",
+        "scrollto": "",
+        "background": "#e7ebea",
+        "p_id": "starterkit-product",
+        "landingproduct": "lava-starter-kit",
+        "varaiantid": "55475601015164",
+        "sellingid": "710621856124",
+        "sku": "FG1279",
+        "discount": "LAVASK313C",
+        "tab_description_1": "",
+        "className": "",
+        "mainheading": "Get ready for the most satisfying flush of your life",
+        "mainsubheading": "Innovative deep cleaning for members only",
+        "heading": "Exclusive Lava Starter Kit",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "30.00",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 5,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "block_icons_313_ikKbCb": {
+      "type": "block-icons-313",
+      "blocks": {
+        "text_mBKAN6": {
+          "type": "text",
+          "settings": {
+            "blockicon": "shopify://shop_images/Vector.svg",
+            "title": "STEP 1",
+            "description": "Drop a scoop or two of Lava into your loo"
+          }
+        },
+        "text_QhdJNW": {
+          "type": "text",
+          "settings": {
+            "blockicon": "shopify://shop_images/Group_1980468746.svg",
+            "title": "STEP 2",
+            "description": "Leave the foam to bloom for up to 60 seconds"
+          }
+        },
+        "text_aXxQMk": {
+          "type": "text",
+          "settings": {
+            "blockicon": "shopify://shop_images/Group_1980468754.svg",
+            "title": "STEP 3",
+            "description": "Brush then flush for picture-perfect porcelain"
+          }
+        }
+      },
+      "block_order": [
+        "text_mBKAN6",
+        "text_QhdJNW",
+        "text_aXxQMk"
+      ],
+      "name": "Block icons 313",
+      "settings": {
+        "sectionclass": "",
+        "backgroundcolor": "#11322c",
+        "headingcolor": "#ffffff",
+        "blockhedingcolor": "#ffffff",
+        "blocksubhedingcolor": "#ffffff",
+        "heading": "How to use Lava"
+      }
+    },
+    "text_with_image_313_ajpEfj": {
+      "type": "text-with-image-313",
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px; color: #0a1e1a;}",
+        ".normal-text {font-weight: 200; line-height: 27px;}",
+        ".pi-block {display: block;}",
+        "@media (max-width: 768px) {.heading-2 {color: #0c231f; } .normal-text {font-weight: 200; line-height: 24px; }}"
+      ],
+      "name": "Text with image 313",
+      "settings": {
+        "className": "",
+        "textcolor": "#0a1e1a",
+        "subtextcolor": "#212121",
+        "background": "#fafafa",
+        "heading": "Five-star spa fragrance",
+        "image": "shopify://shop_images/Feature_-_Desktop_22f17516-07fe-46df-82f0-63f564637777.png",
+        "mimage": "shopify://shop_images/Feature_-_Mobile_ce69e257-6447-4d1c-afb7-ddefe04c81a9.png",
+        "details": "Packed with 100% essential oils, Lava’s long lasting <span class=\"fw-600\">Lemon &amp; Petitgrain</span> scent leaves your loo smelling fresh long after you flush.",
+        "btn-bg": "#11322c",
+        "btn-text": "#ffffff",
+        "shop_now_cta": "GET 50% OFF",
+        "scrollto": "starterkit-product",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "icon_blocks_reskin_290_CeqXUa": {
+      "type": "icon-blocks-reskin-290",
+      "blocks": {
+        "iconblocks_eiiiLB": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_633c2ab3-5af8-4e48-97fc-f4f8584be67c.svg"
+          }
+        },
+        "iconblocks_gDgnfh": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_1.svg"
+          }
+        },
+        "iconblocks_hRQbEQ": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_eiiiLB",
+        "iconblocks_gDgnfh",
+        "iconblocks_hRQbEQ"
+      ],
+      "custom_css": [
+        ".green-btn {width: 343px; padding: 12px 16px; border-radius: 4px; margin-top: 40px;}",
+        ".heading-2 {letter-spacing: 0px; color: #0c231f !important;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: unset; width: 100% !important; max-width: 100% !important; } .heading-2 {color: #0a1e1a !important; } .heading-4 {color: #0c231f !important; }}"
+      ],
+      "settings": {
+        "class": "pf-219-icon-block",
+        "bg": "#f6f1e5",
+        "textcolor": "#212121",
+        "heading": "Your member benefits",
+        "show_hide_block": true,
+        "showbtn": true,
+        "btnbgcolor": "#11322c",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET 50% OFF",
+        "scrollto": "starterkit-product",
+        "top": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 8,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        ".two-women video {border-radius: 4px;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "55",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 9,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>Yes, Lava is only available as a subscription. When you subscribe, you’ll receive a fresh refill every 90 days, automatically delivered to your door, so you never run out.</p>"
+          }
+        },
+        "text_y7G6KB": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will my Lava last?",
+            "faq-ans": "<p>It depends on how often you use it, however if you are doing a deep clean once a week, it should last you 90 days.</p>"
+          }
+        },
+        "text_mRx7ee": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What is Lava made from?",
+            "faq-ans": "<p>Lava is primarily made from a mixture of citric acid and sodium bicarbonate—these are the key ingredients that give it its fizz. It also contains surfactants, fragrance, and a few other carefully selected ingredients.</p>"
+          }
+        },
+        "text_Le6e6y": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How does Lava work?",
+            "faq-ans": "<p>For a maintenance clean, use one scoop. Sprinkle it around the bowl and into the water rather than throwing it in. Wait 30 to 60 seconds, then brush thoroughly.</p><p>For a quick refresh or to prevent limescale, half a scoop is enough. Gently pour it into the water and leave for about 30 minutes.</p>"
+          }
+        },
+        "text_wxnEDA": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will the offer last?",
+            "faq-ans": "<p>Lava will only be running for a limited amount of time, so we recommend getting your skates on.</p>"
+          }
+        },
+        "text_pPHx9q": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into <a href=\"https://purdyandfigg.com/a/account/login\" title=\"https://purdyandfigg.com/a/account/login\">your account</a> with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to change your order, adjust your delivery and billing date, or pause your subscription.</p>"
+          }
+        },
+        "text_Fg9K4n": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Where can I use & store Lava?",
+            "faq-ans": "<p>Lava is built to work across your bathroom and can be used on any porcelain surface, much like bleach.</p><p>We have designed the container to be stored on display, but please note keeping it in direct sunlight may impact the product.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_y7G6KB",
+        "text_mRx7ee",
+        "text_Le6e6y",
+        "text_wxnEDA",
+        "text_pPHx9q",
+        "text_Fg9K4n"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "bottomText": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "pf313_announcement_bar_Tn3kXg",
+    "banner_313_kFdARB",
+    "benifit_block_313_khNYpY",
+    "pf313_video_text_mfTKGG",
+    "pf313_buy_box_Md9QUk",
+    "block_icons_313_ikKbCb",
+    "text_with_image_313_ajpEfj",
+    "icon_blocks_reskin_290_CeqXUa",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

@@ -1,0 +1,29 @@
+<div class="container mobile-hide">
+  <div class="usps icon-usps d-flex justify-content-around">
+    <div class="d-flex align-items-center column">
+      <span>{% render 'icon-bottle', content: product %}</span>
+      <span class="ms-2 value-sans">Free Bottle for Life</span>
+    </div>
+    <div class="d-flex align-items-center column">
+      {% render 'icon-money', content: product %}
+      <span class="ms-2 value-sans">Money Back Guarantee</span>
+    </div>
+    <div class="d-flex align-items-center column">
+      {% render 'icon-cube', content: product %}
+      <span class="ms-2 value-sans">Recyclable Packaging</span>
+    </div>
+  </div>
+</div>
+{% schema %}
+{
+  "name": "icon USP",
+  "settings": [
+
+  ],
+    "presets": [
+  {
+      "name" : "Icon USP"
+  }
+]
+}
+{% endschema %}

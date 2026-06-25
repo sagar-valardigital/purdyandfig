@@ -1,0 +1,108 @@
+{% assign product = section.settings.selectproduct %}
+{% assign s_variant = product.selected_or_first_available_variant %}
+
+{%  assign hasbtnlink = true %}
+
+{% if section.settings.btnlink == '' %}
+  {% assign hasbtnlink = false %}
+{%  endif %}
+
+<div class="button-only py-4" style="background-color:{{ section.settings.bgcolor }}" x-data="{qty:1}">
+  <div class="container">
+    <div class="product-buy-btn mt-0 mb-3 mx-auto">
+      {%  if hasbtnlink %}
+      {% else %}
+      <form
+        @submit.prevent="console.log('submitted')"
+        x-ref="product_form_{{product.id}}"
+        enctype="multipart/form-data"
+        accept-charset="UTF-8"
+        id="product_form_{{product.id}}"
+        class="shopify-product-form"
+        data-product-id="{{product.id}}"
+        action="/cart/add"
+      >
+        <input type="hidden" name="id" value="{{ s_variant.id }}">
+        <input type="hidden" name="quantity" value="1">
+        {% if section.settings.isSub %}
+          <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+          <input
+            type="hidden"
+            name="selling_plan"
+            value="{{s_variant.selling_plan_allocations.first.selling_plan.id}}"
+          >
+        {% endif %}
+      </form>
+      {%  endif %}
+      <button
+        class="btn theme-btn btn-loader {%  if hasbtnlink %}click-scroll{% endif %}"  style="background:{{ section.settings.btnBG }};border-color:{{ section.settings.btnBG }}"
+        {%  if hasbtnlink %}
+          data-top="{{ section.settings.top }}"
+          data-target="{{ section.settings.btnlink }}"
+        {% else %}
+        x-on:click="Purdy.PurdyCheckout($refs.product_form_{{ product.id }},'{{ section.settings.discount }}', $event)"
+        {% endif %}
+      >
+        {{ section.settings.btnlabel }}
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "Button Only",
+   "settings": [
+       {
+           "type": "color",
+           "id": "bgcolor",
+           "label": "Background Color"
+         },
+     {
+           "type": "color",
+           "id": "btnBG",
+           "label": "Button Background Color"
+         },
+     {
+           "type": "product",
+           "id": "selectproduct",
+           "label": "Select Product"
+         },
+     {
+           "type": "checkbox",
+           "id": "isSub",
+           "label": "Product subscription",
+            "default": true
+         },
+     {
+           "type": "text",
+           "id": "discount",
+           "label": "Discount",
+           "default": "Free"
+         },
+         {
+           "type": "text",
+           "id": "btnlabel",
+           "label": "Button Label",
+           "default": "Buy Now"
+         },
+         {
+           "type": "text",
+           "id": "btnlink",
+           "label": "Element ID to scroll"
+         },
+     {
+      "type": "text",
+      "id": "top",
+      "label": "Scroll to Position"
+    }
+
+],
+
+"presets": [
+	{
+		"name": "Buy Button"
+	}
+]
+ }
+{% endschema %}

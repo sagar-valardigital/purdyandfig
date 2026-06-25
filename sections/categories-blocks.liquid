@@ -1,0 +1,247 @@
+<style>
+  @media(max-width:560px){
+    .mw-100{width:100%;}
+    .mw-50{width:48%;}
+    .block-img-wrapper{
+      max-width:200px
+    }
+    
+  }
+    {% if section.settings.shadow %}
+    .block-img-wrapper{
+      box-shadow:none;
+      background-color:transparent;
+    }
+      {% endif %}
+</style>
+{% if section.settings.enable %}
+  <div
+    class="block-section  {{ section.settings.classname }} "
+    style="background:{{ section.settings.sectionbgColor }}"
+  >
+    <div class="container pt-5 pb-5">
+      {% if section.settings.heading != '' %}
+        <h2
+          class="heading-2 text-center theme-text mt-0  m-heading-2"
+          style="color:{{ section.settings.sectionTextColor }}"
+        >
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      {% if section.settings.subtext != '' %}
+        <p class="heading-4 theme-text  text-center" style="color:{{ section.settings.sectionTextColor }}">
+          {{ section.settings.subtext }}
+        </p>
+      {% endif %}
+      <div class="d-flex flex-wrap justify-content-center {% if section.settings.mobile-slider %} categories-mobile-slider {% endif %} theme-text lp-blocks">
+        {% for block in section.blocks %}
+          <div class="{{ block.settings.width }} p-3 {{block.settings.mbBlock}}">
+            <div class="text-left ">
+              <div class="block-img-wrapper {%if block.settings.rounded%}rounded-img{%endif%}">
+                {% assign image = block.settings.image | img_url: '300x300', crop: 'center' %}
+                <img
+                  loading="lazy"
+                  src="{{image}}"
+                  class="img-responsive w-100"
+                  alt="image"
+                  width="300px"
+                  height="300px"
+                >
+              </div>
+              <h3 class="heading-4 my-2 theme-text value-sans__" >
+                {{ block.settings.heading }}
+              </h3>
+              {% if block.settings.details %}
+                <p class="text-center my-0 theme-text value-sans categories-mobile-slider-text" >
+                  {{ block.settings.details }}
+                </p>
+              {% endif %}
+          {% if block.settings.BlockLinkText != '' %}
+                <a href="{{ block.settings.Block_Link }}" class="text-left  value-sans" style="color:{{ section.settings.sectionTextColor }}; text-decoration:underline;" >
+                  {{ block.settings.BlockLinkText }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+      {% if section.settings.showBTN %}
+        <div class="mt-4 px-4  pb-4 text-center">
+          <a
+            class="btn text-over-btn mt-3 checkout-au-btn"
+            style="
+              background:{{ section.settings.btnColor }}; border-color:{{ section.settings.btnColor }};
+              color:{{ section.settings.btnTextColor }};
+            "
+            href="{% if section.settings.btnLink !='' %}{{ section.settings.btnLink }}{% else %} javascript:void(0); {% endif %}"
+          >
+            {{- section.settings.btnLabel -}}
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Categories Blocks",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "checkbox",
+      "id": "mobile-slider",
+      "label": "Mobile slider enable",
+      "default": false
+    },
+      {
+      "type": "text",
+      "id": "classname",
+      "label": "section Class"
+    },
+      {
+      "type": "checkbox",
+      "id": "shadow",
+      "label": "Disable Shadow",
+      "default": false
+    },
+{
+      "type": "color",
+      "id": "sectionbgColor",
+      "label": "section Background Color"
+    },
+      {
+      "type": "color",
+      "id": "sectionTextColor",
+      "label": "section text Color"
+    },
+{
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+{
+      "type": "text",
+      "id": "subtext",
+      "label": "Text"
+    },
+      {
+      "type": "checkbox",
+      "id": "showBTN",
+      "label": "Show Button",
+      "default": false
+    },
+      {
+      "type": "text",
+      "id": "btnLabel",
+      "label": "Button label"
+    },
+{
+      "type": "url",
+      "id": "btnLink",
+      "label": "Button Link"
+    },
+{
+      "type": "color",
+      "id": "btnColor",
+      "label": "Button Color"
+    }
+      ,
+{
+      "type": "color",
+      "id": "btnTextColor",
+      "label": "Button Text Color"
+    }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+          {
+            "type": "select",
+            "id": "width",
+            "label": "Select block width",
+            "options": [
+              {
+                "value": "w-100",
+                "label": "100%"
+              },
+              {
+                "value": "w-50",
+                "label": "50%"
+              },
+{
+                "value": "w-33",
+                "label": "33%"
+              },
+              {
+                "value": "w-25",
+                "label": "25%"
+              }
+            ],
+            "default": "w-25"
+          },
+          {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Add Image"
+    },
+ {
+      "type": "checkbox",
+      "id": "rounded",
+      "label": "Image Rounded",
+      "default": false
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+{
+      "type": "text",
+      "id": "details",
+      "label": "Detail Text"
+    },
+            {
+      "type": "text",
+      "id": "BlockLinkText",
+      "label": "Block Link Label"
+    },
+          {
+      "type": "url",
+      "id": "Block_Link",
+      "label": "Block Link"
+    },
+          {
+            "type": "select",
+            "id": "mbBlock",
+            "label": "Select mobile block width",
+            "options": [
+              {
+                "value": "mw-100",
+                "label": "100%"
+              },
+              {
+                "value": "mw-50",
+                "label": "50%"
+              }
+            ],
+            "default": "mw-50"
+          }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Categories Blocks"
+		}
+	]
+  }
+{% endschema %}

@@ -1,0 +1,180 @@
+{% if section.settings.enable %}
+  <div class="marquee-section-wraper position-relative marquee-block-3 marquee-block-reskin py-4 m_{{ section.id }}">
+    {% if section.settings.followers != blank %}
+      <div>
+        <h2 class="heading-3 followers text-center font-lausanne fw-400 mb-4">{{ section.settings.followers }}</h2>
+      </div>
+    {% endif %}
+    {% if section.settings.marqueeHTML != blank %}
+      <div>
+        <h2 class="heading-3 heading text-center font-lausanne fw-400 mb-4 mt-1" style="color:{{ section.settings.color_text }}">{{ section.settings.marqueeHTML }}</h2>
+      </div>
+    {% endif %}
+    <div class="marquee-section d-flex" style="">
+      <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img ">
+              <img
+                src="{{ block.settings.usp_img | img_url: "250x" }}"
+                class="img-responsive h-auto"
+                width="250"
+                alt="{{ block.settings.usp_img.alt }}"
+                height="80"
+              >
+            </div>
+          {% else %}
+            <div class="marquee-text font-lausanne fw-400">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex justify-content-center align-items-center">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img ">
+              <img
+                src="{{ block.settings.usp_img | img_url: "250x" }}"
+                alt="{{ block.settings.usp_img.alt }}"
+                class="img-responsive h-auto"
+                width="250"
+                height="80"
+              >
+            </div>
+          {% else %}
+            <div class="marquee-text font-lausanne fw-400">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img">
+              <img
+                src="{{ block.settings.usp_img | img_url: "250x" }}"
+                alt="{{ block.settings.usp_img.alt }}"
+                class="img-responsive h-auto"
+                width="250"
+                height="80"
+              >
+            </div>
+          {% else %}
+            <div class="marquee-text font-lausanne fw-400">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img ">
+              <img
+                src="{{ block.settings.usp_img | img_url: "250x" }}"
+                alt="{{ block.settings.usp_img.alt }}"
+                class="img-responsive h-auto"
+                width="250"
+                height="80"
+              >
+            </div>
+          {% else %}
+            <div class="marquee-text font-lausanne fw-400">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+        {% for block in section.blocks %}
+          {% if section.settings.img_slider %}
+            <div class="marquee-img mx-3 px-3">
+              <img
+                src="{{ block.settings.usp_img | img_url: "250x" }}"
+                alt="{{ block.settings.usp_img.alt }}"
+                class="img-responsive h-auto"
+                width="250"
+                height="80"
+              >
+            </div>
+          {% else %}
+            <div class="marquee-text font-lausanne fw-400">{{ block.settings.usp }}</div>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+{% endif %}
+<style>
+    /* marquee section */
+  .marquee-section{padding:8px 10px;overflow: hidden;}.marquee-text{color: #fff;font-size: 1rem;font-family: 'Pier Sans';padding: 0 35px;position: relative;}.marquee-text:after{content: '';position: absolute;width: 2px;height: 100%;background-color: #fff;right:0;top:0;}.marquee-block{flex: 1 0 auto;-webkit-animation: e 35s linear infinite ;animation: e 35s linear infinite ;}@-webkit-keyframes e {0% {transform: translateX(0);}to {transform: translateX(-100%);}}@keyframes e {0% {transform: translateX(0);}to {transform: translateX(-100%);}}.marquee-section{background-color:{{section.settings.color_bg}}}.marquee-text{color:{{section.settings.color_text}};}.marquee-text:after{background-color:{{section.settings.color_text}}}
+  .marquee-section-wraper{
+    background-color: {{ section.settings.color_bg }};
+  }
+  .m_{{ section.id }} .marquee-img{width:250px; margin:0px 16px; padding:0 5px; align-items:center; align-self:center;}
+  .m_{{ section.id }} .marquee-img img{width:100%;}
+  @media(max-width:768px){
+    .m_{{ section.id }} .marquee-img{width:155px;}
+  }
+</style>
+{% schema %}
+ {
+    "name": "Marquee Block Reskin",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "checkbox",
+      "id": "img_slider",
+      "label": "enable image slider",
+      "default": true
+    },
+      {
+          "type": "color",
+          "id": "color_bg",
+          "label": "Background color",
+          "default": "#F4F6FC"
+        },
+{
+          "type": "color",
+          "id": "color_text",
+          "label": "Text color",
+          "default": "#fff"
+        }
+,
+{
+          "type": "html",
+          "id": "marqueeHTML",
+          "label": "marque heading"
+        }
+      ,
+{
+          "type": "html",
+          "id": "followers",
+          "label": "Happy Customers"
+        }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "usp",
+        "settings": [
+          {
+            "type": "text",
+            "id": "usp",
+            "label": "USP lable"
+          },
+          {
+            "type": "image_picker",
+            "id": "usp_img",
+            "label": "USP image"
+          }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Marquee Block Reskin"
+		}
+	]
+  }
+{% endschema %}

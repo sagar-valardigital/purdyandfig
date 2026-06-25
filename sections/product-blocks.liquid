@@ -1,0 +1,262 @@
+<style>
+.btn-christmas-btn{font-size:14px !important}
+.reskin-product-blocks-wrapper .reskin-product-block{
+  {% if section.settings.border_blocks %}
+  padding:10px;
+  border:1px solid #E7EBEA;
+  {% else %}
+    padding:0px;
+  border:0px solid #E7EBEA;
+  {% endif %}
+  border-radius:4px;
+  margin:15px;
+}
+.product-grid-blocks{
+  display:grid;
+  grid-template-columns:repeat(4, 1fr);
+  gap:15px;
+}
+.product-grid-blocks .reskin-product-block{
+  margin:0;
+}
+.product-grid-blocks .reskin-product-block .green-btn{
+  width:100%;
+}
+@media(max-width:768px){
+.product-grid-blocks{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:10px;
+}
+#body .bg_subheading{
+  background-image:url({{ section.settings.subheading_bg | image_url }});
+  border-radius:8px;
+  padding:10px;
+  color:#fff !important;
+  background-size:cover;
+  font-size:24px !important;
+  font-weight:400;
+  padding-top:60px;
+}
+#body .bg_subheading b{
+font-weight:400;
+font-style:italic;
+}
+}
+</style>
+<div class="product-blocks-section py-80" x-data="{qty:1}" style="background-color:{{ section.settings.bg }}">
+  <div class="container">
+    <div class="section-header text-center">
+      {% if section.settings.heading != blank %}
+      <h2 class="heading-2 font-gtsuper">{{ section.settings.heading }}</h2>
+      {% endif %}
+    
+     {% if section.settings.subheading != blank %}
+      <p class="font-lausanne fw-300 {% if section.settings.subheading_bg != blank %}mobile-hide{% endif %}">{{ section.settings.subheading }}</p>
+     {% endif %}
+{% if section.settings.subheading != blank and section.settings.subheading_bg != blank %}
+  <p class="font-gtsuper bg_subheading heading-3 desktop-hide">{{ section.settings.subheading }}</p>
+{%endif %}
+    </div>
+    <div class="reskin-product-blocks-wrapper {% if section.settings.slider %}rpb-slider-black-friday{% else %}product-grid-blocks{% endif %}">
+      {% for block in section.blocks %}
+        {% assign product = block.settings.product %}
+        <div class="reskin-product-block">
+            <div class="rpb-image position-relative">{% if block.settings.product_image %}
+              <img src="{{ block.settings.product_image | img_url : 'master' }}" width="300" height="300" class="img-responsive h-auto w-100">
+              {% else %}
+<img src="{{ product.featured_image | img_url : 'master' }}" width="300" height="300" class="img-responsive h-auto w-100">
+              {% endif %}
+             {% if block.settings.saving != blank %} <span class="saving-tag font-lausanne fw-400" {% if section.settings.tag_background_color %}style="background-color:{{ section.settings.tag_background_color }}; border-color:{{ section.settings.tag_background_color }}; color:{{ section.settings.tag_color }}"{% endif %}>{{ block.settings.saving }}</span>{% endif %}
+            </div>
+            <div class="rpb-product-details">
+              <h3 class="heading-3 font-lausanne fw-600">{{ block.settings.title }}</h3>
+              {%  if block.settings.details != blank %}
+              <p class="font-lausanne fw-200" style="font-size:14px; color:#424242">{{ block.settings.details }}</p>
+              {% endif %}
+              {% if section.settings.reviews %}
+              {% render 'okendo-reviews-product-rating-summary', product: product %}
+              {% endif %}
+              <div class="rpb-pricing">
+                <span>{{ block.settings.price }}</span>
+                <del>{{ block.settings.crossprice }}</del>
+              </div>
+              <div>
+                <form name="shopify-product-form" autocomplete="off" @submit.prevent="console.log('submitted')"
+                        x-ref="product_form_{{ forloop.index}}" enctype="multipart/form-data" accept-charset="UTF-8"
+                        id="product_form_{{ forloop.index}}" class="shopify-product-form form_s1 link-to-variant variant_1 show"
+                        data-product-id="{{product.id}}" action="/cart/add">
+              
+                <input autocomplete="off" type="hidden" name="id" class="input_variant_id_"
+                                value="{{ block.settings.variant_id }}">
+                            
+                            <input autocomplete="off" type="hidden" name="quantity" value="1">
+{% if block.settings.isSub %}
+                            <input autocomplete="off" type="checkbox" name="purchase_type" value="subscription" checked
+                                class="d-none gp--buyoption-input">
+  {% endif %}
+                            <input autocomplete="off" class="input_selling_plan_" type="hidden" name="selling_plan"
+                                value="{{ block.settings.sealing_plan}}">
+                  <input autocomplete="off" type="hidden" class="" name="discount"
+                                value="{{ block.settings.discount }}">
+                {% if block.settings.out_of_stock %}
+                <button class="btn btn-christmas-btn btn-loader green-btn" disabled="disabled"
+                  style="opacity: 0.6;">OUT OF STOCK</button>
+                {% else %}
+                <button x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ forloop.index}}, false, false, $event)" class="btn btn-christmas-btn btn-loader green-btn">{{ block.settings.buttonLabel }}</button>
+                {% endif %}
+                </form>
+              </div>
+            </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% if section.settings.popup %}
+{% render 'popup-block-381' %}
+{% endif %}
+
+{% schema %}
+  {
+    "name": "Product Blocks",
+    "settings": [
+      {
+      "type": "checkbox",
+      "id": "popup",
+      "label": "Enable Popup",
+      "default": true
+    },  
+         {
+            "type": "color",
+            "id": "bg",
+            "label": "Section Background Color"
+          },
+         {
+            "type": "html",
+            "id": "heading",
+            "label": "Section Heading"
+          },
+         {
+            "type": "html",
+            "id": "subheading",
+            "label": "Section Sub Heading"
+          },
+          {
+            "type": "image_picker",
+            "id": "subheading_bg",
+            "label": "Sub Heading background image"
+          },
+          {
+            "type": "color",
+            "id": "tag_background_color",
+            "label": "Tag Backgground Color"
+          },
+          {
+            "type": "color",
+            "id": "tag_color",
+            "label": "Tag  Color"
+          },
+          {
+            "type": "checkbox",
+            "id": "border_blocks",
+            "label": "Border on blocks",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "slider",
+            "label": "Slider",
+            "default": true
+          },
+          {
+            "type": "checkbox",
+            "id": "reviews",
+            "label": "Reviews",
+            "default": true
+          }
+    ],
+    "blocks": [
+      {
+        "type": "product",
+        "name": "Product",
+        "settings": [ 
+          {
+            "type": "checkbox",
+            "id": "out_of_stock",
+            "label": "Out of stock"
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Choose Product"
+          },
+          {
+            "type": "text",
+            "id": "variant_id",
+            "label": "Variant ID"
+          },
+          {
+            "type": "text",
+            "id": "sealing_plan",
+            "label": "Selling Plan"
+          },
+          {
+            "type": "text",
+            "id": "discount",
+            "label": "Discount Code"
+          },
+          {
+            "type": "image_picker",
+            "id": "product_image",
+            "label": "Choose Product Image"
+          },
+          {
+            "type": "checkbox",
+            "id": "isSub",
+            "label": "Product subscription enable"
+          },
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Product Title"
+          },
+          {
+            "type": "text",
+            "id": "details",
+            "label": "Product details"
+          },
+          {
+            "type": "text",
+            "id": "saving",
+            "label": "Product Saving %",
+            "default": "Saving 20%"
+          },
+          {
+            "type": "text",
+            "id": "price",
+            "label": "Product Price"
+          },
+          {
+            "type": "text",
+            "id": "crossprice",
+            "label": "Product Cross Price"
+          },
+          {
+            "type": "text",
+            "id": "buttonLabel",
+            "label": "Button Label",
+            "default" : "ADD TO CART"
+          }
+        ]
+      }
+	],
+    "presets": [
+    	{
+    		"name": "Product Blocks"
+    	}
+    ]
+  }
+  
+{% endschema %}

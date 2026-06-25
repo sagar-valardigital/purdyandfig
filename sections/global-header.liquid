@@ -1,0 +1,173 @@
+<style>
+  .menu-social-icon .social-icon{
+    background-image:url({{'social-blue.png' | asset_url}}) !important
+  }
+  .mobile-menu-product ul li{background-image:url({{'check-box.png' | asset_url}})}
+</style>
+<header
+  class="
+    header-2 header  bg-header{% if template.name != "index" and template.name != "product" %}
+     bg-header
+    {% endif %}
+  "
+>
+  <div class="container-fluid" x-data>
+    <div class="d-flex justify-content-between align-items-center py-1">
+      <div class="menu-toggle desktop-hide">
+        <span class="toggle-icon"> </span>
+      </div>
+
+      <div class="logo-wrapper">
+        <a href="{{ routes.root_url }}" class="header__heading-link link link--text d-block focus-inset">
+          <img class="w-100 d-block" src="{{ 'new-logo.svg' | asset_url }}">
+        </a>
+      </div>
+      <div class="main-menu-left mobile-hide">
+        <ul class="list-unstyle d-flex  justify-content-end ">
+          {%- for link in section.settings.menu2.links -%}
+            <li>
+              <a href="{{link.url}}" class="menu-item">{{ link.title | escape }}</a>
+            </li>
+          {% endfor %}
+          {% if template.name != 'product' and template.name != 'collection' and template.name != 'list-collections' %}
+            <li style="margin-left:20px;">
+              <a href="{{section.settings.top_product_link.url}}" class="menu-item starter-kit-btn"
+                >Shop Starter Kit <span class="btn-arrow"></span
+              ></a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+      <div class="main-menu-right mobile-hide" x-data>
+        <ul class="list-unstyle d-flex justify-content-end">
+          <li>
+            {% if customer %}
+              <a href="{{ routes.account_url }}" class="menu-item header-icon"
+                ><img class="w-100" src="{{ 'user-2.png' | asset_url }}"
+              ></a>
+            {% else %}
+              <a href="/a/account/login" class="menu-item header-icon" id="customer_login_link"
+                ><img class="w-100" src="{{ 'user-2.png' | asset_url }}"
+              ></a>
+            {% endif %}
+          </li>
+
+          <li @click="$dispatch('toggle-cart')">
+            <a class="menu-item cart-toggle position-relative header-icon">
+              <img class="w-100" src="{{ 'shopping-cart-2.png' | asset_url }}">
+              <span class="cart-item-count">
+                {%- if cart.item_count > 0 %}
+                  {{ cart.item_count -}}
+                {%- endif -%}
+              </span></a
+            >
+          </li>
+        </ul>
+      </div>
+      <div class="cart-toggle desktop-hide" @click="$dispatch('toggle-cart')">
+        <span class="cart-icon position-relative">
+          <img class="w-100" src="{{ 'shopping-cart-2.png' | asset_url }}">
+          <span class="cart-item-count">
+            {%- if cart.item_count > 0 %}{{ cart.item_count }}{% endif -%}
+          </span>
+        </span>
+      </div>
+    </div>
+    <div class="banner-review font-pier w-100 desktop-hide" style="transform:scale(0.6,0.6);margin-top:-12px;">
+      <span class="star-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+          <defs><style>.cls-a{fill:#3d5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-a" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+        </svg>
+      </span>
+      <span class="star-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+          <defs><style>.cls-a{fill:#3d5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-a" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+        </svg>
+      </span>
+      <span class="star-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+          <defs><style>.cls-a{fill:#3d5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-a" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+        </svg>
+      </span>
+      <span class="star-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+          <defs><style>.cls-a{fill:#3d5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-a" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+        </svg>
+      </span>
+      <span class="star-img">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+          <defs><style>.cls-a{fill:#3d5065;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-a" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+        </svg>
+      </span>
+      <span class="total-reviews" style="color:#3d5065"> Over ({{ settings.gloabalreviews }}+ reviews)</span>
+    </div>
+    <div class="mobile-menu desktop-hide mobile-menu-1">
+      <div class="mobile-menu-wrapper">
+        <ul class="list-unstyle font-value">
+          {%- for mobilelink in section.settings.mobilemenu.links -%}
+            <li>
+              <a href="{{mobilelink.url}}" class="mobile-menu-item">{{ mobilelink.title | escape }}</a>
+            </li>
+          {% endfor %}
+          <li>
+            {% if customer %}
+              <a href="{{ routes.account_url }}" class="mobile-menu-item">My account</a>
+            {% else %}
+              <a href="/a/account/login" class="mobile-menu-item" id="customer_login_link">Log in</a>
+            {% endif %}
+          </li>
+        </ul>
+      </div>
+      <div class="mobile-menu-footer">
+        <div class="text-center">
+          <div class="social-link d-flex justify-content-center menu-social-icon">
+            <a href="https://www.instagram.com/purdyandfigg/?hl=en" class="insta social-icon"></a>
+            <a href="https://www.facebook.com/purdyandfigg/" class="fb social-icon"></a>
+            <a href="https://twitter.com/purdyfigg" class="twitter social-icon"></a>
+          </div>
+          <div class="pf-contact-menu theme-text">
+            <p class="m-0">Have a question?</p>
+            <p class="m-0">
+              Email <a href="mailto:info@purdyandfigg.com">info@purdyandfigg.com</a> or
+              <a href="/pages/faq" class="text-white">Visit our FAQ's</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Global Header",
+  "class": "section-header landing-header",
+  "settings": [
+
+
+    {
+      "type": "link_list",
+      "id": "menu2",
+      "default": "main-menu",
+      "label": "header menu"
+    },
+{
+      "type": "link_list",
+      "id": "mobilemenu",
+      "default": "main-menu",
+      "label": "Mobile menu"
+    },
+
+ {
+      "type": "product",
+      "id": "top_product_link",
+      "label": "Header Product CTA selection"
+    }
+  ],
+  "presets": [
+		{
+			"name": "Global Header"
+		}
+	]
+}
+{% endschema %}

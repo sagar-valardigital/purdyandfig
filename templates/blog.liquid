@@ -1,0 +1,143 @@
+{% section 'blog-list'%}
+
+<script>
+  const fullPath = window.location.pathname + window.location.search + window.location.hash;
+  if(window.location.hash) {
+    document.querySelector('.blog-list-tag').value = fullPath;
+  } else {
+    document.querySelector('.blog-list-tag').selectedIndex = 0;
+  }
+
+  let currentSortingOrder = 'descending';
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelector('.blog-list-tag').addEventListener('change', function() {
+        window.location.href = this.value;
+    });
+
+    const parseDate = (dateString) => {
+      return new Date(dateString);
+    }
+    
+    const sorttheblogs = (defaultOrder = false) => {
+      const container = document.querySelector('.blog-list-wrapper');
+      const blogWrappers = Array.from(document.querySelectorAll('.blog-wrapper'));
+
+      if(!defaultOrder) {
+        if(currentSortingOrder == 'descending') {
+          currentSortingOrder = 'ascending';
+          document.querySelectorAll('.blog-sort-button').forEach(function(button) {
+            button.setAttribute('title', 'Sort by - date descending');
+          });
+        } else {
+          currentSortingOrder = 'descending';
+          document.querySelectorAll('.blog-sort-button').forEach(function(button) {
+            button.setAttribute('title', 'Sort by - date ascending');
+          });
+        }
+      }
+    
+      const sortedBlogWrappers = blogWrappers.sort((a, b) => {
+        const dateA = parseDate(a.querySelector('.blog-date-new').getAttribute('data-date-value').trim());
+        const dateB = parseDate(b.querySelector('.blog-date-new').getAttribute('data-date-value').trim());
+
+        if(currentSortingOrder == 'descending') {
+          return dateB - dateA;
+        } else {
+          return dateA - dateB;
+        }
+      });
+
+      blogWrappers.forEach(wrapper => container.appendChild(wrapper));
+    }
+
+    document.getElementById('blog-sort-button-one').addEventListener('click', function() {
+      sorttheblogs();
+    });
+
+    document.getElementById('blog-sort-button-two').addEventListener('click', function() {
+      sorttheblogs();
+    });
+
+    function makeRequest(method, url, callback) {
+      const xhr = new XMLHttpRequest();
+  
+      xhr.open(method, url, true);
+  
+      xhr.onreadystatechange = function() {
+        if(xhr.readyState === 4) {
+          if(xhr.status === 200) {
+            try {
+              const parser = new DOMParser();
+              const doc = parser.parseFromString(xhr.responseText, 'text/html');
+              
+              const targetDiv = doc.querySelector('.blog-list-wrapper');
+
+              if (targetDiv) {
+                  const divHTML = targetDiv.innerHTML;
+                  callback(null, divHTML);
+              } else {
+                  callback('Div not found in the response.');
+              }
+            } catch (e) {
+                callback('Error parsing response JSON: ' + e.message);
+            }
+          } else {
+              callback('HTTP Error: ' + xhr.status + ' - ' + xhr.statusText);
+          }
+        }
+      };
+  
+      xhr.onerror = function() {
+        callback('Network Error');
+      };
+  
+      xhr.ontimeout = function() {
+        callback('Request Timeout');
+      };
+  
+      xhr.send();
+    }
+
+    function removeWord(str, word) {
+      return str.split(word).join('');
+    }
+
+    document.querySelector('.blog-load-more').addEventListener('click', function() {
+      document.querySelector('.blog-load-more').innerHTML = 'Loading...';
+      document.querySelector('.blog-load-more').setAttribute('disabled', 'disabled');
+      
+      let nextpageurl = document.querySelector('.blog_next_page_url').value;
+      let totalpages = parseInt(document.querySelector('.total_blogs_count').value);
+      let currentpage = parseInt(document.querySelector('.blog_current_page').value);
+
+      makeRequest('GET', nextpageurl, function(error, data) {
+        document.querySelector('.blog-load-more').innerHTML = 'MORE TIPS & TRICKS';
+        document.querySelector('.blog-load-more').removeAttribute('disabled');
+        if(error) {
+          console.error('Request failed:', error);
+        } else {
+          const elements = document.querySelectorAll('.blog-wrapper');
+
+          if(elements.length > 0) {
+            const lastElement = elements[elements.length - 1];
+    
+            lastElement.insertAdjacentHTML('afterend', data);
+            sorttheblogs(true);
+
+            if((currentpage + 1) < totalpages) {
+              const updatedURL = removeWord(nextpageurl, '?page=' + (currentpage + 1));
+              document.querySelector('.blog_next_page_url').value = updatedURL + '?page=' + (currentpage + 2);
+              document.querySelector('.blog_current_page').value = currentpage + 1;
+            }
+            
+            if((currentpage + 1) == totalpages) {
+              document.querySelector('.blog-load-more').style.display = 'none';
+            }
+          } else {
+            console.log(`No elements found with the class "${className}"`);
+          }
+        }
+      });
+    });
+  });
+</script>

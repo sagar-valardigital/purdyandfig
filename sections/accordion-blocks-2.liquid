@@ -1,0 +1,159 @@
+<div
+  class="py-80 accordion-blocks-wrapper {{ section.settings.class }}"
+  style="background-color:{{ section.settings.bgcolor }}"
+>
+  <div class="container">
+    <div>
+      <h2 class="heading-2 text-center blue-text value-bold mt-0 ">{{ section.settings.heading }}</h2>
+      {% if section.settings.subtext != blank %}
+        <p class="gray-text normal-text value-sans text-center">
+          {{ section.settings.subtext }}
+        </p>
+      {% endif %}
+    </div>
+    <div class="mt-4">
+      <div class="accordion-blocks-2 {% if section.settings.slider %}accordion-blocks-slider{% endif %} accordion-blocks-3">
+        {% for block in section.blocks %}
+          <div class="accordion-block-2  value-sans {% if section.settings.accordian%} desktop-event-none make-accordion {% else %} event-none{% endif %} ">
+            <details
+              {% if forloop.first %}
+                class="stay-open"
+              {% endif %}
+              open
+            >
+              <summary class="value-medium blue-text">{{ block.settings.accordion_heading }}</summary>
+              <div>
+                <div class=" accordion-block-img">
+                  <img
+                    class="img-responsive w-100 h-auto"
+                    width="400"
+                    height="400"
+                    src="{{ block.settings.accordion_image | img_url : '400x' }}"
+                    alt="image"
+                  >
+                </div>
+                <p class="value-sans gray-text accordion-text">{{ block.settings.accordion_details }}</p>
+              </div>
+            </details>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% if section.settings.showbtn %}
+      <div class="mt-4 text-center">
+        <span
+          class="d-block text-center blue-starterkit-btn m-auto click-scroll"
+          data-target="{{ section.settings.scrollto }}"
+          {% if section.settings.dataTrack %}
+            data-tracked="true"
+            data-title="{{ section.settings.dataTitle }}"
+            data-module="{{ section.settings.dataModule }}"
+            data-page="{{ page.url }}"
+          {% endif %}
+          >GET YOUR OFFER</span
+        >
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "accordion Blocks 2",
+   "settings": [
+     {
+          "type": "text",
+          "id": "scrollto",
+          "label": "Scroll to section id",
+          "default": "javascript:void(0);"
+      },
+     {
+      "type": "checkbox",
+      "id": "accordian",
+      "label": "Is Accordion",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "slider",
+      "label": "Is Slider",
+      "default": false
+    },
+     {
+      "type": "checkbox",
+      "id": "showbtn",
+      "label": "Show btn",
+      "default": false
+    },
+     {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background Color",
+      "default": "#fff"
+    },
+     {
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+     {
+      "type": "text",
+      "id": "subtext",
+      "label": "Sub Heading"
+    }
+     ,
+    {
+"id": "dataTrack",
+"label":"Data Track",
+"type": "checkbox"
+    },
+      {
+"id": "dataTitle",
+"label":"Data Title",
+"type": "text"
+    }
+    ,
+    {
+"id": "dataModule",
+"label":"Data Module",
+"type": "text"
+    }
+   ],
+   "blocks": [
+      {
+        "type": "image",
+        "name": "accordion block",
+        "settings": [
+          {
+      "type": "image_picker",
+      "id": "accordion_image",
+      "label": "Add Image"
+    },
+
+{
+      "type": "text",
+      "id": "accordion_heading",
+      "label": "Heading"
+    }
+          ,
+
+{
+      "type": "text",
+      "id": "accordion_details",
+      "label": "text"
+    }
+        ]
+      }
+	],
+"presets": [
+	{
+		"name": "accordion Blocks 2"
+	}
+]
+ }
+{% endschema %}

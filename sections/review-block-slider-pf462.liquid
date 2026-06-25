@@ -1,0 +1,145 @@
+{% assign total_blocks = section.blocks.size %}
+
+<div
+  id="review-slider-{{ section.id }}"
+  class="pf-review-slider pf-review-slider--{{ section.id }}"
+  style="
+    {% if section.settings.bg_image %}
+      background-image: url({{ section.settings.bg_image | image_url: width: 1800 }});
+      background-size: cover;
+      background-position: center;
+    {% else %}
+      background-color: {{ section.settings.bgcolor }};
+    {% endif %}
+  "
+>
+  <div class="container">
+    <div class="pf-review-header text-center">
+      <h2 class="pf-review-heading">
+        {{ section.settings.heading }}
+      </h2>
+
+      {% if section.settings.subtext != blank %}
+        <p class="pf-review-subheading">
+          {{ section.settings.subtext }}
+        </p>
+      {% endif %}
+    </div>
+
+    <div class="pf-review-slider-wrapper">
+      <div
+        class="pf-review-slider-track {% if total_blocks > 2 %}pf-review-slick{% endif %}"
+        data-total-slides="{{ total_blocks }}"
+      >
+        {% for block in section.blocks %}
+          <div class="pf-review-card" data-slide-index="{{ forloop.index0 }}">
+            <div class="pf-review-image">
+              {% assign image = block.settings.blockImage %}
+              {% assign mobile_image = block.settings.mBlockImage %}
+
+              <picture>
+                <source media="(min-width:769px)" srcset="{{ image | image_url: width: 800 }}">
+                <source media="(max-width:768px)" srcset="{{ mobile_image | image_url: width: 800 }}">
+                <img
+                  src="{{ image | image_url: width: 800 }}"
+                  alt="{{ image.alt | escape }}"
+                  loading="lazy"
+                >
+              </picture>
+            </div>
+
+            <div class="pf-review-content">
+              <p class="pf-review-text">
+                “{{ block.settings.review }}”
+              </p>
+
+              <h3 class="pf-review-author">
+                {{ block.settings.name }}
+              </h3>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+
+      {% if section.settings.progress_bar and total_blocks > 1 %}
+        <div class="pf-review-progress">
+          <div class="pf-review-progress-bar">
+            <div
+              class="pf-review-progress-fill"
+              data-total="{{ total_blocks }}"
+            ></div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Review Block Slider PF462",
+  "settings": [
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background color",
+      "default": "#4b0f1e"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Join <em>millions</em> who make cleaning a joy"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subheading"
+    },
+    {
+      "type": "checkbox",
+      "id": "progress_bar",
+      "label": "Show progress bar",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "review",
+      "name": "Review",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "blockImage",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mBlockImage",
+          "label": "Mobile image"
+        },
+        {
+          "type": "textarea",
+          "id": "review",
+          "label": "Review text"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Reviewer name"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Block Slider PF462"
+    }
+  ]
+}
+{% endschema %}

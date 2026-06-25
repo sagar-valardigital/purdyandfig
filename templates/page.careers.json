@@ -1,0 +1,102 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33": {
+      "type": "bb-products",
+      "blocks": {
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14": {
+          "type": "product",
+          "settings": {
+            "product": "charlottes-floral-hand-wash-250ml"
+          }
+        }
+      },
+      "block_order": [
+        "f2157985-fc64-42cc-ae82-c3c83d6aaa14"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "careers_6xdTf3": {
+      "type": "careers",
+      "blocks": {
+        "d4c079d2-1ee2-45de-97dd-5241a2ef56d4": {
+          "type": "careers-perk",
+          "settings": {
+            "perk_image": "shopify://shop_images/Careers_Medical_Dental_Vision_1.png",
+            "perk_title": "Medical, dental & vision",
+            "perk_description": "We offer competitive medical, dental, vision insurance for employees and dependents. This includes medical, dental, and vision premiums."
+          }
+        },
+        "0fe31282-4a30-406d-bfdf-91cd94f521e2": {
+          "type": "careers-perk",
+          "settings": {
+            "perk_image": "shopify://shop_images/Careers_Time_off_1.png",
+            "perk_title": "Time off",
+            "perk_description": "We want you to take time off to rest and rejuvenate. Notion offers flexible paid vacation as well as 10+ observed holidays by country."
+          }
+        },
+        "094f51a0-1065-4f53-86c7-4fb44aaad985": {
+          "type": "careers-perk",
+          "settings": {
+            "perk_image": "shopify://shop_images/Careers_Mental_Wellbeing_1.png",
+            "perk_title": "Mental health & wellbeing",
+            "perk_description": "You and your dependents will have access to providers that create personalized treatment plans, including therapy, coaching, medication management, and EAP services."
+          }
+        },
+        "32655c8a-091d-48ed-8fef-30032db53c73": {
+          "type": "careers-perk",
+          "settings": {
+            "perk_image": "shopify://shop_images/Careers_Parental_leave_1.png",
+            "perk_title": "Parental leave",
+            "perk_description": "We offer biological, adoptive, and foster parents paid time off to spend quality time with family."
+          }
+        }
+      },
+      "block_order": [
+        "d4c079d2-1ee2-45de-97dd-5241a2ef56d4",
+        "0fe31282-4a30-406d-bfdf-91cd94f521e2",
+        "094f51a0-1065-4f53-86c7-4fb44aaad985",
+        "32655c8a-091d-48ed-8fef-30032db53c73"
+      ],
+      "settings": {
+        "title": "Careers at Purdy & Figg",
+        "our_mission": "Our mission is to transform the cleaning industry and create uplifting cleaning experiences.",
+        "video_url": "",
+        "our_story": "Back in 2018, NHS nurse Purdy Rubin and horticulturalist Charlotte Figg decided to make cleaning products they’d actually feel good using - both for themselves and for the environment. Fed up with highly toxic cleaning products in plastic packaging, the two friends decided to do something about it.",
+        "our_values": "Be an owner of the mission. We’re driven by our commitment to empower every person on the planet to use software exactly the way they want.Be a pace setter. We move with urgency so we can set the cadence for our market, cover more ground, and ship more great products and programs for our users, faster.Be a truth seeker.We pursue the best data, ideas, and solutions with rigor and open-mindedness, always guided by our users’ most pressing needs.",
+        "youtube": "",
+        "blog": "",
+        "linkedin": "",
+        "twitter": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "cd3fdc24-72e5-4346-8068-41a3d0199c33",
+    "careers_6xdTf3"
+  ]
+}

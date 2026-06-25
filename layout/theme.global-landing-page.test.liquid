@@ -1,0 +1,238 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+
+    <link rel="preconnect dns-prefetch" href="https://api.config-security.com/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://conf.config-security.com/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://whale.camera/" crossorigin>
+    <script>
+/* >> TriplePixel :: start*/
+window.TriplePixelData={TripleName:"purdy-figg.myshopify.com",ver:"2.12",plat:"SHOPIFY",isHeadless:false},function(W,H,A,L,E,_,B,N){function O(U,T,P,H,R){void 0===R&&(R=!1),H=new XMLHttpRequest,P?(H.open("POST",U,!0),H.setRequestHeader("Content-Type","text/plain")):H.open("GET",U,!0),H.send(JSON.stringify(P||{})),H.onreadystatechange=function(){4===H.readyState&&200===H.status?(R=H.responseText,U.includes(".txt")?eval(R):P||(N[B]=R)):(299<H.status||H.status<200)&&T&&!R&&(R=!0,O(U,T-1,P))}}if(N=window,!N[H+"sn"]){N[H+"sn"]=1,L=function(){return Date.now().toString(36)+"_"+Math.random().toString(36)};try{A.setItem(H,1+(0|A.getItem(H)||0)),(E=JSON.parse(A.getItem(H+"U")||"[]")).push({u:location.href,r:document.referrer,t:Date.now(),id:L()}),A.setItem(H+"U",JSON.stringify(E))}catch(e){}var i,m,p;A.getItem('"!nC`')||(_=A,A=N,A[H]||(E=A[H]=function(t,e,a){return void 0===a&&(a=[]),"State"==t?E.s:(W=L(),(E._q=E._q||[]).push([W,t,e].concat(a)),W)},E.s="Installed",E._q=[],E.ch=W,B="configSecurityConfModel",N[B]=1,O("https://conf.config-security.com/model",5),i=L(),m=A[atob("c2NyZWVu")],_.setItem("di_pmt_wt",i),p={id:i,action:"profile",avatar:_.getItem("auth-security_rand_salt_"),time:m[atob("d2lkdGg=")]+":"+m[atob("aGVpZ2h0")],host:A.TriplePixelData.TripleName,plat:A.TriplePixelData.plat,url:window.location.href,ref:document.referrer,ver:A.TriplePixelData.ver},O("https://api.config-security.com/event",5,p),O("https://whale.camera/live/dot.txt",5)))}}("","TriplePixel",localStorage);
+/* << TriplePixel :: end*/
+    </script>
+    <script type="text/javascript">
+      var _conv_page_type = "{{ request.page_type }}";
+      var _conv_category_id = "{{ collection.id }}";
+      var _conv_category_name = "{{ collection.title }}";
+      var _conv_product_sku = "{{ product.selected_or_first_available_variant.sku }}";
+      var _conv_product_name = "{{ product.title }}";
+      var _conv_product_price = "{{ product.price_min | money_without_currency }}";
+      var _conv_customer_id = "{{ customer.id }}";
+      var _conv_custom_v1 = "{{ product.tags.first }}";
+      var _conv_custom_v2 = "{{ collection.current_type }}";
+      var _conv_custom_v3 = "{{ cart.item_count }}";
+      var _conv_custom_v4 = "{{ cart.total_price | money_without_currency }}";
+    </script>
+    {% render 'convert' %}
+    <link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin>
+    <link rel="preconnect dns-prefetch" href="https://triplewhale-pixel.web.app/" crossorigin>
+
+    <link rel="icon" type="image/png" href="{{ settings.favicon | img_url: width: 32, height: 32 }}">
+    <!--
+      allow assets to be loaded and open links in the app itself, see: http://phonegap.com/blog/2012/03/20/access-tags/
+    -->
+    <!-- Issue 204079: Allow retrieval of any resource. Custom widgets can point to anything. -->
+    <access origin="*" />
+    <allow-navigation href="*://*youtube.com" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="{{ 'PPPierSans-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'PPPierSans-Regular.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <style>
+        @font-face {font-family: 'Value-Medium-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-med-fixed.woff?v=1716379982") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+        @font-face {font-family: 'Value-Sans-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-sans-fixed.woff?v=1716380462") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+      
+        @font-face {font-family: 'Value Serif';src: url({{'ValueSerifPro-Bold.woff2' | asset_url }}) format('woff2'), url({{'ValueSerifPro-Bold.woff' | asset_url }}) format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+        @font-face {font-family: 'Pier Sans';src: url({{'PPPierSans-Regular.woff2' | asset_url }}) format('woff2'), url({{'PPPierSans-Regular.woff' | asset_url }}) format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+        @font-face {font-family: 'Value-Sans';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/ninja_Value.woff?v=1675460636") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+        @font-face {font-family: 'Value-Serif-Pro';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Serif-Pro-Regular.woff?v=1675460754") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+        @font-face {font-family: 'Value-Bold';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-bold.woff?v=1692609179") format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Medium';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Medium.woff?v=1699626333") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+        .value-medium{font-family: 'Value-Medium';}
+      @font-face {
+    font-family: 'GT Super';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Rg_e230aeaf-e9ba-49d8-a39f-557fa581ea9a.woff2?v=1721328313') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Rg_ed23a175-fce6-4baf-91c6-4034a442c4a2.woff?v=1721328313') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Super';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Lt_a51b20bf-b685-49d1-80f6-0b6535318c33.woff2?v=1721328313') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-Lt_c7d2cc39-c4d3-4c1d-a6af-45f9c5996cdd.woff?v=1721328313') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GT Super';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-RgIt.woff2?v=1721328313') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-RgIt.woff?v=1721328313') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Lausanne';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-400_9ecb13f5-b86b-4c02-9b3f-1296ea764918.woff2?v=1721328281') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-400_5aafb95f-9754-48c2-b6f6-c5af5cab25a1.woff?v=1721328282') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lausanne';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-500.woff2?v=1721328281') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-500.woff?v=1721328281') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Lausanne';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-200.woff2?v=1721328281') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/TWKLausanne-200.woff?v=1721328282') format('woff');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'GT Super Txt Trial Rg';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-Rg.woff2?v=17218867072') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-Rg.woff?v=1721886708') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'GT Super Txt Trial Rg It';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-RgIt.woff2?v=1721886707') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperTxtTrial-RgIt.woff?v=1721886707') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GT Super Ds Trial Lt It';
+    src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-LtIt.woff2?v=1722489379') format('woff2'),
+        url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GTSuperDsTrial-LtIt.woff?v=1722489379') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+      #page-block-u7mmwsnnmra{margin-top:0 !important;}
+    </style>
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% if handle contains 'clear-cart-redirect' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+    {% capture modified_content_for_header %}{{ content_for_header }}{% endcapture %}
+    {% if template.suffix == 'complete-starter-kit' %}
+      {% assign modified_content_for_header = modified_content_for_header
+        | remove: '"https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=H7J3FA\u0026shop=purdy-figg.myshopify.com","https:\/\/static.klaviyo.com\/onsite\/js\/klaviyo.js?company_id=H7J3FA\u0026shop=purdy-figg.myshopify.com","\/\/shopify.privy.com\/widget.js?shop=purdy-figg.myshopify.com","https:\/\/live.bb.eight-cdn.com\/script.js?shop=purdy-figg.myshopify.com","https:\/\/geolocation-recommendations.shopifyapps.com\/locale_bar\/script.js?shop=purdy-figg.myshopify.com","https:\/\/api.socialsnowball.io\/js\/referral.js?shop=purdy-figg.myshopify.com"'
+      %}
+    {% endif %}
+    <!-- If you have a lot of templates you are checking, a case/when using template.name might be appropriate -->
+    {{ modified_content_for_header }}
+ 
+    <!-- Begin: Northbeam pixel -->
+    <script>
+      (function(){var r;(n=r=r||{}).A="identify",n.B="trackPageView",n.C="fireEmailCaptureEvent",n.D="fireCustomGoal",n.E="firePurchaseEvent";var n="//j.northbeam.io/ota-sp/d7459989-f379-4317-bb15-f2f712fd1f27.js";function t(n){for(var e=[],r=1;r<arguments.length;r++)e[r-1]=arguments[r];a.push({fnName:n,args:e})}var a=[],e=((e={_q:a})[r.A]=function(n,e){return t(r.A,n,e)},e[r.B]=function(){return t(r.B)},e[r.C]=function(n,e){return t(r.C,n,e)},e[r.D]=function(n,e){return t(r.D,n,e)},e[r.E]=function(n){return t(r.E,n)},window.Northbeam=e,document.createElement("script"));e.async=!0,e.src=n,document.head.appendChild(e);})()
+    </script>
+    <!-- End: Northbeam pixel -->
+
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
+
+    <link rel="stylesheet" href="{{'theme.min.css' | asset_url}}">
+    <link rel="stylesheet" href="{{'bathroom-bliss.css' | asset_url}}">
+    {%- unless settings.type_body_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                })(window,document,'script','dataLayer','GTM-M8483VP');
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <!-- Cart improvement snippets -->
+    {% render 'selling-plan-toggle' %}
+    {% render 'cart-qty-guard' %}
+    
+  </head>
+  <script src="{{ 'alpine.min.js' | asset_url}}" defer></script>
+
+  <body id="body" class="p-0 m-0 pt-0  {{ template.suffix | handle }}">
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+    <div class="cart-drawer-wrapper-sections ">
+      {% if request.path contains 'pages/black-friday-vip-offer' %}
+        {% render 'cart-drawer-3' %}
+      {% else %}
+        {% render 'cart-drawer-2' %}
+      {% endif %}
+    </div>
+    <ul hidden>
+      <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
+    </ul>
+
+    <script src="{{ 'theme.min.js' | asset_url }}" async></script>
+
+    {%- if settings.predictive_search_enabled -%}
+      <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
+    {%- endif -%}
+    {% render 'ga4' %}
+    {% render 'ga4-tracking' %}
+  </body>
+</html>

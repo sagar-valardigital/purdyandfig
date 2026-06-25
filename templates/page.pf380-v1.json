@@ -1,0 +1,216 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.article-layout",
+  "sections": {
+    "article_380_few9Un": {
+      "type": "article-380",
+      "blocks": {
+        "share_BCaNtU": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.instagram.com/purdyandfigg?igsh=MWo1OHUxOTJ6dXpiZg%3D%3D",
+            "share_icon": "shopify://shop_images/Social_5.png",
+            "share_link": "",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_83K7xL": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.tiktok.com/@purdyandfigg?_t=ZN-8wylO6Jc4og&_r=1",
+            "share_icon": "shopify://shop_images/Social_4.png",
+            "share_link": "",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_JUTeYX": {
+          "type": "share",
+          "settings": {
+            "redirect": false,
+            "redirect_link": "",
+            "share_icon": "shopify://shop_images/Social_3.png",
+            "share_link": "https://purdyandfigg.com/pages/purdy-and-figg-is-the-home-detox-you-need",
+            "share_icon_class": "copy-link"
+          }
+        },
+        "article_heading_VY7VVQ": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "You switched to natural skincare, and you even cleaned up your diet. Now, what about your cleaning cupboard?"
+          }
+        },
+        "article_content_aReEFz": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>The movement towards sustainable living is heating up. From toxin-free beauty to planet-friendly produce, the choices we’re making at home are becoming increasingly more sophisticated. </p><p>We sip on oat milk lattes (soy if we must), dabble in mindfulness, and energetically reject anything that dares to contain parabens. Being an early adopter is hard work, but someone’s got to do it, right? </p><p>But open up the average cupboard under the sink, and chances are, it’s a very different story. The truth is, most of us don’t think twice about the chemical cocktails lurking in our homes. We spend thousands on everything from organic produce to planet-friendly cosmetics, but often continue to choose harsh cleaning sprays we throw into the trolley at the supermarket. </p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_quote_pVf9TD": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "“One natural cleaning spray<span style=\"display: block\">that does it all”</span>",
+            "quote-mobile": "“One natural cleaning spray that does it all”"
+          }
+        },
+        "article_image_naY7Qw": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media.jpg"
+          }
+        },
+        "article_image_gif_qmPLmL": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": true,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_01_2.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_1.jpg"
+          }
+        },
+        "article_content_DtmPph": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>It’s a reality that baffles Purdy Rubin and Charlotte Figg, co-founders of the eponymously named natural cleaning brand Purdy & Figg. “We’d been cleaning naturally for years before we developed Counter Clean,” says Charlotte, “it was our way of finding the joy in cleaning, and caring deeply for our homes.” And that’s really what sets Purdy & Figg apart.</p><p>Yes, they help to reduce plastic waste, harsh chemicals and synthetic fragrances, but they also help transform cleaning from a chore to a joy. “All with one simple spray for your whole home, that looks just as good as it smells,” Charlotte adds with a conspiratorial wink. </p><p>“Fragrance is essential to us,” adds aromatherapy-enthusiast Purdy. “Our perfumers blend new, limited-edition scents every few months that move in step with the season.” Calabrian Lemon is their latest summer-ready scent, which, by the smell of it, will soon join the brand’s Hall of Fame alongside member favourites like Patchouli & Cedarwood, Geranium & Ylang Ylang, and Rose & Violet.</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_quote_qymPDW": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "“From sun-soaked Calabria<span style=\"display: block\">with love”</span>",
+            "quote-mobile": "“From sun-soaked Calabria with love”"
+          }
+        },
+        "article_image_cbLVYz": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media_1.jpg"
+          }
+        },
+        "article_image_gif_xPpfin": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": false,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_02_2.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_2.jpg"
+          }
+        },
+        "article_content_WtDgVY": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Packed with pure essential oils from aromatic lemons from the sun-drenched tip of Italy’s toe, Calabrian Lemon is a far cry from the synthetic citrus scents that flood the market. “It’s inspired by the scent we think of when we recall a lovely deep clean by our parents. It’s the classic smell of clean on a sunny Sunday morning.” </p><p>Calabrian Lemon Counter Clean exemplifies the brand's careful and considered approach to scent. Purdy & Figg’s team of perfumers find the purest essential oils from the best raw ingredients, scouring farms and groves at home and abroad for the most aromatic botanicals they can find.</p><p>Take their citrus, for example, sourced from the Cilione family, seventh-generation growers in Reggio Calabria, where the sun, sea breeze and rich soil create what many consider the world’s finest lemons.</p><p>Scent may be the kryptonite for Purdy & Figg’s members, but it’s the powerful natural formula that keeps them coming back for more. “We keep Counter Clean and our members’ homes completely toxin-free by using the best of what Mother Nature has to offer,” says Charlotte.</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_quote_PRij7U": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "“Effortless cleaning courtesy of<span style=\"display: block\">Mother Nature”</span>",
+            "quote-mobile": "“Effortless cleaning courtesy of Mother Nature”"
+          }
+        },
+        "article_image_Je8AFz": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media_2.jpg"
+          }
+        },
+        "article_image_gif_myacUK": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": true,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_03.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_3.jpg"
+          }
+        },
+        "article_content_bMGnQE": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>“Natural surfactants work a bit like soap. They break down bacteria and lift away the grime they cling to.” It’s a completely different approach to chemical cleaning sprays, but a worthy switch when it comes to detoxifying our spaces and caring properly for our surfaces.</p><p>Aside from a few natural stone surfaces that need special treatment, Counter Clean is effortlessly effective throughout the home. That means one beautiful spray can replace your surface cleaner, glass spray, bleach, and more.</p><p>“All you’ve got to do is add water,” Purdy adds. “You’ll start with a gorgeous glass Bottle for Life you’ll be proud to show off, a microfibre cloth, and three scent refills. Fill your bottle with your first scent, shake it well, and get cleaning. You won’t look back.”</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_content_9fhJMj": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p><em>Bringing cleaning routines up to scratch and detoxifying our homes has never been easier. </em><em><strong>Try Purdy & Figg’s Seasonal Starter Kit now for just £19.95, including their new Limited Edition Calabrian Lemon scent.</strong></em></p>",
+            "content_class": "content-last",
+            "content_text-color": "#212121"
+          }
+        }
+      },
+      "block_order": [
+        "share_BCaNtU",
+        "share_83K7xL",
+        "share_JUTeYX",
+        "article_heading_VY7VVQ",
+        "article_content_aReEFz",
+        "article_quote_pVf9TD",
+        "article_image_naY7Qw",
+        "article_image_gif_qmPLmL",
+        "article_content_DtmPph",
+        "article_quote_qymPDW",
+        "article_image_cbLVYz",
+        "article_image_gif_xPpfin",
+        "article_content_WtDgVY",
+        "article_quote_PRij7U",
+        "article_image_Je8AFz",
+        "article_image_gif_myacUK",
+        "article_content_bMGnQE",
+        "article_content_9fhJMj"
+      ],
+      "custom_css": [],
+      "name": "Article 380",
+      "settings": {
+        "tag": "",
+        "article-heading": "Purdy &amp; Figg Is The Detox Your Home Didn’t Know It Needed",
+        "article-category": "Home & Lifestyle",
+        "article-subheading": "By Michael Rinaldi",
+        "article-date": "1st August 2025",
+        "main_image": "shopify://shop_images/Hero_fbacd795-e06c-4efd-afb5-05cb4da837e1.jpg",
+        "press_heading": "",
+        "explore-heading": "Change the way you clean forever<span style=\"display:block\">with <strong>£32 off your first plan</strong></span>",
+        "explore-heading-mobile": "Change the way you clean forever with <strong>£32 off your first plan</strong>",
+        "explore_image": "shopify://shop_images/Image_4.jpg",
+        "btn_label": "Explore Offer",
+        "btn_link": "https://purdyandfigg.com/pages/starterkit-offer-lemon",
+        "btn_bg": "#f79372",
+        "btn_text_color": "#212121",
+        "showancbar": true,
+        "ancbgcolor": "#ffffff",
+        "anctxtcolor": "#212121",
+        "anctext": "Limited Time Offer: Get 60% off all Purdy & Figg Starter Kits"
+      }
+    },
+    "articel_footer_kFGjeb": {
+      "type": "article-footer",
+      "name": "Article Footer",
+      "settings": {
+        "background-color": "#ffffff",
+        "text-color": "#bdbdbd",
+        "footer": "© 2025 All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "article_380_few9Un",
+    "articel_footer_kFGjeb"
+  ]
+}

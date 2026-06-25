@@ -1,0 +1,287 @@
+<style>
+.{{ section.settings.className }}{
+  {% if section.settings.backgroundImage %}
+    background: 
+      linear-gradient(to right, #a3662b94 0%, transparent 70%),
+      url("{{ section.settings.backgroundImage | image_url }}");
+    background-size: cover;
+    background-position: left;
+    background-repeat: no-repeat;
+    background-blend-mode: multiply;
+  {% else %}
+    background-color: {{ section.settings.background }};
+  {% endif %}
+}
+
+.fi-image { opacity: 0; }
+
+.esc-container {
+  width: 416px;
+  height: 696px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+  
+.esc-container .heading-2 {
+  margin-bottom: 0 !important;
+  font-size: 48px !important;
+  color: #FFF !important;
+}
+
+.esc-container .esc-bottom-text {
+  width: 316px;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 1.6 !important;
+}
+
+.esc-container .normal-text {
+  color: #FFFFFF !important;
+}
+
+.esc-bottom-text img {
+    width: 196px !important;
+    display: block;
+    margin-bottom: 25px;
+  }
+
+.esc-container .discoverBtmBtn {
+  margin-top: 24px !important;
+}
+
+.esc-container .discoverBtmBtn span {
+  margin: 0 !important;
+}
+
+.normal-text {
+  line-height: 1.5 !important;
+}
+
+.every-spray-counts {
+  background-position: left !important;
+  }
+
+@media(max-width: 768px){
+
+  .{{ section.settings.className }} .image-with-text-2 .fi-image {
+    margin-left: -15px;
+    margin-right: -15px;
+    width: calc(100% + 30px);
+    margin-bottom: 15px;
+  }
+
+.{{ section.settings.className }}{
+    background-size: cover;
+    background-position: 80% !important;
+}
+
+.esc-container {
+  width: 100% !important;
+  height: 586px !important;
+  }
+
+.esc-container .esc-bottom-text {
+  width: 100%;
+}
+  
+.esc-container .heading-2 {
+  font-size: 36px !important;
+}
+
+.esc-bottom-text img {
+    width: 180px !important;
+  }
+
+.esc-container .discoverBtmBtn {
+  margin-top: 20px !important;
+  width: 100% !important;
+  padding: 0 !important;
+}
+  
+}
+</style>
+
+<div class="{{ section.settings.className }} position-relative">
+  <div class="py-80 image-with-text image-with-text-2 every-spray-counts">
+    <div class="container">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
+        <div class="w-40">
+          <div class="position-relative esc-message">
+        <div class="d-flex justify-content-start image-txt">
+          <div class="esc-container">
+            <h2 class="heading-2 font-gtsuper" style="color: #FFF !important;">
+              {{ section.settings.heading }}
+            </h2>
+            <div class="esc-bottom-text normal-text font-lausanne fw-200" style="color: {{ section.settings.textcolor }};">
+              <!-- <span style="font-size: 18px !important; display: block; padding-bottom: 8px;">In partnership with</span> -->
+              <img src="{{ section.settings.partnershipImage | image_url }}" />
+              {{ section.settings.details }}
+            {% if section.settings.addScrollBtn %}
+    <div class="discoverBtmBtn">
+      <span
+          class="d-block text-center blue-starterkit-btn green-btn click-scroll m-auto common-btn-width"
+          style="background-color: {{ section.settings.btnBG }} !important; color: {{ section.settings.btntextcolour }} !important;"
+        data-target="{{ section.settings.scrollto }}"
+        data-top="{{ section.settings.top }}"
+        {% if section.settings.dataTrack %}
+            {% render "ga4-events" %}
+          {% endif %}
+        >{{ section.settings.btnLabel }}</span
+      >
+    </div>
+    {% endif %}
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Every Spray Counts PF357",
+  "settings": [
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Add Section class Name",
+      "default": "full-width-image-text"
+    },
+    {
+      "type": "color",
+      "id": "textcolor",
+      "label": "Select text color",
+      "default": "#212121"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Select background color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "image_picker",
+      "id": "backgroundImage",
+      "label": "Select background Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "image_picker",
+      "id": "partnershipImage",
+      "label": "Partnership Image"
+    },
+    {
+      "type": "html",
+      "id": "details",
+      "label": "Detail Text"
+    },
+    {
+          "type": "checkbox",
+          "id": "addScrollBtn",
+          "label": "Show Scroll to Btn",
+          "default": false
+    },
+   {
+          "type": "text",
+          "id": "btnLabel",
+          "label": "Button Label",
+          "default": "GET YOUR OFFER"
+    },
+    {
+          "type": "color",
+          "id": "btnBG",
+          "label": "Button Background Colour",
+    },
+    {
+          "type": "color",
+          "id": "btntextcolour",
+          "label": "Button Text Colour",
+    },    
+    {
+          "type": "text",
+          "id": "scrollto",
+          "label": "Scroll to section id",
+          "default": "javascript:void(0);"
+      }
+     ,
+     {
+          "type": "text",
+          "id": "top",
+          "label": "On scroll top position",
+          "default": "0"
+      },
+     {
+      "id": "dataTrack",
+      "label":"Data Track",
+      "type": "checkbox"
+      },
+      {
+      "id": "targetUrl",
+      "label":"Target Url",
+      "type": "url"
+      },
+      {
+      "id": "index",
+      "label":"Index",
+      "type": "number",
+      "default" : 0
+          },
+          {
+      "id": "funnel_stage",
+      "label":"Funnel Stage",
+      "type": "text",
+       "default" : "landing_page"
+          },
+          {
+      "id": "dataModule",
+      "label":"Module",
+      "type": "text",
+       "default" : "announcement_bar"
+          },
+            {
+      "id": "dataTitle",
+      "label":"Event Label",
+      "type": "text",
+      "default": "get_your_offer"
+          }
+          ,
+            {
+      "id": "eventValue",
+      "label":"Event Value",
+      "type": "text",
+      "default" : "shop_anchor"
+          },
+            {
+      "id": "itemId",
+      "label":"Item Id",
+      "type": "text"
+          }
+          ,
+            {
+      "id": "optionIndex",
+      "label":"Option Index",
+      "type": "text"
+          }
+          ,
+            {
+      "id": "ItemName",
+      "label":"Item Name",
+      "type": "text"
+          }
+  ],
+  "presets": [
+    {
+      "name": "Every Spray Counts PF357"
+    }
+  ]
+}
+{% endschema %}

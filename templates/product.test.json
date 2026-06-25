@@ -1,0 +1,379 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "99a18a49-bb9b-496e-bb42-9805ad4b78da": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "DescriptionHeading": "How it works",
+            "description": "Pump a pea-sized amount into wet hands and rub for 20 seconds to create a lather. Rinse off with warm water and enjoy the lingering spa-like scents and clean, nourished hands."
+          }
+        },
+        "1c206716-c5ab-4cc0-bad1-71c91fb8d9c3": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "DescriptionHeading": "Ingredients",
+            "description": "30% NON-IONIC SURFACTANTS, 5-15% ANIONIC SURFACTANTS Polysorbate 20, Aqua, Hamamelis Virginiana (Witch Hazel) Extract, Sodium Cocoyl Glutamate, Benzyl Alcohol, Limonene*, Alcohol Denat., Salicylic Acid, Glycerin, Alpha-pinene*, Sorbic Acid, Linalool*"
+          }
+        },
+        "09e0f046-36d4-4814-8043-d3d3d37089c7": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "DescriptionHeading": "What’s Inside?",
+            "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries,"
+          }
+        }
+      },
+      "block_order": [
+        "99a18a49-bb9b-496e-bb42-9805ad4b78da",
+        "1c206716-c5ab-4cc0-bad1-71c91fb8d9c3",
+        "09e0f046-36d4-4814-8043-d3d3d37089c7"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "1649839242809d07cb": {
+      "type": "blocks",
+      "disabled": true,
+      "blocks": {
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "image": "shopify://shop_images/Still_2_1_copy.png",
+            "rounded": false,
+            "heading": "Counters & Stone",
+            "details": ""
+          }
+        },
+        "758c082c-743d-46c9-9b3a-63c29a340b8e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_2_1_copy.png",
+            "rounded": false,
+            "heading": "Bath & Enamel",
+            "details": ""
+          }
+        },
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_3_copy.png",
+            "rounded": false,
+            "heading": "Glass & Mirrors",
+            "details": ""
+          }
+        },
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Still_4_copy.png",
+            "rounded": false,
+            "heading": "Wood & Floors",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804",
+        "758c082c-743d-46c9-9b3a-63c29a340b8e",
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4",
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home"
+      }
+    },
+    "1649831294e3d704b2": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "textcolor": "white-text",
+        "background": "theme-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "100% Effective + Third-Party Tested",
+        "image": "shopify://shop_images/Screenshot_3.png",
+        "details": "<p>The innovative eco-concentrate developed by PHD chemist Dr Anna Stastanova has been designed to work effectively on all your homes surfaces whilst retaining maximum scent. Over 97% of customers say it works better than their regular cleaner.</p>",
+        "link": "shopify://products/charlottes-hand-sanitiser-spray-20ml",
+        "btntext": "Read more",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": true,
+        "popup-text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      }
+    },
+    "1654230729996fed8d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "bgImage": "shopify://shop_images/Purdy_Figg-hand-2-_2_2x_d7859a43-25d1-4d19-ad68-501dc1c1596e.png",
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 5,
+        "alignment": "justify-content-start",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "15",
+        "mainheading": "A scent that transforms your home",
+        "heading": "The Best Essential Oils",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1654234195a5b1460d": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Expertly Blended",
+        "image": "shopify://shop_images/Screenshot_1.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and have out all of their years of works into creating the most incredible smelling cleaners.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16497410063bc29f75": {
+      "type": "review-slider",
+      "blocks": {
+        "21a91d05-d81c-424c-9b47-69aa59e0e384": {
+          "type": "text",
+          "settings": {
+            "username": "Polly",
+            "heading": "Just what I wanted",
+            "image": "shopify://shop_images/user.png",
+            "review": "You are my sunshine my only sunshine, you make me happy when surfaces are grey! I LOVYou are my sunshine my only sunshine, you make me happy when surfaces Polly",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac": {
+          "type": "text",
+          "settings": {
+            "username": "Jack Rubin",
+            "heading": "Just what I wanted",
+            "image": "shopify://shop_images/green.png",
+            "review": "You are my sunshine my only sunshine, you make me happy when surfaces are grey! I LOVYou are my sunshine my only sunshine, you make me happy when surfaces Polly",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1": {
+          "type": "text",
+          "settings": {
+            "username": "Chris M",
+            "heading": "Just what I wanted",
+            "image": "shopify://shop_images/green.png",
+            "review": "You are my sunshine my only sunshine, you make me happy when surfaces are grey! I LOVYou are my sunshine my only sunshine, you make me happy when surfaces Polly",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "21a91d05-d81c-424c-9b47-69aa59e0e384",
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac",
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Over 3500 5-Star Reviews"
+      }
+    },
+    "1654234422b9cdd91c": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "bgImage": "shopify://shop_images/Lifting-Citrus_2x_8ba2af9f-3c69-47bd-8500-753a153de09f.png",
+        "mobileimage": false,
+        "bgmImage": "shopify://shop_images/Lifting_Citrus.png",
+        "headingAfterImage": true,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 3,
+        "alignment": "justify-content-end",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "25",
+        "mainheading": "Welcome to a chemical-free cleaning revolution",
+        "heading": "Reusable Glass Bottles",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "textcolor": "#ffffff",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "14x Lower Carbon Emissions",
+        "image": "shopify://shop_images/Screenshot_2.png",
+        "details": "<p>Generic Surface Cleaners are made of 90% water and over 1 billion of these heavy bottles are transported around the world every year to get to our homes. Purdy & Figg Eco-Concentrates are 97% lighter than a bulk cleaner to ship and you dilute the concentrates with water coming out of your tap at home.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654234598971fe4e5": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Non-Toxic",
+        "image": "shopify://shop_images/Screenshot_3_cc9edc53-9f54-4fc0-9065-0820c9a950b3.png",
+        "details": "<p>It is our mission to put your family first which is why our Eco-Concentrates are completely plant-based, paraben-free and GMO-free with natural essential oils and no synthetic fragrance or dangerous preservatives.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "165423535626bc9759": {
+      "type": "table",
+      "disabled": true,
+      "settings": {}
+    },
+    "1654234744e17a4ce6": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "bgImage": "shopify://shop_images/Artboard-1.png",
+        "mobileimage": true,
+        "bgmImage": "shopify://shop_images/Artboard_1_copy.png",
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-bottom",
+        "spacem": "250",
+        "mainheading": "",
+        "heading": "Two women on a mission",
+        "details": "<p>Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.</p>",
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165423464702cd9638": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "By PHD Scientist and Award Winning Horticulturist",
+        "image": "shopify://shop_images/Screenshot_4.png",
+        "details": "<p>Dr Anna Stastanova PHD and Honorary Research Fellow in Surfactant Chemistry is responsible for the worlds most advanced scent extraction ever achieved in a cleaning product. Professional and multi-award-winning Horticultralist Charlotte Figg has created the essential oil blends as a culmination of 30 years of work.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16542346954792a369": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "Manufactured in the UK",
+        "image": "shopify://shop_images/Screenshot_5.png",
+        "details": "<p>We manufacture Purdy & Figg Eco-Concentrates in England, where we are subject to stringent health regulations. Every Purdy & Figg Eco-Concentrate is manufactured in a state of the art laboratory in England. Rest easy knowing we don’t cut corners. Your safety is important to us.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "1649839242809d07cb",
+    "1649831294e3d704b2",
+    "1654230729996fed8d",
+    "1654234195a5b1460d",
+    "16497410063bc29f75",
+    "1654234422b9cdd91c",
+    "image-with-text",
+    "1654234598971fe4e5",
+    "165423535626bc9759",
+    "1654234744e17a4ce6",
+    "165423464702cd9638",
+    "16542346954792a369"
+  ]
+}

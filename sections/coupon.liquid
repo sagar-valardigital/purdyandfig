@@ -1,0 +1,57 @@
+<style>
+  .coupon-btn{
+    display:inline-block;
+    margin-left:0px;
+    padding:10px 10px;
+    background:#FCA722;
+    color:#fff;
+    border-radius:25px;
+    text-align:center;
+    width:400px;
+    max-width:100%;
+    font-size:20px;
+  }
+</style>
+<div class="py-4" style="background-color:{{section.settings.bg-color}}">
+  <div class="container text-center">
+    {% if section.settings.btnLable %}
+      <a class="coupon-btn" href="{{ section.settings.btnLink }}">{{ section.settings.btnLable }}</a>
+    {%- endif %}
+    <h2 class="heading-2 theme-text mt-2">{{ section.settings.text }}</h2>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Coupon code",
+  "settings" : [
+      {
+          "type": "text",
+          "id": "text",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+      },
+	  {
+          "type": "color",
+          "id": "bg-color",
+          "default": "#fff",
+          "label": "Background Colour"
+      },
+
+    {
+          "type": "text",
+          "id": "btnLable",
+          "label": "Button Label"
+      },
+    {
+          "type": "text",
+          "id": "btnLink",
+          "label": "Button Link"
+      }
+  ],
+  "presets": [
+		{
+			"name": "Coupon code"
+		}
+	]
+}
+{% endschema %}

@@ -1,0 +1,66 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_pf314_adFLiB": {
+      "type": "announcement-bar-pf314",
+      "custom_css": [
+        ".announcement-btn-2,.bg-blue {background-color: #212121 !important; color: #ffffff; font-family: \"Lausanne\"; font-weight: 400;}",
+        ".annoucment-bar-logo .logo_path {fill: #11322c !important;}",
+        ".annoucment-bar-2 {padding-top: 7px !important; padding-bottom: 7px !important;}",
+        ".banner-section.banner-10 {height: 700px !important;}",
+        "@media (max-width: 768px) {.ann-bar-text-2 {background: #e9b88b !important; font-size: 12px; } .announcement-btn-2 {background: ##e9b88b !important; } .ann-bar-text-2 p {color: #212121; padding: 4px; }}"
+      ],
+      "settings": {
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "class": "",
+        "text": "Resubscribe for only £15 &amp; save 25% on your next refill",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "scrollto": "starterkit-product",
+        "annuText": "GET YOUR  OFFER",
+        "top": "80",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "pf365_confirmation_L6rMCi": {
+      "type": "pf365-confirmation",
+      "name": "Confirmation PF365",
+      "settings": {}
+    },
+    "footer_2_gaj6Fd": {
+      "type": "footer-2",
+      "custom_css": [
+        ".footer-2 {background: #0a1e1a; font-family: \"TWK Lausanne\";}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_pf314_adFLiB",
+    "pf365_confirmation_L6rMCi",
+    "footer_2_gaj6Fd"
+  ]
+}

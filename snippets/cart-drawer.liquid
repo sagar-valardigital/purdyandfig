@@ -1,0 +1,224 @@
+<style>
+.pf-min-cart.cart-2 .min-cart-footer:not(.cart-footer-2),
+.pf-min-cart.cart-2 .min-cart-header:not(.cart-header-2),
+.pf-min-cart:not(.cart-2) .min-cart-footer.cart-footer-2,
+.pf-min-cart:not(.cart-2) .min-cart-header.cart-header-2,
+.pf-min-cart:not(.cart-2) .cart-top-bar{
+  display:none;
+}
+  .empty-cart-block .min-cart-body{
+    height:calc(100vh - 230px);
+  }
+  .empty-cart-block .product-img img{
+    max-width:100%
+  }
+  .empty-cart-wrapper{
+    height:calc(100vh - 350px);
+    display:flex;
+    align-items:center
+  }
+  .empty-cart-wrapper .empty-cart-products{
+    width:100%;
+  }
+</style>
+ <div class="pf-min-cart  open cart-2" x-ref="cart_content"  x-data="{ 
+        showCartDrawer: false,
+        loading: false,
+        updateCart(){
+            // send fetch reqeust to update cart
+            fetch('/?view=cart')
+            .then(response => response.text())
+            .then(cartData => {
+                $refs.cart_content.innerHTML = cartData;
+
+                // This code is use to parse json object. for cart count
+                var el = document.createElement('div');
+                el.innerHTML = cartData;
+                //var cartCount = JSON.parse(el.querySelector('[data-options]').innerHTML).item_count;
+                $dispatch('cart-count-updated', cartData);
+                this.loading = false;
+
+            })
+        }
+     }"
+    x-show="showCartDrawer"
+    @cart-updated.window="updateCart;"
+    @toggle-cart.window="showCartDrawer = !showCartDrawer" x-cloak>
+        <span class="cart-overlay" x-on:click="showCartDrawer = false"></span>
+        <div class="min-cart-wrapper position-relative">
+          <div class="p-1 theme-bg white-text text-center cart-top-bar"><small>{{ settings.cartAnnouncement }} {%  comment %} <a href="{{ settings.cartAnnouncementLink }}" class="white-text"><u>Shop Now</u></a>{% endcomment %}</small> </div>
+            <div class="min-cart-header">
+                <div class="d-flex align-items-center">
+                    <div class="cart-arrow" x-on:click="showCartDrawer = false"><img src="{{'cart-arrow.png' | asset_url}}" alt=""></div>
+                    <div class="cart-heading">
+                        <h2 class="heading-2 theme-text m-0">Your cart</h2>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="min-cart-header cart-header-2">
+                
+                <div class="d-flex align-items-center">
+                    <div class="cart-heading">
+                        <h2 class="heading-3-5 theme-text m-0 text-left">Your cart {% if cart.item_count > 0 %} ({{cart.item_count}}){% endif %}</h2>
+                    </div>
+                  <div class="cart-arrow" x-on:click="showCartDrawer = false"><img width="16px" height="16px" src="{{'close.png' | asset_url}}" alt=""></div>
+                </div>
+            </div>
+            <div class="min-cart-body">
+                <div class="cart-products-wrapper">
+                  {% if cart.item_count == 0 %}
+                  <div class="pt-2">
+                    <h2 class="m-0 heading-3 font-value text-center theme-text">Your cart is empty</h2>
+                      <p class="theme-text text-center">Transform the way you clean today!</p>
+                  </div>
+
+                  <div class="mt-4 empty-cart-wrapper">
+                        <div class="empty-cart-products">
+                          {%- for product in settings.emptycoll.products -%}
+                          {% render 'cart-product',
+                              card_product: product,
+                              media_aspect_ratio: section.settings.image_ratio,
+                              show_secondary_image: section.settings.show_secondary_image,
+                              show_vendor: section.settings.show_vendor,
+                              show_rating: section.settings.show_rating,
+                              lazy_load: lazy_load
+                            %}
+                            {% endfor %}
+                        </div>
+                  </div>
+                  {% endif %}
+                   {% for item in cart.items %}
+                    <div class="cart-product">
+                        <div class="d-flex flex-wrap">
+                            {% if item.image %}
+                                    <div class="cart-product-image">
+                               {{ item.image | image_url: width: 400 | image_tag: loading: 'lazy', class:'img-responsive w-100' }}
+                            </div>
+                  
+                                {% endif %}
+                            
+                            <div class="cart-product-details font-pier theme-text">
+                                <div class="">
+                                    <h4 class="p-category m-0">{{item.title}}</h4>
+                                    <h3 class="p-title my-1">{{item.product.type}}</h3>
+                                </div>
+                                <small class="subscription-details">
+                                    {% if item.variant.metafields.metadata.includes %}Includes: {{item.variant.metafields.metadata.includes}}<br> {% endif %}
+                                  {{ item.selling_plan_allocation.selling_plan.name }}
+                                </small>
+                                <div class="d-flex align-items-center justify-content-between my-2" x-data="{ qty: {{ item.quantity }}}" {% if item.price <= 0 %}style="justify-content: flex-end;"{% endif %}>
+                                    {% if item.price > 0 %}  
+                                    <div class="qty-wrapper">
+                                        <div class="qty-minus" @click.debounce="loading = true; Purdy.updateQuantity({{ forloop.index }}, --qty);"> </div>
+                                        <input class="qty" type="number" value="1" x-model="qty">
+                                        <div class="qty-plus" @click.debounce="loading = true; Purdy.updateQuantity({{ forloop.index }}, ++qty)" > </div>
+                                    </div>
+                                    {% endif %}
+                                    <div class="p-price">
+                                        <h3 class="m-0" >  {{ item.price | money }}</h3>
+                                    </div>
+                                </div>
+
+                                {% if item.selling_plan_allocation.price > 0 %}
+                                    <div class="cart_subscription text-sm">
+                                        
+                                        <span class="cart_subscription--discount font-semibold text-green-700">
+                                        You saved {% if item.selling_plan_allocation.selling_plan.price_adjustments[0].value_type == 'percentage' %} {{ item.selling_plan_allocation.selling_plan.price_adjustments[0].value }}% 
+                                          {% else %}{{ item.selling_plan_allocation.selling_plan.price_adjustments[0].value | money }} 
+                                          {% endif %}
+                                        </span>
+                                    </div>
+                                {% endif %}
+                                <div class="remove-product"  title="remove {{ item.product.title }}"
+                                @click="loading = true; Purdy.updateQuantity({{ forloop.index }}, 0)">
+                                    <img src="{{'trash.png' | asset_url}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+
+
+          {% if settings.cart--show-mini %}
+                  
+            {% assign upsell_product_array = "winter-refill-booster-pack, cc-bottle-for-life, luxury-microfibre-cloth, bathroom-bliss-bundle-kit" | split: ", " %}
+
+            {% assign upsell_product_string = "winter-refill-booster-pack, cc-bottle-for-life, luxury-microfibre-cloth, bathroom-bliss-bundle-kit"  %}
+
+                  
+            {% for item in cart.items %}
+           
+              {% if upsell_product_array contains item.product.handle %}
+
+              {% if item.product.handle == 'bathroom-bliss-bundle-kit' %}
+
+              {% assign item_handle = item.product.handle %}
+
+              {% else %}
+
+                {% assign item_handle = item.product.handle | append: ", " %}
+
+              {% endif %}
+  
+                {% assign upsell_product_string = upsell_product_string | remove:item_handle %}
+
+              {% endif  %}
+            
+            {% endfor %}
+
+
+            {% assign upsell_products =  upsell_product_string | split: ', ' %}
+
+            {% for uproduct in upsell_products %}
+
+            {% assign pHandle = uproduct  %}
+            {% break %}
+
+            {% endfor %}
+
+                  
+               {% if cart.item_count > 0 and  pHandle %}
+                  <div class="cart--upsell show {{ upsell_product_string }}">  
+                    {% render "upsell-product", pHandle:pHandle %}
+                  </div>
+                {% endif %}
+            {% endif  %}
+
+                  
+                </div>
+            </div>
+          {% if cart.item_count == 0 %}
+                   <div class="text-center"> 
+                    <div class="checkout-btn-wrap" style="margin:auto;">
+                        <a href="{{settings.btnLink}}" type="submit" class="btn checkout-btn theme-btn">Shop Cleaning Products</a>
+                    </div>
+                   </div>
+          {% endif %}
+          {% if cart.item_count > 0 %}
+            <div class="min-cart-footer">
+              <form action="/checkout/" name="checkout_form">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="sub-total theme-text font-pier">
+                        <p class="normal-text m-0">Subtotal:</p>
+                        <p class="total-price m-0">{{ cart.total_price | money }}</p>
+                    </div>
+                    <div class="checkout-btn-wrap">
+                        <button type="submit" class="btn checkout-btn theme-btn">Continue to Checkout</a>
+                    </div>
+                </div>
+              </form>
+            </div>
+            <div class="min-cart-footer cart-footer-2">
+              <form action="/checkout/" name="checkout_form">
+                <div class="">
+                    <div class="w-100">
+                        <button type="submit" class="btn checkout-btn theme-btn"> <img src="{{'lock.png' | asset_url}}" alt=""> &nbsp; Secure Check Out - {{ cart.total_price | money }}</a>
+                    </div>
+                    {% if settings.freeshipping %}<p class="theme-text mt-1 mb-0 text-center">Free Delivery on UK orders</p>{% endif %}
+                </div>
+              </form>
+            </div>
+          {% endif %}
+        </div>
+    </div>

@@ -1,0 +1,59 @@
+{% comment %}
+  Hide selling plan name in cart (toggle with ?showplan=true) - Craig
+  To use: add {% raw %}{% render 'selling-plan-toggle' %}{% endraw %} to layout template
+{% endcomment %}
+
+<style>
+  .cart-v-title { display: none !important; }
+  .cart-v-title[data-show] { display: block !important; }
+  html.show-plan .cart-v-title { display: block !important; }
+</style>
+<script>
+  if (new URLSearchParams(window.location.search).has('showplan')) {
+    document.documentElement.classList.add('show-plan');
+  }
+
+  if (!document.documentElement.classList.contains('show-plan')) {
+    var showExact = ['Buy Once', 'Floral', 'Vetiver', 'Patchouli & Cedarwood', 'Citrus'];
+
+    var renameRules = [
+      { startsWith: 'Buy Once', displayAs: 'Buy Once' },
+      { startsWith: 'Mixed', displayAs: 'Mixed' }
+    ];
+
+    function filterPlanNames(container) {
+      container.querySelectorAll('.cart-v-title:not([data-show])').forEach(function(el) {
+        var name = el.textContent.trim();
+
+        if (showExact.indexOf(name) !== -1) {
+          el.setAttribute('data-show', '');
+          return;
+        }
+
+        for (var i = 0; i < renameRules.length; i++) {
+          if (name.indexOf(renameRules[i].startsWith) === 0) {
+            el.textContent = renameRules[i].displayAs;
+            el.setAttribute('data-show', '');
+            return;
+          }
+        }
+      });
+    }
+
+    function initObservers() {
+      var targets = document.querySelectorAll('.cart-drawer-wrapper-sections, .min-cart-wrapper');
+      targets.forEach(function(target) {
+        filterPlanNames(target);
+        new MutationObserver(function() {
+          filterPlanNames(target);
+        }).observe(target, { childList: true, subtree: true });
+      });
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initObservers);
+    } else {
+      initObservers();
+    }
+  }
+</script>

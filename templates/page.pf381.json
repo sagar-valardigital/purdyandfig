@@ -1,0 +1,1103 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_8iCwzJ": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55582632771964",
+            "subscription": true,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSSTARTER381",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_8GcqGE": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo-fir-peppermint",
+            "customImage": false,
+            "variant": "55159485464956",
+            "subscription": false,
+            "selling_plan": "",
+            "discount": "ODLFIR&PEPPERMINTCU381",
+            "price": "£13.56",
+            "compare_price": "£16.95",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "empty_cart_EbX8rx": {
+          "type": "empty_cart",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55582632771964",
+            "subscription": true,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSSTARTER381",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "empty_cart_gYGaTd": {
+          "type": "empty_cart",
+          "settings": {
+            "product": "oh-de-loo-fir-peppermint",
+            "customImage": false,
+            "variant": "55159485464956",
+            "subscription": false,
+            "selling_plan": "",
+            "discount": "ODLFIR&PEPPERMINTCU381",
+            "price": "£13.56",
+            "compare_price": "£16.95",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_8iCwzJ",
+        "product_8GcqGE",
+        "empty_cart_EbX8rx",
+        "empty_cart_gYGaTd"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "anc_bar_381_NLBdEJ": {
+      "type": "anc-bar-381",
+      "custom_css": [
+        ".anc-bar-mobile {background: #0a1e1a;}",
+        ".anc-bar-heading-mobile {color: #ffffff;}"
+      ],
+      "name": "Anc bar 381",
+      "settings": {
+        "sticky": true,
+        "enable_checkout": true,
+        "background_color": "#ffffff",
+        "text_color": "#2f251c",
+        "logo_color": "#11322c",
+        "logo_click_url": "",
+        "heading": "Free delivery on orders over <span class=\"market-place-currency\"></span>40"
+      }
+    },
+    "banner_381_dNXxET": {
+      "type": "banner-381",
+      "custom_css": [
+        ".show-block {display: block; font-family: \"GT Super\";}",
+        ".banner-heading-381 h2 i {font-style: italic; font-family: \"GT Super\"; font-weight: 600;}"
+      ],
+      "name": "Banner 381",
+      "settings": {
+        "text_color": "#fde20c",
+        "desktop_image": "shopify://shop_images/Hero_96d0ee4f-853a-49fa-a0b2-5357971237fe.png",
+        "mobile_image": "shopify://shop_images/Hero_mob.png",
+        "heading": "Save up to 50% on <span class=\"show-block\">summer <i>essentials</i></span>"
+      }
+    },
+    "new_citrus_series_381_hK6YmJ": {
+      "type": "new-citrus-series-381",
+      "custom_css": [
+        ".citrus-heading i {font-weight: 600; font-style: italic; font-family: \"GT Super\";}"
+      ],
+      "name": "Citrus series 381",
+      "settings": {
+        "isSub": false,
+        "background_color": "#fbf8f0",
+        "desktop_image": "shopify://shop_images/1_HeroLemonRefills_Desktop_Revised.png",
+        "mobile_image": "shopify://shop_images/1_HeroLemonRefills_Mobile.png",
+        "scroll_id": "starterkit-product",
+        "heading": "When life gives you lemons, <i>clean</i>",
+        "summary": "<span class=\"fw-600\">Save 15%</span> on our <b> brand new</b> Summer Citrus Refill Pack for three zesty blends crafted with essential oils from Southern Italy – exclusively for members.",
+        "landing_product": "summer-citrus-refill-set",
+        "product_title": "Summer Citrus Refill Pack",
+        "product_summary": "Including Special Edition Calabrian Lemon, Uplifting Citrus and Lemon & Marjoram",
+        "variant_id": "55582553276796",
+        "product_price": "21.25",
+        "product_cross_price": "25",
+        "product_sku": "FG1269",
+        "selling_plan": "",
+        "discount_code": "SUMMERCITRUSREFILLSB381",
+        "btn_bg_color": "#003176",
+        "btn_text_color": "#ffffff",
+        "btn_text": "ADD TO CART",
+        "popuptitle": "Summer Citrus <span class=\"displ-blc\">Refill Pack</span>",
+        "popupsummary": "Including Special Edition Calabrian Lemon, Uplifting Citrus and Lemon & Marjoram",
+        "bulletlabel": "",
+        "bulletpoints1": "",
+        "bulletpoints2": "",
+        "bulletpoints3": "",
+        "bulletpoints4": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "add_to_cart",
+        "eventValue": "shop_anchor",
+        "itemId": "FG1269",
+        "optionIndex": "",
+        "ItemName": "Summer Citrus Refill Pack"
+      }
+    },
+    "collections_381_X8Ht4r": {
+      "type": "collections-381",
+      "blocks": {
+        "image_x9bgMC": {
+          "type": "image",
+          "settings": {
+            "d_image_only": "shopify://shop_images/ContentBlock1_Desktop.png",
+            "m_image_only": "shopify://shop_images/ContentBlock1_Mobile.png",
+            "badge_heading": "MEMBER EXCLUSIVE",
+            "badge_subheading": "<span class=\"fw-600\">Save 15%</span> on our special-edition scents and collections"
+          }
+        },
+        "product_CgHqxc": {
+          "type": "product",
+          "settings": {
+            "product": "summer-citrus-refill-set",
+            "variant_number": "1",
+            "variant_id": "55582553407868",
+            "sku": "FG1270",
+            "sealing_plan": "",
+            "discount": "SUMMERCITRUSREFILL381",
+            "product_image": "shopify://shop_images/2_SummerCitrusRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Summer Citrus <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "summary": "Zesty citrus scents made with Italian essential oils",
+            "saving": "New",
+            "price": "21.25",
+            "crossprice": "25",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Summer Citrus <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "popupsummary": "Zesty citrus scents made with Italian essential oils",
+            "bulletlabel": "",
+            "bulletpoints1": "Special Edition Calabrian Lemon  Refill",
+            "bulletpoints2": "Uplifting Citrus Refill",
+            "bulletpoints3": "Lemon & Marjoram  Refill",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Summer Citrus Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_rXadPG": {
+          "type": "product",
+          "settings": {
+            "product": "coppafeel-pink-series-bundle",
+            "variant_number": "2",
+            "variant_id": "55585217806716",
+            "sku": "FG1268",
+            "sealing_plan": "",
+            "discount": "CFPINKREFILL381",
+            "product_image": "shopify://shop_images/3_PinkseriesRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "CoppaFeel! Pink Refill Pack",
+            "summary": "Pink-powered scents that smell good and do good",
+            "saving": "Running Low",
+            "price": "22.10",
+            "crossprice": "26",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "CoppaFeel! Pink <span class=\"displ-blc\">Refill Pack</span>",
+            "popupsummary": "Pink-powered scents that smell good and do good",
+            "bulletlabel": "",
+            "bulletpoints1": "Pink Grapefruit & Pepper Refill",
+            "bulletpoints2": "Summer Rose Refill",
+            "bulletpoints3": "Geranium & Ylang Ylang Refill",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "CoppaFeel! Pink Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_HNbp7z": {
+          "type": "product",
+          "settings": {
+            "product": "summer-lawn-trio",
+            "variant_number": "3",
+            "variant_id": "55178121838972",
+            "sku": "FG1254",
+            "sealing_plan": "",
+            "discount": "SUMMERLAWNREFILL381",
+            "product_image": "shopify://shop_images/4_SummerLawnRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Summer Lawn <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "summary": "Bring the outside in with the scent of freshly cut grass",
+            "saving": "Returning Favourite",
+            "price": "22.95",
+            "crossprice": "27",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Summer Lawn <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "popupsummary": "Bring the outside in with the scent of freshly cut grass",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Summer Lawn Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Summer Lawn Refill Pack",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_x9bgMC",
+        "product_CgHqxc",
+        "product_rXadPG",
+        "product_HNbp7z"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 80px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "showdivider": false,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Special-Edition Refills"
+      }
+    },
+    "collections_381_JyJWrL": {
+      "type": "collections-381",
+      "blocks": {
+        "image_rUr34c": {
+          "type": "image",
+          "settings": {
+            "d_image_only": "shopify://shop_images/ContentBlock2_Desktop.png",
+            "m_image_only": "shopify://shop_images/ContentBlock2_Mobile.png",
+            "badge_heading": "MEMBER EXCLUSIVE",
+            "badge_subheading": "Love our summer scents? Stock up on more with <span class=\"fw-600\">15% off</span>"
+          }
+        },
+        "product_hNFeLG": {
+          "type": "product",
+          "settings": {
+            "product": "geranium-ylang-ylang-refill-booster-pack-limited-edition",
+            "variant_number": "4",
+            "variant_id": "55180898795900",
+            "sku": "FG1142",
+            "sealing_plan": "",
+            "discount": "G&YYREFILL381",
+            "product_image": "shopify://shop_images/5_G_YYRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Geranium & Ylang Ylang <span class=\"displ-blc frc\">Refill Pack</span>",
+            "summary": "3 luxuriously rich and rosy Counter Clean refills",
+            "saving": "Most Popular",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Geranium & Ylang Ylang <span class=\"displ-blc\">Refill Pack</span>",
+            "popupsummary": "Warm ho wood meets herbaceous geranium and rich ylang ylang",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Geranium & Ylang Ylang Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Geranium & Ylang Ylang Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_BrDqU6": {
+          "type": "product",
+          "settings": {
+            "product": "citronella-niaouli-refill-booster-limited-edition",
+            "variant_number": "5",
+            "variant_id": "55180900073852",
+            "sku": "FG1175",
+            "sealing_plan": "",
+            "discount": "C&NREFILL381",
+            "product_image": "shopify://shop_images/6_C_NRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Citronella & Niaouli <span class=\"displ-blc\">Refill Pack</span>",
+            "summary": "3 bold, fresh and citrusy Counter Clean refills",
+            "saving": "Limited Edition",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Citronella & Niaouli <span class=\"displ-blc\">Refill Pack</span>",
+            "popupsummary": "Fresh citronella blended with minty eucalyptus and camphorous niaouli",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Citronella & Niaouli Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Citronella & Niaouli Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_xad78P": {
+          "type": "product",
+          "settings": {
+            "product": "linden-lavender-booster-pack-limited-edition",
+            "variant_number": "6",
+            "variant_id": "55180866486652",
+            "sku": "FG1176",
+            "sealing_plan": "",
+            "discount": "L&LREFILL381",
+            "product_image": "shopify://shop_images/7_L_LRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Linden & Lavender <span class=\"displ-blc\">Refill Pack</span>",
+            "summary": "3 floral and aromatic Counter Clean refills",
+            "saving": "Limited Edition",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Linden & Lavender <span class=\"displ-blc\">Refill Pack</span>",
+            "popupsummary": "Linden blossom pairs with soft lavender and citrus flower undertones",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Linden & Lavender Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 5,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Linden & Lavender Refill Pack",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_rUr34c",
+        "product_hNFeLG",
+        "product_BrDqU6",
+        "product_xad78P"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "showdivider": true,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Summer Scent Refills"
+      }
+    },
+    "collections_381_mCiPnA": {
+      "type": "collections-381",
+      "blocks": {
+        "product_HCgrxm": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life",
+            "variant_number": "7",
+            "variant_id": "55159963681148",
+            "sku": "FG1090",
+            "sealing_plan": "",
+            "discount": "SUMMERREFILL381",
+            "product_image": "shopify://shop_images/8_SummerVarietyRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Summer Seasonal Refill Pack",
+            "summary": "3 of our summer-inspired Counter Clean refills",
+            "saving": "Ends Soon",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Summer Seasonal <span class=\"displ-blc\">Refill Pack</span>",
+            "popupsummary": "Transform your home into a summer paradise with every spray.",
+            "bulletlabel": "",
+            "bulletpoints1": "1 Geranium & Ylang Ylang Refill",
+            "bulletpoints2": "1 Citronella & Niaouli Refill",
+            "bulletpoints3": "1 Linden & Lavender  Refill",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Summer Seasonal Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_b7jyYn": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth",
+            "variant_number": "8",
+            "variant_id": "55476210762108",
+            "sku": "FG1229",
+            "sealing_plan": "",
+            "discount": "SUMMERSCENT381",
+            "product_image": "shopify://shop_images/9_SummerVariety_SLRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Summer Scent Bundle",
+            "summary": "Our summer Counter Clean refills with special-edition Summer Lawn in one pack",
+            "saving": "Exclusive 4-pack",
+            "price": "28.05",
+            "crossprice": "33",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Summer Scent Bundle",
+            "popupsummary": "Our three seasonal summer blends plus limited-edition Summer Lawn.",
+            "bulletlabel": "",
+            "bulletpoints1": "1 Summer Lawn Refill",
+            "bulletpoints2": "1 Geranium & Ylang Ylang Refill",
+            "bulletpoints3": "1 Citronella & Niaouli Refill",
+            "bulletpoints4": "1 Linden & Lavender Refill",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Summer Scent Bundle",
+            "quantity": 1
+          }
+        },
+        "product_piEF4y": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-refill-booster-pack",
+            "variant_number": "9",
+            "variant_id": "53598455169404",
+            "sku": "FG1151",
+            "sealing_plan": "",
+            "discount": "SIGNATURE381",
+            "product_image": "shopify://shop_images/10_CoreVarietyRefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Signature Scents Refill Pack",
+            "summary": "3 of our original and best-selling Counter Clean refills",
+            "saving": "Bestseller",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Signature Scents <span class=\"displ-blc\">Refill Pack</span>",
+            "popupsummary": "Our three bestselling scents, guaranteed to turn your home into a spa.",
+            "bulletlabel": "",
+            "bulletpoints1": "1 Uplifting Citrus  Refill",
+            "bulletpoints2": "1 Balancing Floral Refill",
+            "bulletpoints3": "1 Grounding Vetiver Refill",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Signature Scents Refill Pack",
+            "quantity": 1
+          }
+        },
+        "image_nXYGrY": {
+          "type": "image",
+          "settings": {
+            "d_image_only": "shopify://shop_images/ContentBlock3_Desktop.png",
+            "m_image_only": "shopify://shop_images/ContentBlock3_Mobile.png",
+            "badge_heading": "MEMBER EXCLUSIVE",
+            "badge_subheading": "Spend <span class=\"market-place-currency\"></span>40 or more and claim free delivery"
+          }
+        }
+      },
+      "block_order": [
+        "product_HCgrxm",
+        "product_b7jyYn",
+        "product_piEF4y",
+        "image_nXYGrY"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "showdivider": true,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Variety Scent Refills"
+      }
+    },
+    "collections_381_GHJWGf": {
+      "type": "collections-381",
+      "blocks": {
+        "product_BLjApW": {
+          "type": "product",
+          "settings": {
+            "product": "bottle-for-life-and-pink-anti-slip-base",
+            "variant_number": "10",
+            "variant_id": "55531000430972",
+            "sku": "FG1297x_V1",
+            "sealing_plan": "",
+            "discount": "PINKSERIESBFL",
+            "product_image": "shopify://shop_images/11_Bottleforlife_Mobile.png",
+            "isSub": false,
+            "title": "CoppaFeel! Pink Series Bottle & Base",
+            "summary": "Freshen up your clean with Bottle for Life & Pink base",
+            "saving": "Limited Edition",
+            "price": "10",
+            "crossprice": "20",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Pink Series Bottle for Life",
+            "popupsummary": "Our classic Bottle for Life and a limited-edition pink silicone base.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "300ml Bottle for Life",
+            "bulletpoints2": "Pink Silicone Anti-Slip Base",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "CoppaFeel! Pink Series Bottle & Base",
+            "quantity": 1
+          }
+        },
+        "product_dgfVMT": {
+          "type": "product",
+          "settings": {
+            "product": "anti-slip-silicone-base",
+            "variant_number": "11",
+            "variant_id": "55550613782908",
+            "sku": "CP3230",
+            "sealing_plan": "",
+            "discount": "PINKANTISLIPBASE381",
+            "product_image": "shopify://shop_images/12_Base_Mobile.png",
+            "isSub": false,
+            "title": "Pink Series Anti-Slip Silicone Base",
+            "summary": "Keep your bottles safe in the bathroom or kitchen",
+            "saving": "",
+            "price": "2.50",
+            "crossprice": "5",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Pink Series Anti-Slip <span class=\"displ-blc\">Silicone Base</span>",
+            "popupsummary": "Pink silicone base designed to give your bottle stability, while adding a little charm.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Pink Series Anti-Slip Silicone Base",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Pink Series Anti-Slip Silicone Base",
+            "quantity": 1
+          }
+        },
+        "product_aXDV3J": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "variant_number": "12",
+            "variant_id": "55582594236796",
+            "sku": "FG1229",
+            "sealing_plan": "",
+            "discount": "P&FCLOTH381",
+            "product_image": "shopify://shop_images/13_cloth_Mobile.png",
+            "isSub": false,
+            "title": "Purdy & Figg Soft Microfibre Cloth",
+            "summary": "Luxuriously soft cloth, perfect for every surface",
+            "saving": "",
+            "price": "2",
+            "crossprice": "4",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Purdy & Figg <span class=\"displ-blc\">Microfibre Cloth</span>",
+            "popupsummary": "Luxuriously soft cloth, perfect for every surface",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Purdy & Figg Microfibre Cloth",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Purdy & Figg Soft Microfibre Cloth",
+            "quantity": 1
+          }
+        },
+        "product_fQfxAD": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "variant_number": "13",
+            "variant_id": "55582597841276",
+            "sku": "FG1229b",
+            "sealing_plan": "",
+            "discount": "P&FCLOTH3PACK381",
+            "product_image": "shopify://shop_images/14_Triplecloth_Mobile.png",
+            "isSub": false,
+            "title": "3 Purdy & Figg Soft Microfibre Cloths",
+            "summary": "Luxuriously soft cloth, perfect for every surface",
+            "saving": "Best value",
+            "price": "5",
+            "crossprice": "12",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "3 Purdy & Figg Soft <span class=\"displ-blc\">Microfibre Cloths</span>",
+            "popupsummary": "Luxuriously soft cloth, perfect for every surface",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "3 Purdy & Figg Microfibre Cloths",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "3 Purdy & Figg Microfibre Cloths",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_BLjApW",
+        "product_dgfVMT",
+        "product_aXDV3J",
+        "product_fQfxAD"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "showdivider": true,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Summer Essential Accessories"
+      }
+    },
+    "collections_381_H6f6td": {
+      "type": "collections-381",
+      "blocks": {
+        "product_mTQjqY": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-refill-booster-pack",
+            "variant_number": "14",
+            "variant_id": "55061386854780",
+            "sku": "FG1151",
+            "sealing_plan": "",
+            "discount": "BATHROOMBLISSREFILLS381",
+            "product_image": "shopify://shop_images/15_bathroomblissrefillkit_Mobile.png",
+            "isSub": false,
+            "title": "Bathroom Bliss <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "summary": "3 limescale-busting Lime & Lemongrass refills",
+            "saving": "Best for Bathrooms",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Bathroom Bliss Refill Pack",
+            "popupsummary": "Tackle limescale and residues with powerful natural ingredients.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "3 Lime & Lemongrass Bathroom Bliss Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Bathroom Bliss Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_wU9Ce7": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "variant_number": "15",
+            "variant_id": "54831041216892",
+            "sku": "FG1156NOV24",
+            "sealing_plan": "",
+            "discount": "ODLLIME&LEMONGRASS381",
+            "product_image": "shopify://shop_images/16_CoreODL_Mobile.png",
+            "isSub": false,
+            "title": "Oh! de Loo Lime & Lemongrass",
+            "summary": "Year supply of deodorising drops for your loo",
+            "saving": "",
+            "price": "13.56",
+            "crossprice": "16.95",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Oh! de Loo Lime & Lemongrass",
+            "popupsummary": "Freshen up the loo with a couple of drops every time you flush.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Oh! de Loo Lime & Lemongrass Deodorising Drops (90ml)",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Oh! de Loo Lime & Lemongrass",
+            "quantity": 1
+          }
+        },
+        "product_M3YgL6": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo-fir-peppermint",
+            "variant_number": "16",
+            "variant_id": "55159485432188",
+            "sku": "FG1156b",
+            "sealing_plan": "",
+            "discount": "ODLFIR&PEPPERMINT381",
+            "product_image": "shopify://shop_images/17_FirODL_Mobile.png",
+            "isSub": false,
+            "title": "Oh! de Loo Fir & Peppermint",
+            "summary": "Year supply of deodorising drops for your loo",
+            "saving": "Member Exclusive",
+            "price": "13.56",
+            "crossprice": "16.95",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Oh! de Loo Fir & Peppermint",
+            "popupsummary": "Freshen up the loo with a couple of drops every time you flush.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Oh! de Loo Fir & Peppermint Deodorising Drops (90ml)",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Oh! de Loo Fir & Peppermint",
+            "quantity": 1
+          }
+        },
+        "product_KXgUKN": {
+          "type": "product",
+          "settings": {
+            "product": "duo-loo-oh",
+            "variant_number": "17",
+            "variant_id": "55150998880636",
+            "sku": "FG1258",
+            "sealing_plan": "",
+            "discount": "DUOLOOOH381",
+            "product_image": "shopify://shop_images/18_DuoLoo_Mobile.jpg",
+            "isSub": false,
+            "title": "Duo Loo-Oh!",
+            "summary": "Both our loo deodorisers in one pack",
+            "saving": "Member Exclusive",
+            "price": "23",
+            "crossprice": "33.90",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Duo Loo-Oh!",
+            "popupsummary": "Two for your loo, save 30% on our loo deodoriser member-exclusive bundle",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Oh! de Loo Fir & Peppermint Deodorising Drops (90ml)",
+            "bulletpoints2": "Oh! de Loo Lime & Lemongrass Deodorising Drops (90ml)",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_mTQjqY",
+        "product_wU9Ce7",
+        "product_M3YgL6",
+        "product_KXgUKN"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 80px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "showdivider": true,
+        "shownote": true,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Bathroom Favourites"
+      }
+    },
+    "member_benifits_381_hjRkHG": {
+      "type": "member-benifits-381",
+      "blocks": {
+        "iconblocks_CcQt9P": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_92f3f035-bbc6-4680-9feb-50a8be57b43b.svg"
+          }
+        },
+        "iconblocks_c3fDJk": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_f4bfbf1a-4555-417f-a1f9-95f9677701ac.svg"
+          }
+        },
+        "iconblocks_CMhp33": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_3acc774f-4fb3-44aa-bc8c-62d3f12fac99.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_CcQt9P",
+        "iconblocks_c3fDJk",
+        "iconblocks_CMhp33"
+      ],
+      "custom_css": [
+        ".green-btn {width: 343px; padding: 12px 16px; border-radius: 4px; margin-top: 40px;}",
+        ".heading-2 {letter-spacing: 0px; color: #003176 !important;}",
+        ".heading-4,p.normal-text {color: #212121;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: unset; width: 100% !important; max-width: 100% !important; } .heading-2 {color: #0c231f !important; } .heading-4 {color: ##0c231f; }}"
+      ],
+      "name": "Member benifits 381",
+      "settings": {
+        "class": "",
+        "bg": "#fbf8f0",
+        "heading": "Your member benefits",
+        "show_hide_block": true,
+        "showbtn": false,
+        "btnbgcolor": "",
+        "btntxtcolor": "",
+        "btntext": "",
+        "scrollto": "",
+        "top": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "two_women_381_y4yJyf": {
+      "type": "two-women-381",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        ".heading-2 {letter-spacing: 0px; color: #0c231f !important;}",
+        ".two-women video {border-radius: 4px;}",
+        ".green-btn {background: #003176 !important;}",
+        "@media (max-width: 768px) {.heading-2 {color: #0a1e1a !important; } .manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "name": "Two Women 381",
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "details": "<span class=\"fw-400\">Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning more effective, more effortless, and more enjoyable.</span><span class=\"fw-300\"> From a Hertfordshire garage to millions of homes, their multipurpose spray, scented with essential oils, is on the way to changing the way we all feel about cleaning - for good. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Are these products an extra subscription?",
+            "faq-ans": "<p>No, these are buy-once products with prices just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting these offers?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited-edition scents and exclusive offers. </p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will the offer last?",
+            "faq-ans": "<p>This page will be live for the rest of Summer.</p>"
+          }
+        },
+        "text_NPPtzz": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.</p><p>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "text_NPPtzz"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "bottomText": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "custom_css": [
+        ".footer-2 {background: #0a1e1a; font-family: \"Lausanne\";}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "anc_bar_381_NLBdEJ",
+    "banner_381_dNXxET",
+    "new_citrus_series_381_hK6YmJ",
+    "collections_381_X8Ht4r",
+    "collections_381_JyJWrL",
+    "collections_381_mCiPnA",
+    "collections_381_GHJWGf",
+    "collections_381_H6f6td",
+    "member_benifits_381_hjRkHG",
+    "two_women_381_y4yJyf",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

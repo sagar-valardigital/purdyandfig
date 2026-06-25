@@ -1,0 +1,110 @@
+{% capture varTags %}
+{% include 'shortcode-render' render:'tags' default:'purdy' %}
+{% endcapture %}
+
+{% assign varTags = varTags | strip_html %}
+
+{% if varTags contains "," %}
+<!--For multiple tags here-->
+{% else %}
+{% assign varTags = varTags | strip %}
+<div class="fluid {{varTags}}">
+  <h4 class="h4" style="text-align: center;padding:10px; font-size:20px;font-weight:bold;">Recommended products by Purdy & Figg</h4>
+  <div class="grid-x grid-margin-x blogSlider">
+    {% for product in collections.all.products %}
+    {% if product.tags contains varTags %}
+    <div class="item cell medium-4 small-12">
+      <a href="{{product.url }}?utm_source={{ shop.url }}&utm_medium=blog&utm_content={{article.title}}" target="_blank">
+        <span>{{ product.featured_image | img_url: '300x' | img_tag }}</span>
+        <b>{{ product.title }}</b>
+      </a>
+    </div>
+    {% endif %}
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css" rel="stylesheet"/>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+<style>
+  .blogs.naked-truths .blogSlider {
+    margin-bottom: 25px;
+  }
+  
+  .blogSlider .cell {
+    padding: 0 10px;
+  }
+  
+  .blogSlider .slick-arrow.slick-disabled  {
+    opacity: 0.6;
+  }
+  
+  .blogSlider .slick-arrow {
+    position: absolute;
+    top: 40%;
+  }
+
+  .blogSlider .slick-arrow.slick-next {
+    right: -40px;
+  }
+
+  .blogSlider .slick-arrow.slick-prev {
+    left: -40px;
+  }
+
+  .blogs.article .article_description .blogSlider ul.slick-dots {
+    padding-left: 0;
+    bottom: -20px;
+  }
+  .blogSlider .cell a b{display:block;text-align:center;}
+  .blogSlider .cell a span {
+    height: 246px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    position:relative;
+    margin-bottom:10px;
+  }
+  .blogSlider .cell a span img{
+  	width:auto;
+    height:auto;
+    max-width:100%;
+    max-height:100%;
+  }
+    
+  .blogSlider *,.blogSlider *:focus{
+  	outline:none;
+  }
+
+</style>
+
+<script type="text/javascript">
+  $(document).ready(function() {
+    $('.blogSlider').slick({
+      dots: true,
+      infinite: false,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 5000,
+      arrows: true,
+      prevArrow : '<button type="button" class="slick-prev">&larr;</button>',
+      nextArrow : '<button type="button" class="slick-next">&rarr;</button>',
+      responsive: [
+        {
+          breakpoint: 768,
+           settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
+    setTimeout(function(){
+      $(window).resize();
+    }, 1000);
+  });
+</script>

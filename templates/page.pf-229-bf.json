@@ -1,0 +1,701 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_reskin_9fjJ8d": {
+      "type": "announcement-bar-225",
+      "custom_css": [
+        ".ann-bar-text-2 {padding-top: 8px !important; padding-bottom: 8px !important;}"
+      ],
+      "settings": {
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Member-exclusive Black Friday deals",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": true,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_3EaRiV": {
+      "type": "banner-10",
+      "settings": {
+        "txt-color": "#ffffff",
+        "desktop_img": "shopify://shop_images/Desktop_Hero_Alt_2_1.jpg",
+        "mobile_img": "shopify://shop_images/Mobile_Hero_Alt_2.jpg",
+        "heading": "Unlock our biggest Black Friday deals",
+        "sub_heading": "Member-exclusive: Save up to 50% and get NEW Orange &amp; Clove in mega &amp; mini bundles",
+        "btn-bg": "#ffffff",
+        "btn-txt-color": "#11322c",
+        "button_label": " SHOP MEMBER OFFERS",
+        "button_link": "starterkit-product",
+        "top": "-120",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_19_cPYKAd": {
+      "type": "global-product-229",
+      "blocks": {
+        "product_image_pAeVQQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_01_3.jpg",
+            "mimage": "shopify://shop_images/Mobile_01_1.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_TAwqPa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_02_02228b03-ab29-4f57-96f5-2feb11912d4c.jpg",
+            "mimage": "shopify://shop_images/Mobile_02_7dbc019d-ec6c-4710-8d07-ae9cf71e8b99.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_phNNax": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_03_1ef48cd9-a5a7-4729-9646-2e7d3c93b2f8.jpg",
+            "mimage": "shopify://shop_images/Mobile_03_00d33b99-e47e-462e-99e6-a7a6cce41e41.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_bw4xtz": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_04_4637d1b7-af5b-40ef-b26d-844e61a4f8ea.jpg",
+            "mimage": "shopify://shop_images/Mobile_04_34ea4db9-99a3-440a-be96-8e6aef2d1b48.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_aeYnY4": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_05_459f4621-e0f2-4f53-9dc3-3a4be67a6396.jpg",
+            "mimage": "shopify://shop_images/Mobile_05_948df20e-69ca-4694-b308-63246d0947bb.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_QykkHC": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_01_4.jpg",
+            "mimage_2": "shopify://shop_images/Mobile_01_3.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_djFrbn": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_02_5a3dcda9-82a1-4d54-bd92-96c914cbf1f2.jpg",
+            "mimage_2": "shopify://shop_images/Mobile_02_cae0f444-f00a-4b48-a118-b7783a2915bd.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_DA6fi9": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_03_1ef48cd9-a5a7-4729-9646-2e7d3c93b2f8.jpg",
+            "mimage_2": "shopify://shop_images/Mobile_03_00d33b99-e47e-462e-99e6-a7a6cce41e41.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_iA6AHF": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_04_4637d1b7-af5b-40ef-b26d-844e61a4f8ea.jpg",
+            "mimage_2": "shopify://shop_images/Mobile_04_34ea4db9-99a3-440a-be96-8e6aef2d1b48.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_RJk7Fj": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_05_f46a724d-aba0-4240-978d-74249ea03a43.jpg",
+            "mimage_2": "shopify://shop_images/Mobile_05_18809e67-b96d-45cf-8ce6-dc7a0b90e323.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "text_a6hNWF": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "2 NEW <b>member-exclusive</b> Orange &amp; Clove refills"
+          }
+        },
+        "text_tDGEyp": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "2 <b>limited edition</b> Frankincense &amp; Myrrh refills"
+          }
+        },
+        "text_NMwGbW": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "2 <b>bestselling</b> Uplifting Citrus refills"
+          }
+        },
+        "text_JMeCDX": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "2 Bottles for Life &amp; cloths"
+          }
+        },
+        "text_JgJYdi": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<b>FREE</b> Oh! de Loo drops"
+          }
+        },
+        "text_Bznyxz": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Includes <b>FREE</b> Oh! de Loo drops and <b>FREE</b> delivery"
+          }
+        },
+        "point_JzLEFe": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 NEW <b>member-exclusive</b> Orange &amp; Clove refill"
+          }
+        },
+        "point_LWyRT8": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 <b>limited edition</b> Frankincense &amp; Myrrh refill"
+          }
+        },
+        "point_hwieEU": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 <b>bestselling</b> Uplifting Citrus refill"
+          }
+        },
+        "point_hek83M": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Bottle for Life &amp; cloth"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_pAeVQQ",
+        "product_image_TAwqPa",
+        "product_image_phNNax",
+        "product_image_bw4xtz",
+        "product_image_aeYnY4",
+        "product_image2_QykkHC",
+        "product_image2_djFrbn",
+        "product_image2_DA6fi9",
+        "product_image2_iA6AHF",
+        "product_image2_RJk7Fj",
+        "text_a6hNWF",
+        "text_tDGEyp",
+        "text_NMwGbW",
+        "text_JMeCDX",
+        "text_JgJYdi",
+        "text_Bznyxz",
+        "point_JzLEFe",
+        "point_LWyRT8",
+        "point_hwieEU",
+        "point_hek83M"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        "#product_form_christmas .link-to-variant b {font-weight: 600;}",
+        ".buy--plan label .link-to-variant {font-weight: 100;}"
+      ],
+      "settings": {
+        "className": "",
+        "collapse": false,
+        "outOfStock": false,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#e7ebea",
+        "mainheading": "Member Offer: Save up to £44",
+        "heading": "Black Friday Member Offers",
+        "mainsubheading": "NEW Orange &amp; Clove with Mega &amp; Mini Bundles",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "plan_heading_1": "Mega Black Friday Bundle",
+        "variant_id_1": "54817491779964",
+        "selling_plan_1": "",
+        "sku_1": "FG1208d",
+        "qty_1": "1",
+        "discountPlan_1": "ULTIMATEBUNDLE229CX",
+        "price_1": "39.99",
+        "deleted_price_1": "84.00",
+        "plan_heading_2": "Mini Black Friday Bundle",
+        "variant_id_2": "54802874368380",
+        "selling_plan_2": "",
+        "sku_2": "FG1233d",
+        "qty_2": "1",
+        "discountPlan_2": "MINIBUNDLE229CX",
+        "price_2": "20.99",
+        "deleted_price_2": "42.00",
+        "plan_heading_3": "",
+        "variant_id_3": "",
+        "selling_plan_3": "",
+        "sku_3": "",
+        "qty_3": "",
+        "discountPlan_3": "",
+        "price_3": "",
+        "deleted_price_3": "",
+        "plan_heading_4": "",
+        "variant_id_4": "44741022089443",
+        "selling_plan_4": "",
+        "sku_4": "FG1096",
+        "discountPlan_4": "SIGNATURE197dv",
+        "price_4": "15",
+        "deleted_price_4": "40",
+        "plan_heading_5": "",
+        "variant_id_5": "45313882357987",
+        "selling_plan_5": "4240212195",
+        "sku_5": "FG1171",
+        "discountPlan_5": "COMPLETE197dv",
+        "price_5": "30",
+        "deleted_price_5": "80",
+        "plan_heading_6": "",
+        "variant_id_6": "45259308499171",
+        "selling_plan_6": "",
+        "sku_6": "FG1112",
+        "discountPlan_6": "",
+        "price_6": "21",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 6,
+        "funnel_stage": "hp",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "product_blocks_qCkjga": {
+      "type": "shopify-product-blocks",
+      "blocks": {
+        "product_ECnQ3A": {
+          "type": "product",
+          "settings": {
+            "product": "orange-clove-refill-pack",
+            "variant_id": "54817560494460",
+            "sealing_plan": "",
+            "discount": "ORANGECLOVEREF229CX",
+            "product_image": "shopify://shop_images/12f4f89be0f32508ea2e9760b80b71ca.jpg",
+            "isSub": false,
+            "title": "",
+            "saving": "Member Exclusive",
+            "price": "£20.40",
+            "crossprice": "£24",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_MyaVAW": {
+          "type": "product",
+          "settings": {
+            "product": "frankincense-myrrh-counter-clean-refill-copy",
+            "variant_id": "54824765784444",
+            "sealing_plan": "",
+            "discount": "F&MREF229CX",
+            "isSub": false,
+            "title": "Frankincense & Myrrh Counter Clean refills",
+            "saving": "Limited Edition",
+            "price": "£20.40",
+            "crossprice": "£24",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_HW4Ny8": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "variant_id": "43522237726947",
+            "sealing_plan": "",
+            "discount": "ODL225CX",
+            "isSub": false,
+            "title": "Oh! de Loo",
+            "saving": "Stocking Filler",
+            "price": "£13.56",
+            "crossprice": "£16.95",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_rAx98m": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant_id": "54818998452604",
+            "sealing_plan": "4327440611",
+            "discount": "BATHROOMBLISS229CX",
+            "isSub": true,
+            "title": "Bathroom Bliss Starter Kit",
+            "saving": "",
+            "price": "£15",
+            "crossprice": "£40",
+            "buttonLabel": "ADD 90-DAY PLAN"
+          }
+        }
+      },
+      "block_order": [
+        "product_ECnQ3A",
+        "product_MyaVAW",
+        "product_HW4Ny8",
+        "product_rAx98m"
+      ],
+      "settings": {
+        "reviews": true,
+        "toast": false,
+        "bg": "",
+        "heading": "Extra Black Friday member deals",
+        "subheading": "Stock up for Christmas and get free delivery when you spend over £39"
+      }
+    },
+    "pf119_seasonal_scents_UUe6fb": {
+      "type": "pf181-expend-blocks",
+      "blocks": {
+        "image_GymrGe": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/OC.png",
+            "mBlockImage": "shopify://shop_images/Scent_Block_1_Mobile.jpg",
+            "tag": "Member Exclusive",
+            "heading": "Orange & Clove ",
+            "details": "A classically Christmas blend of orange, clove and benzoin. Inspired by the scent of traditional Christmas pomanders.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Sweet Orange</span><br>Uplifting and citrusy</li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Spicy Clove</span><br>Woody and warming</li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Benzoin</span><br>Rich and creamy</li>\n    </ul>\n</div>"
+          }
+        },
+        "image_Fcyxqk": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/FM.png",
+            "mBlockImage": "shopify://shop_images/Scent_Block_2_Mobile.jpg",
+            "tag": "Limited Edition",
+            "heading": "Frankincense & Myrrh",
+            "details": "A blend of frankincense, myrrh and smoky undertones. Inspired by Purdy & Charlotte’s festive memories.",
+            "expend-label": "blend details",
+            "expendable-content": "<h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n         <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Sweet Orange</span><br>An uplifting, sweet-citrus aroma</li>\n<li class=\"font-lausanne fw-200\">\n    <span class=\"fw-400\">Pink Grapefruit</span><br>Zesty, sweet and tangy</li>\n    </ul>\n\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Coriander Seed</span><br>Spicy and warm</li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Frankincense</span><br>Woody and resinous</li>\n<li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Myrrh</span><br>Earthy and balsamic</li>\n<li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Vetiver</span><br>A deep, smoky aroma</li>\n    </ul>\n</div>"
+          }
+        },
+        "image_MwnAJy": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/UC_04d9e291-520d-42d4-9a67-c1d85cde6597.png",
+            "mBlockImage": "shopify://shop_images/Scent_Block_3_Mobile.jpg",
+            "tag": "",
+            "heading": "Uplifting Citrus",
+            "details": "An invigorating blend of orange, grapefruit, and niaouli, inspired by a refreshing spring clean.",
+            "expend-label": "blend details",
+            "expendable-content": "<h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n         <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Sweet Orange</span><br>An uplifting, sweet-citrus aroma</li>\n<li class=\"font-lausanne fw-200\">\n    <span class=\"fw-400\">Grapefruit Peel</span><br>A fruity, energy-boosting scent</li>\n    </ul>\n\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Niaouli Leaves</span><br>A fresh oil with an earthy aroma</li>\n    </ul>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_GymrGe",
+        "image_Fcyxqk",
+        "image_MwnAJy"
+      ],
+      "custom_css": [
+        ".tss-tag {font-size: 14px; line-height: 1; color: #212121; background: #fbf1e8; border: 1px solid #f2d4b9; border-radius: 4px; padding: 4px;}"
+      ],
+      "settings": {
+        "bgcolor": "#f6e3d1",
+        "class": "show  pf-173-nature mobile-container-0",
+        "linkVariant": "",
+        "heading": "Discover the best scents of the year",
+        "subtext": ""
+      }
+    },
+    "icon_blocks_reskin_QyJ6db": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_6yhndz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only perks",
+            "icon_block_description": "Exclusive treats, just for our members",
+            "icon_block_image": "shopify://shop_images/Icon_cffd88f9-5a0a-435e-b38e-e7dc4291977a.png"
+          }
+        },
+        "iconblocks_WWLqyn": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Membership pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_9afda10b-0e29-409c-8191-0bbc22a5d588.png"
+          }
+        },
+        "iconblocks_YXCGmM": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive access",
+            "icon_block_description": "Early access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_052aceb2-3689-4679-86fd-bc7eb7532cf3.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_6yhndz",
+        "iconblocks_WWLqyn",
+        "iconblocks_YXCGmM"
+      ],
+      "settings": {
+        "bg": "#fcfaf6",
+        "textcolor": "#0c231f",
+        "heading": "Enjoy member benefits",
+        "show_hide_block": true
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "-120",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>No, this is a buy-once offer just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers. As a member, concentrate refills are always 15% off.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>Our Black Friday member deals are strictly limited edition whilst stock lasts - we cannot guarantee how long they'll be around.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into your account with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to tweak your subscription however you like. You can change what’s in your order, adjust your delivery and billing date, or pause deliveries completely for a bit.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "1616c4c5-6d10-4f48-a274-122128027936": {
+      "type": "social-video-reskin",
+      "blocks": {
+        "video_k7TVhB": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-1_0cf27e3e-fff9-4d88-8e61-2ff9ed737526.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/8710260775a44d4f87dbed4218d671df.mp4"
+          }
+        },
+        "video_YULfiR": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-2_f342761e-a524-477d-ac89-3cac39642714.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/f2eb5d691286467fadc9833ff8e1128b.mp4"
+          }
+        },
+        "video_jKMTPr": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-3_6b4b5581-7d62-4528-bb2e-1a9b48969dae.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/6b10c0d92bce403da5aff31f7f6d1c61.mp4"
+          }
+        },
+        "video_eHzmyA": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-4_767956fa-da13-4a1c-8c1f-eec21f9eed10.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/824835749f884d6690186631c344bcb0.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "video_k7TVhB",
+        "video_YULfiR",
+        "video_jKMTPr",
+        "video_eHzmyA"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".common-btn-width {width: 343px;}",
+        "@media (max-width: 768px) {.common-btn-width {width: 100%; }}",
+        ".blue-starterkit-btn {font-size: 16px;}"
+      ],
+      "settings": {
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "bgColor": "#fcfaf6",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 14,
+        "funnel_stage": "landing_page",
+        "dataModule": "social_video_slider",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_reskin_9fjJ8d",
+    "banner_10_3EaRiV",
+    "global_product_19_cPYKAd",
+    "product_blocks_qCkjga",
+    "pf119_seasonal_scents_UUe6fb",
+    "icon_blocks_reskin_QyJ6db",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "1616c4c5-6d10-4f48-a274-122128027936",
+    "footer_2_EanC9N"
+  ]
+}

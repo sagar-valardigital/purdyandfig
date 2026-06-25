@@ -1,0 +1,109 @@
+<section class="section section-relative " id="page-block-1ju4mjx9ix6" data-at="section">
+    <div class="section-holder-border item-block item-absolute" data-at="section-border"></div>
+    <div class="section-holder-overlay item-block item-absolute" data-at="section-overlay"></div>
+    <div class="section-block">
+        <div class="section-inner section-fit section-relative">
+            <div class="widget item-absolute headline  " id="element-16" data-at="headline">
+                <div class="contents">
+                    <h1>
+                        <span class="x_d96addeb x_e0372c4e">{{ section.settings.title }}</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-606" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_1a067148 x_bcbce646">{{ section.settings.subtitle }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute hidden-mobile" id="element-314">
+                <div class="contents shape  box figure " data-at="shape"></div>
+            </div>
+            <div class="widget item-absolute " id="element-555">
+                <div class="contents shape circle figure" data-at="shape" data-src="{{ section.blocks[0].settings.image | img_url: '800x' }}" style="background-image: url({{ section.blocks[0].settings.image | img_url: '800x' }});"></div>
+            </div>
+            <div class="widget item-absolute " id="element-554">
+                <div class="contents shape circle figure" data-at="shape" data-src="{{ section.blocks[1].settings.image | img_url: '800x' }}" style="background-image: url({{ section.blocks[1].settings.image | img_url: '800x' }});"></div>
+            </div>
+            <div class="widget item-absolute " id="element-553">
+                <div class="contents shape circle figure" data-at="shape" data-src="{{ section.blocks[2].settings.image | img_url: '800x' }}" style="background-image: url({{ section.blocks[2].settings.image | img_url: '800x' }});"></div>
+            </div>
+            <div class="widget item-absolute " id="element-552">
+                <div class="contents shape circle figure" data-at="shape" data-src="{{ section.blocks[3].settings.image | img_url: '800x' }}" style="background-image: url({{ section.blocks[3].settings.image | img_url: '800x' }});"></div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-111" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_5faf32f4 x_b8d5a0d2">{{ section.blocks[0].settings.name }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-110" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_5faf32f4 x_b8d5a0d2"><span class="x_a269ab78">{{ section.blocks[1].settings.name }}</span></p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-113" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_5faf32f4 x_b8d5a0d2"><span class="x_a269ab78">{{ section.blocks[2].settings.name }}</span></p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-506" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_5faf32f4 x_b8d5a0d2"><span class="x_a269ab78">{{ section.blocks[3].settings.name }}</span></p>
+                </div>
+            </div>
+            <div class="widget item-absolute headline  " id="element-743" data-at="headline">
+                <div class="contents">
+                    <h1>
+                        <span class="x_c8f60032 x_5c6925cc"><span class="x_cc9f3d3d">{{ section.settings.bottom-text }}</span></span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Instapage Surfaces",
+    "settings": [
+      {
+        "id": "title",
+        "label": "Title",
+        "type": "text"
+      },
+      {
+        "id": "subtitle",
+        "label": "Subtitle",
+        "type": "text"
+      },
+      {
+        "id": "bottom-text",
+        "label": "Bottom Text",
+        "type": "text"
+      }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "name",
+            "label": "Name"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instapage Surfaces"
+      }
+	]
+  }
+{% endschema %}

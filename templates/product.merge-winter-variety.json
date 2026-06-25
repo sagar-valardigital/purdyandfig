@@ -1,0 +1,855 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "cfce42e2-4ceb-4988-82bc-b5024542f18b": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "winter-refill-booster-pack",
+            "open": "close",
+            "DescriptionHeading": "Overview",
+            "description": "A 3-pack of our limited edition Fir &amp; Bergamot winter scent eco-concentrates to be diluted at home in your refillable Bottle for Life."
+          }
+        },
+        "4cc01513-34b5-45cf-b953-06211932584a": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "winter-refill-booster-pack",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Fir &amp; Bergamot - A bright and optimistic blend of Siberian fir needle, patchouli, lavender, bergamot, and clary sage."
+          }
+        },
+        "563eeda1-b6c6-4adf-9764-f118bc95a0ea": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "winter-refill-booster-pack",
+            "open": "close",
+            "DescriptionHeading": "What's inside the Box?",
+            "description": "3 x 20ml Fir &amp; Bergamot eco-concentrates."
+          }
+        },
+        "565fa327-48e6-4ddf-9ef5-641ee16b3dcd": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "winter-variety-kit-limited-edition",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "A limited edition Variety Kit with a Bottle for Life and signature blends alongside our limited edition Fir &amp; Bergamot winter scent."
+          }
+        },
+        "8ed4f8e4-6265-42cf-a4a4-a5b9bc9e5ad5": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "winter-variety-kit-limited-edition",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Fir &amp; Bergamot (Limited Edition) -  Siberian fir needle, patchouli, lavender, bergamot and clary sage\n<p> </p>\nUplifting Citrus - Sweet orange &amp; grapefruit peels and niaouli leaves\n<p> </p>\nBalancing Floral - Rose geranium, lemon peel and vetiver roots\n<p> </p>\nGrounding Vetiver - Sweet orange, coriander seed and vetiver"
+          }
+        },
+        "21e922a4-a1b9-4efd-a901-edea59ea7b3a": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "winter-variety-kit-limited-edition",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "1 x Glass Bottle for Life\n<p> </p>\n4 x Eco-Concentrate Refills (Citrus, Floral, Vetiver, Fir &amp; Bergamot)\n<p> </p>\n1 Purdy &amp; Figg cleaning cloth\n<p> </p>\nMoney back guarantee if you don't love it"
+          }
+        },
+        "0a512144-0af0-4e58-9274-322609e358fd": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "merged-variety-starter-kit",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "A limited edition Variety Kit with a Bottle for Life and signature blends alongside our limited edition Fir &amp; Bergamot winter scent."
+          }
+        },
+        "8e68b772-dccf-4bd9-bfd5-52051c9e1aa5": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "merged-variety-starter-kit",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Fir &amp; Bergamot (Limited Edition) -  Siberian fir needle, patchouli, lavender, bergamot and clary sage\n<p> </p>\nUplifting Citrus - Sweet orange &amp; grapefruit peels and niaouli leaves\n<p> </p>\nBalancing Floral - Rose geranium, lemon peel and vetiver roots\n<p> </p>\nGrounding Vetiver - Sweet orange, coriander seed and vetiver"
+          }
+        },
+        "97a7f0c3-3a75-4009-8d03-8e5b7579a5df": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "merged-variety-starter-kit",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box",
+            "description": "1 x Glass Bottle for Life\n<p> </p>\n4 x Eco-Concentrate Refills (Citrus, Floral, Vetiver, Fir &amp; Bergamot)\n<p> </p>\n1 Purdy &amp; Figg cleaning cloth\n<p> </p>\nMoney back guarantee if you don't love it"
+          }
+        }
+      },
+      "block_order": [
+        "cfce42e2-4ceb-4988-82bc-b5024542f18b",
+        "4cc01513-34b5-45cf-b953-06211932584a",
+        "563eeda1-b6c6-4adf-9764-f118bc95a0ea",
+        "565fa327-48e6-4ddf-9ef5-641ee16b3dcd",
+        "8ed4f8e4-6265-42cf-a4a4-a5b9bc9e5ad5",
+        "21e922a4-a1b9-4efd-a901-edea59ea7b3a",
+        "0a512144-0af0-4e58-9274-322609e358fd",
+        "8e68b772-dccf-4bd9-bfd5-52051c9e1aa5",
+        "97a7f0c3-3a75-4009-8d03-8e5b7579a5df"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "a84b9ded-b309-4476-aa16-ea230ea029d5": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "acaeb4cf-b507-41b6-ab58-617602342bde": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "d9e76915-4c3d-4ffb-8de5-4c785580f43b": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "ca5be3f7-d755-4bea-8370-879662e1804c": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        },
+        "22f1db6a-392c-4aeb-aed4-af989ebe1538": {
+          "type": "list",
+          "settings": {
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "acaeb4cf-b507-41b6-ab58-617602342bde",
+        "d9e76915-4c3d-4ffb-8de5-4c785580f43b",
+        "ca5be3f7-d755-4bea-8370-879662e1804c",
+        "22f1db6a-392c-4aeb-aed4-af989ebe1538"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "TEST",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Kickstart your new year cleaning routine",
+        "subtext": "",
+        "image": "shopify://shop_images/F_B_PDP_Icons-WEb2-01.jpg",
+        "mimage": "shopify://shop_images/F_B_PDP_Icons-MOB23-01-01_11b60f60-fa50-4244-b3e7-a71e43e1297d.jpg",
+        "details": "",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "0b692a7c-2069-4d94-9a95-a9f03adcdcae": {
+      "type": "landing-blocks",
+      "blocks": {
+        "e53cf16a-3c96-494b-9bed-e71cc3f1d464": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/fir2.png",
+            "rounded": true,
+            "heading": "Siberian Fir Needle",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "58f88ca8-b932-40f1-ac2f-7e0d724bc632": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/patchouli2.png",
+            "rounded": true,
+            "heading": "Patchouli",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "10fbc337-395d-4a52-9aee-323ed46c5aca": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/lave2.png",
+            "rounded": true,
+            "heading": "Lavender",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e7de321d-339b-4bc1-ad77-46a9a531b816": {
+          "type": "text",
+          "settings": {
+            "width": "w-50",
+            "image": "shopify://shop_images/bergamot1_04e3629b-3130-48f9-a142-3be4f7d16472.png",
+            "rounded": true,
+            "heading": "Bergamot",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "d3bbd318-3297-4cf4-a784-8df605da8e8d": {
+          "type": "text",
+          "settings": {
+            "width": "w-50",
+            "image": "shopify://shop_images/sage2.png",
+            "rounded": true,
+            "heading": "Clary Sage",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "e53cf16a-3c96-494b-9bed-e71cc3f1d464",
+        "58f88ca8-b932-40f1-ac2f-7e0d724bc632",
+        "10fbc337-395d-4a52-9aee-323ed46c5aca",
+        "e7de321d-339b-4bc1-ad77-46a9a531b816",
+        "d3bbd318-3297-4cf4-a784-8df605da8e8d"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "What's in the blend?",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "b32e6355-fce6-4247-80ff-7cbff2c7a938": {
+      "type": "landing-blocks",
+      "blocks": {
+        "3feee9fe-693a-415c-b519-8e82181f076d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/scent_image-_F_B.png",
+            "rounded": false,
+            "heading": "Fir & Bergamot",
+            "details": "A bright and sparkling blend of Siberian fir needle, patchouli, lavender, bergamot and clary sage that uplifts the spirit for the new year.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "3c589255-acb4-4269-a795-a17a3e841bb6": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/scent_image_-03.png",
+            "rounded": false,
+            "heading": "Uplifting Citrus",
+            "details": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f872c294-7a4b-4fde-94e8-7e1436505847": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/scent_image_-04.png",
+            "rounded": false,
+            "heading": "Balancing Floral",
+            "details": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots, known for their comforting & balancing properties",
+            "mbBlock": "mw-50"
+          }
+        },
+        "4735a801-f67a-49ee-a4bd-6571e35f86d7": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/scent_image_-02.png",
+            "rounded": false,
+            "heading": "Grounding Vetiver",
+            "details": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "3feee9fe-693a-415c-b519-8e82181f076d",
+        "3c589255-acb4-4269-a795-a17a3e841bb6",
+        "f872c294-7a4b-4fde-94e8-7e1436505847",
+        "4735a801-f67a-49ee-a4bd-6571e35f86d7"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "#3d5065",
+        "heading": "Get to know our blends:",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "9d2abaa4-f8b4-4b9f-8f07-b5e991b9e1b6": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "f926d722-e842-4db3-8680-e7321fbb23a8": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "54ed3d5e-9171-479c-80f9-c300cd1c3dc5": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "d1c93f40-69ac-4dbb-838f-fd1d1f2c3d2c": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        }
+      },
+      "block_order": [
+        "f926d722-e842-4db3-8680-e7321fbb23a8",
+        "54ed3d5e-9171-479c-80f9-c300cd1c3dc5",
+        "d1c93f40-69ac-4dbb-838f-fd1d1f2c3d2c"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "d-none",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "image": "shopify://shop_images/Request_2.1_desktop.png",
+        "mimage": "shopify://shop_images/Request_2.1_mobiel_8228443f-9267-4dd0-ae52-cd037837a10d.png",
+        "details": "<p></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "6dd0ddd3-c682-4fc3-8459-87dc9eeaa325": {
+      "type": "bb-products",
+      "blocks": {
+        "8e00970c-c372-4351-a9a0-6c931c8d6f05": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life"
+          }
+        },
+        "e39cfe8d-96c1-4ea6-98d7-5f692b826d12": {
+          "type": "product",
+          "settings": {
+            "product": "refill-booster-packs"
+          }
+        },
+        "62641e53-776c-42ea-860c-37267847caa4": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "6339bb77-f9f2-4291-ab30-18f7af8ff32c": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "2521d26e-c97a-4271-80da-d3e423d7561a": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        }
+      },
+      "block_order": [
+        "8e00970c-c372-4351-a9a0-6c931c8d6f05",
+        "e39cfe8d-96c1-4ea6-98d7-5f692b826d12",
+        "62641e53-776c-42ea-860c-37267847caa4",
+        "6339bb77-f9f2-4291-ab30-18f7af8ff32c",
+        "2521d26e-c97a-4271-80da-d3e423d7561a"
+      ],
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "Add extras to your cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "1649839242809d07cb": {
+      "type": "blocks",
+      "blocks": {
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-4.png",
+            "rounded": false,
+            "heading": "Counters & Stone",
+            "details": ""
+          }
+        },
+        "758c082c-743d-46c9-9b3a-63c29a340b8e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-3.png",
+            "rounded": false,
+            "heading": "Bath & Enamel",
+            "details": ""
+          }
+        },
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-2.png",
+            "rounded": false,
+            "heading": "Glass & Mirrors",
+            "details": ""
+          }
+        },
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-1.png",
+            "rounded": false,
+            "heading": "Wood & Floors",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804",
+        "758c082c-743d-46c9-9b3a-63c29a340b8e",
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4",
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "width": "w-25",
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home"
+      }
+    },
+    "1649831294e3d704b2": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "white-text",
+        "background": "theme-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "Proven to be Effective",
+        "image": "shopify://shop_images/p-8.png",
+        "details": "<p>The innovative eco-concentrate developed by PHD chemist Dr Anna Stastanova has been designed to work effectively on all your homes surfaces whilst retaining maximum scent. Over 97% of customers say it works better than their regular cleaner.</p>",
+        "link": "",
+        "btntext": "Read more",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      }
+    },
+    "16572925435a91d41d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": false,
+        "bgcolor": "#ffffff",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "0",
+        "mainheading": "",
+        "heading": "A scent that transforms your home",
+        "details": "<p></p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1657290860d3f966ef": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "The Best Essential Oils",
+        "image": "shopify://shop_images/p-7.png",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654234195a5b1460d": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Expertly Blended",
+        "image": "shopify://shop_images/p-6.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and have out all of their years of works into creating the most incredible smelling cleaners.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16497410063bc29f75": {
+      "type": "review-slider",
+      "blocks": {
+        "21a91d05-d81c-424c-9b47-69aa59e0e384": {
+          "type": "text",
+          "settings": {
+            "username": "Posy",
+            "heading": "",
+            "image": "shopify://shop_images/user-1_1175e8d2-e953-4a85-8ba5-db5064570dc7.png",
+            "review": "\"It just makes me feel good! It also makes my kitchen island look and smell better than anything else I'vetried before.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac": {
+          "type": "text",
+          "settings": {
+            "username": "Emma",
+            "heading": "",
+            "image": "shopify://shop_images/user-2_1aaa509a-1b80-43ca-bb7e-82c6486d3168.png",
+            "review": "\"I love using Purdy & Figg as it's just one simple product that does so much, stops the clutter of products & it's kinder to the environment.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1": {
+          "type": "text",
+          "settings": {
+            "username": "Flora",
+            "heading": "",
+            "image": "shopify://shop_images/user-3.png",
+            "review": "\"A weird transformation has taken place.…. I look forward to wiping the surfaces of my kitchen after supper. What have you done to me?\"",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "21a91d05-d81c-424c-9b47-69aa59e0e384",
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac",
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "",
+        "Review-Count": "",
+        "bgColor": "",
+        "heading": "Over 5300 5-Star Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "1654234422b9cdd91c": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": true,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 3,
+        "alignment": "justify-content-end",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "25",
+        "mainheading": "Welcome to a chemical-free cleaning revolution",
+        "heading": "Reusable Glass Bottles",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "mobileShow": false,
+        "textcolor": "#ffffff",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1657296171d46b68b8": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 3,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "10",
+        "mainheading": "",
+        "heading": "Welcome to a cleaning revolution",
+        "details": "",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165729620474237683": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Reusable Glass Bottles",
+        "image": "shopify://shop_images/home.jpg",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "14x Lower Carbon Emissions",
+        "image": "shopify://shop_images/human.jpg",
+        "details": "<p>Generic Surface Cleaners are made of 90% water and over 1 billion of these heavy bottles are transported around the world every year to get to our homes. Purdy & Figg Eco-Concentrates are 97% lighter than a bulk cleaner to ship and you dilute the concentrates with water coming out of your tap at home.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654234598971fe4e5": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Non-Toxic",
+        "image": "shopify://shop_images/poster-3.png",
+        "details": "<p>It is our mission to put your family first which is why our Eco-Concentrates are completely plant-based, paraben-free and GMO-free with natural essential oils and no synthetic fragrance or dangerous preservatives.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654230729996fed8d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 5,
+        "alignment": "justify-content-start",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "15",
+        "mainheading": "A scent that transforms your home",
+        "heading": "The Best Essential Oils",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "mobileShow": false,
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165423535626bc9759": {
+      "type": "table",
+      "settings": {}
+    },
+    "1654234744e17a4ce6": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-bottom",
+        "spacem": "250",
+        "mainheading": "",
+        "heading": "Two women on a mission",
+        "details": "<p>Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.</p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165423464702cd9638": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Made by a PHD Scientist, NHS Nurse and Horticulturist",
+        "image": "shopify://shop_images/p-2.png",
+        "details": "<p>Dr Anna Slastanova PHD and Honorary Research Fellow in Surfactant Chemistry is responsible for the worlds most advanced scent extraction ever achieved in a cleaning product. Professional and multi-award-winning Horticultralist Charlotte Figg has created the essential oil blends as a culmination of 30 years of work.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16542346954792a369": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "Manufactured in the UK",
+        "image": "shopify://shop_images/poster-2.png",
+        "details": "<p>We manufacture Purdy & Figg Eco-Concentrates in England, where we are subject to stringent health regulations. Every Purdy & Figg Eco-Concentrate is manufactured in a state of the art laboratory in England. Rest easy knowing we don’t cut corners. Your safety is important to us.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "a84b9ded-b309-4476-aa16-ea230ea029d5",
+    "0b692a7c-2069-4d94-9a95-a9f03adcdcae",
+    "b32e6355-fce6-4247-80ff-7cbff2c7a938",
+    "product-recommendations",
+    "9d2abaa4-f8b4-4b9f-8f07-b5e991b9e1b6",
+    "6dd0ddd3-c682-4fc3-8459-87dc9eeaa325",
+    "1649839242809d07cb",
+    "1649831294e3d704b2",
+    "16572925435a91d41d",
+    "1657290860d3f966ef",
+    "1654234195a5b1460d",
+    "16497410063bc29f75",
+    "1654234422b9cdd91c",
+    "1657296171d46b68b8",
+    "165729620474237683",
+    "image-with-text",
+    "1654234598971fe4e5",
+    "1654230729996fed8d",
+    "165423535626bc9759",
+    "1654234744e17a4ce6",
+    "165423464702cd9638",
+    "16542346954792a369",
+    "16644285387cfa3d71"
+  ]
+}

@@ -1,0 +1,267 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero": {
+      "type": "wonderment-hero",
+      "disabled": true,
+      "settings": {
+        "width_override": true,
+        "image_overlay_opacity": 0,
+        "image_height": "medium",
+        "adapt_height_first_image": false,
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "background-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": true
+      }
+    },
+    "b13a25a7-6d45-490e-a6d3-eae0646fd6b8": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16702099226851__b13a25a7-6d45-490e-a6d3-eae0646fd6b8-16844156552a134a17-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "Your Order Status",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--16702099226851__b13a25a7-6d45-490e-a6d3-eae0646fd6b8-16844156552a134a17-0"
+      ],
+      "settings": {
+        "color_scheme": "#fff",
+        "full_width": true,
+        "padding_top": 88,
+        "padding_bottom": 16
+      }
+    },
+    "1684414815188e54b0": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "1475adc1-a86d-4793-ad53-9532a256ee0c": {
+      "type": "faq-section",
+      "blocks": {
+        "75a6508a-102d-418e-b125-d6c2cb4e87e0": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How long does delivery usually take?",
+            "faq-ans": "<p>We aim to ship all orders from our UK factory within 48 hours of receiving them. You will receive an email with tracking information as soon as your order has been dispatched. Depending on the delivery method you choose, orders should arrive 24-48 hours from the time of dispatch. We offer free standard delivery on all orders over £40.</p>"
+          }
+        },
+        "4dd3d944-c25c-4c0c-9a85-76d37a0ca489": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Can I return my empty concentrate bottles?",
+            "faq-ans": "<p>Send back 6 or more empty concentrate bottles using our bottle return scheme and receive £5 off your next order, plus the cost of your postage. Please email info@purdyandfigg.com for more details. Otherwise, simply rinse them out and pop them in the glass recycling bin.</p>"
+          }
+        },
+        "ae1ea1cb-f370-4666-8aa1-543bf02c6190": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How do I use the concentrate?",
+            "faq-ans": "<p>Simply pour the whole 20ml bottle into your Bottle for Life and fill to the top (just below the neck) with ordinary tap water. Give the bottle a gentle shake to combine, then enjoy your uplifting clean!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "75a6508a-102d-418e-b125-d6c2cb4e87e0",
+        "4dd3d944-c25c-4c0c-9a85-76d37a0ca489",
+        "ae1ea1cb-f370-4666-8aa1-543bf02c6190"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fff",
+        "class": "",
+        "heading": ""
+      }
+    },
+    "faq": {
+      "type": "wonderment-faq",
+      "blocks": {
+        "faq-getting-started": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Getting started"
+          }
+        },
+        "product-where-made-question": {
+          "type": "question",
+          "settings": {
+            "title": "Where are your products manufactured?",
+            "text": "<p>We are a local company and all merchandise is made with love here in Toronto, Canada.</p>"
+          }
+        },
+        "sizes-question": {
+          "type": "question",
+          "settings": {
+            "title": "How do your sizes work?",
+            "text": "<p>Please take a look at our size chart for more information and how to take accurate measurements.</p>"
+          }
+        },
+        "shipping-heading": {
+          "type": "section_heading",
+          "settings": {
+            "title": "Shipping"
+          }
+        },
+        "when-shipping-question": {
+          "type": "question",
+          "settings": {
+            "title": "When will my order ship?",
+            "text": "<p>Usually in 1-2 business days</p>"
+          }
+        },
+        "when-arriving-question": {
+          "type": "question",
+          "settings": {
+            "title": "When will my order arrive?",
+            "text": "<p>Usually in 3-10 business days</p>"
+          }
+        },
+        "ship-international-question": {
+          "type": "question",
+          "settings": {
+            "title": "Do you ship internationally?",
+            "text": "<p>Currently we are only shipping to USA and Canada.</p>"
+          }
+        },
+        "shipping-cost-question": {
+          "type": "question",
+          "settings": {
+            "title": "How much is shipping?",
+            "text": "<p>If you spend over $100, shipping is always free. For any other purchases, shipping will be calculated at checkout.</p>"
+          }
+        },
+        "return-policy-question": {
+          "type": "question",
+          "settings": {
+            "title": "What is your return policy?",
+            "text": "<p>Merchandise that is unworn and in the original packaging can be returned within 30 days with the packing slip included with the product.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq-getting-started",
+        "product-where-made-question",
+        "sizes-question",
+        "shipping-heading",
+        "when-shipping-question",
+        "when-arriving-question",
+        "ship-international-question",
+        "shipping-cost-question",
+        "return-policy-question"
+      ],
+      "disabled": true,
+      "settings": {
+        "show_answers": false,
+        "text_size": 100,
+        "alignment": "center",
+        "text_color": "#121212",
+        "background_color": "linear-gradient(184deg, rgba(255, 255, 255, 1) 7%, rgbargba(255, 255, 255, 1) 94%)",
+        "border_color": "#121212",
+        "base_width": 80,
+        "max_width": "",
+        "inner_padding": 100,
+        "outer_margin": 0,
+        "custom_css": "",
+        "mobile_custom_css": "",
+        "override_theme_font": false,
+        "heading_font": "serif",
+        "main_font": "sans-serif"
+      }
+    },
+    "rebuy": {
+      "type": "wonderment-rebuy",
+      "disabled": true,
+      "settings": {
+        "rebuy-widget-id": ""
+      }
+    },
+    "fairing": {
+      "type": "wonderment-fairing",
+      "disabled": true,
+      "settings": {
+        "fairing-key": "",
+        "fairing-padding-tb": 10,
+        "fairing-padding-lr": 10,
+        "fairing-border-color": "#000000",
+        "fairing-border-size": 0,
+        "fairing-border-radius": 0,
+        "fairing-title-text-align": "center",
+        "fairing-title-margin-top": 20,
+        "fairing-title-margin-bottom": 20,
+        "fairing-title-max-width": 100,
+        "fairing-response-border-color": "#000000",
+        "fairing-response-border-size": 0,
+        "fairing-response-border-radius": 0,
+        "fairing-response-padding": 5,
+        "fairing-responses-margin": 20
+      }
+    },
+    "65fc480a-9e85-404c-9b93-57f3b4c4b3cc": {
+      "type": "best-seller-section",
+      "blocks": {
+        "517890c5-67a7-49e5-9729-4b1289a2fced": {
+          "type": "product",
+          "settings": {
+            "product": "eco-concentrates-surface-cleaner-starter-kit-d"
+          }
+        },
+        "f6eed7d3-62d2-40f4-b08f-2fc79706aab2": {
+          "type": "product",
+          "settings": {
+            "product": "refill-booster-packs"
+          }
+        },
+        "a0e7f172-08ab-4e10-9a94-dc08bb2b1c1b": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "79b77c8c-e6e4-4cc9-8ecc-ff20824457f2": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        }
+      },
+      "block_order": [
+        "517890c5-67a7-49e5-9729-4b1289a2fced",
+        "f6eed7d3-62d2-40f4-b08f-2fc79706aab2",
+        "a0e7f172-08ab-4e10-9a94-dc08bb2b1c1b",
+        "79b77c8c-e6e4-4cc9-8ecc-ff20824457f2"
+      ],
+      "settings": {
+        "heading": "You May Also Like",
+        "btnLabel": "Shop All",
+        "btnLink": "https://purdyandfigg.com/collections"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "b13a25a7-6d45-490e-a6d3-eae0646fd6b8",
+    "1684414815188e54b0",
+    "1475adc1-a86d-4793-ad53-9532a256ee0c",
+    "faq",
+    "rebuy",
+    "fairing",
+    "65fc480a-9e85-404c-9b93-57f3b4c4b3cc"
+  ]
+}

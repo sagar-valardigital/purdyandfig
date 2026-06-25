@@ -1,0 +1,251 @@
+<!-- TikTok Pixel Code Start -->
+<script>
+!function (w, d, t) {
+  w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie","holdConsent","revokeConsent","grantConsent"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(
+var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var r="https://analytics.tiktok.com/i18n/pixel/events.js",o=n&&n.partner;ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=r,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};n=document.createElement("script")
+;n.type="text/javascript",n.async=!0,n.src=r+"?sdkid="+e+"&lib="+t;e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(n,e)};
+}(window, document, 'ttq');
+</script>
+<!-- TikTok Pixel Code End -->
+<style>
+  .how-to-enter-container{
+    align-items:center;
+  }
+  .hte-steps ul{
+    margin:0;
+    list-style:none;
+    padding:0;
+  }
+  .hte-step{
+    padding-left:52px;
+    font-size:24px;
+    margin-bottom:24px;
+    color:#212121;
+  }
+  .hte-count{
+    font-size:20px;
+    display:flex;
+    position:absolute;
+    left:0;
+    top:0px;
+    width:34px;
+    height:34px;
+    border-radius:50%;
+    justify-content:center;
+    align-items:center;
+    color:#11322c;
+    border:1px solid #11322c;
+    box-shadow:2px 2px #11322c;
+    background-color:#EBFFCA;
+  }
+  .tc_link{
+    font-size:14px;
+    color:#212121;
+    margin-top:8px;
+    text-decoration:underline;
+    display:inline-block;
+  }
+  .type-form-btn{
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    opacity:0;
+  }
+  .type-form-btn a{
+    display:block;
+  }
+
+  .type-form-btn button {
+    position: relative !important;
+    width: 100% !important;
+    all: inherit !important;
+    cursor: pointer !important;
+  }
+  @media(max-width:768px){
+    .how-to-enter-wrapper.py-80{
+      padding-top:32px !important;
+      padding-bottom:32px !important;
+    }
+    .hte-step{
+      padding-left: unset;
+      font-size: 20px;
+      margin-bottom: unset;
+    }
+    #body .how-to-enter-container .heading-2{
+      text-align:center;
+      margin-bottom:24px !important;
+    }
+    .tc_link{font-size:12px;}
+
+    .hte-steps ul {
+      align-self: stretch; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 16px; display: flex;
+    }
+    .hte-steps li {
+      align-self: stretch; justify-content: flex-start; align-items: flex-start; gap: 16px; display: inline-flex;
+    }
+    span.top-hte-count {
+      width: 36px; height: 36px; position: relative; background: #FFEDE4; box-shadow: 4px 4px 0px #294741; border-radius: 80px; outline: 1px #294741 solid; outline-offset: -1px;
+    }
+    span.top-hte-count span {
+      left: 14px; top: 3px; position: absolute; text-align: center; justify-content: center; display: flex; flex-direction: column; color: #11322C; font-size: 20px; font-family: "Lausanne"; font-weight: 400; line-height: 30px; word-wrap: break-word;
+    }
+    span.top-hte-label {
+      flex: 1 1 0; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 4px; display: inline-flex;
+    }
+    span.top-hte-label span {
+      align-self: stretch; color: #212121; font-size: 20px; font-family: "Lausanne"; font-weight: 200; line-height: 30px; word-wrap: break-word;
+    }
+    .hte-action-able {
+      margin-top: 24px;
+    }
+  }
+</style>
+<div
+  class="how-to-enter-wrapper py-80"
+  id="how-to-enter"
+  style="background-color:{{ section.settings.background_color }}"
+>
+  <div class="container">
+    <div class="how-to-enter-container d-flex flex-wrap" style="flex-direction:column;">
+      <div class="w-50 m-w-100 mb-4">
+        <h2 class="heading-2 font-gtsuper text-center">
+          {{ section.settings.heading }}
+        </h2>
+      </div>
+      <div class="w-50 m-w-100">
+        <div class="hte-steps">
+          <ul class="mobile-hide">
+            {% for block in section.blocks %}
+              <li class="hte-step position-relative font-lausanne fw-200">
+                <span class="hte-count font-lausanne fw-400">{{ forloop.index }}</span>
+                <span class="font-lausanne fw-200">{{ block.settings.heading }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+          <ul class="desktop-hide">
+            {% for block in section.blocks %}
+              <li class="hte-step position-relative font-lausanne fw-200">
+                <span class="top-hte-count font-lausanne fw-400">
+                  <span class="font-lausanne">{{ forloop.index }}</span>
+                </span>
+                <span class="top-hte-label font-lausanne fw-200">
+                  <span class="font-lausanne fw-200">{{ block.settings.heading }}</span>
+                </span>
+              </li>
+            {% endfor %}
+          </ul>
+        </div>
+        <div class="hte-action-able text-center">
+          <div class="position-relative">
+            {% if section.settings.btn_link != blank %}
+              <a
+                class="btn green-btn btn-loader font-lausanne fw-400"
+                href="{{ section.settings.btn_link }}"
+                style="background-color:{{ section.settings.btn_bg }}; color:{{ section.settings.color }}"
+                id="type-form-btn"
+              >
+                {{ section.settings.btn_label }}
+              </a>
+
+              <div class="type-form-btn" data-tf-on-submit="submit" data-tf-live="01K62TBTX8DZTV1V4C2HX8XR2F"></div>
+              <script src="//embed.typeform.com/next/embed.js"></script>
+              <!-- TikTok Pixel Code -->
+              <script>
+                function submit({ formId, responseId }) {
+                  console.log(`Form ${formId} submitted, response id: ${responseId}`);
+
+                  // Fire TikTok Lead event
+                  if (typeof ttq !== 'undefined') {
+
+                    ttq.load('C7JD8D3S5310AH5A2N00');
+                    ttq.track('Lead', {
+                      content_name: 'PF428 Sweepstake V1.0',
+                      content_category: 'Sweepstakes',
+                      content_id: formId
+                    });
+                    console.log('✅ TikTok Lead event fired! Response ID:', responseId);
+                  } else {
+                    console.error('❌ TikTok pixel (ttq) not defined. Make sure TikTok Pixel base code is installed.');
+                  }
+                }
+              </script>
+            {% endif %}
+          </div>
+          {% if section.settings.tc_link %}
+            <a href="{{ section.settings.tc_link }}" target="_blank" class="tc_link font-lausanne fw-600">
+              {{- section.settings.tc_label -}}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "How To Enter 428",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label"
+    },
+    {
+      "type": "text",
+      "id": "btn_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg",
+      "label": "Button Background color"
+    },
+    {
+      "type": "color",
+      "id": "color",
+      "label": "Button Text Color"
+    },
+    {
+      "type": "text",
+      "id": "tc_label",
+      "label": "T&C Label"
+    },
+    {
+      "type": "url",
+      "id": "tc_link",
+      "label": "T&C Link"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "how to enter step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Add Step"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How To Enter 428"
+    }
+  ]
+}
+{% endschema %}

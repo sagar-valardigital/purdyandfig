@@ -1,0 +1,641 @@
+<div id="{% if section.settings.sectionID %}{{ section.settings.sectionID }}{% endif %}" class="bf-products" x-data>
+  <div class="bf-products-inner mx-auto value-sans">
+    <h1 class="value-bold">{{ section.settings.title }}</h1>
+
+    <div class="grid-container mx-auto">
+      {% for block in section.blocks %}
+        <div class="grid-item">
+          <div class="product-container">
+            {% if block.settings.promo != "" %}
+              <div class="product-badge value-bold">{{ block.settings.promo }}</div>
+            {% endif %}
+            <div class="product-gallery">
+              {% if block.settings.image_1 %}
+                <div class="main-product-img">
+                  <picture>
+                    <source media="(min-width:650px)" srcset="{{ block.settings.image_1 | img_url: '800x'}}">
+                    <source media="(max-width:650px)" srcset="{{ block.settings.image_1 | img_url: '500x'}}">
+                    <img skip-lazy data-id="{{ block.settings.image_1 }}" class="img-responsive w-100 lazy" src="{{ block.settings.image_1 | img_url: '800x'}}" width="800px" height="700px" alt="{{ block.settings.image_1 }}">
+                  </picture>
+                </div>
+              {% endif %}
+
+              {% if block.settings.image_2 %}
+                <div class="main-product-img">
+                  <picture>
+                    <source media="(min-width:650px)" srcset="{{ block.settings.image_2 | img_url: '800x'}}">
+                    <source media="(max-width:650px)" srcset="{{ block.settings.image_2 | img_url: '500x'}}">
+                    <img data-id="{{ block.settings.image_2 }}" class="img-responsive w-100 lazy" src="{{ block.settings.image_2 | img_url: '800x'}}" width="800px" height="700px" alt="{{ block.settings.image_2 }}">
+                  </picture>
+                </div>
+              {% endif %}
+
+              {% if block.settings.image_3 %}
+                <div class="main-product-img">
+                  <picture>
+                    <source media="(min-width:650px)" srcset="{{ block.settings.image_3 | img_url: '800x'}}">
+                    <source media="(max-width:650px)" srcset="{{ block.settings.image_3 | img_url: '500x'}}">
+                    <img data-id="{{ block.settings.image_3 }}" class="img-responsive w-100 lazy" src="{{ block.settings.image_3 | img_url: '800x'}}" width="800px" height="700px" alt="{{ block.settings.image_3 }}">
+                  </picture>
+                </div>
+              {% endif %}
+            </div>
+
+            <div class="product-info">
+              <h3 class="value-bold">{{ block.settings.title }}</h3>
+              <p class="product-description">{{ block.settings.description }}</p>
+              
+              <hr />
+              <ul class="product-bulletpoints">
+                {% if block.settings.bulletpoint_1 != "" %}
+                  <li>{{ block.settings.bulletpoint_1 }}</li>
+                {% else %}
+                  <div class="no-bulletpoint" style="height: 28px;"></div>
+                {% endif %}
+        
+                {% if block.settings.bulletpoint_2 != "" %}
+                  <li>{{ block.settings.bulletpoint_2 }}</li>
+                {% else %}
+                  <div class="no-bulletpoint" style="height: 28px;"></div>
+                {% endif %}
+        
+                {% if block.settings.bulletpoint_3 != "" %}
+                  <li>{{ block.settings.bulletpoint_3 }}</li>
+                {% else %}
+                  <div class="no-bulletpoint" style="height: 28px;"></div>
+                {% endif %}
+              </ul>
+              <hr />
+
+              {% assign card_product = block.settings.product %}
+              {% assign s_variant = card_product.selected_or_first_available_variant %}
+              {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+              <div class="price-comparison">
+                <h3 class="m-0">
+                  <small class="original-price value-sans"><del>{{ card_product.compare_at_price | money_without_trailing_zeros }}</del></small>
+                  <span class="new-price">{% if sub_discount_price %} {{ sub_discount_price | money_without_trailing_zeros }} {%else%} {{ card_product.price | money_without_trailing_zeros }} {%endif%}</span>
+                  {% if block.settings.subscription_info != "" %}<p class="subscription-info value-sans my-0">{{ block.settings.subscription_info }}</p>{% endif %}
+                </h3>
+              </div>
+
+              {% assign product = block.settings.product %}
+              {% assign s_variant = product.selected_or_first_available_variant %}
+
+              <form @submit.prevent="console.log('submitted')" x-ref="product_form_{{product.id}}" enctype="multipart/form-data" accept-charset="UTF-8" id="product_form_{{product.id}}" class="shopify-product-form" data-product-id="{{product.id}}" action="/cart/add">
+                <input type="hidden" name="id" value="{{ s_variant.id }}">
+                <input type="hidden" name="quantity" value="1">
+                {% if block.settings.is_sub %}
+                  <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                  <input type="hidden" name="selling_plan" value="{{s_variant.selling_plan_allocations.first.selling_plan.id}}">
+                {% endif %}
+              </form>
+
+              <span class="btn btn-bf-cta btn-loader value-sans checkout-au-btn {% if block.settings.no_stock %}disabled{% endif %}" x-on:click="Purdy.AddToCart($refs.product_form_{{ product.id }}, true, false, $event)">
+                {% if block.settings.no_stock %}OUT OF STOCK{% else %}ADD TO CART{% endif %}
+              </span>
+
+              <div class="wit-box">
+                <details class="box-accordion">
+                  <summary class="box-accordion-heading value-sans">
+                    <div class="d-flex my-auto">
+                      <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/deployed_code.svg?v=1699563953" class="my-auto" width="24" height="24">
+                      <p class="my-auto">What's in the box?</p>
+                    </div>
+                  </summary>
+                  <div class="box-details">
+                    <div class="d-flex box-item">
+                      {% if block.settings.included_item_1 != "" %}
+                        <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/check.png?v=1699559469" class="my-auto" width="32" height="32">
+                        <p class="my-auto">{{ block.settings.included_item_1 }}</p>
+                      {% endif %}
+                    </div>
+                    <div class="d-flex box-item">
+                      {% if block.settings.included_item_2 != "" %}
+                        <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/check.png?v=1699559469" class="my-auto" width="32" height="32">
+                        <p class="my-auto">{{ block.settings.included_item_2 }}</p>
+                      {% endif %}
+                    </div>
+                    <div class="d-flex box-item">
+                      {% if block.settings.included_item_3 != "" %}
+                        <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/check.png?v=1699559469" class="my-auto" width="32" height="32">
+                        <p class="my-auto">{{ block.settings.included_item_3 }}</p>
+                      {% endif %}
+                    </div>
+                    <div class="d-flex box-item">
+                      {% if block.settings.included_item_4 != "" %}
+                        <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/check.png?v=1699559469" class="my-auto" width="32" height="32">
+                        <p class="my-auto">{{ block.settings.included_item_4 }}</p>
+                      {% endif %}
+                    </div>
+                  </div>
+                </details>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Black Friday Products",
+    "settings": [
+      {
+        "type": "text",
+        "id": "sectionID",
+        "label": "Section ID",
+        "default": "black-friday-products"
+      },
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Browse your VIP Customer Deals"
+      }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+      {
+        "type": "bf-product-card",
+        "name": "Black Friday Product Card",
+        "settings": [
+          {
+            "id": "product",
+            "label": "Choose the product",
+            "type": "product"
+          },
+          {
+            "id": "no_stock",
+            "label": "Out of Stock",
+            "type": "checkbox"
+          },
+          {
+            "id": "is_sub",
+            "label": "Is Subscription",
+            "type": "checkbox"
+          },
+          {
+            "id": "discount",
+            "label": "Discount Code",
+            "type": "text"
+          },
+          {
+            "id": "promo",
+            "label": "Promotion Message",
+            "type": "text"
+          },
+          {
+            "type": "image_picker",
+            "label": "Image 1",
+            "id": "image_1"
+          },
+          {
+            "type": "image_picker",
+            "label": "Image 2",
+            "id": "image_2"
+          },
+          {
+            "type": "image_picker",
+            "label": "Image 3",
+            "id": "image_3"
+          },
+          {
+            "type": "text",
+            "label": "Title",
+            "id": "title"
+          },
+          {
+            "type": "textarea",
+            "label": "Description",
+            "id": "description"
+          },
+          {
+            "type": "text",
+            "label": "Bulletpoint 1",
+            "id": "bulletpoint_1"
+          },
+          {
+            "type": "text",
+            "label": "Bulletpoint 2",
+            "id": "bulletpoint_2"
+          },
+          {
+            "type": "text",
+            "label": "Bulletpoint 3",
+            "id": "bulletpoint_3"
+          },
+          {
+            "type": "text",
+            "label": "Subscription Info",
+            "id": "subscription_info"
+          },
+          {
+            "type": "text",
+            "label": "Included Item 1",
+            "id": "included_item_1"
+          },
+          {
+            "type": "text",
+            "label": "Included Item 2",
+            "id": "included_item_2"
+          },
+          {
+            "type": "text",
+            "label": "Included Item 3",
+            "id": "included_item_3"
+          },
+          {
+            "type": "text",
+            "label": "Included Item 4",
+            "id": "included_item_4"
+          }
+        ]
+      }
+    ],
+    "presets": [
+		{
+          "name": "Black Friday Products"
+		}
+	]
+  }
+{% endschema %}
+
+{% style %}
+  .bf-products {
+    background: #F4F6FC;
+  }
+
+  .bf-products-inner {
+    padding: 32px 112px;
+    max-width: 1300px;
+  }
+
+  .bf-products h1 {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: 0.72px;
+    text-align: center;
+    color: #161718;
+
+    margin-bottom: 32px;
+  }
+  
+  .bf-products .btn-bf-cta {
+    color: #ffffff;
+    font-size: 18px;
+    background: #161718;
+    border-radius: 8px;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    
+    padding: 16px 28px;
+    margin-top: 32px;
+  }
+
+  .bf-products .btn-bf-cta:hover {
+    background: #3350B4;
+  }
+  
+  .bf-products .product-container {
+    position: relative;
+    max-width: 100%;
+  }
+
+  .bf-products .product-container .product-badge {
+    position: absolute;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 146px;
+    height: 146px;
+    border-radius: 999px;
+    background: #B42318;
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 20px;
+    right: 0;
+    padding: 10px;
+    margin: 8px;
+    z-index: 10;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .bf-products .product-info {
+    margin-top: 16px;
+  }
+
+  .bf-products .product-info h3 {
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 32px;
+    color: #161718;
+  }
+
+  .bf-products .product-info .product-description {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    color: #161718;
+  }
+
+  .bf-products .product-bulletpoints ul {
+    list-style-position: outside;
+  }
+  
+  .bf-products .product-bulletpoints li {
+    list-style: none;
+    padding-left: 1.5em;
+    text-indent: -1.5em;
+  }
+  
+  .bf-products .product-bulletpoints li:before {
+    content:"· ";
+    font-size: 24px;
+    vertical-align: middle;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 4px;
+  }
+
+  .bf-products hr {
+    border-top: 1px solid #EAEAEB;
+    margin-top: 16px;
+    margin-bottom: 16px;
+  }
+
+  .bf-products .product-bulletpoints {
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: #434448;
+    padding: 0;
+  }
+
+  .bf-products .price-comparison {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+  }
+
+  .bf-products .price-comparison h3 {
+    display: flex;
+    align-items: baseline;
+    font-size: 20px;
+    color: #3350B4;
+    font-family: "Value-Bold";
+  }
+
+  .bf-products .original-price {
+    color: #707279;
+
+    font-size: 32px;
+    font-weight: 400;
+    letter-spacing: -0.64px;
+    margin-right: 16px;
+  }
+
+  .bf-products .new-price {
+    color: #161718;
+
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+    margin-right: 16px;
+  }
+
+  .bf-products .subscription-info {
+    color: #707279;
+
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    height: 28px;
+  }
+
+  .bf-products .box-accordion-heading {
+    position: relative;
+    background: #F6FEF9;
+    border-radius: 40px;
+    padding: 8px 16px;
+    color: #12B76A;
+    font-size: 18px;
+    margin-top: 16px;
+    line-height: 28px;
+    list-style: none;
+  }
+
+  .bf-products .box-accordion-heading img {
+    margin-right: 8px;
+  }
+
+  .bf-products .box-item img {
+    margin-right: 16px;
+  }
+
+  .bf-products .box-details {
+    display: flex;
+    flex-direction: column;
+    margin-top: 16px;
+    gap: 8px;
+  }
+  
+  .bf-products .box-accordion-heading::-webkit-details-marker {
+    display: none !important;
+  }
+  
+  .bf-products .box-accordion-heading:after {
+    content: "";
+    position: absolute;
+    right: 0;
+    width: 40px;
+    height: 40px;
+    background-image: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/arrow_expand_down.svg?v=1699552425");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 16px;
+  }
+
+  .bf-products .box-accordion {
+    cursor: pointer !important;
+  }
+  
+  .bf-products .box-accordion[open] .box-accordion-heading:after {
+    background-image: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/arrow_expand_up.svg?v=1699552434");
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(180px, 1fr));
+    grid-gap: 32px;
+    max-width: 1440px;
+  }
+
+  @media (max-width: 1180px) {
+    .bf-products .product-container .product-badge {
+      width: 100px;
+      height: 100px;
+      padding: 0;
+      font-size: 18px;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    .bf-products .product-container .product-badge {
+      width: 146px;
+      height: 146px;
+    }
+    
+    .grid-container {
+      grid-template-columns: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .bf-products h1 {
+      font-size: 30px;
+      line-height: 38px;
+      text-align: left;
+    }
+
+    .bf-products .product-info {
+      margin-top: 16px;
+    }
+
+    .bf-products .product-info h3 {
+      font-size: 24px;
+      line-height: 32px;
+    }
+    
+    .bf-products .product-info .product-description {
+      font-size: 18px;
+      line-height: 28px;
+    }
+
+    .bf-products .product-bulletpoints {
+      font-size: 16px;
+      line-height: 24px;
+    }
+
+    .bf-products .product-bulletpoints li {
+      text-indent: -1.65em;
+    }
+
+    .bf-products .product-bulletpoints .no-bulletpoint {
+      display: none;
+    }
+
+    .bf-products .original-price {
+      font-size: 24px;
+      line-height: 40px;
+      margin-right: 8px;
+    }
+
+    .bf-products .new-price {
+      font-size: 30px;
+      line-height: 44px;
+      margin-right: 8px;
+    }
+
+    .bf-products .subscription-info {
+      font-size: 12px;
+      line-height: 34px;
+    }
+
+    .bf-products .btn-bf-cta {
+      margin-top: 24px;
+    }
+    
+    .bf-products-inner {
+      padding: 40px 16px;
+    }
+
+    .bf-products .box-item p {
+      font-size: 14px;
+    }
+    
+    .grid-container {
+      grid-template-columns: 100%;
+    }
+  }
+
+  @media (max-width: 500px) {
+     .bf-products .product-container .product-badge {
+        width: 100px;
+        height: 100px;
+        padding: 0;
+        font-size: 18px;
+      }
+  }
+
+  .grid-item {
+    display: flex;
+    position: relative;
+    padding: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    height: fit-content;
+
+    border-radius: 20px;
+    background: #ffffff;
+    transition: max-height 0.5s;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  }
+
+  /* Customising the product-gallery */
+  .bf-products .product-gallery {
+    position: relative;
+    top: 0;
+  }
+  
+  .bf-products .product-gallery .slick-arrow:after {
+    border-top: 3px solid #ffffff;
+    border-left: 3px solid #ffffff;
+  }
+
+  .bf-products .product-gallery .slick-dots {
+    border-radius: 12px;
+    background: #B8B9BD;
+    height: 16px;
+    width: fit-content;
+    left: 50%;
+    bottom: 16px;
+    transform: translateX(-50%);
+  }
+
+  .bf-products .product-gallery .slick-dots > :first-child {
+    margin-left: 4px;
+  }
+
+  .bf-products .product-gallery .slick-dots > :last-child {
+    margin-right: 4px;
+  }
+
+  .bf-products .product-gallery .slick-dots li {
+    display: inline-flex;
+  }
+
+  .bf-products .slick-dots li button:before {
+    position: relative;
+    line-height: 0px;
+    font-size: 32px;
+    top: 2px;
+    color: #ffffff;
+    opacity: 1;
+  }
+
+  .slick-dots li.slick-active button:before {
+    color: #434448 !important;
+  }
+{% endstyle %}
+
+{% javascript %}
+{% endjavascript %}

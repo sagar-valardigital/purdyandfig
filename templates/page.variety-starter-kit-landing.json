@@ -1,0 +1,870 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "c1f29501-3875-45ba-872f-9c6df7739319": {
+      "type": "global-announcement-bar",
+      "settings": {
+        "outOfStock": false,
+        "logo": true,
+        "class": "",
+        "text": "FREE BOTTLE FOR LIFE (WORTH £15)",
+        "bb-color": "#334fb4",
+        "text-color": "#ffffff",
+        "scrollto": "lander_product_pf",
+        "annuText": "Get Offer",
+        "landingproduct": ""
+      }
+    },
+    "65b7b2d7-73cb-4351-bbd1-8c4afb27d2be": {
+      "type": "global-banner-1",
+      "settings": {
+        "outOfStock": false,
+        "className": "",
+        "isSub": true,
+        "landingproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "discount": "free",
+        "desktopimage": "shopify://shop_images/banner_a4f5ed03-a5c3-4c57-b4a3-5ebe7978c1da.png",
+        "mobileimage": "shopify://shop_images/Group-6226_2x_f3ba8591-79c4-4898-8311-bb070477115b.png",
+        "title": "Transform Your Home <br><span class=\"white-text\"> Into A Spa</span>",
+        "subtext": "Save £15 and Get A Free Bottle For Life",
+        "price": "",
+        "delPrice": "",
+        "btnText": "BUY NOW",
+        "ctaDetails": "",
+        "scrollto": "lander_product_pf"
+      }
+    },
+    "b14643a7-6d75-4a11-be12-dd66f2c6897c": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16634058080483__b14643a7-6d75-4a11-be12-dd66f2c6897c-1675160258d68b104d-0": {
+          "type": "heading",
+          "settings": {
+            "heading": "<span class=\"value-pro\">Why</span> Purdy &amp; Figg?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16634058080483__b14643a7-6d75-4a11-be12-dd66f2c6897c-1675160258d68b104d-1": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Purdy & Figg makes ultra-concentrated, naturally scented eco-friendly cleaning power that you dilute at home with tap water. Designed to clean all the surfaces in your home this magical cleaner transforms cleaning from a chore to a joy saving you time, money and space at home.</p>"
+          }
+        },
+        "template--16634058080483__b14643a7-6d75-4a11-be12-dd66f2c6897c-1675160258d68b104d-2": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16634058080483__b14643a7-6d75-4a11-be12-dd66f2c6897c-1675160258d68b104d-0",
+        "template--16634058080483__b14643a7-6d75-4a11-be12-dd66f2c6897c-1675160258d68b104d-1",
+        "template--16634058080483__b14643a7-6d75-4a11-be12-dd66f2c6897c-1675160258d68b104d-2"
+      ],
+      "settings": {
+        "color_scheme": "#e3f3fe",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "a40bc7a3-5e81-4a40-b603-2879f92bde96": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "bc7b9f7a-1730-4204-978b-0fdc30a98aed": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Group_6302.png",
+            "details": "“Stripping back the jargon associated with cleaning products, family-run business Purdy & Figg has designed a cleaning system that will be effective and yet has a beautiful essential oil-based aroma, cuts back single-use plastic and supports your immune system."
+          }
+        },
+        "5267771e-aa5f-49fb-9d34-f2955491e548": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ideal_Home_logo_wordmark_copy.png",
+            "details": "“They smell nothing like a traditional cleaner, they’re quite luxurious aromatherapy style scents. I was surprised how efficient it was at cleaning my kitchen with just a couple of sprays and the counters smell like I’ve had an expensive candle burning in there afterwards”"
+          }
+        },
+        "da4b5d72-9864-4ec6-ae29-9b9495014f97": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_4104a531-86cd-40db-9dd2-3dcece176cd3.png",
+            "details": "“This is so brilliant — it’s a superconcentrated, eco-friendly, delicious-smelling cleaner that you can use on everything, from worktops to marble to wooden floors to baths to glass”"
+          }
+        }
+      },
+      "block_order": [
+        "bc7b9f7a-1730-4204-978b-0fdc30a98aed",
+        "5267771e-aa5f-49fb-9d34-f2955491e548",
+        "da4b5d72-9864-4ec6-ae29-9b9495014f97"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": true,
+        "bgColor": "",
+        "heading": "",
+        "logoDetailText": ""
+      }
+    },
+    "a9d27575-573e-416c-be67-9ba722d257d5": {
+      "type": "global-usps",
+      "blocks": {
+        "ade29039-1dd5-4ce7-a4cb-2e50f31c7ac2": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6455.png",
+            "rounded": true,
+            "heading": "Transform Your Home",
+            "details": "100% Pure Essential Oils at high concentration are hand blended to give a long lasting and divine smell.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "8327a59f-df9f-4c5c-970e-34f6abf2a718": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6457.png",
+            "rounded": false,
+            "heading": "Saves Time and Space",
+            "details": "Effectviely cleans counters, stone, wood, floors, baths, mirrors and glass replacing up to 15 products.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "d7026243-1cf5-40fc-950c-474cd506a21c": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6456.png",
+            "rounded": true,
+            "heading": "Supports Health",
+            "details": "Plant-based, paraben-free, GMO-free and no synthetic fragrance supports gut health and immunity.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "039c4140-faac-4c14-b696-c4f32f18d5ce": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6458.png",
+            "rounded": true,
+            "heading": "It Makes Going Eco Easy",
+            "details": "Plastic free bottles, concentrate refills and low carbon deliveries make us the most sustainble option.",
+            "mbBlock": "mw-100"
+          }
+        }
+      },
+      "block_order": [
+        "ade29039-1dd5-4ce7-a4cb-2e50f31c7ac2",
+        "8327a59f-df9f-4c5c-970e-34f6abf2a718",
+        "d7026243-1cf5-40fc-950c-474cd506a21c",
+        "039c4140-faac-4c14-b696-c4f32f18d5ce"
+      ],
+      "settings": {
+        "enable": true,
+        "mobileslider-enable": true,
+        "mobile-slider": "lander-mobile-slider-manual",
+        "classname": "lander-benefits-switching arrow-white",
+        "shadow": true,
+        "sectionbgColor": "#334fb4",
+        "sectionTextColor": "#ffffff",
+        "heading": "Benefits of Switching",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "20c2e52a-2d89-4291-afd9-21f726208705": {
+      "type": "global-product-1",
+      "blocks": {
+        "6749f43e-da6c-48a7-a8c7-a2d4535c65ac": {
+          "type": "text",
+          "settings": {
+            "listItem": "3x Bathroom Bliss Refills, 3 x Counter Clean Refills"
+          }
+        },
+        "e0cd4eb0-27fb-432b-abd6-fe73b1a83480": {
+          "type": "text",
+          "settings": {
+            "listItem": "Delivery Quarterly, Pause or Cancel Anytime"
+          }
+        },
+        "d8bb2c98-fc09-4c23-9f1e-d776ea495789": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try Four Bestselling Scents"
+          }
+        },
+        "c1b8963f-ee32-4bcb-a0f5-aeaa89b83e89": {
+          "type": "text",
+          "settings": {
+            "listItem": "90 Days Supply (16p per day)"
+          }
+        },
+        "9fa53d81-f5af-4f04-b198-8ca5ad417397": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-1.png"
+          }
+        },
+        "f1ebbd72-2d02-4d05-88df-d645146cc636": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-2.png"
+          }
+        },
+        "d43623f9-b055-4ac2-9441-0efcbc151150": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-3.png"
+          }
+        },
+        "6f9eb86b-3e05-4bb9-a313-d768de5af294": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-4.png"
+          }
+        },
+        "f102da3e-cf40-40c3-89e2-4fa7201f5a4e": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Big_Bottle_3_small_bottles_2x_6bd85e39-3106-4fe4-8b80-37bed8faabe8.png"
+          }
+        },
+        "a0b093ea-997e-413c-b134-106a5169a44c": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/P_F_House_Shoot_210537_d21833ac-5760-423d-b57e-1cb630faa82f.png"
+          }
+        },
+        "b6076b25-5b9f-48a8-9216-e12dba53d781": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/P_F_House_Shoot_210569.png"
+          }
+        }
+      },
+      "block_order": [
+        "6749f43e-da6c-48a7-a8c7-a2d4535c65ac",
+        "e0cd4eb0-27fb-432b-abd6-fe73b1a83480",
+        "d8bb2c98-fc09-4c23-9f1e-d776ea495789",
+        "c1b8963f-ee32-4bcb-a0f5-aeaa89b83e89",
+        "9fa53d81-f5af-4f04-b198-8ca5ad417397",
+        "f1ebbd72-2d02-4d05-88df-d645146cc636",
+        "d43623f9-b055-4ac2-9441-0efcbc151150",
+        "6f9eb86b-3e05-4bb9-a313-d768de5af294",
+        "f102da3e-cf40-40c3-89e2-4fa7201f5a4e",
+        "a0b093ea-997e-413c-b134-106a5169a44c",
+        "b6076b25-5b9f-48a8-9216-e12dba53d781"
+      ],
+      "settings": {
+        "enable": true,
+        "outOfStock": false,
+        "isSub": true,
+        "p_id": "lander_product_pf",
+        "tag": "Save £15",
+        "landingproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "discount": "free",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "py-4",
+        "mainheading": "Save £15 and Get A Free Bottle For Life",
+        "mainsubheading": "",
+        "heading": "Variety Starter Kit",
+        "subtext": "",
+        "price": "15",
+        "delPrice": "30",
+        "ctaDetails": "30 Day Money-Back Guarantee 🔒",
+        "heading-position": false
+      }
+    },
+    "e0694046-3465-442a-bde1-4da4a0ace52d": {
+      "type": "heading",
+      "settings": {
+        "enable": true,
+        "className": "py-3",
+        "bgColor": "#e3f3fe",
+        "heading": "A Scent That Transforms Your Whole Home"
+      }
+    },
+    "b3ae990f-85fc-4991-ac7d-c94da5fb4424": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "lander-bg lander-img-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-90",
+        "layout": true,
+        "heading": "The Best Essential Oils",
+        "image": "shopify://shop_images/home_2x_59abd6b5-745c-4709-9534-9a7163baa09c.png",
+        "details": "<p>Create the most fantastic smelling home with Counter Clean. Watch how the pure essential oils stay and hug you and don’t be surprised when your guests notice. Find the scent you love with the variety kit and switch anytime.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "4832967c-e3f5-4d99-b66b-aa59ab435fba": {
+      "type": "landing-text-with-image",
+      "settings": {
+        "enable": true,
+        "className": "desktop-spacing lander-img-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-90",
+        "layout": false,
+        "heading": "Hand Blended",
+        "image": "shopify://shop_images/img-3_2x_91012b1b-cf84-43af-b451-e1e276a7b3e5.png",
+        "details": "<p>Our signature scents are hand blended here in the UK with the utmost attention to detail. Our founders have 30 years blending experience so you will always get the same incredible smell.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "f045b994-bd33-4501-99bd-2db2abc5d3a4": {
+      "type": "global-usps",
+      "blocks": {
+        "7c2b4abb-4baa-4d68-a40c-91d10ed25e8c": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6468.png",
+            "rounded": true,
+            "heading": "Effective On All Surfaces",
+            "details": "Effectively cleans Counters, Stone, Bath, Enamel, Glass, Mirrors, Wood and Floors replacing up to 15 different products.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "f9cf30dc-a6e9-48c9-8f13-cc30c2cb50af": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6469.png",
+            "rounded": true,
+            "heading": "Re-usable Glass Bottles",
+            "details": "With a glass bottle for life and glass refills you can stop plastic junk going into landfill and our oceans.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "2c8fed18-60a8-4458-8a1b-6d7005fb0c0f": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6470.png",
+            "rounded": true,
+            "heading": "Long Lasting Scents",
+            "details": "Pure essential oils mean our scents smell natural and stick around to transform your home into a spa like bliss.",
+            "mbBlock": "mw-100"
+          }
+        },
+        "920768f7-a7e0-474e-9204-89cc0bec8c2c": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_6471.png",
+            "rounded": true,
+            "heading": "Non Toxic & Natural",
+            "details": "Plant based, Non GMO, Paraben Free and no synthetic fragrances mean you can be sure you are putting your family first.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "7c2b4abb-4baa-4d68-a40c-91d10ed25e8c",
+        "f9cf30dc-a6e9-48c9-8f13-cc30c2cb50af",
+        "2c8fed18-60a8-4458-8a1b-6d7005fb0c0f",
+        "920768f7-a7e0-474e-9204-89cc0bec8c2c"
+      ],
+      "settings": {
+        "enable": true,
+        "mobileslider-enable": true,
+        "mobile-slider": "lander-mobile-slider-manual",
+        "classname": "lander-wrapper-section",
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "You don’t need a million cleaning products. You need one that works.",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "5637005b-f42e-45e0-85d1-504d0fac950a": {
+      "type": "button-only",
+      "settings": {
+        "bgcolor": "#e3f3fe",
+        "selectproduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "isSub": true,
+        "discount": "Free",
+        "btnlabel": "Buy Now",
+        "btnlink": "lander_product_pf"
+      }
+    },
+    "92c0028e-580e-48a0-b1a3-b2546253f7b0": {
+      "type": "labder-review-slider",
+      "blocks": {
+        "a6e2cf26-9104-4c4f-9457-7b6e2aadb3c9": {
+          "type": "text",
+          "settings": {
+            "starafter": true,
+            "username": "Andrea M",
+            "heading": "",
+            "review": "\"This is a great starter kit, and all three scents are just lovely. Cleaning is no longer a chore and once I started I didn't wont to stop. So good to just need one product for every surface.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "daa86c70-a7c4-4b24-9ae4-2f6f5b5dc201": {
+          "type": "text",
+          "settings": {
+            "starafter": true,
+            "username": "Toulla T",
+            "heading": "",
+            "review": "\"Love the choice of scents and how you can use the product on various different surfaces. I changed due to being asthmatic, no nasty chemicals and I am able to breath properly without persistent coughing whilst cleaning. Love the lasting fragrance this gives off. Makes me want to clean\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "133425e6-0bc2-4a53-9329-71682858cf4e": {
+          "type": "text",
+          "settings": {
+            "starafter": true,
+            "username": "Ruth H",
+            "heading": "",
+            "review": "\"I've gone crazy cleaning. it smells gorgeous, no streaks and leaves all my surfaces sparkling and fresh. I really have ditched all other cleaners now, glass bottle is lovely.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "d5bd2e0b-4fdb-4201-9cc9-8eb0466e4e6e": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "starafter": false,
+            "username": "Susan D. Verified Buyer",
+            "heading": "",
+            "review": "\"l adore this product. I've gifted to my friends for Christmas and they're all converts, We don't just clean our homes any more, we 'purdy and Figg'them. it's the new verb of 2022!! Thank you for making cleaning a joy\"",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "a6e2cf26-9104-4c4f-9457-7b6e2aadb3c9",
+        "daa86c70-a7c4-4b24-9ae4-2f6f5b5dc201",
+        "133425e6-0bc2-4a53-9329-71682858cf4e",
+        "d5bd2e0b-4fdb-4201-9cc9-8eb0466e4e6e"
+      ],
+      "custom_css": [
+        "span,h2 {color: #ffffff;}"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "arrow-white lander-reviews-section",
+        "Review-Count": "4.9/5.0 (63,632 reviews)",
+        "bgColor": "#3d5065",
+        "heading": "How we compare",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "ea3376b0-7624-42e3-a844-de9099db5603": {
+      "type": "lander-table",
+      "settings": {}
+    },
+    "346ca757-c926-4219-aada-fad79012abd9": {
+      "type": "global-usps",
+      "blocks": {
+        "998ce130-b390-43cc-94c3-91355597b9be": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/box.png",
+            "rounded": false,
+            "heading": "30 Day Money Back Guarantee 🔒",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "3f68ce4c-cfa9-4030-bfa3-f4b83090b61d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/hand_0c1ee47a-5810-4fa2-ba2a-5029c889f540.png",
+            "rounded": false,
+            "heading": "30 Day Trial",
+            "details": "",
+            "mbBlock": "mw-100"
+          }
+        },
+        "f47ec553-a07b-49a3-afc5-41335e71a704": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/truck.png",
+            "rounded": false,
+            "heading": "Ships in 1 Day",
+            "details": "",
+            "mbBlock": "mw-100"
+          }
+        },
+        "86a9294b-667f-46d5-bbaa-a02436f86af5": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/bottle_29af9fe7-0e2e-4b58-a628-26b8b58bdc3f.png",
+            "rounded": false,
+            "heading": "Free Bottle For Life",
+            "details": "",
+            "mbBlock": "mw-100"
+          }
+        }
+      },
+      "block_order": [
+        "998ce130-b390-43cc-94c3-91355597b9be",
+        "3f68ce4c-cfa9-4030-bfa3-f4b83090b61d",
+        "f47ec553-a07b-49a3-afc5-41335e71a704",
+        "86a9294b-667f-46d5-bbaa-a02436f86af5"
+      ],
+      "settings": {
+        "enable": true,
+        "mobileslider-enable": true,
+        "mobile-slider": "lander-mobile-slider-manual",
+        "classname": "lander-other-benefits  arrow-white",
+        "shadow": true,
+        "sectionbgColor": "#334fb4",
+        "sectionTextColor": "#ffffff",
+        "heading": "Other benefits",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "d1fc3792-1def-4a58-aa64-e51227d2a890": {
+      "type": "faq-section",
+      "blocks": {
+        "3d12868e-dcb2-4150-9193-c123de49fd84": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>Each eco-concentrate dilutes to 300ml of Counter Clean. We recommend using one eco-concentrate per month. The Starter Kit is designed to last you 90 days.</p>"
+          }
+        },
+        "772613d3-6cdb-40a4-a467-f4af3df956a3": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this more expensive than a regular cleaner?",
+            "faq-ans": "<p>Counter Clean costs 16p per day which is 3p more than a typical bottle of supermarket cleaner. However, we replace up to 15 different products under your sink so end up saving you money.</p>"
+          }
+        },
+        "fdb51482-bfb5-461b-838c-79f9db18683a": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How can I be sure it works?",
+            "faq-ans": "<p>Our product has been independently tested and proven to be 100% effective at tackling grease, grim and dirt. 93% of our customers would recommend us for our cleaning power.</p>"
+          }
+        },
+        "eed257d4-58fa-44af-9aa3-63a88626d84b": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe around pets?",
+            "faq-ans": "<p>Our founders are pet fantatics and our products have been designed to be safe for use around dogs and other pets. We don't recommend cleaning pet beds or food bowls without rinsing afterwards. If you are worried about allergies, do contact your vet.</p>"
+          }
+        },
+        "a7917ddd-b7fb-4ca8-9bf4-cb6a655f9a5f": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it Cruelty Free?",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "86ebe38d-f956-4264-b4ce-22a9e661af75": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use on all my surfaces?",
+            "faq-ans": "<p>Counter Clean has been designed to be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "3d12868e-dcb2-4150-9193-c123de49fd84",
+        "772613d3-6cdb-40a4-a467-f4af3df956a3",
+        "fdb51482-bfb5-461b-838c-79f9db18683a",
+        "eed257d4-58fa-44af-9aa3-63a88626d84b",
+        "a7917ddd-b7fb-4ca8-9bf4-cb6a655f9a5f",
+        "86ebe38d-f956-4264-b4ce-22a9e661af75"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#e3f3fe",
+        "class": "",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "346bbdbc-be0a-4fc8-8d49-9394697bcf00": {
+      "type": "pf-usps",
+      "blocks": {
+        "7c5a2038-0007-42a6-9359-dc96a2abdd7a": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_97_2x_3b4c3b9f-2def-4827-92ff-ce559e9bce98.png",
+            "rounded": true,
+            "heading": "",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "57e83d09-9cf2-48b1-ad67-d4894c121d8b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_96_2x_5664872c-b400-458a-8ff7-866f4db9dd72.png",
+            "rounded": true,
+            "heading": "",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "991918a8-fda2-44b6-97bc-1c910ab76ce8": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_95_2x_c67b80da-200a-442e-9329-2f9f0d15cfef.png",
+            "rounded": true,
+            "heading": "",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "04349415-fec7-445f-92f5-554aa8043bad": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_94_2x_66118c47-b3c4-4ff4-ae2b-00dbb36b6cb7.png",
+            "rounded": true,
+            "heading": "",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "7c5a2038-0007-42a6-9359-dc96a2abdd7a",
+        "57e83d09-9cf2-48b1-ad67-d4894c121d8b",
+        "991918a8-fda2-44b6-97bc-1c910ab76ce8",
+        "04349415-fec7-445f-92f5-554aa8043bad"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": false,
+        "classname": "mobile-hide",
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "6ef2d946-ef26-4f4f-90fb-13d8705f3ec4": {
+      "type": "instagram-blocks",
+      "blocks": {
+        "768f294d-6627-4060-8bb0-8df6d4290f63": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/850_4006_2x_62c691cf-7907-452e-81ef-4a81d2f67222.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        },
+        "bc2fb38c-c021-41bc-b692-ad34c18b0863": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/image_1_2x_f706074a-eda7-4ac8-88a7-dca1404485b9.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        },
+        "00c1d3e4-a327-4ab5-9246-4c70e3fb4870": {
+          "type": "igblock",
+          "settings": {
+            "ig_image": "shopify://shop_images/image_2_2x_be898a49-5d7a-4337-a515-0d1b1514eac0.png",
+            "ig_username": "",
+            "ig_url": "https://www.instagram.com/purdyandfigg/"
+          }
+        }
+      },
+      "block_order": [
+        "768f294d-6627-4060-8bb0-8df6d4290f63",
+        "bc2fb38c-c021-41bc-b692-ad34c18b0863",
+        "00c1d3e4-a327-4ab5-9246-4c70e3fb4870"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "lander-instagram",
+        "bgColor": "#e3f3fe",
+        "heading": "Join 100,000 Real Customers",
+        "details": "Join our community and see Purdy & Figg in real life with real customers",
+        "followText": "FOLLOW US",
+        "followLink": "https://www.instagram.com/purdyandfigg/"
+      }
+    },
+    "e2d4ff7c-c6f7-4fb6-8356-bdc1d9e3a0e2": {
+      "type": "global-product-1",
+      "disabled": true,
+      "blocks": {
+        "b3f1651b-dc6a-4fe6-92c2-f5b739db6873": {
+          "type": "text",
+          "settings": {
+            "listItem": "3x Bathroom Bliss Refills, 3 x Counter Clean Refills"
+          }
+        },
+        "34b10b44-9015-4d7c-9adf-55eb6b23c0ee": {
+          "type": "text",
+          "settings": {
+            "listItem": "Delivery Quarterly, Pause or Cancel Anytime"
+          }
+        },
+        "aaec1f2f-fde7-4443-8396-cd4da4f17427": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try Four Bestselling Scents"
+          }
+        },
+        "50b4bd79-6592-4e08-87e0-cb1bb4e44934": {
+          "type": "text",
+          "settings": {
+            "listItem": "90 Days Supply (16p per day)"
+          }
+        },
+        "7df7cbf3-f119-4a7b-82cd-4e0b61b50065": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-1.png"
+          }
+        },
+        "83b3b190-0b77-4d99-b9fa-b9545d71ed40": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-2.png"
+          }
+        },
+        "c9ef99c3-bde6-4484-b295-f005e4077b16": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-3.png"
+          }
+        },
+        "ccd27728-598c-41c2-ae4a-5c623f6bd8d8": {
+          "type": "image",
+          "settings": {
+            "image": "shopify://shop_images/Untitled-4.png"
+          }
+        },
+        "738291a6-920a-4272-ad89-25d3d52cefd5": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Mask_Group_2.png"
+          }
+        }
+      },
+      "block_order": [
+        "b3f1651b-dc6a-4fe6-92c2-f5b739db6873",
+        "34b10b44-9015-4d7c-9adf-55eb6b23c0ee",
+        "aaec1f2f-fde7-4443-8396-cd4da4f17427",
+        "50b4bd79-6592-4e08-87e0-cb1bb4e44934",
+        "7df7cbf3-f119-4a7b-82cd-4e0b61b50065",
+        "83b3b190-0b77-4d99-b9fa-b9545d71ed40",
+        "c9ef99c3-bde6-4484-b295-f005e4077b16",
+        "ccd27728-598c-41c2-ae4a-5c623f6bd8d8",
+        "738291a6-920a-4272-ad89-25d3d52cefd5"
+      ],
+      "settings": {
+        "enable": true,
+        "outOfStock": false,
+        "isSub": false,
+        "p_id": "",
+        "tag": "",
+        "landingproduct": "ultimate-cleaning-kit",
+        "discount": "Free",
+        "textcolor": "theme-text",
+        "width": "w-80",
+        "layout": false,
+        "className": "pt-4",
+        "mainheading": "Shop Variety Starter Kit",
+        "mainsubheading": "Free Bottle for life (Worth £15)",
+        "heading": "Variety Starter Kit",
+        "subtext": "",
+        "price": "15",
+        "delPrice": "30",
+        "ctaDetails": "30 Days Money-Back Guarantee",
+        "heading-position": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "c1f29501-3875-45ba-872f-9c6df7739319",
+    "65b7b2d7-73cb-4351-bbd1-8c4afb27d2be",
+    "b14643a7-6d75-4a11-be12-dd66f2c6897c",
+    "a40bc7a3-5e81-4a40-b603-2879f92bde96",
+    "a9d27575-573e-416c-be67-9ba722d257d5",
+    "20c2e52a-2d89-4291-afd9-21f726208705",
+    "e0694046-3465-442a-bde1-4da4a0ace52d",
+    "b3ae990f-85fc-4991-ac7d-c94da5fb4424",
+    "4832967c-e3f5-4d99-b66b-aa59ab435fba",
+    "f045b994-bd33-4501-99bd-2db2abc5d3a4",
+    "5637005b-f42e-45e0-85d1-504d0fac950a",
+    "92c0028e-580e-48a0-b1a3-b2546253f7b0",
+    "ea3376b0-7624-42e3-a844-de9099db5603",
+    "346ca757-c926-4219-aada-fad79012abd9",
+    "d1fc3792-1def-4a58-aa64-e51227d2a890",
+    "346bbdbc-be0a-4fc8-8d49-9394697bcf00",
+    "6ef2d946-ef26-4f4f-90fb-13d8705f3ec4",
+    "e2d4ff7c-c6f7-4fb6-8356-bdc1d9e3a0e2"
+  ]
+}

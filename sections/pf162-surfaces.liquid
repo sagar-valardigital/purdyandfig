@@ -1,0 +1,214 @@
+{% assign count = 0 %}
+{% for block in section.blocks %}
+  {% assign count = count | plus: 1 %}
+{% endfor %}
+<div id="{{ section.settings.sectionId }}">
+  <div
+    style="background-color:{{ section.settings.bgcolor }}"
+    class="pf162-surfaces transformational-scents-section link-to-variant variant_{{ section.settings.linkVariant }} {{ section.settings.class }}"
+  >
+    <div class="container">
+      <div
+        {% if count < 2 %}
+          class="d-flex align-items-center justify-content-between tss-one-block-wrapper"
+        {% endif %}
+      >
+        <div class="tss-main-header">
+          <h2 class="heading-2 text-center white-text value-bold mt-0 ">{{ section.settings.heading }}</h2>
+          <p style="color:#fff" class="sub-text normal-text value-sans text-center">
+            {{ section.settings.subtext }}
+          </p>
+        </div>
+        <div class="mt-4">
+          <div class="transformational-scents-slider">
+            {% for block in section.blocks %}
+              <div class="tss-block">
+                <div class="tss-image position-relative">
+                  <picture>
+                    {% assign image = block.settings.blockImage %}
+                    {% assign mimage = block.settings.mBlockImage %}
+
+                    <source media="(min-width:769px)" srcset="{{ image | img_url: 'master'}}">
+                    <source media="(max-width:768px)" srcset="{{ mimage | img_url: 'master' }}">
+                    <img
+                      data-id="{{image.id}}"
+                      class="img-responsive w-100 h-auto lazy"
+                      src="{{ image | img_url: 'master'}}"
+                      width="400"
+                      height="300"
+                      alt="{{ image }}"
+                    >
+                  </picture>
+                  {% if block.settings.tag != blank %}
+                    <span class="tss-tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                </div>
+                <div class="tss-content">
+                  <h3 class="tss-heading blue-text-3 value-sans">{{ block.settings.heading }}</h3>
+                  <p class="tss-details black-text normal-text value-sans">{{ block.settings.details }}</p>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+        <p class="bottom-text">{{ section.settings.bottom_text }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .pf162-surfaces {
+    padding: 80px 112px;
+  }
+
+  .pf162-surfaces .tss-main-header {
+    padding: 0;
+  }
+
+  .pf162-surfaces .heading-2 {
+    font-size: 36px;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+  }
+
+  .pf162-surfaces .sub-text {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .pf162-surfaces .bottom-text {
+    font-size: 24px;
+    line-height: 32px;
+    color: #fff;
+    margin: 32px 0 0 0;
+    text-align: center;
+  }
+  
+  .pf162-surfaces .transformational-scents-slider {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .pf162-surfaces .tss-block {
+    margin: 0 !important;
+    max-width: 273px;
+  }
+
+  .pf162-surfaces .tss-heading {
+    font-family: "Value-Medium-Fixed";
+    color: #434448;
+    font-size: 13.672px;
+    font-weight: 700;
+    line-height: 20px;
+  }
+
+  @media (max-width: 1024px) {
+    .pf162-surfaces {
+      padding: 32px 16px;
+    }
+
+    .pf162-surfaces .heading-2 {
+      font-size: 30px;
+      line-height: 38px;
+      margin-bottom: 16px;
+    }
+    
+    .pf162-surfaces .transformational-scents-slider {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 16px;
+      column-gap: 12px;
+    }
+  
+    .pf162-surfaces .tss-block {
+      margin: 0 !important;
+      max-width: 100%;
+    }
+
+    .pf162-surfaces .bottom-text {
+      font-size: 20px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "PF162 Surfaces",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sectionId",
+      "label": "Section ID"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background color"
+    },
+{
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+    {
+      "type": "text",
+      "id": "linkVariant",
+      "label": "Link variant number"
+    },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+     {
+      "type": "text",
+      "id": "subtext",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "bottom_text",
+      "label": "Bottom Text"
+    }
+  ],
+  "blocks": [
+      {
+        "type": "image",
+        "name": "Scent block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "blockImage",
+            "label": "Desktop Image"
+          },
+          {
+            "type": "image_picker",
+            "id": "mBlockImage",
+            "label": "Mobile Image"
+          },
+          {
+            "type": "text",
+            "id": "tag",
+            "label": "Tag"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "details",
+            "label": "text"
+          }
+        ]
+      }
+	],
+  "presets": [
+    {
+        "name": "PF162 Surfaces"
+    }
+]
+}
+{% endschema %}

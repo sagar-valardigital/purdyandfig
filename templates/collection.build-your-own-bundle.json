@@ -1,0 +1,277 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div.collection-filter-block",
+  "sections": {
+    "collection": {
+      "type": "collection",
+      "blocks": {
+        "bea9d62d-5ed4-47bb-a067-4677d0e8df03": {
+          "type": "Filters",
+          "settings": {
+            "heading": "NEW Summer Collection",
+            "collectionFilters": "new-summer-collection"
+          }
+        },
+        "63393771-54c4-4ade-8ca5-f88ddacebe9d": {
+          "type": "Filters",
+          "disabled": true,
+          "settings": {
+            "heading": "Spring Collection",
+            "collectionFilters": "spring-collection"
+          }
+        },
+        "f1d0f96b-13d6-4ec8-b3e5-b4e70d1b52bf": {
+          "type": "Filters",
+          "settings": {
+            "heading": "Filter Counter Clean",
+            "collectionFilters": "counter-clean-collection-winter"
+          }
+        },
+        "4d6bf3b4-5526-4019-b57e-5c9de99c51d1": {
+          "type": "Filters",
+          "disabled": true,
+          "settings": {
+            "heading": "Filter Christmas",
+            "collectionFilters": "christmas-22"
+          }
+        },
+        "fad36396-e886-4752-8894-dcf187a1d053": {
+          "type": "Filters",
+          "settings": {
+            "heading": "Filter Bathroom Collection",
+            "collectionFilters": "bathroom-bliss"
+          }
+        },
+        "a6744f83-5b67-4825-85fa-b0b69627047f": {
+          "type": "Filters",
+          "disabled": true,
+          "settings": {
+            "heading": "Juniper & Cardamom",
+            "collectionFilters": "limited-ed-juniper-cardamom"
+          }
+        },
+        "710f6338-82cc-4722-b119-d7447253ebd0": {
+          "type": "Filters",
+          "disabled": true,
+          "settings": {
+            "heading": "Filter Hand wash",
+            "collectionFilters": "hand-wash"
+          }
+        },
+        "3dc7e779-7820-41df-b74a-c1e6e6fbe14b": {
+          "type": "Filters",
+          "disabled": true,
+          "settings": {
+            "heading": "Filter Pillow Spray",
+            "collectionFilters": "hand-sanitiser-sprays"
+          }
+        },
+        "9859ecac-5de9-4a4c-a2c7-5e4255ce09a1": {
+          "type": "Filters",
+          "settings": {
+            "heading": "Filter Accessories",
+            "collectionFilters": "accessories"
+          }
+        },
+        "c7daa332-8dae-4753-9782-0e5c3d932670": {
+          "type": "collection",
+          "settings": {
+            "collectionfor": "counter-clean-collection-winter",
+            "whichcollection": "counter-clean-refills"
+          }
+        },
+        "d8e4a7c8-864a-447b-858e-f9e8dd0047df": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collectionfor": "counter-clean",
+            "whichcollection": ""
+          }
+        },
+        "1b913b9c-f4ca-4d66-a1dd-c9c1635208b2": {
+          "type": "collection",
+          "disabled": true,
+          "settings": {
+            "collectionfor": "hand-wash",
+            "whichcollection": "hand-wash-refills"
+          }
+        },
+        "e98a4b53-5d4e-4290-94f4-7d7befad5b68": {
+          "type": "collection",
+          "settings": {
+            "collectionfor": "christmas-22",
+            "whichcollection": ""
+          }
+        },
+        "a2e5f589-56dc-4fe0-9bd7-6f54ae3f7573": {
+          "type": "Filters",
+          "disabled": true,
+          "settings": {
+            "heading": "Build your own Bundle",
+            "collectionFilters": "build-your-own-bundle"
+          }
+        }
+      },
+      "block_order": [
+        "bea9d62d-5ed4-47bb-a067-4677d0e8df03",
+        "63393771-54c4-4ade-8ca5-f88ddacebe9d",
+        "f1d0f96b-13d6-4ec8-b3e5-b4e70d1b52bf",
+        "4d6bf3b4-5526-4019-b57e-5c9de99c51d1",
+        "fad36396-e886-4752-8894-dcf187a1d053",
+        "a6744f83-5b67-4825-85fa-b0b69627047f",
+        "710f6338-82cc-4722-b119-d7447253ebd0",
+        "3dc7e779-7820-41df-b74a-c1e6e6fbe14b",
+        "9859ecac-5de9-4a4c-a2c7-5e4255ce09a1",
+        "c7daa332-8dae-4753-9782-0e5c3d932670",
+        "d8e4a7c8-864a-447b-858e-f9e8dd0047df",
+        "1b913b9c-f4ca-4d66-a1dd-c9c1635208b2",
+        "e98a4b53-5d4e-4290-94f4-7d7befad5b68",
+        "a2e5f589-56dc-4fe0-9bd7-6f54ae3f7573"
+      ],
+      "custom_css": [
+        ".colletion-products {margin-bottom: 0px;}",
+        ".collection-details {padding: 0px 0; color: #ffffff;}",
+        ".colletion-products {display: none;}"
+      ],
+      "settings": {
+        "bgColor": "#e3f3fe",
+        "collectionFilterstitle": "Shop All",
+        "collectionFiltersurl": "shopify://collections"
+      }
+    },
+    "9601ba08-1be6-43a1-bf87-30b370f76268": {
+      "type": "single-flow-bundle",
+      "disabled": true,
+      "settings": {
+        "show": false,
+        "heading_1": "Starter Kit",
+        "card_heading": "Build Your Bundle",
+        "card_heading_color": "#ffffff",
+        "wizardone": "",
+        "heading_2": "Bathroom Bliss",
+        "wizardtwo": "",
+        "heading_3": "Hand Wash",
+        "wizardthree": "",
+        "title": "Oh de Loo!",
+        "tag": "",
+        "wizardfour": "",
+        "wizardfour_cart_product": "",
+        "description": "",
+        "heading_5": "Add Ons",
+        "wizardfive": "",
+        "content_color": "#3541bf",
+        "content_align": "center"
+      }
+    },
+    "df724d3c-06b6-444f-b54b-914ef77d0199": {
+      "type": "bundle",
+      "blocks": {
+        "b48b1aa1-71c0-4324-bab8-4f9d4633ef95": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "moth-magic-cedarwood-patchouli",
+            "bundle_text": "Patchouli, Red Cedar, MayChang, Palmarosa & Amyris",
+            "popup_no": "1",
+            "nopopup": false,
+            "pop_heading": "\"Moth Magic\" Patchouli & Cedarwood",
+            "pop_detail": "Top Notes <p> </p>\nMayChang - an intense fresh and citrusy aroma with insecticidal and calming properties.  <p> </p>\nMiddle Notes <p> </p>\nPalmarosa - a sweet, floral-rosy oil that’s antimicrobial and acts as an insect repellent.   <p> </p>\nBase Notes <p> </p>\nRed Cedar - a woody aroma with sweet balsamic scent that masks the scent of Keratin. <p> </p>\nPatchouli - a rich, sweet, herbaceous and aromatic aroma traditionally used as a moth and insect repellent. <p> </p>\nAmyris - a subtle, woody and sweet balsamic scent with antiseptic and sedative qualities. <p> </p>",
+            "PoopupIconCode": "<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Red_Cedar.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Patchouli.png?v=1692882966\">\n        </div>\n<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Palmarosa.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Amyris.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Maychang.png?v=1692882966\">\n        </div>\n\n<div></div>"
+          }
+        },
+        "17451680-8e2a-4c61-bbc0-424d204719dc": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "balancing-floral",
+            "bundle_text": "Rose Geranium, Lemon Peel, Vetiver",
+            "popup_no": "2",
+            "nopopup": false,
+            "pop_heading": "",
+            "pop_detail": "",
+            "PoopupIconCode": ""
+          }
+        },
+        "920b34a3-8aca-40ac-a4d4-f8d6ae126f5a": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "grounding-vetiver",
+            "bundle_text": "Vetiver, Sweet Orange, Coriander Seed",
+            "popup_no": "3",
+            "nopopup": false,
+            "pop_heading": "",
+            "pop_detail": "",
+            "PoopupIconCode": ""
+          }
+        },
+        "6b8791b8-03e3-4a33-b644-a1dee3a6eab0": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "original-citrus",
+            "bundle_text": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "4",
+            "nopopup": false,
+            "pop_heading": "",
+            "pop_detail": "",
+            "PoopupIconCode": ""
+          }
+        },
+        "c7f5776f-f66e-4853-8630-1d79294694c2": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": true,
+            "ChooseProduct": "geranium-ylang-ylang",
+            "bundle_text": "Ho Wood, Geranium, Coriander, Clary Sage, Ylang Ylang",
+            "popup_no": "5",
+            "nopopup": false,
+            "pop_heading": "",
+            "pop_detail": "",
+            "PoopupIconCode": ""
+          }
+        }
+      },
+      "block_order": [
+        "b48b1aa1-71c0-4324-bab8-4f9d4633ef95",
+        "17451680-8e2a-4c61-bbc0-424d204719dc",
+        "920b34a3-8aca-40ac-a4d4-f8d6ae126f5a",
+        "6b8791b8-03e3-4a33-b644-a1dee3a6eab0",
+        "c7f5776f-f66e-4853-8630-1d79294694c2"
+      ],
+      "settings": {
+        "sectionId": "",
+        "sticky_atc_heading": "3-Pack Bundle Starter Kit",
+        "bundle_heading": "Build Your Bundle",
+        "heading_font": 22,
+        "heading_mb": 20,
+        "heading_color": "#334fb4",
+        "heading_position": "left",
+        "pack_size": 3,
+        "card_heading": "Build Your Bundle",
+        "card_heading_color": "#334fb4",
+        "card_heading_font": 34,
+        "card_padding": 20,
+        "section_padding": 50,
+        "freeProductTitle": "",
+        "freeProductImg": "shopify://shop_images/c_n--mob-02.jpg",
+        "cart_product": "3-pack-bundle-starter-kit",
+        "box_product": ""
+      }
+    }
+  },
+  "order": [
+    "collection",
+    "9601ba08-1be6-43a1-bf87-30b370f76268",
+    "df724d3c-06b6-444f-b54b-914ef77d0199"
+  ]
+}

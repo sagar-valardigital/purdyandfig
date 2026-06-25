@@ -1,0 +1,166 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.article-layout",
+  "sections": {
+    "article_fM7UGF": {
+      "type": "article",
+      "blocks": {
+        "share_Q4998Q": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.instagram.com/purdyandfigg?igsh=MWo1OHUxOTJ6dXpiZg%3D%3D",
+            "share_icon": "shopify://shop_images/Social_64e4d0d8-969d-40cd-a8ac-aa6ebe6b9e18.png",
+            "share_link": "https://purdyandfigg.com/pages/cleaning-hack-changes-everything",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_EDpJAq": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.tiktok.com/@purdyandfigg?_t=ZN-8wylO6Jc4og&_r=1",
+            "share_icon": "shopify://shop_images/Social_1.png",
+            "share_link": "https://purdyandfigg.com/pages/cleaning-hack-changes-everything",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_thapYp": {
+          "type": "share",
+          "settings": {
+            "redirect": false,
+            "redirect_link": "",
+            "share_icon": "shopify://shop_images/Social_2.png",
+            "share_link": "https://purdyandfigg.com/pages/cleaning-hack-changes-everything",
+            "share_icon_class": "copy-link"
+          }
+        },
+        "press_QBwEm4": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/Daily_Mail.svg"
+          }
+        },
+        "press_rcJWhK": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/The_Sunday_Times.svg"
+          }
+        },
+        "press_qJ9czD": {
+          "type": "press",
+          "settings": {
+            "press_img": "shopify://shop_images/Ideal_Home.svg"
+          }
+        },
+        "article_content_E8P7Pf": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>If you thought natural cleaning products are less effective than chemical alternatives from the ‘big guns’, then think again.</p><p>Natural cleaning is on the rise in the UK, as Brits look for new toxin-free ways to clean their homes effectively while protecting their health.</p><p>Two years ago, Sarah from Leeds wouldn’t have thought twice about grabbing chemical-packed sprays from the supermarket shelf.</p><p>It was only after her daughter developed a skin allergy that she started looking for a new natural alternative to rid her home of dangerous toxins.</p><p>After no luck trawling the shelves of her local supermarkets, Sarah found Purdy & Figg online with the promise of a completely natural multi-purpose spray she could use throughout her home.</p>"
+          }
+        },
+        "article_heading_ipBmz9": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "One spray to change how you clean forever"
+          }
+        },
+        "article_content_mzGyPM": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Packed with powerful ingredients from plant-based sources and beautiful natural scents, Counter Clean works on all surfaces, from worktops and splashbacks to tabletops and mirrors.</p>"
+          }
+        },
+        "article_image_QmtwQh": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_7_b62bbe58-fcda-4460-b95a-fa6e0d974c23.png"
+          }
+        },
+        "article_content_hjnfkR": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Not only could Sarah guarantee her home was safe for her family, but she had unwittingly discovered the ultimate one-spray cleaning hack that has already taken hold in homes up and down the UK. </p><p>Like Sarah, Michael from London was determined to empty his home of toxic chemicals and unnecessary plastic waste. He chose Purdy & Figg when he realised just one effective spray for his whole home would do the trick.</p>"
+          }
+        },
+        "article_image_EkiLF4": {
+          "type": "article_image",
+          "settings": {
+            "article_img": "shopify://shop_images/Image_8_4afb7a95-9876-4c9d-9161-1effab71f8d0.png"
+          }
+        },
+        "article_content_MzaJA8": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Taking up the Welcome Offer of just £15 for a Bottle for Life, microfibre cloth and three essential oil-scented cleaning refills, Michael hasn’t turned back on the hack that simplified the way he cleans.</p>"
+          }
+        },
+        "article_heading_EzMd4k": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "Happy customers from Dundee to Dover"
+          }
+        },
+        "article_content_iUyLJ9": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>People in their thousands are jumping on the trend, and reviewers are noting just how well the spray cleans and how beautifully it smells to boot</p><p>‘Every bottle smells amazing, not only does it smell wonderful, it does a great job,’ reviewed one happy customer on TrustPilot, ‘one bottle cleans the whole house, and after the house smells like a 5-star hotel, I wouldn’t use anything else’</p><p>Another added, ‘Purdy & Figg cleaning products smell amazing, making cleaning effortless, and can I even say fun?’</p><p>Changing the way you clean forever is as easy as choosing one simple spray for your whole home. Try Purdy & Figg to discover the nation’s latest and greatest hack for a simplified cleaning routine without the nasty chemicals.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "share_Q4998Q",
+        "share_EDpJAq",
+        "share_thapYp",
+        "press_QBwEm4",
+        "press_rcJWhK",
+        "press_qJ9czD",
+        "article_content_E8P7Pf",
+        "article_heading_ipBmz9",
+        "article_content_mzGyPM",
+        "article_image_QmtwQh",
+        "article_content_hjnfkR",
+        "article_image_EkiLF4",
+        "article_content_MzaJA8",
+        "article_heading_EzMd4k",
+        "article_content_iUyLJ9"
+      ],
+      "name": "article",
+      "settings": {
+        "tag": "ADVERTORIAL",
+        "article-heading": "“I can’t believe it cleans so well”: This cleaning hack will change the way you clean forever",
+        "article-subheading": "One simple spray is making Brits across the country switch to natural cleaning",
+        "article-info": "By Sarah J. | Monday, March 24, 2025",
+        "main_image": "shopify://shop_images/Image_6_f714f749-db38-43ab-a212-5bb7fd8585d2.png",
+        "press_heading": "AS SEEN IN",
+        "explore-heading": "Curious? Try it for yourself for only £15",
+        "explore_image": "shopify://shop_images/benefits-image.png_1.png",
+        "btn_label": "Explore Offer",
+        "btn_link": "https://purdyandfigg.com/pages/starterkit-offer-seasonal-summer",
+        "btn_bg": "#0085de",
+        "btn_text_color": "#ffffff"
+      }
+    },
+    "articel_footer_kFGjeb": {
+      "type": "article-footer",
+      "name": "Article Footer",
+      "settings": {
+        "background-color": "#212121",
+        "text-color": "#bdbdbd",
+        "footer": "© 2025 All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "article_fM7UGF",
+    "articel_footer_kFGjeb"
+  ]
+}

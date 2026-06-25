@@ -1,0 +1,1447 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_8iCwzJ": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55210538434940",
+            "subscription": false,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSCU373",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_8GcqGE": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "customImage": false,
+            "variant": "55210652139900",
+            "subscription": false,
+            "selling_plan": "",
+            "discount": "3PACKMICROFIBERCLOTHCU373",
+            "price": "£5.00",
+            "compare_price": "£12.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_8iCwzJ",
+        "product_8GcqGE"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "announcement_bar_pf357_GTYDbQ": {
+      "type": "announcement-bar-pf357",
+      "name": "Announcement Bar PF357",
+      "settings": {
+        "class": "",
+        "end_date": "2025-08-31 23:59:59",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "bb-color-mobile": "#fbf1e8",
+        "text-color": "#212121",
+        "text-color-mobile": "#212121",
+        "text": "Pink Starter Kit offer ends in",
+        "textmobile": "CoppaFeel! Pink Series offer ends in",
+        "heightmobile": 37,
+        "scrollto": "starterkit-product",
+        "btn-bg": "#ff0068",
+        "btn-text": "#ffffff",
+        "annuText": "GET £66 OFF",
+        "top": "40",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_slider_pf357_fffYcf": {
+      "type": "banner-slider-pf357",
+      "blocks": {
+        "image_jq7pLV": {
+          "type": "image",
+          "settings": {
+            "desktop_img": "shopify://shop_images/Hero_Image_01_2.jpg",
+            "mobile_img": "shopify://shop_images/Hero_Image_01_3.jpg"
+          }
+        },
+        "image_DnMzqm": {
+          "type": "image",
+          "settings": {
+            "desktop_img": "shopify://shop_images/Hero_Image_02_7df03e8a-b815-45a5-8797-12848f2a7187.jpg",
+            "mobile_img": "shopify://shop_images/Hero_Image_02_1.jpg"
+          }
+        },
+        "image_FCDjtc": {
+          "type": "image",
+          "settings": {
+            "desktop_img": "shopify://shop_images/Hero_Image_03_9474c506-ed9f-49e2-adcc-f064602e855b.jpg",
+            "mobile_img": "shopify://shop_images/Hero_Image_03_1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_jq7pLV",
+        "image_DnMzqm",
+        "image_FCDjtc"
+      ],
+      "custom_css": [],
+      "name": "Banner Slider PF357",
+      "settings": {
+        "bg": "#f2d4b9",
+        "txt-color": "#212121",
+        "heading": "Clean with<span class=\"mobile-break\"> the power of <span class=\"font-gtsuperItalic\" style=\"font-weight: bold\">pink</span></span>",
+        "sub_heading": "<b>Save up to £66</b> on pink-powered <strong>Counter Clean</strong> with limited-edition scents that smell good and do good too",
+        "btn-bg": "#ff0068",
+        "btn-txt-color": "#ffffff",
+        "button_label": "GET YOUR OFFER",
+        "button_link": "",
+        "scrollto": "starterkit-product",
+        "top": "40",
+        "showreview": false,
+        "star_color": "",
+        "star_text_color": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "click_custom",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "review_block_slider_pf357_WpBd6L": {
+      "type": "review-block-slider-pf357",
+      "blocks": {
+        "image_nbp4kp": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "review": "\"I’m obsessed !! Fantastic product .. loving it.\"",
+            "name": "Aleksandra, Bath",
+            "tag": ""
+          }
+        },
+        "image_9r7xRN": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_02.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_02.png",
+            "review": "“The best way to take care of your home.”",
+            "name": "Ellie, Manchester",
+            "tag": ""
+          }
+        },
+        "image_GHDUgn": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_03.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_03.png",
+            "review": "\"It’s such a treat to clean with something that leaves your space feeling fresh and fragrant.\"",
+            "name": "Adam, York",
+            "tag": ""
+          }
+        },
+        "image_khGwbe": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_06.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_06.png",
+            "review": "\"Loved the Geranium fragrance counter clean - couldn't get enough of it.\"",
+            "name": "Colton, Liverpool",
+            "tag": ""
+          }
+        },
+        "image_9y9NJf": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_05.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_05.png",
+            "review": "\"Beautiful fragrances that fill each room and I find actually lift my spirits.\"",
+            "name": "Julia, London",
+            "tag": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_nbp4kp",
+        "image_9r7xRN",
+        "image_GHDUgn",
+        "image_khGwbe",
+        "image_9y9NJf"
+      ],
+      "name": "Review Block Slider PF357",
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#f2d4b9",
+        "class": "review-block-slider-pf357",
+        "heading": "Join the millions who make cleaning a joy",
+        "subtext": ""
+      }
+    },
+    "pf314_expend_blocks_nHtxRp": {
+      "type": "pf314-expend-blocks",
+      "blocks": {
+        "image_HKCziD": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "tag": "",
+            "heading": "Aleksandra, Bath",
+            "details": "\"I’m obsessed !! Fantastic product .. loving it.\"",
+            "expend-label": "",
+            "expendable-content": ""
+          }
+        },
+        "image_dLP6Gf": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_02.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_02.png",
+            "tag": "",
+            "heading": "Ellie, Manchester",
+            "details": "“The best way to take care of your home.”",
+            "expend-label": "SEE MORE",
+            "expendable-content": ""
+          }
+        },
+        "image_eteda8": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "tag": "",
+            "heading": "Aleksandra, Bath",
+            "details": "\"I’m obsessed !! Fantastic product .. loving it.\"",
+            "expend-label": "",
+            "expendable-content": ""
+          }
+        },
+        "image_cNBrpX": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_02.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_02.png",
+            "tag": "",
+            "heading": "Ellie, Manchester",
+            "details": "“The best way to take care of your home.”",
+            "expend-label": "SEE MORE",
+            "expendable-content": ""
+          }
+        },
+        "image_AzQ7Xb": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "mBlockImage": "shopify://shop_images/Review_Card_Image_01.png",
+            "tag": "",
+            "heading": "Aleksandra, Bath",
+            "details": "\"I’m obsessed !! Fantastic product .. loving it.\"",
+            "expend-label": "",
+            "expendable-content": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_HKCziD",
+        "image_dLP6Gf",
+        "image_eteda8",
+        "image_cNBrpX",
+        "image_AzQ7Xb"
+      ],
+      "disabled": true,
+      "name": "PF314 Expend Blocks",
+      "settings": {
+        "bgcolor": "#f2d4b9",
+        "class": "show",
+        "linkVariant": "",
+        "heading": "Join the millions who make cleaning a joy",
+        "subtext": "See why over 400,000 people have switched to Purdy & Figg"
+      }
+    },
+    "review_blocks_343_kBT6Nr": {
+      "type": "review-blocks-343",
+      "blocks": {
+        "text_jwD3ff": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "review": "\"test review text test review text test review text test review text test review text\"",
+            "userName": "test name",
+            "videoURL": ""
+          }
+        },
+        "text_CPGJR6": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "review": "\"test review text test review text test review text test review text test review text\"",
+            "userName": "test name",
+            "videoURL": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_jwD3ff",
+        "text_CPGJR6"
+      ],
+      "disabled": true,
+      "name": "Review Blocks 343",
+      "settings": {
+        "heading": "",
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "className": "",
+        "bgColor": "#f2d4b9",
+        "btn_text": "GET MY FREE SCENT",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "cleaning_power_pf357_FkDgGr": {
+      "type": "cleaning-power-pf357",
+      "blocks": {
+        "image_eA9Tft": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent_Image_01.png",
+            "mBlockImage": "shopify://shop_images/Scent_Image_01.png",
+            "tag": "New",
+            "heading": "Pink Grapefruit & Pepper",
+            "details": "Spicy and invigorating like sipping on cocktails in a tropical paradise."
+          }
+        },
+        "image_AwGTrQ": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent_Image_02.png",
+            "mBlockImage": "shopify://shop_images/Scent_Image_02.png",
+            "tag": "New",
+            "heading": "Summer Rose",
+            "details": "Joyful and romantic notes inspired by the quintessential British rose garden."
+          }
+        },
+        "image_XxX7Dh": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent_Image_03.png",
+            "mBlockImage": "shopify://shop_images/Scent_Image_03.png",
+            "tag": "Customer Favourite",
+            "heading": "Geranium & Ylang Ylang",
+            "details": "Rich, floral and reminiscent of bohemian retreats on the island of Bali."
+          }
+        }
+      },
+      "block_order": [
+        "image_eA9Tft",
+        "image_AwGTrQ",
+        "image_XxX7Dh"
+      ],
+      "name": "Cleaning Power PF357",
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#ffffff",
+        "class": "show mobile-container-0",
+        "linkVariant": "",
+        "heading": "Pink cleaning power",
+        "subtext": "Counter Clean is a simple, effective and natural cleaning spray for your whole home. Try it now with the limited-edition CoppaFeel! Pink Series.",
+        "addScrollBtn": true,
+        "btnLabel": "GET YOUR OFFER",
+        "btnBG": "#ff0068",
+        "scrollto": "starterkit-product",
+        "top": "40",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_pf357_qMBGEE": {
+      "type": "global-product-pf357",
+      "blocks": {
+        "text_bjbE48": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 limited-edition cleaning concentrates <strong>(worth £26)</strong>"
+          }
+        },
+        "text_qRV7qE": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<strong>FREE</strong> Glass Bottle for Life, cloth and limited-edition pink silicone base <strong>(worth £19)</strong>"
+          }
+        },
+        "text_Jp6CQU": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Seasonal membership: 3 scents <strong>every 90 days thereafter</strong>"
+          }
+        },
+        "product_image_fUaGjb": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Counter_Clean_-_Desktop_01.jpg",
+            "mimage": "shopify://shop_images/Counter_Clean_-_Mobile_01.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_cXtdfB": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Counter_Clean_-_Desktop_02_2.jpg",
+            "mimage": "shopify://shop_images/Counter_Clean_-_Mobile_02_1.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_MQNMte": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Counter_Clean_-_Desktop_03.jpg",
+            "mimage": "shopify://shop_images/Counter_Clean_-_Mobile_03.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_GD9BeX": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Counter_Clean_-_Desktop_04.jpg",
+            "mimage": "shopify://shop_images/Counter_Clean_-_Mobile_04_883bbf9b-5c0e-4ca4-86ae-b551108e9a15.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_yykzBL": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Counter_Clean_-_Desktop_05.jpg",
+            "mimage": "shopify://shop_images/Counter_Clean_-_Mobile_05.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_XbXGHR": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Complete_-_Desktop_01.jpg",
+            "mimage_2": "shopify://shop_images/Complete_-_Mobile_01.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_KbwJrA": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Complete_-_Desktop_02.jpg",
+            "mimage_2": "shopify://shop_images/Complete_-_Mobile_02.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_bNPfhG": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Complete_-_Desktop_03.jpg",
+            "mimage_2": "shopify://shop_images/Complete_-_Mobile_03.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_HhYaEp": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Complete_-_Desktop_04.jpg",
+            "mimage_2": "shopify://shop_images/Complete_-_Mobile_04.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_LQWc7i": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Complete_-_Desktop_05.jpg",
+            "mimage_2": "shopify://shop_images/Complete_-_Mobile_05.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "point_4Nckbq": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "3 limescale-busting bathroom concentrates <strong>(worth £24)</strong>"
+          }
+        },
+        "point_kPpWGE": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "<strong>FREE</strong> Bathroom Bliss Bottle for Life &amp; cloth <strong>(worth £19)</strong>"
+          }
+        },
+        "point_YTCYk8": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1-year <strong>FREE</strong> supply of Oh! de Loo deodorising drops <strong>(worth £16.95)</strong>"
+          }
+        }
+      },
+      "block_order": [
+        "text_bjbE48",
+        "text_qRV7qE",
+        "text_Jp6CQU",
+        "product_image_fUaGjb",
+        "product_image_cXtdfB",
+        "product_image_MQNMte",
+        "product_image_GD9BeX",
+        "product_image_yykzBL",
+        "product_image2_XbXGHR",
+        "product_image2_KbwJrA",
+        "product_image2_bNPfhG",
+        "product_image2_HhYaEp",
+        "product_image2_LQWc7i",
+        "point_4Nckbq",
+        "point_kPpWGE",
+        "point_YTCYk8"
+      ],
+      "name": "Global Product PF357",
+      "settings": {
+        "link-section": true,
+        "showMoneyBackLabel": true,
+        "className": "pf357-buy-box",
+        "collapse": false,
+        "outOfStock": true,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#fbf1e8",
+        "mainheading": "Save £66 when you upgrade to Complete Counter Clean",
+        "heading": "CoppaFeel! Pink Starter Kit",
+        "mainsubheading": "Support breast cancer awareness in young people",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "variant_id_1": "55531442372988",
+        "selling_plan_1": "710738575740",
+        "sku_1": "FG1265",
+        "discountPlan_1": "PINKSTARTERKIT357",
+        "price_1": "19.00",
+        "deleted_price_1": "45.00",
+        "variant_id_2": "55533946438012",
+        "selling_plan_2": "710741393788",
+        "sku_2": "FG1266",
+        "discountPlan_2": "PINKSTARTERCKIT357",
+        "price_2": "38.00",
+        "deleted_price_2": "104.95",
+        "variant_id_3": "",
+        "selling_plan_3": "",
+        "sku_3": "",
+        "discountPlan_3": "",
+        "price_3": "",
+        "deleted_price_3": "",
+        "variant_id_4": "",
+        "selling_plan_4": "",
+        "sku_4": "",
+        "discountPlan_4": "",
+        "price_4": "",
+        "deleted_price_4": "",
+        "variant_id_5": "",
+        "selling_plan_5": "",
+        "sku_5": "",
+        "discountPlan_5": "",
+        "price_5": "",
+        "deleted_price_5": "",
+        "variant_id_6": "",
+        "selling_plan_6": "",
+        "sku_6": "",
+        "discountPlan_6": "",
+        "price_6": "",
+        "deleted_price_6": "",
+        "variant_id_free": "",
+        "sku_free": "",
+        "discount_free": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 4,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box",
+        "dataTitle": "begin_checkout_custom",
+        "eventValue": "add_to_cart_custom",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "global_product_306_rfhzxx": {
+      "type": "global-product-306",
+      "blocks": {
+        "text_TBRKcy": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 limited-edition Summer Lawn scent refills"
+          }
+        },
+        "point_PkPnfh": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Geranium &amp; Ylang Ylang scent refill"
+          }
+        },
+        "point_6QfLUJ": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Citronella &amp; Niaouli scent refill"
+          }
+        },
+        "point_Nf8YxJ": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Linden &amp; Lavender scent refill"
+          }
+        },
+        "point_BagRex": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 limited-edition Summer Lawn scent refill"
+          }
+        },
+        "point3_FtV9TD": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "3 limited-edition Summer Lawn scent refills"
+          }
+        },
+        "point3_63bq8K": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "<strong>FREE</strong> glass Bottle for Life"
+          }
+        },
+        "point3_7dMefY": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "<strong>FREE</strong> microfibre cloth"
+          }
+        },
+        "product_image_Xhj3CQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_01.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_01.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_P8NyJP": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_02.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_02.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_KkLjek": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_03.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_03.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_rCVyN7": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_04.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_04.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_LbMmHh": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_05.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_05.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_bUkE6b": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_01_06c1822c-c258-46e7-9703-81395d070e72.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_01_9091b39b-8c58-4f61-bc25-e780d50019d2.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_RUUHRU": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_02_36d4473e-4d71-4efd-9484-999f23bd4079.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_02_3e1a7bad-f181-4573-8d11-7c857bbe5c22.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_iBpALt": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_03_a5e7968d-2cc7-4a03-9f96-aed3eef54354.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_03_a6e32a95-3e52-4377-9b87-02432197458d.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_4jRpa9": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_04.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_04.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_d9cYzz": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_05_c5f4a7c1-2d5e-49ed-a9a6-c243c0fb0b59.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_05_23346b3a-f75c-4a07-baeb-f68d126fbbd2.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image3_zGgbni": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_01_f76fbf2b-41ed-4a49-912a-23da00c15358.png",
+            "mimage_3": "shopify://shop_images/Variant_2_-_Mobile_01.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_x63chC": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_02.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_02_1f42878b-468d-439f-92bd-b59c74953377.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_z34z6x": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_04.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_04_e15867f6-aa74-4068-bc71-aa297df9978d.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_bJLcXH": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_04.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_04_e15867f6-aa74-4068-bc71-aa297df9978d.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_hN3dmp": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_05.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_05_9f8f9556-287d-4834-9658-d893c5a9944e.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_TBRKcy",
+        "point_PkPnfh",
+        "point_6QfLUJ",
+        "point_Nf8YxJ",
+        "point_BagRex",
+        "point3_FtV9TD",
+        "point3_63bq8K",
+        "point3_7dMefY",
+        "product_image_Xhj3CQ",
+        "product_image_P8NyJP",
+        "product_image_KkLjek",
+        "product_image_rCVyN7",
+        "product_image_LbMmHh",
+        "product_image2_bUkE6b",
+        "product_image2_RUUHRU",
+        "product_image2_iBpALt",
+        "product_image2_4jRpa9",
+        "product_image2_d9cYzz",
+        "product_image3_zGgbni",
+        "product_image3_x63chC",
+        "product_image3_z34z6x",
+        "product_image3_bJLcXH",
+        "product_image3_hN3dmp"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".buy--plan label,.ms-buy--plan label {background-color: #e1eecb;}",
+        ".buy--plan input:checked + label,.ms-buy--plan input:checked + label {background-color: #f5f5f5;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        ".heading-3 {font-weight: 600; font-size: 28px; letter-spacing: 0.24px; color: #0c231f;}",
+        ".by-content {padding-top: 32px; padding-left: 32px;}",
+        "@media (max-width: 768px) {.heading-3 {font-size: 24px; letter-spacing: 0px; } .by-content {padding-top: unset; padding-left: unset; } .line-br {display: block; }}"
+      ],
+      "settings": {
+        "className": "pf306-buy-box",
+        "toast": true,
+        "collapse": true,
+        "outOfStock": false,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#b3d57d",
+        "mainheading": "Just launched: <span class=\"buybox-italica\">new</span> Summer Lawn Scent",
+        "heading": "Member Summer Bundles",
+        "mainsubheading": "Save on the scent of freshly cut grass",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "plan_heading_1": "Summer Lawn Trio",
+        "variant_id_1": "55178121707900",
+        "selling_plan_1": "",
+        "sku_1": "FG1254",
+        "qty_1": "1",
+        "discountPlan_1": "SUMMERLAWNTRIO373",
+        "price_1": "20.25",
+        "deleted_price_1": "27.00",
+        "plan_heading_2": "Summer Scent Bundle",
+        "variant_id_2": "55476210631036",
+        "selling_plan_2": "",
+        "sku_2": "FG1278",
+        "qty_2": "1",
+        "discountPlan_2": "SUMMERSCENTBUNDLE373",
+        "price_2": "24.75",
+        "deleted_price_2": "33.00",
+        "plan_heading_3": "Summer Lawn Bundle",
+        "variant_id_3": "55178157162876",
+        "selling_plan_3": "",
+        "sku_3": "FG1255",
+        "qty_3": "1",
+        "discountPlan_3": "SUMMERLAWNBUNDLES373",
+        "price_3": "27.00",
+        "deleted_price_3": "46.00",
+        "plan_heading_4": "",
+        "variant_id_4": "",
+        "selling_plan_4": "",
+        "sku_4": "",
+        "discountPlan_4": "",
+        "price_4": "",
+        "deleted_price_4": "",
+        "plan_heading_5": "",
+        "variant_id_5": "",
+        "selling_plan_5": "",
+        "sku_5": "",
+        "discountPlan_5": "",
+        "price_5": "",
+        "deleted_price_5": "",
+        "plan_heading_6": "",
+        "variant_id_6": "",
+        "selling_plan_6": "",
+        "sku_6": "",
+        "discountPlan_6": "",
+        "price_6": "",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 5,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "add_to_cart",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "every_spray_counts_pf357_X3DD3A": {
+      "type": "every-spray-counts-pf357",
+      "name": "Every Spray Counts PF357",
+      "settings": {
+        "className": "every-spray-counts",
+        "textcolor": "#ffffff",
+        "background": "#ffffff",
+        "backgroundImage": "shopify://shop_images/af1fa45e664927124c92cec36bfedbfe78c3005b.jpg",
+        "heading": "Every spray counts",
+        "partnershipImage": "shopify://shop_images/PROUDLY_SUPPORTING_WHITE_PF_1_1.png",
+        "details": "Buy the <strong>CoppaFeel! Pink Starter Kit</strong>, and we’ll <strong>donate 50p</strong> towards helping to educate, encourage and empower more young people to check their chests on a monthly basis.",
+        "addScrollBtn": true,
+        "btnLabel": "GET YOUR OFFER",
+        "btnBG": "#ffffff",
+        "btntextcolour": "#11322c",
+        "scrollto": "starterkit-product",
+        "top": "90",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 5,
+        "funnel_stage": "landing_page",
+        "dataModule": "every_spray_counts",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "founders_split_pf357_8RVjqy": {
+      "type": "founders-split-pf357",
+      "name": "Founders Split PF357",
+      "settings": {
+        "className": "full-width-image-text",
+        "textcolor": "#212121",
+        "background": "#f2d4b9",
+        "backgroundImage": "shopify://shop_images/BG_-_Desktop-fixed.jpg",
+        "layout": true,
+        "heading": "Meet our founders",
+        "image": "shopify://shop_images/meetourfounders_5864fb48-c9a8-4a64-a843-090b474f6603.png",
+        "details": "<p style=\"font-weight: 400; line-height: 1.5\">Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning more effective, more effortless, and more enjoyable.</p>\n<p style=\"font-size: 16px; line-height: 1.6; margin-bottom: 0;\">From a Hertfordshire garage to millions of homes, their multipurpose spray, scented with essential oils, is on the way to changing the way we all feel about cleaning - for good.</p>"
+      }
+    },
+    "image_with_list_pf357_KMzbaw": {
+      "type": "image-with-list-pf357",
+      "blocks": {
+        "text_7bdqQp": {
+          "type": "text",
+          "settings": {
+            "heading": "Powerful clean"
+          }
+        },
+        "text_XwJtEa": {
+          "type": "text",
+          "settings": {
+            "heading": "100% pure essential oil blends"
+          }
+        },
+        "text_zMmByL": {
+          "type": "text",
+          "settings": {
+            "heading": "Non-toxic ingredients"
+          }
+        },
+        "text_ehrxDB": {
+          "type": "text",
+          "settings": {
+            "heading": "Cleans 15+ surfaces"
+          }
+        }
+      },
+      "block_order": [
+        "text_7bdqQp",
+        "text_XwJtEa",
+        "text_zMmByL",
+        "text_ehrxDB"
+      ],
+      "custom_css": [
+        ".image-with-listing .image-listing li {padding: 24px 0 24px 44px;}",
+        "@media (max-width: 768px) {.image-with-listing .d-grid.image-listing-wrapper {display: grid; grid-template-columns: 40% 60%; grid-gap: 0; } .image-listing-image img {max-height: 273px; } .image-listing-image {text-align: left; } .image-listing-text {padding-top: 20px; } .image-with-listing .image-listing li {padding: 12px 0 12px 28px; }}"
+      ],
+      "name": "Image with list PF357",
+      "settings": {
+        "bgImage": "shopify://shop_images/BG---Desktop.png",
+        "heading": "One simple cleaning kit<br>that does it all",
+        "image": "shopify://shop_images/bottle_988cab5f-7f4f-4551-8135-3026f2021f0c.png",
+        "icon": "shopify://shop_images/Tick_1.png",
+        "addScrollBtn": false,
+        "scrollBtnText": "GET YOUR OFFER",
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "icon_blocks_pf357_cGkQzG": {
+      "type": "icon-blocks-pf357",
+      "blocks": {
+        "iconblocks_JqQDRT": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More convenient",
+            "icon_block_description": "3 refills delivered to your door every 3 months so you never run out",
+            "icon_block_image": "shopify://shop_images/Icon_f796c27f-4eff-4492-9604-d25807c0026d.svg"
+          }
+        },
+        "iconblocks_BtF3nG": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More flexible",
+            "icon_block_description": "Bring forward, delay, or cancel online, with one easy click. No questions asked",
+            "icon_block_image": "shopify://shop_images/Icon_1_1907279e-1a4f-4aef-b8d7-2b2b8a73f8ea.svg"
+          }
+        },
+        "iconblocks_q6Hxjf": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More rewarding",
+            "icon_block_description": "Members-only access to new offers, scents, products, and prices",
+            "icon_block_image": "shopify://shop_images/Icon_2_b0d6a1a8-8788-423c-87cb-2737d61a211b.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_JqQDRT",
+        "iconblocks_BtF3nG",
+        "iconblocks_q6Hxjf"
+      ],
+      "name": "Icon blocks 357",
+      "settings": {
+        "class": "pf-357-icon-block",
+        "bg": "#fcfaf6",
+        "textcolor": "#212121",
+        "detailtextcolor": "#424242",
+        "heading": "A membership to <span class=\"line-break\">change the way you</span> <span class=\"line-break\">clean forever</span>",
+        "show_hide_block": true,
+        "showbtn": true,
+        "btnbgcolor": "#ff0068",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "90",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 6,
+        "funnel_stage": "landing_page",
+        "dataModule": "cta_block",
+        "dataTitle": "membership_block",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "icon_blocks_reskin_290_CeqXUa": {
+      "type": "icon-blocks-reskin-290",
+      "blocks": {
+        "iconblocks_eiiiLB": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More convenient",
+            "icon_block_description": "3 refills delivered to your door every 3 months so you never run out",
+            "icon_block_image": "shopify://shop_images/Icon_f796c27f-4eff-4492-9604-d25807c0026d.svg"
+          }
+        },
+        "iconblocks_gDgnfh": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More flexible",
+            "icon_block_description": "Bring forward, delay, or cancel online, with one easy click. No questions asked",
+            "icon_block_image": "shopify://shop_images/Icon_1_1907279e-1a4f-4aef-b8d7-2b2b8a73f8ea.svg"
+          }
+        },
+        "iconblocks_hRQbEQ": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "More rewarding",
+            "icon_block_description": "Members-only access to new offers, scents, products, and prices",
+            "icon_block_image": "shopify://shop_images/Icon_2_b0d6a1a8-8788-423c-87cb-2737d61a211b.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_eiiiLB",
+        "iconblocks_gDgnfh",
+        "iconblocks_hRQbEQ"
+      ],
+      "disabled": true,
+      "custom_css": [
+        "span.btn {background-color: #ff0068 !important;}",
+        ".green-btn {width: 343px; padding: 12px 16px; margin-top: 40px;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.pf-219-icon-block.icon-blocks-reskin.py-80 .icon-blocks-2-wrapper .icon-block-2 {padding: 16px 0 0 0 !important; } .pf-219-icon-block .block-img-wrappers img {height: 28px !important; width: auto !important; margin-top: -4px !important; } .green-btn {margin-top: unset; width: 100% !important; max-width: 100% !important; } .heading-4 {color: #0c231f !important; }}"
+      ],
+      "settings": {
+        "class": "pf-219-icon-block",
+        "bg": "#fcfaf6",
+        "textcolor": "#212121",
+        "heading": "A membership to change the way you clean forever",
+        "show_hide_block": true,
+        "showbtn": true,
+        "btnbgcolor": "#11322c",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "scents_pf357_md9UgC": {
+      "type": "scents-pf357",
+      "blocks": {
+        "image_wNwP33": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Pink_Series.png",
+            "mBlockImage": "shopify://shop_images/Pink_Series.png",
+            "tag": "Limited Edition",
+            "heading": "CoppaFeel! Pink Series",
+            "details": "Scents that smell good and do good too"
+          }
+        },
+        "image_QhpLUK": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Autumn_6922dc00-ec5d-4ceb-b0da-2f314d434f35.png",
+            "mBlockImage": "shopify://shop_images/Autumn_6922dc00-ec5d-4ceb-b0da-2f314d434f35.png",
+            "tag": "Coming September - November",
+            "heading": "Autumn Scents",
+            "details": "Re-energise your home with uplifting blends"
+          }
+        },
+        "image_BnfTwk": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Winter_91ef4977-6f51-476a-ae73-3edbdb31fe97.png",
+            "mBlockImage": "shopify://shop_images/Winter_91ef4977-6f51-476a-ae73-3edbdb31fe97.png",
+            "tag": "Coming December - February",
+            "heading": "Winter Scents",
+            "details": "Welcome in cosy and warming aromas"
+          }
+        },
+        "image_wPAbDz": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Spring_d0500f52-b079-413d-b1f0-c6474036fcdf.png",
+            "mBlockImage": "shopify://shop_images/Spring_d0500f52-b079-413d-b1f0-c6474036fcdf.png",
+            "tag": "Coming March - May",
+            "heading": "Spring Scents",
+            "details": "For the most soothing spring clean"
+          }
+        }
+      },
+      "block_order": [
+        "image_wNwP33",
+        "image_QhpLUK",
+        "image_BnfTwk",
+        "image_wPAbDz"
+      ],
+      "name": "Scents PF357",
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#ffffff",
+        "class": "show mobile-container-0 scents-pf357",
+        "linkVariant": "",
+        "heading": "Your scent discovery journey starts here",
+        "subtext": "Three new limited-edition scents every season, only with Seasonal memberships",
+        "addScrollBtn": false,
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "80",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "scents_pf348_FJMQ6A": {
+      "type": "scents-pf348",
+      "blocks": {
+        "image_YtJWnC": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Pink_Series.png",
+            "mBlockImage": "shopify://shop_images/Pink_Series.png",
+            "tag": "Limited Edition",
+            "heading": "CoppaFeel! Pink Series",
+            "details": "Scents that smell good and do good too"
+          }
+        },
+        "image_Ymrnin": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Autumn_6922dc00-ec5d-4ceb-b0da-2f314d434f35.png",
+            "mBlockImage": "shopify://shop_images/Autumn_6922dc00-ec5d-4ceb-b0da-2f314d434f35.png",
+            "tag": "Coming September - November",
+            "heading": "Autumn Scents",
+            "details": "Energise your home with uplifting blends"
+          }
+        },
+        "image_mEzKbJ": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Winter_91ef4977-6f51-476a-ae73-3edbdb31fe97.png",
+            "mBlockImage": "shopify://shop_images/Winter_91ef4977-6f51-476a-ae73-3edbdb31fe97.png",
+            "tag": "Coming December - February",
+            "heading": "Winter Scents",
+            "details": "Welcome in cosy and warming aromas"
+          }
+        },
+        "image_bE7zE8": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Spring_d0500f52-b079-413d-b1f0-c6474036fcdf.png",
+            "mBlockImage": "shopify://shop_images/Spring_Scents_11458edb-259d-4280-b712-2a38e5a20680.png",
+            "tag": "Coming March - May",
+            "heading": "Spring Scents",
+            "details": "For the most soothing spring clean"
+          }
+        }
+      },
+      "block_order": [
+        "image_YtJWnC",
+        "image_Ymrnin",
+        "image_mEzKbJ",
+        "image_bE7zE8"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px; color: #212121 !important;}",
+        ".scents-reskins .transformational-scents-slider .tss-block {padding: 0;}",
+        ".transformational-scents-slider {margin-top: 40px !important;}",
+        ".scents-pf357 {margin-bottom: ;}",
+        ".tss-tag {font-size: 14px; font-weight: 400; border-radius: 4px; right: 16px; top: 16px; padding: 2px 4px; border: 1px solid #ffb2d2; background: #fff2f7; line-height: 128%; color: #212121;}",
+        ".tss-details {font-size: 14px;}",
+        "@media (max-width: 768px) {.common-btn-width {width: 100%; }}",
+        ".blue-starterkit-btn {font-size: 16px;}"
+      ],
+      "name": "Scents PF348",
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#ffffff",
+        "class": "show mobile-container-0 scents-pf357",
+        "linkVariant": "",
+        "heading": "Your scent discovery journey starts here",
+        "subtext": "Three new limited-edition scents every season, only with Seasonal memberships",
+        "addScrollBtn": false,
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "80",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 10,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_pf357_X9f7tC": {
+      "type": "faq-pf357",
+      "blocks": {
+        "text_73jaxz": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "What’s included in my first delivery?",
+            "faq-ans": "<p>If you buy the Counter Clean Starter Kit, you’ll get one glass Bottle for Life, one luxurious microfibre cloth and three cleaning concentrates. If you upgraded to the Complete Starter Kit, you will receive the Counter Clean Kit plus 3 bathroom cleaning concentrates, an extra cloth and extra bottle with anti slip base.</p>"
+          }
+        },
+        "text_FmJVUL": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of cleaning concentrate into your Bottle for Life and slowly fill to the top (just below the neck) with tap water. Give the bottle a gentle shake to mix, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "text_3LTyLR": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to say that Counter Clean is pH neutral, which means it’s safe to use on most surfaces. That includes softer materials like aluminium, wood, stone, quartz and other sealed surfaces. We do recommend patch testing first on any particularly sensitive or precious surfaces you’re concerned about. Just spray onto a cloth and wipe a small patch to see the results. </p>"
+          }
+        },
+        "text_4CamiJ": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Bathroom Bliss suitable for?",
+            "faq-ans": "<p>Bathroom Bliss is suitable for all the surfaces in your bathroom, including glass, mirrors, porcelain and chrome. The naturally powerful formula tackles limescale, hard water deposits and soap scum with a streak-free finish. As with Counter Clean, we recommend patch testing any particularly precious or sensitive areas first.</p>"
+          }
+        },
+        "text_8hQMzp": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>We offer lots of subscription options, including switching your scent refill pack, changing the frequency of your deliveries or cancelling your membership altogether. Subscriptions are set to a 90-day frequency by default, but you can always move your next billing date if you need to in a few easy steps. We understand there might be times when you need to stop your deliveries, and we’ll always respect your decision to leave - even if we’ll miss you.</p><p>If you have any trouble managing your subscription, our Customer Experience Team is always on hand to respond to your questions and requests as soon as possible. They’re very friendly.</p>"
+          }
+        },
+        "text_XKWQbt": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>A 300ml bottle of Counter Clean (including one 20ml concentrate) contains about 230 sprays. A typical household will get through one of our 300ml bottles in two to four weeks, unless you get a bit addicted to wiping down your surfaces like we have!</p>"
+          }
+        },
+        "text_Gb879r": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Are your products safe for pets?",
+            "faq-ans": "<p>Our products are safe to use around dogs and other domestic pets, but if you’re worried about allergies it’s always best to check with your vet. Birds are particularly sensitive to airborne substances so it’s a good idea to take them out of the room while you clean. It’s also important to note that Ylang Ylang and Citronella are both toxic to dogs if they’re ingested or applied topically, so naturally we wouldn’t recommend that. It probably goes without saying, but please don’t let your pets lick or drink Counter Clean or Bathroom Bliss.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_73jaxz",
+        "text_FmJVUL",
+        "text_3LTyLR",
+        "text_4CamiJ",
+        "text_8hQMzp",
+        "text_XKWQbt",
+        "text_Gb879r"
+      ],
+      "name": "FAQ PF357",
+      "settings": {
+        "enable": true,
+        "color_bg": "#fbf1e8",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": true,
+        "btnBG": "#ff0068",
+        "btntextcolour": "#ffffff",
+        "scrollto": "starterkit-product",
+        "top": "90",
+        "bottommessage": "Purdy &amp; Figg will donate £0.50 for each Pink Series item sold to CoppaFeel!, <span class=\"line-break\">a registered charity (Nos. 1132366 and SC045970)</span>",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "faq",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "announcement_bar_pf357_GTYDbQ",
+    "banner_slider_pf357_fffYcf",
+    "review_block_slider_pf357_WpBd6L",
+    "pf314_expend_blocks_nHtxRp",
+    "review_blocks_343_kBT6Nr",
+    "cleaning_power_pf357_FkDgGr",
+    "global_product_pf357_qMBGEE",
+    "global_product_306_rfhzxx",
+    "every_spray_counts_pf357_X3DD3A",
+    "founders_split_pf357_8RVjqy",
+    "image_with_list_pf357_KMzbaw",
+    "icon_blocks_pf357_cGkQzG",
+    "icon_blocks_reskin_290_CeqXUa",
+    "scents_pf357_md9UgC",
+    "scents_pf348_FJMQ6A",
+    "faq_pf357_X9f7tC",
+    "footer_2_EanC9N"
+  ]
+}

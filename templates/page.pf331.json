@@ -1,0 +1,598 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_8iCwzJ": {
+          "type": "product",
+          "settings": {
+            "product": "gentle-chamomile-refill-pack",
+            "variant": "54956092719484",
+            "selling_plan": "",
+            "discount": "GCREF269CX",
+            "price": "£20.40",
+            "compare_price": "£24.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_8GcqGE": {
+          "type": "product",
+          "settings": {
+            "product": "orange-petitgrain-refill-pack",
+            "variant": "54956168282492",
+            "selling_plan": "",
+            "discount": "O&PREF269CX",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_RpagAJ": {
+          "type": "product",
+          "settings": {
+            "product": "lemon-marjoram-refill-pack",
+            "variant": "54956175917436",
+            "selling_plan": "",
+            "discount": "L&MREF269CX",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_hVWYBm": {
+          "type": "product",
+          "settings": {
+            "product": "patchouli-cedarwood-refill-pack",
+            "variant": "54956181913980",
+            "selling_plan": "",
+            "discount": "P&CREF269CX",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_8iCwzJ",
+        "product_8GcqGE",
+        "product_RpagAJ",
+        "product_hVWYBm"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "announcement_bar_331_EJetx4": {
+      "type": "announcement-bar-331",
+      "custom_css": [
+        ".bar-padding {padding: 4px 0px;}",
+        "@media (max-width: 768px) {.ann-bar-text-2 {height: 37px; } .ann-bar-text-2 p {padding: 6px; }}"
+      ],
+      "name": "Announcement bar 331",
+      "settings": {
+        "fixed": false,
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Member Exclusive: FREE Oh! de Loo with Bathroom Bliss",
+        "scrollto": "starterkit-product",
+        "showbutton": true,
+        "btn-bg": "#212121",
+        "btn-text": "#ffffff",
+        "annuText": "GET YOUR OFFER",
+        "top": "120",
+        "logo": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_331_apFFhH": {
+      "type": "banner-331",
+      "custom_css": [],
+      "name": "Banner 331",
+      "settings": {
+        "txt-color": "#212121",
+        "desktop_img": "shopify://shop_images/Hero-Desktop_a19a3522-0af8-4914-bd46-a721d3b68a62.png",
+        "mobile_img": "shopify://shop_images/Hero-Mobile_d50add23-ccfe-4a6c-af89-13da45e45ffb.png",
+        "heading": "Show your bathroom some love",
+        "sub_heading": "Limited-time Offer: Members save 75% on Bathroom Bliss and get NEW Oh! De Loo",
+        "btn-bg": "#11322c",
+        "btn-txt-color": "#ffffff",
+        "button_label": "GET EXCLUSIVE OFFER",
+        "button_link": "starterkit-product",
+        "top": "120",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 50,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "reviews_carousel_331_3NQAnM": {
+      "type": "reviews-carousel-331",
+      "blocks": {
+        "review_Hg6xmB": {
+          "type": "review",
+          "settings": {
+            "text": "\"Just started using this product and I am enjoying leaving my bathroom smelling wonderful.\"",
+            "author": "Christine, UK"
+          }
+        },
+        "review_fxnBmW": {
+          "type": "review",
+          "settings": {
+            "text": "\"This is great for the shower glass and tiles and works wonders on all of the bathroom.\"",
+            "author": "Angela, UK"
+          }
+        },
+        "review_x9i4HU": {
+          "type": "review",
+          "settings": {
+            "text": "\"I love the fresh bathroom smell, and am impressed with the cleaning power, with smear free glass too.\"",
+            "author": "Es, UK"
+          }
+        },
+        "review_MTctCQ": {
+          "type": "review",
+          "settings": {
+            "text": "\"The soft cloth and scent help cleaning the bathroom feel like a pleasure not a chore.\"",
+            "author": "Sarah, UK"
+          }
+        }
+      },
+      "block_order": [
+        "review_Hg6xmB",
+        "review_fxnBmW",
+        "review_x9i4HU",
+        "review_MTctCQ"
+      ],
+      "custom_css": [
+        "{background: #9c5c1c; padding: 80px 0;}",
+        ".review-text {font-style: normal !important; font-family: \"Lausanne\" !important; font-weight: 200 !important; line-height: 36px !important;}",
+        ".supporting-text {font-weight: 400 !important;}",
+        ".reviews-carousel .stars svg #Star_2 {fill: #fff27b !important;}",
+        ".carousel-wrapper > div,.carousel-container {height: 106px;}",
+        "@media (max-width: 768px) {{padding: 32px 0; } .carousel-wrapper > div, .carousel-container {height: 115px; } .review-text {line-height: 27px !important; font-size: 18px; }}"
+      ],
+      "name": "Reviews Carousel 331",
+      "settings": {
+        "txtcolor": "#ffffff",
+        "authorColor": "#bdbdbd"
+      }
+    },
+    "scents_block_331_XCFrGK": {
+      "type": "scents-block-331",
+      "blocks": {
+        "image_9BFNeF": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Desktop_01_1.png",
+            "mBlockImage": "shopify://shop_images/Mobile_01_1.png",
+            "tag": "",
+            "heading": "Built for bathrooms",
+            "details": "Cuts through limescale, soap scum & hard water."
+          }
+        },
+        "image_fVYPmd": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Desktop_02_1.png",
+            "mBlockImage": "shopify://shop_images/Mobile_02_1.png",
+            "tag": "",
+            "heading": "Streak-free finish",
+            "details": "Cleans to a gleaming, streak-free shine."
+          }
+        },
+        "image_Fi4Ycz": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Desktop_03_1.png",
+            "mBlockImage": "shopify://shop_images/Mobile_03_1.png",
+            "tag": "",
+            "heading": "Beautifully scented",
+            "details": "Refreshing and uplifting Lime & Lemongrass."
+          }
+        }
+      },
+      "block_order": [
+        "image_9BFNeF",
+        "image_fVYPmd",
+        "image_Fi4Ycz"
+      ],
+      "custom_css": [
+        ".link-to-variant {margin-top: 0;}",
+        ".show-blc {font-family: \"GT Super\";}",
+        "@media (max-width: 768px) {.show-blc {display: block; }}"
+      ],
+      "name": "Scents block 331",
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#f6e3d1",
+        "class": "pf-173-nature show pf-173-nature_",
+        "linkVariant": "",
+        "heading": "Why choose <span class=\"show-blc\">Bathroom Bliss?</span>",
+        "subtext": ""
+      }
+    },
+    "introducing_block_331_HrP8LF": {
+      "type": "introducing-block-331",
+      "custom_css": [
+        ".line-block {font-family: \"GT Super\";}",
+        "@media (max-width: 768px) {.line-block {display: block; }}"
+      ],
+      "name": "PF331 intro block",
+      "settings": {
+        "className": "pf-176-img-text",
+        "textcolor": "#131e44",
+        "background": "#fafafa",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Introducing NEW <span class=\"line-block\">Fir & Peppermint</span>",
+        "image": "shopify://shop_images/Image_-_Desktop.png",
+        "mimage": "shopify://shop_images/Image_-_Mobile.png",
+        "details": "Crafted by our scent experts specially for our members. This loo deodoriser is an exclusive energising blend inspired by crisp mountain air and fragrant pine forests.",
+        "shop_now_cta": "CLAIM FREE SCENT",
+        "scrollto": "starterkit-product",
+        "top": "120",
+        "heading-position": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 4,
+        "funnel_stage": "landing_page",
+        "dataModule": "introducing",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_2_QUTUn7": {
+      "type": "image-with-text-3",
+      "disabled": true,
+      "custom_css": [
+        ".line-block {font-family: \"GT Super\";}",
+        "@media (max-width: 768px) {.line-block {display: block; }}"
+      ],
+      "settings": {
+        "className": "pf-176-img-text",
+        "textcolor": "#131e44",
+        "background": "#fafafa",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Introducing NEW <span class=\"line-block\">Fir & Peppermint</span>",
+        "image": "shopify://shop_images/Image_-_Desktop.png",
+        "mimage": "shopify://shop_images/Image_-_Mobile.png",
+        "details": "Crafted by our scent experts specially for our members. This loo deodoriser is an exclusive energising blend inspired by crisp mountain air and fragrant pine forests.",
+        "shop_now_cta": "CLAIM FREE SCENT",
+        "scrollto": "starterkit-product",
+        "top": "120",
+        "heading-position": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 4,
+        "funnel_stage": "landing_page",
+        "dataModule": "introducing",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_331_4nXJwc": {
+      "type": "global-product-331",
+      "blocks": {
+        "text_ghNXt8": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 Bathroom Bliss concentrates (Lime &amp; Lemongrass)"
+          }
+        },
+        "text_cLzXnh": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<span class=\"fw-400\">FREE</span> limited-edition Oh! de Loo (Fir &amp; Peppermint)"
+          }
+        },
+        "text_qam6iA": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<span class=\"fw-400\">FREE</span> glass Bathroom Bottle for Life"
+          }
+        },
+        "text_FnFcmx": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "<span class=\"fw-400\">FREE</span> luxurious microfibre cloth"
+          }
+        },
+        "text_LPJKtq": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "product_image_eFn87w": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/PF375_Main_Desktop_Updated.jpg",
+            "mimage": "shopify://shop_images/PF375_Main_Mobile_Updated.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_efzJhb": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_02.png",
+            "mimage": "shopify://shop_images/Mobile_02.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_XbpeGq": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_03.png",
+            "mimage": "shopify://shop_images/Mobile_03.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_3z7zb4": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_04.png",
+            "mimage": "shopify://shop_images/Mobile_04.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_YxAGQ7": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_-_05.png",
+            "mimage": "shopify://shop_images/Mobile_-_05.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_ghNXt8",
+        "text_cLzXnh",
+        "text_qam6iA",
+        "text_FnFcmx",
+        "text_LPJKtq",
+        "product_image_eFn87w",
+        "product_image_efzJhb",
+        "product_image_XbpeGq",
+        "product_image_3z7zb4",
+        "product_image_YxAGQ7"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".link-to-variant {font-family: \"Lausanne\";}",
+        "li.gp-5-variant-li.value-sans {font-family: \"Lausanne\";}",
+        ".gp-5-points li {font-weight: 200 !important;}",
+        ".gp-5-points {margin-top: -12px;}",
+        "@media (max-width: 768px) {.stars-img-review span {font-size: 12px !important; } .global-product-5 .star-img {width: 12px; } .global-product-19-wrapper .gp-5-price-points {background-color: #f5f5f5; } .global-product-19-wrapper .gp-4-details .gp-5-bottom {padding: 15px 0 15px; } .variant-badge {font-size: 10px; }}"
+      ],
+      "name": "Global Product 331",
+      "settings": {
+        "link-section": true,
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": true,
+        "guaranteeDescription": "30-day money-back guarantee",
+        "guaranteeTextColor": "#212121",
+        "scrollto": "",
+        "background": "#e7ebea",
+        "p_id": "starterkit-product",
+        "landingproduct": "limited-edition-bathroom-bliss-starter-kit",
+        "varaiantid": "55159618470268",
+        "sellingid": "710545375612",
+        "sku": "FG1148b",
+        "discount": "LimitedEditionBB375",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "className": "gp-5-ab global-product-19-wrapper  gp-219",
+        "mainheading": "Just launched: NEW Fir &amp; Peppermint edition",
+        "mainsubheading": "Save 75% and get FREE Oh! de Loo",
+        "choosescent": "",
+        "heading": "Bathroom Bliss: NEW Offer",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "59.95",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "38,325",
+        "reviews_desktop": "1,734",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 6,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "icon_blocks_reskin_QyJ6db": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_6yhndz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_48a1c4ac-987e-4b6c-a556-2bd93d461b9d.png"
+          }
+        },
+        "iconblocks_WWLqyn": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_05b6088b-b8ea-4fd6-80fc-f283ed98bca8.png"
+          }
+        },
+        "iconblocks_YXCGmM": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_489bfbf0-4865-4a33-b1df-0adade1926bb.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_6yhndz",
+        "iconblocks_WWLqyn",
+        "iconblocks_YXCGmM"
+      ],
+      "custom_css": [
+        ".heading-4 {color: #212121 !important;}",
+        ".icon-block-2 {border: unset;}"
+      ],
+      "settings": {
+        "class": "",
+        "bg": "#f6e3d1",
+        "textcolor": "#0c231f",
+        "heading": "Your member benefits",
+        "show_hide_block": true
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>Yes, Bathroom Bliss refills will be delivered every 90 days, meaning you never run out. You’re in control of your subscription so you can skip, bring forward or cancel your orders.</p><p>Oh! De Loo: Fir & Peppermint is limited edition and so it is not a subscription purchase.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>This scent will be available until Valentine's Day or until this limited edition scent lasts, so we recommend getting your skates on.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into your account with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to tweak your subscription however you like. You can change what’s in your order, adjust your delivery and billing date, or pause deliveries completely for a bit.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "announcement_bar_331_EJetx4",
+    "banner_331_apFFhH",
+    "reviews_carousel_331_3NQAnM",
+    "scents_block_331_XCFrGK",
+    "introducing_block_331_HrP8LF",
+    "image_with_text_2_QUTUn7",
+    "global_product_331_4nXJwc",
+    "icon_blocks_reskin_QyJ6db",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

@@ -1,0 +1,69 @@
+{% if section.settings.show_hide_usp %}
+<div class="container mobile-hide">
+  <div class="usps icon-usps d-flex justify-content-around">
+    {% if section.blocks.size == 0 %}
+    <div class="d-flex align-items-center column">
+      <span>{% render 'icon-ODL', content: product %}</span>
+      <span class="ms-2 value-sans">Free 1-Year Supply Oh! de Loo</span>
+    </div>
+    <div class="d-flex align-items-center column">
+      {% render 'icon-money', content: product %}
+      <span class="ms-2 value-sans">Money Back Guarantee</span>
+    </div>
+    <div class="d-flex align-items-center column">
+      {% render 'icon-cube', content: product %}
+      <span class="ms-2 value-sans">Eco Packaging</span>
+    </div>
+    {% else %}
+      {% for usp in section.blocks %}
+      <div class="d-flex align-items-center column">
+        {% if usp.settings.usp_icon_image != blank %}
+        <img src="{{ usp.settings.usp_icon_image | image_url }}" width="25" height="26" />
+        {% endif %}
+        {% if usp.settings.usp_icon_name != blank %}
+        <span class="ms-2 value-sans">{{ usp.settings.usp_icon_name }}</span>
+        {% endif %}
+      </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "USP Icon Banner",
+  "settings": [
+      {
+          "type": "checkbox",
+          "id": "show_hide_usp",
+          "label": "Show USP",
+          "default": true
+      }
+  ],
+  "blocks": [
+      {
+          "type": "uspicons",
+          "name": "USP Icon",
+          "limit": 3,
+          "settings": [
+              {
+                "type": "text",
+                "id": "usp_icon_name",
+                "label": "USP Icon Title"
+              },
+              {
+                "type": "image_picker",
+                "id": "usp_icon_image",
+                "label": "USP Icon Image"
+              }
+          ]
+      }
+  ],
+  "presets": [
+    {
+        "name" : "Icon USP"
+    }
+  ]
+}
+{% endschema %}

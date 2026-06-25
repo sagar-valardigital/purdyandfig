@@ -1,0 +1,130 @@
+<style>
+        .container {
+          margin-top: 3rem !important;
+        }
+        .img-container {
+            text-align: center;
+            overflow: hidden; /* Ensures image stays within container */
+        }
+        .img-container img {
+            width: 726px; 
+            height: auto;
+            object-fit: cover; /* Maintains aspect ratio while covering container */
+        }
+        .content-section {
+          text-align: center;
+          width: 930px;
+          padding: 0 !important;
+          max-width: 1280px;
+          margin: 21px auto 64px auto;
+          font-family: "TWK Lausanne";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 200;
+          line-height: 150%;
+        }
+
+        .content-section h2{
+            font-family: "GT Super";
+            font-size: 40px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 125%;
+          margin-bottom: 16px;
+        }
+
+      /* For mobile screens (generally smaller than 768px) */
+      @media (max-width: 768px) {
+        .container {
+          margin-top: 30px !important;
+        }
+        
+        .content-section {
+          max-width: 100%; /* Adjust the width as needed */
+          margin: 0 auto; /* Center the content */
+        }
+
+        .content-section h2 {
+          font-size: 36px;
+          margin-bottom: 8px;
+          margin-top: 16px;
+        }
+
+        .content-section p{
+            padding-inline: 14px;
+            font-size: 16px;
+        }
+      }
+        
+    </style>
+ <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-12 img-container">
+               {% if section.settings.image %}
+              {% assign mImage = section.settings.image | img_url: '800x' %}
+              {% assign mmImage = section.settings.mimage | img_url: '800x' %}
+              <img
+                loading="lazy"
+                src="{{mImage}}"
+                width="726px"
+                height="462px"
+                class="img-responsive w-100 h-auto mobile-hide"
+                alt="image"
+              >
+              <img
+                loading="lazy"
+                src="{{mmImage}}"
+                width="800px"
+                height="800px"
+                class="img-responsive w-100 h-auto desktop-hide"
+                alt="image"
+              >
+            {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12 content-section">
+                <h2>{{ section.settings.heading }}</h2>
+                <p>{{ section.settings.subHeading }}</p>
+                <p>{{ section.settings.description }}</p>
+            </div>
+        </div>
+    </div>
+{% schema %}
+  {
+    "name": "Text under image",
+    "settings": [
+      {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Add Desktop Image"
+    },
+      {
+      "type": "image_picker",
+      "id": "mimage",
+      "label": "Add Mobile Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subHeading",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description"
+    }
+    ],
+  "presets": [
+		{
+			"name": "Text under image"
+		}
+	]
+    
+  }
+{% endschema %}

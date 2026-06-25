@@ -1,0 +1,307 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.no-layout",
+  "sections": {
+    "aefa43af-1e23-4d1f-a993-3c7e77bacae8": {
+      "type": "global-announcement-bar",
+      "settings": {
+        "outOfStock": true,
+        "logo": false,
+        "class": "",
+        "text": "Build your Kit & Save 50%",
+        "bb-color": "#334fb4",
+        "text-color": "#ffffff",
+        "scrollto": "javascript:void(0);",
+        "annuText": "Click Here",
+        "landingproduct": ""
+      }
+    },
+    "44938aca-03ce-48a0-b77c-df84ade1af3c": {
+      "type": "single-flow-bundle",
+      "blocks": {
+        "0991d4d3-3380-4cec-a852-6e4e2cf5255a": {
+          "type": "product1",
+          "settings": {
+            "disabled": false,
+            "product_1": "moth-magic-cedarwood-patchouli",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Patchouli, Red Cedar, MayChang, Palmarosa & Amyris",
+            "popup_no": "1",
+            "pop_heading": "\"Moth Magic\" Patchouli & Cedarwood",
+            "pop_detail": "Top Notes <p> </p>\nMayChang - an intense fresh and citrusy aroma with insecticidal and calming properties.  <p> </p>\nMiddle Notes <p> </p>\nPalmarosa - a sweet, floral-rosy oil that’s antimicrobial and acts as an insect repellent.   <p> </p>\nBase Notes <p> </p>\nRed Cedar - a woody aroma with sweet balsamic scent that masks the scent of Keratin. <p> </p>\nPatchouli - a rich, sweet, herbaceous and aromatic aroma traditionally used as a moth and insect repellent. <p> </p>\nAmyris - a subtle, woody and sweet balsamic scent with antiseptic and sedative qualities. <p> </p>",
+            "PoopupIconCode": "<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Red_Cedar.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Patchouli.png?v=1692882966\">\n        </div>\n<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Palmarosa.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Amyris.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Maychang.png?v=1692882966\">\n        </div>\n\n<div></div>"
+          }
+        },
+        "feedcebc-749b-46fe-8dbf-8bdd80e1a8bb": {
+          "type": "product1",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "product_1": "linden-lavender",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "2",
+            "pop_heading": "Linden & Lavender",
+            "pop_detail": "<p>Top Notes </p><p>White Grapefruit - A sweet and fruity oil that’s known for its uplifting and energising properties.</p> <p>Middle Notes </p><p>  Linden Blossom - Extracted from the delicate, yellow flowers of the Linden tree - it’s a warm, floral and somewhat honey-like aroma with relaxing effects. </p><p> Neroli - Extracted from the flowers of bitter orange trees, this oil has a sweet, floral, citrus aroma. </p><p>  Lavender - A delicate, floral scent with grassy, herbal notes. Famed for its calming, sedative properties.</p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lavender_icon_f77a11eb-dde1-4cc3-86ed-bd51f6343604.png?v=1690188903\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Linden_icon_5323072a-3bb2-4341-a77b-195e0980a650.png?v=1690188903\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/white_grape_fruit_icon_8685e7c6-028a-4592-bf5e-b2ce27383a4e.png?v=1690188903\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/neroli_icon_821fa4a6-5a5c-48e1-819b-4804d3940ca2.png?v=1690188903\">\n        </div>\n<div></div>"
+          }
+        },
+        "cbc4a243-40e5-4996-9250-84d1ffab9092": {
+          "type": "product1",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "product_1": "citronella-niaouli",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Citronella Java, Niaouli, Eucalyptus Peppermint, Lavender, Geranium",
+            "popup_no": "3",
+            "pop_heading": "Citronella & Naiouli",
+            "pop_detail": "Top Notes <p> </p> Citronella Java - A fresh and citrusy oil with natural insect repellent properties. <p> </p> Eucalyptus Peppermint - A fresh and uplifting scent insect-repelling scent with a woody-sweet undertone. <p> </p> Middle Notes <p> </p> Niaouli - A camphorous oil with a fresh, minty aroma and eucalyptus-like scent. <p> </p> Lavender - Fresh and grassy, this fragrant oil freshens and softens the blend. <p> </p> Geranium - a floral and rosy oil that creates a calming and grounding effect.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Citronella.png?v=1688467258\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Niaouli.png?v=1688467255\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Eucalyp.png?v=1688467257\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium02.png?v=1688467257\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lavender.png?v=1688467256\">\n        </div>\n<div></div>"
+          }
+        },
+        "6527b6db-2349-4135-a813-c3d43730a39a": {
+          "type": "product1",
+          "settings": {
+            "disabled": false,
+            "product_1": "original-citrus",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "4",
+            "pop_heading": "Uplifting citrus",
+            "pop_detail": "Known for their cheerful aromas and mood-enhancing properties <p> </p> Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   <p> </p> Middle Notes <p> </p>   Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/grapefruit.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/naouli.png?v=1678288097\">\n        </div>\n<div></div>"
+          }
+        },
+        "4cd2937d-7ce7-4b40-8d57-c0ca8fac8392": {
+          "type": "product1",
+          "settings": {
+            "disabled": false,
+            "product_1": "grounding-vetiver",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Vetiver, Sweet Orange, Coriander Seed",
+            "popup_no": "5",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Middle Notes   <p> </p> Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.<p> </p>  Base Notes   <p> </p> Vetiver A calming oil with an earthy, grassy scent.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "0dde4c0f-6db4-4b2a-9a30-8689321d6329": {
+          "type": "product1",
+          "settings": {
+            "disabled": false,
+            "product_1": "balancing-floral",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Rose Geranium, Lemon Peel, Vetiver",
+            "popup_no": "6",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma. <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent. <p> </p> Middle Notes <p> </p> Niaouli Leaves - A stimulating and fresh oil with an earthy aroma. ",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        },
+        "5b92ff71-5619-4cf4-a54d-14d3aab01c8e": {
+          "type": "product1",
+          "disabled": true,
+          "settings": {
+            "disabled": true,
+            "product_1": "geranium-ylang-ylang",
+            "cart_product": "3-pack-bundle-starter-kit",
+            "tag": "",
+            "description": "Ho Wood, Geranium, Coriander, Clary Sage, Ylang Ylang",
+            "popup_no": "3",
+            "pop_heading": "Geranium & Ylang Ylang",
+            "pop_detail": "Middle Notes <p> </p> Geranium - Intensely floral, rosy oil that creates a calming and grounding effect.<p> </p> Ylang Ylang - a deep, rich floral aroma that promotes relaxation. <p> </p> Base Notes <p> </p> Ho Wood - Sweet and floral, Ho Wood essential oil promotes peace and tranquillity. <p> </p>  Coriander - an invigorating oil with a powerful, warm and peppery aroma. <p> </p> Clary Sage - a sweet and herbaceous scent with ambery tones of fresh tobacco.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ylang-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ho_wood-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander-scent.png?v=1683634425\">\n        </div>\n<div></div>"
+          }
+        },
+        "6e6e844d-35bf-4c24-90f5-4d96a53a1800": {
+          "type": "product2",
+          "settings": {
+            "disabled": false,
+            "product_2": "bathroom-bliss-bundle-kit",
+            "cart_product": "bathroom-bliss-bundle-kit",
+            "tag": "Save 50%",
+            "description": "Witch Hazel, Lemongrass, Lime",
+            "popup_no": "1",
+            "pop_heading": "Bathroom Bliss Starter kit",
+            "pop_detail": "Designed specially for all surfaces in your bathroom, the non-toxic formula tackles hard water and limescale marks fast (and without the elbow grease).\n<p>KIT INCLUDES: </p>\n\n<p>\n- Bathroom Bliss Bottle for Life\n</p><p>\n- 3 x Eco-Concentrates Lime &amp; Lemongrass</p><p>\n- Purdy &amp; Figg Microfibre Cloth</p>",
+            "PoopupIconCode": "<div>\n        <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/BB_BFL.png?v=1692957259\">\n    </div>\n<div>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Bathroom_Bliss.png?v=1692957260\">\n    </div>\n<div>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Cloth_02.png?v=1692957260\">\n    </div>\n<div></div>"
+          }
+        },
+        "cb2b41eb-1274-451c-8aa3-ff11972cbf04": {
+          "type": "product2",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "product_2": "bathroom-bliss-refill-booster-pack",
+            "cart_product": "",
+            "tag": "",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "",
+            "pop_heading": "",
+            "pop_detail": "",
+            "PoopupIconCode": ""
+          }
+        },
+        "5be56313-3789-425e-a8de-37b5a2fe92f2": {
+          "type": "product3",
+          "settings": {
+            "disabled": false,
+            "product_3": "hand-body-wash-balancing-floral",
+            "tag": "Save 14%",
+            "cart_product": "hand-body-wash",
+            "description": "Rose Geranium, Lemon Peel, Vetiver",
+            "popup_no": "1",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties",
+            "PoopupIconCode": "<div>\n        <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n    </div>\n<div>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n    </div>\n<div>\n\n<img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n    </div>\n<div></div>"
+          }
+        },
+        "5731576e-46a0-4814-9da6-9cec1f30b4c1": {
+          "type": "product3",
+          "settings": {
+            "disabled": false,
+            "product_3": "hand-body-wash-grounding-vetiver",
+            "tag": "Save 14%",
+            "cart_product": "hand-body-wash",
+            "description": "Vetiver, Sweet Orange, Coriander Seed",
+            "popup_no": "2",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "da94b373-7a19-46f6-9f60-573172140725": {
+          "type": "product3",
+          "settings": {
+            "disabled": false,
+            "product_3": "hand-body-wash-uplifting-citrus",
+            "tag": "Save 14%",
+            "cart_product": "hand-body-wash",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "3",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "865b0730-f52e-48c3-bdc8-ff7376f604c0": {
+          "type": "product5",
+          "settings": {
+            "disabled": false,
+            "product_5": "luxury-microfibre-cloth",
+            "cart_product": "luxury-microfibre-cloth",
+            "tag": "",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "1",
+            "pop_heading": "Luxury Microfibre Cloth",
+            "pop_detail": "A premium, Purdy &amp; Figg branded cloth, designed for use with your Counter Clean multisurface spray. Spray directly onto the cloth or surface and wipe clean.\nFor use on glass and windows, we recommend using a clean, dry cloth to buff the area.",
+            "PoopupIconCode": ""
+          }
+        },
+        "2aaf3f49-995b-41c7-9a63-b544bb89375d": {
+          "type": "product5",
+          "settings": {
+            "disabled": false,
+            "product_5": "bathroom-bliss-bottle-for-life-300ml",
+            "cart_product": "bathroom-bliss-bottle-for-life-300ml",
+            "tag": "",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "2",
+            "pop_heading": "Bathroom Bliss Bottle for Life",
+            "pop_detail": "A refillable and reusable glass Bottle for Life with silicone base to fill at home with your Bathroom Bliss eco-concentrates",
+            "PoopupIconCode": ""
+          }
+        },
+        "c4c5fb17-d7c0-4e20-b3ed-3a10c01712d3": {
+          "type": "product5",
+          "settings": {
+            "disabled": false,
+            "product_5": "cc-bottle-for-life",
+            "cart_product": "cc-bottle-for-life",
+            "tag": "",
+            "description": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "3",
+            "pop_heading": "Counter Clean Bottle for Life",
+            "pop_detail": "A refillable and reusable glass Bottle for Life to fill at home with your Counter Clean eco-concentrates",
+            "PoopupIconCode": ""
+          }
+        },
+        "0567b9de-95f0-409f-9570-bc8b58353fac": {
+          "type": "product4",
+          "settings": {
+            "disabled": false,
+            "product_4": "",
+            "cart_product": "",
+            "tag": "",
+            "description": "",
+            "popup_no": "1",
+            "pop_heading": "Oh De Loo!",
+            "pop_detail": "Lime &amp; Lemongrass scented deodorising drops (100ml) to eliminate unwanted bathroom smells!\n<p></p> <p>\nSimply pop several drops in the loo after flushing to leave the bathroom smelling better than you found it.\n</p> <p> \nINCLUDES:\n</p> <p>\n- 100ml Oh de Loo with pipette.</p>",
+            "PoopupIconCode": "<div>\n\n        <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/ODL.png?v=1692957259\">\n              </div>\n      <div></div>"
+          }
+        }
+      },
+      "block_order": [
+        "0991d4d3-3380-4cec-a852-6e4e2cf5255a",
+        "feedcebc-749b-46fe-8dbf-8bdd80e1a8bb",
+        "cbc4a243-40e5-4996-9250-84d1ffab9092",
+        "6527b6db-2349-4135-a813-c3d43730a39a",
+        "4cd2937d-7ce7-4b40-8d57-c0ca8fac8392",
+        "0dde4c0f-6db4-4b2a-9a30-8689321d6329",
+        "5b92ff71-5619-4cf4-a54d-14d3aab01c8e",
+        "6e6e844d-35bf-4c24-90f5-4d96a53a1800",
+        "cb2b41eb-1274-451c-8aa3-ff11972cbf04",
+        "5be56313-3789-425e-a8de-37b5a2fe92f2",
+        "5731576e-46a0-4814-9da6-9cec1f30b4c1",
+        "da94b373-7a19-46f6-9f60-573172140725",
+        "865b0730-f52e-48c3-bdc8-ff7376f604c0",
+        "2aaf3f49-995b-41c7-9a63-b544bb89375d",
+        "c4c5fb17-d7c0-4e20-b3ed-3a10c01712d3",
+        "0567b9de-95f0-409f-9570-bc8b58353fac"
+      ],
+      "settings": {
+        "show": false,
+        "desktopLogo": "shopify://shop_images/Purdy_Figg_Logo_SingleStack_Plan_de_travail_1-01.svg",
+        "mobileLogo": "shopify://shop_images/Purdy_Figg_Logo_Icon_Plan_de_travail_1-01.svg",
+        "heading_1": "Starter Kit",
+        "card_heading": "Build Your Starter Kit",
+        "card_img": "shopify://shop_images/Productimages_6f720d0a-c9cd-4e56-a2db-cddc1db3b24c.png",
+        "card_heading_color": "#334fb4",
+        "wizardone": "christmas-22",
+        "heading_2": "Bathroom Bliss",
+        "wizardtwo": "bathroom-bliss",
+        "heading_3": "Hand Wash",
+        "wizardthree": "charlottes-floral",
+        "title": "Oh de Loo!",
+        "tag": "Save 20%",
+        "wizardfour": "oh-de-loo",
+        "wizardfour_cart_product": "oh-de-loo",
+        "description": "Witch Hazel, Lemongrass, Lime",
+        "wizardfourImage": "shopify://shop_images/Mask_Group_65_2x_dabd2671-eeb9-4460-9141-1ef52b9ce904.png",
+        "heading_5": "Add Ons",
+        "wizardfive": "counter-clean",
+        "content_color": "#3541bf",
+        "content_align": "center"
+      }
+    }
+  },
+  "order": [
+    "aefa43af-1e23-4d1f-a993-3c7e77bacae8",
+    "44938aca-03ce-48a0-b77c-df84ade1af3c"
+  ]
+}

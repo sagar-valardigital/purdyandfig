@@ -1,0 +1,812 @@
+<style>
+  html {
+    scrollbar-gutter: stable;  
+  }
+  
+  /* Hide specific elements based on cart type */
+  .pf-min-cart.cart-2 .min-cart-footer:not(.cart-footer-2),
+  .pf-min-cart.cart-2 .min-cart-header:not(.cart-header-2),
+  .pf-min-cart:not(.cart-2) .min-cart-footer.cart-footer-2,
+  .pf-min-cart:not(.cart-2) .min-cart-header.cart-header-2,
+  .pf-min-cart:not(.cart-2) .cart-top-bar {
+    display: none;
+  }
+
+  /* Styling for cart overlay */
+  .cart-ab-2 .cart-overlay {
+    background: rgba(22, 23, 24, 0.25);
+    -webkit-backdrop-filter: saturate(100%) blur(0px);
+    backdrop-filter: saturate(100%) blur(0px);
+    opacity: 1;
+    
+    transition: opacity 0.4s ease-in-out;
+    -moz-transition: opacity 0.4s ease-in-out;
+    -webkit-transition: opacity .25s  ease-in-out;
+  }
+
+  /* Cart heading styles */
+  .cart-ab-2 .cart-heading {
+    text-align: left;
+  }
+
+  .cart-ab-2 .cart-heading h2 {
+    font-size: 16px !important;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  /* Styles for quantity wrapper */
+  .cart-ab-2 .qty-wrapper {
+    width: 197px;
+    border-radius: 0;
+    border: 1px solid #B8B9BD;
+    height: 40px;
+  }
+
+  .cart-ab-2 .qty-wrapper .qty-minus,
+  .cart-ab-2 .qty-wrapper .qty-plus,
+  .cart-ab-2 .qty-wrapper .qty {
+    height: 40px;
+  }
+
+  .cart-ab-2 .qty-wrapper .qty-minus,
+  .cart-ab-2 .qty-wrapper .qty-plus {
+    padding: 0px 20px;
+  }
+
+  .cart-ab-2 .qty-wrapper .qty-minus:after,
+  .cart-ab-2 .qty-wrapper .qty-plus:after,
+  .cart-ab-2 .qty-wrapper .qty-plus:before {
+    background: #434448;
+  }
+
+  .cart-ab-2 .qty-wrapper .qty {
+    color: #434448;
+    font-weight: bold;
+    font-family: "Value-Sans" !important;
+  }
+
+  /* Styles for empty cart block */
+  .cart-ab-2 .empty-cart-block .min-cart-body {
+    height: calc(100vh - 230px);
+  }
+
+  .cart-ab-2 .empty-cart-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  .cart-ab-2 .empty-cart-wrapper .empty-cart-products {
+    width: 100%;
+  }
+
+  /* Styles for free limit check */
+  .cart-ab-2 .free-limit-check {
+    text-align: center;
+  }
+
+  .cart-ab-2 .free-limit-check span {
+    display: inline-block;
+    width: 22px;
+  }
+
+  .cart-ab-2 .free-limit-check span svg {
+    width: 100%;
+    fill: #ccc;
+  }
+
+  .cart-ab-2 .free-limit-check.checked span svg {
+    width: 100%;
+    fill: #161718;
+  }
+
+  .cart-ab-2 .free-limit-check span~b {
+    font-size: 12px;
+  }
+
+  .cart-ab-2 .free-limit-progress-bar {
+    width: 100%;
+    height: 10px;
+    border-radius: 15px;
+    background: #fff;
+    margin-top: 5px;
+  }
+
+  .cart-ab-2 .progress-bar {
+    width: 0%;
+    height: 10px;
+    display: block;
+    background: #161718;
+    border-radius: 15px;
+    transition: all 1s ease;
+  }
+  
+  /* Styles for cart price slider */
+  .cart-ab-2 .cart-price-slider {
+    padding: 6px 15px 10px 15px;
+    background: #DEE4F6;
+    margin-bottom: 14px;
+  }
+
+  .cart-ab-2 .cart-price-slider.gradient-bg {
+    background-image: linear-gradient(to top, #EAE6FF, #F2F5FF) !important;
+    background-color: transparent;
+  }
+
+  /* Styles for cart top bar */
+  .cart-ab-2 .cart-top-bar {
+    margin: 0px -15px 0px -15px;
+    font-size: 15px;
+    padding: 12px !important;
+  }
+
+  /* Styles for cart product details */
+  .cart-ab-2 .cart-product-details input.qty {
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+
+  .cart-ab-2 .cart-product-details .p-category {
+    color: #000000;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  .cart-ab-2 .cart-product-details .subscription-details {
+    color: #667085;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  /* Styles for cart products wrapper */
+  .cart-ab-2 .cart-products-wrapper {
+    padding: 8px 16px;
+  }
+
+  /* Styles for cart subscription */
+  .cart-ab-2 .cart_subscription {
+    text-align: right;
+  }
+
+  .cart-ab-2 .cart_subscription--discount {
+    color: #434448;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  /* Styles for individual cart product */
+  .cart-ab-2 .cart-products-wrapper .cart-product {
+    background: #fff;
+    margin-left: -16px;
+    margin-right: -16px;
+    margin-bottom: 8px;
+    padding: 16px;
+    border-bottom: 0px;
+    border-radius: 8px;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.06), 0px 1px 3px 0px rgba(16, 24, 40, 0.10);
+  }
+
+  .cart-ab-2 .cart-products-wrapper .cart-product .remove-product {
+    top: 0px;
+    right: -24px;
+  }
+
+  .cart-ab-2 .cart-products-wrapper .cart-product .cart-product-image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .cart-ab-2 .cart-products-wrapper .cart-product .cart-product-image img {
+    margin: auto;
+  }
+
+  .cart-ab-2 .cart-products-wrapper .cart-product .p-price {
+    display: flex;
+    margin-top: auto;
+  }
+
+  .cart-ab-2 .cart-products-wrapper .cart-product .p-price h3 {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    color: #3350B4;
+    font-family: "Value-Bold";
+    text-align: right;
+  }
+
+  .cart-ab-2 .cart-products-wrapper .cart-product .p-price h3 small del {
+    color: #707279;
+    font-size: 14px;
+    font-family: "Value-Sans";
+  }
+
+  /* Styles for subtotal */
+  .cart-ab-2 .subtotal {
+    font-size: 20px;
+    line-height: 30px;
+    border-top: 1px solid #E4E7EC;
+    padding: 14px;
+    margin: 0;
+  }
+
+  /* Styles for Subscribe and Save total */
+  .cart-ab-2 .subsaving {
+    font-size: 16px;
+    line-height: 24px;
+    border-top: 1px solid #E4E7EC;
+    padding: 14px;
+    margin: 0;
+  }
+  
+  /* Styles for min cart wrapper */
+  .cart-ab-2 .min-cart-wrapper {
+    height: 100%;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cart-ab-2 .min-cart-header {
+    width: 100%;
+    border-bottom: 1px solid #DFE0E1;
+  }
+
+  .cart-ab-2 .min-cart-header .cart-arrow {
+    display: flex;
+    padding: 0;
+  }
+
+  .cart-ab-2 .min-cart-footer {
+    position: relative;
+    padding-bottom: 20px;
+    width: 100%;
+  }
+
+  .cart-ab-2 .min-cart-body {
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow-x: hidden;
+    background: #fff;
+  }
+
+  .cart-ab-2 .min-cart-body::-webkit-scrollbar {
+  }
+
+  /* Styles for checkout button */
+  .min-cart-footer .checkout-btn {
+    width: 100%;
+    background: #161718;
+    font-size: 18px;
+    line-height: 28px;
+    border-radius: 8px;
+    padding: 16px 28px;
+    color: #ffffff;
+    gap: 12px;
+  }
+
+  .min-cart-footer .loading img {
+    display: none;
+  }
+
+  .min-cart-footer .checkout-btn:hover {
+    background: #3350B4;
+  }
+
+  @media (max-width: 560px) {
+    .cart-ab-2 .min-cart-footer {
+      position: relative;
+      padding-bottom: 20px;
+    }
+  }
+
+  /* Styles for quantity buttons */
+  button.qty-minus,
+  button.qty-plus {
+    background: transparent;
+    border: none;
+  }
+
+  .qty-minus:disabled,
+  .qty-plus:disabled {
+    opacity: 0.3;
+    cursor: not-allowed;
+  }
+
+  .cart-ab-2 .qty-minus {
+    border-right: 1px solid #B8B9BD;
+  }
+
+  .cart-ab-2 .qty-plus {
+    border-left: 1px solid #B8B9BD;
+  }
+
+  .cart-ab-2 .min-cart-wrapper {
+      right: -400px;
+      -webkit-animation: slide 0.4s forwards;
+      animation: slide 0.4s forwards;
+  }
+
+  .cart-ab-2 .up-title h4 {
+    font-family: "Value-Bold" !important;
+    color: #000000;
+    padding-right: 8px;
+  }
+
+  .cart-ab-2 .up-top .btn {
+    background: #000000 !important;
+    border-color: #000000 !important;
+    color: #ffffff;
+    border-radius: 8px;
+    font-size: 14px;
+    font-family: "Value-Sans" !important;
+  }
+
+  .cart-ab-2 .up-top .btn:hover {
+    background: #161718 !important;
+    border-color: #161718 !important;
+  }
+
+  .cart-ab-2 .upsell-2 .upsell-product-section {
+    padding: 0px 6px;
+  }
+
+  .cart-ab-2 .upsell-2 .upsell-product-section .up-product-img {
+    max-width: 80px;
+  }
+
+  .cart-ab-2 .upsell-2 .upsell-product {
+    padding: 0 !important;
+    margin-bottom: 8px !important;
+  }
+
+  .cart-ab-2 .upsell-price {
+    font-family: "Value-Bold";
+    color: #3350B4;
+  }
+
+  .cart-ab-2 .colletion-product .product-detail .heading-4 {
+    font-family: "Value-Bold" !important;
+    color: #161718 !important;
+    font-size: 18px !important;
+  }
+
+  .cart-ab-2 .colletion-product .product-detail .colletion-add {
+    font-family: "Value-Sans" !important;
+    color: #fff;
+    background: #000;
+    border-color: #000;
+    border-radius: 8px !important;
+    margin-top: 14px;
+  }
+
+  .cart-ab-2 .colletion-product .product-detail .colletion-add:hover {
+    background: #3350B4;
+    border-color: #3350B4;
+  }
+
+  .cart-ab-2 .colletion-product .product-img a {
+    display: flex;
+    height: 170px;
+  }
+
+  .cart-ab-2 .colletion-product .product-img a img {
+    margin-bottom: 20px;
+  }
+
+  .cart-ab-2 .colletion-product .product-img .coll-tag-wrap .collection-tag {
+    font-family: "Value-Sans" !important;
+    color: #000;
+  }
+
+  .cart-ab-2 .colletion-product .oke-sr-count {
+    font-family: "Value-Sans" !important;
+  }
+
+  .cart-ab-2 .colletion-product .oke-sr-count span {
+    color: #000;
+  }
+
+  .cart-ab-2 .colletion-product .oke-stars .oke-stars-foreground svg {
+    filter: grayscale(100%) brightness(10%);
+  }
+
+  .no-animation {
+    -webkit-animation: slide 0s forwards !important;
+    animation: slide 0s forwards !important;
+  }
+
+  @-webkit-keyframes slide-out {
+    0% { right: 0; }
+    100% { right: -400px; }
+  }
+  
+  @keyframes slide-out {
+    0% { right: 0; }
+    100% { right: -400px; }
+  }
+  
+  .cart-ab-2 .min-cart-wrapper.slide-out {
+    -webkit-animation: slide-out 0.4s forwards;
+    animation: slide-out 0.4s forwards;
+  }
+  
+  @-webkit-keyframes slide {
+      0% { right: -400px; }
+      100% { right: 0; }
+  }
+  
+  @keyframes slide {
+      0% { right: -400px; }
+      100% { right: 0; }
+  }
+
+  @media (max-width: 400px) {
+    .cart-ab-2 .min-cart-wrapper {
+      top: 100vh;
+      right: 0;
+      -webkit-animation: slide 0.4s forwards;
+      animation: slide 0.4s forwards;
+    }
+
+    @-webkit-keyframes slide-out {
+      0% { top: 0; }
+      100% { top: 100vh; }
+    }
+    
+    @keyframes slide-out {
+      0% { top: 0; }
+      100% { top: 100vh; }
+    }
+    
+    @-webkit-keyframes slide {
+        100% { top: 0; }
+    }
+    
+    @keyframes slide {
+        100% { top: 0; }
+    }
+  }
+</style>
+
+{% assign current_total = cart.total_price | money_without_currency %}
+{% assign free_shipping_total = settings.free_shipping_amount | minus: current_total %}
+{% assign free_product_total = settings.free_product_amount | minus: current_total %}
+{% assign free_shipping_progress = current_total | divided_by: settings.free_shipping_amount | times: 100 %}
+{% assign free_shipping_progress = free_shipping_progress | divided_by: 1 %}
+{% assign free_product_progress = current_total | divided_by: settings.free_product_amount | times: 100 %}
+
+{% if free_shipping_progress > 100 %}
+  {% assign free_shipping_progress = 100 %}
+{% endif %}
+
+<div data-cart-init="{{ free_shipping_progress }}" class="pf-min-cart cart-ab-2 cart-2" x-ref="cart_content" x-data="
+    {
+       showCartDrawer: false,
+       loading: false,
+       updateCart(){
+          // send fetch reqeust to update cart
+          fetch('/?view=cart-3')
+          .then(response => response.text())
+          .then(cartData => {
+             $refs.cart_content.innerHTML = cartData;
+          
+             // This code is use to parse json object. for cart count
+             var el = document.createElement('div');
+             el.innerHTML = cartData;
+             //var cartCount = JSON.parse(el.querySelector('[data-options]').innerHTML).item_count;
+             $dispatch('cart-count-updated', cartData);
+             this.loading = false;
+          
+          });
+          animateDrawer(false);
+       },
+       async removeBundle(boxIndex) {
+        fetch('/cart.js')
+        .then((response) => response.json())
+        .then(async (response) => {
+          let updates = {};
+    
+          for(const item of response.items) {
+            if(item.properties.hasOwnProperty('_dynamicBoxIndex') && item.properties['_dynamicBoxIndex'] == boxIndex) {
+              updates[item.key] = 0;
+            }
+          }
+    
+          fetch('/cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              updates,
+            })
+          })
+          .then((response) => response.json())
+          .then((data) => {
+            Purdy.CartCountUpdate();
+            window.dispatchEvent(new Event('cart-updated'));
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+        })
+      }
+    }
+  "
+  x-show="showCartDrawer" x-init="if(!showCartDrawer) document.body.style.overflow = 'auto';" @cart-updated.window="updateCart; if(!showCartDrawer) { document.body.style.overflow = 'auto'; }" @toggle-cart.window="showCartDrawer = !showCartDrawer; if(showCartDrawer) { document.body.style.overflow = 'hidden'; animateDrawer(false);}" x-cloak>
+  
+  <span class="cart-overlay" x-show="showCartDrawer" x-transition:enter.opacity.duration.400ms x-on:click="setTimeout(() => { showCartDrawer = false; $dispatch('cart-close'); }, 400); animateDrawer(true);"></span>
+
+  <div class="min-cart-wrapper position-relative">
+    <div class="min-cart-header cart-header-2">
+      <div class="d-flex align-items-center position-relative">
+        <div class="cart-heading">
+          <h2 class="heading-3-5 m-0 value-bold">Cart</h2>
+        </div>
+        <div class="cart-arrow" x-on:click="setTimeout(() => { showCartDrawer = false; $dispatch('cart-close'); }, 400); animateDrawer(true);">
+          <img width="24px" height="24px" src="{{'close.svg' | asset_url}}" alt="">
+        </div>
+      </div>
+    </div>
+    <div class="min-cart-body pt-0">
+      {% if settings.cartAnnouncementShow %}
+        <div class="p-2 theme-text text-center cart-top-bar">
+          <small>
+            {{- settings.cartAnnouncement }}
+            <a href="{{ settings.cartAnnouncementLink }}" class="theme-text"><u>Shop Now</u></a></small>
+        </div>
+      {% endif %}
+
+      <div class="cart-products-wrapper" style="{% if cart.item_count == 0 %}padding-left: 0; padding-right: 0;{% endif %}">
+        {% if cart.item_count == 0 %}
+          <div class="py-2">
+            <h2 class="m-0 heading-3 text-center theme-text value-bold" style="color: #161718; font-size: 18px;">
+              Your cart is empty
+            </h2>
+            <p class="text-center value-sans" style="color: #161718;">Add your favourite items to your cart</p>
+          </div>
+  
+          <div class="mt-1 empty-cart-wrapper">
+            <div class="empty-cart-products">
+              {%- for product in settings.emptycoll.products -%}
+                {% if product.available %}
+                  {% render 'cart-product',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load
+                  %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% assign total_savings_subscription = 0 %}
+        
+        {% for item in cart.items %}
+          <div class="cart-product">
+            <div class="d-flex flex-wrap">
+              {% if item.image %}
+                <div class="cart-product-image d-flex">
+                  {{ item.image | image_url: width: 400 | image_tag: loading: 'lazy', class: 'img-responsive w-100' }}
+                </div>
+              {% endif %}
+
+              <div class="cart-product-details value-sans theme-text">
+                <div class="">
+                  <h4 class="p-category m-0 value-bold">{{ item.title }}</h4>
+                  <h3 class="p-title my-1 value-sans">{{ item.product.type }}</h3>
+                </div>
+                
+                <small class="subscription-details">
+                  {% if item.variant.metafields.metadata.includes -%}
+                    Includes: {{ item.variant.metafields.metadata.includes -}}
+                    <br>
+                  {% endif %}
+                  {{ item.selling_plan_allocation.selling_plan.name }}
+                </small>
+
+                <div class="remove-product" title="remove {{ item.product.title }}" @click="loading = true; {% if isBoxItem %}removeBundle({{ boxIndex }}){% else %}Purdy.updateQuantity({{ forloop.index }}, 0){% endif %}">
+                  <img src="{{'trash.svg' | asset_url}}" width="24px" height="24px" alt="">
+                </div>
+              </div>
+            </div>
+
+            {% assign isBoxItem = false %}
+            {% assign boxIndex = nil %}
+            {% for property in item.properties %}
+              {% if property.first contains '_dynamicBoxIndex' %}
+                {% assign isBoxItem = true %}
+                {% assign boxIndex = property.last | plus: 0 %}
+              {% endif %}
+            
+              {% unless property.first contains '_' %}
+                <div class="line-item-property" >
+                  <small class="property-name">{{ property.first }}:</small>
+                  <small class="property-value">{{ property.last }}</small>
+                </div>
+              {% endunless %}
+            {% endfor %}
+                
+            <div class="d-flex align-items-center justify-content-between my-2" x-data="{ qty: {{ item.quantity }}}" {% if item.price <= 0 %}style="justify-content: flex-end;"{% endif %}>
+              {% if item.price > 0 %}
+              <div class="qty-wrapper">
+                <button {% if isBoxItem %} disabled {% endif %} class="qty-minus" @click.debounce="loading = true; Purdy.updateQuantity({{ forloop.index }}, --qty);"></button>
+                <input class="qty" type="text" value="1" x-model="qty">
+                <button {% if isBoxItem %} disabled {% endif %} class="qty-plus" @click.debounce="loading = true; Purdy.updateQuantity({{ forloop.index }}, ++qty)"></button>
+              </div>
+              {% endif %}
+              <div class="p-price">
+                <h3 class="m-0">
+                  {% if item.product.compare_at_price > item.price %}
+                    <small><del>{{ item.product.compare_at_price | money }}</del></small>
+                  {% endif %}
+                  {{ item.price | money }}
+                </h3>
+              </div>
+            </div>
+            
+            {% if item.selling_plan_allocation.price > 0 and item.selling_plan_allocation.selling_plan.price_adjustments[0].value > 0 %}
+              {% assign value_discount = item.product.price | minus:item.selling_plan_allocation.selling_plan.price_adjustments[0].value %}
+              {% assign value_discount_comp = value_discount | plus: 0 %}
+              {% assign value_discount_comp = value_discount_comp | times: item.quantity %}
+            
+              {% if value_discount_comp > 0 %}
+                <div class="cart_subscription">
+                  <span class="cart_subscription--discount value-sans text-green-700">
+                    You saved
+                    {% if item.selling_plan_allocation.selling_plan.price_adjustments[0].value_type == 'percentage' %}
+                      {% assign total_savings_subscription = total_savings_subscription | plus: (item.price | times: item.quantity) %}
+                      {{ item.selling_plan_allocation.selling_plan.price_adjustments[0].value }}%
+                    {% else %}
+                      {{ value_discount_comp | money }}
+                    {% endif %}
+                  </span>
+                </div>
+              {% endif %}
+            {% endif %}
+          </div>
+        {% endfor %}
+      </div>
+      {% if settings['cart--show-mini'] %}
+        {% assign upsell_product_string = '' %}
+        {% for product in settings.upsellcoll.products %}
+          {% if forloop.last %}
+            {% assign upsell_product_string = upsell_product_string | append: product.handle %}
+          {% else %}
+            {% assign upsell_product_string = upsell_product_string | append: product.handle | append: ', ' %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign upsell_product_array = upsell_product_string | split: ', ' %}
+
+        {% for product in settings.upsellcoll.products %}
+          {% if forloop.last %}
+            {% assign last_product = product.handle %}
+          {% endif %}
+        {% endfor %}
+
+        {% for item in cart.items %}
+          {% if upsell_product_array contains item.product.handle %}
+            {% if item.product.handle == last_product %}
+              {% assign item_handle = item.product.handle %}
+            {% else %}
+              {% assign item_handle = item.product.handle | append: ', ' %}
+            {% endif %}
+            {% assign upsell_product_string = upsell_product_string | remove: item_handle %}
+          {% endif %}
+        {% endfor %}
+
+        {% assign upsell_products = upsell_product_string | split: ', ' %}
+        {% if cart.item_count > 0 %}
+          {% for uproduct in upsell_products %}
+            {% if forloop.index == 1 %}
+              <div class="text-center">
+                <h3 class="heaidng-3 py-2 value-sans" style="color:#000000; font-size: 14px; font-weight:800; margin-top: 16px">
+                  {{ settings['cart--upsell-product-heading'] }}
+                </h3>
+              </div>
+            {% endif %}
+
+            <div class="cart--upsell value-sans show {{ upsell_product_string }}">
+              {% render 'upsell-product-2', pHandle: uproduct %}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endif %}
+    </div>
+
+    <div class="min-cart-footer cart-footer-2">
+      <div class="cart-price-slider theme-text">
+        {% if cart.items == 0 %}
+          <div class="d-flex justify-content-center">
+            <div class="free-delivery-limit free-limit-check  {% if free_shipping_total <= 0 %} checked {%  endif %}">
+              <b>Free Shipping</b>
+            </div>
+          </div>
+        {% endif %}
+        
+        {% if free_shipping_total > 0 %}
+          <p class="value-sans" style="color: #434448; font-size: 12px; text-align: center; margin-bottom: 0px; font-weight: 700; line-height: 18px;">
+            <b>Add {{ free_shipping_total | times: 100 | money }} to unlock FREE SHIPPING!</b>
+          </p>
+          <div class="free-limit-progress-bar">
+            <span class="progress-bar" style="width:{{ free_shipping_progress }}%"></span>
+          </div>
+
+        {% else %}
+          <p class="value-sans" style="color: #434448; font-size: 12px; text-align: center; margin-bottom: 0px; font-weight: 700; line-height: 18px;">
+            <b>{{ settings.freeShippingOption }}</b>
+          </p>
+          <div class="free-limit-progress-bar"><span class="progress-bar" style="width:100%"></span></div>
+        {% endif %}
+      </div>
+      
+      <form action="/checkout/" name="checkout_form">
+        <div class="">
+          {% if total_savings_subscription > 0 %}
+            <div class="subsaving d-flex justify-content-between value-bold" style="color: #3350B4;">
+              <b>Subscribe & Save 50%</b>
+              <b>-{{ total_savings_subscription | money }}</b>
+            </div>
+          {% endif %}
+          <div class="subtotal d-flex justify-content-between value-bold" style="color: #000000;">
+            <div>
+              <b>Subtotal ({{ cart.item_count }} {{ cart.item_count | pluralize: 'item', 'items' }})</b>
+            </div>
+            <div>
+              <b>{{ cart.total_price | money }}</b>
+            </div>
+          </div>
+          <div class="w-100">
+            <button type="submit" class="btn d-flex checkout-btn value-sans btn-loader" style="">
+              <span class="d-flex">
+                <span style="padding-right: 12px;">Checkout securely</span>
+                <img src="{{'lock.svg' | asset_url}}" class="my-auto" width="24px" height="24px" alt="">
+              </span>
+            </button>
+          </div>
+          {% if settings.freeshipping -%}
+            <p class="value-sans mt-1 mb-0 text-center" style="color: #000000;">Free Delivery on UK orders</p>
+          {%- endif %}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script>
+  const animateDrawer = (bool) => {
+    const cartElement = document.querySelector(".cart-ab-2");
+    const cartWrapperElement = document.querySelector(".min-cart-wrapper");
+    const cartOverlay = document.querySelector(".cart-ab-2 .cart-overlay");
+  
+    if (!bool) {
+      /* Add no-animation class after animation has completed (400ms) */
+      cartOverlay.style.opacity = 1;
+      setTimeout(() => {
+        cartWrapperElement.classList.add("no-animation");
+      }, 400);
+    } else {
+      cartOverlay.style.opacity = 0;
+      cartWrapperElement.classList.remove("no-animation");
+      cartWrapperElement.classList.add("slide-out");
+
+      setTimeout(() => {
+        cartWrapperElement.classList.remove("slide-out");
+        document.body.style.overflow = "auto";
+      }, 400);
+    }
+  }
+</script>

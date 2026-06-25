@@ -1,0 +1,31 @@
+<style>
+  .collection-link.active, .collection-filters.no-scroll .collection-link.active {
+    border: 0px !important;
+    background-color: #ffffff;
+    color: #11322C;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+  }
+
+  .collection-link {
+    display: block;
+    padding: 8px;
+    background-color: #ffffff !important;
+    color: #9E9E9E;
+    margin: 10px 8px;
+    text-align: center;
+    white-space: nowrap;
+    border: 0px;
+  }
+</style>
+
+ {% for block in section.blocks %}
+          {% if block.type == 'Filters' %}
+          {% assign pageHandle = collection.url | handle %}
+          {% assign collectionHandle = block.settings.collectionFilters.url | handle %}
+          <a href="{{ block.settings.collectionFilters.url }}" class="collection-link {%if pageHandle == collectionHandle %}active {% assign seo_t = block.settings.seo_title %}{% endif %}">
+            {{ block.settings.collectionFilters.title }}
+  </a>
+         
+          {% endif %}
+          {% endfor %}

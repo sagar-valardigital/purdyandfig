@@ -1,0 +1,140 @@
+<style>
+  .listicle-image-with-text {
+    padding-top: 48px;
+  }
+  .main-listicle-container {
+    width: 60%;
+    margin: 0px auto;
+    text-align: center;
+  }
+  .main-listicle-container .heading-2 {
+    font-size: 48px !important;
+    line-height: 60px !important;
+    padding-top: 25px;
+  }
+  .main-listicle-container .normal-text {
+    font-size: 18px;
+    line-height: 27px;
+    color: #212121;
+    padding-top: 16px;
+    font-weight: 200;
+    font-family: 'Lausanne';
+  }
+  @media (max-width: 768px) {
+    .listicle-image-with-text {
+      padding-top: 32px;
+      padding-left: unset;
+      padding-right: unset;
+    }
+    .main-listicle-container {
+      width: 100%;
+      margin: 0px auto;
+      text-align: center !important;
+    }
+    .main-listicle-container .heading-2 {
+      font-size: 36px !important;
+      line-height: 45px !important;
+      padding-top: 25px;
+      letter-spacing: 0 !important;
+    }
+    .main-listicle-container .normal-text {
+      font-size: 16px;
+      line-height: 24px;
+      padding-top: 8px !important;
+    }
+  }
+</style>
+
+<div class="{{ section.settings.className }}">
+  <div
+    style="background-color:{{section.settings.background}};"
+    class="listicle-image-with-text"
+  >
+    <div class="container main-listicle-container">
+      <div class="two-women">
+        {% if section.settings.image %}
+          {% assign mImage = section.settings.image | img_url: '800x' %}
+          {% assign mmImage = section.settings.mimage | img_url: '800x' %}
+          <img
+            loading="lazy"
+            src="{{mImage}}"
+            width="800px"
+            height="800px"
+            class="img-responsive w-100 h-auto mobile-hide"
+            alt="{{ section.settings.image.alt }}"
+          >
+          <img
+            loading="lazy"
+            src="{{mmImage}}"
+            width="800px"
+            height="800px"
+            class="img-responsive w-100 h-auto desktop-hide"
+            alt="{{ section.settings.mimage.alt }}"
+          >
+        {% endif %}
+      </div>
+    </div>
+
+    <div class="container main-listicle-container listicle-text-box">
+      <div class="two-women">
+        <h2 class="heading-2 value-bold blue-text {{section.settings.textcolor}}">
+          {{ section.settings.heading }}
+        </h2>
+        <div class="normal-text {{section.settings.textcolor}}">
+          {{ section.settings.details }}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Listicle banner 213",
+    "settings": [
+      {
+        "type": "text",
+        "id": "className",
+        "label": "Add Section class Name"
+      },
+      {
+        "type": "color",
+        "id": "textcolor",
+        "label": "Select text color",
+        "default": "#3541BF"
+      },
+      {
+        "type": "color",
+        "id": "background",
+        "label": "Select background color",
+        "default": "#ffffff"
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Add Desktop Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mimage",
+        "label": "Add Mobile Image"
+      },
+      {
+        "type": "html",
+        "id": "details",
+        "label": "Detail Text"
+      },
+	],
+	"presets": [
+      {
+          "name": "Listicle banner 213"
+      }
+	]
+  }
+{% endschema %}

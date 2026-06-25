@@ -1,0 +1,84 @@
+<div class="block-section py-80 icon-blocks-2">
+  <div class="container">
+    <h2 class="heading-2 text-center m-text-left blue-text value-bold mt-0 ">
+      {{ section.settings.heading }}
+    </h2>
+    <div class="d-flex flex-wrap justify-content-between  theme-text my-1 icon-blocks-2-wrapper">
+      <div class="w-33 p-3 icon-block-2">
+        <div class="text-center ">
+          <h3 class="heading-4 value-bold blue-text my-3 ">Powerful</h3>
+          <div class="block-img-wrappers mb-2">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Frame_48096340_1.png?v=1699517603"
+              width="57"
+              height="56"
+              alt="icon"
+            >
+          </div>
+
+          <p class="value-sans normal-text">
+            Super concentrated formula that effortlessly cleans. Leaves all surfaces gleaming and streak free.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-33 p-3 icon-block-2">
+        <div class="text-center ">
+          <h3 class="heading-4 value-bold blue-text my-3 ">Scented</h3>
+          <div class="block-img-wrappers mb-2">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Frame_48096340_3.png?v=1699517603"
+              width="57"
+              height="56"
+              alt="icon"
+            >
+          </div>
+
+          <p class="value-sans normal-text">
+            Made with pure essential oils to infuse a divine, natural scent. Leaves your home smelling like a luxurious
+            spa.
+          </p>
+        </div>
+      </div>
+
+      <div class="w-33 p-3 icon-block-2">
+        <div class="text-center ">
+          <h3 class="heading-4 value-bold blue-text my-3 ">Reusable</h3>
+          <div class="block-img-wrappers mb-2">
+            <img
+              src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Frame_48096340.png?v=1699517604"
+              width="57"
+              height="56"
+              alt="icon"
+            >
+          </div>
+
+          <p class="value-sans normal-text">
+            Sustainable cleaning for modern times. Replaces plastic with reusable glass bottles. Fully recyclable with
+            zero single use plastic.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "Icon blocks 2",
+   "settings": [
+    {
+     "type": "text",
+      "id" : "heading",
+      "label": "Heading",
+      "default": "You've never enjoyed cleaning this much"
+    }
+],
+
+"presets": [
+	{
+		"name": "Icon blocks 2"
+	}
+]
+ }
+{% endschema %}

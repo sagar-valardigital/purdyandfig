@@ -1,0 +1,218 @@
+<!doctype html>
+<html class="no-js" lang="{{ request.locale.iso_code }}">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+    <link rel="preconnect" href="https://cdn.shopify.com" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'ValueSerifPro-Bold.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <link rel="preload" href="{{ 'PPPierSans-Regular.woff2' | asset_url }}" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="{{ 'PPPierSans-Regular.woff' | asset_url }}" as="font" type="font/woff" crossorigin>
+    <style>
+      @font-face {font-family: 'Value-Medium-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-med-fixed.woff?v=1716379982") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+      @font-face {font-family: 'Value-Sans-Fixed';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-sans-fixed.woff?v=1716380462") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+      
+      @font-face {font-family: 'Value Serif';src: url({{'ValueSerifPro-Bold.woff2' | asset_url }}) format('woff2'), url({{'ValueSerifPro-Bold.woff' | asset_url }}) format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Pier Sans';src: url({{'PPPierSans-Regular.woff2' | asset_url }}) format('woff2'), url({{'PPPierSans-Regular.woff' | asset_url }}) format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Sans';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/ninja_Value.woff?v=1675460636") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Serif-Pro';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Serif-Pro-Regular.woff?v=1675460754") format('woff');font-weight: normal;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Bold';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/value-bold.woff?v=1692609179") format('woff');font-weight: bold;font-style: normal;font-display: swap;}
+      @font-face {font-family: 'Value-Medium';src: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Value-Medium.woff?v=1699626333") format('woff');font-weight: Medium;font-style: normal;font-display: swap; font-weight: 500;}
+      .value-medium{font-family: 'Value-Medium';}
+    </style>
+    
+    <script async type="text/javascript" src="https://static.klaviyo.com/onsite/js/klaviyo.js?company_id=H7J3FA"></script>
+    
+    {%- if settings.favicon != blank -%}
+      <link rel="icon" type="image/png" href="{{ settings.favicon | image_url: width: 32, height: 32 }}">
+    {%- endif -%}
+
+    {%- unless settings.type_header_font.system? and settings.type_body_font.system? -%}
+      <link rel="preconnect" href="https://fonts.shopifycdn.com" crossorigin>
+    {%- endunless -%}
+
+    <title>
+      {{ page_title }}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
+    </title>
+
+    {% if page_description %}
+      <meta name="description" content="{{ page_description | escape }}">
+    {% endif %}
+
+    {% render 'meta-tags' %}
+    {{ content_for_header }}
+
+    {%- liquid
+      assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+      assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+      assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+    %}
+
+  
+    {%- unless settings.type_body_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_body_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+    {%- unless settings.type_header_font.system? -%}
+      <link rel="preload" as="font" href="{{ settings.type_header_font | font_url }}" type="font/woff2" crossorigin>
+    {%- endunless -%}
+
+    {%- if settings.predictive_search_enabled -%}
+      <link
+        rel="stylesheet"
+        href="{{ 'component-predictive-search.css' | asset_url }}"
+        media="print"
+        onload="this.media='all'"
+      >
+    {%- endif -%}
+
+    {% if product.tags contains 'no_follow' %}
+      <meta name="robots" content="noindex">
+    {% endif %}
+
+    {% if request.path contains 'collections/all' %}
+      <script>
+        window.location.href = "/collections";
+      </script>
+    {% endif %}
+
+    {% if request.path contains 'cart' %}
+      <script>
+        // Redirect user from the /cart page back to the homepage
+        window.location.href = '/';
+      </script>
+    {% endif %}
+
+    {% if request.path contains '/' %}
+      <script>
+        // Get the current domain and path
+        let currentDomain = window.location.protocol + '//' + window.location.host;
+
+        // Check if the user has been redirected from a page with a /cart path
+        if (document.referrer === currentDomain + '/cart') {
+          document.addEventListener('DOMContentLoaded', () => {
+            // Code inside this block will run after the page has fully loaded
+            setTimeout(() => {
+              // Toggle the cart drawer for them
+              window.dispatchEvent(new Event('toggle-cart'));
+            }, 500);
+          });
+        }
+      </script>
+    {% endif %}
+
+  
+
+
+
+
+
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+      if (Shopify.designMode) {
+        document.documentElement.classList.add('shopify-design-mode');
+      }
+    </script>
+    <!-- Google Tag Manager -->
+    <script>
+      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+                                                          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+                                })(window,document,'script','dataLayer','GTM-M8483VP');
+    </script>
+    <!-- End Google Tag Manager -->
+    {% include 'talkable-partial' %}
+
+    <!-- Skio Redirect Native Account Pages -->
+    <script>
+      if(window.location.pathname.startsWith('/account') && !window.location.href.includes('?return_url=/a/account/shopify-login')) {
+        window.location.href = '/a/account/login';
+      }
+    </script>
+
+    <!-- Skio Hide Link To Account Page -->
+    <style>
+      a[href="/account?full_order_history=1"] {
+        display: none;
+      }
+       .market-place-currency::before { 
+         content: "{{ localization.country.currency.symbol }}"; 
+      }
+    </style>
+
+   
+
+    {% if template.name == 'product' %}
+      {% if 
+          product.handle == 'eco-concentrates-surface-cleaner-starter-kit-d' or 
+          product.handle == 'ultimate-cleaning-kit' or 
+          product.handle == 'refill-booster-packs' or
+          product.handle == 'hand-body-wash' or
+          product.handle == '1-year-supply-eco-concentrate-cleaner' or
+          product.handle == 'the-complete-starter-kit-1' or
+          product.handle == 'seasonal-starter-kit-autumn'
+      %}
+        <script type="text/javascript">
+          const getproductHandle = '{{ product.handle }}';
+          const searchParams = new URLSearchParams(window.location.search);
+          const searchParamsString = searchParams.toString();
+          const queryStrings = searchParamsString ? '?' + searchParamsString : '';
+
+          console.log("Query strings", queryStrings);
+
+          if(getproductHandle == 'eco-concentrates-surface-cleaner-starter-kit-d') {
+            window.location.href = `${window.location.origin}/pages/starterkit-offer` + queryStrings;
+          } else if(getproductHandle == 'ultimate-cleaning-kit') {
+            window.location.href = `${window.location.origin}/pages/completestarterkit` + queryStrings;
+          } else if(getproductHandle == 'refill-booster-packs') {
+            window.location.href = `${window.location.origin}` + queryStrings + (searchParamsString ? '&refills' : '?refills');
+          } else if(getproductHandle == 'the-complete-starter-kit-1') {
+            window.location.href = `${window.location.origin}/pages/completestarterkit` + queryStrings;
+          } else if(getproductHandle == 'seasonal-starter-kit-autumn') {
+            window.location.href = `${window.location.origin}/pages/starterkit-offer-seasonal-autumn` + queryStrings;
+          } else {
+            window.location.href = `${window.location.origin}` + queryStrings + '#starterkit-product';
+          }
+        </script>
+      {% endif %}
+    {% endif %}
+
+
+    {% if template.suffix == 'Our Story' %}
+    <link rel="stylesheet" href="{{ 'our-story-reskin.css' | asset_url }}">
+    {% endif %}
+
+    {% if page.handle == 'reviews' %}
+    <link rel="stylesheet" href="{{ 'reviews-reskin.css' | asset_url }}">
+    {% endif %}
+
+    <!-- Heap analytics pixel starts here -->
+    <script type="text/javascript">   
+      window.heapReadyCb=window.heapReadyCb||[],window.heap=window.heap||[],heap.load=function(e,t){window.heap.envId=e,window.heap.clientConfig=t=t||{},window.heap.clientConfig.shouldFetchServerConfig=!1;var a=document.createElement("script");a.type="text/javascript",a.async=!0,a.src="https://cdn.us.heap-api.com/config/"+e+"/heap_config.js";var r=document.getElementsByTagName("script")[0];r.parentNode.insertBefore(a,r);var n=["init","startTracking","stopTracking","track","resetIdentity","identify","identifyHashed","getSessionId","getUserId","getIdentity","addUserProperties","addEventProperties","removeEventProperty","clearEventProperties","addAccountProperties","addAdapter","addTransformer","addTransformerFn","onReady","addPageviewProperties","removePageviewProperty","clearPageviewProperties","trackPageview"],i=function(e){return function(){var t=Array.prototype.slice.call(arguments,0);window.heapReadyCb.push({name:e,fn:function(){heap[e]&&heap[e].apply(heap,t)}})}};for(var p=0;p<n.length;p++)heap[n[p]]=i(n[p])};
+      heap.load("989675023"); 
+    </script>
+    <!-- Heap analytics pixel ends here -->
+
+    <!-- Cart improvement snippets -->
+    {% render 'selling-plan-toggle' %}
+    {% render 'cart-qty-guard' %}
+  </head>
+ 
+  <body
+    id="body"
+  >
+    <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
+
+ 
+    {% render 'ga4-tracking' %}
+  </body>
+</html>

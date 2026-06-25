@@ -1,0 +1,104 @@
+{% comment %}
+Metafields available:
+- article.metafields.custom.is_article_for_us_store (checks if the article is marked as US article)
+- article.metafields.custom.show_on_all_stores (checks if the article is for all the markets)
+- localization.market.handle (gives the current market)
+
+Conditions to implement:
+- if the article is for US store and the market is not US then redirect to root
+- if the article is for all stores and the market is US or UK do not redirect
+- if the article is for US store and the market is US then show the article
+- if the article is for not US store and the market is US then redirect to root
+- if the article is not for US store and the market is not US then show the article
+{% endcomment %}
+
+{% comment %} Check if article should be shown on all stores {% endcomment %}
+{% if article.metafields.custom.show_on_all_stores %}
+  {% comment %} Article is for all stores - show it regardless of market {% endcomment %}
+  {% assign show_article = true %}
+{% else %}
+  {% comment %} Article is not for all stores - check specific market conditions {% endcomment %}
+  {% if article.metafields.custom.is_article_for_us_store %}
+    {% comment %} Article is for US store {% endcomment %}
+    {% if localization.market.handle == 'en-us' %}
+      {% comment %} US article in US market - show article {% endcomment %}
+      {% assign show_article = true %}
+    {% else %}
+      {% comment %} US article in non-US market - redirect to root {% endcomment %}
+      {% assign show_article = false %}
+    {% endif %}
+  {% else %}
+    {% comment %} Article is NOT for US store {% endcomment %}
+    {% if localization.market.handle == 'en-us' %}
+      {% comment %} Non-US article in US market - redirect to root {% endcomment %}
+      {% assign show_article = false %}
+    {% else %}
+      {% comment %} Non-US article in non-US market - show article {% endcomment %}
+      {% assign show_article = true %}
+    {% endif %}
+  {% endif %}
+{% endif %}
+
+{% comment %} Redirect if article should not be shown {% endcomment %}
+{% unless show_article %}
+<script>
+    window.location.href = '{{ routes.root_url }}';
+</script>
+{% endunless %}
+
+{% comment %} Show article content only if it should be displayed {% endcomment %}
+{% if show_article %}
+<link rel="stylesheet" href="{{'blogs-detail-reskin.css' | asset_url}}">
+
+<div class="banner-setion " style="background-image:url('{{article.image | img_url : '2000x'}}')"></div>
+
+<div class="container main-art">
+    <div class="article theme-text my-5">
+        <div class="article-common-info mb-5">
+            <span class="blog-type">{{ blog.title | remove: 'P&F' }}</span>
+            <h3 class="heading-2 my-1">{{article.title }}</h3>
+              <div class="my-3 aticle-autor">
+                <span class="smtxt cmt">by</span>
+                <span class="article-author cmt">{{ article.author }}</span>
+                <span class="smtxt cmt">on</span>
+                <span class="article-time cmt">{{ article.created_at | date : format: 'long' }}</span>
+            </div>
+        </div>
+      
+        <div class="article-body textile">
+            {% include 'shortcode' load: article.content %}
+        </div>   
+    </div>
+</div>
+
+{% assign current_article_id = article.id %}
+{% assign article_count = 0 %}
+<div class="container more-related my-5">
+    <h3 class="heading-3 font-value theme-text mt-4 learn-more">Learn More</h3>
+    <div class="blog-list-wrapper d-flex flex-wrap justify-content-between">
+        {% for article in blog.articles %}
+        {% if article.id != current_article_id %}
+          {% assign article_count = article_count | plus: 1 %}
+        <div class="blog-wrapper">		
+            <a href="{{ article.url }}" class="theme-text">
+                <img class="img-responsive w-100" src="{{ article.image | image_url: width: 600, height: 280, crop: 'center' }}" width="600" height="280">
+                <div class="blog-post" >
+                    <span class="blog-type">{{ blog.title }}</span>
+                    <span class="blog-separator">|</span>
+                    <span class="blog-date-new">{{article.created_at | date: format: 'long'}}</span>
+                    <div class="blog-title heading-3">{{ article.title }}</div>
+                    <div class="article-content">
+                        {{ article.content | strip_html | truncate: 150 }}
+                    </div>
+                    <a href="{{ article.url }}" target="_self" class="readmore">Continue Reading</a>
+                </div>
+            </a>
+        </div>
+          {%  if article_count == 2 %}
+              {% break %}
+          {% endif %}
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+{% endif %}

@@ -1,0 +1,552 @@
+{% assign product = section.settings.landingproduct %}
+{% assign s_variant = product.selected_or_first_available_variant %}
+{% assign product2 = section.settings.landingproduct2 %}
+{% assign s_variant2 = product2.selected_or_first_available_variant %}
+<div
+  class="{{ section.settings.className }} global-product-4 py-80"
+  id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};"
+  x-data="{qty:1}"
+>
+  <div class="">
+    <div class=" mb-4 container">
+      {% if section.settings.mainheading != '' %}
+        <h2 class="heading-2 blue-text mt-0 text-center value-bold m-text-left">
+          {{ section.settings.mainheading }}
+        </h2>
+      {% endif %}
+    </div>
+
+    <div class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container">
+      <div class="w-50 {% if section.settings.verticalThumbnails %}vertical-thumbnails-slider-wrapper{% endif %} {% if section.settings.layout %} order-2 {%endif%}">
+        <div class="two-women position-relative">
+          {% if section.settings.tag != '' %}
+            <span class="tag theme-text value-sans">{{ section.settings.tag }}</span>
+          {% endif %}
+          {% assign mediacount = 0 %}
+          <div class="gp-4-product-gallery  new-product-gallery-wrapper">
+            {% for block in section.blocks %}
+              {% if block.type == 'productImage' %}
+                {% assign image = block.settings.image %}
+                {% if block.settings.is_video %}
+                  <div class="main-product-img">
+                    <video
+                      class=" w-100 lazy"
+                      poster="{{ block.settings.poster | img_url : '800x'}}"
+                      width="520"
+                      height="520"
+                      controls
+                    >
+                      <source src="{{ block.settings.videoURL }}" type="video/mp4">
+                    </video>
+                  </div>
+                {% else %}
+                  <div class="main-product-img">
+                    <picture>
+                      <source media="(min-width:650px)" srcset="{{ image | img_url: '800x'}}">
+                      <source media="(max-width:650px)" srcset="{{ image | img_url: '400x'}}">
+                      <img
+                        {% if forloop.index == 1 %}
+                          skip-lazy
+                        {% else %}
+                          loading="lazy"
+                        {% endif %}
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ image | img_url: '800x'}}"
+                        width="800"
+                        height="700"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                  </div>
+                {% endif %}
+              {% endif %}
+              {% assign mediacount = mediacount | plus: '1' %}
+            {% endfor %}
+          </div>
+          <div
+            class="gp-4-product-gallery-thumb  new-product-gallery-wrapper {% if mediacount < 6 %} slider-transform-none {% endif %}"
+          >
+            {% for block in section.blocks %}
+              {% if block.type == 'productImage' %}
+                {% assign image = block.settings.image %}
+                {% if block.settings.is_video %}
+                  <div class="main-product-img position-relative">
+                    <picture>
+                      <source media="(min-width:650px)" srcset="{{ block.settings.poster  | img_url: '200x'}}">
+                      <source media="(max-width:650px)" srcset="{{ block.settings.poster  | img_url: '200x'}}">
+                      <img
+                        {% if forloop.index == 1 %}
+                          skip-lazy
+                        {% else %}
+                          loading="lazy"
+                        {% endif %}
+                        data-id="{{block.settings.poster.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ block.settings.poster  | img_url: '200x'}}"
+                        width="200"
+                        height="200"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                    <img
+                      src="{{ 'play-button.png' | asset_img_url : '20x20' }}"
+                      width="20"
+                      height="20"
+                      class="pb-center"
+                    >
+                  </div>
+                {% else %}
+                  <div class="main-product-img">
+                    <picture>
+                      <source media="(min-width:650px)" srcset="{{ image | img_url: '200x'}}">
+                      <source media="(max-width:650px)" srcset="{{ image | img_url: '200x'}}">
+                      <img
+                        {% if forloop.index == 1 %}
+                          skip-lazy
+                        {% else %}
+                          loading="lazy"
+                        {% endif %}
+                        data-id="{{image.id}}"
+                        class="img-responsive w-100 h-auto lazy"
+                        src="{{ image | img_url: '200x'}}"
+                        width="200"
+                        height="200"
+                        alt="{{ image.alt }}"
+                      >
+                    </picture>
+                  </div>
+                {% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="w-50  d-flex justify-content-center">
+        <div class="w-90  pb-2 bg-white gp-4-details" id="{{ section.settings.p_id }}">
+          <div class="text-left">
+            <div class="value-sans theme-text mt-0 mb-2 stars-img-review ">
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3350B4;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3350B4;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3350B4;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3350B4;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="star-img">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 509.9 488.54">
+                  <defs><style>.cls-1{fill:#3350B4;}</style></defs><g id="Layer_2" data-name="Layer 2"><g id="Layer_1-2" data-name="Layer 1"><path class="cls-1" d="M509.9,199c-6.46,16.14-21.36,24.42-33.37,35.23-27.73,25-56,49.36-84.17,73.87-2.35,2-2.78,3.81-2.1,6.79q15.89,69.25,31.52,138.58c2.72,12-.07,22.26-10.1,29.59s-20.66,7-31.22.67q-60.6-36.27-121.16-72.59c-3.1-1.86-5.3-2-8.46-.07-40.2,24.19-80.62,48-120.7,72.38C111.86,494.6,92.75,484.81,88.22,469a30,30,0,0,1-.17-15.23q15.61-68.55,31.32-137.09c1-4.18.37-6.76-3-9.72C81,276.22,45.92,245.29,10.7,214.48c-9.28-8.11-13-18-9.23-29.85,3.64-11.34,12-17.61,23.9-18.72q36.64-3.42,73.3-6.73c23.12-2.1,46.24-4.23,69.37-6.18,3.5-.29,4.63-2.29,5.8-5Q201.4,83.29,229,18.63C234,6.94,242.31-.07,255.18,0,267.83.07,276,7.06,280.89,18.54c18.16,42.68,36.54,85.27,54.51,128,2.11,5,5,6.28,9.9,6.71Q415.17,159.42,485,166c12.87,1.22,20.67,8.4,24.11,20.92.11.43.53.77.8,1.15Z"/></g></g>
+                </svg>
+              </span>
+              <span class="total-reviews black-text value-medium">{{- settings.gloabalreviews }} Reviews</span>
+            </div>
+          </div>
+          <h2 class="heading-3 blue-text value-bold mb-3">
+            {{ section.settings.heading }}
+          </h2>
+          <span
+            class="sub-text-offer d-flex align-items-center"
+            style="display:flex; width:175px; background-color:#F4F6FC;"
+          >
+            <svg
+              style="width:25px"
+              xmlns="http://www.w3.org/2000/svg"
+              width="21"
+              height="20"
+              viewBox="0 0 21 20"
+              fill="none"
+            >
+              <mask id="mask0_232_456" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
+                <rect x="0.833282" width="20" height="20" fill="#D9D9D9"/>
+              </mask>
+              <g mask="url(#mask0_232_456)">
+                <path d="M10.2083 16.3078V10.3591L4.99995 7.34304V13.1475C4.99995 13.1903 5.01064 13.2303 5.03201 13.2677C5.05337 13.3051 5.08542 13.3372 5.12816 13.3639L10.2083 16.3078ZM11.4583 16.3078L16.5384 13.3639C16.5811 13.3372 16.6132 13.3051 16.6346 13.2677C16.6559 13.2303 16.6666 13.1903 16.6666 13.1475V7.34304L11.4583 10.3591V16.3078ZM10.8333 9.28216L15.9791 6.30781L10.9615 3.40556C10.9188 3.37885 10.876 3.36549 10.8333 3.36549C10.7905 3.36549 10.7478 3.37885 10.7051 3.40556L5.68743 6.30781L10.8333 9.28216ZM4.50318 14.4616C4.266 14.3249 4.08117 14.1422 3.9487 13.9135C3.81621 13.6849 3.74997 13.4338 3.74997 13.1603V6.83985C3.74997 6.56635 3.81621 6.31529 3.9487 6.08666C4.08117 5.85802 4.266 5.67533 4.50318 5.53858L10.0801 2.32866C10.3173 2.19191 10.5683 2.12354 10.8333 2.12354C11.0982 2.12354 11.3493 2.19191 11.5865 2.32866L17.1634 5.53858C17.4006 5.67533 17.5854 5.85802 17.7179 6.08666C17.8504 6.31529 17.9166 6.56635 17.9166 6.83985V13.1603C17.9166 13.4338 17.8504 13.6849 17.7179 13.9135C17.5854 14.1422 17.4006 14.3249 17.1634 14.4616L11.5865 17.6715C11.3493 17.8083 11.0982 17.8767 10.8333 17.8767C10.5683 17.8767 10.3173 17.8083 10.0801 17.6715L4.50318 14.4616Z" fill="#2D46AB"/>
+              </g>
+            </svg>
+            The Kit Includes</span
+          >
+          <div class="black-text">
+            {% if section.settings.subtext != '' -%}
+              <h3 class="font-value mt-4 bb-points">{{ section.settings.subtext }}</h3>
+            {%- endif %}
+            <ul class="gp-4-points text-left">
+              {% for block in section.blocks %}
+                {% if block.type == 'text' %}
+                  <li class="value-sans gray-text">
+                    {{ block.settings.listItem }}
+                  </li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+            <span class="remaning-product-count value-sans">Only 19 orders at this price remaining</span>
+          </div>
+          <div class=" my-2">
+            <span class="deleted-price value-sans">{{ section.settings.delPrice }}</span> &nbsp;
+            <span class="sell-price value-bold">
+              {{ section.settings.price }}
+            </span>
+            <span class="price-note value-sans">then £17.85 every 90 days for refills</span>
+          </div>
+          <form
+            @submit.prevent="console.log('submitted')"
+            x-ref="product_form"
+            enctype="multipart/form-data"
+            accept-charset="UTF-8"
+            id="product_form_{{ section.id }}"
+            class="shopify-product-form"
+            data-product-id="{{product.id}}"
+            action="/cart/add"
+          >
+            <input type="hidden" name="id" value="{{ s_variant.id }}">
+            <input type="hidden" name="quantity" value="1">
+            {% if section.settings.isSub %}
+              <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+              <input
+                type="hidden"
+                name="selling_plan"
+                value="3088842979"
+              >
+            {% endif %}
+          </form>
+          {% assign s_variant = product.selected_or_first_available_variant %}
+          <div class="text-left  g4-btn-wrapper m-auto">
+            {% if section.settings.redirectLink %}
+              <a
+                class="btn w-100 blue-btn value-sans btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                href="{{ section.settings.redirectLink }}"
+              >
+                {% if section.settings.outOfStock %}
+                  Out of Stock
+                {% else %}
+                  {{ section.settings.btnText }}
+                {% endif -%}
+              </a>
+            {% else %}
+              {% if section.settings.isCheckout %}
+                <span
+                  id="buy_now_btn"
+                  data-product-id="{{ s_variant.id }}"
+                  data-product-two-id="{{ s_variant2.id }}"
+                  data-quantity="1"
+                  data-section-id="id_{{ section.id }}"
+                  data-selling-plan="3088842979"
+                  data-selling-plan-two="{{s_variant2.selling_plan_allocations.first.selling_plan.id}}"
+                  class="btn w-100 blue-btn value-sans btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                >
+                  {% if section.settings.outOfStock %}
+                    Out of Stock
+                  {% else %}
+                    {{ section.settings.btnText }}
+                  {% endif -%}
+                </span>
+              {% else %}
+                <span
+                  class="btn w-100 theme-btn value-sans btn-loader checkout-starterkit-btn {% if section.settings.outOfStock %} bb-disable {% endif %}"
+                  x-on:click="Purdy.AddToCart($refs.product_form, true, false, $event)"
+                >
+                  {% if section.settings.outOfStock %}
+                    Out of Stock
+                  {% else %}
+                    {{ section.settings.btnText }}
+                  {% endif -%}
+                </span>
+              {% endif %}
+            {% endif -%}
+          </div>
+
+          <!-- Add on section start -->
+          <div class="add-on-section pt-4 pb-3">
+            <div class="aoc-heading value-bold">Add - Ons <span class="value-sans">(One-time payment)</span></div>
+            <div class="add-on-products">
+              {% for block in section.blocks %}
+                {% if block.type == 'addon' %}
+                  <div class="add-on-product position-relative value-sans">
+                    {% assign adon_variant = block.settings.addonproduct.selected_or_first_available_variant %}
+                    <input
+                      class="upsell_checkbox"
+                      data-product-id="{{ adon_variant.id }}"
+                      data-quantity="1"
+                      type="checkbox"
+                      id="addOn_{{ block.id }}_{{ section.id }}"
+                    >
+                    <div class="toggle-wrapper">
+                      <label class="toggle-button" for="addOn_{{ block.id }}_{{ section.id }}"></label>
+                    </div>
+                    <div class="aoc-title">
+                      <span class="add-aoc">Add </span> <span class="added-aoc">Added </span>
+                      {{- block.settings['text-heading'] }}
+                    </div>
+                    <div class="aoc-image">
+                      <img
+                        src="{{ block.settings.addonproduct.featured_media | img_url: '100x' }}"
+                        width="60"
+                        height="60"
+                        class="img-responsive"
+                        alt="add on"
+                      >
+                    </div>
+                    <div class="aoc-price value-medium">+ {{ block.settings.price }}</div>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <!-- Add on section end -->
+          <div class="pt-2 pb-3">
+            <picture>
+              <source
+                media="(min-width:650px)"
+                srcset="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/payment.png?v=1699583687"
+              >
+              <source
+                media="(max-width:650px)"
+                srcset="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/mobile-payment.png?v=1699612855"
+              >
+              <img
+                class="img-responsive h-auto w-100 "
+                src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/payment.png?v=1699583687"
+                width="400"
+                height="50"
+                alt="{{ image.alt }}"
+              >
+            </picture>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Global Product 4 v2",
+  "settings": [
+
+    {
+    "type": "checkbox",
+    "id": "outOfStock",
+    "label": "Enable If product out Of Stock",
+    "default": true
+  },
+    {
+    "id": "isSub",
+    "label": "Product subscription",
+    "type": "checkbox",
+    "default": false
+  },
+      {
+    "id": "isCheckout",
+    "label": "Go to Checkout",
+    "type": "checkbox",
+    "default": false
+  },
+    {
+    "id": "background",
+    "label": "Background color",
+    "type": "color"
+  },
+    {
+    "id": "p_id",
+    "label": "Product Section Scroll ID",
+    "type": "text"
+  },
+     {
+      "id": "landingproduct",
+      "label": "Choose the landing product",
+      "type": "product"
+    },
+    {
+      "id": "landingproduct2",
+      "label": "Choose the landing product 2",
+      "type": "product"
+    },
+    {
+    "type": "text",
+    "id": "discount",
+    "label": "Discount Code"
+  },
+{
+    "type": "text",
+    "id": "className",
+    "label": "Section Class"
+  },
+    {
+    "type": "html",
+    "id": "mainheading",
+    "label": "Main Heading"
+  },
+    {
+    "type": "html",
+    "id": "mainsubheading",
+    "label": "Sub Heading"
+  },
+   {
+    "type": "html",
+    "id": "heading",
+    "label": "Product Title"
+  },
+    {
+    "id": "subtext",
+    "label": "Banner Sub Text",
+    "type": "html"
+  },
+    {
+    "id": "price",
+    "label": "Price",
+    "type": "text"
+  },
+  {
+    "id": "delPrice",
+    "label": "Compare Price",
+    "type": "text"
+  },
+    {
+"id": "btnText",
+"label":"Button label",
+"type": "text",
+      "default" : "BUY NOW"
+    },
+    {
+"id": "redirectLink",
+"label":"Button Link",
+"type": "url"
+    },
+    {
+"id": "ctaDetails",
+"label":"Button Details Text",
+"type": "html"
+    },
+    {
+"id": "shopbtnLabel",
+"label":"Shop Button label",
+"type": "text"
+    },
+    {
+"id": "shopbtnLink",
+"label":"Shop Button link",
+"type": "url"
+    },
+{
+    "type": "header",
+    "content": "Mobile"
+  },
+
+{
+          "type": "checkbox",
+          "id": "heading-position",
+          "label": "Heading After Image"
+
+        }
+
+  ],
+      "blocks": [
+    {
+      "type": "text",
+      "name": "block",
+      "settings": [
+
+            {
+    "type": "text",
+    "id": "listItem",
+    "label": "Add Item"
+  }
+
+      ]
+    },
+
+        {
+      "type": "productImage",
+      "name": "Product Image",
+      "settings": [
+
+            {
+              "type": "image_picker",
+              "id": "image",
+              "label": "Add Product Image"
+            },
+        {
+              "type": "checkbox",
+              "id": "is_video",
+              "label": "Check if video added"
+            },
+            {
+              "type": "url",
+              "id": "videoURL",
+              "label": "Add Video url"
+            },{
+              "type": "image_picker",
+              "id": "poster",
+              "label": "Add Video poster"
+            }
+
+        ]
+    },{
+      "type": "aboutproduct",
+      "name": "About Product",
+      "settings": [
+            {
+              "type": "text",
+              "id": "text-heading",
+              "label": "Heading"
+            },
+            {
+              "type": "color",
+              "id": "heading-color",
+              "label": "Heading Color"
+            },
+            {
+              "type": "text",
+              "id": "text-detail",
+              "label": "About Text"
+            }
+
+      ]
+    },{
+      "type": "addon",
+      "name": "Add On Product",
+      "settings": [
+            {
+              "type": "text",
+              "id": "text-heading",
+              "label": "Heading"
+            },
+            {
+              "type": "text",
+              "id": "price",
+              "label": "Add on price"
+            },
+            {
+              "type": "product",
+              "id": "addonproduct",
+              "label": "Add On Product"
+            },
+        {
+              "type": "image_picker",
+              "id": "addonimage",
+              "label": "Product Image"
+            }
+
+      ]
+    }
+  ],
+  "presets": [
+      {
+          "name": "Global Product 4 v2"
+      }
+  ]
+}
+{% endschema %}

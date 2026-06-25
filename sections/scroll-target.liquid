@@ -1,0 +1,37 @@
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  if (window.location.search.includes('{{ section.settings.url_addon }}')) {
+    const target = document.getElementById('{{ section.settings.target_scroll }}');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+});
+</script>
+{% schema %}
+{
+  "name": "Scroll Target",
+  "settings": [
+
+    {
+      "id": "url_addon",
+      "label": "URL addon",
+      "type": "text"
+    },
+
+    {
+      "id": "target_scroll",
+      "label": "Target scroll section ID",
+      "type": "text"
+    }
+
+  ],
+
+  "presets": [
+		{
+			"name": "Scroll Target"
+		}
+	]
+}
+{% endschema %}

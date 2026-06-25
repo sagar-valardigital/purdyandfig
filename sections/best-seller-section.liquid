@@ -1,0 +1,68 @@
+<div class="fluid my-5 container fb-section">
+  <h4 class="heading-2 text-center theme-text" >{{ section.settings.heading }}</h4>
+  <div class="colletion-products ">
+    <div class="colletion-products-list font-pier">
+      {%  assign counter = 0 %}
+      {% for block in section.blocks %}
+
+            {% render 'card-product',
+                  card_product: block.settings.product,
+                  media_aspect_ratio: block.settings.image_ratio,
+                  show_secondary_image: block.settings.show_secondary_image,
+                  show_vendor: block.settings.show_vendor,
+                  show_rating: block.settings.show_rating,
+                  lazy_load: lazy_load
+                %}
+      {% endfor %}
+    </div>
+  </div>
+  {% if section.settings.btnLink %}
+  <div class="my-3 text-center">
+    <a href="{{ section.settings.btnLink }}" class="btn theme-btn">{{ section.settings.btnLabel }}</a>
+  </div>
+    {% endif %}
+</div>
+
+
+
+{% schema %}
+ {
+    "name": "Best Seller Section",
+    "settings": [
+{
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+      {
+          "type": "text",
+          "id": "btnLabel",
+          "label": "Button Label"
+        },
+      {
+          "type": "url",
+          "id": "btnLink",
+          "label": "Button Link"
+        }
+	],
+	"blocks": [
+      {
+        "type": "product",
+        "name": "Select Products",
+        "settings": [ 
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Select Products"
+          }
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Best Seller Section"
+		}
+	]
+  }
+{% endschema %}

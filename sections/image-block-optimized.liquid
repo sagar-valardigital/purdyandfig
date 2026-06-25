@@ -1,0 +1,221 @@
+<style>
+	.cnv-section {
+		padding: 80px 112px;
+	}
+	.cnv-heading {
+		font-size: 40px;
+		font-family: "GT Super";
+		font-weight: 400;
+		line-height: 50px;
+		word-wrap: break-word;
+		text-align: center;
+	}
+	.cnv-subheading {
+		font-size: 18px;
+		font-family: "Lausanne";
+		font-weight: 200;
+		line-height: 27px;
+		word-wrap: break-word;
+		text-align: center;
+	}
+	.cnv-block-head {
+		font-size: 16px;
+		font-family: "Lausanne";
+		font-weight: 400;
+		line-height: 25.60px;
+		word-wrap: break-word;
+		padding-left: 8px;
+    padding-right: 8px;
+	}
+	.safe-text {
+		font-size: 24px;
+		font-family: "Lausanne";
+		font-weight: 200;
+		line-height: 36px;
+		word-wrap: break-word;
+		text-align: center;
+		margin-top: 40px;
+	}
+	.cnv-spacer {
+		border-top: solid 1px #616161;
+		margin-top: 24px;
+	}
+	.cnv-width {
+		width: calc(25% - 8px);
+    max-width: 300px;
+	}
+
+	@media (max-width: 768px) {
+		.cnv-section {
+			padding: 32px 16px;
+		}
+		.cnv-heading {
+			font-size: 32px;
+			line-height: 40px;
+			text-align: left;
+			margin-bottom: 12px;
+		}
+		.cnv-subheading {
+			font-size: 16px;
+			line-height: 24px;
+			text-align: left;
+			margin-bottom: unset !important;
+		}
+		.cnv-width {
+			width: calc(50% - 8px);
+		}
+		.cnv-block-head {
+			font-size: 14px;
+			line-height: 21px;
+		}
+		.safe-text {
+			font-size: 16px;
+			line-height: 24px;
+		}
+	}
+</style>
+
+{% if section.settings.enable %}
+  <div class="block-section cnv-section" style="background: {{ section.settings.bg_color }};">
+    <div class="cnv-container">
+      <div class="cnv-heading" style="color: {{ section.settings.heading_color }} !important;">{{ section.settings.heading }}</div>
+      {% if section.settings.subtext %}
+        <p class="cnv-subheading" style="color: {{ section.settings.subheading_color }} !important;">{{ section.settings.subtext }}</p>
+      {% endif %}
+      <div class="d-flex flex-wrap justify-content-between mobile-slider-block_ theme-text">
+        {% for block in section.blocks %}
+          <div class="cnv-width">
+						<div>
+							<div class="block-img-wrapper {%if block.settings.rounded%}rounded-img{%endif%}">
+								<img
+									loading="lazy"
+									src="{{ block.settings.image | image_url: width: 300, height: 300, crop: 'center'}} "
+									class="img-responsive w-100"
+									alt="{{ block.settings.image.alt }}"
+									width="300px"
+									height="300px"
+								>
+							</div>
+							<h3 class="cnv-block-head" style="color: {{ section.settings.block_heading_color }} !important;">{{ block.settings.heading }}</h3>
+						</div>
+						<div class="cnv-spacer"></div>
+          </div>
+        {% endfor %}
+      </div>
+			{% if section.settings.safetext != blank %}
+			<div class="safe-text" style="color: {{ section.settings.bottom_color }} !important;">{{ section.settings.safetext }}</div>
+			{% endif %}
+    </div>
+  </div>
+{% endif %}
+
+{% schema %}
+{
+  "name": "Image blocks optimized",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+    {
+      "type": "select",
+      "id": "width",
+      "label": "Select block width",
+      "options": [
+        {
+          "value": "w-100",
+          "label": "100%"
+        },
+        {
+          "value": "w-50",
+          "label": "50%"
+        },
+        {
+          "value": "w-33",
+          "label": "33%"
+        },
+        {
+          "value": "w-25",
+          "label": "25%"
+        }
+      ],
+      "default": "w-25"
+    },
+		{
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background color"
+    },
+		{
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+		{
+      "type": "color",
+      "id": "subheading_color",
+      "label": "Subheading color"
+    },
+    {
+      "type": "html",
+      "id": "subtext",
+      "label": "Text"
+    },
+		{
+      "type": "color",
+      "id": "block_heading_color",
+      "label": "Block heading color"
+    },
+		{
+      "type": "color",
+      "id": "block_subheading_color",
+      "label": "Block subheading color"
+    },
+		{
+      "type": "color",
+      "id": "bottom_color",
+      "label": "Bottom text color"
+    },
+		{
+      "type": "html",
+      "id": "safetext",
+      "label": "Bottom text"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "text",
+      "name": "block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Add Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "rounded",
+          "label": "Image rounded"
+        },
+        {
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image blocks optimized"
+    }
+  ]
+}
+{% endschema %}

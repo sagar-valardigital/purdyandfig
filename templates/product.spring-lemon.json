@@ -1,0 +1,744 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "e7389d02-8f4c-4b12-90eb-d09037d1ab00": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "lemon-marjoram-booster-pack",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "A three-pack of our limited edition Lemon &amp; Marjoram Counter Clean eco-concentrates.\n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "8cce6d01-cd23-4a71-9d30-263996f65a3c": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "lemon-marjoram-booster-pack",
+            "open": "close",
+            "DescriptionHeading": "Scent Details",
+            "description": "Lemon &amp; Marjoram - Lemon, Sweet Marjoram, Clary Sage &amp; Palmarosa"
+          }
+        },
+        "ee703273-0a18-40bd-87a0-ada85a0a726f": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "lemon-marjoram-booster-pack",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": "3 x Counter Clean Eco-Concentrates"
+          }
+        },
+        "4327a96b-4fc9-4f1e-8183-85ddd8c8a9e1": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refill-booster-packs",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "A pack of 3 x 20ml eco-concentrate refills to top up your Counter Clean Bottle for Life. Subscribe to save 15% and never run out again! \n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "3a45a20c-02c4-4d0c-af09-03490826c579": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refill-booster-packs",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Uplifting Citrus: A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nBalancing Floral: A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects."
+          }
+        },
+        "5e80996f-3ca0-4ce1-aeda-aa1fd0f706e1": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refill-booster-packs",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "3 x 20ml Counter Clean refills in a scent of your choice"
+          }
+        }
+      },
+      "block_order": [
+        "e7389d02-8f4c-4b12-90eb-d09037d1ab00",
+        "8cce6d01-cd23-4a71-9d30-263996f65a3c",
+        "ee703273-0a18-40bd-87a0-ada85a0a726f",
+        "4327a96b-4fc9-4f1e-8183-85ddd8c8a9e1",
+        "3a45a20c-02c4-4d0c-af09-03490826c579",
+        "5e80996f-3ca0-4ce1-aeda-aa1fd0f706e1"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "4227bac0-cc9a-463a-9493-33b508981e4c": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "86749ec3-f462-44fe-b5a9-b28d03147fec": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/daily_e0a96ede-41be-4562-904d-bd20bb60388e.png",
+            "details": ""
+          }
+        },
+        "108064fc-5a7a-49b5-ac5c-e6f336e05b1f": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/house_3.png",
+            "details": ""
+          }
+        },
+        "2e0c1c32-a4eb-45cd-a559-9b473e185dd1": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_7a2db430-135f-446b-befd-89447572228d.png",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "86749ec3-f462-44fe-b5a9-b28d03147fec",
+        "108064fc-5a7a-49b5-ac5c-e6f336e05b1f",
+        "2e0c1c32-a4eb-45cd-a559-9b473e185dd1"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": false,
+        "bgColor": "",
+        "heading": "",
+        "logoDetailText": ""
+      }
+    },
+    "706cace2-69ee-4067-9efc-ecbc0356e955": {
+      "type": "bb-products",
+      "blocks": {
+        "4d9ed711-92a3-4999-97d8-fbf191fa37a3": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "063e74cb-1468-4106-9c7f-8f388dad4a6b": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life"
+          }
+        },
+        "c78f95a7-688d-4012-824b-e1ebe9a1da85": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "4f0534a5-f48a-4153-82ab-78582edf13d7": {
+          "type": "product",
+          "settings": {
+            "product": "refill-booster-packs"
+          }
+        },
+        "4fa922c5-ceba-46f7-b2bd-1ac1bfd97b70": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        }
+      },
+      "block_order": [
+        "4d9ed711-92a3-4999-97d8-fbf191fa37a3",
+        "063e74cb-1468-4106-9c7f-8f388dad4a6b",
+        "c78f95a7-688d-4012-824b-e1ebe9a1da85",
+        "4f0534a5-f48a-4153-82ab-78582edf13d7",
+        "4fa922c5-ceba-46f7-b2bd-1ac1bfd97b70"
+      ],
+      "custom_css": [
+        ".py-5 {padding-top: 2rem !important; padding-bottom: 5px !important;}",
+        ".bg-white {margin: 9px;}",
+        ".colletion-products {margin-bottom: 0px;}",
+        ".heading-2 {padding-bottom: 1rem;}"
+      ],
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "Add extras to your cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "424a4708-82de-4672-be3f-a886f57336dd": {
+      "type": "on-scroll-sticky",
+      "settings": {
+        "enable": true,
+        "heading": "Introducing \"Zingy Spring\"",
+        "subheading": ""
+      }
+    },
+    "f06956bc-7332-4ffa-8a5b-8f742bd73f77": {
+      "type": "landing-text-with-image",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "Lemon &amp; Marjoram ",
+        "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V222_13.jpg",
+        "details": "<p></p><p>A vibrant citrussy blend, softened by grassy palmarosa, sweet marjoram and soft clary sage, for cheerful thoughts of Spring in every room.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16497410063bc29f75": {
+      "type": "review-slider",
+      "blocks": {
+        "21a91d05-d81c-424c-9b47-69aa59e0e384": {
+          "type": "text",
+          "settings": {
+            "username": "Posy",
+            "heading": "",
+            "review": "\"It just makes me feel good! It also makes my kitchen island look and smell better than anything else I've tried before.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac": {
+          "type": "text",
+          "settings": {
+            "username": "Emma",
+            "heading": "",
+            "review": "\"I love using Purdy & Figg as it's just one simple product that does so much, stops the clutter of products & it's kinder to the environment.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1": {
+          "type": "text",
+          "settings": {
+            "username": "Flora",
+            "heading": "",
+            "review": "\"A weird transformation has taken place.…. I look forward to wiping the surfaces of my kitchen after supper. What have you done to me?\"",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "21a91d05-d81c-424c-9b47-69aa59e0e384",
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac",
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "reviewenable": false,
+        "className": "p-reviews whiteDots",
+        "Review-Count": "",
+        "bgColor": "#3d5065",
+        "heading": "Over 5300 5-Star Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "ec6144e1-39f5-4c4c-869c-ab3dbdf6a6a8": {
+      "type": "video-block",
+      "disabled": true,
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/thumn.jpg",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": ""
+      }
+    },
+    "e0959dfb-3174-4f07-aea9-7493298d9691": {
+      "type": "video-html-block",
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/thumn.jpg",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "",
+        "button-url": ""
+      }
+    },
+    "9d2abaa4-f8b4-4b9f-8f07-b5e991b9e1b6": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "f926d722-e842-4db3-8680-e7321fbb23a8": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "54ed3d5e-9171-479c-80f9-c300cd1c3dc5": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "d1c93f40-69ac-4dbb-838f-fd1d1f2c3d2c": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        }
+      },
+      "block_order": [
+        "f926d722-e842-4db3-8680-e7321fbb23a8",
+        "54ed3d5e-9171-479c-80f9-c300cd1c3dc5",
+        "d1c93f40-69ac-4dbb-838f-fd1d1f2c3d2c"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "image": "shopify://shop_images/Request_2.1_desktop.png",
+        "mimage": "shopify://shop_images/Request_2.1_mobiel_8228443f-9267-4dd0-ae52-cd037837a10d.png",
+        "details": "",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "1649839242809d07cb": {
+      "type": "blocks",
+      "blocks": {
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-4.png",
+            "rounded": false,
+            "heading": "Counters & Stone",
+            "details": ""
+          }
+        },
+        "758c082c-743d-46c9-9b3a-63c29a340b8e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-3.png",
+            "rounded": false,
+            "heading": "Bath & Enamel",
+            "details": ""
+          }
+        },
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-2.png",
+            "rounded": false,
+            "heading": "Glass & Mirrors",
+            "details": ""
+          }
+        },
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-1.png",
+            "rounded": false,
+            "heading": "Wood & Floors",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804",
+        "758c082c-743d-46c9-9b3a-63c29a340b8e",
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4",
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": false,
+        "width": "w-25",
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home"
+      }
+    },
+    "1657290860d3f966ef": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "The Best Essential Oils",
+        "image": "shopify://shop_images/p-7.png",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654230729996fed8d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 5,
+        "alignment": "justify-content-start",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "15",
+        "mainheading": "A scent that transforms your home",
+        "heading": "The Best Essential Oils",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "mobileShow": false,
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1654234195a5b1460d": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Expertly Blended",
+        "image": "shopify://shop_images/p-6.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and have out all of their years of works into creating the most incredible smelling cleaners.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1657296171d46b68b8": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 3,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "10",
+        "mainheading": "",
+        "heading": "Welcome to a cleaning revolution",
+        "details": "<p></p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1654234422b9cdd91c": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": true,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 3,
+        "alignment": "justify-content-end",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "25",
+        "mainheading": "Welcome to a chemical-free cleaning revolution",
+        "heading": "Reusable Glass Bottles",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "mobileShow": false,
+        "textcolor": "#ffffff",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165729620474237683": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Reusable Glass Bottles",
+        "image": "shopify://shop_images/home.jpg",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "image-with-text": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "14x Lower Carbon Emissions",
+        "image": "shopify://shop_images/human.jpg",
+        "details": "<p>Generic Surface Cleaners are made of 90% water and over 1 billion of these heavy bottles are transported around the world every year to get to our homes. Purdy & Figg Eco-Concentrates are 97% lighter than a bulk cleaner to ship and you dilute the concentrates with water coming out of your tap at home.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654234598971fe4e5": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Non-Toxic",
+        "image": "shopify://shop_images/poster-3.png",
+        "details": "<p>It is our mission to put your family first which is why our Eco-Concentrates are completely plant-based, paraben-free and GMO-free with natural essential oils and no synthetic fragrance or dangerous preservatives.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654234744e17a4ce6": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-bottom",
+        "spacem": "250",
+        "mainheading": "",
+        "heading": "Two women on a mission",
+        "details": "<p>Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.</p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165423464702cd9638": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Made by a PHD Scientist, NHS Nurse and Horticulturist",
+        "image": "shopify://shop_images/p-2.png",
+        "details": "<p>Dr Anna Stastanova PHD and Honorary Research Fellow in Surfactant Chemistry is responsible for the worlds most advanced scent extraction ever achieved in a cleaning product. Professional and multi-award-winning Horticultralist Charlotte Figg has created the essential oil blends as a culmination of 30 years of work.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16542346954792a369": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": true,
+        "heading": "Manufactured in the UK",
+        "image": "shopify://shop_images/poster-2.png",
+        "details": "<p>We manufacture Purdy & Figg Eco-Concentrates in England, where we are subject to stringent health regulations. Every Purdy & Figg Eco-Concentrate is manufactured in a state of the art laboratory in England. Rest easy knowing we don’t cut corners. Your safety is important to us.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "538dbc98-ddeb-4b8f-b001-20b154f67907": {
+      "type": "landing-blocks",
+      "blocks": {
+        "79dca06e-34e2-4d25-a3f3-5050300c779e": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_3_6da0fdbb-38ea-420f-b263-b0d4a495cca9.png",
+            "rounded": true,
+            "heading": "Breathe in Spring scents",
+            "details": "Fresh Lemon & Marjoram will transform your home into a spa.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "6ea508b0-314c-4d4e-89e2-902e93a4289f": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_11.png",
+            "rounded": true,
+            "heading": "You’ll save money",
+            "details": "No more buying multiple products for different jobs – just need one great-value, refillable cleaner.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "eb6702a5-c5e2-43e6-9dbf-2b17613dcc2f": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_5_7bfb9627-15b0-4961-b8f6-cbeb26ee622a.png",
+            "rounded": true,
+            "heading": "Cleaning is quicker",
+            "details": "It’s super-effective and safe on any surface, so there’s no need to switch mid-clean.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "3c383d40-3c9b-4167-aef3-10d2fc218ab4": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Mobile_BB_New_Copy_-_V2_6_6145b6b0-5aad-4bf5-b055-3d7a995ee914.png",
+            "rounded": true,
+            "heading": "Declutter your cupboards",
+            "details": "Fewer products mean tidier cupboards, just the thing for a proper Spring Clean!",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "79dca06e-34e2-4d25-a3f3-5050300c779e",
+        "6ea508b0-314c-4d4e-89e2-902e93a4289f",
+        "eb6702a5-c5e2-43e6-9dbf-2b17613dcc2f",
+        "3c383d40-3c9b-4167-aef3-10d2fc218ab4"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "An Easier, Breezier Spring Clean",
+        "subtext": "Your Spring Clean, simplified, with one product that can do it all.",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "165423535626bc9759": {
+      "type": "table",
+      "settings": {}
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "4227bac0-cc9a-463a-9493-33b508981e4c",
+    "706cace2-69ee-4067-9efc-ecbc0356e955",
+    "424a4708-82de-4672-be3f-a886f57336dd",
+    "f06956bc-7332-4ffa-8a5b-8f742bd73f77",
+    "16497410063bc29f75",
+    "product-recommendations",
+    "ec6144e1-39f5-4c4c-869c-ab3dbdf6a6a8",
+    "e0959dfb-3174-4f07-aea9-7493298d9691",
+    "9d2abaa4-f8b4-4b9f-8f07-b5e991b9e1b6",
+    "1649839242809d07cb",
+    "1657290860d3f966ef",
+    "1654230729996fed8d",
+    "1654234195a5b1460d",
+    "1657296171d46b68b8",
+    "1654234422b9cdd91c",
+    "165729620474237683",
+    "image-with-text",
+    "1654234598971fe4e5",
+    "1654234744e17a4ce6",
+    "165423464702cd9638",
+    "16542346954792a369",
+    "538dbc98-ddeb-4b8f-b001-20b154f67907",
+    "165423535626bc9759",
+    "16644285387cfa3d71"
+  ]
+}

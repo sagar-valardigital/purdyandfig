@@ -1,0 +1,277 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_icon_only_X6MHam": {
+      "type": "announcement-bar-icon-only",
+      "custom_css": [
+        ".ann-bar-text-2,.annoucment-bar-logo {order: 1;}",
+        ".announcement-btn-2 {display: none;}",
+        ".annoucment-bar-reskin.annoucment-bar-2 {padding-top: 10px !important; padding-bottom: 10px !important;}",
+        ".container {margin-top: 0px !important; padding: 8px 16px !important;}",
+        "@media (max-width: 768px) {.annoucment-bar-logo {order: 0; } .ann-bar-text-2 {display: none; }}"
+      ],
+      "settings": {
+        "class": "",
+        "logoUrl": "/",
+        "logoColor": "#ffffff",
+        "bb-color": "#0a1e1a",
+        "text-color": "#ffffff",
+        "text": "",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_text_under_image_CxnVf7": {
+      "type": "banner-text-under-image",
+      "custom_css": [
+        ".content-section {margin-bottom: 16px;}",
+        "@media (max-width: 768px) {.content-section {margin-bottom: 14px; }}"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/image_5_9afb22c1-5ebf-45f5-9116-3fa50af28cfb.png",
+        "mimage": "shopify://shop_images/Image_6_053870e6-c933-4e60-b02e-551ec07fe4bf.png",
+        "heading": "Find your home's signature scent",
+        "subHeading": "You've received a starter kit with our three most popular scents inside. What now?",
+        "description": "<left>1. Read through the scent notes below <br><left> 2. Try out each bestseller  <br><left>3. Pick your home’s signature scent  <br><left>4. Click “edit” under your scents in the portal <br><left>5. Enjoy your signature scented home</left></left></left></left></left>"
+      }
+    },
+    "image_with_text_gqJdyK": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text .btn {background-color: #11322c !important; color: #fff;}",
+        ".image-with-text {margin-bottom: 60px;}",
+        ".heading-2 {font-family: \"Lausanne\"; font-size: 24px; font-weight: 400; line-height: 150%; letter-spacing: 0px;}",
+        ".normal-text {color: #212121; font-size: 16px; font-weight: 200;}",
+        "@media (max-width: 768px) {.two-women-details {margin-top: 16px; text-align: left; font-size: 14px; padding-inline: 0px !important; } .mobile-padding-y {padding-top: 16px; } .image-with-text, .container {margin-block: 0px !important; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "container",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Balancing Floral",
+        "image": "shopify://shop_images/Image_2_76860c3e-35a2-4498-a20c-f2914fa905a9.png",
+        "details": "<p>A harmonious blend of lemon, geranium and vetiver, inspired by a garden in bloom. Tranquil and dreamy, like stopping to smell the roses (literally).<br/><br/>Perfect for a bright, elegant atmosphere - for those that want to enter a timeless home.</p>",
+        "link": "https://purdyandfigg.com/a/account/login",
+        "btntext": "SWITCH NOW",
+        "scrollID": "",
+        "top": "",
+        "btntype": "btn",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "switch_now",
+        "eventValue": "switch_now",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_k7eqGF": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text .btn {background-color: #11322c !important; color: #fff;}",
+        ".heading-2 {font-family: \"Lausanne\"; font-size: 24px; font-weight: 400; line-height: 150%; letter-spacing: 0;}",
+        ".normal-text {color: #212121; font-size: 16px; font-weight: 200;}",
+        ".container {margin-top: 60px !important;}",
+        "@media (max-width: 768px) {.two-women-details {margin-top: 16px; text-align: left; font-size: 14px; padding-inline: 0px !important; } .mobile-padding-y {padding-block: 0px; } .container {margin: 0 auto 32px !important; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "container",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Grounding Vetiver",
+        "image": "shopify://shop_images/Image_3_7b36453a-829d-4888-ad4f-cee8faa4c987.png",
+        "details": "<p>Sweet orange and coriander mix with vetiver in this earthy blend, inspired by Moroccan spice bazaars. Deep and woody, with a calming, grounding effect.<br/><br/>Perfect for a restful, warm atmosphere - for those that seek a calming home.</p>",
+        "link": "https://purdyandfigg.com/a/account/login",
+        "btntext": "SWITCH NOW",
+        "scrollID": "",
+        "top": "",
+        "btntype": "btn",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": true,
+        "targetUrl": "https://purdyandfigg.com/a/account/login",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "switch_now",
+        "eventValue": "switch_now",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_39K4gH": {
+      "type": "image-with-text",
+      "custom_css": [
+        ".image-with-text .btn {background-color: #11322c !important; color: #fff;}",
+        ".heading-2 {font-family: \"Lausanne\"; font-size: 24px; font-style: normal; font-weight: 400; line-height: 150%; letter-spacing: 0;}",
+        ".normal-text {color: #212121; font-size: 16px; font-weight: 200;}",
+        ".container {margin: 60px auto !important;}",
+        "@media (max-width: 768px) {.two-women-details {margin-top: 16px; text-align: left; font-size: 14px; padding-inline: 0px !important; } .mobile-padding-y {padding-block: 0px; } .container {margin: 0 auto 32px !important; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "container",
+        "textcolor": "white-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Uplifting Citrus",
+        "image": "shopify://shop_images/Image_4_3433d9be-c702-459b-aacd-da0450d519a0.png",
+        "details": "<p>An invigorating blend of sweet orange, grapefruit and niaouli, inspired by a rejuvenating spring clean. Vibrant and head-clearing, like sipping sparkling water infused with citrus fruit.<br/><br/>Perfect for a reviving, refreshing atmosphere - for those that want the gift of an energised home.</p>",
+        "link": "https://purdyandfigg.com/a/account/login",
+        "btntext": "SWITCH NOW",
+        "scrollID": "",
+        "top": "",
+        "btntype": "btn",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": false,
+        "targetUrl": "https://purdyandfigg.com/a/account/login",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "switch_now",
+        "eventValue": "switch_now",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "icon_blocks_reskin_cUrCPd": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_iYG79w": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_48a1c4ac-987e-4b6c-a556-2bd93d461b9d.png"
+          }
+        },
+        "iconblocks_PfrzGb": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_05b6088b-b8ea-4fd6-80fc-f283ed98bca8.png"
+          }
+        },
+        "iconblocks_aCiLqt": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_489bfbf0-4865-4a33-b1df-0adade1926bb.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_iYG79w",
+        "iconblocks_PfrzGb",
+        "iconblocks_aCiLqt"
+      ],
+      "settings": {
+        "class": "",
+        "bg": "#f6e3d1",
+        "textcolor": "#212121",
+        "heading": "Your member benefits",
+        "show_hide_block": true
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": false,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "",
+        "scrollto": "",
+        "top": "80",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_iTjkge": {
+      "type": "footer-2",
+      "custom_css": [
+        ".footer-2 {padding: 64px 0;}",
+        ".container {margin-top: 0 !important;}",
+        "@media (max-width: 768px) {.footer-2 {padding: 40px 0; }}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_icon_only_X6MHam",
+    "banner_text_under_image_CxnVf7",
+    "image_with_text_gqJdyK",
+    "image_with_text_k7eqGF",
+    "image_with_text_39K4gH",
+    "icon_blocks_reskin_cUrCPd",
+    "two_women_2_YmGrTw",
+    "footer_2_iTjkge"
+  ]
+}

@@ -1,0 +1,486 @@
+<style>
+  .testimonial-cards-section {
+    padding: 60px 0;
+  }
+
+  .testimonial-cards-section .section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  .testimonial-cards-section .section-heading .heading-2 {
+    color: var(--theme-color, #3d5065);
+    margin: 0 0 8px;
+  }
+
+  .testimonial-cards-section .section-subheading {
+    font-family: 'Pier Sans';
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+  }
+
+  .testimonial-cards-section .testimonial-cards-slider {
+    margin: 0 -15px;
+  }
+
+  .testimonial-cards-section .testimonial-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 30px 24px;
+    margin: 0 15px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    transition: box-shadow 0.3s ease;
+  }
+
+  .testimonial-cards-section .testimonial-card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  }
+
+  .testimonial-cards-section .testimonial-stars {
+    display: flex;
+    gap: 3px;
+    margin-bottom: 16px;
+  }
+
+  .testimonial-cards-section .testimonial-stars svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .testimonial-cards-section .testimonial-card .review-title {
+    font-family: 'Value Serif';
+    font-size: 18px;
+    font-weight: 600;
+    color: #212121;
+    margin: 0 0 10px;
+    line-height: 1.3;
+  }
+
+  .testimonial-cards-section .testimonial-card .review-text {
+    font-family: 'Pier Sans';
+    font-size: 15px;
+    line-height: 1.6;
+    color: #444;
+    margin: 0 0 20px;
+    flex-grow: 1;
+  }
+
+  .testimonial-cards-section .testimonial-card .reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+  }
+
+  .testimonial-cards-section .testimonial-card .reviewer-img {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+
+  .testimonial-cards-section .testimonial-card .reviewer-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .testimonial-cards-section .testimonial-card .reviewer-name {
+    font-family: 'Lausanne';
+    font-weight: 600;
+    font-size: 14px;
+    color: #212121;
+    margin: 0;
+  }
+
+  .testimonial-cards-section .testimonial-card .reviewer-location {
+    font-family: 'Pier Sans';
+    font-size: 13px;
+    color: #999;
+    margin: 2px 0 0;
+  }
+
+  .testimonial-cards-section .testimonial-card .verified-badge {
+    font-family: 'Pier Sans';
+    font-size: 12px;
+    color: #2e7d32;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    margin-top: 2px;
+  }
+
+  .testimonial-cards-section .testimonial-card .verified-badge svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .testimonial-cards-section .testimonial-cards-slider .slick-dots {
+    margin-top: 30px;
+    text-align: center;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .testimonial-cards-section .testimonial-cards-slider .slick-dots li button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #ddd;
+    border: none;
+    padding: 0;
+    font-size: 0;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .testimonial-cards-section .testimonial-cards-slider .slick-dots li.slick-active button {
+    background: var(--theme-color, #3d5065);
+  }
+
+  .testimonial-cards-section .tc-nav-arrows {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+  }
+
+  .testimonial-cards-section .tc-nav-arrows span {
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+    background: #fff;
+    transition: all 0.3s ease;
+  }
+
+  .testimonial-cards-section .tc-nav-arrows span:hover {
+    border-color: var(--theme-color, #3d5065);
+    background: var(--theme-color, #3d5065);
+    color: #fff;
+  }
+
+  .testimonial-cards-section .tc-nav-arrows span:hover svg path {
+    stroke: #fff;
+  }
+
+  .testimonial-cards-section .tc-nav-arrows svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .testimonial-cards-section .tc-review-summary {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 30px;
+  }
+
+  .testimonial-cards-section .tc-review-summary .tc-summary-stars {
+    display: flex;
+    gap: 2px;
+  }
+
+  .testimonial-cards-section .tc-review-summary .tc-summary-stars svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .testimonial-cards-section .tc-review-summary .tc-summary-text {
+    font-family: 'Pier Sans';
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+  }
+
+  .testimonial-cards-section .tc-review-summary .tc-summary-text span {
+    font-weight: 600;
+    color: #212121;
+  }
+
+  @media (max-width: 991px) {
+    .testimonial-cards-section {
+      padding: 40px 0;
+    }
+
+    .testimonial-cards-section .section-heading {
+      margin-bottom: 24px;
+    }
+
+    .testimonial-cards-section .section-heading .heading-2 {
+      font-size: 28px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .testimonial-cards-section {
+      padding: 32px 0;
+    }
+
+    .testimonial-cards-section .section-heading .heading-2 {
+      font-size: 24px;
+    }
+
+    .testimonial-cards-section .testimonial-card {
+      margin: 0 8px;
+      padding: 24px 20px;
+    }
+
+    .testimonial-cards-section .tc-nav-arrows {
+      margin-top: 20px;
+    }
+
+    .testimonial-cards-section .tc-nav-arrows span {
+      width: 40px;
+      height: 40px;
+    }
+  }
+</style>
+
+<div class="testimonial-cards-section" style="background-color: {{ section.settings.bg_color }};">
+  <div class="container">
+    <div class="section-heading">
+      {% if section.settings.heading != blank %}
+        <h2 class="heading-2 font-value">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="section-subheading">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+
+    {% if section.settings.show_summary %}
+      <div class="tc-review-summary">
+        <div class="tc-summary-stars">
+          {% for i in (1..5) %}
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10.0383 1.60996C10.2091 1.19932 10.7909 1.19932 10.9617 1.60996L13.0278 6.57744C13.0998 6.75056 13.2626 6.86885 13.4495 6.88383L18.8123 7.31376C19.2556 7.3493 19.4354 7.90256 19.0976 8.19189L15.0117 11.6919C14.8693 11.8139 14.8071 12.0053 14.8506 12.1876L16.0989 17.4208C16.2021 17.8534 15.7315 18.1954 15.3519 17.9635L10.7606 15.1592C10.6006 15.0615 10.3994 15.0615 10.2394 15.1592L5.64806 17.9635C5.26851 18.1954 4.79788 17.8534 4.90108 17.4208L6.14939 12.1876C6.19289 12.0053 6.1307 11.8139 5.98831 11.6919L1.90241 8.19189C1.56464 7.90256 1.74441 7.3493 2.18773 7.31376L7.55054 6.88383C7.73744 6.86885 7.90024 6.75056 7.97225 6.57744L10.0383 1.60996Z" fill="#FEC84B"/>
+            </svg>
+          {% endfor %}
+        </div>
+        <p class="tc-summary-text">
+          <span>{{ section.settings.summary_rating }}</span> based on <span>{{ settings.gloabalreviews }}</span> reviews
+        </p>
+      </div>
+    {% endif %}
+
+    <div class="testimonial-cards-slider">
+      {% for block in section.blocks %}
+        <div class="testimonial-card" {{ block.shopify_attributes }}>
+          <div class="testimonial-stars">
+            {% assign star_count = block.settings.stars | default: 5 %}
+            {% for i in (1..star_count) %}
+              <svg width="18" height="18" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10.0383 1.60996C10.2091 1.19932 10.7909 1.19932 10.9617 1.60996L13.0278 6.57744C13.0998 6.75056 13.2626 6.86885 13.4495 6.88383L18.8123 7.31376C19.2556 7.3493 19.4354 7.90256 19.0976 8.19189L15.0117 11.6919C14.8693 11.8139 14.8071 12.0053 14.8506 12.1876L16.0989 17.4208C16.2021 17.8534 15.7315 18.1954 15.3519 17.9635L10.7606 15.1592C10.6006 15.0615 10.3994 15.0615 10.2394 15.1592L5.64806 17.9635C5.26851 18.1954 4.79788 17.8534 4.90108 17.4208L6.14939 12.1876C6.19289 12.0053 6.1307 11.8139 5.98831 11.6919L1.90241 8.19189C1.56464 7.90256 1.74441 7.3493 2.18773 7.31376L7.55054 6.88383C7.73744 6.86885 7.90024 6.75056 7.97225 6.57744L10.0383 1.60996Z" fill="#FEC84B"/>
+              </svg>
+            {% endfor %}
+          </div>
+
+          {% if block.settings.review_title != blank %}
+            <h4 class="review-title">{{ block.settings.review_title }}</h4>
+          {% endif %}
+
+          <p class="review-text">{{ block.settings.review_text }}</p>
+
+          <div class="reviewer-info">
+            {% if block.settings.reviewer_image != blank %}
+              <div class="reviewer-img">
+                <img
+                  src="{{ block.settings.reviewer_image | img_url: '100x100', crop: 'center' }}"
+                  alt="{{ block.settings.reviewer_name }}"
+                  width="44"
+                  height="44"
+                  loading="lazy"
+                >
+              </div>
+            {% endif %}
+            <div>
+              <p class="reviewer-name">{{ block.settings.reviewer_name }}</p>
+              {% if block.settings.reviewer_location != blank %}
+                <p class="reviewer-location">{{ block.settings.reviewer_location }}</p>
+              {% endif %}
+              {% if block.settings.verified %}
+                <span class="verified-badge">
+                  <svg viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M5.25 7L6.41667 8.16667L8.75 5.83333M12.8333 7C12.8333 10.2217 10.2217 12.8333 7 12.8333C3.77834 12.8333 1.16667 10.2217 1.16667 7C1.16667 3.77834 3.77834 1.16667 7 1.16667C10.2217 1.16667 12.8333 3.77834 12.8333 7Z" stroke="#2e7d32" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  Verified Buyer
+                </span>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+
+    <div class="tc-nav-arrows">
+      <span class="tc-prev" aria-label="Previous">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M15 18L9 12L15 6" stroke="#3d5065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+      <span class="tc-next" aria-label="Next">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M9 18L15 12L9 6" stroke="#3d5065" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </span>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Testimonial Cards",
+  "class": "testimonial-cards-wrapper",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "What Our Customers Say"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Real reviews from real people"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_summary",
+      "label": "Show Review Summary",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "summary_rating",
+      "label": "Summary Rating Text",
+      "default": "4.9 / 5"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#fafafa"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "testimonial",
+      "name": "Testimonial",
+      "settings": [
+        {
+          "type": "range",
+          "id": "stars",
+          "label": "Star Rating",
+          "min": 1,
+          "max": 5,
+          "step": 1,
+          "default": 5
+        },
+        {
+          "type": "text",
+          "id": "review_title",
+          "label": "Review Title",
+          "default": "Absolutely love it!"
+        },
+        {
+          "type": "textarea",
+          "id": "review_text",
+          "label": "Review Text",
+          "default": "The smell is beautiful, unlike sprays you get from the supermarkets. It's fresh, natural and lasts for ages."
+        },
+        {
+          "type": "text",
+          "id": "reviewer_name",
+          "label": "Reviewer Name",
+          "default": "Sarah J."
+        },
+        {
+          "type": "text",
+          "id": "reviewer_location",
+          "label": "Reviewer Location",
+          "default": "London, UK"
+        },
+        {
+          "type": "image_picker",
+          "id": "reviewer_image",
+          "label": "Reviewer Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "verified",
+          "label": "Verified Buyer",
+          "default": true
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Testimonial Cards",
+      "blocks": [
+        {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "review_title": "Absolutely love it!",
+            "review_text": "The smell is beautiful, unlike sprays you get from the supermarkets. It's fresh, natural and lasts for ages.",
+            "reviewer_name": "Sarah J.",
+            "reviewer_location": "London, UK",
+            "verified": true
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "review_title": "Best thing I've bought",
+            "review_text": "I was skeptical at first but this has completely transformed my home. The scent is divine and I get compliments every time someone visits.",
+            "reviewer_name": "Karen M.",
+            "reviewer_location": "Manchester, UK",
+            "verified": true
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "review_title": "A game changer",
+            "review_text": "So much better than anything else I've tried. Natural ingredients, beautiful packaging and the scent fills the whole room. Highly recommend!",
+            "reviewer_name": "Emma T.",
+            "reviewer_location": "Bristol, UK",
+            "verified": true
+          }
+        },
+        {
+          "type": "testimonial",
+          "settings": {
+            "stars": 5,
+            "review_title": "Won't go back!",
+            "review_text": "I've tried so many brands but nothing compares. The quality is outstanding and it lasts so much longer than supermarket alternatives.",
+            "reviewer_name": "Lisa P.",
+            "reviewer_location": "Edinburgh, UK",
+            "verified": true
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

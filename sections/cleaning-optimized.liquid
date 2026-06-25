@@ -1,0 +1,133 @@
+<style>
+	.cng-container {
+		background-image: url({{ section.settings.bg_image | image_url: width: 2400 }});
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	.cng-container .heading-2 {
+		margin-bottom: unset !important;
+	}
+	.cng-blocks {
+		margin-top: 40px;
+	}
+	@media (max-width: 768px) {
+		.cng-container .heading-2 {
+			text-align: left !important;
+		}
+		.cng-blocks {
+			margin-top: 24px;
+		}
+	}
+</style>
+
+<div
+  class="block-section py-80 icon-blocks-2 icon-blocks-reskin member-benifit-381 cng-container"
+>
+  <div class="container">
+    <h2
+      class="heading-2 text-center blue-text font-gtsuper fw-400 member-benifit-heading-381"
+      style="color: {{ section.settings.heading_color }} !important;"
+    >
+      {{ section.settings.heading }}
+    </h2>
+    <div class="d-flex flex-wrap justify-content-between theme-text icon-blocks-2-wrapper cng-blocks">
+      {% for block in section.blocks %}
+        <div class="w-33 p-3 icon-block-2">
+          <div class="text-center ">
+            {% if block.settings.icon_block_title != blank %}
+              <h3
+                class="heading-4 font-lausanne fw-400 member-benifit-sub-381 cng-sub"
+                style="color: {{ section.settings.block_heading_color }} !important;"
+              >
+                {{ block.settings.icon_block_title }}
+              </h3>
+            {% endif %}
+            {% if block.settings.icon_block_image %}
+              <div class="block-img-wrappers cng-img">
+                <img
+                  src="{{ block.settings.icon_block_image | image_url }}"
+                  width="72.52"
+                  height="100"
+                  alt="{{ block.settings.icon_block_image.alt }}"
+                >
+              </div>
+            {% endif %}
+            <div>
+              {% if block.settings.icon_block_description != blank %}
+                <p
+                  class="font-lausanne fw-200 normal-text m-0 member-benifit-summary-381"
+                  style="color:{{ section.settings.summary_color }} !important"
+                >
+                  {{ block.settings.icon_block_description }}
+                </p>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cleaning optimized",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background image"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "block_heading_color",
+      "label": "Block title color"
+    },
+    {
+      "type": "color",
+      "id": "summary_color",
+      "label": "Block summary color"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "iconblocks",
+      "name": "Icon Block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "html",
+          "id": "icon_block_title",
+          "label": "Title"
+        },
+        {
+          "type": "html",
+          "id": "icon_block_description",
+          "label": "Description"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_block_image",
+          "label": "Icon Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cleaning optimized"
+    }
+  ]
+}
+{% endschema %}

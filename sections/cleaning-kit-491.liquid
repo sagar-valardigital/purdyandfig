@@ -1,0 +1,262 @@
+<style>
+  .cleaning-kit-container {
+  	padding: 100px 216px;
+    background: linear-gradient(0deg, rgba(209, 94, 20, 0) 0%, #D15E14 100%);
+    background-image: url({{ section.settings.desk_image | image_url: width: 3200, crop: 'center' }});
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 67px;
+    display: inline-flex;
+    width: 100%;
+    min-height: 652px;
+  }
+  .cleaning-kit-spacer {
+    width: 452px;
+    height: 452px;
+    {% comment %} box-shadow: 6px 4px 17px rgba(97, 73, 51, 0.30); {% endcomment %}
+  }
+  .cleaning-kit-text-box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    display: inline-flex;
+  }
+  .ttl-main {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 12px;
+    display: flex;
+  }
+  .ttl-sub-main {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    display: flex;
+  }
+  .ttl-title {
+    color: white;
+    font-size: 40px;
+    font-family: "GT Super";
+    font-weight: 400;
+    line-height: 50px;
+    word-wrap: break-word;
+    max-width: 475px;
+  }
+  .cleaning-kit-items {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 24px;
+    display: flex;
+  }
+  .kit-items-main {
+    align-self: stretch;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    display: inline-flex;
+  }
+  .cleaning-kit-item-mark {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 18px;
+    font-family: "Font Awesome 6";
+    font-weight: 400;
+    line-height: 27px;
+    word-wrap: break-word;
+  }
+  .cleaning-kit-item-text {
+    flex: 1 1 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-size: 24px;
+    font-family: "Lausanne";
+    font-weight: 200;
+    line-height: 36px;
+    word-wrap: break-word;
+  }
+
+  .cleaning-desktop-hide {
+    display: none !important;
+  }
+  .cleaning-mobile-hide {
+    display: inline-flex !important;
+  }
+
+  @media (max-width: 560px) {
+    .cleaning-kit-container {
+      padding: 32px 16px;
+      background: linear-gradient(0deg, rgba(209, 94, 20, 0) 0%, #D15E14 100%), linear-gradient(270deg, rgba(89, 41, 10, 0) 0%, rgba(88.60, 41.41, 9.78, 0.20) 100%);
+      background-image: url({{section.settings.mob_image | image_url: width: 768, crop: 'center' }});
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 8px;
+      display: inline-flex;
+      min-height: 473px;
+    }
+    .ttl-main {
+      align-self: stretch;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 12px;
+      display: flex
+    }
+    .ttl-sub-main {
+      align-self: stretch;
+      justify-content: center;
+      align-items: flex-start;
+      display: inline-flex;
+    }
+    .ttl-title {
+      color: white;
+      font-size: 32px;
+      font-family: "GT Super";
+      font-weight: 400;
+      line-height: 40px;
+      word-wrap: break-word;
+      max-width: 343px;
+    }
+    .cleaning-kit-items {
+      align-self: stretch;
+      padding-top: 20px;
+      justify-content: flex-start;
+      align-items: flex-start;
+      display: inline-flex;
+      width: 183px;
+    }
+    .kit-items-main {
+      width: 100%;
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 12px;
+      display: inline-flex;
+    }
+    .cleaning-kit-item-mark {
+      width: 20px;
+      height: 20px;
+      border-radius: 80px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+      display: inline-flex;
+    }
+    .cleaning-kit-item-text {
+      flex: 1 1 0; justify-content: center; display: flex; flex-direction: column; color: white; font-size: 14px; font-family: "Lausanne"; font-weight: 400; line-height: 21px; word-wrap: break-word
+    }
+    .cleaning-kit-spacer {
+      width: 145px;
+      height: 45px;
+      {% comment %} box-shadow: 6px 4px 17px rgba(97, 73, 51, 0.30); {% endcomment %}
+    }
+    .cleaning-desktop-hide {
+      display: inline-flex !important;
+    }
+    .cleaning-mobile-hide {
+      display: none !important;
+    }
+  }
+</style>
+
+<div class="cleaning-kit-container">
+  <div class="cleaning-kit-spacer cleaning-mobile-hide"></div>
+  <div class="ttl-main cleaning-desktop-hide">
+    <div class="ttl-sub-main">
+      <div class="ttl-title">{{ section.settings.heading }}</div>
+    </div>
+  </div>
+  <div class="cleaning-kit-text-box">
+    <div class="ttl-main cleaning-mobile-hide">
+      <div class="ttl-sub-main">
+        <div class="ttl-title">{{ section.settings.heading }}</div>
+      </div>
+    </div>
+    <div class="cleaning-kit-items">
+      {% for block in section.blocks %}
+      <div class="kit-items-main">
+        <div class="cleaning-kit-item-mark">
+          <img src="{{ block.settings.check | image_url: width: 100 }}" width="20" height="20">
+        </div>
+        <div class="cleaning-kit-item-text">
+          {{ block.settings.list_text }}
+        </div>
+      </div>
+      <div style="width: 100%; height: 1px; background: #FFFFFF;"></div>
+      {% endfor %}
+      <div class="cleaning-kit-spacer cleaning-desktop-hide"></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Cleaning kit 491",
+  "settings": [
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Add section class"
+    },
+    {
+      "type": "image_picker",
+      "id": "desk_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mob_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "lists",
+      "name": "List item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "check",
+          "label": "Check mark"
+        },
+        {
+          "type": "text",
+          "id": "list_text",
+          "label": "List text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Cleaning kit 491"
+    }
+  ]
+}
+{% endschema %}

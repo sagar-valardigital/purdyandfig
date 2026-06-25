@@ -1,0 +1,336 @@
+{% if section.settings.enable %}
+{% assign product = section.settings.bestseller %}
+<style>
+  .landing-page-images-wrapper{  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+  .main-landing-image{width:calc(100% - 120px);}
+.thumb-landing-images{width: 90px;
+display: flex;
+height: 100%;
+flex-direction: column;
+justify-content: space-between;}
+  .thumb-landing-images > div{margin-bottom:10px; cursor:pointer;}
+  .landing-page .block-img-wrapper{height:auto !important;}
+  .desktop-hide{display:none;}
+   .au-product-price del{
+    text-decoration:none;
+    position:relative;
+  }
+  .au-product-price{font-size:20px}
+  .au-product-price del:after{
+  content:'';
+  position:absolute;
+  left:0;
+  top:49%;
+  height:2px;
+  width:100%;
+  background:#CA7351;
+  }
+  @media(max-width:768px){
+   .main-landing-image{width:100%;margin-bottom:15px;}
+.thumb-landing-images{flex-direction: row;
+justify-content: space-between;height:auto;width:100%;}
+  .thumb-landing-images > div{flex:1;margin:5px;}
+  .best-seller-wrapper  .w-40{order:2;}
+  .best-seller-wrapper  .w-60{order:1; margin-bottom:15px;}
+  
+  .desktop-hide{display:block;}
+  .mobile-hide{display:none;}
+  .heading-2.lp-product-price{
+    font-size:26px !important;
+  }
+ .best-seller-wrapper .heading-2.au-product-price{
+  font-size:20px;
+ }
+  .mb-block{display:block}
+  .au-headding{
+  position:absolute;
+  top:15px;
+  left:20px;
+  right:20px;
+  z-index:3;
+  color:#fff;
+  }
+  .autumn-product-image{width:calc(100% + 60px);margin-left:-30px;margin-right:-30px;margin-top:-25px;}
+  .autumn-product-title{font-size:24px !important;}
+  }
+  
+</style>
+<div class="best-seller-section py-4" style="background:#fff;" id="{{ section.settings.bid }}">
+        <div class="container py-0 position-relative">
+                 
+             <h3 class="heading-2 my-5 text-center theme-text au-headding">{{section.settings.heading}}</h3>    
+  
+            <div class="d-flex flex-wrap best-seller-wrapper">
+               {% assign s_variant = product.selected_or_first_available_variant %}
+		       {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+                <div class="w-40 p-2" x-data="{ qty:1}" @quantity-changed.window="qty = $event.detail.quantity">
+                    <div class="best-product-details" style="text-align:left;">
+                      
+                        <h2 class="product-title theme-text heading-2 autumn-product-title" style="text-align:left;">{{ section.settings.productName }}</h2>
+<!--                         <p class="normal-text theme-text mb-0 about-text-heading text-left mobile-hide">This Kit Includes:</p> -->
+                          <ul class="home-best-seller-details">
+                          {% for block in section.blocks %}
+                            {% if block.type == 'text' %}
+                            <li class="">
+                          <p class="normal-text theme-text">{{block.settings.details}}</p>
+                            </li>
+                              {% endif %}
+                          {% endfor %}
+                          </ul>
+                      <div class="my-3">
+                        <h2 class="heading-2 theme-text au-product-price"> <del><small>£{{ section.settings.compareprice }}</small></del> <span style="color:#414F63"> £{{ section.settings.price }}  + Free Delivery</span></h2>
+                        {% if section.settings.showCode %}  
+                        <div class="font-value" style="color:#CA7351; font-size:20px; margin-top:15px; text-transform:uppercase;">USE CODE: {{ section.settings.dcode }}</div>
+                          {% endif %}
+                      </div>
+                      <div class="product-varient-selection ">
+                          <div class="product-buy-btn mt-0 mb-3">
+                             <button class="btn theme-btn checkout-au-btn" style="background:#CA7351;border-color:#CA7351"  id="checkout-btn">{{ section.settings.btn }}</button>
+                         </div>
+                        {% if section.settings.enableSub %}
+                        <div class="mb-3">
+                            <span  style="color:#414F63" class="mb-block">Subscribe & save 25%</span> <span class="au-product-price" style="color:#414F63; margin-left:15px;" class="font-value">
+                          <del>£{{ section.settings.subcompareprice }}</del></span> 
+                            <span  style="color:#414F63; margin-left:15px; font-size:28px;" class="font-value">£{{ section.settings.subprice }}</span>
+                        </div>
+                        <div class="product-buy-btn mt-0 mb-3">
+                             <button class="btn theme-btn checkout-au-sub-btn" style="background:#1F4D7A;border-color:#1F4D7A"  id="checkout-btn">I WANT TO SAVE 25%</button>
+                         </div>
+                          {% endif %}
+                        </div> 
+                        <div>
+                          {% if section.settings.enable-details-text %}
+                          <div class="d-flex justify-content-between" style="font-size:12px">
+                            <p class="theme-text my-2 px-1" style="color:#414F63">100% Secure Checkout</p>
+                            <p class="theme-text my-2 px-1" style="color:#414F63">Limited Time Offer</p>
+                          </div>
+                          <p class="theme-text my-2 px-1" style="color:#414F63; font-size:12px">
+                            One refill pack contains 2/3 months of cleaning. A 20ml concentrate makes up a 300ml Bottle for Life, dilutable with ordinary tap water. Only available whilst stock lasts.
+                          </p>
+                            {% endif %}
+                        </div>
+                      
+                         {% if section.settings.enableSub %}
+                      <p class="theme-text mt-3 mb-1 text-left" style="color:#414F63">Cancel anytime + Free Delivery.</p>
+                      <p class="theme-text mt-1 text-left" style="color:#414F63"><small>A 20ml concentrate makes up a 300ml Bottle for Life, dillutable with ordinary tap water. 
+                        Only available whilst stock lasts.</small></p>
+                       {% endif %}
+                    </div>
+                </div>
+              <div class="w-60 text-center  landing-page-images-wrapper">
+                <div class="main-landing-image autumn-product-image w-100" >
+                  	{% assign productImage = section.settings.productImage | img_url: '800x' %}
+                    <img loading="lazy" class="img-responsive w-100 lp-img" width="600px"  src="{{productImage}}" alt="{{productImage}}">
+                </div>   
+                
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endif %}
+<script>
+
+  $('.checkout-au-btn').on('click', function(){
+
+
+     $(this).addClass('disabled');
+    data = 
+      {
+        quantity: 1,
+        id: {{ section.settings.withoutsub }},
+      }
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4){
+          window.location.href = '/checkout/?discount={{section.settings.dcode}}';
+      }
+  };
+  xhr.open('POST', '/cart/add.js');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(data));
+
+    
+  })
+
+  
+  $('.checkout-au-sub-btn').on('click', function(){
+    $(this).addClass('disabled');
+ console.log(document.referrer);
+data = 
+  {
+    quantity: 1,
+    id: {{ section.settings.subid }},
+    selling_plan:{{section.settings.varid}}
+  }
+
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+      if (xhr.readyState === 4){
+          window.location.href = '/checkout/?discount=PREMIUMSPA';
+      }
+  };
+  xhr.open('POST', '/cart/add.js');
+  xhr.setRequestHeader('Content-Type', 'application/json');
+  xhr.send(JSON.stringify(data));
+    })
+</script>
+<style>
+  #checkout-btn.disabled{
+    pointer-events:none;
+    position:relative;
+    color:transparent;
+  }
+  #checkout-btn.disabled:before{
+    content:'';
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    border:5px solid #fff;
+    border-top-color:#ccc;
+    position:absolute;
+    top:calc(50% - 12px);
+    left:calc(50% - 12px);
+  }
+  .home-best-seller-details li{
+    background-image:url({{'check-box.png' | asset_url }})
+  }
+</style>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+  $(document).ready(function(){
+  $(".thumb-landing-img").click(function(){
+    event.preventDefault();
+    var img = $(this).data("img");
+    console.log(img);
+    $('.lp-img').attr('src', img);
+  })
+  })
+</script>
+{% schema %}
+  {
+    "name": "Autumn Product",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+      {
+      "type": "checkbox",
+      "id": "enableSub",
+      "label": "Show Subscribe button",
+      "default": false
+    },
+      {
+      "type": "checkbox",
+      "id": "showCode",
+      "label": "Show Code",
+      "default": false
+    },
+       {
+            "type": "text",
+            "id": "dcode",
+            "label": "Discount Code",
+            "default" : "Autumn15"
+          },
+      {
+      "type": "checkbox",
+      "id": "enable-details-text",
+      "label": "Show text After Btn",
+      "default": false
+    },
+      {
+            "type": "text",
+            "id": "bid",
+            "label": "Section ID"
+          },
+{
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+{
+            "type": "text",
+            "id": "productName",
+            "label": "Product Heading"
+          },
+      {
+            "type": "text",
+            "id": "price",
+            "label": "Product Price"
+          },
+      {
+            "type": "text",
+            "id": "compareprice",
+            "label": "Product Compare Price"
+          },
+      {
+            "type": "text",
+            "id": "withoutsub",
+            "label": "Product ID",
+            "default" : "43359600312547"
+          },
+      {
+            "type": "text",
+            "id": "subprice",
+            "label": "Subscribe Price"
+          },
+      {
+            "type": "text",
+            "id": "subcompareprice",
+            "label": "Subscribe Compare Price"
+          },
+      {
+            "type": "text",
+            "id": "subid",
+            "label": "Sub Product ID",
+            "default" : "43359600312547"
+          },
+      {
+            "type": "text",
+            "id": "varid",
+            "label": "Sub Var ID",
+            "default" : "3215098083"
+          },
+{
+            "type": "text",
+            "id": "btn",
+            "label": "Button Label",
+            "default" : "ADD TO CART"
+          },
+{
+            "type": "image_picker",
+            "id": "productImage",
+            "label": "Product Image"
+          }
+          
+		
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [ 
+
+		{
+            "type": "text",
+            "id": "details",
+            "label": "Details"
+          }
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Autumn Product"
+		}
+	]
+  }
+{% endschema %}
+

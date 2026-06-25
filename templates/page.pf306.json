@@ -1,0 +1,843 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_8iCwzJ": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55210538434940",
+            "subscription": true,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSCU373",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_8GcqGE": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "customImage": false,
+            "variant": "55210652139900",
+            "subscription": false,
+            "selling_plan": "",
+            "discount": "3PACKMICROFIBERCLOTHCU373",
+            "price": "£5.00",
+            "compare_price": "£12.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "empty_cart_8F4T8K": {
+          "type": "empty_cart",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55210538434940",
+            "subscription": true,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSCU373",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "empty_cart_RHW3HN": {
+          "type": "empty_cart",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "customImage": false,
+            "variant": "55210652139900",
+            "subscription": true,
+            "selling_plan": "",
+            "discount": "3PACKMICROFIBERCLOTHCU373",
+            "price": "£5.00",
+            "compare_price": "£12.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_8iCwzJ",
+        "product_8GcqGE",
+        "empty_cart_8F4T8K",
+        "empty_cart_RHW3HN"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "announcement_bar_306_kkz4yy": {
+      "type": "announcement-bar-306",
+      "custom_css": [
+        ".cart-item-count {top: 0px; right: -10px;}",
+        "@media (max-width: 768px) {.ann-bar-text-2 {background-color: #e9b88b !important; height: 37px; padding-top: 8px !important; padding-bottom: 8px !important; /* display: none; */ } .ann-bar-text-2 p {color: #212121; }}"
+      ],
+      "settings": {
+        "fixed": true,
+        "class": "",
+        "logoColor": "#11322c",
+        "logoURL": "https://purdyandfigg.com/a/account/login",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "NEW limited-edition Summer Lawn!",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": true,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_3EaRiV": {
+      "type": "banner-10",
+      "custom_css": [
+        ".hd-block {font-family: \"GT Super\";}",
+        ".ft-italica {font-style: italic; font-family: \"GT Super\"; font-weight: bold;}",
+        "@media (max-width: 768px) {.hd-block {display: block; } .banner-10 {height: 580px !important; }}"
+      ],
+      "settings": {
+        "txt-color": "#ffffff",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktop.png",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobile.png",
+        "heading": "<span class=\"hd-block\">You won’t <span class=\"ft-italica\">believe</span> </span> <span class=\"hd-block\">it’s not grass</span>",
+        "sub_heading": "Clean with the scent of freshly cut grass and save 41% on member exclusive bundles",
+        "btn-bg": "#ffffff",
+        "btn-txt-color": "#11322c",
+        "button_label": "GET YOUR OFFERS",
+        "button_link": "starterkit-product",
+        "top": "55",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "transformational_scents_pf150_wG73fT": {
+      "type": "transformational-scents-pf150-blocks",
+      "blocks": {
+        "image_EBpTmW": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Image_-_1_9a54efe5-13bc-49e1-86c0-999b6731e513.png",
+            "mBlockImage": "shopify://shop_images/image_-_1_1.png",
+            "tag": "",
+            "heading": "Simple & effective",
+            "details": "One naturally powerful spray for every surface"
+          }
+        },
+        "image_Jwizbp": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Image_-_2_693b8b0e-5e4e-45e5-8494-8eefe75aaf34.png",
+            "mBlockImage": "shopify://shop_images/image_-_2_1.png",
+            "tag": "",
+            "heading": "All-natural",
+            "details": "100% non-toxic, plant-based ingredients"
+          }
+        },
+        "image_3krith": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Image_-_3_daa8a7ce-c659-40a5-aaf1-1a41165aff45.png",
+            "mBlockImage": "shopify://shop_images/image_-_3_1.png",
+            "tag": "",
+            "heading": "Beautifully scented",
+            "details": "Expertly blended essential oil scents"
+          }
+        }
+      },
+      "block_order": [
+        "image_EBpTmW",
+        "image_Jwizbp",
+        "image_3krith"
+      ],
+      "custom_css": [
+        ".link-to-variant {margin-top: 0;}",
+        ".heading-2 {letter-spacing: 0px;}"
+      ],
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#fbf1e8",
+        "class": "pf-173-nature show pf-173-nature_",
+        "linkVariant": "",
+        "heading": "Get the most out of nature",
+        "subtext": ""
+      }
+    },
+    "pf306_image_block_anNEWe": {
+      "type": "pf306-image-block",
+      "custom_css": [
+        ".heading-2 {color: #0a1e1a !important; letter-spacing: 0px;}",
+        ".ft-italic-custom {font-style: italic; font-family: \"GT Super\";}",
+        ".ft-block {display: block; font-family: \"GT Super\";}",
+        "@media (max-width: 768px) {.two-women-details {margin-top: 16px; } .shop-now-cta {padding-top: 32px; } .two-women-details .normal-text {padding-bottom: 16px; } .heading-2 {text-align: center; } .summer-lawn {display: block; font-family: \"GT Super\"; }}"
+      ],
+      "settings": {
+        "className": "pf-176-img-text",
+        "textcolor": "#212121",
+        "background": "#fafafa",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Clean with the nation's <span class=\"ft-block\"><span class=\"ft-italic-custom\">favourite</span> scent</span>",
+        "image": "shopify://shop_images/Image_60a1cdab-e0cb-4333-802a-36827ba2120d.png",
+        "mimage": "shopify://shop_images/Image_1_49e889e3-d232-43e4-99da-59c37dcdede6.png",
+        "details": "Crafted by our scent experts and bottled just for you, limited-edition <span class=\"fw-400\">Summer Lawn</span> is the unmistakable aroma of freshly cut grass.",
+        "shop_now_cta": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "55",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 4,
+        "funnel_stage": "landing_page",
+        "dataModule": "introducing_summer_lawn",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_306_rfhzxx": {
+      "type": "global-product-306",
+      "blocks": {
+        "text_TBRKcy": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 limited-edition Summer Lawn scent refills"
+          }
+        },
+        "point_PkPnfh": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Geranium &amp; Ylang Ylang scent refill"
+          }
+        },
+        "point_6QfLUJ": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Citronella &amp; Niaouli scent refill"
+          }
+        },
+        "point_Nf8YxJ": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 Linden &amp; Lavender scent refill"
+          }
+        },
+        "point_BagRex": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "1 limited-edition Summer Lawn scent refill"
+          }
+        },
+        "point3_FtV9TD": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "3 limited-edition Summer Lawn scent refills"
+          }
+        },
+        "point3_63bq8K": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "<strong>FREE</strong> glass Bottle for Life"
+          }
+        },
+        "point3_7dMefY": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "<strong>FREE</strong> microfibre cloth"
+          }
+        },
+        "product_image_Xhj3CQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_01.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_01.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_P8NyJP": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_02.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_02.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_KkLjek": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_03.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_03.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_rCVyN7": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_04.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_04.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_LbMmHh": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_1_-_Desktop_05.png",
+            "mimage": "shopify://shop_images/Variant_1_-_Mobile_05.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_bUkE6b": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_01_06c1822c-c258-46e7-9703-81395d070e72.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_01_9091b39b-8c58-4f61-bc25-e780d50019d2.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_RUUHRU": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_02_36d4473e-4d71-4efd-9484-999f23bd4079.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_02_3e1a7bad-f181-4573-8d11-7c857bbe5c22.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_iBpALt": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_03_a5e7968d-2cc7-4a03-9f96-aed3eef54354.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_03_a6e32a95-3e52-4377-9b87-02432197458d.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_4jRpa9": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_04.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_04.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_d9cYzz": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Desktop_-_05_c5f4a7c1-2d5e-49ed-a9a6-c243c0fb0b59.png",
+            "mimage_2": "shopify://shop_images/Mobile_-_05_23346b3a-f75c-4a07-baeb-f68d126fbbd2.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image3_zGgbni": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_01_f76fbf2b-41ed-4a49-912a-23da00c15358.png",
+            "mimage_3": "shopify://shop_images/Variant_2_-_Mobile_01.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_x63chC": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_02.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_02_1f42878b-468d-439f-92bd-b59c74953377.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_z34z6x": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_04.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_04_e15867f6-aa74-4068-bc71-aa297df9978d.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_bJLcXH": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_04.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_04_e15867f6-aa74-4068-bc71-aa297df9978d.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_hN3dmp": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_2_-_Desktop_05.png",
+            "mimage_3": "shopify://shop_images/Variant_02_-_Mobile_05_9f8f9556-287d-4834-9658-d893c5a9944e.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_TBRKcy",
+        "point_PkPnfh",
+        "point_6QfLUJ",
+        "point_Nf8YxJ",
+        "point_BagRex",
+        "point3_FtV9TD",
+        "point3_63bq8K",
+        "point3_7dMefY",
+        "product_image_Xhj3CQ",
+        "product_image_P8NyJP",
+        "product_image_KkLjek",
+        "product_image_rCVyN7",
+        "product_image_LbMmHh",
+        "product_image2_bUkE6b",
+        "product_image2_RUUHRU",
+        "product_image2_iBpALt",
+        "product_image2_4jRpa9",
+        "product_image2_d9cYzz",
+        "product_image3_zGgbni",
+        "product_image3_x63chC",
+        "product_image3_z34z6x",
+        "product_image3_bJLcXH",
+        "product_image3_hN3dmp"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".buy--plan label,.ms-buy--plan label {background-color: #e1eecb;}",
+        ".buy--plan input:checked + label,.ms-buy--plan input:checked + label {background-color: #f5f5f5;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        ".heading-3 {font-weight: 600; font-size: 28px; letter-spacing: 0.24px; color: #0c231f;}",
+        ".by-content {padding-top: 32px; padding-left: 32px;}",
+        "@media (max-width: 768px) {.heading-3 {font-size: 24px; letter-spacing: 0px; } .by-content {padding-top: unset; padding-left: unset; } .line-br {display: block; }}"
+      ],
+      "settings": {
+        "className": "pf306-buy-box",
+        "toast": true,
+        "collapse": true,
+        "outOfStock": true,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#b3d57d",
+        "mainheading": "Just launched: <span class=\"buybox-italica\">new</span> Summer Lawn Scent",
+        "heading": "Member Summer Bundles",
+        "mainsubheading": "Save on the scent of freshly cut grass",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "plan_heading_1": "Summer Lawn Trio",
+        "variant_id_1": "55178121707900",
+        "selling_plan_1": "",
+        "sku_1": "FG1254",
+        "qty_1": "1",
+        "discountPlan_1": "SUMMERLAWNTRIO373",
+        "price_1": "20.25",
+        "deleted_price_1": "27.00",
+        "plan_heading_2": "Summer Scent Bundle",
+        "variant_id_2": "55476210631036",
+        "selling_plan_2": "",
+        "sku_2": "FG1278",
+        "qty_2": "1",
+        "discountPlan_2": "SUMMERSCENTBUNDLE373",
+        "price_2": "24.75",
+        "deleted_price_2": "33.00",
+        "plan_heading_3": "Summer Lawn Bundle",
+        "variant_id_3": "55178157162876",
+        "selling_plan_3": "",
+        "sku_3": "FG1255",
+        "qty_3": "1",
+        "discountPlan_3": "SUMMERLAWNBUNDLES373",
+        "price_3": "27.00",
+        "deleted_price_3": "46.00",
+        "plan_heading_4": "",
+        "variant_id_4": "",
+        "selling_plan_4": "",
+        "sku_4": "",
+        "discountPlan_4": "",
+        "price_4": "",
+        "deleted_price_4": "",
+        "plan_heading_5": "",
+        "variant_id_5": "",
+        "selling_plan_5": "",
+        "sku_5": "",
+        "discountPlan_5": "",
+        "price_5": "",
+        "deleted_price_5": "",
+        "plan_heading_6": "",
+        "variant_id_6": "",
+        "selling_plan_6": "",
+        "sku_6": "",
+        "discountPlan_6": "",
+        "price_6": "",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 5,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "add_to_cart",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "pf306_upsell_blocks_NEMgLM": {
+      "type": "pf306-upsell-blocks",
+      "blocks": {
+        "product_QtPb6c": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant_id": "55209258844540",
+            "sku": "FG1148",
+            "sealing_plan": "4327440611",
+            "discount": "BATHROOMBLISS373",
+            "product_image": "shopify://shop_images/Bathroom_Bliss_Starter_Kit.png",
+            "isSub": false,
+            "title": "Bathroom Bliss Starter Kit",
+            "summary": "Our Lime & Lemongrass scented bathroom cleaner is specially formulated to tackle limescale, soap scum and hard water deposits with completely natural ingredients.",
+            "details": "<ul>\n    <li>1x 300ml glass Bottle for Life with an anti-slip silicone base</li>\n   <li>3x 20ml Bathroom Bliss Lime & Lemongrass scented cleaning concentrates</li>\n   <li>1x P&F premium microfibre cloth</li>\n</ul>",
+            "saving": "Customer favourite",
+            "price": "15.00",
+            "crossprice": "43.00",
+            "buttonLabel": "ADD 90-DAY PLAN"
+          }
+        },
+        "product_9rcwUT": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo-fir-peppermint",
+            "variant_id": "55159485497724",
+            "sku": "FG1156b",
+            "sealing_plan": "",
+            "discount": "ODLMEMBER373",
+            "product_image": "shopify://shop_images/Oh_de_Loo_Fir_Peppermint.png",
+            "isSub": false,
+            "title": "Oh! de Loo Fir & Peppermint",
+            "summary": "Our new member-exclusive, limited-edition Oh! de Loo Fir & Peppermint scented deodorising drops are a quick and easy way to freshen up the loo, the plug, the bin, and anywhere else that needs it",
+            "details": "<ul>\n    <li>Fir & Peppermint (90ml) essential oil scented deodorising drops</li>\n</ul>",
+            "saving": "Bestseller",
+            "price": "13.56",
+            "crossprice": "16.95",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_ww3iNV": {
+          "type": "product",
+          "settings": {
+            "product": "seasonal-refill-pack-summer",
+            "variant_id": "55159963713916",
+            "sku": "FG1209C",
+            "sealing_plan": "",
+            "discount": "SUMMERREFILLS373",
+            "product_image": "shopify://shop_images/Summer_Refill_Pack.png",
+            "isSub": false,
+            "title": "Summer Refill Pack",
+            "summary": "Our three seasonal summer blends are vibrant and uplifting, helping you to transform your home into a summer paradise with every spray.",
+            "details": "<ul>\n   <li>1x 20ml Geranium & Ylang Ylang scented cleaning concentrate</li>\n   <li>1x 20ml Citronella & Niaouli scented cleaning concentrate</li>\n   <li>1x 20ml Linden & Lavender scented cleaning concentrate</li>\n</ul>",
+            "saving": "Brand new",
+            "price": "20.40",
+            "crossprice": "24.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_zHibjF": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "variant_id": "55209507783036",
+            "sku": "FG1229b",
+            "sealing_plan": "",
+            "discount": "3PACKMICROFIBERCLOTH373",
+            "product_image": "shopify://shop_images/3_x_Microfibre_Cloths.png",
+            "isSub": false,
+            "title": "3 x Microfibre Cloths",
+            "summary": "Three premium, reusable microfibre cleaning cloth",
+            "details": "<ul>\n   <li>3x luxurious Purdy & Figg branded green cloths</li>\n</ul>",
+            "saving": "Most added",
+            "price": "5.00",
+            "crossprice": "12.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_QtPb6c",
+        "product_9rcwUT",
+        "product_ww3iNV",
+        "product_zHibjF"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".btn-loader.loading,.btn-loader.loading > .text-decoration-line-through:before {background: #11322c;}",
+        "@media (max-width: 768px) {.section-header.text-center {text-align: left; }}"
+      ],
+      "settings": {
+        "reviews": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Sweeten your summer",
+        "subheading": "Hot member-only deals with free delivery over <span class=\"market-place-currency\"></span>40",
+        "module": ""
+      }
+    },
+    "icon_blocks_reskin_290_CeqXUa": {
+      "type": "icon-blocks-reskin-290",
+      "blocks": {
+        "iconblocks_eiiiLB": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_633c2ab3-5af8-4e48-97fc-f4f8584be67c.svg"
+          }
+        },
+        "iconblocks_gDgnfh": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_1.svg"
+          }
+        },
+        "iconblocks_hRQbEQ": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_2.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_eiiiLB",
+        "iconblocks_gDgnfh",
+        "iconblocks_hRQbEQ"
+      ],
+      "custom_css": [
+        ".green-btn {width: 343px; padding: 12px 16px; border-radius: 4px; margin-top: 40px;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: unset; width: 100% !important; max-width: 100% !important; } .heading-4 {color: #0c231f !important; }}"
+      ],
+      "settings": {
+        "class": "pf-219-icon-block",
+        "bg": "#fcfaf6",
+        "textcolor": "#212121",
+        "heading": "Your member benefits",
+        "show_hide_block": true,
+        "showbtn": true,
+        "btnbgcolor": "#11322c",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        ".two-women video {border-radius: 4px;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "55",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>No, this is a buy-once offer just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>This offer will last as long as this limited edition scent lasts, so we recommend getting your skates on.</p>"
+          }
+        },
+        "text_NPPtzz": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Can I get Summer Lawn on subscription?",
+            "faq-ans": "<p>Yes, we offer the ability to add the Summer Lawn scent to any upcoming subscription in your portal. Please note that if we sell out before your subscription date or if your next subscription date falls into the next season you may not receive your scent.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into your account with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to tweak your subscription however you like. You can change what’s in your order, adjust your delivery and billing date, or pause deliveries completely for a bit.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "text_NPPtzz",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "bottomText": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "announcement_bar_306_kkz4yy",
+    "banner_10_3EaRiV",
+    "transformational_scents_pf150_wG73fT",
+    "pf306_image_block_anNEWe",
+    "global_product_306_rfhzxx",
+    "pf306_upsell_blocks_NEMgLM",
+    "icon_blocks_reskin_290_CeqXUa",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

@@ -1,0 +1,1021 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "e7389d02-8f4c-4b12-90eb-d09037d1ab00": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-bathroom-bundle",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Bundle up with Lime &amp; Lemongrass scented limescale-busting Bathroom Bliss  alongside limited edition our ‘Fab Fir’ festive-scented deodorising drops to eliminate unwanted bathroom smells! <p> </p>\nGet your ‘Fab Fir’ Oh! de Loo for FREE when you ‘Subscribe &amp; Save’ to Bathroom Bliss."
+          }
+        },
+        "8cce6d01-cd23-4a71-9d30-263996f65a3c": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-bathroom-bundle",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Lime &amp; Lemongrass (Bathroom Bliss) <p></p>\nFab Fir (Oh! De Loo) - A limited edition festive blend of coniferous Siberian Fir with the slightly sweet camphorous Niaouli and rich and exotic Ylang Ylang, topped off with the sweet, uplifting scent of Sweet Orange.  <p></p> <p>\nLime &amp; Lemongrass (Bathroom Bliss) - A fresh, citrusy scent with natural uplifting benefits. Lemongrass adds an energising element with a fresh, herbaceous aroma. \n</p>"
+          }
+        },
+        "ee703273-0a18-40bd-87a0-ada85a0a726f": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-bathroom-bundle",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": "1 x Bathroom Bliss Bottle for Life <p>\n3 x Lime &amp; Lemongrass Bathroom Bliss Eco-Concentrates </p><p>\n1 x Purdy &amp; Figg cleaning cloth </p><p> \n1  x 100ml Fab Fir Oh! de Loo\n</p>"
+          }
+        },
+        "4327a96b-4fc9-4f1e-8183-85ddd8c8a9e1": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refill-booster-packs",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "A pack of 3 x 20ml eco-concentrate refills to top up your Counter Clean Bottle for Life. Subscribe to save 15% and never run out again! \n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "3a45a20c-02c4-4d0c-af09-03490826c579": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refill-booster-packs",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Geranium &amp; Ylang Ylang (Limited Edition): A scented blend of enchanting floral gardens and warm, spicy tropics. Pure Geranium and Ylang Ylang essential oils calm, while Ho Wood and Clary Sage transport you to a tranquil paradise.\n<p> </p>\nUplifting Citrus: A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nBalancing Floral: A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects.\n<p> </p>"
+          }
+        },
+        "5e80996f-3ca0-4ce1-aeda-aa1fd0f706e1": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refill-booster-packs",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "3 x 20ml Counter Clean refills in a scent of your choice"
+          }
+        },
+        "2e62740a-0fa7-4cb4-a84d-6804feece646": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-1",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "The Limited Edition Christmas Variety Kit includes our glass Bottle For Life and four eco-concentrate refills in our three signautre scents alongside our limited edition Christmas Frankincense &amp; Myrrh blend.\n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "f3f300e7-d6a4-4b0d-86ae-cd1636351722": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-1",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Uplifting Citrus: A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nBalancing Floral: A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects.\n\nFrankincense &amp; Myrrh:"
+          }
+        },
+        "90d33b06-865a-4895-ae6f-c0f6faecbee5": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "christmas-variety-kit-1",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "1 x Glass Bottle for Life\n<p> </p> \n4 x 20ml Counter Clean \nrefills (Citrus, Floral, Vetiver &amp; Frankincense &amp; Myrrh)\n<p> </p>\n1 x Purdy &amp; Figg microfibre cloth"
+          }
+        },
+        "b63de021-6c8c-46b6-8b65-b520c7a0809f": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "1-year-supply-eco-concentrate-cleaner",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Our new 18-packs are the most cost-effective and convenient way to top up your Counter Clean bottle. Get a year's worth of cleaning for just £3.33 per refill and save over 50% \n<p> </p>\n\nSave even more with an annual subscription and never run out again.\n<p> </p>\nPack includes:\n<p> </p>\n- 18 x 20ml Eco-Concentrates (scent of your choice)\n<p> </p>\nA pack of 18 x 20ml eco-concentrate refills for the most cost-effective and convenient way to top up your Counter Clean Bottle for Life. \n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner."
+          }
+        },
+        "1af1ed09-9d2a-45ff-ab8b-5114d60b175e": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "1-year-supply-eco-concentrate-cleaner",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Uplifting Citrus: A characterful blend of Sweet Orange, Grapefruit &amp; Naouli that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nBalancing Floral: A beautifully floral blend of Rose Geranium, Lemon Peel and Vetiver Roots, known for their comforting &amp; balancing properties\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with an earthy blend of Sweet Orange, Coriander Seed and Vetiver, known for their calming &amp; grounding effects."
+          }
+        },
+        "6ec28600-da59-4aaa-8d3f-c4a7f598a513": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "1-year-supply-eco-concentrate-cleaner",
+            "open": "close",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "18 x 20ml Counter Clean refills in a scent of your choice"
+          }
+        },
+        "5889061a-75f5-49fe-8eef-1a8c9930bd3c": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "ultimate-cleaning-kit",
+            "open": "close",
+            "DescriptionHeading": "Overview",
+            "description": "✔️ 3 Months Cleaning in 6 Concentrates<p> </p>\n\n✔️ Delivered Quarterly<p> </p>\n\n✔️ Free Starter Kit: 2x Bottle For Life and Premium Cloth<p> </p>\n\n✔️ FREE Oh! De Loo 1 Year Supply"
+          }
+        },
+        "028b6aee-71ca-42f8-b29e-0e2f822b1e34": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "ultimate-cleaning-kit",
+            "open": "close",
+            "DescriptionHeading": "Guarantee",
+            "description": "We stand behind the quality of our products/services and want to ensure our customers are completely satisfied. That's why we offer a 30-day money-back guarantee.<p> </p>\n\nIf for any reason you are not satisfied with your purchase within 30 days of receiving it, simply contact our customer service team and we will provide you with a full refund - no questions asked."
+          }
+        },
+        "1d1ffba4-e3d4-4945-a747-da69d631b7e1": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refresh-starter-bundle",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "The variety kit includes our Glass Bottle For Life and a pack of three Eco-Concentrate Refills in our original three unique scents.\n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "3ee16854-2913-4ae4-b9b4-51683678efef": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refresh-starter-bundle",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Balancing Floral: An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability.\n<p> </p>\nUplifting Citrus: A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<p> </p>\nGrounding Vetiver: A complex and invigorating scent with wood, earthy notes for a calming and grounding effect."
+          }
+        },
+        "7f360e9b-6b8a-4a30-8d8b-3879985b66f5": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "refresh-starter-bundle",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": "<p> </p>\n1 x Glass Bottle for Life <p> </p>\n3 x 20ml Counter Clean refills in a scent of your choice\n<p> </p>\n1 x Premium microfibre cloth"
+          }
+        },
+        "f99abb9f-284d-4a0b-ab63-95f15f90512f": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "restore-starter-bundle",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "This Starter Kit contains everything you need to clean your whole home and get started on your natural cleaning journey. \n<p> </p> \nLime and Lemongrass-scented Bathroom Bliss is designed to tackle limescale and hard water whilst Counter Clean cleans the rest of your home, effortlessly."
+          }
+        },
+        "24263d3a-d417-4cab-8693-bdaa3efda2e6": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "restore-starter-bundle",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Counter Clean \nBalancing Floral: An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability.\n<p> </p> \nUplifting Citrus: A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties. \n<p> </p> \nGrounding Vetiver: A complex and invigorating scent with wood, earthy notes for a calming and grounding effect.\n<p> </p> \nBathroom Bliss\nLime &amp; Lemongrass: A vibrant, citrusy spa-like blend of uplifting lime and invigorating lemongrass essential oils."
+          }
+        },
+        "27d7bd15-d504-43d0-9358-e6fb0699bc4f": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "restore-starter-bundle",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": "3 x Bathroom Bliss Eco-Concentrates\n<p> </p> \n3 x Counter Clean Eco-Concentrates \n<p> </p> \n2 x Bottles for Life (Counter Clean + Bathroom Bliss) \n<p> </p> \n2 x Purdy &amp; Figg Cloths"
+          }
+        },
+        "dbdb96b3-979a-40f3-85b6-27f66adee400": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "uplift-starter-bundle",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "The variety kit includes our Glass Bottle For Life and a pack of three Eco-Concentrate Refills in our original three unique scents.\n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "504d886b-526a-4d7e-845e-42ef60e59837": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "uplift-starter-bundle",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "The variety kit includes our Glass Bottle For Life and a pack of three Eco-Concentrate Refills in our original three unique scents.\n<p> </p>\nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "9c1f491e-4a57-4735-b558-804fbf38a33c": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "uplift-starter-bundle",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": "2 x Bottles for Life (Counter Clean + Bathroom Bliss) \n<p> </p> \n3 x Bathroom Bliss Eco-Concentrates\n<p> </p> \n3 x Counter Clean Eco-Concentrates \n<p> </p> \n2 x Purdy &amp; Figg Cloths"
+          }
+        },
+        "7aeb59e7-8829-41a2-a2a5-c5a7a9671275": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "productSelection": "christmas-bathroom-bundle",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": ""
+          }
+        },
+        "dbaf02ca-1383-458d-9230-2a484995b6ef": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "productSelection": "christmas-bathroom-bundle",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": ""
+          }
+        },
+        "a11260b6-c4f8-49c1-9ad5-4cdba4d2c64f": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "productSelection": "christmas-bathroom-bundle",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": ""
+          }
+        },
+        "533f0185-f8c8-40c7-85fb-4df1507fa033": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "bathroom-bundle-bf-edition",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "Bundle up with Lime &amp; Lemongrass scented limescale-busting Bathroom Bliss  alongside best selling Oh! de Loo deodorising drops to eliminate unwanted bathroom smells! <p> </p>\nVIP Black Friday Offer: Save 50% when you ‘Subscribe &amp; Save’ to Bathroom Bliss."
+          }
+        },
+        "b4f18e87-2288-4c95-82f5-1207d39432ab": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "bathroom-bundle-bf-edition",
+            "open": "close",
+            "DescriptionHeading": "Scent Information",
+            "description": "Lime &amp; Lemongrass - A fresh, citrusy scent with natural uplifting benefits. Lemongrass adds an energising element with a fresh, herbaceous aroma. \n<p></p>"
+          }
+        },
+        "fd271bc3-ff9d-4f3c-967a-4584d3b90942": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "bathroom-bundle-bf-edition",
+            "open": "close",
+            "DescriptionHeading": "What's in the box?",
+            "description": "1 x Bathroom Bliss Bottle for Life <p></p><p>\n3 x Lime &amp; Lemongrass Bathroom Bliss Eco-Concentrates (delivered every 90 days) </p><p>\n1 x Purdy &amp; Figg cleaning cloth </p><p> \n1  x 100ml Lime &amp; Lemongrass Oh! de Loo\n</p>"
+          }
+        }
+      },
+      "block_order": [
+        "e7389d02-8f4c-4b12-90eb-d09037d1ab00",
+        "8cce6d01-cd23-4a71-9d30-263996f65a3c",
+        "ee703273-0a18-40bd-87a0-ada85a0a726f",
+        "4327a96b-4fc9-4f1e-8183-85ddd8c8a9e1",
+        "3a45a20c-02c4-4d0c-af09-03490826c579",
+        "5e80996f-3ca0-4ce1-aeda-aa1fd0f706e1",
+        "2e62740a-0fa7-4cb4-a84d-6804feece646",
+        "f3f300e7-d6a4-4b0d-86ae-cd1636351722",
+        "90d33b06-865a-4895-ae6f-c0f6faecbee5",
+        "b63de021-6c8c-46b6-8b65-b520c7a0809f",
+        "1af1ed09-9d2a-45ff-ab8b-5114d60b175e",
+        "6ec28600-da59-4aaa-8d3f-c4a7f598a513",
+        "5889061a-75f5-49fe-8eef-1a8c9930bd3c",
+        "028b6aee-71ca-42f8-b29e-0e2f822b1e34",
+        "1d1ffba4-e3d4-4945-a747-da69d631b7e1",
+        "3ee16854-2913-4ae4-b9b4-51683678efef",
+        "7f360e9b-6b8a-4a30-8d8b-3879985b66f5",
+        "f99abb9f-284d-4a0b-ab63-95f15f90512f",
+        "24263d3a-d417-4cab-8693-bdaa3efda2e6",
+        "27d7bd15-d504-43d0-9358-e6fb0699bc4f",
+        "dbdb96b3-979a-40f3-85b6-27f66adee400",
+        "504d886b-526a-4d7e-845e-42ef60e59837",
+        "9c1f491e-4a57-4735-b558-804fbf38a33c",
+        "7aeb59e7-8829-41a2-a2a5-c5a7a9671275",
+        "dbaf02ca-1383-458d-9230-2a484995b6ef",
+        "a11260b6-c4f8-49c1-9ad5-4cdba4d2c64f",
+        "533f0185-f8c8-40c7-85fb-4df1507fa033",
+        "b4f18e87-2288-4c95-82f5-1207d39432ab",
+        "fd271bc3-ff9d-4f3c-967a-4584d3b90942"
+      ],
+      "custom_css": [
+        ".product-detail-section,.sticky-addtocart {background-color: #e3f3fe;}"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "4a902e28-e140-4eb5-9f7c-95afebd4d7c5": {
+      "type": "slider",
+      "blocks": {
+        "a4990778-9948-4758-80c0-ac721cc87082": {
+          "type": "text",
+          "settings": {
+            "heading": "\"Brilliant natural, environmentally friendly cleaning products\"",
+            "desktopimage": "shopify://shop_images/house_250x_de52c50f-7acd-4073-a97c-bcca2e25badf.png"
+          }
+        },
+        "4e7fff63-69e4-4cd0-bf12-b048f1fb2ad8": {
+          "type": "text",
+          "settings": {
+            "heading": "“They’re All Absolutely Delicious\"",
+            "desktopimage": "shopify://shop_images/sunday_7a2db430-135f-446b-befd-89447572228d.png"
+          }
+        },
+        "abbed815-939c-4b26-8ced-4a4fcfd1db8a": {
+          "type": "text",
+          "settings": {
+            "heading": "\"Smitten by sweet smelling Purdy & Figg\"",
+            "desktopimage": "shopify://shop_images/daily_e0a96ede-41be-4562-904d-bd20bb60388e.png"
+          }
+        }
+      },
+      "block_order": [
+        "a4990778-9948-4758-80c0-ac721cc87082",
+        "4e7fff63-69e4-4cd0-bf12-b048f1fb2ad8",
+        "abbed815-939c-4b26-8ced-4a4fcfd1db8a"
+      ],
+      "custom_css": [
+        "h2 {font-size: 24px; font-family: \"Pier Sans\";}",
+        ".client-logo {padding: 25px 0px; padding-bottom: 0px;}",
+        ".clients-section {padding: 0px 20px; padding-bottom: 25px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "bg": true
+      }
+    },
+    "d26a0388-f6f2-424b-adae-d67ae0dd0503": {
+      "type": "best-seller-section-2",
+      "blocks": {
+        "30b58016-4bc0-42d2-94c7-fbc560e1463d": {
+          "type": "product",
+          "settings": {
+            "new_product": false,
+            "product": "frankincense-myrrh-variety-kit-gift-wrap"
+          }
+        },
+        "db8ba7f2-854a-4d7b-bd1b-e1d515ca8798": {
+          "type": "product",
+          "settings": {
+            "new_product": false,
+            "product": "christmas-refill-booster-pack-bf"
+          }
+        },
+        "15e6221c-6f38-4342-8ffc-f9325facac36": {
+          "type": "product",
+          "settings": {
+            "new_product": false,
+            "product": "3-x-fab-fir-oh-de-loo"
+          }
+        },
+        "2ce41a3e-50d2-4894-b627-6fb97fe248a1": {
+          "type": "product",
+          "settings": {
+            "new_product": false,
+            "product": "frankincense-myrrh-refill-booster-back"
+          }
+        }
+      },
+      "block_order": [
+        "30b58016-4bc0-42d2-94c7-fbc560e1463d",
+        "db8ba7f2-854a-4d7b-bd1b-e1d515ca8798",
+        "15e6221c-6f38-4342-8ffc-f9325facac36",
+        "2ce41a3e-50d2-4894-b627-6fb97fe248a1"
+      ],
+      "custom_css": [],
+      "settings": {
+        "heading": "Add extras to your cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "ccaf6e55-d955-4e5d-a003-228cb8bf06a4": {
+      "type": "landing-text-with-image",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 26px; font-family: \"Value-Serif-Pro\"; color: #00c4ff;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Fir &amp; Bergamot",
+        "image": "shopify://shop_images/fb_scent.jpg",
+        "details": "<h3>Grounding & Restorative</h3><p>Bright, cool, coniferous and green, with a hint of the freshly cut Fir branches,  just like a refreshing stroll through a taiga. The vibrant green Fir Needle top notes are harmonised with the serene Lavender and  grounding Clary Sage. Elevated by a touch of spice from Patchouli and Bergamot, this scent envelops your home in festive bliss.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "ce6d6ce6-b556-4ccd-97a0-cdd684b6a2f8": {
+      "type": "video-html-block",
+      "disabled": true,
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/f4ff1b9f0c3a439d9b25dad0181eafff.mp4",
+        "image": "shopify://shop_images/fb_video_block_copy2.jpg",
+        "poster": "shopify://shop_images/Screenshot_2023-09-27_at_12.37.20_99407fe7-d851-4f71-a1e9-e51ca58c2d83.png",
+        "full-width": true,
+        "heading": "Discover Fir & Bergamot with Purdy and Charlotte",
+        "sub-heading": "",
+        "button-text": "",
+        "button-url": ""
+      }
+    },
+    "2a39f54f-f83c-43eb-b22a-41c589bbf931": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16799199953123__2a39f54f-f83c-43eb-b22a-41c589bbf931-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "What's in the box?",
+            "heading_size": "h1"
+          }
+        },
+        "template--16799199953123__2a39f54f-f83c-43eb-b22a-41c589bbf931-text-1": {
+          "type": "text",
+          "settings": {
+            "text": ""
+          }
+        },
+        "template--16799199953123__2a39f54f-f83c-43eb-b22a-41c589bbf931-button-1": {
+          "type": "button",
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16799199953123__2a39f54f-f83c-43eb-b22a-41c589bbf931-heading-1",
+        "template--16799199953123__2a39f54f-f83c-43eb-b22a-41c589bbf931-text-1",
+        "template--16799199953123__2a39f54f-f83c-43eb-b22a-41c589bbf931-button-1"
+      ],
+      "disabled": true,
+      "settings": {
+        "color_scheme": "#ffffff",
+        "full_width": true,
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "4ec9c45b-c968-4005-b31c-7f3a288b1701": {
+      "type": "landing-text-with-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Oh! De Loo",
+        "image": "shopify://shop_images/odl3-2.jpg",
+        "details": "<p>Like a perfume for your loo, Oh! de Loo (100ml) will neutralise unwanted bathroom odours.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "3d5617b3-35e4-4344-81b9-f4280a1b5d6a": {
+      "type": "landing-text-with-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Bathroom Bliss",
+        "image": "shopify://shop_images/bb4.jpg",
+        "details": "<p>Our brand new Bathroom Bliss Starter Kit featuring 3 x 20ml lime & lemongrass concentrates & a Bottle for Life.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "4bee3636-5c36-494d-b9b5-8866db8ffbd4": {
+      "type": "landing-blocks",
+      "blocks": {
+        "d17ee57c-1b11-44ef-83f8-e8bb92b23a2c": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_10821.png",
+            "rounded": true,
+            "heading": "Oh! de Loo",
+            "details": "Like a perfume for your loo, Oh! de Loo (100ml) will neutralise unwanted bathroom odours.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "cecaa8db-115d-4674-921b-c224a8906da2": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_10822.png",
+            "rounded": true,
+            "heading": "Bathroom Bliss",
+            "details": "Our brand new Bathroom Bliss Starter Kit featuring 3 x 20ml lime & lemongrass concentrates & a Bottle for Life.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "d17ee57c-1b11-44ef-83f8-e8bb92b23a2c",
+        "cecaa8db-115d-4674-921b-c224a8906da2"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {color: #3d5065; font-family: \"Value-Serif-Pro\"; font-size: 35px;}",
+        ".blends-wrapper {display: grid !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "#3d5065",
+        "heading": "What's in the box?",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "e7b12848-f3d6-4d8f-b02d-e164bd4cbff4": {
+      "type": "landing-blocks",
+      "blocks": {
+        "02f66d00-bf86-413b-86d7-a84e4497d2d7": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-4.png",
+            "rounded": true,
+            "heading": "Streak-free spotlessness",
+            "details": "Your mirror, shower screen and tiles will gleam – leaving no streaks, just scented bliss.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1b30cfa6-8210-4d12-9648-453a65479e25": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-1.png",
+            "rounded": true,
+            "heading": "No more limescale",
+            "details": "Easily wipe away those stubborn white marks from limescale and hard water.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "71028824-83e9-4f21-a9de-01ebe52795b0": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-3.png",
+            "rounded": true,
+            "heading": "A planet-friendly clean",
+            "details": "It’s all-natural, plant-based and refillable (so you can feel even better about your clean).",
+            "mbBlock": "mw-50"
+          }
+        },
+        "b6c91368-b33b-49b2-9539-85aeb8919924": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/icon-2.png",
+            "rounded": true,
+            "heading": "No toxins or allergens",
+            "details": "No nasty toxins or chemicals go into our formulas, so it’s safe for all the family.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "02f66d00-bf86-413b-86d7-a84e4497d2d7",
+        "1b30cfa6-8210-4d12-9648-453a65479e25",
+        "71028824-83e9-4f21-a9de-01ebe52795b0",
+        "b6c91368-b33b-49b2-9539-85aeb8919924"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "Designed to make your bathroom sparkle",
+        "subtext": "No chemicals. No plastic waste. Just pure plant-based cleaning power with naturally scented essential oils.",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "1649839242809d07cb": {
+      "type": "blocks",
+      "blocks": {
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-4.png",
+            "rounded": false,
+            "heading": "Counters & Stone",
+            "details": ""
+          }
+        },
+        "758c082c-743d-46c9-9b3a-63c29a340b8e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-3.png",
+            "rounded": false,
+            "heading": "Bath & Enamel",
+            "details": ""
+          }
+        },
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-2.png",
+            "rounded": false,
+            "heading": "Glass & Mirrors",
+            "details": ""
+          }
+        },
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/block-1.png",
+            "rounded": false,
+            "heading": "Wood & Floors",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "ac6ebe6f-1802-4038-80c7-ba23f5d61804",
+        "758c082c-743d-46c9-9b3a-63c29a340b8e",
+        "504ce982-c60d-4eec-b204-3f1c7f09f6a4",
+        "66a64cbb-16fd-4788-9e59-62d2e0e16d83"
+      ],
+      "settings": {
+        "enable": false,
+        "width": "w-25",
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home"
+      }
+    },
+    "1649831294e3d704b2": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "white-text",
+        "background": "theme-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "Proven to be Effective",
+        "image": "shopify://shop_images/p-8.png",
+        "details": "<p>The innovative eco-concentrate developed by PHD chemist Dr Anna Stastanova has been designed to work effectively on all your homes surfaces whilst retaining maximum scent. Over 97% of customers say it works better than their regular cleaner.</p>",
+        "link": "",
+        "btntext": "Read more",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      }
+    },
+    "16572925435a91d41d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": false,
+        "bgcolor": "#ffffff",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "0",
+        "mainheading": "",
+        "heading": "A scent that transforms your home",
+        "details": "",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1657290860d3f966ef": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "The Best Essential Oils",
+        "image": "shopify://shop_images/p-7.png",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1654230729996fed8d": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 5,
+        "alignment": "justify-content-start",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "15",
+        "mainheading": "A scent that transforms your home",
+        "heading": "The Best Essential Oils",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "mobileShow": false,
+        "textcolor": "",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1654234195a5b1460d": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Expertly Blended",
+        "image": "shopify://shop_images/p-6.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and have out all of their years of works into creating the most incredible smelling cleaners.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1657296171d46b68b8": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 3,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "10",
+        "mainheading": "",
+        "heading": "Welcome to a cleaning revolution",
+        "details": "<p></p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1654234422b9cdd91c": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": true,
+        "bgcolor": "",
+        "width": "w-50",
+        "sp": 3,
+        "alignment": "justify-content-end",
+        "Textalignment": "text-left",
+        "space": "mobile-top",
+        "spacem": "25",
+        "mainheading": "Welcome to a chemical-free cleaning revolution",
+        "heading": "Reusable Glass Bottles",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "mobileShow": false,
+        "textcolor": "#ffffff",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1654234598971fe4e5": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "hide-for-ab",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-70",
+        "layout": false,
+        "heading": "Non-Toxic",
+        "image": "shopify://shop_images/poster-3.png",
+        "details": "<p>It is our mission to put your family first which is why our Eco-Concentrates are completely plant-based, paraben-free and GMO-free with natural essential oils and no synthetic fragrance or dangerous preservatives.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "165423535626bc9759": {
+      "type": "table",
+      "custom_css": [
+        ".heading-2 {color: #3d5065; font-family: \"Value-Serif-Pro\"; font-size: 35px;}",
+        ".blends-wrapper {display: grid !important;}"
+      ],
+      "settings": {}
+    },
+    "1654234744e17a4ce6": {
+      "type": "text-over-image",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "mobileimage": false,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-bottom",
+        "spacem": "250",
+        "mainheading": "",
+        "heading": "Two women on a mission",
+        "details": "<p>Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.</p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "f8894ff5-310a-4171-a21c-2a510c392f59": {
+      "type": "faq-section",
+      "blocks": {
+        "08f61279-fb22-44bf-bf71-5d2ca92212e4": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Do I have to sign up for a subscription?",
+            "faq-ans": "<p>No - all our products can be purchased as one-off orders by selecting ‘One Time Purchase’ option before checking out. We recommend opting to subscribe to get the best value for money. </p>"
+          }
+        },
+        "74e5d2b8-a90c-4bdf-966c-54f9ab27c68a": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How long does delivery usually take?",
+            "faq-ans": "<p>We aim to ship all orders from our UK factory within 48 hours of receiving them. You will receive an email with tracking information as soon as your order has been dispatched. Depending on the delivery method you choose, orders should arrive 24-48 hours from the time of dispatch. We offer free standard delivery on all orders over £40. </p>"
+          }
+        },
+        "57ed6ae4-9e39-4017-bf7a-2f2f526fce4c": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Which surfaces is Counter Clean suitable for? ",
+            "faq-ans": "<p>Counter Clean can be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces. As always, we recommend patch testing on any particularly sensitive or precious surfaces that you might be concerned about. Spray onto a cloth and wipe a small patch to see results. </p>"
+          }
+        },
+        "cb11dc92-3cc1-4476-802c-087f9ebd0657": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How do I use the concentrate?",
+            "faq-ans": "<p>Simply pour the whole 20ml bottle into your Bottle for Life and fill to the top (just below the neck) with ordinary tap water. Give the bottle a gentle shake to combine, then enjoy your uplifting clean! </p>"
+          }
+        },
+        "e22f854a-86eb-4d5a-a7b1-f431df27f4c5": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use around pets? ",
+            "faq-ans": "<p>Our products are safe to use around dogs and other pets, however, it's best not to use them to clean beds or food bowls without rinsing afterwards. Also, don't spray it directly on them (not that you would!). If you are worried about allergies, do contact your vet. Finally, if you have pet birds, you will know that they are particularly sensitive to airborne substances, so it is best to take them out of the room while you clean.</p>"
+          }
+        },
+        "2c10f3a4-c959-4e62-a532-76f9d1bdc3ad": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this product Cruelty Free? ",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "a85227c4-e94d-41ef-a556-257eca9683a6": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is Counter Clean antibacterial? ",
+            "faq-ans": "<p>Counter Clean does not contain specific antibacterial agents. It works by actively removing grease, grime and dirt along with bacteria, viruses and mould to create a healthy home. Whilst antibacterial products will kill bacteria (if left to work for the appropriate amount of time), they won’t remove the bacteria from the surface. You wouldn’t wash your body with strong, highly toxic products every two weeks and it’s the same concept with cleaning; use a gentle cleaner little and often. For more information, read Dr Anna’s blog <a href=\"https://purdyandfigg.com/blogs/natural-tips-and-tricks/myth-busting-with-dr-anna-we-need-antibacterial-products-to-clean-properly\" target=\"_blank\" title=\"https://purdyandfigg.com/blogs/natural-tips-and-tricks/myth-busting-with-dr-anna-we-need-antibacterial-products-to-clean-properly\">here</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "08f61279-fb22-44bf-bf71-5d2ca92212e4",
+        "74e5d2b8-a90c-4bdf-966c-54f9ab27c68a",
+        "57ed6ae4-9e39-4017-bf7a-2f2f526fce4c",
+        "cb11dc92-3cc1-4476-802c-087f9ebd0657",
+        "e22f854a-86eb-4d5a-a7b1-f431df27f4c5",
+        "2c10f3a4-c959-4e62-a532-76f9d1bdc3ad",
+        "a85227c4-e94d-41ef-a556-257eca9683a6"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "4a902e28-e140-4eb5-9f7c-95afebd4d7c5",
+    "d26a0388-f6f2-424b-adae-d67ae0dd0503",
+    "ccaf6e55-d955-4e5d-a003-228cb8bf06a4",
+    "ce6d6ce6-b556-4ccd-97a0-cdd684b6a2f8",
+    "2a39f54f-f83c-43eb-b22a-41c589bbf931",
+    "4ec9c45b-c968-4005-b31c-7f3a288b1701",
+    "3d5617b3-35e4-4344-81b9-f4280a1b5d6a",
+    "4bee3636-5c36-494d-b9b5-8866db8ffbd4",
+    "e7b12848-f3d6-4d8f-b02d-e164bd4cbff4",
+    "1649839242809d07cb",
+    "1649831294e3d704b2",
+    "16572925435a91d41d",
+    "1657290860d3f966ef",
+    "1654230729996fed8d",
+    "1654234195a5b1460d",
+    "1657296171d46b68b8",
+    "1654234422b9cdd91c",
+    "1654234598971fe4e5",
+    "165423535626bc9759",
+    "1654234744e17a4ce6",
+    "f8894ff5-310a-4171-a21c-2a510c392f59",
+    "16644285387cfa3d71"
+  ]
+}

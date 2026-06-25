@@ -1,0 +1,39 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "announcement-us-bar",
+  "type": "header",
+  "sections": {
+    "announcement-us-bar": {
+      "type": "announcement-bar-us",
+      "settings": {
+        "text": "Save up to 70% with FREE Glass Bottle and Microfiber Cloth",
+        "bg-color": "#11322c",
+        "text-color": "#ffffff",
+        "annuLink": "",
+        "scrollto": "starterkit-product-us",
+        "top": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "hp",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    }
+  },
+  "order": [
+    "announcement-us-bar"
+  ]
+}

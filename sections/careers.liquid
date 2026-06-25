@@ -1,0 +1,244 @@
+<div class="careers-section d-flex mx-auto value-sans">
+  <div>
+    <h1 class="title value-bold">{{ section.settings.title }}</h1>
+    <p>{{ section.settings.our_mission }}</p>
+
+    <div class="video">
+      <p class="jump-to">Jump to open positions →</p>
+      <div class="video-container">
+        <iframe src="https://www.youtube.com/embed/npEVP8Ij52g?si=bE_HWAEhk1Zj7_ym&amp;rel=0&amp;vq=hd720" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </div>
+      
+    <div class="our-story">
+      <h2 class="value-bold">Our Story</h2>
+      <p>{{ section.settings.our_story }}</p>
+    </div>
+
+    <div class="our-values">
+      <h2 class="value-bold">Our Values</h2>
+      <p>{{ section.settings.our_values }}</p>
+    </div>
+
+    <!-- Insert the positions here -->
+    <div id="jobs">
+    </div>
+
+    <div class="perks">
+      <h2 class="value-bold">Perks & Benefits</h2>
+      <div class="perks-container grid">
+        {% for block in section.blocks %}
+          <div class="perk-item">
+            <img width="240" height="128.5" src="{{ block.settings.perk_image  | image_url: width: 480 }}" />
+            <h4 class="value-bold">{{ block.settings.perk_title }}</h4>
+            <p>{{ block.settings.perk_description }}</p>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    <div class="divider"></div>
+    <!-- Socials -->
+    <div class="socials grid">
+      <a href="" class="social-item">📽️ <span class="social-name">YouTube →</span></a>
+      <div class="social-item">🖋️ <span class="social-name">Blog →</span></div>
+      <div class="social-item">🗄️ <span class="social-name">LinkedIn →</span></div>
+      <div class="social-item">🐦 <span class="social-name">Twitter →</span></div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Careers",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Careers at Purdy & Figg"
+      },
+      {
+        "type": "text",
+        "id": "our_mission",
+        "label": "Our Mission",
+        "default": "Our mission is to transform the cleaning industry and create uplifting cleaning experiences."
+      },
+      {
+        "type": "url",
+        "id": "video_url",
+        "label": "Video URL"
+      },
+      {
+        "type": "text",
+        "id": "our_story",
+        "label": "Our Story",
+        "default": "Back in 2018, NHS nurse Purdy Rubin and horticulturalist Charlotte Figg decided to make cleaning products they’d actually feel good using - both for themselves and for the environment. Fed up with highly toxic cleaning products in plastic packaging, the two friends decided to do something about it."
+      },
+      {
+        "type": "text",
+        "id": "our_values",
+        "label": "Our Values",
+        "default": "<b>Be an owner of the mission.</b> We’re driven by our commitment to empower every person on the planet to use software exactly the way they want.<br/><b>Be a pace setter.</b> We move with urgency so we can set the cadence for our market, cover more ground, and ship more great products and programs for our users, faster.<br/><b>Be a truth seeker.</b>We pursue the best data, ideas, and solutions with rigor and open-mindedness, always guided by our users’ most pressing needs."
+      },
+      {
+        "type": "url",
+        "id": "youtube",
+        "label": "YouTube"
+      },
+      {
+        "type": "url",
+        "id": "blog",
+        "label": "Blog"
+      },
+      {
+        "type": "url",
+        "id": "linkedin",
+        "label": "LinkedIn"
+      },
+      {
+        "type": "url",
+        "id": "twitter",
+        "label": "Twitter"
+      }
+    ],
+    "max_blocks": 6,
+    "blocks": [
+      {
+        "type": "careers-perk",
+        "name": "Careers Perk",
+        "settings": [
+          {
+            "type": "image_picker",
+            "label": "Perk Image",
+            "id": "perk_image"
+          },
+          {
+            "id": "perk_title",
+            "label": "Perk Title",
+            "type": "text"
+          },
+          {
+            "id": "perk_description",
+            "label": "Perk Description",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+		{
+          "name": "Careers"
+		}
+	]
+  }
+{% endschema %}
+
+{% style %}
+  .careers-section {
+    max-width: 932px;
+    width: 100%;
+    padding: 80px 112px;
+  }
+
+  .careers-section h1 {
+    font-size: 40px;
+    margin-bottom: 30px;
+  }
+  
+  .careers-section h2 {
+    font-size: 30px;
+    margin-bottom: 12px;
+  }
+
+  .careers-section h4 {
+    font-size: 1.25em;
+    
+  }
+  
+  .careers-section p {
+    font-size: 16px;
+  }
+
+  .careers-section .jump-to {
+    border-bottom: 0.05em solid;
+    border-color: rgba(255, 255, 255, 0.283);
+    opacity: 0.7;
+    cursor: pointer;
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+
+  .careers-section .video {
+    margin-top: 50px;
+  }
+
+  .careers-section .our-story {
+    margin-top: 40px;
+  }
+
+  .careers-section .our-values {
+    margin-top: 40px;
+  }
+
+  .careers-section .perks {
+    margin-top: 60px;
+  }
+  
+  .careers-section .perks-container {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-section .perk-item h4 {
+    margin-top: 18px;
+  }
+
+  .careers-section .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .careers-section .socials {
+
+  }
+  
+  .careers-section .social-item {
+    
+  }
+
+  .careers-section .social-name {
+    border-bottom: 0.05em solid;
+    border-color: rgba(0, 0, 0, 0.82);
+    color: rgba(0, 0, 0, 0.82);
+  }
+
+  .careers-section .divider {
+    width: 100%;
+    height: 1px;
+    visibility: visible;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.82);
+    margin-bottom: 18px;
+    margin-top: 30px;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+  }
+  
+  .video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+{% endstyle %}
+
+{% javascript %}
+{% endjavascript %}

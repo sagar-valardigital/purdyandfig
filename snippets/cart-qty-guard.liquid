@@ -1,0 +1,255 @@
+{% comment %}
+  Prevent rapid qty clicks in cart - Craig
+  To use: add {% raw %}{% render 'cart-qty-guard' %}{% endraw %} to layout template
+{% endcomment %}
+
+<style>
+  body.cart-qty-busy .qty-minus,
+  body.cart-qty-busy .qty-plus {
+    pointer-events: none;
+    opacity: 0.4;
+  }
+
+  .qty-wrapper.qty-active .qty-minus,
+  .qty-wrapper.qty-active .qty-plus {
+    opacity: 1;
+    animation: qty-pulse 0.6s ease-in-out infinite alternate;
+  }
+
+  .qty-wrapper.qty-active .qty {
+    color: transparent !important;
+  }
+
+  .qty-wrapper.qty-active {
+    position: relative;
+  }
+
+  .qty-wrapper.qty-active::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 14px;
+    height: 14px;
+    margin: -7px 0 0 -7px;
+    border: 2px solid transparent;
+    border-top-color: #212121;
+    border-right-color: #212121;
+    border-bottom-color: #212121;
+    border-radius: 50%;
+    animation: qty-spin 0.9s linear infinite;
+  }
+
+  .qty-wrapper .qty {
+    pointer-events: none;
+  }
+
+  @keyframes qty-pulse {
+    from { opacity: 0.3; }
+    to { opacity: 0.6; }
+  }
+
+  @keyframes qty-spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  body.cart-qty-busy .min-cart-footer .d-flex.justify-content-between > div:last-child {
+  color: transparent !important;
+  position: relative;
+}
+
+body.cart-qty-busy .min-cart-footer .d-flex.justify-content-between > div:last-child::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  width: 60px;
+  height: 14px;
+  margin-top: -7px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, #ddd 25%, #eee 50%, #ddd 75%);
+  background-size: 200% 100%;
+  animation: subtotal-shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes subtotal-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Generic fix for corner radius issue on iphone/ipad only */
+.qty-wrapper .qty {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0;
+}
+
+/* Generic fix for upsell blocks jumping on refresh */
+.upsell-2 .upsell-product-section {
+  min-height: 85px;
+}
+
+/* Generic CSS for empty cart upsell  */
+.cart-ab-2 .empty-cart-wrapper .empty-cart-products {
+  margin: 0 16px 10px 16px;
+}
+.upsell-product-wrapper {
+  margin: 10px 0;
+}
+
+.cart-products-wrapper p {
+ margin-bottom: 0 !important;
+}
+
+.upsell-2 .upsell-product {
+  background: #FFFFFF !important;
+  padding: 12px !important;
+}
+
+.upsell-2 .upsell-product-section .up-product-img {
+  width: 95px !important;
+}
+
+.upsell-2 .upsell-product-section .up-add-cart-option {
+    width: calc(100% - 95px) !important;
+}
+
+.up-price span.upsell-price {
+  font-size: 14px !important;
+}
+
+.up-price span.upsell-compare-price {
+  font-size: 14px !important;
+  color: #9E9E9E !important;
+}
+
+.upsell-2 .up-top .up-title h4 {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* animation on cart bin click */
+
+.cart-product.removing {
+  opacity: 0.4;
+  pointer-events: none;
+  position: relative;
+}
+
+.cart-product.removing::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin: -10px 0 0 -10px;
+  border: 2px solid transparent;
+  border-top-color: #212121;
+  border-right-color: #212121;
+  border-bottom-color: #212121;
+  border-radius: 50%;
+  animation: qty-spin 0.9s linear infinite;
+}
+
+/* empty cart upsell CSS to check if working */
+.upsell-2 .upsell-product-section {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.upsell-2 .upsell-product-section .up-product-img {
+  width: 75px;
+}
+
+.upsell-2 .upsell-product-section .up-add-cart-option {
+  width: calc(100% - 85px);
+}
+
+.upsell-2 .up-top {
+  display: grid;
+  grid-template-columns: calc(100% - 88px) 70px;
+  height: 100%;
+  grid-gap: 8px;
+}
+
+.upsell-2 .up-top form {
+  align-self: center;
+}
+
+</style>
+
+<script>
+  (function() {
+    var busy = false;
+    var busyTimer = null;
+
+    document.addEventListener('click', function(e) {
+      var btn = e.target.closest('.qty-minus, .qty-plus');
+      if (!btn || busy) return;
+      var wrapper = btn.closest('.qty-wrapper');
+      if (wrapper) wrapper.classList.add('qty-active');
+      document.body.classList.add('cart-qty-busy');
+    }, true);
+
+    // Remove item animation
+document.addEventListener('click', function(e) {
+  var removeBtn = e.target.closest('.remove-product');
+  if (!removeBtn) return;
+  var cartProduct = removeBtn.closest('.cart-product');
+  if (cartProduct) {
+    cartProduct.classList.add('removing');
+    document.body.classList.add('cart-qty-busy');
+    setTimeout(function() {
+      cartProduct.classList.remove('removing');
+      document.body.classList.remove('cart-qty-busy');
+    }, 10000);
+  }
+}, true);
+
+    function wrapPurdy() {
+      if (!window.Purdy || Purdy._qtyGuarded) return;
+      Purdy._qtyGuarded = true;
+
+      ['updateQuantity', 'updateQuantityWithDiscount', 'updateQuantityWithDiscountPF'].forEach(function(fn) {
+        if (!Purdy[fn]) return;
+        var orig = Purdy[fn];
+        Purdy[fn] = function(line, qty, event) {
+          if (busy && qty !== 0) return;
+          busy = true;
+
+          clearTimeout(busyTimer);
+          busyTimer = setTimeout(function() {
+            busy = false;
+            document.body.classList.remove('cart-qty-busy');
+            document.querySelectorAll('.qty-active').forEach(function(el) {
+              el.classList.remove('qty-active');
+            });
+          }, 8000);
+          return orig.call(this, line, qty, event);
+        };
+      });
+    }
+
+    var interval = setInterval(function() {
+      if (window.Purdy && !Purdy._qtyGuarded) {
+        wrapPurdy();
+        clearInterval(interval);
+      }
+    }, 100);
+    setTimeout(function() { clearInterval(interval); }, 30000);
+
+    window.addEventListener('cart-updated', function() {
+      clearTimeout(busyTimer);
+      setTimeout(function() {
+        busy = false;
+        document.body.classList.remove('cart-qty-busy');
+        document.querySelectorAll('.qty-active').forEach(function(el) {
+          el.classList.remove('qty-active');
+        });
+      }, 1600);
+    });
+  })();
+</script>

@@ -1,0 +1,248 @@
+<style>
+  {%- assign DimageURL = section.settings.desktopimage | img_url:"2400x" -%}
+  {%- assign MimageURL = section.settings.mobileimage | img_url:"768x" -%}
+  {%- assign MMimageURL = section.settings.mobileimage | img_url:"500x" -%}
+  
+  .banner-3 {
+    height:656px;
+  }
+
+  .banner-3 .product-reviews {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+
+  .banner-3 .product-reviews span {
+    font-weight: 700;
+    font-family: "Value-Sans-Fixed";
+  }
+
+  .banner-3 .product-reviews img {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .pf119-accordion .accordion-block-img {
+    max-height: 275px;
+    overflow: hidden;
+  }
+  
+  @media(min-width: 768px) {
+    .banner-3{{ section.id }} {
+      background-image:url({{DimageURL}});
+      background-size:cover;
+      background-position:center;
+    }
+  }
+        
+  @media(max-width: 768px) {
+    .banner-3{{ section.id }}{
+      background-image: url({{MimageURL}});
+      background-size: cover;
+      background-position: top right;
+    }
+
+    .banner-3 .product-reviews {
+      font-size: 14px;
+    }
+  }
+  
+  @media(max-width: 400px){
+    .banner-3{{ section.id }} {
+      background-image: url({{MMimageURL}});
+    }
+  }
+
+  @media (max-width: 560px) {
+    .banner-3 {
+        height: 580px !important;
+        background-position: top -30px right 0 !important;
+    }
+  }
+
+  .accordion-blocks-wrapper .heading-2 {
+    font-size: 36px !important;
+  }
+
+  @media(max-width: 438px){
+    .accordion-blocks-wrapper .heading-2 {
+      font-size: 32px !important;
+    }
+  }
+
+  @media(max-width: 414px){
+    .accordion-blocks-wrapper .heading-2 {
+      font-size: 30px !important;
+    }
+  }
+
+  .blue-text {
+    color: #2D469E !important;
+  }
+
+  .banner-3 {
+    padding: 0 !important;
+  }
+
+  .banner-3 .banner-inner-container {
+    display: flex !important;
+    height: 100% !important;
+  }
+</style>
+
+<div
+  class="pt-5 position-relative banner-3 banner-3{{ section.id }} {{ section.settings.className }}"
+>
+  <div class="banner-inner-container">
+    <div class="d-flex justify-content-between flex-wrap" style="margin-top: auto; margin-bottom: auto;">
+      <div class="lander-banner-details white-bg">
+        <h2 class="heading-2 value-bold" style="color:#2D469E">{{ section.settings.title }}</h2>
+        <div class="white-text value-sans">
+          <h3 class="mt-0 value-medium sub-text" style="color:#434448">{{ section.settings.subtext }}</h3>
+        </div>
+
+        <div class="product-reviews">
+          <img src="{{ 'review-icon-2.svg' | asset_url }}" width="70px" height="14px" alt="">
+          <span class="value-sans">
+            4.8/5.0 | Based on 7,000+ reviews
+          </span>
+        </div>
+
+        <div class="mt-3 banner-2-btn mb-4">
+          <a
+            {% if section.settings.dataTrack %}
+              {% render 'ga4-events' %}
+            {% endif %}
+            {% if section.settings.scrollto != '' %}
+              data-target="{{ section.settings.scrollto }}"
+              data-top="{{ section.settings.top }}"
+            {% endif %}
+            href="javascript:void(0);"
+            class="btn w-100 btn-loader blue-btn value-sans checkout-banner-btn {% if section.settings.scrollto != '' %}click-scroll{% endif %} {% if section.settings.outOfStock %} bb-disable {% endif %}"
+            style="background-color:#2D469E"
+          >
+            {{ section.settings.btnText }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+{% schema %}
+  {
+    "name": "PF119 Banner",
+    "settings": [
+      {
+        "id": "className",
+        "label": "Section Class",
+        "type": "text"
+      },
+      {
+        "id": "desktopimage",
+        "label": "Desktop Image",
+        "type": "image_picker"
+      },
+      {
+        "id": "mobileimage",
+        "label": "Mobile Image",
+        "type": "image_picker"
+      },
+      {
+        "id": "title",
+        "label": "Banner Title",
+        "type": "html"
+      },
+      {
+        "id": "subtext",
+        "label": "Banner Sub Text",
+        "type": "html"
+      },
+      {
+        "id": "btnText",
+        "label": "Button Label",
+        "type": "text",
+        "default": "BUY NOW"
+      },
+      {
+        "id": "scrollto",
+        "label": "Scroll to ID",
+        "type": "text",
+        "default": "javascript:void(0);"
+      },
+      {
+        "type": "text",
+        "id": "top",
+        "label": "On scroll top position",
+        "default": "0"
+      },
+      {
+        "type": "header",
+        "content": "GA4"
+      },
+      {
+        "id": "dataTrack",
+        "label": "Data Track",
+        "type": "checkbox"
+      },
+      {
+        "id": "targetUrl",
+        "label": "Target Url",
+        "type": "url"
+      },
+      {
+        "id": "index",
+        "label": "Index",
+        "type": "number",
+        "default": 0
+      },
+      {
+        "id": "funnel_stage",
+        "label": "Funnel Stage",
+        "type": "text",
+        "default": "landing_page"
+      },
+      {
+        "id": "dataModule",
+        "label": "Module",
+        "type": "text",
+        "default": "announcement_bar"
+      },
+      {
+        "id": "dataTitle",
+        "label": "Event Label",
+        "type": "text",
+        "default": "get_your_offer"
+      },
+      {
+        "id": "eventValue",
+        "label": "Event Value",
+        "type": "text",
+        "default": "shop_anchor"
+      },
+      {
+        "id": "itemId",
+        "label": "Item Id",
+        "type": "text"
+      },
+      {
+        "id": "optionIndex",
+        "label": "Option Index",
+        "type": "text"
+      },
+      {
+        "id": "ItemName",
+        "label": "Item Name",
+        "type": "text"
+      }
+    ],
+    "presets": [
+      {
+        "name": "PF119 Banner"
+      }
+    ]
+  }
+{% endschema %}

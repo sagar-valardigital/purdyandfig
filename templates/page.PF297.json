@@ -1,0 +1,802 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_toast_hKq7FV": {
+      "type": "cart-toast",
+      "settings": {
+        "message": "Great choice, that's in your cart!"
+      }
+    },
+    "cart_drawer_GwDyAN": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_Kqp7cd": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant": "54837001421180",
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISS297",
+            "price": "£15.00",
+            "compare_price": "£40.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_wCLnbB": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "variant": "55060202029436",
+            "selling_plan": "",
+            "discount": "ODLMEMBER297",
+            "price": "£13.56",
+            "compare_price": "£16.95",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_EeWJdK": {
+          "type": "product",
+          "settings": {
+            "product": "seasonal-refill-pack-spring",
+            "variant": "54947119268220",
+            "selling_plan": "",
+            "discount": "SRPSESSENTIALS297US",
+            "price": "£16.80",
+            "compare_price": "£24.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_fM8bBP": {
+          "type": "product",
+          "settings": {
+            "product": "refill-booster-packs",
+            "variant": "53598455169404",
+            "selling_plan": "",
+            "discount": "SRPSSESSENTIALS297US",
+            "price": "£16.80",
+            "compare_price": "£24.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_Kqp7cd",
+        "product_wCLnbB",
+        "product_EeWJdK",
+        "product_fM8bBP"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "announcement_bar_reskin_9fjJ8d": {
+      "type": "announcement-bar-225",
+      "settings": {
+        "fixed": true,
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Free delivery on orders over <span class=\"market-place-currency\"></span>40",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": true,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_3EaRiV": {
+      "type": "banner-10",
+      "settings": {
+        "txt-color": "#11322c",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktopv2_10f1dedc-18ac-44bd-a65a-9ffaee968969.jpg",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobilev2.jpg",
+        "heading": "Clean like no one is watching",
+        "sub_heading": "Member exclusive: To celebrate our first TV advert, claim up to 65% off accessories this week only",
+        "btn-bg": "#11322c",
+        "btn-txt-color": "#ffffff",
+        "button_label": "GET YOUR OFFERS",
+        "button_link": "product-blocks-section",
+        "top": "80",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offers",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_BbzBmc": {
+      "type": "image-with-text",
+      "disabled": true,
+      "custom_css": [
+        "@media (min-width: 768px) {.image-with-text {margin: 80px; }}",
+        ".heading-2 {font-size: 40px !important; font-family: \"GT Super\" !important; color: #0c231f !important; font-weight: 400 !important; line-height: 1.25 !important; letter-spacing: -1px !important;}",
+        "@media (max-width: 768px) {.order-2 {-webkit-box-ordinal-group: 3; -ms-flex-order: 2; order: 2; } .order-1 {-webkit-box-ordinal-group: 2; -ms-flex-order: 1; order: 1; } .btn-at-bottom {padding-top: 32px; padding-bottom: 2px; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Save 20% on this fan favourite",
+        "image": "shopify://shop_images/Product_Feature.png",
+        "details": "<p>Our limited edition customer favourite, Patchouli & Cedarwood, won’t be around for long, and we’re giving you the chance to save 20%.</p>",
+        "link": "",
+        "btntext": "GET YOUR OFFERS",
+        "scrollID": "product-blocks-section",
+        "top": "",
+        "btntype": "btn",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_3_pRqWzr": {
+      "type": "image-with-text-3",
+      "custom_css": [
+        ".normal-text {font-weight: 200 !important;}"
+      ],
+      "settings": {
+        "className": "",
+        "textcolor": "#11322c",
+        "background": "#ffffff",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Save up to 65% on accessories",
+        "image": "shopify://shop_images/Product_Feature_Block_-_Alt.png",
+        "mimage": "shopify://shop_images/Product_Feature_Block_-_Alt.png",
+        "details": "To celebrate our new TV ad, enjoy a limited-time discount on our top cleaning accessories, because the right tools make all the difference.",
+        "shop_now_cta": "GET YOUR OFFERS",
+        "scrollto": "product-blocks-section",
+        "top": "80",
+        "heading-position": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "get_your_offers",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "shopify_product_blocks_WPcCn8": {
+      "type": "products-row",
+      "blocks": {
+        "product_4QMQwf": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life",
+            "variant_id": "55060562018684",
+            "sku": "FG1090",
+            "sealing_plan": "",
+            "discount": "BFLESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_20.png",
+            "isSub": false,
+            "title": "1 x Bottle for Life",
+            "showRating": false,
+            "saving": "",
+            "price": "7.50",
+            "crossprice": "15.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_N7GdB6": {
+          "type": "product",
+          "settings": {
+            "product": "anti-slip-silicone-base",
+            "variant_id": "55060557136252",
+            "sku": "CP3230",
+            "sealing_plan": "",
+            "discount": "ASBESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_21.png",
+            "isSub": true,
+            "title": "1 x Anti-Slip Silicone Base",
+            "showRating": false,
+            "saving": "",
+            "price": "2.00",
+            "crossprice": "5.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_q84i3N": {
+          "type": "product",
+          "settings": {
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "variant_id": "55053965590908",
+            "sku": "FG1229b",
+            "sealing_plan": "",
+            "discount": "3PP&FCESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_23.png",
+            "isSub": false,
+            "title": "3 x Microfibre Cloths",
+            "showRating": false,
+            "saving": "Best value",
+            "price": "4.00",
+            "crossprice": "12.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_xKaeUw": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth",
+            "variant_id": "55060543177084",
+            "sku": "FG1229",
+            "sealing_plan": "",
+            "discount": "P&FCESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_22.png",
+            "isSub": false,
+            "title": "P&F Premium Microfibre Cloth",
+            "showRating": false,
+            "saving": "",
+            "price": "1.50",
+            "crossprice": "4.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_4QMQwf",
+        "product_N7GdB6",
+        "product_q84i3N",
+        "product_xKaeUw"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 12px; font-weight: 400; }}",
+        "@media (max-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; }}"
+      ],
+      "settings": {
+        "bg": "#e7ebea",
+        "toast": true,
+        "heading": "Spring Essential Accessories",
+        "subheading": ""
+      }
+    },
+    "product_blocks_qCkjga": {
+      "type": "products-row",
+      "blocks": {
+        "product_ECnQ3A": {
+          "type": "product",
+          "settings": {
+            "product": "patchouli-cedarwood-refill-pack",
+            "variant_id": "54956182012284",
+            "sku": "FG1167",
+            "sealing_plan": "",
+            "discount": "P&CSESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_14_407572e5-f4b5-4f36-8de9-00b7f48fc728.png",
+            "isSub": false,
+            "title": "3 x Patchouli & Cedarwood",
+            "showRating": false,
+            "saving": "Most popular",
+            "price": "16.80",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_rAx98m": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "orange-petitgrain-refill-pack",
+            "variant_id": "54956168380796",
+            "sku": "FG1252",
+            "sealing_plan": "",
+            "discount": "O&PSESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_15_59be9e7f-9856-4169-997d-2378208bffff.png",
+            "isSub": true,
+            "title": "3 x Orange & Petitgrain",
+            "showRating": false,
+            "saving": "Limited Edition",
+            "price": "16.80",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_MyaVAW": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "product": "lemon-marjoram-refill-pack",
+            "variant_id": "54956176015740",
+            "sku": "FG1128",
+            "sealing_plan": "",
+            "discount": "L&MSESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_16_78f5d1e9-96e3-4235-8088-3ccf2244515e.png",
+            "isSub": false,
+            "title": "3 x Lemon & Marjoram",
+            "showRating": false,
+            "saving": "Limited Edition",
+            "price": "16.80",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_HW4Ny8": {
+          "type": "product",
+          "settings": {
+            "product": "gentle-chamomile-refill-pack",
+            "variant_id": "54956092817788",
+            "sku": "FG1250",
+            "sealing_plan": "",
+            "discount": "GCSESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_17_2e3d0d68-44b3-4d40-8ce7-6dfacfba04c4.png",
+            "isSub": false,
+            "title": "3 x Gentle Chamomile",
+            "showRating": false,
+            "saving": "Leaving Soon",
+            "price": "16.80",
+            "crossprice": "24.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_ECnQ3A",
+        "product_rAx98m",
+        "product_MyaVAW",
+        "product_HW4Ny8"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 12px; font-weight: 400; }}",
+        "@media (max-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; }}"
+      ],
+      "settings": {
+        "bg": "#e7ebea",
+        "toast": true,
+        "heading": "Spring Scent Refills",
+        "subheading": ""
+      }
+    },
+    "shopify_product_blocks_behMF3": {
+      "type": "products-row",
+      "blocks": {
+        "product_djP8mV": {
+          "type": "product",
+          "settings": {
+            "product": "seasonal-refill-pack-spring",
+            "variant_id": "54947119235452",
+            "sku": "FG1209b",
+            "sealing_plan": "",
+            "discount": "SRPSESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_18.png",
+            "isSub": false,
+            "title": "Seasonal Refill Pack - Spring",
+            "showRating": false,
+            "saving": "Limited edition",
+            "price": "16.80",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_UPtRaB": {
+          "type": "product",
+          "settings": {
+            "product": "refill-booster-packs",
+            "variant_id": "45259308499171",
+            "sku": "FG1112",
+            "sealing_plan": "",
+            "discount": "SRPSSESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_19.png",
+            "isSub": true,
+            "title": "Signature Refill Pack",
+            "showRating": false,
+            "saving": "Bestsellers",
+            "price": "16.80",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_djP8mV",
+        "product_UPtRaB"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 12px; font-weight: 400; }}",
+        "@media (max-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; }}"
+      ],
+      "settings": {
+        "bg": "#e7ebea",
+        "toast": true,
+        "heading": "Variety Scent Refills",
+        "subheading": ""
+      }
+    },
+    "products_row_DC9zbT": {
+      "type": "products-row",
+      "blocks": {
+        "product_nhrTfV": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-refill-booster-pack",
+            "variant_id": "55061386920316",
+            "sku": "FG1151",
+            "sealing_plan": "",
+            "discount": "BBRCESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_24.png",
+            "isSub": false,
+            "title": "3 x Bathroom Bliss refills",
+            "showRating": false,
+            "saving": "Best for bathrooms",
+            "price": "16.80",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        },
+        "product_Ki4ckX": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "variant_id": "55051427807612",
+            "sku": "FG1156",
+            "sealing_plan": "",
+            "discount": "ODLESSENTIALS297",
+            "product_image": "shopify://shop_images/Image_25.png",
+            "isSub": false,
+            "title": "1 x Oh! De Loo",
+            "showRating": false,
+            "saving": "",
+            "price": "13.56",
+            "crossprice": "16.95",
+            "buttonLabel": "ADD TO CART",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_nhrTfV",
+        "product_Ki4ckX"
+      ],
+      "custom_css": [
+        "@media (min-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 12px; font-weight: 400; }}",
+        "@media (max-width: 768px) {.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; }}"
+      ],
+      "settings": {
+        "bg": "#e7ebea",
+        "toast": true,
+        "heading": "Bathroom Favourites",
+        "subheading": ""
+      }
+    },
+    "rich_text_BNjdBW": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_EaFJgF": {
+          "type": "heading",
+          "settings": {
+            "heading": "Discount valid on maximum of 5 products",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_EaFJgF"
+      ],
+      "custom_css": [
+        ".heading-2 {color: #212121; text-align: center; font-family: \"Lausanne\" !important; font-size: 16px !important; font-style: normal; font-weight: 400; line-height: 160%; /* 25.6px */ padding-bottom: 80px; margin-bottom: 0 !important; letter-spacing: 0;}",
+        "@media (max-width: 768px) {.heading-2 {padding-top: 8px; padding-bottom: 32px; }}"
+      ],
+      "settings": {
+        "color_scheme": "#e7ebea",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "icon_blocks_reskin_QyJ6db": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_6yhndz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_182d75e7-a59e-4163-81a3-1676a6e7f084.svg"
+          }
+        },
+        "iconblocks_WWLqyn": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_7c0b048e-6e51-4df7-b752-a4a8ed8536ee.svg",
+            "badge_left_position": -49
+          }
+        },
+        "iconblocks_YXCGmM": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_f1e50a63-8507-43e6-82ba-062f58564fbc.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_6yhndz",
+        "iconblocks_WWLqyn",
+        "iconblocks_YXCGmM"
+      ],
+      "settings": {
+        "class": "",
+        "bg": "#f2d4b9",
+        "textcolor": "#0c231f",
+        "heading": "Your member benefits",
+        "show_hide_block": true
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFERS",
+        "scrollto": "product-blocks-section",
+        "top": "80",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>No, this is a buy-once offer just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers. As a member, concentrate refills are always 15% off.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>As long as our limited edition seasonal scents last, so we recommend getting your skates on.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_toast_hKq7FV",
+    "cart_drawer_GwDyAN",
+    "announcement_bar_reskin_9fjJ8d",
+    "banner_10_3EaRiV",
+    "image_with_text_BbzBmc",
+    "image_with_text_3_pRqWzr",
+    "shopify_product_blocks_WPcCn8",
+    "product_blocks_qCkjga",
+    "shopify_product_blocks_behMF3",
+    "products_row_DC9zbT",
+    "rich_text_BNjdBW",
+    "icon_blocks_reskin_QyJ6db",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

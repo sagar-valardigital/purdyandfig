@@ -1,0 +1,22 @@
+<script>
+  {{section.settings.javascript}}
+</script>
+
+{% schema %}
+{
+  "name": "Custom javascript",
+  "settings": [
+     {
+       "type" : "html",
+       "id" : "javascript",
+       "label" : "Code"
+     }
+  ],
+
+  "presets": [
+    {
+      "name": "Custom javascript"
+    }
+  ]
+}
+{% endschema %}

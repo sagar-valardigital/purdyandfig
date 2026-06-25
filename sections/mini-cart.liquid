@@ -1,0 +1,77 @@
+ <div class="pf-min-cart" data-cart-view="data-cart-view">
+        <span class="cart-overlay"></span>
+        <div class="min-cart-wrapper position-relative">
+            <div class="min-cart-header">
+                <div class="d-flex align-items-center">
+                    <div class="cart-arrow"><img src="{{'cart-arrow.png' | asset_url}}" alt=""></div>
+                    <div class="cart-heading">
+                        <h2 class="heading-2 theme-text m-0">Your cart</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="min-cart-body">
+                <div class="cart-products-wrapper">
+                  {% if cart.items == 0 %}
+                  <div class="pt-5">
+                    <h2 class="m-0 heading-2-5 text-center theme-text">Cart is empty</h2>
+                  </div>
+                  {% endif %}
+                    <div class="cart-product" rv-each-item="cart.items">
+                        <div class="d-flex flex-wrap">
+                            <div class="cart-product-image">
+                                <img rv-src="item.image" alt="" class="img-responsie w-100">
+                            </div>
+                            <div class="cart-product-details font-pier theme-text">
+                                <div class="">
+                                    <h4 class="p-category m-0" rv-text="item.title">Uplifting Citrus</h4>
+                                    <h3 class="p-title my-1">Counter Clean</h3>
+                                </div>
+                                <small class="subscription-details">
+                                    Includes: 2 x 20ml Refill <br>
+                                    1 month Supply
+                                </small>
+                                <div class="d-flex align-items-center justify-content-between my-2">
+                                    <div class="qty-wrapper">
+                                        <div class="qty-minus" rv-data-cart-update="index | plus 1" rv-data-cart-quantity="item.quantity | minus 1"> </div>
+                                        <input class="qty" type="text" value="1">
+                                        <div class="qty-plus" rv-data-cart-update="index | plus 1" rv-data-cart-quantity="item.quantity | plus 1"> </div>
+                                    </div>
+                                    <div class="p-price">
+                                        <h3 class="m-0" rv-html="item.price | money Currency.currentCurrency">$15</h3>
+                                    </div>
+                                </div>
+                                <div class="remove-product" data-cart-remove="index | plus 1">
+                                    <img src="{{'trash.png' | asset_url}}" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="min-cart-footer">
+                <div class="d-flex align-items-center justify-content-between">
+                    <div class="sub-total theme-text font-pier">
+                        <p class="normal-text m-0">Subtotal:</p>
+                        <p class="total-price m-0" rv-html="cart.total_price | money Currency.currentCurrency"></p>
+                    </div>
+                    <div class="checkout-btn-wrap">
+                        <a href="" class="btn checkout-btn theme-btn">Continue to Checkout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% schema %}
+  {
+    "name": "Section name",
+    "settings": []
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

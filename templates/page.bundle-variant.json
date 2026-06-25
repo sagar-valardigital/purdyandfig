@@ -1,0 +1,688 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.no-layout",
+  "sections": {
+    "74d00853-5d66-444f-9b52-4812a5aa4de8": {
+      "type": "global-announcement-bar",
+      "custom_css": [
+        ".ladder-annoucment-bar p {font-size: 15px;}",
+        ".ladder-annoucment-bar .announcement-btn {padding: 11px; margin-left: 5px; font-size: 15px; padding-top: 10px; padding-bottom: 7px;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "logo": false,
+        "class": "",
+        "text": "BUILD YOUR BUNDLE & SAVE 50%",
+        "bb-color": "#ff9038",
+        "text-color": "#ffffff",
+        "scrollto": "bundle-section",
+        "annuText": "SHOP OFFER",
+        "landingproduct": ""
+      }
+    },
+    "9a1aac68-715b-4082-a8a8-6d2f2d267e5c": {
+      "type": "bundle-banner",
+      "blocks": {
+        "63caca25-6fc6-45fd-8623-ec225c07207d": {
+          "type": "text",
+          "settings": {
+            "sub_heading": "For a limited time only,   select 3 scents & save 50%",
+            "sub_heading_color": "#ffffff",
+            "subheading_position": "center"
+          }
+        }
+      },
+      "block_order": [
+        "63caca25-6fc6-45fd-8623-ec225c07207d"
+      ],
+      "custom_css": [],
+      "settings": {
+        "sectionClass": "bundle-section-variant",
+        "banner_img_1": "shopify://shop_images/byob-web4.jpg",
+        "banner_img_2": "shopify://shop_images/BYOB-MOB-_1.jpg",
+        "banner_img_3": "shopify://shop_images/byob-web4.jpg",
+        "banner_img_4": "shopify://shop_images/BYOB-MOB-_1.jpg",
+        "banner_title": "Build Your Starter Kit & Save",
+        "heading_color": "#ffffff",
+        "heading_position": "center"
+      }
+    },
+    "72f3e0f2-9980-49df-8699-e7162fecf115": {
+      "type": "bundle-variant",
+      "blocks": {
+        "4339a7e1-4a30-485d-9bcf-79aa68b5d6d8": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "frankincense-myrrh",
+            "bundle_text": "Frankincense, Myrrh, Sweet Orange, Pink Grapefruit, Coriander Seed, Vetiver",
+            "popup_no": "1",
+            "nopopup": false,
+            "pop_heading": "Frankincense & Myrrh",
+            "pop_detail": "Top Notes <p> </p>Sweet Orange - a sweet, citrusy and uplifting aroma.  <p> </p>\nPink Grapefruit - a sweet, tangy and cheerful aroma.  <p> </p>Middle Notes <p> </p>\nCoriander Seed - a herbaceous, spicy, woody and warm scent.   <p> </p>Base Notes <p> </p>Frankincense - a fresh-smelling essential oil with balsamic and resinous tones. <p> </p> Myrrh - a warm and woody-earthy aroma. <p> </p>Vetiver - a smoky and earthy oil with a slight herbaceous aroma. <p> </p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_7865474e-6fcc-412d-8da7-d03022fc2e77.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Pink_Grapefruit.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Frankincense.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Myrrh.png?v=1697437755\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Myrrh.png?v=1697437755\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "d9aa38b2-85c0-4e4c-a6bf-0a6e329ef163": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "orange-clove",
+            "bundle_text": "Orange, Clove, Benzoin",
+            "popup_no": "2",
+            "nopopup": false,
+            "pop_heading": "Orange & Clove",
+            "pop_detail": "Top Notes <p> </p>Orange - sweet and citrusy; uplifting and cheerful. <p> </p>Middle Notes <p> </p>Clove - spicy, warming, slightly woody and sweet. <p> </p>Base Notes <p> </p>Benzoin – warm, rich and creamy, vanilla-like, sweet and balsamic. <p> </p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_1.png?v=1697438114\">\n        </div>\n<div>\n<img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_Orange_2.png?v=1697438114\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Benzoin.png?v=1697438114\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "185c9fb3-900f-40c2-b798-e3f3ea845758": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "fir-bergamot",
+            "bundle_text": "Siberian Fir, Bergamot, Lavender, Clary Sage, Patchouli",
+            "popup_no": "3",
+            "nopopup": false,
+            "pop_heading": "Fir & Bergamot",
+            "pop_detail": "Top Notes <p> </p>\nSiberian Fir - coniferous, piney and woody with citrusy and camphoraceous nuances. <p> </p>\n\nBergamot – fresh, sweet and citrusy with underlying\nfloral notes. <p> </p>\n\nMiddle Notes <p> </p>\n\nLavender - fresh, floral, herbaceous, sweet, yet slightly camphoraceous.   <p> </p>\n\nClary Sage – sweet, herbaceous, floral and slightly fruity.   <p> </p>\n\nBase Notes <p> </p>\n\nPatchouli – rich, deep, exotic, herbaceous with earthy and woody undertones. <p> </p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Siberian_Fir.png?v=1697438291\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Bergamot.png?v=1697438291\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lavender_f074c952-c570-4f8f-a670-af4d52771b40.png?v=1697438291\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Clary_Sage.png?v=1697438291\">\n        </div>\n<div>\n\n <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Patchouli_0dcea599-39e5-4d13-8cf9-47e19d2aba4c.png?v=1697438291\">\n        </div>\n\n\n<div></div>"
+          }
+        },
+        "48f5ed0d-39f5-4ee6-ba02-e0abeedd3cd6": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "balancing-floral",
+            "bundle_text": "Rose Geranium, Lemon Peel, Vetiver",
+            "popup_no": "4",
+            "nopopup": false,
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma. <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent. <p> </p> Middle Notes <p> </p> Niaouli Leaves - A stimulating and fresh oil with an earthy aroma. ",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        },
+        "29c61f40-f7b2-4275-be4e-d6bc79bf512e": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "grounding-vetiver",
+            "bundle_text": "Vetiver, Sweet Orange, Coriander Seed",
+            "popup_no": "5",
+            "nopopup": false,
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Middle Notes   <p> </p> Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.<p> </p>  Base Notes   <p> </p> Vetiver A calming oil with an earthy, grassy scent.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "eef27ef0-53c0-4ac2-8a2e-490e4c07e744": {
+          "type": "product",
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "original-citrus",
+            "bundle_text": "Sweet Orange, Grapefruit, Naiouli",
+            "popup_no": "6",
+            "nopopup": false,
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Known for their cheerful aromas and mood-enhancing properties <p> </p> Top Notes  <p> </p> Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p> Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   <p> </p> Middle Notes <p> </p>   Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/grapefruit.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sweet_orange_f71ff31f-0da6-41e8-8a6b-2f47ec7e7c4b.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "a14397ef-e6f0-4326-99d2-8089b43af83c": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "juniper-cardamom",
+            "bundle_text": "Lemon, Juniper Berry, Cardamom",
+            "popup_no": "4",
+            "nopopup": false,
+            "pop_heading": "Juniper & Cardamom",
+            "pop_detail": "Top Notes <p> Lemon - a fresh, citrus oil with uplifting benefits  </p><p>    Middle Notes </p><p> Cardamom - a spicy and comforting oil </p><p> Juniper - a purifying oil with a fresh and clean scent.</p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lemon_1242e2d1-72c9-4c00-a273-51701b4d60fb.png?v=1694682410\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Cardamom.png?v=1694682411\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Juniper.png?v=1694682410\">\n        </div>\n<div></div>"
+          }
+        },
+        "9f64c843-6e14-43d0-a5df-31330b779aa6": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "moth-magic-cedarwood-patchouli",
+            "bundle_text": "Patchouli, Red Cedar, MayChang, Palmarosa & Amyris",
+            "popup_no": "5",
+            "nopopup": false,
+            "pop_heading": "Patchouli & Cedarwood",
+            "pop_detail": "Top Notes <p> </p>\nMayChang - an intense fresh and citrusy aroma with insecticidal and calming properties.  <p> </p>\nMiddle Notes <p> </p>\nPalmarosa - a sweet, floral-rosy oil that’s antimicrobial and acts as an insect repellent.   <p> </p>\nBase Notes <p> </p>\nRed Cedar - a woody aroma with sweet balsamic scent that masks the scent of Keratin. <p> </p>\nPatchouli - a rich, sweet, herbaceous and aromatic aroma traditionally used as a moth and insect repellent. <p> </p>\nAmyris - a subtle, woody and sweet balsamic scent with antiseptic and sedative qualities. <p> </p>",
+            "PoopupIconCode": "<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Red_Cedar.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Patchouli.png?v=1692882966\">\n        </div>\n<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Palmarosa.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Amyris.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Maychang.png?v=1692882966\">\n        </div>\n\n<div></div>"
+          }
+        },
+        "03244fab-e0fb-42db-97c0-802040aacfae": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "lavendar-chamomile",
+            "bundle_text": "Lavender, Roman Chamomile, Geranium, Clary Sage",
+            "popup_no": "5",
+            "nopopup": false,
+            "pop_heading": "Lavender & Chamomile",
+            "pop_detail": "Lavender - A delicate, floral scent with grassy, herbal notes. Famed for its calming, sedative properties <p>  Geranium - a sweet floral, sweet oil that supports emotions by creating a calming and grounding effect. </p><p> Clary Sage - a sweet and herbaceous oil promotes inner tranquillity and dispels negativity. </p><p>  Roman Chamomile - a calming, warm and grounding aroma.</p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lacvender.png?v=1694682410\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Gerabium.png?v=1694682410\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage_f900de13-37dd-459a-880e-f4a782005f4e.png?v=1694682411\">\n\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Chamomile.png?v=1694682411\">\n        </div>\n<div></div>\n</div>"
+          }
+        },
+        "62a6b607-383e-4143-8297-090bb15ec4e5": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": true,
+            "ChooseProduct": "geranium-ylang-ylang",
+            "bundle_text": "Ho Wood, Geranium, Coriander, Clary Sage, Ylang Ylang",
+            "popup_no": "7",
+            "nopopup": false,
+            "pop_heading": "Geranium & Ylang Ylang",
+            "pop_detail": "Middle Notes <p> </p> Geranium - Intensely floral, rosy oil that creates a calming and grounding effect.<p> </p> Ylang Ylang - a deep, rich floral aroma that promotes relaxation. <p> </p> Base Notes <p> </p> Ho Wood - Sweet and floral, Ho Wood essential oil promotes peace and tranquillity. <p> </p>  Coriander - an invigorating oil with a powerful, warm and peppery aroma. <p> </p> Clary Sage - a sweet and herbaceous scent with ambery tones of fresh tobacco.",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ylang-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ho_wood-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander-scent.png?v=1683634425\">\n        </div>\n<div></div>"
+          }
+        },
+        "0818195f-06f3-4c3b-ab12-e71b1f519cb8": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "citronella-niaouli",
+            "bundle_text": "Citronella Java, Eucalyptus, Peppermint, Naiouli, Lavender, Geranium",
+            "popup_no": "3",
+            "nopopup": false,
+            "pop_heading": "Citronella & Niaouli",
+            "pop_detail": "Top Notes <p> </p> Citronella Java - A fresh and citrusy oil with natural insect repellent properties. <p> </p> Eucalyptus Peppermint - A fresh and uplifting scent insect-repelling scent with a woody-sweet undertone. <p> </p> Middle Notes <p> </p> Niaouli - A camphorous oil with a fresh, minty aroma and eucalyptus-like scent. <p> </p> Lavender - Fresh and grassy, this fragrant oil freshens and softens the blend. <p> </p> Geranium - a floral and rosy oil that creates a calming and grounding effect. ",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Citronella.png?v=1688467258\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Niaouli.png?v=1688467255\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Eucalyp.png?v=1688467257\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium02.png?v=1688467257\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Lavender.png?v=1688467256\">\n        </div>\n<div></div>"
+          }
+        },
+        "78d2b9c2-cdfb-46c0-9209-21c8ffcea564": {
+          "type": "product",
+          "disabled": true,
+          "settings": {
+            "disabled": false,
+            "ChooseProduct": "linden-lavender",
+            "bundle_text": "Lavender, Linden Blossom, White Grapefruit, Neroli",
+            "popup_no": "2",
+            "nopopup": false,
+            "pop_heading": "Linden &   Lavender",
+            "pop_detail": "<p>Top Notes </p><p>White Grapefruit - A sweet and fruity oil that’s known for its uplifting and energising properties.</p> <p>Middle Notes </p><p>  Linden Blossom - Extracted from the delicate, yellow flowers of the Linden tree - it’s a warm, floral and somewhat honey-like aroma with relaxing effects. </p><p> Neroli - Extracted from the flowers of bitter orange trees, this oil has a sweet, floral, citrus aroma. </p><p>  Lavender - A delicate, floral scent with grassy, herbal notes. Famed for its calming, sedative properties.</p>",
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lavender_icon_f77a11eb-dde1-4cc3-86ed-bd51f6343604.png?v=1690188903\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Linden_icon_5323072a-3bb2-4341-a77b-195e0980a650.png?v=1690188903\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/white_grape_fruit_icon_8685e7c6-028a-4592-bf5e-b2ce27383a4e.png?v=1690188903\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/neroli_icon_821fa4a6-5a5c-48e1-819b-4804d3940ca2.png?v=1690188903\">\n        </div>\n<div></div>"
+          }
+        }
+      },
+      "block_order": [
+        "4339a7e1-4a30-485d-9bcf-79aa68b5d6d8",
+        "d9aa38b2-85c0-4e4c-a6bf-0a6e329ef163",
+        "185c9fb3-900f-40c2-b798-e3f3ea845758",
+        "48f5ed0d-39f5-4ee6-ba02-e0abeedd3cd6",
+        "29c61f40-f7b2-4275-be4e-d6bc79bf512e",
+        "eef27ef0-53c0-4ac2-8a2e-490e4c07e744",
+        "a14397ef-e6f0-4326-99d2-8089b43af83c",
+        "9f64c843-6e14-43d0-a5df-31330b779aa6",
+        "03244fab-e0fb-42db-97c0-802040aacfae",
+        "62a6b607-383e-4143-8297-090bb15ec4e5",
+        "0818195f-06f3-4c3b-ab12-e71b1f519cb8",
+        "78d2b9c2-cdfb-46c0-9209-21c8ffcea564"
+      ],
+      "custom_css": [
+        ".bundle-section-wraper {padding: 0px 0px;}",
+        "h1 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "redirect_checkout": true,
+        "pack_change": true,
+        "sectionId": "bundle-section",
+        "sectionClass": "",
+        "sticky_atc_heading": "-Pack Bundle Starter Kit",
+        "bundle_heading": "Select your Scents",
+        "heading_font": 22,
+        "heading_mb": 20,
+        "heading_color": "#334fb4",
+        "heading_position": "left",
+        "pack_size": 3,
+        "card_heading": "Build Your Starter Kit",
+        "card_heading_color": "#334fb4",
+        "card_heading_font": 24,
+        "card_padding": 20,
+        "section_padding": 50,
+        "freeProductTitle": "Includes:",
+        "freeProductImg": "shopify://shop_images/BYOB_ICON_7d758a65-b99c-4b18-8743-eac4daa431fb.jpg",
+        "cart_product": "3-pack-bundle-starter-kit",
+        "box_product": "6-pack-byob-box",
+        "box_product_3pack": "3-pack-bundle-starter-kit-1"
+      }
+    },
+    "cc4d26d5-3dfe-4096-9ff1-a57f141e42f8": {
+      "type": "pf-usps",
+      "blocks": {
+        "b72c676c-7464-452f-8968-395dc0797354": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/orange-01.png",
+            "rounded": true,
+            "heading": "Transform Your Home",
+            "details": "100% Pure Essential Oils at high concentration are hand blended to give a long lasting and divine smell.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "a5a8d2a1-d882-4f6d-9e2b-89e336f6d6a9": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/orange-04.png",
+            "rounded": true,
+            "heading": "Saves Time and Space",
+            "details": "Effectively cleans counters, stone, wood, floors, baths, mirrors and glass replacing up to 15 products.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "6473b1a4-477e-426a-8b02-a703758e42ff": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/orange-03.png",
+            "rounded": true,
+            "heading": "Supports Health",
+            "details": "Plant-based, paraben-free, GMO-free and no synthetic fragrance supports gut health and immunity.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "45a008d5-fd8f-4d93-aca1-54e1650653aa": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/orange-02.png",
+            "rounded": true,
+            "heading": "It Makes Going Eco Easy",
+            "details": "Plastic free bottles, concentrate refills and low carbon deliveries make us the most sustainable option.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "b72c676c-7464-452f-8968-395dc0797354",
+        "a5a8d2a1-d882-4f6d-9e2b-89e336f6d6a9",
+        "6473b1a4-477e-426a-8b02-a703758e42ff",
+        "45a008d5-fd8f-4d93-aca1-54e1650653aa"
+      ],
+      "custom_css": [
+        "h2 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "enable": true,
+        "mobile-slider": false,
+        "classname": "lander-benefits-switching arrow-white section-ab-remove",
+        "shadow": false,
+        "sectionbgColor": "#ff9038",
+        "sectionTextColor": "#ffffff",
+        "heading": "Why make the switch?",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "a40bc7a3-5e81-4a40-b603-2879f92bde96": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "bc7b9f7a-1730-4204-978b-0fdc30a98aed": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Group_6302.png",
+            "details": "“Stripping back the jargon associated with cleaning products, family-run business Purdy & Figg has designed a cleaning system that will be effective and yet has a beautiful essential oil-based aroma, cuts back single-use plastic and supports your immune system."
+          }
+        },
+        "5267771e-aa5f-49fb-9d34-f2955491e548": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Ideal_Home_logo_wordmark_copy.png",
+            "details": "“They smell nothing like a traditional cleaner, they’re quite luxurious aromatherapy style scents. I was surprised how efficient it was at cleaning my kitchen with just a couple of sprays and the counters smell like I’ve had an expensive candle burning in there afterwards”"
+          }
+        },
+        "da4b5d72-9864-4ec6-ae29-9b9495014f97": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_4104a531-86cd-40db-9dd2-3dcece176cd3.png",
+            "details": "“This is so brilliant — it’s a superconcentrated, eco-friendly, delicious-smelling cleaner that you can use on everything, from worktops to marble to wooden floors to baths to glass”"
+          }
+        }
+      },
+      "block_order": [
+        "bc7b9f7a-1730-4204-978b-0fdc30a98aed",
+        "5267771e-aa5f-49fb-9d34-f2955491e548",
+        "da4b5d72-9864-4ec6-ae29-9b9495014f97"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": true,
+        "bgColor": "",
+        "heading": "",
+        "logoDetailText": ""
+      }
+    },
+    "1dae451d-de95-4403-82d8-4132a6a44b22": {
+      "type": "bb-products",
+      "blocks": {
+        "ad2f189a-55ff-4d7c-b304-8472ed84a83a": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "f657a9d2-dd8c-49b1-b986-615b2f53eab5": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life"
+          }
+        },
+        "d5b1e55a-68b4-4f53-97a2-a9b89424d56a": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        },
+        "bb5e19a2-428f-43ad-ae75-2278516a4184": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        }
+      },
+      "block_order": [
+        "ad2f189a-55ff-4d7c-b304-8472ed84a83a",
+        "f657a9d2-dd8c-49b1-b986-615b2f53eab5",
+        "d5b1e55a-68b4-4f53-97a2-a9b89424d56a",
+        "bb5e19a2-428f-43ad-ae75-2278516a4184"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "",
+        "bgColor": "",
+        "heading": "Add Extras to your Cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "1b90fa73-e55b-4a03-bc83-57d26057d5d6": {
+      "type": "our-blends",
+      "blocks": {
+        "cf8e1bcd-941d-485f-a9b3-d2a88ce88e19": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "theme-text mobile-hide",
+            "nopopup": true,
+            "heading": "Check out Our New Summer Scent",
+            "detail": "",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": false,
+            "PoopupIconCode": ""
+          }
+        },
+        "5ff23372-f12f-492a-a0a3-337deb45853c": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Web_1920_2_43d730f7-eef7-4bc1-be5a-e85fa1201936.jpg",
+            "heading": "Geranium & Ylang Ylang",
+            "detail": "A scented blend of enchanting floral gardens and warm, spicy tropics. Pure Geranium and Ylang Ylang essential oils calm, while Ho Wood and Clary Sage transport you to a tranquil paradise.",
+            "pop_heading": "Geranium & Ylang Ylang",
+            "pop_detail": "A scented blend of enchanting floral gardens and warm, spicy tropics. Pure Geranium and Ylang Ylang essential oils calm, while Ho Wood and Clary Sage transport you to a tranquil paradise.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ylang-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ho_wood-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander-scent.png?v=1683634425\">\n        </div>\n<div></div>"
+          }
+        },
+        "560924ee-8773-44be-8741-c7a51ec6217c": {
+          "type": "text",
+          "settings": {
+            "popup_no": "2",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_78b7601f-6199-4ab6-93de-54b001d37fbd.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Top Notes   Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   Middle Notes  Niaouli Leaves - A stimulating and fresh oil with an earthy aroma. ",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "49ec2968-d24d-4171-bd36-d21d67ca6a66": {
+          "type": "text",
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6305_2x_a3433b37-7b8c-48b0-8d26-1246ec8a5759.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes   Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.   Middle Notes    Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties. Base Notes    Vetiver A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "51b4522b-1c87-4d4f-8442-293a7bf64a8d": {
+          "type": "text",
+          "settings": {
+            "popup_no": "4",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_d322e237-a8aa-4913-816a-4cd80c324742.png",
+            "heading": "Balancing Floral",
+            "detail": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots, known for their comforting & balancing properties",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes   Lemon Peel - A cheerful, fresh, citrus aroma with natural antibacterial properties.   Middle Notes    Rose Geranium - A rich floral scent with antimicrobial, antifungal, and antiviral properties  Base Notes   Vetiver Root - A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        }
+      },
+      "block_order": [
+        "cf8e1bcd-941d-485f-a9b3-d2a88ce88e19",
+        "5ff23372-f12f-492a-a0a3-337deb45853c",
+        "560924ee-8773-44be-8741-c7a51ec6217c",
+        "49ec2968-d24d-4171-bd36-d21d67ca6a66",
+        "51b4522b-1c87-4d4f-8442-293a7bf64a8d"
+      ],
+      "disabled": true,
+      "settings": {
+        "class": "",
+        "bgColor": "",
+        "heading": ""
+      }
+    },
+    "2c1bd1a1-7d18-42c0-a1f4-2a3292e98461": {
+      "type": "review-slider",
+      "blocks": {
+        "c8d7c080-28ce-411b-a42f-35c7bbee237c": {
+          "type": "text",
+          "settings": {
+            "username": "Posy - Verified Customer",
+            "heading": "",
+            "image": "shopify://shop_images/user-1_1175e8d2-e953-4a85-8ba5-db5064570dc7.png",
+            "review": "“It just makes me feel good! It also makes my kitchen island look and smell better than anything else I’ve tried before.” ",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "9ec839db-6c6c-420a-aae4-b59752f1ca2c": {
+          "type": "text",
+          "settings": {
+            "username": "Emma - Verified Customer ",
+            "heading": "",
+            "image": "shopify://shop_images/user-2_1aaa509a-1b80-43ca-bb7e-82c6486d3168.png",
+            "review": "“I love using Purdy & Figg as it’s just one simple product that does so much, stops the clutter of products & it’s kinder to the environment.”",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "6400ee17-be2d-4863-9ec0-c7d9d78db6a7": {
+          "type": "text",
+          "settings": {
+            "username": "Flora- Verified Customer ",
+            "heading": "",
+            "image": "shopify://shop_images/user-3.png",
+            "review": "“A weird transformation has taken place… I look forward to wiping the surface of my kitchen after supper. What have you done to me?” ",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "c8d7c080-28ce-411b-a42f-35c7bbee237c",
+        "9ec839db-6c6c-420a-aae4-b59752f1ca2c",
+        "6400ee17-be2d-4863-9ec0-c7d9d78db6a7"
+      ],
+      "custom_css": [
+        "h2 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "",
+        "Review-Count": "5.0",
+        "bgColor": "",
+        "heading": "Over 6300 5-Star Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "1f86e9ca-42d7-4de0-8640-1fb366396f76": {
+      "type": "lander-table",
+      "custom_css": [
+        "h2 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {}
+    },
+    "5da9822c-11be-4c14-9eff-61c0bd92af18": {
+      "type": "landing-blocks",
+      "blocks": {
+        "4df5d047-43d0-47ab-bcbd-926e47515802": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_14.png",
+            "rounded": true,
+            "heading": "Money-Back Guarantee",
+            "details": "No questions asked money back guarantee if you’re not satisfied.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "9318b36c-51d2-4b0f-971c-5159dab8b8f1": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_16.png",
+            "rounded": true,
+            "heading": "Quick Delivery",
+            "details": "Ships in 1-2 Days guaranteed. Free delivery over £40.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "da4edda5-65b7-428d-867f-fc0880c60491": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_18.png",
+            "rounded": true,
+            "heading": "Eco-Friendly",
+            "details": "Save 10 plastic bottles per year from entering landfill.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "0ffac6ea-34d1-44f3-a7fd-ba771f9ae949": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_17.png",
+            "rounded": true,
+            "heading": "Convenient",
+            "details": "Easy top up refills whenever you need.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "4df5d047-43d0-47ab-bcbd-926e47515802",
+        "9318b36c-51d2-4b0f-971c-5159dab8b8f1",
+        "da4edda5-65b7-428d-867f-fc0880c60491",
+        "0ffac6ea-34d1-44f3-a7fd-ba771f9ae949"
+      ],
+      "custom_css": [
+        "h3 {margin: 0; font-family: \"Value-Sans\"; font-size: 19px; padding-top: 0rem;}",
+        "h2 {font-size: 2rem; font-family: value-serif-pro;"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#ff9038",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Extra Benefits</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "77e89a3f-fa46-4e77-8039-a89909fd6fa7": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "p {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".mobile-padding-y {padding-top: 30px; padding-bottom: 0px;}",
+        "h2 {font-size: 2rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"value-pro\">Two women on  a mission to </span>transform cleaning",
+        "image": "shopify://shop_images/THUMBNAIL_4.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    }
+  },
+  "order": [
+    "74d00853-5d66-444f-9b52-4812a5aa4de8",
+    "9a1aac68-715b-4082-a8a8-6d2f2d267e5c",
+    "72f3e0f2-9980-49df-8699-e7162fecf115",
+    "cc4d26d5-3dfe-4096-9ff1-a57f141e42f8",
+    "a40bc7a3-5e81-4a40-b603-2879f92bde96",
+    "1dae451d-de95-4403-82d8-4132a6a44b22",
+    "1b90fa73-e55b-4a03-bc83-57d26057d5d6",
+    "2c1bd1a1-7d18-42c0-a1f4-2a3292e98461",
+    "1f86e9ca-42d7-4de0-8640-1fb366396f76",
+    "5da9822c-11be-4c14-9eff-61c0bd92af18",
+    "77e89a3f-fa46-4e77-8039-a89909fd6fa7"
+  ]
+}

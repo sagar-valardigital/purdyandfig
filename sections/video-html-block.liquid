@@ -1,0 +1,108 @@
+<div class="video-block-wrapper">
+  <div class="{% if section.settings.full-width %} {% else %}container {%  endif %}">
+    <div class="video-inner-block position-relative">
+      {% assign image = section.settings.image | img_url: '2000x' %}
+      <img
+        src="{{ image }}"
+        class="img-responsive w-100 thumb-img"
+        id="image-video"
+        width="2000px"
+        height="700px"
+        alt="video image"
+      >
+      <!--
+        <iframe id="video" class="w-100" width="1500px" height="600px" src="{{ section.settings.video-url }}"
+        frameborder="0" allowtransparency="true" allowfullscreen></iframe>
+      -->
+      {% assign poster = section.settings.poster | img_url: '1000x' %}
+      <video id="video" width="1500px" height="600px" loop style="max-width:100%;" poster="{{ poster }}">
+        <source src="{{ section.settings.video-url }}" type="video/mp4">
+      </video>
+      <div id="video-text" class="video-block-text position-absolute text-white">
+        <h2>{{ section.settings.heading }}</h2>
+        <p>{{ section.settings['sub-heading'] }}</p>
+        <img
+          id="play-video"
+          onclick="playvideo();"
+          title="Play Video"
+          src="{{ 'bb-play.png' | asset_url }}"
+          class="play-icon"
+          width="150px"
+          height="150px"
+          alt="video image"
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function playvideo() {
+    document.getElementById("image-video").style.display = "none";
+    document.getElementById("video-text").style.display = "none";
+    document.getElementById("video").setAttribute("controls", "true");
+    document.getElementById("video").setAttribute("autoplay", "true");
+    document.getElementById("video").play();
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Video HTML Block",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video-url",
+      "label": "Video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Thumbnail",
+      "info": "2000 x 800px recommended"
+    },
+    {
+      "type": "image_picker",
+      "id": "poster",
+      "label": "Video Poster"
+    },
+    {
+      "type": "checkbox",
+      "id": "full-width",
+      "label": "Full width",
+      "default": true,
+      "info": "Affects desktop/tablet layouts only, mobile defaults to full width"
+    },
+
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Video"
+    },
+    {
+      "type": "textarea",
+      "id": "sub-heading",
+      "label": "Subheading",
+      "default": "Add a subheading here"
+    },
+    {
+      "type": "text",
+      "id": "button-text",
+      "label": "Button text",
+      "default": "button"
+    },
+    {
+      "type": "url",
+      "id": "button-url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Video HTML Block",
+      "category": "Video"
+    }
+  ]
+}
+{% endschema %}

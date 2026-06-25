@@ -1,0 +1,1288 @@
+<style>
+  .citrus-desktop-hide {
+    display: none;
+  }
+  .citrus-mobile-hide {
+    display: block;
+  }
+.citrus-section-381 {
+  padding: 80px 0;
+  display: flex;
+  justify-content: center;
+  background: {{ section.settings.background_color }};
+  width: 100%;
+}
+.citrus-container {
+  display: flex;
+  gap: 104px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1440px;
+  padding: 0 112px;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+.advent-product-wrapper {
+  order: 2;
+  display: flex;
+  flex-direction: column;
+  width: calc(55% - 52px);
+  gap: 10px;
+}
+
+.citrus-product-box {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  background: #6A0D01;
+  border-radius: 4px;
+  height: 100%;
+}
+
+  .citrus-product-box img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .prdetail-box {
+    display: none;
+  /*  display: flex; */
+    padding: 0 8px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+  }
+  .citrus-product-title {
+    font-family: "Lausanne";
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+    color: #212121;
+    cursor: pointer;
+  }
+  .citrus-product-summary {
+    font-family: "Lausanne";
+    font-size: 14px;
+    font-weight: 200;
+    line-height: 21px;
+    color: #424242;
+  }
+  .citrus-price {
+    font-family: "Lausanne";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #424242;
+    letter-spacing: 0.35px;
+  }
+  .citrus-deleted-price {
+    font-family: "Lausanne";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 14px;
+    color: #9E9E9E;
+    letter-spacing: 0.35px;
+    text-decoration: line-through;
+  }
+  .citrus-product-box form {
+    width: 100%;
+  }
+  .citrus-product-box .checkout-starterkit-btn {
+    font-size: 18px !important;
+    width: 100%;
+  }
+  .citrus-heading-box {
+    order: 1;
+    width: calc(45% - 52px);
+    /* height: 265px; */
+    display: flex;
+    align-self: center;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    flex-shrink: 1;
+  }
+  .heading-brd {
+    display: flex;
+    padding: 16px 0;
+    align-items: flex-start;
+    border-top: 0.5px solid #003176;
+    border-bottom: 0.5px solid #003176;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  .citrus-heading {
+    font-family: "GT Super" !important;
+    font-size: 58px;
+    font-weight: 400;
+    line-height: 60px;
+    color: #003176;
+  }
+
+  .citrus-heading span {
+    font-family: "GT Super" !important;
+  }
+
+  .citrus-heading .fi-lic {
+    font-style: italic;
+  }
+  .citrus-summary {
+    /* width: calc(90% - 30px);
+    max-width: 416px; */
+    font-family: "Lausanne";
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 27px;
+    color: #003176;
+  }
+  .citrus-summary .weight-extra {
+    font-weight: 600;
+  }
+  .sc-btn-381 {
+    display: flex;
+    gap: 4px;
+  }
+  .sc-btn-del-price-381 {
+    color: #9E9E9E;
+    font-weight: 400;
+  }
+
+  .citrus-heading {
+  font-size: 58px;
+  line-height: 125%;
+}
+.heading-brd {
+  border-top: unset;
+  border-bottom: unset;
+  padding: unset;
+}
+.sc-btn-txt-381 {
+  color: inherit;
+}
+.checkout-starterkit-btn {
+  height: 48px;
+}
+.citrus-heading-box {
+  gap: 16px;
+}
+.btn-loader:before {
+  border: 4px solid #11322c !important;
+  border-top-color: #FFFFFF !important;
+}
+
+.box-button-note {
+  text-align: center;
+  margin: 0 auto;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+/* Advent days */
+
+.advent-days-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background: #FFFFFF;
+  border-radius: 0 0 4px 4px;
+  width: 100%;
+  margin-top: 10px;
+}
+.advent-days-heading {
+  font-family: "Lausanne";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 150%;
+  color: #212121;
+  text-transform: uppercase;
+  letter-spacing: 5%;
+}
+.advent-days-grid {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  width: 100%;
+}
+.advent-day-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  flex: 1;
+  max-width: 200px;
+}
+.advent-day-image {
+  width: 100%;
+  /* aspect-ratio: 1; */
+  border-radius: 8px;
+  object-fit: cover;
+  background: #2a2a2a;
+}
+.advent-day-image.active {
+  border: 3px solid #c9a227;
+}
+.advent-day-title {
+  font-family: "Lausanne";
+  font-size: 16px;
+  font-weight: 400;
+  color: #212121;
+}
+.advent-day-status {
+  font-family: "Lausanne";
+  font-size: 14px;
+  font-weight: 200;
+  color: #424242;
+}
+
+.advent-day-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 8px;
+}
+.advent-day-image-wrapper .advent-day-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+.advent-day-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+}
+.advent-lock-icon {
+  width: 28px;
+  height: auto;
+}
+
+  .citrus-desktop-hide {
+    display: none;
+  }
+  .citrus-mobile-hide {
+    display: block;
+  }
+
+.type-form-btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.type-form-btn button {
+  position: relative !important;
+  width: 100% !important;
+  all: inherit !important;
+  cursor: pointer !important;
+  height: 100% !important;
+}
+
+
+  @media (max-width: 768px) {
+    .citrus-desktop-hide {
+      display: block;
+    }
+    .citrus-mobile-hide {
+      display: none;
+    }
+    
+    .citrus-section-381 {
+      padding: 16px;
+      gap: 24px;
+    }
+
+    .citrus-container {
+      flex-direction: column;
+      gap: 24px;
+      align-items: flex-start;
+      width: 100%;
+    }
+
+  .citrus-container {
+    padding: 0;
+  }
+
+  .advent-product-wrapper {
+    order: 2;
+    width: 100%;
+  }
+  .citrus-product-box {
+    width: 100%;
+  }
+    .citrus-product-box img {
+      height: auto;
+    }
+    .citrus-product-title {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    .citrus-product-summary {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+    }
+    .citrus-product-box form {
+      width: 100%;
+    }
+    .citrus-product-box .checkout-starterkit-btn {
+      width: 100%;
+    }
+    
+    .citrus-heading-box {
+      order: 1;
+      width: 100%;
+      height: unset;
+    }
+
+    .heading-border-box {
+      width: 100%;
+    }
+    .citrus-heading {
+      font-size: 24px !important;
+      line-height: 125% !important;
+      font-weight: 400;
+      /* max-width: 343px; */
+    }
+
+    .citrus-heading span {
+      color: #D89B39;
+      text-transform: uppercase;
+    }
+
+    .citrus-summary {
+      width: 100%;
+      font-size: 14px;
+      line-height: 150%;
+      font-weight: 200;
+    }
+
+  .citrus-heading-box {
+    gap: 12px;
+    text-align: left;
+  }
+
+    .advent-days-box {
+    padding: 8px 16px;
+    gap: 8px;
+  }
+  .advent-days-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 13px;
+  }
+  .advent-day-item {
+    max-width: 100%;
+  }
+  .advent-days-heading {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .advent-day-image-wrapper {
+    border-radius: 4px;
+    margin-bottom: 4px;
+  }
+
+  .advent-lock-icon {
+    width: 18px;
+  }
+
+    .citrus-product-box .citrus-heading-box {
+    order: -1;
+    text-align: center;
+  }
+
+  .heading-brd {
+    margin-bottom: 0;
+  }
+
+    .citrus-desktop-hide {
+      display: block;
+    }
+    .citrus-mobile-hide {
+      display: none;
+    }
+
+  }
+</style>
+
+{% assign product = section.settings.landing_product %}
+
+<section class="citrus-section-381" x-data="{qty:1}">
+  <div class="citrus-container">
+    <div class="advent-product-wrapper">
+    {% for block in section.blocks %}
+  {% if block.type == 'product_item' and block.settings.is_active %}
+    {% assign active_product = block %}
+  {% endif %}
+{% endfor %}
+
+{% if active_product %}
+<div class="citrus-product-box" id="{{ section.settings.scroll_id }}" {{ active_product.shopify_attributes }}>
+<div class="citrus-heading-box citrus-desktop-hide">
+  <div class="heading-brd">
+    <div class="heading-border-box">
+      <span class="citrus-heading" style="color: {{ section.settings.headingcolor_mobile | default: '#FFFFFF' }};">{{ active_product.settings.heading }}</span>
+    </div>
+  </div>
+  <span class="citrus-summary" style="color: {{ section.settings.summarycolor_mobile | default: '#FFFFFF' }};">{{ active_product.settings.summary }}</span>
+</div>
+  <img
+    loading="lazy"
+    src="{{ active_product.settings.desktop_image | image_url: width: 3200 }}"
+    width="592"
+    height="592"
+    class="citrus-image citrus-mobile-hide"
+    alt="{{ active_product.settings.desktop_image.alt }}"
+    onclick="firepopupblock(this);"
+  >
+  <img
+    loading="lazy"
+    src="{{ active_product.settings.mobile_image | image_url: width: 1200 }}"
+    width="343"
+    height="343"
+    class="citrus-image citrus-desktop-hide image-main-381"
+    alt="{{ active_product.settings.mobile_image.alt }}"
+    onclick="firepopupblock(this);"
+  >
+  <div class="prdetail-box">
+    <span class="citrus-product-title" onclick="firepopupblock(this);" style="color: {{ active_product.settings.titlecolor }};">{{ active_product.settings.product_title }}</span>
+    <span class="citrus-product-summary" style="color: {{ active_product.settings.desccolor }};">{{ active_product.settings.product_summary }}</span>
+    {% if active_product.settings.product_price != blank or active_product.settings.product_cross_price != blank %}
+    <span class="citrus-price-block">
+      {% if active_product.settings.product_price != blank %}
+      <span class="citrus-price" style="color: {{ active_product.settings.pricecolor }};">
+        {{- localization.country.currency.symbol -}}
+        {{- active_product.settings.product_price -}}
+      </span>
+      {% endif %}
+      {% if active_product.settings.product_cross_price != blank %}
+      <span class="citrus-deleted-price" style="color: {{ active_product.settings.crosspricecolor }};">
+        {{- localization.country.currency.symbol -}}
+        {{- active_product.settings.product_cross_price -}}
+      </span>
+      {% endif %}
+    </span>
+    {% endif %}
+  </div>
+  
+  <input type="hidden" class="toast-sub" data-pop-sub="{{ active_product.settings.isSub }}" />
+  <div class="bulletpoints1" style="display: none;">{{ active_product.settings.bulletpoints1 }}</div>
+  <div class="bulletpoints2" style="display: none;">{{ active_product.settings.bulletpoints2 }}</div>
+  <div class="bulletpoints3" style="display: none;">{{ active_product.settings.bulletpoints3 }}</div>
+  <div class="bulletpoints4" style="display: none;">{{ active_product.settings.bulletpoints4 }}</div>
+  <div class="bulletpoints5" style="display: none;">{{ active_product.settings.bulletpoints5 }}</div>
+  <div class="bulletpoints6" style="display: none;">{{ active_product.settings.bulletpoints6 }}</div>
+  <div class="bulletpoints7" style="display: none;">{{ active_product.settings.bulletpoints7 }}</div>
+  <div class="bulletpoints8" style="display: none;">{{ active_product.settings.bulletpoints8 }}</div>
+  <div class="popup-title" style="display: none;">{{ active_product.settings.popuptitle }}</div>
+  <div class="popup-summary" style="display: none;">{{ active_product.settings.popupsummary }}</div>
+  <div class="pop-bullet-heading" style="display: none;">{% if active_product.settings.bulletlabel != blank %}{{ active_product.settings.bulletlabel }}{% else %}Pack includes:{% endif %}</div>
+  <div class="out-of-stock" style="display: none;">{{ active_product.settings.out_of_stock }}</div>
+
+  {% if active_product.settings.button_action == 'url' %}
+  <a 
+    href="{{ active_product.settings.button_url }}"
+    {% if active_product.settings.open_new_tab %}target="_blank" rel="noopener"{% endif %}
+    class="btn w-100 green-btn value-medium checkout-starterkit-btn ga4-checkout-btn sc-btn-381 btn-main-381"
+    {% if section.settings.dataTrack %}
+      data-target-url="{{ section.settings.targetUrl }}"
+      data-index="{{ section.settings.index }}"
+      data-funnel-stage="{{ section.settings.funnel_stage }}"
+      data-module="{{ section.settings.dataModule }}"
+      data-event-label="{{ section.settings.dataTitle }}"
+      data-event-value="{{ section.settings.eventValue }}"
+      data-item-id="{{ active_product.settings.product_sku }}"
+      data-option-index="{{ section.settings.optionIndex }}"
+      data-item-name="{{ section.settings.ItemName }}"
+    {% endif %}
+    style="background: {{ active_product.settings.btn_bg_color }} !important; color: {{ active_product.settings.btn_text_color }}; text-decoration: none; display: flex; align-items: center; justify-content: center;"
+  >
+    <span class="sc-btn-txt-381">{{ active_product.settings.btn_text }}</span>
+  </a>
+{% elsif active_product.settings.button_action == 'typeform' %}
+  <div class="position-relative w-100">
+    <span
+      class="btn w-100 green-btn value-medium checkout-starterkit-btn ga4-checkout-btn sc-btn-381 btn-main-381"
+      {% if section.settings.dataTrack %}
+        data-target-url="{{ section.settings.targetUrl }}"
+        data-index="{{ section.settings.index }}"
+        data-funnel-stage="{{ section.settings.funnel_stage }}"
+        data-module="{{ section.settings.dataModule }}"
+        data-event-label="{{ section.settings.dataTitle }}"
+        data-event-value="{{ section.settings.eventValue }}"
+        data-item-id="{{ active_product.settings.product_sku }}"
+        data-option-index="{{ section.settings.optionIndex }}"
+        data-item-name="{{ section.settings.ItemName }}"
+      {% endif %}
+      style="background: {{ active_product.settings.btn_bg_color }} !important; color: {{ active_product.settings.btn_text_color }};"
+    >
+      <span class="sc-btn-txt-381">{{ active_product.settings.btn_text }}</span>
+    </span>
+<div class="type-form-btn"></div>
+</div>
+<script src="//embed.typeform.com/next/embed.js"></script>
+<link rel="stylesheet" href="//embed.typeform.com/next/css/popup.css" />
+
+<script>
+  const { open, close } = window.tf.createPopup('OLztVTqk', {
+    onEndingButtonClick: ({ formId }) => {
+      console.log('Ending button clicked');
+      close();
+    }
+  });
+
+  document.querySelector('.type-form-btn').addEventListener('click', () => {
+    open();
+  });
+</script>
+{% else %}
+  <form
+    name="shopify-product-form"
+    autocomplete="off"
+    @submit.prevent="console.log('submitted')"
+    x-ref="product_citrus_form_{{ active_product.id }}"
+    enctype="multipart/form-data"
+    accept-charset="UTF-8"
+    id="product_citrus_form_{{ active_product.id }}"
+    class="shopify-product-form show"
+    data-product-id="{{ active_product.settings.product.id }}"
+    action="/cart/add"
+  >
+    <input
+      autocomplete="off"
+      type="hidden"
+      name="id"
+      class="input_variant_id_"
+      value="{{ active_product.settings.variant_id }}"
+    >
+    <input
+      autocomplete="off"
+      type="hidden"
+      class="discout_input disc"
+      name="discount"
+      value="{{ active_product.settings.discount_code }}"
+    >
+    <input autocomplete="off" type="hidden" name="quantity" value="1">
+    <input
+      autocomplete="off"
+      type="checkbox"
+      name="purchase_type"
+      {% if active_product.settings.isSub %}
+        value="subscription"
+      {% else %}
+        value="payg"
+      {% endif %}
+      checked
+      class="d-none gp--buyoption-input purc_type"
+    >
+    <input
+      autocomplete="off"
+      class="input_selling_plan_"
+      type="hidden"
+      name="selling_plan"
+      value="{{ active_product.settings.selling_plan }}"
+    >
+    {% if active_product.settings.out_of_stock %}
+    <span
+      class="btn w-100 green-btn value-medium checkout-starterkit-btn ga4-checkout-btn sc-btn-381 btn-main-381"
+      {% if section.settings.dataTrack %}
+        data-target-url="{{ section.settings.targetUrl }}"
+        data-index="{{ section.settings.index }}"
+        data-funnel-stage="{{ section.settings.funnel_stage }}"
+        data-module="{{ section.settings.dataModule }}"
+        data-event-label="{{ section.settings.dataTitle }}"
+        data-event-value="{{ section.settings.eventValue }}"
+        data-item-id="{{ active_product.settings.product_sku }}"
+        data-option-index="{{ section.settings.optionIndex }}"
+        data-item-name="{{ section.settings.ItemName }}"
+        data-quantity="{{ section.settings.quantity }}"
+        data-price="{{ localization.country.currency.symbol }}{{ active_product.settings.product_price }}"
+        data-cross-price="{{ localization.country.currency.symbol }}{{ active_product.settings.product_cross_price }}"
+        data-item-type="{% if active_product.settings.isSub %}subscription{% else %}PAYG{% endif %}"
+      {% endif %}
+      disabled="disabled"
+      style="background: {{ active_product.settings.btn_bg_color }} !important; color: {{ active_product.settings.btn_text_color }}; opacity: 0.6"
+    >
+      <span class="sc-btn-txt-381">OUT OF STOCK</span>
+    </span>
+    {% else %}
+    <span
+      x-on:click="Purdy.AddToCartWithDiscount($refs.product_citrus_form_{{ active_product.id }}, false, false, $event)"
+      class="btn w-100 green-btn value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn sc-btn-381 btn-main-381"
+      {% if section.settings.dataTrack %}
+        data-checkout="true"
+        data-add-to-cart="true"
+        data-page-url="{{ request.path }}"
+        data-target-url="{{ section.settings.targetUrl }}"
+        data-index="{{ section.settings.index }}"
+        data-funnel-stage="{{ section.settings.funnel_stage }}"
+        data-module="{{ section.settings.dataModule }}"
+        data-event-label="{{ section.settings.dataTitle }}"
+        data-event-value="{{ section.settings.eventValue }}"
+        data-item-id="{{ active_product.settings.product_sku }}"
+        data-option-index="{{ section.settings.optionIndex }}"
+        data-item-name="{{ section.settings.ItemName }}"
+        data-quantity="{{ section.settings.quantity }}"
+        data-price="{{ localization.country.currency.symbol }}{{ active_product.settings.product_price }}"
+        data-cross-price="{{ localization.country.currency.symbol }}{{ active_product.settings.product_cross_price }}"
+        data-item-type="{% if active_product.settings.isSub %}subscription{% else %}PAYG{% endif %}"
+      {% endif %}
+      style="background: {{ active_product.settings.btn_bg_color }} !important; color: {{ active_product.settings.btn_text_color }};"
+    >
+      <span class="sc-btn-txt-381">{{ active_product.settings.btn_text }}</span>
+    </span>
+    {% endif %}
+  </form>
+{% endif %}
+    <div class="box-button-note">See full T&C's in the FAQ</div>
+</div>
+{% endif %}
+<div class="advent-days-box">
+  <span class="advent-days-heading">{{ section.settings.days_heading }}</span>
+  <div class="advent-days-grid">
+    {% for block in section.blocks %}
+      {% if block.type == 'day_item' %}
+      <div class="advent-day-item" {{ block.shopify_attributes }}>
+        <div class="advent-day-image-wrapper {% if block.settings.day_status == 'expired' %}is-expired{% endif %}">
+          <img 
+            src="{{ block.settings.day_image | image_url: width: 400 }}" 
+            alt="{{ block.settings.day_title }}"
+            class="advent-day-image {% if block.settings.day_status == 'active' %}active{% endif %}"
+          >
+          {% unless block.settings.day_status == 'active' %}
+<div class="advent-day-overlay">
+  {% if block.settings.day_status == 'expired' %}
+    {% if block.settings.expired_icon %}
+    <img src="{{ block.settings.expired_icon | image_url: width: 100 }}" alt="Expired" class="advent-lock-icon">
+    {% endif %}
+  {% else %}
+    {% if block.settings.lock_icon %}
+    <img src="{{ block.settings.lock_icon | image_url: width: 100 }}" alt="Locked" class="advent-lock-icon">
+    {% endif %}
+  {% endif %}
+</div>
+{% endunless %}
+        </div>
+        <span class="advent-day-title">{{ block.settings.day_title }}</span>
+        {% if block.settings.day_status == 'active' %}
+          <span class="advent-day-status advent-day-status--active">{{ block.settings.active_text }}</span>
+        {% elsif block.settings.day_status == 'expired' %}
+          <span class="advent-day-status advent-day-status--expired">{{ block.settings.expired_text }}</span>
+        {% else %}
+          <span class="advent-day-status advent-day-status--upcoming">{{ block.settings.upcoming_text }}</span>
+        {% endif %}
+      </div>
+      {% endif %}
+    {% endfor %}
+  </div>
+</div>
+</div>
+  {% if active_product %}
+    <div class="citrus-heading-box citrus-mobile-hide">
+      <div class="heading-brd">
+        <div class="heading-border-box">
+          <span class="citrus-heading" style="color: {{ section.settings.headingcolor }};">{{ active_product.settings.heading }}</span>
+        </div>
+      </div>
+      <span class="citrus-summary" style="color: {{ section.settings.summarycolor }};">{{ active_product.settings.summary }}</span>
+    </div>
+  {% endif %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Advent Calendar 470",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "out_of_stock",
+      "label": "Out of stock"
+    },
+    {
+      "type": "checkbox",
+      "id": "isSub",
+      "label": "Product subscription enable"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background color"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "text",
+      "id": "scroll_id",
+      "label": "Section scroll ID"
+    },
+    {
+      "type": "color",
+      "id": "headingcolor",
+      "label": "Heading color"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "summarycolor",
+      "label": "Summary color"
+    },
+  {
+  "type": "color",
+  "id": "headingcolor_mobile",
+  "label": "Heading color (mobile)",
+  "default": "#FFFFFF"
+},
+{
+  "type": "color",
+  "id": "summarycolor_mobile",
+  "label": "Summary color (mobile)",
+  "default": "#FFFFFF"
+},
+    {
+      "type": "html",
+      "id": "summary",
+      "label": "Summary"
+    },
+    {
+        "type": "header",
+        "content": "Product box"
+    },
+    {
+      "type": "product",
+      "id": "landing_product",
+      "label": "Landing product"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor",
+      "label": "Title color"
+    },
+    {
+      "type": "textarea",
+      "id": "product_title",
+      "label": "Product title"
+    },
+    {
+      "type": "color",
+      "id": "desccolor",
+      "label": "Description color"
+    },
+    {
+      "type": "textarea",
+      "id": "product_summary",
+      "label": "Product summary"
+    },
+    {
+      "type": "text",
+      "id": "variant_id",
+      "label": "Variant ID"
+    },
+    {
+      "type": "color",
+      "id": "pricecolor",
+      "label": "Price color"
+    },
+    {
+      "type": "text",
+      "id": "product_price",
+      "label": "Price"
+    },
+    {
+      "type": "color",
+      "id": "crosspricecolor",
+      "label": "Cross price color"
+    },
+    {
+      "type": "text",
+      "id": "product_cross_price",
+      "label": "Cross over price"
+    },
+    {
+      "type": "text",
+      "id": "product_sku",
+      "label": "Product SKU"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan",
+      "label": "Selling plan"
+    },
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount code"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button background"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text color"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button label"
+    },
+    {
+      "type": "textarea",
+      "id": "popuptitle",
+      "label": "Popup title"
+    },
+    {
+      "type": "textarea",
+      "id": "popupsummary",
+      "label": "Popup description"
+    },
+    {
+      "type": "text",
+      "id": "bulletlabel",
+      "label": "Bullet points heading"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints1",
+      "label": "Bullet point 1"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints2",
+      "label": "Bullet point 2"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints3",
+      "label": "Bullet point 3"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints4",
+      "label": "Bullet point 4"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints5",
+      "label": "Bullet point 5"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints6",
+      "label": "Bullet point 6"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints7",
+      "label": "Bullet point 7"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints8",
+      "label": "Bullet point 8"
+    },
+    {
+      "id": "dataTrack",
+      "label":"Data Track",
+      "type": "checkbox"
+    },
+    {
+      "id": "targetUrl",
+      "label":"Target Url",
+      "type": "url"
+    },
+    {
+      "id": "index",
+      "label":"Index",
+      "type": "number",
+      "default" : 0
+    },
+    {
+      "id": "funnel_stage",
+      "label":"Funnel Stage",
+      "type": "text",
+      "default" : "landing_page"
+    },
+    {
+      "id": "dataModule",
+      "label":"Module",
+      "type": "text",
+      "default" : "announcement_bar"
+    },
+    {
+      "id": "dataTitle",
+      "label":"Event Label",
+      "type": "text",
+      "default": "get_your_offer"
+    },
+    {
+      "id": "eventValue",
+      "label":"Event Value",
+      "type": "text",
+      "default" : "shop_anchor"
+    },
+    {
+      "id": "itemId",
+      "label":"Item Id",
+      "type": "text"
+    },
+    {
+      "id": "optionIndex",
+      "label":"Option Index",
+      "type": "text"
+    },
+    {
+      "id": "ItemName",
+      "label":"Item Name",
+      "type": "text"
+    },
+    {
+  "type": "text",
+  "id": "days_heading",
+  "label": "Days section heading",
+  "default": "Discover 10 more days of festive deals"
+}
+  ],
+"blocks": [
+  {
+  "type": "day_item",
+  "name": "Day Item",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "day_image",
+      "label": "Day image"
+    },
+    {
+      "type": "image_picker",
+      "id": "lock_icon",
+      "label": "Lock icon"
+    },
+    {
+      "type": "image_picker",
+      "id": "expired_icon",
+      "label": "Expired icon"
+    },
+    {
+      "type": "text",
+      "id": "day_title",
+      "label": "Day title",
+      "default": "Day 1"
+    },
+    {
+      "type": "header",
+      "content": "Status"
+    },
+    {
+      "type": "select",
+      "id": "day_status",
+      "label": "Day status",
+      "options": [
+        {
+          "value": "upcoming",
+          "label": "Upcoming (locked)"
+        },
+        {
+          "value": "active",
+          "label": "Active (current deal)"
+        },
+        {
+          "value": "expired",
+          "label": "Expired"
+        }
+      ],
+      "default": "upcoming"
+    },
+    {
+      "type": "header",
+      "content": "Status text"
+    },
+    {
+      "type": "text",
+      "id": "upcoming_text",
+      "label": "Upcoming text",
+      "default": "Coming soon"
+    },
+    {
+      "type": "text",
+      "id": "active_text",
+      "label": "Active text",
+      "default": "OUT NOW"
+    },
+    {
+      "type": "text",
+      "id": "expired_text",
+      "label": "Expired text",
+      "default": "Expired"
+    }
+  ]
+},
+{
+  "type": "product_item",
+  "name": "Product Item",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "is_active",
+      "label": "Active (show this product)",
+      "default": false
+    },
+  {
+  "type": "header",
+  "content": "Button action"
+},
+{
+  "type": "select",
+  "id": "button_action",
+  "label": "Button action",
+  "options": [
+    {
+      "value": "add_to_cart",
+      "label": "Add to cart"
+    },
+    {
+      "value": "url",
+      "label": "Go to URL"
+    },
+    {
+      "value": "typeform",
+      "label": "Typeform popup"
+    }
+  ],
+  "default": "add_to_cart"
+},
+{
+  "type": "url",
+  "id": "button_url",
+  "label": "Button URL (if URL action selected)"
+},
+{
+  "type": "text",
+  "id": "typeform_id",
+  "label": "Typeform ID (e.g. 01K62TBTX8DZTV1V4C2HX8XR2F)"
+},
+{
+  "type": "checkbox",
+  "id": "open_new_tab",
+  "label": "Open in new tab",
+  "default": false
+},
+{
+  "type": "header",
+  "content": "Heading & Summary"
+},
+{
+  "type": "html",
+  "id": "heading",
+  "label": "Heading"
+},
+{
+  "type": "html",
+  "id": "summary",
+  "label": "Summary"
+},
+    {
+      "type": "product",
+      "id": "product",
+      "label": "Product"
+    },
+    {
+      "type": "image_picker",
+      "id": "desktop_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "color",
+      "id": "titlecolor",
+      "label": "Title color"
+    },
+    {
+      "type": "textarea",
+      "id": "product_title",
+      "label": "Product title"
+    },
+    {
+      "type": "color",
+      "id": "desccolor",
+      "label": "Description color"
+    },
+    {
+      "type": "textarea",
+      "id": "product_summary",
+      "label": "Product summary"
+    },
+    {
+      "type": "text",
+      "id": "variant_id",
+      "label": "Variant ID"
+    },
+    {
+      "type": "color",
+      "id": "pricecolor",
+      "label": "Price color"
+    },
+    {
+      "type": "text",
+      "id": "product_price",
+      "label": "Price"
+    },
+    {
+      "type": "color",
+      "id": "crosspricecolor",
+      "label": "Cross price color"
+    },
+    {
+      "type": "text",
+      "id": "product_cross_price",
+      "label": "Cross over price"
+    },
+    {
+      "type": "text",
+      "id": "product_sku",
+      "label": "Product SKU"
+    },
+    {
+      "type": "text",
+      "id": "selling_plan",
+      "label": "Selling plan"
+    },
+    {
+      "type": "text",
+      "id": "discount_code",
+      "label": "Discount code"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button background"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button text color"
+    },
+    {
+      "type": "text",
+      "id": "btn_text",
+      "label": "Button label",
+      "default": "Add to cart"
+    },
+    {
+      "type": "checkbox",
+      "id": "out_of_stock",
+      "label": "Out of stock"
+    },
+    {
+      "type": "checkbox",
+      "id": "isSub",
+      "label": "Product subscription enable"
+    },
+    {
+      "type": "textarea",
+      "id": "popuptitle",
+      "label": "Popup title"
+    },
+    {
+      "type": "textarea",
+      "id": "popupsummary",
+      "label": "Popup description"
+    },
+    {
+      "type": "text",
+      "id": "bulletlabel",
+      "label": "Bullet points heading"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints1",
+      "label": "Bullet point 1"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints2",
+      "label": "Bullet point 2"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints3",
+      "label": "Bullet point 3"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints4",
+      "label": "Bullet point 4"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints5",
+      "label": "Bullet point 5"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints6",
+      "label": "Bullet point 6"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints7",
+      "label": "Bullet point 7"
+    },
+    {
+      "type": "text",
+      "id": "bulletpoints8",
+      "label": "Bullet point 8"
+    }
+  ]
+}
+],
+  "presets": [
+    {
+      "name": "Advent Calendar 470"
+    }
+  ]
+}
+{% endschema %}

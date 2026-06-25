@@ -1,0 +1,23 @@
+<div class="{{ section.settings.klaviyoFormClass }}" id="{{ section.settings.id }}"></div>
+{% schema %}
+  {
+    "name": "Klaviyo-Form",
+    "settings": [
+      {
+          "type":"text",
+          "id":"id",
+          "label": "Section ID"
+      },
+      {
+          "type":"text",
+          "id":"klaviyoFormClass",
+          "label": "Klaviyo Form Class"
+      }
+    ],
+    "presets": [
+	{
+		"name": "Klaviyo-Form"
+	}
+    ]
+  }
+{% endschema %}

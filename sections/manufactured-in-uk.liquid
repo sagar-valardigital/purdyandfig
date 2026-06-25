@@ -1,0 +1,85 @@
+<div class="manufactured {{ section.settings.class }} py-80">
+  <div class="container">
+    <div class="manufactured-inner-wrapper">
+      <h2 class="heading-2 blue-text value-bold mt-0 text-center d-flex align-items-center justify-content-center">
+        <span> {{ section.settings.heading }} &nbsp;</span>
+        <img
+          width="40"
+          height="40"
+          alt="gb"
+          src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/GB.png?v=1699590423"
+        >
+      </h2>
+      <div class="mobile-hide ">
+        <div class="desktop-manufactured-blocks">
+          {% for block in section.blocks %}
+            <div class="manufactured-block text-left">
+              <h3 class="black-text value-sans mt-0">{{ block.settings.heading }}</h3>
+              <p class="gray-text value-sans mb-0" style="color:#707279">{{ block.settings.detail }}</p>
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+      <div class="desktop-hide mobile-manufactured-blocks">
+        {% for block in section.blocks %}
+          <div class="faq">
+            <details
+              class="faq-acc faq-acc-2 m-text-left"
+            >
+              <summary class="faq-que-2 value-sans">{{ block.settings.heading }}</summary>
+              <p class="mt-2 mb-0 value-sans" style="color:#707279">{{ block.settings.detail }}</p>
+            </details>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "manufactured in uk",
+   "settings": [
+     {
+       "type": "text",
+       "id": "class",
+       "label": "Add Section class Name"
+     },
+     {
+           "type": "text",
+           "id": "heading",
+           "label": "Heading"
+         }
+   ],
+   "blocks": [
+     {
+       "type": "text",
+       "name": "manufactured",
+       "settings": [
+         {
+           "type": "text",
+           "id": "heading",
+           "label": "Heading"
+         },
+         {
+           "type": "text",
+           "id": "detail",
+           "label": "Text"
+         }
+
+       ]
+     }
+],
+   "presets": [
+	{
+		"name": "manufactured in uk"
+	}
+]
+ }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

@@ -1,0 +1,72 @@
+<footer class="bf-footer d-flex" style="background: {{ section.settings.color_bg }};">
+  <div class="bf-footer-inner mx-auto px-4">
+    <a class="d-flex my-auto" href="/" target="_blank">
+      <img class="logo my-auto" src="{{ 'pf-logo-2.svg' | asset_url }}" width="143" height="24">
+    </a>
+    <p class="copyright value-sans my-auto">© {{ section.settings.year }} Purdy & Figg. All rights reserved.</p>
+  </div>
+</footer>
+
+{% schema %}
+  {
+    "name": "Black Friday Footer",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_bg",
+        "label": "Background color",
+        "default": "#131E44"
+      },
+      {
+        "type": "text",
+        "id": "year",
+        "label": "Current year",
+        "default": "2023"
+      }
+    ],
+    "presets": [
+		{
+          "name": "Black Friday Footer"
+		}
+	]
+  }
+{% endschema %}
+
+{% style %}
+  .bf-footer .bf-footer-inner {
+    display: flex !important;
+    max-width: 1280px;
+    width: 100%;
+    justify-content: space-between;
+    padding: 48px 0;
+  }
+  
+  .bf-footer .copyright {
+    color: #92A4E0;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; 
+  }
+
+  @media (max-width: 768px) {
+    .bf-footer .bf-footer-inner {
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 48px 32px;
+    }
+
+    .bf-footer .logo {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .bf-footer .copyright {
+      text-align: center !important;
+      margin-top: 32px !important;
+    }
+  }
+{% endstyle %}
+
+{% javascript %}
+{% endjavascript %}

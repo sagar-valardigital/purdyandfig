@@ -1,0 +1,908 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676": {
+      "type": "global-announcement-bar",
+      "custom_css": [
+        ".ladder-annoucment-bar p {font-size: 13px;}",
+        ".ladder-annoucment-bar .announcement-btn {padding: 11px; margin-left: 5px; font-size: 13px; padding-top: 10px; padding-bottom: 7px;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "logo": false,
+        "class": "",
+        "text": "Welcome to summer store 4",
+        "bb-color": "#ed8532",
+        "text-color": "#ffffff",
+        "scrollto": "",
+        "annuText": "",
+        "landingproduct": ""
+      }
+    },
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2": {
+      "type": "global-header",
+      "settings": {
+        "menu2": "header-2",
+        "mobilemenu": "header-2",
+        "top_product_link": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "90341b33-d7fa-4e02-bf64-d4089cdff051": {
+      "type": "homepage-banner-1",
+      "settings": {
+        "class": "",
+        "desktopimage": "shopify://shop_images/BYOB-hero.jpg",
+        "mobileimage": "shopify://shop_images/BYOB-hero-mobile.jpg",
+        "mobileImgLoc": "img-center",
+        "enablelink": true,
+        "reviewShow": false,
+        "title": "Build Your Starter Kit & Save*",
+        "titlecolor": "#ffffff",
+        "subtext": "- Save 50% <p> </p>\n- Get a Free Bottle for Life & Cloth <p> </p>\n- Find your favourite scent!",
+        "subtextcolor": "#ffffff",
+        "btnText": "SHOP NOW",
+        "link": "shopify://products/bathroom-bliss-bundle-kit",
+        "linkText": "",
+        "textcolor": "#ffffff",
+        "bgcolor": "#ff9038",
+        "btnSubText": "*Valid for new customers only."
+      }
+    },
+    "23e3ef1d-f5e1-4bc9-8c1d-b37c0e22e5f2": {
+      "type": "lander-banner",
+      "disabled": true,
+      "settings": {
+        "outOfStock": true,
+        "className": "",
+        "landingproduct": "",
+        "desktopimage": "shopify://shop_images/custom_resized_618b244f-7527-411a-8998-93a59440aaee-copy.jpg",
+        "mobileimage": "shopify://shop_images/g_y-mob.jpg",
+        "title": "<p></p> \n\n<span class=\"font-normal-value\"> A trip to paradise, every time you clean\n \n<p></p></span>",
+        "subtext": "Save £15 and try our tropical, summer scent for FREE.",
+        "price": "£17.85",
+        "delPrice": "£21",
+        "btnText": "Shop Now",
+        "ctaDetails": "Offer ends in 48 hours!",
+        "scrollto": "javascript:void(0);"
+      }
+    },
+    "e5996c06-8533-4d3c-8321-8492ae111911": {
+      "type": "bb-banner",
+      "disabled": true,
+      "blocks": {
+        "93094f51-f07d-4107-9935-3e953e94c29b": {
+          "type": "text",
+          "settings": {
+            "listItem": "Save £15 and try our tropical, summer scent for FREE."
+          }
+        },
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "One FREE Bottle for Life"
+          }
+        },
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "FREE physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        },
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "VIP orders shipped the same day"
+          }
+        }
+      },
+      "block_order": [
+        "93094f51-f07d-4107-9935-3e953e94c29b",
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c",
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f",
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px; padding-left: 1.5rem; text-align: left;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1rem; padding-top: 2rem;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "className": "spring-banner",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/custom_resized_618b244f-7527-411a-8998-93a59440aaee-copy.jpg",
+        "mobileimage": "shopify://shop_images/g-mob1.jpg",
+        "title": "<span class=\"font-normal-value\">A trip to paradise, every time you clean\n</span>",
+        "subtext": "",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer ends in 48 hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "c825a32e-da29-4a20-8bf5-6199d46c5604": {
+      "type": "slider",
+      "blocks": {
+        "c606ecfc-e8c9-492a-8d74-b25656db5eca": {
+          "type": "text",
+          "settings": {
+            "heading": "\"Brilliant natural, environmentally friendly cleaning products\"",
+            "desktopimage": "shopify://shop_images/house_250x_de52c50f-7acd-4073-a97c-bcca2e25badf.png"
+          }
+        },
+        "fd913ff3-94f2-42ad-87eb-5e8ca878f202": {
+          "type": "text",
+          "settings": {
+            "heading": "“They’re All Absolutely Delicious\"",
+            "desktopimage": "shopify://shop_images/sunday_7a2db430-135f-446b-befd-89447572228d.png"
+          }
+        },
+        "7e528c49-5213-411b-9ebc-344e8e0229a2": {
+          "type": "text",
+          "settings": {
+            "heading": "\"Smitten by sweet smelling Purdy & Figg\"",
+            "desktopimage": "shopify://shop_images/daily_1eeddff2-a388-4d2b-872c-04bb2be38356.png"
+          }
+        }
+      },
+      "block_order": [
+        "c606ecfc-e8c9-492a-8d74-b25656db5eca",
+        "fd913ff3-94f2-42ad-87eb-5e8ca878f202",
+        "7e528c49-5213-411b-9ebc-344e8e0229a2"
+      ],
+      "custom_css": [
+        "h2 {font-size: 24px; font-family: \"Value-sans\";}",
+        ".client-logo {padding: 25px 0px; padding-bottom: 0px;}",
+        ".clients-section {padding: 0px 20px; padding-bottom: 25px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "bg": false
+      }
+    },
+    "001f78c8-7d96-4a57-9895-00898748d6a3": {
+      "type": "bb-products",
+      "blocks": {
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "a9b98e44-9f2e-4398-8515-c20360f8e056": {
+          "type": "product",
+          "settings": {
+            "product": "cc-bottle-for-life"
+          }
+        },
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        }
+      },
+      "block_order": [
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f",
+        "a9b98e44-9f2e-4398-8515-c20360f8e056",
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0"
+      ],
+      "custom_css": [
+        ".product-detail *,.btn {font-family: \"Value-Sans\";}",
+        ".py-5 {padding-top: 2rem !important; padding-bottom: 5px !important;}",
+        ".bg-white {margin: 9px;}",
+        ".colletion-products {margin-bottom: 0px;}",
+        ".heading-2 {padding-bottom: 1rem;}"
+      ],
+      "settings": {
+        "className": "bg-white add-more-bathroom-product",
+        "bgColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Add extras to your cart</span>",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "a4f044ff-786b-4e5e-a1f0-98f097c7863c": {
+      "type": "our-blends",
+      "blocks": {
+        "b948b1db-7dc3-4a1a-94cf-414c835dc327": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "theme-text mobile-hide",
+            "nopopup": true,
+            "heading": "Check out Our New Summer Scent",
+            "detail": "",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": false,
+            "PoopupIconCode": ""
+          }
+        },
+        "6f468e7d-654c-4294-99b2-5157bf80d5d1": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Web_1920_2_43d730f7-eef7-4bc1-be5a-e85fa1201936.jpg",
+            "heading": "Geranium & Ylang Ylang",
+            "detail": "A scented blend of enchanting floral gardens and warm, spicy tropics. Pure Geranium and Ylang Ylang essential oils calm, while Ho Wood and Clary Sage transport you to a tranquil paradise.",
+            "pop_heading": "Geranium & Ylang Ylang",
+            "pop_detail": "A scented blend of enchanting floral gardens and warm, spicy tropics. Pure Geranium and Ylang Ylang essential oils calm, while Ho Wood and Clary Sage transport you to a tranquil paradise.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ylang-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ho_wood-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander-scent.png?v=1683634425\">\n        </div>\n<div></div>"
+          }
+        },
+        "3022c36f-323f-4a7d-ac8a-f36c6be24c69": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_78b7601f-6199-4ab6-93de-54b001d37fbd.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Top Notes  Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  Grapefruit Peel - An energy-boosting with a sweet, fruity scent.   Middle Notes  Niaouli Leaves - A stimulating and fresh oil with an earthy aroma. ",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "109e1e96-fb85-4f5c-9e3a-8b4d064fc4f7": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6305_2x_a3433b37-7b8c-48b0-8d26-1246ec8a5759.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes   Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  Middle Notes   Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.   Base Notes   Vetiver A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "6abc3f7e-96c7-42e3-9ce2-390d07994799": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_d322e237-a8aa-4913-816a-4cd80c324742.png",
+            "heading": "Balancing Floral",
+            "detail": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots, known for their comforting & balancing properties",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes   Lemon Peel - A cheerful, fresh, citrus aroma with natural antibacterial properties.   Middle Notes    Rose Geranium - A rich floral scent with antimicrobial, antifungal, and antiviral properties  Base Notes   Vetiver Root - A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        }
+      },
+      "block_order": [
+        "b948b1db-7dc3-4a1a-94cf-414c835dc327",
+        "6f468e7d-654c-4294-99b2-5157bf80d5d1",
+        "3022c36f-323f-4a7d-ac8a-f36c6be24c69",
+        "109e1e96-fb85-4f5c-9e3a-8b4d064fc4f7",
+        "6abc3f7e-96c7-42e3-9ce2-390d07994799"
+      ],
+      "settings": {
+        "class": "",
+        "bgColor": "",
+        "heading": "Our Blends"
+      }
+    },
+    "49d1d86a-4188-4863-8378-0a726527234c": {
+      "type": "on-scroll-sticky",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 28px; font-family: \"Value-Serif-Pro\";}",
+        ".my-5 {margin-top: 2rem !important; margin-bottom: 0rem !important; padding: 1rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Limited Edition Summer Starter Kit",
+        "subheading": ""
+      }
+    },
+    "aaf0875e-8d76-4d71-977c-ad0fefbdebfd": {
+      "type": "landing-blocks",
+      "disabled": true,
+      "blocks": {
+        "8f525800-81a8-442a-ab06-b5a74173d2f0": {
+          "type": "text",
+          "settings": {
+            "width": "w-33",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_19.png",
+            "rounded": true,
+            "heading": "Ho Wood",
+            "details": "Sweet and floral, Ho Wood essential oil promotes peace and tranquillity.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "dc3db19f-61f7-48f0-9dc8-4341a0d9642e": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_20.png",
+            "rounded": true,
+            "heading": "Geranium",
+            "details": "Intensely floral, sweet and rosy oil that supports emotions by creating a calming and grounding effect.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "56f24dae-d507-4c6f-846b-6ca5c172dbe0": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_22.png",
+            "rounded": true,
+            "heading": "Coriander",
+            "details": "An invigorating, stimulating oil with a powerful, sweet, somewhat spicy and warm aroma, with a lively woody/peppery top note and a balsamic undertone.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "486a62e1-8d3f-42f8-a0d0-3457075ac7f1": {
+          "type": "text",
+          "settings": {
+            "width": "w-50",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_21.png",
+            "rounded": true,
+            "heading": "Clary Sage",
+            "details": "Clary sage smells sweet and herbaceous with ambery tones of fresh tobacco. The oil promotes inner tranquillity and dispels negativity.  ",
+            "mbBlock": "mw-50"
+          }
+        },
+        "d0bcd69d-51e3-4cb7-b96e-bccc9ed67297": {
+          "type": "text",
+          "settings": {
+            "width": "w-50",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_23.png",
+            "rounded": true,
+            "heading": "Ylang Ylang",
+            "details": "a deep, rich floral aroma that's slightly sweet and promotes relaxation, kills bacteria and lowers blood pressure.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "8f525800-81a8-442a-ab06-b5a74173d2f0",
+        "dc3db19f-61f7-48f0-9dc8-4341a0d9642e",
+        "56f24dae-d507-4c6f-846b-6ca5c172dbe0",
+        "486a62e1-8d3f-42f8-a0d0-3457075ac7f1",
+        "d0bcd69d-51e3-4cb7-b96e-bccc9ed67297"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#ffffff",
+        "sectionTextColor": "",
+        "heading": "About the Blends",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b": {
+      "type": "landing-blocks",
+      "blocks": {
+        "e9358ff1-a922-4541-acc2-5274872a4581": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_9_dbc09069-e7d2-4853-b0dc-83035857911d.png",
+            "rounded": true,
+            "heading": "Smells like a Spa",
+            "details": "Hand-blended essential oil blends will transform your home into a spa with long-lasting scents.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_10_3ca8c81f-a136-4a9a-9747-d7ca270cf638.png",
+            "rounded": true,
+            "heading": "Good for your Health",
+            "details": "Our toxic-free formula supports healthy immune systems",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_11_aae2982b-c8e9-42a7-98c1-4fdec18ee275.png",
+            "rounded": true,
+            "heading": "Save Time & Space",
+            "details": "It’s super-effective on every surface, so you can replace up to 15 bottles and speed up your routine!",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_13_da2fda62-e0cf-4053-916e-d56ce8cdb259.png",
+            "rounded": true,
+            "heading": "Eliminate Plastic Waste",
+            "details": "Refillable glass bottles and convenient refills make it easy to go green with your clean.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "e9358ff1-a922-4541-acc2-5274872a4581",
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256",
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08",
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84"
+      ],
+      "custom_css": [
+        ".heading-4.text-center,h3 {text-decoration: none !important; font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".pb-5 {padding-bottom: 0rem !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#ff9038",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Why make the switch? </span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "e5918bfd-3e9f-4601-8747-04ef114e1c72": {
+      "type": "review-slider",
+      "blocks": {
+        "3c0a34b7-3aa7-4624-a033-d0336f375104": {
+          "type": "text",
+          "settings": {
+            "username": "Posy - Verified Customer",
+            "heading": "",
+            "image": "shopify://shop_images/user-1_1175e8d2-e953-4a85-8ba5-db5064570dc7.png",
+            "review": "“It just makes me feel good! It also makes my kitchen island look and smell better than anything else I’ve tried before.” ",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "4777e7d3-a1ec-42c3-b4f0-28dc468a12d6": {
+          "type": "text",
+          "settings": {
+            "username": "Emma - Verified Customer ",
+            "heading": "",
+            "image": "shopify://shop_images/user-2_1aaa509a-1b80-43ca-bb7e-82c6486d3168.png",
+            "review": "“I love using Purdy & Figg as it’s just one simple product that does so much, stops the clutter of products & it’s kinder to the environment.”",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "183077b6-a41b-4dfe-a7b3-277fd1cf7f4e": {
+          "type": "text",
+          "settings": {
+            "username": "Flora- Verified Customer ",
+            "heading": "",
+            "image": "shopify://shop_images/user-3.png",
+            "review": "“A weird transformation has taken place… I look forward to wiping the surface of my kitchen after supper. What have you done to me?” ",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "3c0a34b7-3aa7-4624-a033-d0336f375104",
+        "4777e7d3-a1ec-42c3-b4f0-28dc468a12d6",
+        "183077b6-a41b-4dfe-a7b3-277fd1cf7f4e"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "",
+        "Review-Count": "5.0",
+        "bgColor": "",
+        "heading": "Over 6300 5-Star Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "a3cb3b67-801b-468c-b903-e64218b2cab6": {
+      "type": "bb-banner",
+      "disabled": true,
+      "blocks": {
+        "6c9a8472-176c-4bf9-a785-169e5d4b9164": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lemon & Marjoram Eco-Concentrate"
+          }
+        },
+        "b7cfbf13-1e74-4e0d-b88d-83d18d8b868c": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Patchouli & Cedarwood Eco-Concentrate"
+          }
+        },
+        "fe4b4625-e012-49ab-9aca-2b0090d8342d": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x FREE Bottle for Life (worth £15!)"
+          }
+        },
+        "fdd64d5c-bb06-413e-80f4-7f891cfe25ae": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x Physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        }
+      },
+      "block_order": [
+        "6c9a8472-176c-4bf9-a785-169e5d4b9164",
+        "b7cfbf13-1e74-4e0d-b88d-83d18d8b868c",
+        "fe4b4625-e012-49ab-9aca-2b0090d8342d",
+        "fdd64d5c-bb06-413e-80f4-7f891cfe25ae"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "className": "spring-banner",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/Untitled-1-_5.jpg",
+        "mobileimage": "shopify://shop_images/heroimage_Yellow_93f8e5b9-194b-4d4e-906b-7d94e13ed761.png",
+        "title": "Two Spring Scents + FREE Bottle for Life",
+        "subtext": "VIP offer ends in 48 hours:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer ends in 48 hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "e694d7cc-b87f-4bbc-bf2c-75c0b452154b": {
+      "type": "lander-table",
+      "settings": {}
+    },
+    "dcb1b499-7785-4926-98e9-8c795071403e": {
+      "type": "bb-banner",
+      "disabled": true,
+      "blocks": {
+        "0962baa7-3057-41ef-823e-9e163588749a": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lemon & Marjoram Eco-Concentrate"
+          }
+        },
+        "887bdc09-55a0-4425-84c6-ba94fca4bdcb": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Patchouli & Cedarwood Eco-Concentrate"
+          }
+        },
+        "939f5bc4-dc41-4b29-9c9d-555a0e2d241c": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x FREE Bottle for Life (worth £15!)"
+          }
+        },
+        "4f2c2a5d-5cc4-4dc8-99bd-80894169d1d7": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x Physical Spring Cleaning Guide from Purdy & Charlotte"
+          }
+        }
+      },
+      "block_order": [
+        "0962baa7-3057-41ef-823e-9e163588749a",
+        "887bdc09-55a0-4425-84c6-ba94fca4bdcb",
+        "939f5bc4-dc41-4b29-9c9d-555a0e2d241c",
+        "4f2c2a5d-5cc4-4dc8-99bd-80894169d1d7"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "className": "bathroom-banner bb-last-banner-white",
+        "isSub": false,
+        "landingproduct": "spring-booster-pack-landing-offer",
+        "desktopimage": "shopify://shop_images/Untitled-1-_5.jpg",
+        "mobileimage": "shopify://shop_images/heroimage_Yellow_63132ecf-db62-4e58-b660-1659a0d8948f.png",
+        "title": "Two Spring Scents + FREE Bottle for Life",
+        "subtext": "VIP offer ends in 48 hours:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer Ends in 48 Hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "b59942de-50b9-419f-a1fc-e2454fded23c": {
+      "type": "video-block",
+      "disabled": true,
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36p; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/thumn.jpg",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4"
+      }
+    },
+    "183d6f8f-887d-47a0-abd6-badda41fccc2": {
+      "type": "video-html-block",
+      "disabled": true,
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36px; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/PF_Feb23_15.png",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4"
+      }
+    },
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8": {
+      "type": "landing-blocks",
+      "blocks": {
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_14.png",
+            "rounded": true,
+            "heading": "Money-Back Guarantee",
+            "details": "No questions asked money back guarantee if you’re not satisfied.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_16.png",
+            "rounded": true,
+            "heading": "Quick Delivery",
+            "details": "Ships in 1-2 Days guaranteed. Free delivery over £40.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_18.png",
+            "rounded": true,
+            "heading": "Eco-Friendly",
+            "details": "Save 10 plastic bottles per year from entering landfill.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_17.png",
+            "rounded": true,
+            "heading": "Convenient",
+            "details": "Easy top up refills whenever you need.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767",
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123",
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d",
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b"
+      ],
+      "custom_css": [
+        "h3 {margin: 0; font-family: \"Value-Sans\"; font-size: 16px; padding-top: 0rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#ff9038",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Extra Benefits</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "ca9a0417-78db-4e8d-8f82-b785e14896be": {
+      "type": "select-scent",
+      "disabled": true,
+      "blocks": {
+        "b72f3078-6ac5-4961-8f57-f5999fcb2a5f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/THUMBNAIL_2.jpg",
+            "details": "",
+            "link": ""
+          }
+        },
+        "9606fad0-654e-4910-a8f6-a317ae66c53f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/THUMBNAIL_3.jpg",
+            "details": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b72f3078-6ac5-4961-8f57-f5999fcb2a5f",
+        "9606fad0-654e-4910-a8f6-a317ae66c53f"
+      ],
+      "settings": {
+        "enable": true,
+        "class": "",
+        "heading": "About the blends",
+        "subheading": "",
+        "ctalabel": "",
+        "ctalink": ""
+      }
+    },
+    "b73293e2-35b3-464c-aa9c-e829bf1326ae": {
+      "type": "our-blends",
+      "disabled": true,
+      "blocks": {
+        "7355e80e-0f32-40f9-b2f2-88f84398e7d4": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "click-none white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_0427fb75-4121-41b4-bbc2-5654d0e2f1cf.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties.",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        },
+        "f7716969-0bbf-4474-b38e-ee963a000fdb": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "click-none white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_d78b4754-830e-4bde-845e-33440dba783b.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        }
+      },
+      "block_order": [
+        "7355e80e-0f32-40f9-b2f2-88f84398e7d4",
+        "f7716969-0bbf-4474-b38e-ee963a000fdb"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}"
+      ],
+      "settings": {
+        "class": "show-2-blocks",
+        "bgColor": "#e3f3fe",
+        "heading": "Making Scents Of The World"
+      }
+    },
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1": {
+      "type": "landing-table",
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        "td,th {font-family: \"Value-Sans\";}"
+      ],
+      "settings": {}
+    },
+    "99ccde11-5760-4852-bf3d-835fd6a67eae": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "p {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".mobile-padding-y {padding-top: 30px; padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"value-pro\">Two women on  a mission to </span>transform cleaning",
+        "image": "shopify://shop_images/THUMBNAIL_4.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    }
+  },
+  "order": [
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676",
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2",
+    "main",
+    "90341b33-d7fa-4e02-bf64-d4089cdff051",
+    "23e3ef1d-f5e1-4bc9-8c1d-b37c0e22e5f2",
+    "e5996c06-8533-4d3c-8321-8492ae111911",
+    "c825a32e-da29-4a20-8bf5-6199d46c5604",
+    "001f78c8-7d96-4a57-9895-00898748d6a3",
+    "a4f044ff-786b-4e5e-a1f0-98f097c7863c",
+    "49d1d86a-4188-4863-8378-0a726527234c",
+    "aaf0875e-8d76-4d71-977c-ad0fefbdebfd",
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b",
+    "e5918bfd-3e9f-4601-8747-04ef114e1c72",
+    "a3cb3b67-801b-468c-b903-e64218b2cab6",
+    "e694d7cc-b87f-4bbc-bf2c-75c0b452154b",
+    "dcb1b499-7785-4926-98e9-8c795071403e",
+    "b59942de-50b9-419f-a1fc-e2454fded23c",
+    "183d6f8f-887d-47a0-abd6-badda41fccc2",
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8",
+    "ca9a0417-78db-4e8d-8f82-b785e14896be",
+    "b73293e2-35b3-464c-aa9c-e829bf1326ae",
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1",
+    "99ccde11-5760-4852-bf3d-835fd6a67eae"
+  ]
+}

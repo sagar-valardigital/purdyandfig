@@ -1,0 +1,130 @@
+<style>
+  .revolutionise-slide{
+    padding:10px;
+  }
+  
+  .revolutionise-slider .slick-arrow{
+    bottom:-30px;
+    right:15px;
+    left:auto;
+    top:auto;
+    transform:none;
+  }
+  .revolutionise-slider .slick-arrow.slick-prev{
+    right:50px;
+  }
+  .revolutionise-slide{
+    display:grid;
+    grid-gap:16px;
+  }
+  .user-quote{
+    font-size:14px;
+    color:#424242;
+  }
+  .user-name{
+    font-size:12px;
+    color:#212121;
+  }
+  .revolutionise-image img{
+    border-radius:8px;
+    width:calc(100% - 5px);
+    border:1px solid #294741;
+    box-shadow:8px 8px #294741;
+    margin-bottom:12px;
+    display:block;
+  }
+  @media(max-width:768px){
+    .revolutionise-wrapper.py-80{
+      padding-top:32px !important;
+      padding-bottom:52px !important;
+    }
+    .revolutionise-slider .slick-arrow{
+    bottom:-30px;
+    }
+    .revolutionise-wrapper .section-header{
+      text-align:left !important;
+    }
+    
+  }
+  @media(max-width:460px){
+    .revolutionise-wrapper .revolutionise-slider{
+       margin-right:-15px;
+      margin-left:-15px;
+      width:calc(100% + 30px);
+    }
+  }
+  
+</style>
+<div class="revolutionise-wrapper py-80" style="background-color:{{ section.settings.background_color }}">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2 class="heading-2 font-gtsuper">{{ section.settings.heading }}</h2>
+      <p class=" sub-heading font-lausanne fw-200">{{ section.settings.subheading }}</p>
+    </div>
+    <div class="revolutionise-slider mt-4">
+      {% for block in section.blocks %}
+        <div class="revolutionise-slide">
+          <div class="revolutionise-image mb-2">
+            <img src="{{ block.settings.user_image | image_url }}" alt="{{ block.settings.user_image.alt }}" width="200" height="300" class="w-100 h-auto">
+          </div>
+          <div class="revolutionise-content">
+            <p class="user-quote font-lausanne m-0 fw-200 mb-2">{{ block.settings.heading }}</p>
+            <p class="user-name font-lausanne m-0 fw-400">{{ block.settings.user_name }}</p>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+  "name": "Revolutionise",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Sub-Heading"
+    }
+  ],
+  "blocks": [
+    {
+        "type": "text",
+        "name": "Quotes",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "user_image",
+            "label": "User Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Quote text"
+          },
+          {
+            "type": "text",
+            "id": "user_name",
+            "label": "User Name"
+          }
+
+        ]
+      }
+  ],
+  "presets": [
+    {
+      "name": "Revolutionise"
+    }
+  ]
+}
+{% endschema %}

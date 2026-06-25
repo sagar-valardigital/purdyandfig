@@ -1,0 +1,19 @@
+{% comment %}
+  DO NOT MODIFY MANUALLY
+  This asset is generated automatically by Talkable Integration at 9/29/21 7:29AM
+{% endcomment %}
+<div class="spacing--4x">
+  <article class="page-wrapper spacing--5">
+    <h1 class="page-title font--section-heading">{{ page.title }}</h1>
+    <div class="spacer spacing--4y"></div>
+    <div class="rte-content content">
+      {% if shop.customer_accounts_enabled %}
+        {% if customer %}
+          <div id="talkable-offer"></div>
+        {% else %}
+          {{ 'Log in' | customer_login_link }}
+        {% endif %}
+      {% endif %}
+    </div>
+  </article>
+</div>

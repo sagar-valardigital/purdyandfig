@@ -1,0 +1,494 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "d98d0ba5-de7a-4c15-b972-0a2d9e1484a9": {
+      "type": "main-multi-product",
+      "blocks": {
+        "75aa01c8-8da9-462b-af89-31803924b1c0": {
+          "type": "productSelect",
+          "settings": {
+            "selected": false,
+            "productSelection": "moth-magic-limited-edition-starter-kit",
+            "labelText": "Autumn"
+          }
+        },
+        "03dfef58-c3c4-4d48-84b0-7728967e4192": {
+          "type": "productSelect",
+          "settings": {
+            "selected": true,
+            "productSelection": "counter-clean-starter-kit-summer",
+            "labelText": "Mixed"
+          }
+        },
+        "bc1be4d2-4786-4bcb-9106-daab473531fd": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "spring-variety-kit",
+            "open": "open",
+            "DescriptionHeading": "Overview",
+            "description": "The variety kit includes our Glass Bottle For Life and a pack of three Eco-Concentrate Refills in our original three unique scents.\n<p> </p> \nPour an entire 20ml concentrate into your Bottle for Life and top up with ordinary tap water to make up a 300ml naturally-scented, multisurface cleaner. Spray onto surfaces or directly onto your cloth and wipe clean."
+          }
+        },
+        "9aba61a4-1e23-4af7-a8d6-a5454da1dd44": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "spring-variety-kit",
+            "open": "close",
+            "DescriptionHeading": "Scent Info",
+            "description": "<b>Balancing Floral:</b> An assertive rush of spicy rose notes give way to soft, balanced floral undertones for a sense of calm, positivity and stability.<br><br>\n<b>Uplifting Citrus:</b> A characterful blend that's easy to love with a refreshing, juicy scent and cheerful, mood-enhancing properties.\n<br><br>\n<b>Grounding Vetiver:</b> A complex and invigorating scent with wood, earthy notes for a calming and grounding effect."
+          }
+        },
+        "05b4b149-efb7-4cdb-aab1-750b4c4d9a20": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "spring-variety-kit",
+            "open": "close",
+            "DescriptionHeading": "What's in the box",
+            "description": "1 x Glass Bottle for Life<br><br>\n3 x 20ml Counter Clean refills in a scent of your choice<br><br>\n1 x Premium microfibre cloth"
+          }
+        }
+      },
+      "block_order": [
+        "75aa01c8-8da9-462b-af89-31803924b1c0",
+        "03dfef58-c3c4-4d48-84b0-7728967e4192",
+        "bc1be4d2-4786-4bcb-9106-daab473531fd",
+        "9aba61a4-1e23-4af7-a8d6-a5454da1dd44",
+        "05b4b149-efb7-4cdb-aab1-750b4c4d9a20"
+      ],
+      "settings": {
+        "class": "product2  height-0",
+        "selectedProduct": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "review_product": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "review-slider": {
+      "type": "review-slider",
+      "blocks": {
+        "21a91d05-d81c-424c-9b47-69aa59e0e384": {
+          "type": "text",
+          "settings": {
+            "username": "POSY",
+            "heading": "",
+            "review": "\"It just makes me feel good! It also makes my kitchen island look and smell better than anything else I've tried before.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac": {
+          "type": "text",
+          "settings": {
+            "username": "Emma",
+            "heading": "",
+            "review": "\"I love using Purdy & Figg as it's just one simple product that does so much, stops the clutter of products & it's kinder to the environment.\"",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1": {
+          "type": "text",
+          "settings": {
+            "username": "Flora",
+            "heading": "",
+            "review": "\"A weird transformation has taken place.…. I look forward to wiping the surfaces of my kitchen after supper. What have you done to me?\"",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "21a91d05-d81c-424c-9b47-69aa59e0e384",
+        "9caac0d1-5eb4-48a0-af82-85a039a745ac",
+        "d8c4c5dc-89a7-418b-9959-ac00dbf07dc1"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": false,
+        "className": "p-reviews whiteDots",
+        "Review-Count": "",
+        "bgColor": "#3d5065",
+        "heading": "",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "d27f3b99-70eb-42b7-be6c-d6e3371dd1ac": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "bf5d48ec-7f82-41ac-8020-55b1a42d55b4": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "93b0a18e-a770-43bd-a680-e2ccfdee9cb0": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "4c64db66-4850-44b5-8099-8989fe3508d1": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        }
+      },
+      "block_order": [
+        "bf5d48ec-7f82-41ac-8020-55b1a42d55b4",
+        "93b0a18e-a770-43bd-a680-e2ccfdee9cb0",
+        "4c64db66-4850-44b5-8099-8989fe3508d1"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "product2  height-0",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "An Easier, Breezier Spring Clean",
+        "subtext": "Your Spring Clean, simplified, with one product that can do it all.",
+        "image": "shopify://shop_images/Request_2.1_desktop_800x_9ae4d7db-da70-4437-8dd0-fa41edc6094e.jpg",
+        "mimage": "shopify://shop_images/Request_2.1_mobiel_8228443f-9267.jpg",
+        "details": "",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "841f54fa-6e44-43cf-bee6-0da792755167": {
+      "type": "product-icon-listing",
+      "blocks": {
+        "3df7b647-fc82-4a15-a443-36c922fb4f4d": {
+          "type": "list",
+          "settings": {
+            "details": "100% Effective + Third-Party Tested"
+          }
+        },
+        "5e665881-9658-4172-9517-d4ae61d431a0": {
+          "type": "list",
+          "settings": {
+            "details": "Reusable glass bottles"
+          }
+        },
+        "a5ebbcfe-ba45-4f4c-b6ad-08ad5ba2ed1a": {
+          "type": "list",
+          "settings": {
+            "details": "14x Lower Carbon Emissions"
+          }
+        }
+      },
+      "block_order": [
+        "3df7b647-fc82-4a15-a443-36c922fb4f4d",
+        "5e665881-9658-4172-9517-d4ae61d431a0",
+        "a5ebbcfe-ba45-4f4c-b6ad-08ad5ba2ed1a"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "image": "shopify://shop_images/Request_2.1_desktop_800x_9ae4d7db-da70-4437-8dd0-fa41edc6094e.jpg",
+        "mimage": "shopify://shop_images/Request_2.1_mobiel_8228443f-9267.jpg",
+        "details": "",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false
+      }
+    },
+    "f032c994-ebfd-42d8-b40b-1056b7477814": {
+      "type": "our-blends",
+      "blocks": {
+        "c95d986f-cd62-498b-b78b-0049090a6e3c": {
+          "type": "text",
+          "settings": {
+            "popup_no": "1",
+            "class": "theme-text mobile-hide",
+            "nopopup": true,
+            "heading": "Discover our New Bestselling Scents",
+            "detail": "",
+            "pop_heading": "Plus our Seasonal Spring Scents",
+            "pop_detail": "",
+            "showplus": false,
+            "PoopupIconCode": ""
+          }
+        },
+        "22dac8d6-a6ee-4e48-b185-af146809b2b4": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Web_1920_2_43d730f7-eef7-4bc1-be5a-e85fa1201936.jpg",
+            "heading": "Geranium & Ylang Ylang",
+            "detail": "A scented blend of enchanting floral gardens and warm, spicy tropics.    <br> Tap to Discover More >",
+            "pop_heading": "Geranium & Ylang Ylang",
+            "pop_detail": "Middle Notes  Geranium - Intensely floral, rosy oil that creates a calming and grounding effect. Ylang Ylang - a deep, rich floral aroma that promotes relaxation.  Base Notes  Ho Wood - Sweet and floral, Ho Wood essential oil promotes peace and tranquillity.   Coriander - an invigorating oil with a powerful, warm and peppery aroma.  Clary Sage - a sweet and herbaceous scent with ambery tones of fresh tobacco.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ylang-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Ho_wood-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Sage-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/geranium-scent.png?v=1683634425\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/Coriander-scent.png?v=1683634425\">\n        </div>\n<div></div>"
+          }
+        },
+        "64356632-3c15-4f09-9571-3657635ea31b": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "popup_no": "1",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/MM_1.jpg",
+            "heading": "Patchouli & Cedarwood  ‘Moth Magic’",
+            "detail": "A forest-walk blend of earthy Cedarwood with wafts of woody-citrus MayChang and Patchouli. Tap to discover more >",
+            "pop_heading": "Patchouli & Cedarwood 'Moth Magic'",
+            "pop_detail": "Top Notes   MayChang - an intense fresh and citrusy aroma with insecticidal and calming properties.    Middle Notes   Palmarosa - a sweet, floral-rosy oil that’s antimicrobial and acts as an insect repellent.     Base Notes   Red Cedar - a woody aroma with sweet balsamic scent that masks the scent of Keratin.   Patchouli - a rich, sweet, herbaceous and aromatic aroma traditionally used as a moth and insect repellent.   Amyris - a subtle, woody and sweet balsamic scent with antiseptic and sedative qualities.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Red_Cedar.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Patchouli.png?v=1692882966\">\n        </div>\n<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Palmarosa.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Amyris.png?v=1692882966\">\n        </div>\n<div>\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/0Maychang.png?v=1692882966\">\n        </div>\n\n<div></div>"
+          }
+        },
+        "213f48bd-36c5-41a1-bc61-cb76d729327c": {
+          "type": "text",
+          "settings": {
+            "popup_no": "2",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_78b7601f-6199-4ab6-93de-54b001d37fbd.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties",
+            "pop_heading": "Uplifting Citrus",
+            "pop_detail": "Top Notes  <p> </p>Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma. <p> </p>Grapefruit Peel - An energy-boosting with a sweet, fruity scent. <p> </p><p> </p>Middle Notes <p> </p>Niaouli Leaves - A stimulating and fresh oil with an earthy aroma.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/grapefruit.png?v=1678288097\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/naouli.png?v=1678288097\">\n        </div>\n<div></div>"
+          }
+        },
+        "6ebfd29e-3508-4428-977a-81dbafba9770": {
+          "type": "text",
+          "settings": {
+            "popup_no": "3",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6305_2x_a3433b37-7b8c-48b0-8d26-1246ec8a5759.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "pop_heading": "Grounding Vetiver",
+            "pop_detail": "Top Notes  <p> </p>Sweet Orange - An uplifting and cheerful oil with a sweet, citrus aroma.  <p> </p>Middle Notes   <p> </p>Coriander - a sweet, spicy woody scent with antibacterial and antiviral properties.<p> </p>Base Notes   <p> </p>Vetiver A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_da141958-ac8e-42a1-b6fb-28f02e842024.png?v=1678287910\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/sweet_orange.png?v=1678287912\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/coriander_seed.png?v=1678287912\">\n        </div>\n<div></div>"
+          }
+        },
+        "076bb39f-93d0-4c3f-9c49-384ad1792f46": {
+          "type": "text",
+          "settings": {
+            "popup_no": "4",
+            "class": "white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_d322e237-a8aa-4913-816a-4cd80c324742.png",
+            "heading": "Balancing Floral",
+            "detail": "A beautifully floral blend of rose geranium, lemon peel and vetiver roots, known for their comforting & balancing properties",
+            "pop_heading": "Balancing Floral",
+            "pop_detail": "Top Notes <p> </p>Lemon Peel - A cheerful, fresh, citrus aroma with natural antibacterial properties.<p> </p>Middle Notes <p> </p>Rose Geranium - A rich floral scent with antimicrobial, antifungal, and antiviral properties <p> </p> Base Notes<p> </p>Vetiver Root - A calming oil with an earthy, grassy scent.",
+            "showplus": true,
+            "PoopupIconCode": "<div>\n            <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/vetiver_roots.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/rose_geranium.png?v=1678287613\">\n        </div>\n<div>\n\n  <img src=\"https://cdn.shopify.com/s/files/1/0360/1347/3931/files/lemon_peel.png?v=1678287613\">\n        </div>\n<div></div>"
+          }
+        },
+        "5d9db55b-fcdd-4bcf-9216-7ff68d1d7553": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "",
+            "nopopup": false,
+            "heading": "",
+            "detail": "",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        }
+      },
+      "block_order": [
+        "c95d986f-cd62-498b-b78b-0049090a6e3c",
+        "22dac8d6-a6ee-4e48-b185-af146809b2b4",
+        "64356632-3c15-4f09-9571-3657635ea31b",
+        "213f48bd-36c5-41a1-bc61-cb76d729327c",
+        "6ebfd29e-3508-4428-977a-81dbafba9770",
+        "076bb39f-93d0-4c3f-9c49-384ad1792f46",
+        "5d9db55b-fcdd-4bcf-9216-7ff68d1d7553"
+      ],
+      "settings": {
+        "class": "",
+        "bgColor": "",
+        "heading": "Scents that transform your home"
+      }
+    },
+    "aacaa7a3-26a6-41df-8df3-5b0b397bf2c9": {
+      "type": "bb-products",
+      "blocks": {
+        "3e4fc232-aaf9-48d3-b3e6-3aa5a4aaced4": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "169469de-35f0-4b7f-bfa4-fc8888d92f95": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "4cefc6cf-29cf-4c12-9b5a-4c19aaf1a1c3": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        }
+      },
+      "block_order": [
+        "3e4fc232-aaf9-48d3-b3e6-3aa5a4aaced4",
+        "169469de-35f0-4b7f-bfa4-fc8888d92f95",
+        "4cefc6cf-29cf-4c12-9b5a-4c19aaf1a1c3"
+      ],
+      "disabled": true,
+      "settings": {
+        "className": "product2 height-0",
+        "bgColor": "",
+        "heading": "Add extras to your cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "landing-table": {
+      "type": "table",
+      "settings": {}
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "08f61279-fb22-44bf-bf71-5d2ca92212e4": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Do I have to sign up for a subscription?",
+            "faq-ans": "<p>No - all our products can be purchased as one-off orders by selecting ‘One Time Purchase’ option before checking out. We recommend opting to subscribe to get the best value for money. </p>"
+          }
+        },
+        "74e5d2b8-a90c-4bdf-966c-54f9ab27c68a": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How long does delivery usually take?",
+            "faq-ans": "<p>We aim to ship all orders from our UK factory within 48 hours of receiving them. You will receive an email with tracking information as soon as your order has been dispatched. Depending on the delivery method you choose, orders should arrive 24-48 hours from the time of dispatch. We offer free standard delivery on all orders over £40. </p>"
+          }
+        },
+        "57ed6ae4-9e39-4017-bf7a-2f2f526fce4c": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Which surfaces is Counter Clean suitable for? ",
+            "faq-ans": "<p>Counter Clean can be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces. As always, we recommend patch testing on any particularly sensitive or precious surfaces that you might be concerned about. Spray onto a cloth and wipe a small patch to see results. </p>"
+          }
+        },
+        "cb11dc92-3cc1-4476-802c-087f9ebd0657": {
+          "type": "text",
+          "settings": {
+            "faq-question": "How do I use the concentrate?",
+            "faq-ans": "<p>Simply pour the whole 20ml bottle into your Bottle for Life and fill to the top (just below the neck) with ordinary tap water. Give the bottle a gentle shake to combine, then enjoy your uplifting clean! </p>"
+          }
+        },
+        "e22f854a-86eb-4d5a-a7b1-f431df27f4c5": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is it safe to use around pets? ",
+            "faq-ans": "<p>Our products are safe to use around dogs and other pets, however, it's best not to use them to clean beds or food bowls without rinsing afterwards. Also, don't spray it directly on them (not that you would!). If you are worried about allergies, do contact your vet. Finally, if you have pet birds, you will know that they are particularly sensitive to airborne substances, so it is best to take them out of the room while you clean.</p>"
+          }
+        },
+        "2c10f3a4-c959-4e62-a532-76f9d1bdc3ad": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is this product Cruelty Free? ",
+            "faq-ans": "<p>Yes, Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        },
+        "a85227c4-e94d-41ef-a556-257eca9683a6": {
+          "type": "text",
+          "settings": {
+            "faq-question": "Is Counter Clean antibacterial? ",
+            "faq-ans": "<p>Counter Clean does not contain specific antibacterial agents. It works by actively removing grease, grime and dirt along with bacteria, viruses and mould to create a healthy home. Whilst antibacterial products will kill bacteria (if left to work for the appropriate amount of time), they won’t remove the bacteria from the surface. You wouldn’t wash your body with strong, highly toxic products every two weeks and it’s the same concept with cleaning; use a gentle cleaner little and often. For more information, read Dr Anna’s blog <a href=\"https://purdyandfigg.com/blogs/natural-tips-and-tricks/myth-busting-with-dr-anna-we-need-antibacterial-products-to-clean-properly\" target=\"_blank\" title=\"https://purdyandfigg.com/blogs/natural-tips-and-tricks/myth-busting-with-dr-anna-we-need-antibacterial-products-to-clean-properly\">here</a></p>"
+          }
+        }
+      },
+      "block_order": [
+        "08f61279-fb22-44bf-bf71-5d2ca92212e4",
+        "74e5d2b8-a90c-4bdf-966c-54f9ab27c68a",
+        "57ed6ae4-9e39-4017-bf7a-2f2f526fce4c",
+        "cb11dc92-3cc1-4476-802c-087f9ebd0657",
+        "e22f854a-86eb-4d5a-a7b1-f431df27f4c5",
+        "2c10f3a4-c959-4e62-a532-76f9d1bdc3ad",
+        "a85227c4-e94d-41ef-a556-257eca9683a6"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "",
+        "heading": "Frequently Asked Questions"
+      }
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "16806732140942349b": {
+      "type": "apps",
+      "disabled": true,
+      "custom_css": [],
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "d98d0ba5-de7a-4c15-b972-0a2d9e1484a9",
+    "review-slider",
+    "product-recommendations",
+    "d27f3b99-70eb-42b7-be6c-d6e3371dd1ac",
+    "841f54fa-6e44-43cf-bee6-0da792755167",
+    "f032c994-ebfd-42d8-b40b-1056b7477814",
+    "aacaa7a3-26a6-41df-8df3-5b0b397bf2c9",
+    "landing-table",
+    "faq-section",
+    "16644285387cfa3d71",
+    "16806732140942349b"
+  ]
+}

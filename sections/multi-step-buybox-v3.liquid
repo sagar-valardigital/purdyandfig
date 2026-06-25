@@ -1,0 +1,1427 @@
+<style>
+  .link-to-variant,
+  .link-to-plan {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .link-to-variant.show,
+  .link-to-plan.show,
+  .link-to-variant.active-gallery,
+  .link-to-plan.active-gallery {
+    display: block !important;
+    height: auto;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    overflow: visible;
+  }
+
+  .scent-tag {
+    position: absolute;
+    border: 1px solid #eee;
+    font-weight: 400;
+    font-size: 12px;
+    border-radius: 4px;
+    padding: 4px 8px;
+    line-height: 1.2;
+    {% if section.settings.tag_position == 'left' %}
+      left: 38px;
+    {% elsif section.settings.tag_position == "right" %}
+      right: 15px;
+    {% endif %}
+    top: -13px;
+    border-color: {{ section.settings.tag_bg_color | default: '#708480' }};
+    background-color: {{ section.settings.tag_bg_color | default: '#708480' }};
+    color: {{ section.settings.tag_text_color | default: '#ffffff' }};
+  }
+
+  .new-product-gallery-wrapper {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  .new-product-gallery-wrapper-thumb {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 288px;
+    width: 80%;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img {
+    padding: 5px;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img img {
+    border-radius: 4px;
+    border: 2px solid transparent;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current {
+    position: relative;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current:after {
+    content: '';
+    position: absolute;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    top: 5px;
+    left: 5px;
+    border-radius: 4px;
+    overflow: hidden;
+    background: #00000040;
+  }
+
+  .new-product-gallery-wrapper-thumb .main-product-img.slick-current img {
+    border: 2px solid #0f2d28;
+  }
+
+  .slick-arrow svg path {
+    fill: #11322c !important;
+  }
+
+  .ms-buy--plan label {
+    padding-left: 17px;
+    border: 1.5px solid #bdbdbd !important;
+  }
+
+  .ms-buy--plan input:checked + label {
+    background-color: #fff;
+    border: 1.5px solid #11322c !important;
+  }
+
+  .ms-buy--plan label .buy-block-text {
+    padding-left: 28px;
+  }
+
+  .buy-block-text > span.fw-500 {
+    color: #11322c;
+  }
+
+  .ms-plan-wrapper .points > span {
+    color: #424242;
+  }
+
+  .label-bestValue {
+    font-size: 12px;
+    background: #e55829;
+    border-radius: 2px 2px 0 0;
+  }
+
+  del {
+    color: #9e9e9e !important;
+  }
+
+  @media (max-width: 768px) {
+    .new-product-gallery-wrapper-thumb .main-product-img {
+      width: 42px !important;
+      height: 42px;
+    }
+    .new-product-gallery-wrapper-thumb .slick-track {
+      display: flex;
+      justify-content: center;
+    }
+    .scent-tag {
+      font-size: 10px;
+    }
+    #body .multi-step-product-section .heading-2 {
+      margin-bottom: 12px !important;
+    }
+  }
+
+  .multi-gallery-slider:not(.slick-initialized) .main-product-img:not(:first-child) img,
+  .multi-gallery-slider-thumbnail:not(.slick-initialized) .main-product-img:not(:first-child) img {
+    display: none;
+  }
+
+  .gp-5-bottom {
+    padding-bottom: 0;
+  }
+
+  .step-gallery {
+    margin-top: -4px;
+  }
+
+  .gp--product-wrapper .heading-2-wrapper {
+    display: block;
+    padding-top: 30px !important;
+  }
+
+  .gp-5-bottom {
+    margin-top: 20px;
+  }
+</style>
+
+<div
+  class="{{ section.settings.className }} multi-step-product-section gp--product-wrapper py-80"
+  id="id_{{ section.id }}"
+  style="background-color:{{section.settings.background}};"
+  x-data="{qty:1}"
+>
+  <div class="position-relative">
+    <div class="mb-4 container heading-2-wrapper" style="padding-top: 30px !important;">
+      {% if section.settings.sectionheading != '' %}
+        <h2 style="color:#212121" class="heading-2 font-gtsuper fw-400 mt-0 text-center">
+          {{ section.settings.sectionheading }}
+        </h2>
+      {% endif %}
+    </div>
+    <span id="{{ section.settings.scrollId }}"></span>
+
+    <div class="d-flex product-block-4-wrapper flex-wrap justify-content-between align-items-start container">
+      <!-- Gallery Section -->
+      <div class="w-50 gp--product-gallery">
+        <!-- Step 1: Variant Selection Gallery -->
+        <div class="position-relative step step-1 step-gallery">
+          {% assign v_count = 0 %}
+          {% for block in section.blocks %}
+            {% if block.type == 'variant' %}
+              {% assign v_count = v_count | plus: 1 %}
+              
+              {% comment %} Check for block overrides {% endcomment %}
+              {% if v_count == 1 %}
+                {% assign override_type = 'variantImage1' %}
+              {% elsif v_count == 2 %}
+                {% assign override_type = 'variantImage2' %}
+              {% else %}
+                {% assign override_type = '' %}
+              {% endif %}
+
+              {% assign has_override = false %}
+              {% assign has_inline_override = false %}
+              
+              {% comment %} Check for inline override images in variant block {% endcomment %}
+              {% if block.settings.override_image_1 != blank or block.settings.override_image_2 != blank or block.settings.override_image_3 != blank or block.settings.override_image_4 != blank or block.settings.override_image_5 != blank or block.settings.override_image_6 != blank %}
+                {% assign has_inline_override = true %}
+              {% endif %}
+              
+              {% comment %} Check for separate override blocks {% endcomment %}
+              {% if override_type != '' %}
+                {% for b in section.blocks %}
+                  {% if b.type == override_type %}
+                    {% if b.settings.is_video or b.settings.image != blank %}
+                      {% assign has_override = true %}
+                      {% break %}
+                    {% endif %}
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+
+              <div class="link-to-variant variant_{{ v_count }} {% if v_count == 1 %}show{% endif %} position-relative">
+                <div class="slider__block">
+                  <div class="gp-5-product-gallery new-product-gallery-wrapper multi-gallery-slider-{{ v_count }}">
+                    {% if has_inline_override %}
+                      {% comment %} Use inline override images from variant block {% endcomment %}
+                      {% if block.settings.override_image_1 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_1 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_1 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_1 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_1.alt | default: block.settings.variant_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_2 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_2 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_2 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_2 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_2.alt | default: block.settings.variant_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_3 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_3 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_3 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_3 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_3.alt | default: block.settings.variant_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_4 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_4 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_4 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_4 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_4.alt | default: block.settings.variant_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_5 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_5 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_5 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_5 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_5.alt | default: block.settings.variant_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_6 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_6 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_6 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_6 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_6.alt | default: block.settings.variant_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                    {% elsif has_override %}
+                      {% comment %} Use block override images {% endcomment %}
+                      {% for b in section.blocks %}
+                        {% if b.type == override_type %}
+                          {% if b.settings.is_video %}
+                            <div class="main-product-img">
+                              <video
+                                class="w-100"
+                                poster="{{ b.settings.poster | image_url: width: 800 }}"
+                                width="520"
+                                height="520"
+                                controls
+                              >
+                                <source src="{{ b.settings.videoURL }}" type="video/mp4">
+                              </video>
+                            </div>
+                          {% else %}
+                            <div class="main-product-img">
+                              <picture>
+                                <source media="(min-width:650px)" srcset="{{ b.settings.image | image_url: width: 800 }}">
+                                <source media="(max-width:650px)" srcset="{{ b.settings.mimage | image_url: width: 800 }}">
+                                <img
+                                  {% if forloop.index == 1 %}skip-lazy{% else %}loading="lazy"{% endif %}
+                                  data-id="{{ b.settings.image.id }}"
+                                  class="img-responsive w-100 h-auto"
+                                  src="{{ b.settings.image | image_url: width: 800 }}"
+                                  width="800"
+                                  height="700"
+                                  alt="{{ b.settings.image.alt }}"
+                                >
+                              </picture>
+                            </div>
+                          {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                    {% else %}
+                      {% comment %} Use metaobject gallery {% endcomment %}
+                      {% for gallery_item in block.settings.variant_gallery %}
+                        {% for img in gallery_item.desktop_images.value %}
+                          {% assign mimg = gallery_item.mobile_images.value[forloop.index0] %}
+                          <div class="main-product-img">
+                            <picture>
+                              <source media="(min-width:650px)" srcset="{{ img | image_url: width: 1200, crop: 'center' }}">
+                              <source media="(max-width:650px)" srcset="{{ mimg | image_url: width: 800, crop: 'center' }}">
+                              <img
+                                data-id="{{ img.id }}"
+                                class="img-responsive w-100 h-auto"
+                                src="{{ img | image_url: width: 800, crop: 'center' }}"
+                                width="800"
+                                height="700"
+                                alt="{{ img.alt }}"
+                              >
+                            </picture>
+                          </div>
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        <!-- Step 2: Plan Selection Gallery -->
+        <div class="position-relative step-gallery step step-2 height-0">
+          {% assign variant_1_first_shown = false %}
+          {% assign variant_2_first_shown = false %}
+          {% for block in section.blocks %}
+            {% if block.type == 'plan' %}
+              {% assign block_variant_index = block.settings.variant_index | plus: 0 %}
+              {% assign should_show = false %}
+              {% if block_variant_index == 1 and variant_1_first_shown == false %}
+                {% assign should_show = true %}
+                {% assign variant_1_first_shown = true %}
+              {% elsif block_variant_index == 2 and variant_2_first_shown == false %}
+                {% assign should_show = true %}
+                {% assign variant_2_first_shown = true %}
+              {% endif %}
+              {% comment %} Check for gallery override images {% endcomment %}
+              {% assign has_override = false %}
+              {% if block.settings.override_image_1 != blank or block.settings.override_image_2 != blank or block.settings.override_image_3 != blank or block.settings.override_image_4 != blank or block.settings.override_image_5 != blank or block.settings.override_image_6 != blank %}
+                {% assign has_override = true %}
+              {% endif %}
+              
+              <div class="link-to-plan g_plan_{{ block.id }} {% if should_show %}active-gallery{% endif %} position-relative">
+                <div class="slider__block">
+                  <div class="gp-5-product-gallery new-product-gallery-wrapper">
+                    {% if has_override %}
+                      {% comment %} Use override images {% endcomment %}
+                      {% if block.settings.override_image_1 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_1 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_1 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_1 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_1.alt | default: block.settings.plan_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_2 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_2 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_2 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_2 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_2.alt | default: block.settings.plan_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_3 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_3 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_3 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_3 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_3.alt | default: block.settings.plan_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_4 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_4 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_4 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_4 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_4.alt | default: block.settings.plan_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_5 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_5 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_5 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_5 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_5.alt | default: block.settings.plan_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                      {% if block.settings.override_image_6 != blank %}
+                        <div class="main-product-img">
+                          <img
+                            class="img-responsive w-100 h-auto"
+                            src="{{ block.settings.override_image_6 | image_url: width: 800, crop: 'center' }}"
+                            srcset="{{ block.settings.override_image_6 | image_url: width: 800, crop: 'center' }} 800w,
+                                    {{ block.settings.override_image_6 | image_url: width: 1200, crop: 'center' }} 1200w"
+                            sizes="(min-width: 650px) 1200px, 800px"
+                            width="800"
+                            height="700"
+                            alt="{{ block.settings.override_image_6.alt | default: block.settings.plan_name }}"
+                            loading="lazy"
+                          >
+                        </div>
+                      {% endif %}
+                    {% else %}
+                      {% comment %} Use metaobject gallery {% endcomment %}
+                      {% for gallery_item in block.settings.plan_gallery %}
+                        {% for img in gallery_item.desktop_images.value %}
+                          {% assign mimg = gallery_item.mobile_images.value[forloop.index0] %}
+                          <div class="main-product-img">
+                            <picture>
+                              <source media="(min-width:650px)" srcset="{{ img | image_url: width: 1200, crop: 'center' }}">
+                              <source media="(max-width:650px)" srcset="{{ mimg | image_url: width: 800, crop: 'center' }}">
+                              <img
+                                data-id="{{ img.id }}"
+                                class="img-responsive w-100 h-auto"
+                                src="{{ img | image_url: width: 800, crop: 'center' }}"
+                                width="800"
+                                height="700"
+                                alt="{{ img.alt }}"
+                              >
+                            </picture>
+                          </div>
+                        {% endfor %}
+                      {% endfor %}
+                    {% endif %}
+                  </div>
+                </div>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+      </div>
+
+      <!-- Buybox Section -->
+      <div class="w-50 d-flex justify-content-center">
+        <div class="w-90 bg-white">
+          <div class="gp-5-top mobile-hide desktop-hide mt-3">
+            <h2 class="heading-2 font-gtsuper fw-400 mt-0 text-center" style="color:#212121">
+              {{ section.settings.sectionheading }}
+            </h2>
+          </div>
+
+          <div class="gp-5-bottom link-variants-wrapper scents-plan-wrapper">
+            <!-- Step 1: Choose Scent -->
+            <div class="step step-1 select-scents">
+              <h4 class="text-center font-lausanne fw-600">{{ section.settings.step1_heading | default: 'CHOOSE YOUR SCENT' }}</h4>
+              <div class="step-count-wrapper">
+                <span></span>
+                <div class="progress-bar pw-50"></div>
+                <span class="font-lausanne"><span class="fw-600">1</span> of <b class="fw-600">2</b></span>
+              </div>
+              <div class="ms-scents-wrapper">
+                {% assign variant_index = 0 %}
+                {% for block in section.blocks %}
+                  {% if block.type == 'variant' %}
+                    {% assign variant_index = variant_index | plus: 1 %}
+                    <div class="ms-scent-block">
+                      <input
+                        autocomplete="off"
+                        class="scent-selector-radio gp--product-variant"
+                        type="radio"
+                        name="scent_{{ section.id }}"
+                        id="scent_{{ variant_index }}_{{ section.id }}"
+                        {% if variant_index == 1 %}checked{% endif %}
+                        data-plan="variant_{{ variant_index }}"
+                        data-variantclass="variant_{{ variant_index }}"
+                        data-tracked="true"
+                        data-page-url="{{ request.path }}"
+                        data-index="{{ section.settings.index }}"
+                        data-funnel-stage="{{ section.settings.funnel_stage }}"
+                        data-module="{{ section.settings.dataModule }}"
+                        data-event-label="{{ block.settings.variant_name | handle }}"
+                        data-event-value="product_toggle"
+                        data-option-index="{{ variant_index }}"
+                        data-item-name="{{ block.settings.variant_name }}"
+                      >
+                      <label for="scent_{{ variant_index }}_{{ section.id }}" class="position-relative">
+                        {% if block.settings.variant_badge != blank %}
+                          <span class="scent-tag">{{ block.settings.variant_badge }}</span>
+                        {% endif %}
+                        <div class="scent-header">
+                          <h4 class="font-lausanne fw-600">{{ block.settings.variant_name }}</h4>
+                          <div class="scent-price">
+                            <del class="font-lausanne fw-500">
+                              {{ localization.country.currency.symbol }}{{ block.settings.variant_compare_price }}
+                            </del>
+                            &nbsp;<span class="font-lausanne fw-500">
+                              {{ localization.country.currency.symbol }}{{ block.settings.variant_price }}
+                            </span>
+                          </div>
+                        </div>
+                        <p class="m-0 font-lausanne fw-200">{{ block.settings.variant_description }}</p>
+                      </label>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+                <div class="mt-4">
+                  <span
+                    data-tracked="true"
+                    data-page-url="{{ request.path }}"
+                    data-index="{{ section.settings.index }}"
+                    data-funnel-stage="{{ section.settings.funnel_stage }}"
+                    data-module="multi_step_buybox"
+                    data-event-label="next"
+                    data-event-value="click"
+                    class="btn w-100 value-medium next-step-btn"
+                    style="background-color:#11322c; color:#fff; width:100%;"
+                  >
+                    {{ section.settings.step1_button_text | default: 'NEXT' }}
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 2: Choose Plan -->
+            <div class="step step-2 select-Plan height-0">
+              <h4 class="text-center font-lausanne fw-500 mt-0">{{ section.settings.step2_heading | default: 'CHOOSE YOUR PLAN' }}</h4>
+              <div class="step-count-wrapper">
+                <span
+                  data-tracked="true"
+                  data-page-url="{{ request.path }}"
+                  data-index="{{ section.settings.index }}"
+                  data-funnel-stage="{{ section.settings.funnel_stage }}"
+                  data-module="multi_step_buybox"
+                  data-event-label="back"
+                  data-event-value="click"
+                  class="back-btn"
+                  style="cursor:pointer;"
+                >
+                  <img
+                    src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/arrow-right-f.png?v=1739882042"
+                    width="13"
+                    height="14"
+                    alt="back"
+                  >
+                </span>
+                <div class="progress-bar pw-100"></div>
+                <span class="font-lausanne"><span class="fw-600">2</span> of <b class="fw-600">2</b></span>
+              </div>
+              <div class="ms-plan-wrapper">
+                {% assign variant_count = 0 %}
+                {% for vblock in section.blocks %}
+                  {% if vblock.type == 'variant' %}
+                    {% assign variant_count = variant_count | plus: 1 %}
+                    <div class="link-to-variant variant_{{ variant_count }} {% if variant_count == 1 %}show{% endif %}">
+                      <form
+                        name="shopify-product-form"
+                        autocomplete="off"
+                        @submit.prevent="console.log('submitted')"
+                        x-ref="product_form_{{ section.index }}_{{ variant_count }}"
+                        enctype="multipart/form-data"
+                        accept-charset="UTF-8"
+                        id="product_form_{{ section.index }}_{{ variant_count }}"
+                        class="shopify-product-form form_s{{ variant_count }}"
+                        action="/cart/add"
+                      >
+                        {% assign plan_count = 0 %}
+                        {% for pblock in section.blocks %}
+                          {% assign pblock_variant_index = pblock.settings.variant_index | plus: 0 %}
+                          {% if pblock.type == 'plan' and pblock_variant_index == variant_count %}
+                            {% assign plan_count = plan_count | plus: 1 %}
+                            <div class="ms-buy--plan position-relative {% if plan_count > 1 %}mt-1{% endif %}">
+                              <input
+                                autocomplete="off"
+                                type="radio"
+                                {% if plan_count == 1 %}checked{% endif %}
+                                data-gallery="g_plan_{{ pblock.id }}"
+                                data-scent-type="s{{ variant_count }}"
+                                data-index-order="{{ plan_count }}"
+                                id="buyplan_{{ variant_count }}_{{ plan_count }}_{{ section.id }}"
+                                name="buyplan_{{ section.id }}_{{ variant_count }}"
+                                class="buy_plan_radio_"
+                                data-plantype="{{ pblock.settings.plan_type }}"
+                                data-section="id_{{ section.id }}"
+                                data-form="product_form_{{ section.index }}_{{ variant_count }}"
+                                data-planid="{{ pblock.settings.selling_plan_id }}"
+                                data-discount="{{ pblock.settings.discount_code }}"
+                                data-variantid="{{ pblock.settings.variant_id }}"
+                                data-sku="{{ pblock.settings.sku }}"
+                                data-price="{{ localization.country.currency.symbol }}{{ pblock.settings.plan_price }}"
+                                data-deleted-price="{{ localization.country.currency.symbol }}{{ pblock.settings.plan_compare_price }}"
+                                data-tracked="true"
+                                data-page-url="{{ request.path }}"
+                                data-index="{{ section.settings.index }}"
+                                data-funnel-stage="{{ section.settings.funnel_stage }}"
+                                data-module="{{ section.settings.dataModule }}"
+                                data-event-label="{{ pblock.settings.plan_name | handle }}"
+                                data-event-value="plan_selector"
+                                data-item-id="{{ pblock.settings.sku }}"
+                                data-option-index="{{ plan_count }}"
+                                data-item-name="{{ pblock.settings.plan_name }}"
+                                data-id="{{ pblock.settings.variant_id }}"
+                                data-item-type="{{ pblock.settings.plan_type }}"
+                              >
+                              <label for="buyplan_{{ variant_count }}_{{ plan_count }}_{{ section.id }}" class="{% if pblock.settings.best_value %}best-value-plan{% endif %}">
+                                {% if pblock.settings.plan_badge != blank %}
+                                  <div class="label-bestValue">{{ pblock.settings.plan_badge }}</div>
+                                {% endif %}
+                                <div class="d-flex justify-content-between buy-block-text {% if plan_count == 1 %}mt-0 mb-1{% endif %}">
+                                  <span class="font-lausanne fw-500">{{ pblock.settings.plan_name }}</span>
+                                  <span class="d-flex justify-content-end">
+                                    {% if pblock.settings.plan_compare_price != blank %}
+                                      <span class="text-decoration-line-through font-lausanne fw-400 gp-5-del-price">
+                                        {{ localization.country.currency.symbol }}{{ pblock.settings.plan_compare_price }}
+                                      </span>
+                                    {% endif %}
+                                    <span class="gp-5-sell-price font-lausanne fw-500">
+                                      {{ localization.country.currency.symbol }}{{ pblock.settings.plan_price }}
+                                    </span>
+                                  </span>
+                                </div>
+                                {% if pblock.settings.plan_features != blank %}
+                                  <div class="d-flex points" style="flex-direction: column;">
+                                    {% assign features_raw = pblock.settings.plan_features
+                                      | replace: '<br/>', '||'
+                                      | replace: '<br />', '||'
+                                      | replace: '<br>', '||'
+                                    %}
+                                    {% assign features_list = features_raw | split: '||' %}
+                                    {% for feature in features_list %}
+                                      {% assign feature_trimmed = feature | strip %}
+                                      {% if feature_trimmed != blank %}
+                                        <span class="font-lausanne fw-300">{{ feature_trimmed }}</span>
+                                      {% endif %}
+                                    {% endfor %}
+                                  </div>
+                                {% endif %}
+                              </label>
+                            </div>
+                          {% endif %}
+                        {% endfor %}
+
+                        {% comment %} Hidden form inputs {% endcomment %}
+                        {% assign first_plan = null %}
+                        {% for pblock in section.blocks %}
+                          {% assign pblock_variant_index = pblock.settings.variant_index | plus: 0 %}
+                          {% if pblock.type == 'plan' and pblock_variant_index == variant_count and first_plan == null %}
+                            {% assign first_plan = pblock %}
+                          {% endif %}
+                        {% endfor %}
+
+                        <input autocomplete="off" type="hidden" name="id" class="input_variant_id" value="{{ first_plan.settings.variant_id }}">
+                        <input autocomplete="off" type="hidden" class="discout_input" name="discount" value="{{ first_plan.settings.discount_code }}">
+                        <input autocomplete="off" type="hidden" name="quantity" value="1">
+                        {% if first_plan.settings.plan_type == 'subscription' %}
+                          <input autocomplete="off" type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                          <input autocomplete="off" class="input_selling_plan" type="hidden" name="selling_plan" value="{{ first_plan.settings.selling_plan_id }}">
+                        {% endif %}
+
+                        <div class="text-left g4-btn-wrapper m-auto">
+                          <span
+                            x-on:click="Purdy.CheckoutLandingV2($refs.product_form_{{ section.index }}_{{ variant_count }}, event)"
+                            class="btn w-100 mt-4 value-medium btn-loader checkout-starterkit-btn ga4-checkout-btn"
+                            style="background-color:{{ section.settings.button_bg_color | default: '#2D469E' }}"
+                            data-checkout="true"
+                            data-add-to-cart="true"
+                            data-page-url="{{ request.path }}"
+                            data-target-url="{{ section.settings.targetUrl }}"
+                            data-index="{{ section.settings.index }}"
+                            data-funnel-stage="{{ section.settings.funnel_stage }}"
+                            data-module="{{ section.settings.dataModule }}"
+                            data-event-label="{{ section.settings.dataTitle }}"
+                            data-event-value="{{ section.settings.eventValue }}"
+                            data-item-id="{{ first_plan.settings.sku }}"
+                            data-option-index="{{ section.settings.optionIndex }}"
+                            data-item-name="{{ first_plan.settings.plan_name }}"
+                            data-quantity="1"
+                            data-price="{{ localization.country.currency.symbol }}{{ first_plan.settings.plan_price }}"
+                            data-item-type="{{ first_plan.settings.plan_type }}"
+                          >
+                            <span class="buy-text">{{ section.settings.btnText | default: 'TRY IT RISK FREE' }}</span> |
+                            <span class="deleted-price font-lausanne fw-400 text-decoration-line-through gp--del-price" style="color:#bdbdbd;margin-right:0;">
+                              {{ localization.country.currency.symbol }}{{ first_plan.settings.plan_compare_price }}
+                            </span>
+                            <span class="font-lausanne fw-500 white-text gp--sell-price">
+                              {{ localization.country.currency.symbol }}{{ first_plan.settings.plan_price }}
+                            </span>
+                          </span>
+                        </div>
+
+                        {% if section.settings.guarantee_text != blank %}
+                          <div class="text-center theme-text mt-2 guarantee-text fw-600" style="font-size:12px; color:#212121; line-height: 18px;">
+                            {{ section.settings.guarantee_text }}
+                          </div>
+                        {% endif %}
+                      </form>
+                    </div>
+                  {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    // Next step button click handler
+    document.querySelectorAll(".next-step-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            // Check which form/variant is currently selected before moving to step 2
+            let selectedForm;
+            const form1 = document.querySelector('.form_s1');
+            const form2 = document.querySelector('.form_s2');
+            
+            // Check which variant is visible
+            const variant1 = document.querySelector('.variant_1');
+            if (variant1 && variant1.classList.contains('show')) {
+                selectedForm = form1;
+            } else {
+                selectedForm = form2;
+            }
+            
+            // Show step 2, hide step 1
+            document.querySelectorAll(".step-1").forEach(el => el.classList.add("height-0"));
+            document.querySelectorAll(".step-2").forEach(el => el.classList.remove("height-0"));
+            
+            // Get the gallery value from the first checked plan radio in the selected form
+            if (selectedForm) {
+                const checkedPlanInput = selectedForm.querySelector('.buy_plan_radio_:checked');
+                if (checkedPlanInput) {
+                    const galleryValue = checkedPlanInput.getAttribute("data-gallery");
+                    if (galleryValue) {
+                        updateGallery(galleryValue);
+                    }
+                }
+            }
+        });
+    });
+    
+    // Back button click handler
+    document.querySelectorAll(".back-btn").forEach((btn) => {
+        btn.addEventListener("click", function () {
+            document.querySelectorAll(".step-2").forEach(el => el.classList.add("height-0"));
+            document.querySelectorAll(".step-1").forEach(el => el.classList.remove("height-0"));
+        });
+    });
+    
+    // Scent selector change handler
+    document.querySelectorAll(".scent-selector-radio").forEach(function (input) {
+        input.addEventListener("change", function (e) {
+            e.preventDefault();
+            const variantClass = this.getAttribute("data-variantclass");
+            
+            // Hide all variant galleries
+            document.querySelectorAll(".step-1 .link-to-variant").forEach(function (el) {
+                el.classList.remove("show");
+            });
+            
+            // Show selected variant gallery
+            const targetGallery = document.querySelector(".step-1 ." + variantClass);
+            if (targetGallery) {
+                targetGallery.classList.add("show");
+            }
+            
+            // Hide all variant forms
+            document.querySelectorAll(".step-2 .link-to-variant").forEach(function (el) {
+                el.classList.remove("show");
+            });
+            
+            // Show selected variant form
+            const targetForm = document.querySelector(".step-2 ." + variantClass);
+            if (targetForm) {
+                targetForm.classList.add("show");
+            }
+        });
+    });
+    
+    // Function to update gallery based on plan selection
+    function updateGallery(galleryClass) {
+        if (!galleryClass) return;
+        
+        // Find the target element
+        const selector = ".step-2 ." + galleryClass;
+        const targetElement = document.querySelector(selector);
+        
+        if (!targetElement) return;
+        
+        // Remove 'active-gallery' class from all plan galleries EXCEPT the target
+        document.querySelectorAll(".step-2 .link-to-plan").forEach(function (el) {
+            if (el !== targetElement) {
+                el.classList.remove("active-gallery");
+            }
+        });
+        
+        // Add 'active-gallery' class to the target gallery
+        targetElement.classList.add("active-gallery");
+        
+        // Reinitialize or refresh Slick slider for this gallery
+        setTimeout(function() {
+            const gallerySlider = targetElement.querySelector('.gp-5-product-gallery');
+            if (gallerySlider && typeof jQuery !== 'undefined') {
+                const $slider = jQuery(gallerySlider);
+                if ($slider.hasClass('slick-initialized')) {
+                    // Refresh existing slider
+                    $slider.slick('setPosition');
+                } else {
+                    // Initialize new slider
+                    $slider.slick({
+                        slidesToShow: 1,
+                        slidesToScroll: 1,
+                        arrows: true,
+                        dots: false,
+                        infinite: true,
+                        adaptiveHeight: true
+                    });
+                }
+            }
+        }, 100);
+    }
+    
+    // Plan selector change handler
+    document.querySelectorAll(".buy_plan_radio_").forEach(function (input) {
+        input.addEventListener("change", function () {
+            updateGallery(this.getAttribute("data-gallery"));
+            
+            const dataFormSelector = input.getAttribute('data-form');
+            const itemType = input.getAttribute('data-item-type');
+            
+            // Hide guarantee sub-text for PAYG plans
+            if (itemType === 'PAYG' || itemType === 'payg') {
+                const guaranteeText = document.querySelector('#' + dataFormSelector + ' .guarantee-sub-text');
+                if (guaranteeText) {
+                    guaranteeText.style.display = 'none';
+                }
+            } else {
+                const guaranteeText = document.querySelector('#' + dataFormSelector + ' .guarantee-sub-text');
+                if (guaranteeText) {
+                    guaranteeText.style.display = 'block';
+                }
+            }
+        });
+    });
+});
+</script>
+
+{% schema %}
+{
+  "name": "Multi-Step Buybox V3",
+  "settings": [
+    {
+      "type": "header",
+      "content": "⚙️ General Settings"
+    },
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Section Class",
+      "info": "Additional CSS class for custom styling"
+    },
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "text",
+      "id": "scrollId",
+      "label": "Scroll Target ID",
+      "info": "ID for scroll-to functionality"
+    },
+    {
+      "type": "header",
+      "content": "📝 Content"
+    },
+    {
+      "type": "html",
+      "id": "sectionheading",
+      "label": "Section Heading",
+      "default": "Choose Your Perfect Scent"
+    },
+    {
+      "type": "header",
+      "content": "🎯 Step 1: Scent Selection"
+    },
+    {
+      "type": "text",
+      "id": "step1_heading",
+      "label": "Step 1 Heading",
+      "default": "CHOOSE YOUR SCENT"
+    },
+    {
+      "type": "text",
+      "id": "step1_button_text",
+      "label": "Step 1 Button Text",
+      "default": "NEXT"
+    },
+    {
+      "type": "header",
+      "content": "🎯 Step 2: Plan Selection"
+    },
+    {
+      "type": "text",
+      "id": "step2_heading",
+      "label": "Step 2 Heading",
+      "default": "CHOOSE YOUR PLAN"
+    },
+    {
+      "type": "header",
+      "content": "🏷️ Badge Settings"
+    },
+    {
+      "type": "select",
+      "id": "tag_position",
+      "label": "Badge Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "color",
+      "id": "tag_bg_color",
+      "label": "Badge Background Color",
+      "default": "#708480"
+    },
+    {
+      "type": "color",
+      "id": "tag_text_color",
+      "label": "Badge Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "🛒 Checkout Button"
+    },
+    {
+      "type": "text",
+      "id": "btnText",
+      "label": "Button Text",
+      "default": "TRY IT RISK FREE"
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#2D469E"
+    },
+    {
+      "type": "text",
+      "id": "guarantee_text",
+      "label": "Guarantee Text",
+      "info": "Text shown below the checkout button"
+    },
+    {
+      "type": "header",
+      "content": "📊 GA4 Tracking"
+    },
+    {
+      "type": "url",
+      "id": "targetUrl",
+      "label": "Target URL"
+    },
+    {
+      "type": "number",
+      "id": "index",
+      "label": "Index",
+      "default": 0
+    },
+    {
+      "type": "text",
+      "id": "funnel_stage",
+      "label": "Funnel Stage",
+      "default": "landing_page"
+    },
+    {
+      "type": "text",
+      "id": "dataModule",
+      "label": "Module",
+      "default": "multi_step_buybox"
+    },
+    {
+      "type": "text",
+      "id": "dataTitle",
+      "label": "Event Label",
+      "default": "checkout"
+    },
+    {
+      "type": "text",
+      "id": "eventValue",
+      "label": "Event Value",
+      "default": "click"
+    },
+    {
+      "type": "text",
+      "id": "optionIndex",
+      "label": "Option Index"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "variant",
+      "name": "🎨 Variant (Scent)",
+      "limit": 2,
+      "settings": [
+        {
+          "type": "header",
+          "content": "Variant Details"
+        },
+        {
+          "type": "text",
+          "id": "variant_name",
+          "label": "Variant Name",
+          "default": "Lavender Dreams"
+        },
+        {
+          "type": "textarea",
+          "id": "variant_description",
+          "label": "Description",
+          "default": "A calming blend of lavender and chamomile"
+        },
+        {
+          "type": "text",
+          "id": "variant_badge",
+          "label": "Badge Text",
+          "info": "Optional badge (e.g., 'NEW', 'POPULAR')"
+        },
+        {
+          "type": "header",
+          "content": "Pricing"
+        },
+        {
+          "type": "text",
+          "id": "variant_price",
+          "label": "Price",
+          "default": "29.99"
+        },
+        {
+          "type": "text",
+          "id": "variant_compare_price",
+          "label": "Compare at Price",
+          "default": "59.99"
+        },
+        {
+          "type": "header",
+          "content": "Gallery"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "variant_gallery",
+          "label": "Variant Gallery (Metaobject)",
+          "metaobject_type": "buy_box_variant_gallery",
+          "info": "Gallery images from metaobject. Will be overridden if override images are set below."
+        },
+        {
+          "type": "header",
+          "content": "🖼️ Gallery Override (Optional)"
+        },
+        {
+          "type": "paragraph",
+          "content": "⚠️ Override images take priority over the metaobject gallery. Add images here to bypass the metaobject. Leave blank to use the metaobject gallery above."
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_1",
+          "label": "Image 1",
+          "info": "First gallery image"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_4",
+          "label": "Image 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_5",
+          "label": "Image 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_6",
+          "label": "Image 6"
+        }
+      ]
+    },
+    {
+      "type": "plan",
+      "name": "📦 Plan Option",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Plan Association"
+        },
+        {
+          "type": "select",
+          "id": "variant_index",
+          "label": "Variant Index",
+          "info": "Which variant does this plan belong to?",
+          "options": [
+            {
+              "value": "1",
+              "label": "Variant 1"
+            },
+            {
+              "value": "2",
+              "label": "Variant 2"
+            }
+          ],
+          "default": "1"
+        },
+        {
+          "type": "header",
+          "content": "Plan Details"
+        },
+        {
+          "type": "text",
+          "id": "plan_name",
+          "label": "Plan Name",
+          "default": "Subscribe & Save"
+        },
+        {
+          "type": "select",
+          "id": "plan_type",
+          "label": "Plan Type",
+          "options": [
+            {
+              "value": "subscription",
+              "label": "Subscription"
+            },
+            {
+              "value": "payg",
+              "label": "One-Time Purchase"
+            }
+          ],
+          "default": "subscription"
+        },
+        {
+          "type": "text",
+          "id": "plan_badge",
+          "label": "Badge Text",
+          "info": "Optional badge (e.g., 'BEST VALUE', 'SAVE 50%')"
+        },
+        {
+          "type": "checkbox",
+          "id": "best_value",
+          "label": "Mark as Best Value",
+          "default": false
+        },
+        {
+          "type": "header",
+          "content": "Pricing"
+        },
+        {
+          "type": "text",
+          "id": "plan_price",
+          "label": "Price",
+          "default": "24.99"
+        },
+        {
+          "type": "text",
+          "id": "plan_compare_price",
+          "label": "Compare at Price",
+          "default": "49.99"
+        },
+        {
+          "type": "header",
+          "content": "Features"
+        },
+        {
+          "type": "textarea",
+          "id": "plan_features",
+          "label": "Plan Features",
+          "info": "Enter each feature separated by <br/>. Example: Free shipping<br/>Cancel anytime<br/>50% savings"
+        },
+        {
+          "type": "header",
+          "content": "Commerce Settings"
+        },
+        {
+          "type": "text",
+          "id": "variant_id",
+          "label": "Variant ID"
+        },
+        {
+          "type": "text",
+          "id": "selling_plan_id",
+          "label": "Selling Plan ID",
+          "info": "Required for subscription plans"
+        },
+        {
+          "type": "text",
+          "id": "sku",
+          "label": "SKU"
+        },
+        {
+          "type": "text",
+          "id": "discount_code",
+          "label": "Discount Code",
+          "info": "Optional discount code to apply"
+        },
+        {
+          "type": "header",
+          "content": "Gallery"
+        },
+        {
+          "type": "metaobject_list",
+          "id": "plan_gallery",
+          "label": "Plan Gallery (Metaobject)",
+          "metaobject_type": "buy_box_variant_gallery",
+          "info": "Gallery images from metaobject. Will be overridden if override images are set below."
+        },
+        {
+          "type": "header",
+          "content": "🖼️ Gallery Override (Optional)"
+        },
+        {
+          "type": "paragraph",
+          "content": "⚠️ Override images take priority over the metaobject gallery. Add images here to bypass the metaobject. Leave blank to use the metaobject gallery above."
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_1",
+          "label": "Image 1",
+          "info": "First gallery image"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_2",
+          "label": "Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_3",
+          "label": "Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_4",
+          "label": "Image 4"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_5",
+          "label": "Image 5"
+        },
+        {
+          "type": "image_picker",
+          "id": "override_image_6",
+          "label": "Image 6"
+        }
+      ]
+    },
+    {
+      "type": "variantImage1",
+      "name": "🖼️ Override Variant 1",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Override the metaobject gallery for Variant 1 with custom images/videos"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Is Video",
+          "default": false
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Video URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Video Poster"
+        }
+      ]
+    },
+    {
+      "type": "variantImage2",
+      "name": "🖼️ Override Variant 2",
+      "settings": [
+        {
+          "type": "paragraph",
+          "content": "Override the metaobject gallery for Variant 2 with custom images/videos"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mimage",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "is_video",
+          "label": "Is Video",
+          "default": false
+        },
+        {
+          "type": "url",
+          "id": "videoURL",
+          "label": "Video URL"
+        },
+        {
+          "type": "image_picker",
+          "id": "poster",
+          "label": "Video Poster"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Multi-Step Buybox V3"
+    }
+  ]
+}
+{% endschema %}

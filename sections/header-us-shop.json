@@ -1,0 +1,48 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "name": "header-us-shop",
+  "type": "header",
+  "sections": {
+    "header-us-market": {
+      "type": "header-us-market",
+      "settings": {
+        "cart-login": true,
+        "login": true,
+        "cart": true,
+        "help_link": true,
+        "shopall": "/collections",
+        "menu2": "us-menu",
+        "mobilemenu": "us-menu",
+        "ourstoryheading": "A Chemical-Free Cleaning Revolution",
+        "ourstorytext": "Best friends Charlotte Figg and Purdy Rubin have joined forces to take toxic chemicals and single use plastics out of cleaning routines, for good.",
+        "ourstorylink": "shopify://pages/about-us",
+        "blog": "",
+        "ctaText": "GET STARTED",
+        "ctaScrollTo": "starterkit-product-us",
+        "top_product_link": "",
+        "toggle_dataTrack": false,
+        "toggle_index": 0,
+        "toggle_funnel_stage": "hp",
+        "toggle_dataModule": "announcement_bar",
+        "toggle_dataTitle": "get_your_offer",
+        "toggle_eventValue": "shop_anchor",
+        "dataTrack": false,
+        "index": 0,
+        "funnel_stage": "hp",
+        "dataModule": "announcement_bar",
+        "eventValue": "shop_anchor"
+      }
+    }
+  },
+  "order": [
+    "header-us-market"
+  ]
+}

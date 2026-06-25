@@ -1,0 +1,241 @@
+{% if section.settings.enable %}
+  {% assign product = section.settings.bestseller %}
+  <style>
+    .best-seller-section{
+      background-image:url({{section.settings.Dimage | img_url : '2500x'}});
+      background-size:cover;
+      background-position:center center;
+    }
+    @media(max-width:768px){
+      .best-seller-section{
+      	background:#fff;
+        position:relative;
+      }
+      .product-img img{max-width:100%;}
+      .best-seller-section{padding:0 !important;}
+      .best-seller-section:before{
+      	content:'';
+        	width:100%;
+        height:400px;
+        background:{{section.settings.mobilebgcolor}};
+        position:absolute;
+        left:0;
+        top:0;
+      }
+      .best-seller-wrapper{padding-bottom:0;}
+      .product-img{margin-left:-30px;margin-right:-30px;width:calc(100% + 60px)}
+    }
+  </style>
+  <div class="best-seller-section py-5 ">
+    <div class="container py-5">
+      <div class="d-flex flex-wrap best-seller-wrapper">
+        <h3 class="product-title theme-text desktop-hide text-center mb-3 value-pro_">{{ product.title }}</h3>
+        <div class="w-50 product-img text-center">
+          {% if section.settings.productImage %}
+            {% assign productImage = section.settings.productImage | img_url: '800x' %}
+            <img
+              loading="lazy"
+              class="img-responsive w-100 desktop-hide"
+              width="600px"
+              src="{{productImage}}"
+              alt="{{productImage}}"
+            >
+          {% else %}
+            <img
+              loading="lazy"
+              class="img-responsive w-100 desktop-hide"
+              src="{{product.featured_image | product_img_url }}"
+              alt="best seller"
+            >
+          {% endif %}
+        </div>
+        {% assign s_variant = product.selected_or_first_available_variant %}
+        {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+        <div
+          class="w-50 p-2"
+          x-data="
+            {
+              qty:1
+            }
+          "
+          @quantity-changed.window="qty = $event.detail.quantity"
+        >
+          <div class="best-product-details">
+            <h2 class="product-title theme-text mobile-hide value-pro_">{{ product.title }}</h2>
+            <div class="font-pier theme-text mobile-hide best-seller-ab">
+              <span class="star-img"
+                ><img loading="lazy" width="20px" height="20px" src="{{ 'b-star.svg' | asset_url }}" alt=""
+              ></span>
+              <span class="star-img"
+                ><img loading="lazy" width="20px" height="20px" src="{{ 'b-star.svg' | asset_url }}" alt=""
+              ></span>
+              <span class="star-img"
+                ><img loading="lazy" width="20px" height="20px" src="{{ 'b-star.svg' | asset_url }}" alt=""
+              ></span>
+              <span class="star-img"
+                ><img loading="lazy" width="20px" height="20px" src="{{ 'b-star.svg' | asset_url }}" alt=""
+              ></span>
+              <span class="star-img"
+                ><img loading="lazy" width="20px" height="20px" src="{{ 'b-star.svg' | asset_url }}" alt=""></span
+              ><span class="total-reviews value-sans_">Over ({{ settings.gloabalreviews }}+ reviews)</span>
+            </div>
+            <div class="mobile-hide my-3 best-seller-ab">
+              <h2 class="heading-2 theme-text value-sans_">
+                {% if sub_discount_price %}
+                  {{ sub_discount_price | money }}
+                {% else -%}
+                  {{- product.price | money }}
+                {% endif %}
+                {% if settings.freeshipping -%}
+                  <small>+ Free Delivery</small>
+                {% endif %}
+              </h2>
+            </div>
+            <div class="product-varient-selection desktop-hide best-seller-ab">
+              <div class="product-buy-btn mt-0 mb-3">
+                <button
+                  class="btn theme-btn btn-loader value-sans_"
+                  @click="Purdy.AddToCart($refs.product_form, true, false, $event)"
+                >
+                  Quick Buy |
+                  {% if sub_discount_price %}
+                    {{ sub_discount_price | money }}
+                  {% else -%}
+                    {{- product.price | money }}
+                  {% endif %}
+                </button>
+                <div class="d-flex justify-content-around theme-text value-sans_">
+                  <small>100% Secure Checkout</small>
+                  {% if settings.freeshipping -%}
+                    <small>Free Delivery</small>
+                  {%- endif %}
+                </div>
+              </div>
+            </div>
+            <p class="normal-text theme-text mb-0 about-text-heading text-left best-seller-ab value-sans_">
+              This Kit Includes:
+            </p>
+            <ul class="home-best-seller-details">
+              {% for block in section.blocks %}
+                <li class="">
+                  <p class="normal-text theme-text value-sans_">{{ block.settings.details }}</p>
+                </li>
+              {% endfor %}
+            </ul>
+            <div class="product-varient-selection mobile-hide best-seller-ab-btn">
+              <form id="product_form" x-ref="product_form">
+                <input type="hidden" name="id" value="{{s_variant.id}}">
+                <input type="hidden" name="quantity" value="1">
+                <div class="selling_plan_wrapper d-none">
+                  {% if product.selling_plan_groups[0] %}
+                    <select name="selling_plan" id="selling_plan">
+                      {% for plan in product.selling_plan_groups[0].selling_plans %}
+                        <option value="{{plan.id}}">{{ plan.name }}</option>
+                      {% endfor %}
+                    </select>
+                  {% endif %}
+                  <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                </div>
+              </form>
+              <div class="product-buy-btn mt-3">
+                <button
+                  class="btn theme-btn btn-loader value-sans_"
+                  @click="Purdy.AddToCart($refs.product_form, true, false, $event)"
+                >
+                  {{ section.settings.btnlabel }} |
+                  {% if sub_discount_price %}
+                    {{ sub_discount_price | money }}
+                  {% else -%}
+                    {{- product.price | money }}
+                  {% endif %}
+                </button>
+                <div class="d-flex justify-content-around theme-text value-sans_">
+                  <small>100% Secure Checkout</small>
+                  {%- if settings.freeshipping -%}
+                    <small>Free Delivery</small>
+                  {%- endif %}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% endif %}
+
+<style>
+  .home-best-seller-details li{
+    background-image:url({{'check-box.png' | asset_url }})
+  }
+</style>
+
+{% schema %}
+  {
+    "name": "Best Seller",
+    "settings": [
+	{
+      "type": "checkbox",
+      "id": "enable",
+      "label": "Uncheck to hide the section",
+      "default": true
+    },
+{
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+{
+            "type": "product",
+            "id": "bestseller",
+            "label": "Select Product"
+          },
+{
+            "type": "text",
+            "id": "details",
+            "label": "About Product"
+          },
+{
+            "type": "image_picker",
+            "id": "Dimage",
+            "label": "Product Desktop Image"
+          },
+{
+            "type": "image_picker",
+            "id": "productImage",
+            "label": "Product Mobile Image"
+          },
+{
+            "type": "color",
+            "id": "mobilebgcolor",
+            "label": "Mobile Background Color"
+          },
+{
+            "type": "text",
+            "id": "btnlabel",
+            "label": "Button Label",
+"default": "Quick Buy"
+          }
+
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+
+		{
+            "type": "text",
+            "id": "details",
+            "label": "Details"
+          }
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Best Seller"
+		}
+	]
+  }
+{% endschema %}

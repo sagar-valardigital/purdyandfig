@@ -1,0 +1,667 @@
+<style>
+      .pf-min-cart.cart-2 .min-cart-footer:not(.cart-footer-2),
+      .pf-min-cart.cart-2 .min-cart-header:not(.cart-header-2),
+      .pf-min-cart:not(.cart-2) .min-cart-footer.cart-footer-2,
+      .pf-min-cart:not(.cart-2) .min-cart-header.cart-header-2,
+      .pf-min-cart:not(.cart-2) .cart-top-bar {
+          display: none;
+      }
+
+      .cart-ab-2 .empty-cart-block .min-cart-body {
+          height: calc(100vh - 230px);
+      }
+  .cart-ab-2 .qty-wrapper{
+    border-radius:0;
+    border:1px solid #ccc;
+  }
+  .christmas-cart.cart-ab-2 .qty-wrapper{
+    border-radius:0;
+    border:1px solid #EDE3CA;
+  }
+    .cart-ab-2 .min-cart-body{
+      height:calc(100vh - 171px);
+    }
+    @media(max-width:768px){
+      .cart-ab-2 .min-cart-body{
+      height:calc(100vh - 184px);
+    }
+    }
+    .cart-ab-2 .qty-wrapper .qty-minus,.cart-ab-2 .qty-wrapper .qty-plus,.cart-ab-2 .qty-wrapper{
+      height:32px;
+    }
+   .cart-ab-2 .qty-wrapper .qty{
+      height:33px;
+      
+    }
+    .cart-ab-2 .qty-wrapper .qty-minus:after,.cart-ab-2 .qty-wrapper .qty-plus:after,.cart-ab-2 .qty-wrapper .qty-plus:before{
+      background:#212121;
+    }
+    .cart-ab-2 .qty-wrapper .qty{
+      color:#212121;
+      font-weight:400;
+    }
+      .cart-ab-2 .empty-cart-block .product-img img {
+          max-width: 100%
+      }
+
+     .cart-ab-2 .empty-cart-wrapper {
+          display: flex;
+          align-items: center
+      }
+
+      .cart-ab-2 .empty-cart-wrapper .empty-cart-products {
+          width: 100%;
+      }
+
+      .cart-ab-2 .free-limit-check {
+          text-align: center;
+      }
+
+      .cart-ab-2 .free-limit-check span {
+          display: inline-block;
+          width: 22px;
+      }
+
+      .cart-ab-2 .free-limit-check span svg {
+          width: 100%;
+          fill: #ccc;
+      }
+
+      .cart-ab-2 .free-limit-check.checked span svg {
+          width: 100%;
+          fill: #435CA7;
+      }
+
+      .cart-ab-2 .free-limit-check span~b {
+          font-size: 12px;
+      }
+
+      .cart-ab-2 .free-limit-progress-bar {
+          width: 100%;
+          height: 10px;
+          border-radius: 15px;
+          background: #fff;
+          margin-top: 5px;
+      }
+
+      .cart-ab-2 .progress-bar {
+          width: 0%;
+          height: 10px;
+          display: block;
+          background: #E9B88B;
+          border-radius: 15px;
+          transition: all 1s ease;
+      }
+
+      .cart-ab-2 .cart-price-slider {
+          margin: -0px -15px 0 -15px;
+          padding: 6px 15px 10px 15px;
+        background:#F0E8D3;
+      }
+  .cart-ab-2 .min-cart-body{
+    background:#F6F1E5;
+  }
+      .cart-ab-2 .cart-price-slider.gradient-bg {
+          /* background-image: linear-gradient(to top, #EAE6FF, #F2F5FF) !important; */
+          background-color: #F0E8D3;
+      }
+
+      .cart-ab-2 .cart-top-bar {
+          margin: 0px -15px 0px -15px;
+          font-size: 15px;
+          padding: 12px !important;
+      }
+
+      .cart-ab-2 .cart-product-details input.qty {
+          border-left: 1px solid #ccc;
+          border-right: 1px solid #ccc;
+      }
+  .christmas-cart.cart-ab-2 .cart-product-details input.qty {
+          border-left: 1px solid #EDE3CA;
+          border-right: 1px solid #EDE3CA;
+      }
+
+      .cart-ab-2 .cart-products-wrapper .cart-product {
+          background: #F6F1E5;
+          margin-left: -15px;
+          margin-right: -15px;
+      }
+    .cart-ab-2 .cart-products-wrapper .cart-product .p-price h3{
+      font-size:14px;
+      color:#212121;
+      font-weight:bold;
+    }
+.cart-ab-2 .cart-products-wrapper .cart-product .p-price h3 del{
+   font-size:12px;
+      color:#212121;
+      font-weight:400;
+}
+    .cart-ab-2 .min-cart-wrapper{
+      height: 100%;
+      overflow-x: hidden;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      align-items: center;
+    }
+    .cart-ab-2 .min-cart-header{
+      width:100%;
+    }
+    .cart-ab-2 .min-cart-footer{
+      position:relative;
+      padding-bottom:20px;
+      width:100%;
+    }
+    .cart-ab-2 .min-cart-body{
+      width: 100%;
+      height: 100%;
+      -webkit-box-flex: 1;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      -webkit-box-pack: justify;
+      overflow-x: hidden;
+      padding-top:70px !important;
+    }
+    .cart-price-slider{
+      position: fixed;
+    top: 53px;
+    z-index: 1;
+    right: 0;
+    right: 15px;
+    width: 400px;
+    max-width: 100%;
+    }
+    .min-cart-footer .checkout-btn{
+      width:370px;
+    }
+    @media (max-width:560px) {
+      .cart-ab-2 .min-cart-footer{
+      position:relative;
+      padding-bottom:20px;
+    }
+    }
+
+    button.qty-minus, button.qty-plus {
+      background: #F6F1E5;
+      border: none;
+    }
+
+    .qty-minus:disabled, .qty-plus:disabled {
+      opacity: 0.3;
+      cursor: not-allowed;
+    }
+
+  .p-category{
+  font-size:14px;
+  line-height:1.5;
+  color:#212121;
+  font-weight:600;
+}
+  .subscription-details{
+    color:#212121;
+    font-size:12px;
+  }
+  .qty-wrapper .qty{background:#F6F1E5}
+  
+  .christmas-cart .cart-product{
+    padding-bottom:0;
+  }
+  .christmas-cart .cart-product:last-child{
+    padding-bototm:15px;
+  }
+  .christmas-cart .cart-upsell-wrapper{
+    background-color:#EDE3CA;
+    padding:2px 15px 15px 15px;
+    margin-top:15px;
+    margin-left:-15px;
+    margin-right:-15px;
+    width:calc(100% + 30px)
+  }
+  
+  .christmas-cart .cart-product-details {padding-right:0;
+  }
+
+  .pf-253-crt .p-category .font-lausanne span {
+    font-size: 14px !important;
+  }
+
+  .pf-253-crt .cart_product_b-title {
+    font-size: 12px !important;
+    color: #212121;
+  }
+
+  .pf-253-crt .cart_product_b-title .font-lausanne span {
+    font-size: 12px !important;
+  }
+</style>
+
+{% assign current_total = cart.total_price | money_without_currency %}
+{% assign free_shipping_total = settings.free_shipping_amount | minus: current_total %}
+{% assign free_product_total = settings.free_product_amount | minus: current_total %}
+{% assign free_shipping_progress = current_total | divided_by: settings.free_shipping_amount | times: 100 %}
+{% assign free_shipping_progress = free_shipping_progress | divided_by: 1 %}
+{% assign free_product_progress = current_total | divided_by: settings.free_product_amount | times: 100 %}
+
+{% if free_shipping_progress > 100 %}
+  {% assign free_shipping_progress = 100 %}
+{% endif %}
+
+<div
+  data-cart-init="{{ free_shipping_progress }}"
+  class="pf-min-cart pf-253-crt cart-ab-2 open cart-2 {% if template.suffix == "pf-225-christmas" %}christmas-cart{% endif %}" 
+  x-ref="cart_content"
+  x-data="
+    {
+       showCartDrawer: false,
+       loading: false,
+       updateCart(){
+           // send fetch reqeust to update cart
+           fetch(window.Shopify.routes.root+'?view=cart-253')
+           .then(response => response.text())
+           .then(cartData => {
+               $refs.cart_content.innerHTML = cartData;
+
+               // This code is use to parse json object. for cart count
+               var el = document.createElement('div');
+               el.innerHTML = cartData;
+               //var cartCount = JSON.parse(el.querySelector('[data-options]').innerHTML).item_count;
+               $dispatch('cart-count-updated', cartData);
+               this.loading = false;
+
+           })
+       },
+       async removeBundle(boxIndex) {
+        fetch('/cart.js')
+        .then((response) => response.json())
+        .then(async (response) => {
+          let updates = {};
+    
+          for(const item of response.items) {
+            if(item.properties.hasOwnProperty('_dynamicBoxIndex') && item.properties['_dynamicBoxIndex'] == boxIndex) {
+              updates[item.key] = 0;
+            }
+          }
+    
+          fetch('/cart/update.js', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+              updates,
+            })
+          })
+          .then((response) => response.json())
+          .then((data) => {
+            Purdy.CartCountUpdate();
+            window.dispatchEvent(new Event('cart-updated'));
+          })
+          .catch((error) => {
+            console.error('Error:', error);
+          });
+        })
+      }
+    }
+  "
+  x-show="showCartDrawer"
+  @cart-updated.window="updateCart;"
+  @toggle-cart.window="showCartDrawer = !showCartDrawer"
+  x-cloak
+>
+  <span class="cart-overlay" x-on:click="showCartDrawer = false;  $dispatch('cart-close');"></span>
+
+  <div class="min-cart-wrapper position-relative">
+    <div class="min-cart-header cart-header-2">
+      <div class="d-flex align-items-center position-relative">
+        <div class="cart-heading">
+          <h2 class="heading-3-5  m-0 text-center font-lausanne fw-400">Cart</h2>
+        </div>
+        <div class="cart-arrow" x-on:click="showCartDrawer = false; $dispatch('cart-close');">
+                  <img
+                    width="16px"
+                    height="16px"
+                    src="{{'close-line-icon.svg' | asset_url}}"
+                    alt=""
+                  >  
+        </div>
+      </div>
+    </div>
+    <div class="min-cart-body pt-0">
+      {% if settings.cartAnnouncementShow %}
+        <div class="p-2 theme-text text-center font-lausanne fw-200 cart-top-bar">
+          <small>
+            {{- settings.cartAnnouncement }}
+            <a
+              href="{{ settings.cartAnnouncementLink }}"
+              class="theme-text font-lausanne fw-400"
+              ><u>Shop Now</u></a
+            ></small
+          >
+        </div>
+      {% endif %}
+
+      <div
+        class="cart-price-slider theme-text  {% if free_shipping_total > 0 %} {% else %} gradient-bg {% endif %}"
+      >
+        {% if cart.items == 0 %}
+          <div class="d-flex justify-content-center">
+            <div
+              class="free-delivery-limit free-limit-check  {% if free_shipping_total <= 0 %} checked {%  endif %}"
+            >
+              <b class="font-lausanne fw-400">Free Shipping</b>
+            </div>
+          </div>
+        {% endif %}
+        {% if free_shipping_total > 0 %}
+          <p style="font-size:16px;text-align:center;margin-top:10px;margin-bottom:8px;">
+            <b class="font-lausanne fw-400">Add {{ free_shipping_total | times: 100 | money }} to unlock free shipping!</b>
+          </p>
+          <div class="free-limit-progress-bar">
+            <span
+              class="progress-bar"
+              style="width:{{ free_shipping_progress }}%"
+            ></span>
+          </div>
+
+        {% else %}
+          <p style="font-size:16px;text-align:center;margin-top:10px;margin-bottom:8px;">
+            <b class="font-lausanne fw-400">{{ settings.freeShippingOption }} </b>
+          </p>
+          <div class="free-limit-progress-bar"><span class="progress-bar" style="width:100%"></span></div>
+        {% endif %}
+      </div>
+
+      <div class="cart-products-wrapper">
+        
+        {% if cart.item_count == 0 %}
+          <div class="py-2 mt-3">
+            <h2 class="m-0 heading-3 text-center theme-text font-lausanne fw-400" style="color:#161718; font-size:14px;">
+              Your cart is empty
+            </h2>
+            <p class="theme-text text-center font-lausanne fw-200 mt-1" style="color:#161718; font-size:12px;">Add your favourite items to your cart</p>
+          </div>
+          <div class="mt-1 empty-cart-wrapper">
+            <div class="empty-cart-products">
+              {%- for product in settings.upsellcollbfpf253.products -%}
+                {% if product.available %}
+                  {% render 'black-friday-cart-product-pf253',
+                    card_product: product,
+                    media_aspect_ratio: section.settings.image_ratio,
+                    show_secondary_image: section.settings.show_secondary_image,
+                    show_vendor: section.settings.show_vendor,
+                    show_rating: section.settings.show_rating,
+                    lazy_load: lazy_load
+                  %}
+                {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% for item in cart.items %}
+          <div class="cart-product">
+            <div>
+            <div class="d-flex flex-wrap">
+              {% if item.image %}
+                <div class="cart-product-image">
+                  {{
+                    item.image
+                    | image_url: width: 400
+                    | image_tag: loading: 'lazy', class: 'img-responsive
+                            w-100'
+                  }}
+                </div>
+              {% endif %}
+
+              <div class="cart-product-details font-lausanne fw-400 theme-text">
+                <div class="">
+                  <h4 class="p-category m-0 font-lausanne fw-600">
+{% if item.product.metafields.custom.bundle_breakdown %}
+  {% if item.product.handle != "orange-clove-refill-pack" and 
+                  item.product.handle != "frankincense-myrrh-counter-clean-refill-copy" and 
+                  item.product.handle != "mini-black-friday-bundle-copy" and 
+                  item.product.handle != "bathroom-bliss-bundle-kit" 
+                %}<span class="bundle_product-qty">{{ item.quantity }}<span> x {% endif %}{% endif %}
+{{ item.product.title }}</h4>
+                  {% if item.product.variants.size > 1 %}
+                  <h4 class="cart-v-title normal-text font-lausanne fw-200 mt-1 mb-0">{{ item.variant.title }}</h4>
+                  {% endif %}
+                  {% if item.product.type != blank %}
+                  <h3 class="p-title font-lausanne fw-400 my-1">{{ item.product.type }}</h3>
+                  {% endif %}
+                </div>
+                <small class="subscription-details">
+                  {{ item.selling_plan_allocation.selling_plan.name }}
+                </small>
+
+              {% assign isBoxItem = false %}
+              {% assign boxIndex = nil %}
+               {% for property in item.properties %}
+                  {% if property.first contains '_dynamicBoxIndex' %}
+                    {% assign isBoxItem = true %}
+                    {% assign boxIndex = property.last | plus: 0 %}
+                  {% endif %}
+
+                  {% unless property.first contains '_' %}
+                    <div class="line-item-property" >
+                      <small class="property-name">{{ property.first }}:</small>
+                      <small class="property-value">{{ property.last }}</small>
+                    </div>
+                  {% endunless %}
+                {% endfor %}
+                
+                
+                <div
+                  class="d-flex align-items-center justify-content-between my-2"
+                  x-data="{ qty: {{ item.quantity }}}"
+                  {% if item.price <= 0 %}style="justify-content: flex-end;"{% endif %}
+                >
+                  {% if item.price > 0 %}
+                  <div class="qty-wrapper">
+                    <button
+                      {% if isBoxItem %} disabled {% endif %}
+                      class="qty-minus"
+                      @click.debounce="loading = true; Purdy.updateQuantityWithDiscountPF({{ forloop.index }}, --qty);"
+                    ></button>
+                    <input class="qty font-lausanne fw-400" type="text" value="1" x-model="qty">
+                    <button
+                      {% if isBoxItem %} disabled {% endif %}
+                      class="qty-plus"
+                      @click.debounce="loading = true; Purdy.updateQuantityWithDiscountPF({{ forloop.index }}, ++qty)"
+                    ></button>
+                  </div>
+                  {% endif %}
+                  <div class="p-price">
+                    <h3 class="m-0 font-lausanne fw-400">
+                      {{ item.price | money }}
+                      {% if item.variant.compare_at_price > item.price %}
+                        <small
+                          ><del class="font-lausanne">{{ item.variant.compare_at_price | money }}</del></small
+                        >
+                      {% endif %}
+                    </h3>
+                  </div>
+                </div>
+
+               {% if item.selling_plan_allocation.price > 0 and item.selling_plan_allocation.selling_plan.price_adjustments[0].value > 0 %}
+                {% assign value_discount = item.product.price | minus:item.selling_plan_allocation.selling_plan.price_adjustments[0].value %}
+                {% assign value_discount_comp = value_discount | plus: 0 %}
+                {% assign value_discount_comp = value_discount_comp | times: item.quantity %}
+              
+                {% if value_discount_comp > 0 %}
+                  <div class="cart_subscription d-none text-sm">
+                    <span class="cart_subscription--discount font-semibold text-green-700">
+                      You saved
+                      {% if item.selling_plan_allocation.selling_plan.price_adjustments[0].value_type == 'percentage' %}
+                        {{ item.selling_plan_allocation.selling_plan.price_adjustments[0].value }}%
+                      {% else %}
+                        {{ value_discount_comp | money }}
+                      {% endif %}
+                    </span>
+                  </div>
+                {% endif %}
+              {% endif %}
+                <div
+                  class="remove-product"
+                  title="remove {{ item.product.title }}"
+                  @click="loading = true; {% if isBoxItem %}removeBundle({{ boxIndex }}){% else %}Purdy.updateQuantity({{ forloop.index }}, 0){% endif %}"
+                >
+                  <i class="fa-regular fa-trash"></i>
+                </div>
+              </div>
+            </div>
+  
+              {% if item.product.metafields.custom.bundle_breakdown %}
+                {% if item.product.handle != "orange-clove-refill-pack" and 
+                  item.product.handle != "frankincense-myrrh-counter-clean-refill-copy" and 
+                  item.product.handle != "mini-black-friday-bundle-copy" and 
+                  item.product.handle != "bathroom-bliss-bundle-kit" 
+                %}
+                <div>
+                  <!-- Loop through the products in the bundle_breakdown metafield -->
+    {% for bundle_item in item.product.metafields.custom.bundle_breakdown.value %}
+
+<div class="cart_product-bundle">
+  <div class="cart_product-img">
+    <img src="{{ bundle_item.featured_image | img_url: '120x120', crop: 'center'  }}" alt="{{ bundle_item.title }}" width="32" height="32" class="img-responsive h-auto">
+  </div>
+  <div>
+  <div class="cart_product_b-title font-lausanne fw-600"><span class="bundle_product-qty">{{ item.quantity }}<span> x {{ bundle_item.title }}</div>
+  {% assign total_price = bundle_item.price | times: item.quantity %}
+    <div class="cart_product_b-price">FREE <del>{{ localization.country.currency.symbol }}{{ total_price | money_without_currency}}</del></div>
+  </div>
+</div>
+
+    {% endfor %}
+                </div>
+              {% endif %}
+            {% endif %}
+          </div>
+            
+          </div>
+        {% endfor %}
+<div class="cart-upsell-wrapper">
+        {% if settings['cart--show-mini'] %}
+          {% assign upsell_product_string = '' %}
+          {% for product in settings.upsellcollbfpf253.products %}
+            {% if product.handle == 'seasonal-refill-booster-pack-autumn-1' %}
+              {% assign p_handle = 'seasonal-refill-booster-pack-autumn' %}
+            {% else %}
+              {% assign p_handle = product.handle %}
+            {%  endif %}
+            {% if forloop.last %}
+              {% assign upsell_product_string = upsell_product_string | append: p_handle %}
+            {% else %}
+              {% assign upsell_product_string = upsell_product_string | append: p_handle | append: ', ' %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign upsell_product_array = upsell_product_string | split: ', ' %}
+
+          {% for product in settings.upsellcollbfpf253.products %}
+            {% if forloop.last %}
+              {% assign last_product = product.handle %}
+            {% endif %}
+          {% endfor %}
+          {% for item in cart.items %}
+            {% if upsell_product_array contains item.product.handle %}
+              {% if item.product.handle == last_product %}
+                {% assign item_handle = item.product.handle %}
+              {% else %}
+                {% assign item_handle = item.product.handle | append: ', ' %}
+              {% endif %}
+              {% assign upsell_product_string = upsell_product_string | remove: item_handle %}
+            {% endif %}
+          {% endfor %}
+
+          {% assign upsell_products = upsell_product_string | split: ', ' %}
+          {% if cart.item_count > 0 %}
+           {% for uproduct in upsell_products %}
+              {% if forloop.index == 1 %}
+                <div class="text-center">
+                  
+                  <h3
+                    class="heaidng-3 font-lausanne fw-200 py-2 theme-text"
+                    style="color:#212121; font-size:14px; font-weight:200; margin-top:10px"
+                  >
+                      Add extra member-price offers
+                  
+                  </h3>
+                </div>
+              {% endif %}
+
+              {% if upsell_products == blank %}
+              {% else %}
+                <div class="cart--upsell show {{ upsell_product_string }}">
+                  {% render 'upsell-bf-product-pf253', pHandle: uproduct %}
+                </div>
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endif %}
+  </div>
+      </div>
+    </div>
+
+    <div class="min-cart-footer cart-footer-2">
+      <form action="/checkout/" name="checkout_form">
+        {%- assign discounts = '' -%}
+
+{%- for item in cart.items -%}
+  {%- case item.product.handle -%}
+    {%- when 'bathroom-bliss-starter-kit' -%}
+      {%- assign discounts = discounts | append: 'BATHROOMBLISS225CX,' -%}
+    {%- when 'bathroom-bliss-bundle-kit' -%}
+      {%- assign discounts = discounts | append: 'BATHROOMBLISS225CX,' -%}
+    {%- when 'orange-clove-refill-pack' -%}
+      {%- assign discounts = discounts | append: 'ORANGECLOVEREF253CX,' -%}
+    {%- when 'frankincense-myrrh-counter-clean-refill-copy' -%}
+      {%- assign discounts = discounts | append: 'F&MREF253CX,' -%}
+    {%- when 'mini-black-friday-bundle-copy' -%}
+      {%- assign discounts = discounts | append: 'MINIBUNDLE253CX,' -%}
+    {%- when 'christmas-scent-bundle' -%}
+      {%- if item.quantity == 1 -%}
+        {%- assign discounts = discounts | append: 'CHRISTMASBUNDLE253,' -%}
+      {%- elsif item.quantity == 2 -%}
+        {%- assign discounts = discounts | append: 'CHRISTMASBUNDLE253x2,' -%}
+      {%- elsif item.quantity >= 3 -%}
+        {%- assign discounts = discounts | append: 'CHRISTMASBUNDLE253x3,' -%}
+      {%- endif -%}
+  {%- endcase -%}
+{%- endfor -%}
+
+{%- if discounts != '' -%}
+  {%- assign discounts = discounts | split: ',' | uniq | join: ',' -%}
+{%- endif -%}
+
+ <input autocomplete="off"  type="hidden" name="discount" value="{{ discounts }}">
+        <div class="">
+          <div class="d-flex justify-content-between font-lausanne fw-400 theme-text mb-1" >
+            <div style="color:#161718;">
+              Subtotal ({{ cart.item_count }}
+                {{ cart.item_count | pluralize: 'item', 'items' }})
+            </div>
+            <div style="color:#161718;">
+              {{ cart.total_price | money }}
+            </div>
+          </div>
+          <div class="w-100">
+            <button
+              type="submit"
+              class="btn font-lausanne fw-400 checkout-btn green-btn theme-btn btn-loader"
+              style="padding: 14px 20px;"
+            >
+              CHECKOUT
+            </button>
+          </div>
+          {% if settings.freeshipping -%}
+            <p class="theme-text mt-1 mb-0 text-center">Free Delivery on UK orders</p>
+          {%- endif %}
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

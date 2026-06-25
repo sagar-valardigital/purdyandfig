@@ -1,0 +1,180 @@
+body,
+.white-bg {
+  background: #f0e8d3 !important;
+}
+
+.video-block-wrapper {
+  padding: unset;
+}
+.our-story-textoverimage .heading-2 {
+  color: #0c231f !important;
+  font-size: 28px !important;
+  font-weight: 400 !important;
+  font-family: "Lausanne" !important;
+  line-height: 35px !important;
+  letter-spacing: 0.42px !important;
+}
+
+.our-story-imagewithtext {
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+}
+.our-story-textoverimage .text-over-image {
+  padding-top: 80px !important;
+  padding-bottom: 80px !important;
+}
+.our-story-imagewithtext .heading-2 {
+  color: #212121 !important;
+  font-size: 24px !important;
+  font-weight: 400 !important;
+  font-family: "Lausanne" !important;
+  line-height: 36px !important;
+}
+.our-story-imagewithtext .normal-text p {
+  color: #212121 !important;
+  font-size: 18px !important;
+  font-weight: 200 !important;
+  font-family: "Lausanne" !important;
+  line-height: 27px !important;
+}
+.our-story-imagewithtext .common-flex {
+  gap: 20px;
+}
+.our-story-imagewithtext .w-45 {
+  width: 45%;
+}
+.our-story-imagewithtext .order-1 {
+  justify-content: center;
+}
+.video-block-text .play-icon {
+  width: 88px;
+  height: 88px;
+}
+.video-block-text .play-sub-heading {
+  text-transform: uppercase;
+}
+/* .our-story-imagewithtext {
+  padding-top: 80px;
+} */
+/* #shopify-section-footer {
+  padding-top: 80px;
+} */
+iframe {
+  display: none;
+  width: 100%;
+  z-index: 0;
+  border: none;
+}
+.video-inner-block.active .video-image,
+.video-inner-block.active .video-block-text {
+  display: none;
+}
+.video-inner-block.active iframe {
+  display: block;
+}
+.our-story-imagewithtext .two-women-details .heading-2 {
+  letter-spacing: 0px !important;
+}
+@media (max-width: 768px) {
+  .our-story-textoverimage {
+    padding-left: 5px;
+    padding-bottom: 30px;
+    padding-right: 5px;
+  }
+  .our-story-imagewithtext .w-45 {
+    width: 100%;
+  }
+  .our-story-imagewithtext {
+    margin-bottom: unset;
+  }
+  .our-story-textoverimage .text-over-image {
+    padding-top: 32px !important;
+    padding-bottom: 32px !important;
+  }
+  #shopify-section-footer {
+    padding-top: 0px;
+  }
+  .our-story-textoverimage .heading-2 {
+    font-size: 24px !important;
+    line-height: 30px !important;
+  }
+  .our-story-textoverimage .m-text-center {
+    text-align: left !important;
+  }
+  .our-story-imagewithtext .two-women-details {
+    text-align: left !important;
+    padding: unset !important;
+  }
+  .our-story-imagewithtext .heading-2 {
+    font-size: 20px !important;
+    line-height: 30px !important;
+  }
+  .our-story-imagewithtext .normal-text p {
+    color: #212121 !important;
+    font-size: 16px !important;
+    font-weight: 200 !important;
+    line-height: 24px !important;
+  }
+  .video-inner-block iframe {
+    height: 400px;
+  }
+  .our-story-imagewithtext .two-women-details {
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+  .our-story-imagewithtext .two-women-details .heading-2 {
+    margin-bottom: 8px !important;
+  }
+}
+@media (max-width: 540px) {
+  .video-block-text .play-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .video-block-text h2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .video-block-text p {
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+  }
+}
+@media (max-width: 434px) {
+  .video-block-text .play-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .video-block-text h2 {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  .video-block-text p {
+    font-size: 10px;
+    line-height: 15px;
+    font-weight: 600;
+    letter-spacing: 0.75px;
+  }
+  .video-inner-block iframe {
+    height: 200px;
+  }
+}
+
+@media (min-width: 853px) {
+  .our-story-imagewithtext {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .our-story-imagewithtext {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}

@@ -1,0 +1,200 @@
+<div class="fluid my-5 container fb-section best-seller-2">
+  <h4 class="heading-2 text-center theme-text text-blue mb-3 value-pro">{{ section.settings.heading }}</h4>
+  <div class="colletion-products ">
+    <div class="best-seller-slide best-seller-slide-2 custom-dots font-pier py-3">
+      {% for block in section.blocks %}
+        {% assign card_product = block.settings.product %}
+        <div
+          class="px-3 col-10 col-sm-8 col-md-5 flex-1 col-lg-3 py-2"
+          x-data="
+            {
+              qty:1
+            }
+          "
+        >
+          <div class="colletion-products-card px-3 position-relative">
+            {% if block.settings.new_product %}
+              <div class="new-product-icon">New</div>
+            {% endif %}
+            <a href="{{ card_product.url }}">
+              <img class="w-100" src="{{ block.settings.product.featured_image | img_url: "600x" }}">
+            </a>
+            <div>
+              <form
+                @submit.prevent="console.log('submitted')"
+                x-ref="product_form_{{card_product.id}}"
+                enctype="multipart/form-data"
+                accept-charset="UTF-8"
+                id="product_form_{{card_product.id}}"
+                class="shopify-product-form"
+                data-product-id="{{card_product.id}}"
+                action="/cart/add"
+              >
+                <div class="product-varient-selection d-none">
+                  {% assign s_variant = card_product.selected_or_first_available_variant %}
+                  <input type="hidden" name="id" value="{{s_variant.id}}">
+                  <input type="checkbox" name="purchase_type" value="subscription" checked>
+                </div>
+
+                <div class="selling_plan_wrapper d-none">
+                  {% liquid
+                    if card_product.selected_selling_plan
+                      assign selected_selling_plan = card_product.selected_selling_plan
+                    else
+                      assign selected_selling_plan = s_variant.selling_plan_allocations.first.selling_plan
+                    endif
+                  %}
+
+                  <input type="hidden" name="selling_plan" value="{{selected_selling_plan.id}}">
+                </div>
+                <input type="hidden" name="quantity" value="1">
+              </form>
+              <h3 class="heading-4 text-blue">{{ block.settings.product.title }}</h3>
+              <div class="my-2">
+                {% render 'okendo-reviews-product-rating-summary', product: card_product %}
+              </div>
+              <div>
+                {% assign sub_discount_price = s_variant.selling_plan_allocations[0].price_adjustments[0].price %}
+                <span class="me-2 text-blue heading-4">
+                  {%- if sub_discount_price %}
+                    {{ sub_discount_price | money }}
+                  {% else -%}
+                    {{- card_product.price | money }}
+                  {% endif -%}
+                </span>
+                <span class="compare_at_price text-blue heading-4">
+                  {{- block.settings.product.compare_at_price | money -}}
+                </span>
+              </div>
+
+              <button
+                x-on:click="Purdy.AddToCart($refs.product_form_{{ card_product.id }},true ,false , $event )"
+                class="btn theme-btn bg-blue py-2 btn-loader"
+                {% if block.settings.dataTrack %}
+                  data-add-to-cart="true"
+                  data-page-url="{{ request.path }}"
+                  data-target-url="{{ block.settings.targetUrl }}"
+                  data-index="{{ block.settings.index }}"
+                  data-funnel-stage="{{ block.settings.funnel_stage }}"
+                  data-module="{{ block.settings.dataModule }}"
+                  data-event-label="{{ block.settings.dataTitle }}"
+                  data-event-value="{{ block.settings.eventValue }}"
+                  data-item-id="{{ s_variant.sku }}"
+                  data-option-index="{{ block.settings.optionIndex }}"
+                  data-item-name="{{ card_product.title }}"
+                {% endif %}
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% if section.settings.btnLink %}
+    <div class="my-3 text-center">
+      <a href="{{ section.settings.btnLink }}" class="btn theme-btn bg-blue">{{ section.settings.btnLabel }}</a>
+    </div>
+  {% endif %}
+</div>
+
+{% schema %}
+ {
+    "name": "Best Seller Section 2",
+    "settings": [
+{
+          "type": "text",
+          "id": "heading",
+          "label": "Heading"
+        },
+      {
+          "type": "text",
+          "id": "btnLabel",
+          "label": "Button Label"
+        },
+      {
+          "type": "url",
+          "id": "btnLink",
+          "label": "Button Link"
+        }
+	],
+	"blocks": [
+      {
+        "type": "product",
+        "name": "Select Products",
+        "settings": [
+          {
+            "type": "checkbox",
+            "id": "new_product",
+            "label": "check to show new product icon",
+            "default": false
+          },
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Select Products"
+          },
+      {
+    "type": "header",
+    "content": "GA4"
+  },
+    {
+"id": "dataTrack",
+"label":"Data Track",
+"type": "checkbox"
+    },
+    {
+"id": "targetUrl",
+"label":"Target Url",
+"type": "url"
+    },
+    {
+"id": "index",
+"label":"Index",
+"type": "number",
+"default" : 0
+    },
+    {
+"id": "funnel_stage",
+"label":"Funnel Stage",
+"type": "text",
+ "default" : "hp"
+    },
+    {
+"id": "dataModule",
+"label":"Module",
+"type": "text",
+ "default" : "best_seller"
+    },
+      {
+"id": "dataTitle",
+"label":"Event Label",
+"type": "text",
+"default": "add to cart"
+    }
+    ,
+      {
+"id": "eventValue",
+"label":"Event Value",
+"type": "text",
+"default" : "add_to_cart"
+    },
+
+      {
+"id": "optionIndex",
+"label":"Option Index",
+"type": "text"
+    }
+
+
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Best Seller Section 2"
+		}
+	]
+  }
+{% endschema %}

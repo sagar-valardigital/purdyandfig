@@ -1,0 +1,203 @@
+<footer class="footer py-5">
+        <div class="container">
+            <div class="logo-wrapper mb-3">
+               {%- if section.settings.logo != blank -%}
+                          {%- assign image_size = section.settings.logo_width | append: 'x' -%}
+                          <img srcset="{{ section.settings.logo | img_url: image_size }} 1x, {{ section.settings.logo | img_url: image_size, scale: 2 }} 2x"
+                            src="{{ section.settings.logo | img_url: image_size }}"
+                            loading="lazy"
+                            class="img-responsive logo"
+                            width="{{ section.settings.logo.width }}"
+                            height="{{ section.settings.logo.height }}"
+                            alt="{{ section.settings.logo.alt | default: shop.name | escape }}"
+                          >
+                        {%- endif -%}
+            </div>
+            <div class="d-flex flex-wrap">
+              	{% for block in section.blocks %}
+              {% if block.type == "menu" %}
+              	<div class="w-25">
+                    <div class="footer-menu">
+                        <h3 class="heading-3 white-text">{{block.settings.heading}}</h3>
+                    </div>
+                    <div class="footer-menu">
+                        <ul class="list-unstyle">
+                          {%- for link in block.settings.menu.links -%}
+                          	
+                          		<li><a target="_blank" href="{{link.url}}">{{ link.title | escape }}</a></li>
+                          	
+                          {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+              {% endif %}
+              	{% endfor %}
+                <div class="w-25">
+                    <div class="footer-menu">
+                        <h3 class="heading-3 white-text">Follow Us</h3>
+                    </div>
+                    <div>
+                        <div class="social-link d-flex">
+                          {% for block in section.blocks %}
+                          {% if block.type == "social" %}
+                            <a href="{{block.settings.social-link}}" class="{{block.settings.socials}} social-icon"></a>
+                          {% endif %}
+                          {% endfor %}
+                        </div>
+                    </div>
+                </div>
+              <div class="w-25">
+                    <div class="footer-menu">
+                        <h3 class="heading-3 white-text">Customer Service</h3>
+                    </div>
+                    <div class="footer-menu">
+                        <ul class="list-unstyle">
+                            {% assign returnurl = "https://purdyandfigg.com/policies/refund-policy" %}
+                            {% if section.settings.return_refund_url != blank %}
+                                {% assign returnurl = section.settings.return_refund_url %}
+                            {% endif %}
+                            <li><a href="{{section.settings.help_url}}" target="_blank">Help Centre</a></li>
+                            <li><a href="{{returnurl}}" target="_self">Returns and Cancellation Policy</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright-text text-center normal-text white-text">{{section.settings.copyright}}</div>
+            <div class="payment-options d-flex justify-content-between">
+                {% for block in section.blocks %}
+                    {% if block.type == "payment" %}
+              			{% assign payImage = block.settings.payimage | img_url %}
+                		<div class="payment-option"><img loading="lazy" src="{{payImage}}" width="60px" height="60px" class="img-responsive" alt="{{ block.settings.payimage.alt }}"></div>
+              		{%endif%}
+              	{%endfor%}
+            </div>
+            <div class="footer-bottom d-flex justify-content-around">
+                <div><a href="{{section.settings.privacyLink}}">Privacy<br>Policy</a></div>
+                <div><a href="{{section.settings.termsLink}}">Terms of<br>Service</a></div>
+            </div>
+        </div>
+    </footer>
+
+<style>
+  .social-icon{
+    background-image: url({{ 'sprint.png' | asset_url }});
+}
+</style>
+
+{% schema %}
+  {
+    "name": "PF119 Footer",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Logo"
+      },
+      {
+        "id": "email",
+        "label": "email ID",
+        "type": "text"
+      },
+      {
+        "id": "help_url",
+        "label": "Help URL",
+        "type": "url"
+      },
+      {
+        "id": "return_refund_url",
+        "label": "Return & refund URL",
+        "type": "url"
+      },
+      {
+        "id": "copyright",
+        "label": "Copyright text",
+        "type": "text"
+      },
+      {
+        "id": "accLink",
+        "label": "Accessibility link",
+        "type": "url"
+      },
+      {
+        "id": "privacyLink",
+        "label": "Privacy policy Link",
+        "type": "url"
+      },
+      {
+        "id": "termsLink",
+        "label": "Terms of service Link",
+        "type": "url"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "menu",
+        "name": "Footer Menu",
+        "settings": [
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "block heading"
+          },
+          {
+            "type": "link_list",
+            "id": "menu",
+            "label": "menu"
+          }
+        ]
+      },
+      {
+        "type": "social",
+        "name": "Footer Social",
+        "settings": [
+          {
+            "type": "select",
+            "id": "socials",
+            "label": "Add social icon",
+            "options": [
+              {
+                "value": "insta",
+                "label": "Instagram"
+              },
+              {
+                "value": "fb",
+                "label": "Facebook"
+              },
+              {
+                "value": "twitter",
+                "label": "Twitter"
+              },
+              {
+                "value": "tiktok",
+                "label": "Tik Tok"
+              }
+            ],
+            "default": "fb"
+          },
+          {
+            "type": "url",
+            "id": "social-link",
+            "label": "Link"
+          }
+        ]
+      },
+      {
+        "type": "payment",
+        "name": "Payment icons",
+        "settings": [
+          {
+            "id": "payimage",
+            "label": "Payment type",
+            "type": "image_picker"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "PF119 Footer"
+      }
+    ]
+  }
+{% endschema %}

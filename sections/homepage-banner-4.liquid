@@ -1,0 +1,353 @@
+<div class="product-info product-info-1 {{ section.settings.class }}">
+  <div class="d-flex flex-wrap mx-0 px-0 align-items-center justify-content-between">
+    <div class="w-50 d-flex align-items-center justify-content-center">
+      <div class="product-container">
+        <h1 class="mb-0-5rem value-pro" style="color:{{ section.settings.content_color }};">
+          {{ section.settings.section_heading }}
+        </h1>
+        <div class="d-flex align-items-center mb-1-5rem product-review {% if section.settings.scrollto !=''%}click-scroll{% endif %}" 
+          {% if section.settings.scrollto !=''%} data-target="{{ section.settings.scrollto }}" {% endif %}>
+          {% render 'review-icon-2', content: product %}
+          <span class="product-review-title ms-2 value-sans">
+            {{- section.settings.reviewtitle -}}
+          </span>
+        </div>
+        <h4 class="product-subheading mb-1-5rem value-sans">
+          {{ section.settings.subheading }}
+        </h4>
+        <div class="product-content-container">
+          <div class="product-blocks-container">
+            {% for block in section.blocks %}
+              <div class="d-flex align-items-center product-blocks mb-1 value-sans">
+                <span class="d-flex align-items-center me-2">{% render 'checkbox-circle-icon-2', content: product %}</span>
+                <span>{{ block.settings.title }}</span>
+              </div>
+            {% endfor %}
+          </div>
+          <div class="product-cta-container w-100">
+            {% if section.settings.btnLink %}
+              <div class="d-flex flex-column w-100">
+                <a href="{{section.settings.btnLink}}" class="buy-btn w-100 value-sans d-inline-block text-center" >
+                  {{ section.settings.btnLabel }}
+                </a>
+      
+                <a href="{{section.settings.btnLink2}}" class="products-btn w-100 value-sans d-inline-block text-center" >
+                  {{ section.settings.btnLabel2 }}
+                </a>
+              </div>
+            {% else %}
+              <button class="buy-btn col-12 col-md-10 mb-2 value-sans click-scroll" data-target="{{ section.settings.scrollID }}">
+                {{ section.settings.btnLabel }}
+              </button>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w-100 image-container">
+        <!--<img class="w-100 vertical-middle" style="max-height: 320px;" src="{{ section.settings.image | img_url: "1900x" }}">-->
+        <div class="image-bg"></div>
+    </div>
+  </div>
+  <div class="usps d-flex">
+    <div class="d-flex justify-content-center column">
+      <span>{% render 'icon-delivery', content: product %}</span>
+      <span class="ms-2">Free delivery with orders over £40</span>
+    </div>
+    <div class="d-flex justify-content-center column">
+      {% render 'icon-money', content: product %}
+      <span class="ms-2">Money Back Guarantee</span>
+    </div>
+    <div class="d-flex justify-content-center column">
+      {% render 'icon-cube', content: product %}
+      <span class="ms-2">Eco Packaging</span>
+    </div>
+  </div>
+</div>
+
+<style>
+  .product-info-1 h1 {
+    letter-spacing: -0.546px;
+    line-height: 50.4px;
+  }
+  
+  .product-info-1 .usps {
+    margin-top: 32px;
+    margin-bottom: 16px;
+    font-size: 12px;
+  }
+
+  .product-info-1 {
+    max-width: 1216px;
+    margin-top: 55px;
+    margin-left: auto; 
+    margin-right: auto;
+    padding-top: 2rem !important;
+  }
+  
+  .product-info-1 .product-review {
+    justify-content: left !important;
+  }
+
+  .product-info-1 .product-blocks-container {
+    margin-bottom: 2rem;
+  }
+
+  .product-info-1 .column {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .product-info-1 .image-container {
+    margin-top: 32px;
+    height: 618px;
+    overflow: hidden;
+    flex-shrink: 0;
+    padding: 0px 0px 0px 16px;
+  }
+
+  .product-info-1 .image-bg {
+    background-image: url('{{ section.settings.image | img_url: "1900x" }}');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .product-info-1 .product-container {
+    margin-top: 32px;
+    padding: 0px 16px 0px 8px;
+  }
+
+  .product-info-1 .product-subheading {
+    color: #344054;
+    font-size: 24px !important;
+    line-height: 30px;
+  }
+
+  .product-info-1 .product-review-title {
+    color: #101828; 
+    font-size: 16px !important;
+  }
+
+  .product-info-1 .product-benefit {
+    color: #101828;
+    font-size: 16px !important;
+  }
+
+  .product-info-1 .product-blocks span {
+    font-size: 16px !important;
+  }
+  
+  .product-info-1 .mb-0-5rem {
+    margin-bottom: 0.5rem;
+  }
+
+  .product-info-1 .mb-1-5rem {
+    margin-bottom: 1.5rem;
+  }
+
+  .product-info-1 .mb-2rem {
+    margin-bottom: 2rem;
+  }
+
+  .product-info-1 .buy-btn {
+    margin-right: 1rem;
+  }
+
+  .product-info-1 .buy-btn, .product-info-2 .products-btn {
+    height: 100%;
+    transition: all .3s ease;
+    -webkit-transition: all .3s ease;
+    -moz-transition: all .3s ease;
+    -ms-transition: all .3s ease;
+    -o-transition: all .3s ease;
+  }
+
+  .product-info-1 .buy-btn:hover {
+    background-color: #203271 !important;
+  }
+
+  .product-info-1 .products-btn {
+    font-size: 16px;
+    padding: 10px;
+    color: #101828; 
+    border-radius: 500px;
+    border: 1.5px solid #334FB4;
+    background: #FFF;
+  }
+
+  @media (max-width: 768px) {
+    .product-info-1 .d-flex.flex-column {
+      flex-direction: column;
+    }
+
+    .product-info-1 .buy-btn {
+      margin-right: 0;
+      margin-bottom: 1rem;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .product-info-1 h1 {
+      font-size: 30px !important;
+      letter-spacing: -0.39px;
+      line-height: 36px;
+    }
+
+    .product-info-1 {
+      margin-top: 0px;
+    }
+
+    .product-info-1 .product-content-container {
+      display: flex;
+      flex-wrap: wrap;
+      width: 100%;
+    }
+
+    .product-info-1 .product-cta-container {
+      order: -1;
+      margin-bottom: 24px;
+    }
+
+    .product-info-1 .product-blocks-container {
+      margin-bottom: 0px;
+    }
+
+    .product-info-1 .product-subheading {
+      font-size: 20px !important;
+      line-height: 25px;
+    }
+
+    .product-info-1 .product-container {
+      padding: 16px !important;
+    }
+
+    .product-info-1 .product-container {
+      margin-top: 0px;
+    }
+
+    .product-info-1 .w-50:first-child {
+      margin-bottom: 0px;
+    }
+
+    .product-info-1 .w-50:first-child, .product-benefit .w-50:last-child {
+      padding: 0px;
+    }
+
+    .product-info-1 .usps {
+      display: none;
+    }
+    
+    .product-info-1 .image-container {
+      order: -1;
+      margin-top: 20px;
+      padding: 0px;
+      max-height: 320px;
+      flex-shrink: 0;
+    }
+  }
+
+  @media (min-width: 769px) {
+    .product-info-1 .image-container {
+      width: 50%;
+      order: 2;
+      margin-top: 0;
+    }
+  }
+</style>
+              
+{% schema %}
+  {
+    "name": "Homepage Banner 4",
+    "settings": [
+      {
+      "type": "text",
+      "id": "scrollto",
+      "label": "Scroll To Section"
+    },
+      {
+      "type": "text",
+      "id": "class",
+      "label": "custom class to add"
+    },
+        {
+          "type": "text",
+          "id": "reviewtitle",
+          "label": "Enter review title",
+          "default": "product review text"
+        },
+        {
+          "type": "text",
+          "id": "section_heading",
+          "label": "Enter section heading",
+          "default": "your section heading"
+        },
+        {
+          "type": "text",
+          "id": "subheading",
+          "label": "Enter section sub-heading",
+          "default": "your section sub-heading"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Choose product image"
+        },
+        {
+          "type": "color",
+          "id": "content_color",
+          "label": "Choose content color",
+          "default": "#334FB4"
+        },
+      {
+          "type": "text",
+          "id": "btnLabel",
+          "label": "Button Label",
+          "default": "Shop Now & SAVE 50%"
+        },
+      {
+          "type": "text",
+          "id": "scrollID",
+          "label": "Scroll Section Id"
+        },
+      {
+          "type": "url",
+          "id": "btnLink",
+          "label": "Button Link"
+        },
+      {
+          "type": "text",
+          "id": "btnLabel2",
+          "label": "Button Label 2",
+          "default": "All Products"
+        },
+      {
+          "type": "url",
+          "id": "btnLink2",
+          "label": "Button Link 2"
+        }
+    ],
+    "max_blocks": 4,
+    "blocks": [
+    {
+      "type": "product_benefits",
+      "name": "product benefits",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Enter product benefit",
+          "default": "your product benefit"
+        }
+      ]
+    }
+  ],
+    "presets": [
+  {
+      "name" : "HomePage banner 4"
+  }
+]
+  }
+{% endschema %}

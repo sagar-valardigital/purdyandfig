@@ -1,0 +1,455 @@
+<style>
+
+  .review-block-slider-pf357 {
+    padding-top: 50px !important;
+  }
+
+  .review-block-slider-pf357 .slider-outer-mt40 {
+    margin-top: 40px;
+  }
+
+  .review-block-slider-pf357 .trim-t-30 {
+    padding-top: 50px !important;
+  }
+
+  .review-block-slider-pf357 .transformational-scents-slider .tss-block {
+    flex: 1;
+    padding: 0;
+    background: transparent;
+    margin: 0 15px 0;
+  }
+
+  .review-block-slider-pf357 .tss-image {
+      margin-bottom: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+  }
+
+  .review-block-slider-pf357 .tss-block .review-review {
+    line-height: 1.5;
+    margin: 0;
+    font-size: 14px;
+    font-weight: 200;
+    font-style: normal;
+    padding-top: 0;
+    color: #424242 !important;
+  }
+
+  .review-block-slider-pf357 .tss-block .review-name {
+    line-height: 1.5;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0 !important;
+  }
+
+  .review-block-slider-pf357 .tss-heading {
+    border-bottom: 0;
+  }
+
+  .review-block-slider-pf357 .heading-2 {
+    letter-spacing: 0px !important;
+    color: #212121 !important;
+  }
+
+  .review-block-slider-pf357 p.subheading {
+    color: #424242 !important;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .review-block-slider-pf357 .slick-dotted.slick-slider {
+      margin-bottom: 24px;
+  }
+
+  /* Progress Bar */
+  .review-block-slider-pf357 .tss-progress-container {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  .review-block-slider-pf357 .tss-progress-bar {
+    width: 100%;
+    /* max-width: 200px; */
+    height: 2px;
+    background-color: #E9B88B;
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .review-block-slider-pf357 .tss-progress-fill {
+    height: 100%;
+    background-color: #212121;
+    border-radius: 1px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  #id_{{ section.id }} .heading-color{
+    color: {{ section.settings.heading_color }} !important;
+  }
+  #id_{{ section.id }} .text-color{
+    color: {{ section.settings.text_color }} !important;
+  }
+  #id_{{ section.id }} .name-color{
+    font-size:14px;
+    color: {{ section.settings.name_color }} !important;
+    font-weight:600;
+  }
+  {% if section.settings.review_bg %}
+  #id_{{ section.id }} .tss-block{
+    background-color: {{ section.settings.review_bg }} !important;
+    border-radius:4px;
+    overflow:hidden;
+  }
+  #id_{{ section.id }} .tss-block .tss-content{
+    padding-left:8px;
+    padding-right:8px;
+    padding-bottom:8px;
+  }
+  {% endif %}
+  {% if section.settings.progress_bar %}
+  {% else %}
+  #id_{{ section.id }}   .tss-progress-container{
+  opacity:0;
+  }
+  {% endif %}
+
+  @media(max-width:768px) {
+    
+#id_{{ section.id }} .name-color{
+    font-size:14px;}
+  .review-block-slider-pf357 .transformational-scents-slider .tss-block {
+    margin: 0 16px 15px 0;
+    flex: none;
+  }
+
+  .review-block-slider-pf357 .trim-t-30 {
+    padding-top: 0 !important;
+  }
+
+  .review-block-slider-pf357 .slider-outer-mt40 {
+    margin-top: 0px;
+  }
+
+  .transformational-scents-section.py-80 {
+    padding-top: 2px !important;
+  }
+
+  .review-block-slider-pf357 .transformational-scents-slider {
+    margin-top: 24px !important;
+  }
+
+  .review-block-slider-pf357 .review-block-bleed {
+    margin-right: -15px;
+  }
+
+  .review-block-slider-pf357 .tss-progress-container {
+    display: flex;
+    margin-right: 15px;
+  }
+
+  .review-block-slider-pf357 .review-slider-main-header {
+    padding: 0;
+  }
+}
+
+{% if section.settings.bg_image %}
+    .review-section-357-bg{
+    background-image:url({{ section.settings.bg_image | image_url :  width : '1800' , height : '800' }});
+    }
+    @media(max-width:768px){
+      .review-section-357-bg{
+    background-image:url({{ section.settings.bg_image | image_url :  width : '800' , height : '800' }});
+    }
+    }
+  {% endif %}
+</style>
+
+{% assign count = 0 %}
+{% for block in section.blocks %}
+  {% assign count = count | plus: 1 %}
+{% endfor %}
+<div id="{{ section.settings.sectionId }}">
+  <div
+    id="id_{{ section.id }}"
+    style="
+      {% if section.settings.bg_image %}
+        background-size:cover;
+        background-position:center;
+      {% else %}
+      background-color:{{ section.settings.bgcolor }}
+      {% endif %}
+    "
+    class="py-80 trim-t-30 review-section-357-bg transformational-scents-section {{ section.settings.class }}"
+  >
+    <div class="container">
+      <div
+        {% if count < 2 %}
+          class="d-flex align-items-center justify-content-between tss-one-block-wrapper"
+        {% endif %}
+      >
+        <div class="review-slider-main-header">
+          <h2 class="heading-2 text-center heading-color font-gtsuper mt-0 ">{{ section.settings.heading }}</h2>
+          <p class="subheading fw-200 normal-text value-sans text-center">
+            {{ section.settings.subtext }}
+          </p>
+        </div>
+        <div class="slider-outer-mt40 review-block-bleed">
+          <div
+            class="transformational-scents-slider {% if count > 2 %}tss-slider{% endif %}"
+            data-total-slides="{{ count }}"
+          >
+            {% for block in section.blocks %}
+              <div class="tss-block" data-slide-index="{{ forloop.index0 }}">
+                <div class="tss-image position-relative">
+                  <picture>
+                    {% assign image = block.settings.blockImage %}
+                    {% assign mimage = block.settings.mBlockImage %}
+
+                    <source media="(min-width:769px)" srcset="{{ image | img_url: '300x'}}">
+                    <source media="(max-width:768px)" srcset="{{ mimage | img_url: '300x' }}">
+                    <img
+                      data-id="{{image.id}}"
+                      class="img-responsive w-100 h-auto lazy"
+                      src="{{ image | img_url: '300x'}}"
+                      width="400"
+                      height="300"
+                      alt="{{ image.alt }}"
+                    >
+                  </picture>
+                  {% if block.settings.tag != blank %}
+                    <span class="tss-tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                </div>
+                <div class="tss-content">
+                  {% assign review_link = block.settings.review_link %}
+                  <p class="review-review font-lausanne text-color normal-text">{{ block.settings.review }}</p>
+                  {% if review_link %}<a href="{{ review_link }}">{% endif %}
+                  <h3 class="review-name font-lausanne name-color">{{ block.settings.name }}</h3>
+                  {% if review_link %}</a>{% endif %}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Progress Bar for Mobile -->
+          {% if count > 1 %}
+            <div class="tss-progress-container">
+              <div class="tss-progress-bar">
+                <div class="tss-progress-fill" data-total="{{ count }}"></div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const progressFill = document.querySelector('.tss-progress-fill');
+
+    if (!progressFill) return;
+
+    const totalSlides = parseInt(progressFill.dataset.total);
+
+    // Global function to update progress bar
+    window.updateReviewProgress = function (slideIndex) {
+      console.log('Slide:', slideIndex, 'of', totalSlides);
+
+      const segmentWidth = 100 / totalSlides; // 20% for 5 slides
+
+      // Check container width
+      const progressBar = progressFill.parentElement;
+      const containerWidth = progressBar.offsetWidth;
+
+      // Calculate position in pixels relative to container
+      const positionPercent = slideIndex * segmentWidth; // 0%, 20%, 40%, 60%, 80%
+      const positionPixels = (positionPercent / 100) * containerWidth; // Convert to pixels
+
+      console.log('Width:', segmentWidth + '%', 'Position:', positionPercent + '%');
+      console.log('Position in pixels:', positionPixels + 'px', 'of', containerWidth + 'px');
+      console.log('Right edge will be at:', positionPixels + (containerWidth * segmentWidth) / 100 + 'px');
+
+      // Set width and position using pixels for transform
+      progressFill.style.width = segmentWidth + '%';
+      progressFill.style.transform = 'translateX(' + positionPixels + 'px)';
+
+      // Debug: Check what's actually applied
+      setTimeout(function () {
+        const computedTransform = window.getComputedStyle(progressFill).transform;
+        const computedWidth = window.getComputedStyle(progressFill).width;
+        console.log('Computed transform:', computedTransform);
+        console.log('Computed width:', computedWidth);
+      }, 100);
+    };
+
+    // Initialize progress bar to first slide
+    window.updateReviewProgress(0);
+
+    // Function to connect to Slick when jQuery is available
+    function connectToSlider() {
+      // Check multiple jQuery variations
+      const jq = window.$ || window.jQuery || window.jquery;
+
+      if (jq) {
+        console.log('jQuery found! Connecting to slider...');
+        console.log('Slider elements found:', jq('.tss-slider').length);
+
+        // Connect to Slick events
+        jq('.tss-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+          window.updateReviewProgress(nextSlide);
+        });
+
+        return true; // Successfully connected
+      } else {
+        console.log('jQuery not yet available, will retry...');
+        return false; // Failed to connect
+      }
+    }
+
+    // Try connecting immediately
+    if (!connectToSlider()) {
+      // If jQuery not available, keep trying
+      let attempts = 0;
+      const maxAttempts = 10;
+
+      const checkForjQuery = setInterval(function () {
+        attempts++;
+        console.log('Checking for jQuery attempt:', attempts);
+
+        if (connectToSlider() || attempts >= maxAttempts) {
+          clearInterval(checkForjQuery);
+          if (attempts >= maxAttempts) {
+            console.log('jQuery never loaded, slider events may not work');
+          }
+        }
+      }, 500); // Check every 500ms
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Review Block Slider PF357",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sectionId",
+      "label": "Section ID"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background color"
+    },
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Sub Heading"
+    },
+    {
+      "type": "header",
+      "content": "Color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading Color",
+      "default": "#0c231f"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#424242"
+    },
+    {
+      "type": "color",
+      "id": "name_color",
+      "label": "Name Color",
+      "default": "#212121"
+    },
+    {
+      "type": "color",
+      "id": "review_bg",
+      "label": "Review Block Background"
+    },
+    {
+      "type": "header",
+      "content": "Slider Progress Bar"
+    },
+    {
+      "type": "checkbox",
+      "id": "progress_bar",
+      "label": "Show Progress Bar",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Reviewer block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "blockImage",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mBlockImage",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Reviewer Name"
+        },
+        {
+          "type": "url",
+          "id": "review_link",
+          "label": "Reviewer Okendo Link"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review Block Slider PF357"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,617 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_346_QFDUyK": {
+      "type": "announcement-bar-346",
+      "settings": {
+        "class": "",
+        "end_date": "2025-06-26 23:59:59",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#11322c",
+        "text": "WIN A FREE 1-YEAR SUBSCRIPTION",
+        "scrollto": "how-to-enter",
+        "btn-bg": "#f96127",
+        "btn-text": "#ffffff",
+        "annuText": "WIN TODAY",
+        "top": "50",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_343_r7NhF7": {
+      "type": "banner-343",
+      "blocks": {
+        "image_Y8pQmb": {
+          "type": "image",
+          "settings": {
+            "desktop_img": "shopify://shop_images/Hero_Image_-_Desktop_a6d035ad-f07e-4663-ae81-9ee0e8f67875.jpg",
+            "mobile_img": "shopify://shop_images/Hero_Image_-_Mobile_c376f053-89fa-4008-ab46-99493bae2085.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "image_Y8pQmb"
+      ],
+      "custom_css": [
+        ".slick-dots {display: none !important;}",
+        ".banner-section-wrapper {background: linear-gradient(90deg, #f0ac88 7.57%, #edc6a2 90.9%);}",
+        "@media (max-width: 500px) {img {min-height: 400px; }}"
+      ],
+      "settings": {
+        "bg": "#fffac8",
+        "txt-color": "#212121",
+        "heading": "Could you be the<br class=\"desktop-hide\"><span class=\"font-gtsuperItalic\"> lucky one</span> today?",
+        "sub_heading": "Sign up below for a chance to win a <b>FREE</b> annual subscription to our seasonal membership!",
+        "btn-bg": "#11322c",
+        "btn-txt-color": "#ffffff",
+        "button_label": "CLAIM YOUR CHANCE TODAY",
+        "button_link": "how-to-enter",
+        "top": "50",
+        "showreview": false,
+        "star_color": "",
+        "star_text_color": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "image_with_text_3_UG3pHB": {
+      "type": "image-with-text-346",
+      "custom_css": [
+        ".image-with-text-2 {background: linear-gradient(90deg, #f0ac88 7.57%, #edc6a2 90.9%);}",
+        "@media (max-width: 768px) {.heading-2 {text-align: center; font-size: 32px !important; } .heading-2 + div {text-align: center; }}"
+      ],
+      "settings": {
+        "className": "",
+        "textcolor": "#212121",
+        "background": "#ffffff",
+        "width": "w-90",
+        "layout": false,
+        "heading": "A year of natural cleaning,<br class=\"desktop-hide\"> on us",
+        "image": "shopify://shop_images/Prizes_-_Desktop.png",
+        "mimage": "shopify://shop_images/Prizes_-_Mobile.png",
+        "details": "Match your home to each season with 4 deliveries, including 13 seasonal scents, a glass bottle and cloth",
+        "heading-position": false,
+        "content-position": false
+      }
+    },
+    "how_to_enter_JqFdNE": {
+      "type": "how-to-enter",
+      "blocks": {
+        "text_VMYtKP": {
+          "type": "text",
+          "settings": {
+            "heading": "Fill out the form on this page"
+          }
+        },
+        "text_Np6GjN": {
+          "type": "text",
+          "settings": {
+            "heading": "A winner is chosen at random every day for 14 days"
+          }
+        },
+        "text_ctn9Ub": {
+          "type": "text",
+          "settings": {
+            "heading": "Winners are notified within 48 hours via email"
+          }
+        },
+        "text_J9nBx6": {
+          "type": "text",
+          "settings": {
+            "heading": "Receive a FREE annual Seasonal subscription"
+          }
+        }
+      },
+      "block_order": [
+        "text_VMYtKP",
+        "text_Np6GjN",
+        "text_ctn9Ub",
+        "text_J9nBx6"
+      ],
+      "custom_css": [
+        ".btn {max-width: 100%; width: 100%; background-color: #f96127 !important;}"
+      ],
+      "settings": {
+        "background_color": "#fffac8",
+        "heading": "How to enter",
+        "btn_label": "ENTER THE DRAW NOW",
+        "btn_link": "javascript:void(0);",
+        "btn_bg": "#f96127",
+        "color": "#ffffff",
+        "tc_label": "See full T&Cs here",
+        "tc_link": "shopify://pages/seasonalannualgiveaway-terms-of-services"
+      }
+    },
+    "revolutionise_zz3iQ6": {
+      "type": "revolutionise",
+      "blocks": {
+        "text_zHWRTU": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Image_01_f6abab7e-5af1-4d94-a72c-c2bb4ab661f5.png",
+            "heading": "“It makes cleaning a joy and my whole house smells divine.”",
+            "user_name": "Steph"
+          }
+        },
+        "text_rCRnRa": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Image_02_eed5f8fa-d732-4976-bf67-8dc40df4c383.png",
+            "heading": "\"It’s such a treat to clean with something that leaves your space feeling fresh and fragrant.\"",
+            "user_name": "Adam"
+          }
+        },
+        "text_FjiTgj": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Image_03.png",
+            "heading": "\"Beautiful fragrances that fill each room and I find actually lift my spirits.\"",
+            "user_name": "Julia"
+          }
+        },
+        "text_Pk8z97": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Image_04.png",
+            "heading": "\"I’m obsessed !! Fantastic product .. loving it.\"",
+            "user_name": "Karlie"
+          }
+        },
+        "text_NGC78t": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Image_05.png",
+            "heading": "\"The product is just out of this world, the fragrances are beautiful making cleaning a joy.\"",
+            "user_name": "Sammi"
+          }
+        }
+      },
+      "block_order": [
+        "text_zHWRTU",
+        "text_rCRnRa",
+        "text_FjiTgj",
+        "text_Pk8z97",
+        "text_NGC78t"
+      ],
+      "custom_css": [
+        ".sub-heading {color: #424242;}"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Revolutionise the way you clean forever",
+        "subheading": "See why over 400,000 people have switched to Purdy & Figg"
+      }
+    },
+    "image_with_listing_gAWD66": {
+      "type": "image-with-listing",
+      "blocks": {
+        "text_ehqGFz": {
+          "type": "text",
+          "settings": {
+            "heading": "Powerful clean"
+          }
+        },
+        "text_QEYzKQ": {
+          "type": "text",
+          "settings": {
+            "heading": "100% pure essential oil blends"
+          }
+        },
+        "text_ayQGtm": {
+          "type": "text",
+          "settings": {
+            "heading": "Non-toxic ingredients"
+          }
+        },
+        "text_i7aafF": {
+          "type": "text",
+          "settings": {
+            "heading": "Cleans 15+ surfaces"
+          }
+        }
+      },
+      "block_order": [
+        "text_ehqGFz",
+        "text_QEYzKQ",
+        "text_ayQGtm",
+        "text_i7aafF"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.image-with-listing .image-listing li {background-position: 0 13px; }}"
+      ],
+      "settings": {
+        "bgImage": "shopify://shop_images/BG---Desktop.png",
+        "heading": "One simple cleaning kit that does it all",
+        "image": "shopify://shop_images/b_36e066c5-4698-420b-8999-ff4c87e2f090.png",
+        "icon": "shopify://shop_images/Tick_82ab0702-7f1e-4ca3-9f1d-3af426533376.png",
+        "addScrollBtn": false,
+        "scrollBtnText": "GET YOUR OFFER",
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "full_width_image_text_Ppn6wx": {
+      "type": "full-width-image-text",
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px; font-size: 32px !important;}",
+        ".normal-text {font-size: 16px;}",
+        ".normal-text b {font-size: 18px;}",
+        "@media (max-width: 768px) {.normal-text {font-size: 14px; } .normal-text b {font-size: 16px; }}"
+      ],
+      "settings": {
+        "className": "about-pf",
+        "textcolor": "#212121",
+        "background": "#ffffff",
+        "backgroundImage": "shopify://shop_images/BG_-_Desktop.jpg",
+        "layout": true,
+        "heading": "Meet our founders",
+        "image": "shopify://shop_images/Founders.jpg",
+        "details": "<b class=\"fw-500 d-block mb-2\">Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning more effective, more effortless, and more enjoyable.</b>\nFrom a Hertfordshire garage to millions of homes, their multipurpose spray, scented with essential oils, is on the way to changing the way we all feel about cleaning - for good."
+      }
+    },
+    "press_EWzPac": {
+      "type": "press",
+      "blocks": {
+        "text_HDkHQe": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Frame_3.png",
+            "heading": "The best smelling",
+            "user_name": "“This is so brilliant - it's a delicious-smelling cleaner that you can use on everything.”"
+          }
+        },
+        "text_iptHGF": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Frame_2.png",
+            "heading": "The most enjoyable",
+            "user_name": "“If you’re looking for luxurious cleaning vibes then Purdy & Figg take home the gold.”"
+          }
+        },
+        "text_RhT8Rb": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Frame_1.png",
+            "heading": "The hardest working",
+            "user_name": "“It left our tiles spotless and the cleaner cut through grease on our countertop without leaving any sticky residue behind.”"
+          }
+        },
+        "text_HDkHQe1": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Frame_3.png",
+            "heading": "The best smelling",
+            "user_name": "“This is so brilliant - it's a delicious-smelling cleaner that you can use on everything.”"
+          }
+        },
+        "text_iptHGF2": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Frame_2.png",
+            "heading": "The most enjoyable",
+            "user_name": "“If you’re looking for luxurious cleaning vibes then Purdy & Figg take home the gold.”"
+          }
+        },
+        "text_RhT8Rb3": {
+          "type": "text",
+          "settings": {
+            "user_image": "shopify://shop_images/Frame_1.png",
+            "heading": "The hardest working",
+            "user_name": "“It left our tiles spotless and the cleaner cut through grease on our countertop without leaving any sticky residue behind.”"
+          }
+        }
+      },
+      "block_order": [
+        "text_HDkHQe",
+        "text_iptHGF",
+        "text_RhT8Rb",
+        "text_HDkHQe1",
+        "text_iptHGF2",
+        "text_RhT8Rb3"
+      ],
+      "settings": {
+        "background_color": "#ffffff",
+        "heading": "Hear what the papers are saying about us...",
+        "btn_label": "CLAIM YOUR CHANCE TODAY",
+        "btn_link": "how-to-enter",
+        "btn_bg": "#11322c",
+        "color": "#ffffff"
+      }
+    },
+    "global_product_310_LYXXAC": {
+      "type": "global-product-342",
+      "blocks": {
+        "text_AdcFYR": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Extra Summer Lawn concentrate <b>(<del>£8</del> FREE)</b>"
+          }
+        },
+        "text_YTfPWa": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 seasonal concentrates <b>(\n<del>£21</del> £15)</b>"
+          }
+        },
+        "text_dim9LA": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Glass Bottle for Life &amp; cloth <b>(<del>£19</del> FREE)</b>"
+          }
+        },
+        "text_nRtW8X": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Seasonal membership: 3 scents every 90 days"
+          }
+        },
+        "product_image_tNN9yU": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_01_0d83ffff-8393-4da6-a090-b87a479439fc.jpg",
+            "mimage": "shopify://shop_images/Mobile_01_50d4fbad-58df-4868-af80-3f6aff33b3ce.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_GzG8Ca": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_02_f23ba358-6935-41f2-9c31-3dd9a1eae377.jpg",
+            "mimage": "shopify://shop_images/Mobile_02_a3c44e3e-0b23-43ea-9abc-54dd4d498dc4.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_bGEziV": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_03_50121d11-a6f3-4206-bf97-93b650b5967e.jpg",
+            "mimage": "shopify://shop_images/Mobile_03_0992039d-8073-4f09-9b18-42647dc4bd99.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_AHrrNU": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_04_bf48ea3e-5daf-42df-bb47-05fc7e174de3.jpg",
+            "mimage": "shopify://shop_images/Mobile_04_4babd57b-7ce5-4768-8fbc-4709dd1c1f68.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_kN4gBG": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Desktop_05_81ad395b-d6cd-4a09-9da5-33d7884ed979.jpg",
+            "mimage": "shopify://shop_images/Mobile_05_20ae4cb2-ea50-47ad-aec3-8848c6729c8e.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_AdcFYR",
+        "text_YTfPWa",
+        "text_dim9LA",
+        "text_nRtW8X",
+        "product_image_tNN9yU",
+        "product_image_GzG8Ca",
+        "product_image_bGEziV",
+        "product_image_AHrrNU",
+        "product_image_kN4gBG"
+      ],
+      "custom_css": [
+        ".gp-5-points {padding-right: 0;}",
+        ".global-product-19-wrapper .gp-4-details .blue-btn .deleted-price {color: #ddd !important;}",
+        ".new-product-gallery-wrapper-thumb {position: relative; bottom: -5px;}",
+        "del {color: #9e9e9e;}",
+        "@media (max-width: 768px) {.stars-img-review span {font-size: 12px !important; } .global-product-5 .star-img {width: 12px; } .gp-5-variants > li {margin: 5px 8px 5px 0; } .global-product-5 .heading-2-wrapper {display: block; padding-top: 32px !important; margin-bottom: 15px !important; } .m-text-left {text-align: center !important; }}"
+      ],
+      "settings": {
+        "link-section": true,
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": true,
+        "guaranteeDescription": "30-day money back guarantee",
+        "guaranteeTextColor": "#212121",
+        "scrollto": "",
+        "background": "#fbf1e8",
+        "p_id": "starterkit-product",
+        "landingproduct": "seasonal-starter-kit-summer-free-summer-lawn",
+        "varaiantid": "55410889785724",
+        "sellingid": "4186833123",
+        "sku": "FG1227c",
+        "discount": "SEASONAL346C",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "className": "gp-5-ab global-product-19-wrapper  gp-346",
+        "mainheading": "Can't wait?<br class=\"desktop-hide\"> Buy a Starter Kit today",
+        "mainsubheading": "Save £33 today with this limited time offer",
+        "choosescent": "",
+        "heading": "Summer Starter Kit",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "48.00",
+        "btn_bg": "#11322c",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "38,325",
+        "reviews_desktop": "1,734",
+        "heading-position": false,
+        "before-mobile": false,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "faq_section_reskin_ALn44g": {
+      "type": "faq-section-reskin",
+      "blocks": {
+        "text_wwqHGw": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "How do I know if I’ve won?",
+            "faq-ans": "<p>At the end of each day within the 14-day period, our customer service team will choose one lucky winner at random who will receive the Summer Seasonal Starter Kit for free and confirmation of the following year’s worth of Purdy & Figg seasonal concentrates.</p>"
+          }
+        },
+        "text_KaAzJT": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What happens if I win?",
+            "faq-ans": "<p>Each winner will receive our Summer Seasonal Starter Kit, followed by three seasonal concentrates delivered every three months for three cycles thereafter. All for free.</p>"
+          }
+        },
+        "text_RAWacP": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Can I enter more than once?",
+            "faq-ans": "<p>Everyone deserves a fair chance of winning, so only one entry per user (email address) will be deemed valid.</p>"
+          }
+        },
+        "text_nfmURN": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Where can I read the full terms?",
+            "faq-ans": "<p>You can read the full Terms & Conditions <a href=\"/pages/seasonalannualgiveaway-terms-of-services\" target=\"_blank\" title=\"P&F Seasonal Giveaway - Annual Subscription - T&Cs\"><strong>here</strong></a></p>"
+          }
+        },
+        "text_QygHrY": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of cleaning concentrate into your Bottle for Life and slowly fill to the top (just below the neck) with tap water. Give the bottle a gentle shake to mix, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "text_HkQc97": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to say that Counter Clean is pH neutral, which means it’s safe to use on most surfaces. That includes softer materials like aluminium, wood, stone, quartz and other sealed surfaces. We do recommend patch testing first on any particularly sensitive or precious surfaces you’re concerned about. Just spray onto a cloth and wipe a small patch to see the results. </p>"
+          }
+        },
+        "text_TLFd9j": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>A 300ml bottle of Counter Clean (including one 20ml concentrate) contains about 230 sprays. A typical household will get through one of our 300ml bottles in two to four weeks, unless you get a bit addicted to wiping down your surfaces like we have!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "text_wwqHGw",
+        "text_KaAzJT",
+        "text_RAWacP",
+        "text_nfmURN",
+        "text_QygHrY",
+        "text_HkQc97",
+        "text_TLFd9j"
+      ],
+      "custom_css": [
+        ".green-btn {background-color: #11322c !important; margin-top: 50px !important;}",
+        ".heading-2 {letter-spacing: 0px;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: 32px !important; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#d1e6b1",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": true,
+        "scrollBtnText": "CLAIM YOUR CHANCE TODAY",
+        "scrollto": "how-to-enter",
+        "top": "120",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_kGNHfT": {
+      "type": "footer-2",
+      "custom_css": [
+        "@media (max-width: 768px) {.footer-2 .d-flex > div {text-align: left; }}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_346_QFDUyK",
+    "banner_343_r7NhF7",
+    "image_with_text_3_UG3pHB",
+    "how_to_enter_JqFdNE",
+    "revolutionise_zz3iQ6",
+    "image_with_listing_gAWD66",
+    "full_width_image_text_Ppn6wx",
+    "press_EWzPac",
+    "global_product_310_LYXXAC",
+    "faq_section_reskin_ALn44g",
+    "footer_2_kGNHfT"
+  ]
+}

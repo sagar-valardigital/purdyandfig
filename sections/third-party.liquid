@@ -1,0 +1,182 @@
+<style>
+	.thd-container {
+		padding: 80px 112px;
+		background: white;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 32px;
+		display: flex;
+	}
+	.thd-section {
+		align-self: stretch;
+		justify-content: flex-start;
+		align-items: center;
+		gap: 32px;
+		display: flex;
+	}
+	.thd-section img {
+		width: calc(55% - 16px);
+		border-radius: 4px;
+	}
+	.thd-level-one {
+		flex: 1 1 0;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 24px;
+		display: flex;
+		width: calc(45% - 16px);
+	}
+	.thd-level-two {
+		max-width: 488px;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 16px;
+		display: flex;
+	}
+	.thd-heading-block {
+		align-self: stretch;
+		justify-content: flex-start;
+		align-items: flex-start;
+		display: flex;
+	}
+	.thd-heading {
+		flex: 1 1 0;
+		color: {{ section.settings.heading_color }};
+		font-size: 40px;
+		font-family: "GT Super";
+		font-weight: 400;
+		line-height: 50px;
+		word-wrap: break-word;
+	}
+	.thd-summary-block {
+		align-self: stretch;
+		justify-content: center;
+		align-items: center;
+		display: flex;
+	}
+	.thd-summary {
+		flex: 1 1 0;
+		justify-content: center;
+		display: flex;
+		flex-direction: column;
+		color: {{ section.settings.summary_color }};
+		font-size: 18px;
+		font-family: "Lausanne";
+		font-weight: 200;
+		line-height: 27px;
+		word-wrap: break-word;
+	}
+	.thd-desktop {
+		display: none;
+	}
+	.thd-mobile {
+		display: flex;
+	}
+
+	@media (max-width: 768px) {
+		.thd-container {
+			padding: 32px 16px;
+		}
+		.thd-section {
+			flex-direction: column;
+		}
+		.thd-section img, .thd-level-one {
+			width: 100%;
+		}
+		.thd-heading {
+			font-size: 32px;
+			line-height: 40px;
+		}
+		.thd-summary {
+			font-size: 16px;
+			line-height: 24px;
+		}
+		.thd-mob img {
+			margin-bottom: 16px;
+		}
+		.thd-desktop {
+			display: flex;
+		}
+		.thd-mobile {
+			display: none;
+		}
+	}
+</style>
+
+<div class="thd-container">
+	<div class="thd-section thd-mobile">
+		<img src="{{ section.settings.desk_image | image_url: width: 1200 }}" width="" height="" class="img-responsive h-auto" />
+		<div class="thd-level-one">
+			<div class="thd-level-two">
+				<div class="thd-heading-block">
+					<div class="thd-heading">{{ section.settings.main_heading }}</div>
+				</div>
+				<div class="thd-summary-block">
+					<div class="thd-summary">{{ section.settings.summary }}</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="thd-section thd-desktop">
+		<div class="thd-heading-block">
+			<div class="thd-heading">{{ section.settings.main_heading }}</div>
+		</div>
+		<div class="thd-mob">
+			<img src="{{ section.settings.mob_image | image_url: width: 1200 }}" width="" height="" class="img-responsive h-auto" />
+			<div class="thd-summary-block">
+				<div class="thd-summary">{{ section.settings.summary }}</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% schema %}
+{
+  "name": "Third party",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background",
+      "label": "Select background color"
+    },
+    {
+      "type": "color",
+      "id": "heading_color",
+      "label": "Heading color"
+    },
+    {
+      "type": "html",
+      "id": "main_heading",
+      "label": "Heading"
+    },
+		{
+      "type": "color",
+      "id": "summary_color",
+      "label": "Summary color"
+    },
+    {
+      "type": "html",
+      "id": "summary",
+      "label": "Summary"
+    },
+		{
+      "type": "image_picker",
+      "id": "desk_image",
+      "label": "Desktop image"
+    },
+		{
+      "type": "image_picker",
+      "id": "mob_image",
+      "label": "Mobile image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Third party"
+    }
+  ]
+}
+{% endschema %}

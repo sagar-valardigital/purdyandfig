@@ -1,0 +1,112 @@
+<script type="text/javascript">
+
+document.addEventListener('DOMContentLoaded', function() {
+  var buyNowButtons = document.querySelectorAll('.checkout-starterkit-btn');
+  var discount = 'FREESPA5';
+  buyNowButtons.forEach(function(buyNowButton, index) {
+    buyNowButton.addEventListener('click', function() {
+    // Add 'loading' class or any other indication that the process has started
+    buyNowButton.classList.add('loading');
+
+    // Initialize an array to hold the items to add to the cart
+    var items = [];
+
+    var section_id = buyNowButton.dataset.sectionId;
+
+    // Get the main product details from the button dataset
+    var mainProduct = {
+      id: parseInt(buyNowButton.dataset.productId),
+      quantity: parseInt(buyNowButton.dataset.quantity),
+      selling_plan: parseInt(buyNowButton.dataset.sellingPlan)
+    };
+      var mainProductTwo = {
+      id: parseInt(buyNowButton.dataset.productTwoId),
+      quantity: parseInt(buyNowButton.dataset.quantity),
+      selling_plan: parseInt(buyNowButton.dataset.sellingPlanTwo)
+    };
+
+    // Add the main product to the items array
+    items.push(mainProduct,mainProductTwo);
+
+    // Find all checkboxes with the class 'upsell_checkbox'
+    var upsellCheckboxes = document.querySelectorAll('#'+section_id+' '+'.upsell_checkbox');
+
+    // Loop through the checkboxes and add checked items to the items array
+    upsellCheckboxes.forEach(function(checkbox) {
+      if (checkbox.checked) {
+        items.push({
+          id: parseInt(checkbox.dataset.productId),
+          quantity: parseInt(checkbox.dataset.quantity)
+        });
+      }
+    });
+
+    // Prepare the data object with the items array
+    var data = { items: items };
+
+    // Fetch discount information from cart.js
+    fetch('/cart.js')
+    .then(response => response.json())
+    .then(cart => {
+        // Initialize a set to hold all unique discount titles
+        let allDiscounts = new Set();
+
+        // Loop through each item and add their discounts to the set
+        cart.items.forEach(item => {
+            item.discounts.forEach(discountItem => {
+                allDiscounts.add(discountItem.title);
+            });
+        });
+
+        // Convert the set of discounts to a comma-separated string
+        let discountsString = Array.from(allDiscounts).join(',');
+
+        // Update 'discount' if different
+        if (discountsString && discount !== discountsString) {
+            if (discount) {
+                discount = discount + ',' + discountsString;
+            } else {
+                discount = discountsString;
+            }
+        }
+
+         // Make the call to Shopify's add.js with the data object
+    fetch('/cart/add.js', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+      // Handle success
+      console.log('Items added to cart:', data);
+      // Remove the 'loading' class
+      buyNowButton.classList.remove('loading');
+      // Redirect to the checkout page
+      var discountCode = discount ;
+      console.log(discountCode);
+      var checkoutURL = '/checkout?discount=' + discountCode;
+      window.location.href = checkoutURL;
+     
+    })
+    .catch((error) => {
+      // Handle errors here
+      console.error('Error adding items to cart:', error);
+      // Remove the 'loading' class
+      buyNowButton.classList.remove('loading');
+    });
+    })
+    .catch((error) => {
+        $(event.target).removeClass('loading');
+        console.error('Failed to fetch cart data:', error);
+    });
+
+    
+   
+  });
+  })
+});  
+
+</script>

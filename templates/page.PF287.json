@@ -1,0 +1,927 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_GwDyAN": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_Kqp7cd": {
+          "type": "product",
+          "settings": {
+            "product": "gentle-chamomile-refill-pack",
+            "variant": "54956092752252",
+            "selling_plan": "",
+            "discount": "GCREF287",
+            "price": "£20.40",
+            "compare_price": "£24.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_wCLnbB": {
+          "type": "product",
+          "settings": {
+            "product": "lemon-marjoram-refill-pack",
+            "variant": "54956175950204",
+            "selling_plan": "",
+            "discount": "L&MREF287",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_EeWJdK": {
+          "type": "product",
+          "settings": {
+            "product": "orange-petitgrain-refill-pack",
+            "variant": "54956168315260",
+            "selling_plan": "",
+            "discount": "O&PREF287",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_fM8bBP": {
+          "type": "product",
+          "settings": {
+            "product": "patchouli-cedarwood-refill-pack",
+            "variant": "54956181946748",
+            "selling_plan": "",
+            "discount": "P&CREF287",
+            "price": "£17.85",
+            "compare_price": "£21.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_NAcT8B": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "variant": "54831041282428",
+            "selling_plan": "",
+            "discount": "ODLMEMBER287",
+            "price": "£13.56",
+            "compare_price": "£16.95",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_FfpqCh": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant": "54818998452604",
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMMEMBER287",
+            "price": "£15.00",
+            "compare_price": "£40.00",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_Kqp7cd",
+        "product_wCLnbB",
+        "product_EeWJdK",
+        "product_fM8bBP",
+        "product_NAcT8B",
+        "product_FfpqCh"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "announcement_bar_reskin_9fjJ8d": {
+      "type": "announcement-bar-225",
+      "settings": {
+        "fixed": true,
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Limited time offer: Unlock even greater savings on member offers",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": true,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_3EaRiV": {
+      "type": "banner-10",
+      "settings": {
+        "txt-color": "#0a1e1a",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktop_b156c9b8-8f6e-4e25-b084-f197984898e6.jpg",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobile_464dcca9-536d-4161-9726-69a0ab2f5467.jpg",
+        "heading": "Save up to 62% on gifting bundles",
+        "sub_heading": "Member Exclusive: The more you buy, the more you save on NEW Gentle Chamomile bundles",
+        "btn-bg": "#0a1e1a",
+        "btn-txt-color": "#ffffff",
+        "button_label": "GET YOUR OFFER",
+        "button_link": "starterkit-product",
+        "top": "-120",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_19_cPYKAd": {
+      "type": "global-product-225",
+      "blocks": {
+        "variant_dBichG": {
+          "type": "variant",
+          "disabled": true,
+          "settings": {
+            "outofstock": false,
+            "class": "",
+            "varCount": "1",
+            "text_heading": "Seasonal",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Seasonal",
+            "eventValue": "product_anchor",
+            "optionIndex": "1",
+            "sku": "FG1208c"
+          }
+        },
+        "variant_FCCqdL": {
+          "type": "variant",
+          "disabled": true,
+          "settings": {
+            "outofstock": false,
+            "class": "",
+            "varCount": "4",
+            "text_heading": "Signature",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "hp",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "2",
+            "sku": "FG1096"
+          }
+        },
+        "product_image_pAeVQQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_01_-_Desktop_01_3.20.jpg",
+            "mimage": "shopify://shop_images/Variant_01_-_Mobile_01_3.20.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_TAwqPa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_01_-_Desktop_02_bbb60dc5-f421-44a4-9031-3f0dcd62d469.jpg",
+            "mimage": "shopify://shop_images/Variant_01_-_Mobile_02_853cc701-e8ab-47d2-8a26-0a38c43e9d51.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_phNNax": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_01_-_Desktop_03_5aaa4284-1294-45db-90a4-0a9c9f78943a.jpg",
+            "mimage": "shopify://shop_images/Variant_01_-_Mobile_03_f62cf310-2887-4ecf-b7a9-67eeccaaffd2.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_bw4xtz": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_01_-_Desktop_04_98f1191d-be53-4313-b0ba-74bdb84ab2fd.jpg",
+            "mimage": "shopify://shop_images/Variant_01_-_Mobile_04_b2a87699-f93e-4fa8-9108-27703f557931.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_wzpCJp": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Variant_01_-_Desktop_05_f17cd979-93d6-48d0-8ccd-3d3eb4ea915b.jpg",
+            "mimage": "shopify://shop_images/Variant_01_-_Mobile_05_cb126d46-53a4-45a6-aeb7-c0f743d8410a.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_QykkHC": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Variant_02_-_Desktop_01_-_Product_2.jpg",
+            "mimage_2": "shopify://shop_images/Variant_02_-_Mobile_01_-_Product_2.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_djFrbn": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Variant_02_-_Desktop_02.jpg",
+            "mimage_2": "shopify://shop_images/Variant_02_-_Mobile_02.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_DA6fi9": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Variant_02_-_Desktop_03.jpg",
+            "mimage_2": "shopify://shop_images/Variant_02_-_Mobile_03.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_iA6AHF": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Variant_02_-_Desktop_04.jpg",
+            "mimage_2": "shopify://shop_images/Variant_02_-_Mobile_04.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_MQjXK6": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Variant_02_-_Desktop_05.jpg",
+            "mimage_2": "shopify://shop_images/Variant_02_-_Mobile_05.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image3_RjK8NM": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_03_-_Desktop_01_-_Product_3.jpg",
+            "mimage_3": "shopify://shop_images/Variant_03_-_Mobile_01_-_Product_3.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_6BgYWa": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_03_-_Desktop_02.jpg",
+            "mimage_3": "shopify://shop_images/Variant_03_-_Mobile_02.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_aMd7Hb": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_03_-_Desktop_03.jpg",
+            "mimage_3": "shopify://shop_images/Variant_03_-_Mobile_03.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_igQq8Q": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_03_-_Desktop_04.jpg",
+            "mimage_3": "shopify://shop_images/Variant_03_-_Mobile_04_1e4cfbe8-60d8-4d42-80c5-7ed6fe633743.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_EpBjQt": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Variant_03_-_Desktop_05.jpg",
+            "mimage_3": "shopify://shop_images/Variant_03_-_Mobile_05.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "text_a6hNWF": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 x limited edition Gentle Chamomile refills"
+          }
+        },
+        "text_tDGEyp": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 x FREE Bottle for Life"
+          }
+        },
+        "text_NMwGbW": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 x FREE Purdy &amp; Figg cloth"
+          }
+        },
+        "point_JzLEFe": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "6 x limited edition Gentle Chamomile refills"
+          }
+        },
+        "point_LWyRT8": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "2 x FREE Bottles for Life"
+          }
+        },
+        "point_hwieEU": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "2 x FREE Purdy &amp; Figg cloths"
+          }
+        },
+        "point_hek83M": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "*Packaged in 2 separate boxes for easy gifting"
+          }
+        },
+        "point3_P6p9Rh": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "9 x limited edition Gentle Chamomile refills"
+          }
+        },
+        "point3_xdVDRD": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "3 x FREE Bottles for Life"
+          }
+        },
+        "point3_hWLMyq": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "3 x FREE Purdy &amp; Figg cloths"
+          }
+        },
+        "point3_zyx6z9": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "Includes FREE delivery"
+          }
+        },
+        "point3_xWcxxN": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "*Packaged in 3 separate boxes for easy gifting"
+          }
+        }
+      },
+      "block_order": [
+        "variant_dBichG",
+        "variant_FCCqdL",
+        "product_image_pAeVQQ",
+        "product_image_TAwqPa",
+        "product_image_phNNax",
+        "product_image_bw4xtz",
+        "product_image_wzpCJp",
+        "product_image2_QykkHC",
+        "product_image2_djFrbn",
+        "product_image2_DA6fi9",
+        "product_image2_iA6AHF",
+        "product_image2_MQjXK6",
+        "product_image3_RjK8NM",
+        "product_image3_6BgYWa",
+        "product_image3_aMd7Hb",
+        "product_image3_igQq8Q",
+        "product_image3_EpBjQt",
+        "text_a6hNWF",
+        "text_tDGEyp",
+        "text_NMwGbW",
+        "point_JzLEFe",
+        "point_LWyRT8",
+        "point_hwieEU",
+        "point_hek83M",
+        "point3_P6p9Rh",
+        "point3_xdVDRD",
+        "point3_hWLMyq",
+        "point3_zyx6z9",
+        "point3_xWcxxN"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}"
+      ],
+      "settings": {
+        "className": "",
+        "toast": true,
+        "collapse": false,
+        "outOfStock": false,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#e7ebea",
+        "mainheading": "Member offer: save 62% on gifting bundles",
+        "heading": "Gentle Chamomile Bundles",
+        "mainsubheading": "Save up to 62% on limited-time gifting offer",
+        "product-selector-heading": "Buy more, save more on <span class=\"fw-600\">one-time </span> gifting bundles",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "plan_heading_1": "1 x Gentle Chamomile Bundle",
+        "variant_id_1": "54955990319484",
+        "selling_plan_1": "",
+        "sku_1": "FG1251",
+        "qty_1": "1",
+        "discountPlan_1": "SPRINGBUNDLE287",
+        "price_1": "20.40",
+        "deleted_price_1": "43",
+        "plan_heading_2": "2 x Gentle Chamomile Bundles*",
+        "variant_id_2": "54955990319484",
+        "selling_plan_2": "",
+        "sku_2": "FG1251",
+        "qty_2": "2",
+        "discountPlan_2": "SPRINGBUNDLE287x2",
+        "price_2": "36.70",
+        "deleted_price_2": "86",
+        "plan_heading_3": "3 x Gentle Chamomile Bundles*",
+        "variant_id_3": "54955990319484",
+        "selling_plan_3": "",
+        "sku_3": "FG1251",
+        "qty_3": "3",
+        "discountPlan_3": "SPRINGBUNDLE287x3",
+        "price_3": "48.90",
+        "deleted_price_3": "129",
+        "plan_heading_4": "",
+        "variant_id_4": "44741022089443",
+        "selling_plan_4": "",
+        "sku_4": "FG1096",
+        "discountPlan_4": "SIGNATURE197dv",
+        "price_4": "15",
+        "deleted_price_4": "40",
+        "plan_heading_5": "",
+        "variant_id_5": "45313882357987",
+        "selling_plan_5": "4240212195",
+        "sku_5": "FG1171",
+        "discountPlan_5": "COMPLETE197dv",
+        "price_5": "30",
+        "deleted_price_5": "80",
+        "plan_heading_6": "",
+        "variant_id_6": "45259308499171",
+        "selling_plan_6": "",
+        "sku_6": "FG1112",
+        "discountPlan_6": "",
+        "price_6": "21",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 6,
+        "funnel_stage": "hp",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "global_product_268_pQ3fLf": {
+      "type": "global-product-268",
+      "disabled": true,
+      "settings": {
+        "showMoneyBackLabel": false,
+        "className": "",
+        "collapse": false,
+        "outOfStock": true,
+        "scrollId": "",
+        "buyonce": true,
+        "isCheckout": false,
+        "scrollto": "",
+        "background": "",
+        "mainheading": "Member offer: save 55% on gifting bundles",
+        "heading": "Gentle Chamomile Bundles",
+        "mainsubheading": "Save up to 55% on our limited time Mother’s Day offer ",
+        "scent_label": "Choose your Scent",
+        "tab_description_1": "Transform your home with new natural scents each season",
+        "tab_description_2": "Our best-selling citrus for a beautifully scented home",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "variant_id_1": "1 x Gentle Chamomile Bundle",
+        "selling_plan_1": "54955978948988",
+        "sku_1": "FG1251",
+        "discountPlan_1": "SPRINGBUNDLE287",
+        "price_1": "24.00",
+        "deleted_price_1": "43",
+        "variant_id_2": "2 x Gentle Chamomile Bundles*",
+        "selling_plan_2": "54955978948988",
+        "sku_2": "FG1251",
+        "discountPlan_2": "SPRINGBUNDLE287x2",
+        "price_2": "33.20",
+        "deleted_price_2": "86",
+        "variant_id_3": "3 x Gentle Chamomile Bundles*",
+        "selling_plan_3": "54955978948988",
+        "sku_3": "FG1251",
+        "discountPlan_3": "SPRINGBUNDLE287x3",
+        "price_3": "57.20",
+        "deleted_price_3": "129",
+        "variant_id_4": "",
+        "selling_plan_4": "",
+        "sku_4": "",
+        "discountPlan_4": "",
+        "price_4": "",
+        "deleted_price_4": "",
+        "variant_id_5": "",
+        "selling_plan_5": "",
+        "sku_5": "",
+        "discountPlan_5": "",
+        "price_5": "",
+        "deleted_price_5": "",
+        "variant_id_6": "",
+        "selling_plan_6": "",
+        "sku_6": "",
+        "discountPlan_6": "",
+        "price_6": "",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "add_to_cart",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "product_blocks_qCkjga": {
+      "type": "shopify-product-blocks",
+      "blocks": {
+        "product_ECnQ3A": {
+          "type": "product",
+          "settings": {
+            "product": "patchouli-cedarwood-refill-pack",
+            "variant_id": "54956181946748",
+            "sku": "fg1167",
+            "sealing_plan": "",
+            "discount": "P&CREF287",
+            "product_image": "shopify://shop_images/Patchouli_and_Cedarwood.jpg",
+            "isSub": false,
+            "title": "Patchouli & Cedarwood Refills",
+            "saving": "Returning Favourite",
+            "price": "17.85",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_rAx98m": {
+          "type": "product",
+          "settings": {
+            "product": "orange-petitgrain-refill-pack",
+            "variant_id": "54956168315260",
+            "sku": "fg1252",
+            "sealing_plan": "",
+            "discount": "O&PREF287",
+            "product_image": "shopify://shop_images/Orange_and_Petitgrain.jpg",
+            "isSub": true,
+            "title": "Orange & Petitgrain Refills",
+            "saving": "New",
+            "price": "17.85",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_MyaVAW": {
+          "type": "product",
+          "settings": {
+            "product": "lemon-marjoram-refill-pack",
+            "variant_id": "54956175950204",
+            "sku": "FG1128",
+            "sealing_plan": "",
+            "discount": "L&MREF287",
+            "product_image": "shopify://shop_images/Lemon_and_Marjoram.jpg",
+            "isSub": false,
+            "title": "Lemon & Marjoram Refills",
+            "saving": "Returning Favourite",
+            "price": "17.85",
+            "crossprice": "21.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_HW4Ny8": {
+          "type": "product",
+          "settings": {
+            "product": "gentle-chamomile-refill-pack",
+            "variant_id": "54956092752252",
+            "sku": "fg1250",
+            "sealing_plan": "",
+            "discount": "GCREF287",
+            "product_image": "shopify://shop_images/Gentle_Chamomile.jpg",
+            "isSub": false,
+            "title": "Gentle Chamomile Refills",
+            "saving": "Limited Edition",
+            "price": "20.40",
+            "crossprice": "24.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_ECnQ3A",
+        "product_rAx98m",
+        "product_MyaVAW",
+        "product_HW4Ny8"
+      ],
+      "settings": {
+        "reviews": false,
+        "toast": true,
+        "bg": "",
+        "heading": "Add extra spring scents",
+        "subheading": "Grab 15% off our Spring favourites and get free delivery on all orders over £40",
+        "module": "upsell_block"
+      }
+    },
+    "pf119_seasonal_scents_UUe6fb": {
+      "type": "pf181-expend-blocks",
+      "blocks": {
+        "image_GymrGe": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Gentle_Chamomile.png",
+            "mBlockImage": "shopify://shop_images/Gentle_Chamomile.png",
+            "tag": "Limited Edition",
+            "heading": "Gentle Chamomile",
+            "details": "A gentle Roman chamomile oil, symbolising tenderness and love and designed to bring calm to the home.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Roman Chamomile</span><br>\n            Warm, sweet, herbaceous, with a hint of green apple\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_Fcyxqk": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Orange_and_Petitgrain.png",
+            "mBlockImage": "shopify://shop_images/Orange_and_Petitgrain.png",
+            "tag": "New",
+            "heading": "Orange & Petitgrain",
+            "details": "A cheerful blend of orange, grapefruit and petitgrain, inspired by Moroccan orange blossom in early spring.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Orange</span><br>\n            Sweet and citrusy\n        </li>\n       <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Pink Grapefruit</span><br>\n            Sweet and tangy\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Petitgrain</span><br>\n            Citrusy floral, woody, green\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Copaiba</span><br>\n            Gentle and woody\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_MwnAJy": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Patchouli_and_Cedarwood.png",
+            "mBlockImage": "shopify://shop_images/Patchouli_and_Cedarwood.png",
+            "tag": "",
+            "heading": "Patchouli & Cedarwood",
+            "details": "A rich blend of patchouli and cedarwood, inspired by scented wooden chests filled with silk.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">May Chang</span><br>\n            Fresh and citrusy\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Palmarosa</span><br>\n            Sweet and floral-rosy\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Red Cedar </span><br>\n            Woody and sweetly balsamic\n        </li>\n      <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Patchouli </span><br>\n            Rich and herbaceous\n        </li>\n      <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Amyris </span><br>\n            Sweet and woody\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_i9DwU7": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Lemon_and_Marjoram.png",
+            "mBlockImage": "shopify://shop_images/Lemon_and_Marjoram.png",
+            "tag": "",
+            "heading": "Lemon & Marjoram",
+            "details": "A blend of marjoram, clary sage, palmarosa and lemon, inspired by drinking lemonade in the Mediterranean sun.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Lemon</span><br>\n            Light, sharp and fresh\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Sweet marjoram</span><br>\n            Warm, woody, delicately floral\n        </li>\n      <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Palmarosa</span><br>\n            Rosy, grassy and earthy\n        </li>\n      <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Clary sage</span><br>\n            Herbaceous, floral and earthy\n        </li>\n    </ul>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_GymrGe",
+        "image_Fcyxqk",
+        "image_MwnAJy",
+        "image_i9DwU7"
+      ],
+      "custom_css": [
+        ".tss-tag {font-size: 14px; line-height: 1; color: #212121; background: #fbf1e8; border: 1px solid #f2d4b9; border-radius: 4px; padding: 4px;}"
+      ],
+      "settings": {
+        "bgcolor": "#f6e3d1",
+        "class": "show  pf-173-nature mobile-container-0",
+        "linkVariant": "",
+        "heading": "Clean with the delicate scents of spring",
+        "subtext": ""
+      }
+    },
+    "icon_blocks_reskin_QyJ6db": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_6yhndz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_052aceb2-3689-4679-86fd-bc7eb7532cf3.png"
+          }
+        },
+        "iconblocks_WWLqyn": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_9afda10b-0e29-409c-8191-0bbc22a5d588.png",
+            "badge_left_position": -49
+          }
+        },
+        "iconblocks_YXCGmM": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_6yhndz",
+        "iconblocks_WWLqyn",
+        "iconblocks_YXCGmM"
+      ],
+      "settings": {
+        "class": "",
+        "bg": "#fcfaf6",
+        "textcolor": "#0c231f",
+        "heading": "Your member benefits",
+        "show_hide_block": true
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "-120",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>No, this is a buy-once offer just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers. As a member, concentrate refills are always 15% off.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>As long as our limited edition seasonal scents last, so we recommend getting your skates on.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into your account with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to tweak your subscription however you like. You can change what’s in your order, adjust your delivery and billing date, or pause deliveries completely for a bit.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_GwDyAN",
+    "announcement_bar_reskin_9fjJ8d",
+    "banner_10_3EaRiV",
+    "global_product_19_cPYKAd",
+    "global_product_268_pQ3fLf",
+    "product_blocks_qCkjga",
+    "pf119_seasonal_scents_UUe6fb",
+    "icon_blocks_reskin_QyJ6db",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

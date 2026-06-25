@@ -1,0 +1,101 @@
+
+<div class="making-scent-section py-4 {{ section.settings.class }}" style="background:{{ section.settings.bgColor }}">
+        <div class="container">
+            <h2 class="heading-2 text-center theme-text mt-0 mb-3">{{section.settings.heading}}</h2>
+            <div class="choose-scent-block flex-wrap mt-4 mb-4">
+                {% for block in section.blocks %}
+              	<div class="w-33 p-2 ">
+                  
+                    <div class="scent-block scent-citrus">
+                        <div class="scent-img position-relative">
+                          	{% assign Image = block.settings.image | img_url:'500x500'%}
+                            <img loading="lazy" width="500px" height="500px" class="img-responsive w-100" src="{{Image}}" alt="">
+                           <div class="making-scent-text">
+                             <h4 class="my-0 white-text">{{ block.settings.heading }}</h4>
+                            <p class="white-text mb-0">{{ block.settings.details }}</p>
+                           </div>
+                        </div>
+                      
+                    </div>
+                  
+                </div>
+                {%endfor%}
+                
+            </div>
+          {% if section.settings.ctalink %}
+    <div class="text-center mt-2 px-4"><a class="theme-btn btn" href="{{ section.settings.ctalink }}">{{ section.settings.ctalabel }}</a></div>
+                              {% endif %}
+        </div>
+    </div>
+
+{% schema %}
+  {
+    "name": "Making Scent",
+    "settings": [
+	{
+        "type" : "text",
+        "id" : "class",
+        "label" : "Section Class"
+      },
+      {
+        "type" : "color",
+        "id" : "bgColor",
+        "label" : "Background Color",
+        "default" : "#3d5065"
+      },
+{
+      "type": "text",
+      "id": "heading",
+      "label": "Heading"
+    },
+     
+      
+      {
+      "type": "text",
+      "id": "ctalabel",
+      "label": "Button label"
+    },
+      {
+      "type": "url",
+      "id": "ctalink",
+      "label": "Button Link"
+    }
+	],
+	"blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [ 
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Block Heading"
+          },
+		{
+            "type": "image_picker",
+            "id": "image",
+            "label": "Block Image"
+          },
+{
+      "type": "text",
+      "id": "details",
+      "label": "Detail Text"
+    },
+
+{
+      "type": "url",
+      "id": "link",
+      "label": "Add link"
+    }
+        ]
+      }
+	],
+	"presets": [
+		{
+			"name": "Making Scents"
+		}
+	]
+  }
+{% endschema %}
+
+

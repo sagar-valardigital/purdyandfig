@@ -1,0 +1,737 @@
+.value-font .value-pro_,
+.value-pro,
+.lander-benefits-switching .heading-2,
+.lander-wrapper-section .heading-2,
+.lander-other-benefits .heading-2,
+.lander-instagram .heading-2,
+.lander-faq .heading-2 {
+  font-family: "Value-Serif-Pro";
+}
+.value-font .value-sans_,
+.value-sans,
+.logo-wrapper-block.logo-slider p,
+.lander-benefits-switching .heading-4,
+.lander-benefits-switching p,
+.lander-img-text .heading-2,
+.lander-img-text p,
+.lander-wrapper-section .heading-4,
+.lander-wrapper-section p,
+.lander-reviews-section p,
+.lander-reviews-section .heading-4,
+.lander-other-benefits .heading-4,
+.lander-other-benefits p,
+.lander-instagram h2.normal-text,
+.lander-faq details summary,
+.lander-faq details p {
+  font-family: "Value-Sans";
+}
+.click-scroll {
+  cursor: pointer;
+}
+.lander-wrapper-section .heading-2 {
+  max-width: 700px;
+  margin: auto;
+}
+.lander-reviews-section .heading-4 {
+  margin-top: 25px !important;
+}
+.lander-reviews-section .review {
+  border-radius: 7px;
+}
+.lander-bg {
+  position: relative;
+}
+.lander-bg:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 100px;
+  background-color: #e3f3fe;
+}
+.lander-bg > * {
+  position: relative;
+}
+
+/*.bathroom-bliss-page .tabel-section-wrapper{
+  background-color:#fff !important; 
+}
+.bathroom-bliss-page .product-details-table tbody tr:nth-child(odd){
+  background-color:#E3F3FF;
+}
+.bathroom-bliss-page .product-details-table tbody tr td:nth-child(2),
+.bathroom-bliss-page .product-details-table thead tr th:nth-child(2){
+ border-left:1px solid #ccc;
+ border-right:1px solid #ccc; 
+  background:#fff;
+  width:45px;
+}
+.bathroom-bliss-page .product-details-table thead tr th:nth-child(2){
+  border-top:1px solid #ccc;
+}
+.bathroom-bliss-page .product-details-table tbody tr:last-child td:nth-child(2){
+  border-bottom:1px solid #ccc;
+}
+.bathroom-bliss-page .footer{
+  display:none !important;
+}*/
+.bg-light-green {
+  background: #cce9ed !important;
+}
+.add-more-bathroom-product .colletion-products-list {
+  justify-content: center;
+}
+.bathroom-banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.bath-banner-details {
+  padding: 30px;
+  background: #fff;
+  border-radius: 8px;
+  width: 45%;
+}
+.banner-inner-container {
+  max-width: 1240px;
+  padding: 100px 15px;
+  margin: 0px auto;
+}
+.bath-banner-image {
+  width: 100%;
+}
+.bathroom-bliss-page .block-section .heading-4.text-center {
+  text-decoration: underline;
+}
+.bathroom-bliss-page #play-video {
+  width: 120px;
+  height: 120px;
+}
+.add-more-bathroom-product .colletion-products-list .colletion-add,
+.add-more-bathroom-product .colletion-products-list .colletion-add:hover {
+  opacity: 1;
+  background: #3d5065;
+  color: #fff !important;
+}
+.bathroom-bliss-page .btn.theme-btn {
+  width: 100%;
+}
+.bathroom-bliss-page .btn ~ small {
+  display: block;
+  text-align: center;
+}
+.bb-price {
+  font-size: 60px;
+}
+.bb-points {
+  font-size: 20px;
+}
+.bathroom-bliss-page .block-img-wrapper {
+  box-shadow: none;
+}
+.bathroom-bliss-page .table-logo {
+  max-width: 50px;
+}
+.bb-disable {
+  opacity: 0.7;
+  pointer-events: none;
+}
+@media (max-width: 768px) {
+  .bath-banner-image {
+    order: 1;
+  }
+  .bath-banner-image img {
+    width: 100%;
+  }
+  .banner-inner-container {
+    padding-top: 0;
+    padding-bottom: 0px;
+  }
+  .bath-banner-details {
+    order: 2;
+    margin-top: -40px;
+    width: calc(100% - 40px);
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 0 14px #eee;
+  }
+  .bb-product-section > .mobile-padding-y.image-with-text {
+    padding: 0;
+  }
+  .bb-product-section {
+    position: relative;
+  }
+  .bb-product-section .heading-2.theme-text.desktop-hide {
+    position: absolute;
+    width: calc(100% - 40px);
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+  }
+  .bb-product-section .two-women-details {
+    text-align: left;
+    max-width: calc(100% - 40px);
+    margin: -40px auto 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 0 4px #ccc;
+  }
+  .bb-product-section .text-left,
+  .bb-product-section .heading-2 {
+    text-align: center;
+  }
+  .bb-product-section h3.mt-4 {
+    margin-top: 0 !important;
+  }
+  .add-more-bathroom-product .heading-2,
+  .bathroom-banner .heading-2,
+  .bathroom-bliss-page .block-section .heading-2,
+  .bathroom-bliss-page .heading-2 {
+    font-size: 30px;
+  }
+  .bathroom-bliss-page .block-section .heading-4 {
+    font-size: 16px;
+    text-decoration: underline;
+  }
+  .add-more-bathroom-product .colletion-products-list {
+    justify-content: space-between;
+  }
+  .add-more-bathroom-product .colletion-products-list > div {
+    width: 49%;
+  }
+  .add-more-bathroom-product .colletion-products-list > div.bg-white {
+    display: flex;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin: 15px 0;
+  }
+  .bb-last-banner {
+    padding-top: 0 !important;
+    padding-bottom: 20px;
+    background: #cce9ed;
+  }
+  .bg-light-green > .image-with-text {
+    padding: 0;
+  }
+  .bb-points {
+    font-size: 20px;
+  }
+  .bathroom-bliss-page .oke-stars svg {
+    height: 14px;
+  }
+  .bathroom-bliss-page .oke-sr-count {
+    font-size: 14px;
+  }
+  /*   .heading-2{font-size:28px;} */
+  .heading-2.bb-price {
+    font-size: 38px;
+  }
+  .bathroom-bliss-page .lp-blocks .heading-4 {
+    font-size: 22px;
+    text-decoration: none;
+  }
+  .bathroom-bliss-page .lp-blocks {
+    font-size: 18px;
+  }
+  .bathroom-bliss-page .block-section .heading-2 + .heading-4 {
+    font-size: 20px;
+  }
+  .bath-banner-details .heading-2 {
+    text-align: center;
+  }
+  .banner-inner-container {
+    padding: 0;
+  }
+}
+
+/* lander page css */
+.ladder-annoucment-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 0;
+}
+.ladder-annoucment-bar .white-logo {
+  width: 180px;
+}
+.ladder-annoucment-bar .white-logo svg {
+  vertical-align: top;
+}
+.ladder-annoucment-bar .announcement-btn {
+  background: #fff;
+  padding: 8px 20px;
+  color: #435ca7;
+  background: #fff;
+  border-radius: 20px;
+  margin-left: 10px;
+  display: inline-block;
+}
+.checkout-lander-btn {
+  background: #435ca7;
+  border-color: #435ca7 !important;
+  width: 100%;
+  max-width: 400px;
+}
+.lander-banner-wrapper .arrow-bottom {
+  display: block;
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background: #435ca7;
+  border-radius: 50%;
+  bottom: -30px;
+  left: calc(50% - 30px);
+}
+.lander-banner-wrapper .arrow-bottom:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border-left: 3px solid #fff;
+  border-bottom: 3px solid #fff;
+  position: absolute;
+  top: 17px;
+  left: 20px;
+  transform: rotate(-45deg);
+}
+.rich-text__text {
+  max-width: 900px;
+  margin: auto;
+  padding: 10px;
+  text-align: justify;
+  font-size: 20px;
+}
+.logo-wrapper-block .slick-next,
+.logo-wrapper-block .slick-prev {
+  width: 18px;
+}
+.logo-slider .w-25.slick-slide {
+  width: 32%;
+}
+.logo-slider .w-25.slick-slide .block-img-wrapper {
+  max-width: 400px;
+}
+.logo-slider .w-25.slick-slide .block-img-wrapper img {
+  max-width: 250px;
+  margin: auto;
+  width: auto;
+  max-height: 35px;
+}
+.lander-benefits-switching,
+.lander-other-benefits {
+  min-height: auto;
+  position: relative;
+}
+.lander-benefits-switching .block-img-wrapper {
+  max-width: 110px;
+  height: 110px;
+}
+.lander-payment-img {
+  width: 70%;
+}
+.review {
+  margin: 10px 15px;
+}
+.lander-reviews {
+  padding: 15px 0 !important;
+}
+.lander-other-benefits .block-img-wrapper {
+  max-width: 80px;
+  height: 80px;
+}
+.theme-border-btn {
+  background: transparent;
+  border: 2px solid #3d5065;
+  color: #3d5065;
+}
+.arrow-white .slick-arrow {
+  filter: brightness(0) invert(1);
+}
+.lander-mobile-slider .slick-arrow,
+.lander-reviews-slider .slick-arrow {
+  width: 19px;
+}
+.lander-mobile-slider .slick-arrow.slick-next {
+  bottom: 15px;
+  top: auto;
+  right: calc(50% - 35px);
+}
+.lander-mobile-slider .slick-arrow.slick-prev {
+  bottom: 0px;
+  top: auto;
+  left: calc(50% - 35px);
+}
+.lander-reviews-slider .slick-arrow.slick-next {
+  bottom: -30px;
+  top: auto;
+  right: calc(50% - 35px);
+}
+.lander-reviews-slider .slick-arrow.slick-prev {
+  bottom: -45px;
+  top: auto;
+  left: calc(50% - 35px);
+}
+
+.lander-mobile-slider .slick-arrow,
+.lander-reviews-slider .slick-arrow,
+.lander-mobile-slider-manual .slick-arrow,
+.lander-reviews-slider .slick-arrow {
+  width: 19px;
+}
+.lander-mobile-slider .slick-arrow.slick-next,
+.lander-mobile-slider-manual .slick-arrow.slick-next {
+  bottom: 15px;
+  top: auto;
+  right: calc(50% - 35px);
+}
+.lander-mobile-slider .slick-arrow.slick-prev,
+.lander-mobile-slider-manual .slick-arrow.slick-prev {
+  bottom: 0px;
+  top: auto;
+  left: calc(50% - 35px);
+}
+.text-gray {
+  color: #777;
+}
+.lander-points {
+  padding: 0;
+  list-style: none;
+}
+.lander-points li {
+  padding-left: 25px;
+  position: relative;
+  background-image: url("https://cdn.shopify.com/s/files/1/0360/1347/3931/t/119/assets/lander-check_small.png?v=169310194507801985651675059087");
+  background-repeat: no-repeat;
+  background-size: 18px 18px;
+  background-position: 0 4px;
+  margin: 6px 0;
+}
+.lander-usp-icons {
+  display: flex;
+}
+.lander-usp-icons > .lander-usp {
+  width: 25%;
+}
+.lander-usp.p-2 img {
+  max-width: 100px;
+}
+.lander-product-section .tag {
+  background: #e3f3fe;
+  display: inline-block;
+  padding: 5px 15px;
+  border-radius: 15px;
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  font-size: 14px;
+  z-index: 9;
+}
+.lander-product-section .heading-2,
+.heading-section .heading-2 {
+  font-size: 2.1rem;
+}
+.lander-img-text .heading-2 {
+  font-size: 1.8rem;
+}
+.lander-img-text .normal-text,
+.review .review-detail p {
+  font-size: 16px;
+}
+.lander-product-section .star-img {
+  width: 20px;
+}
+.lander-wrapper-section .heading-4 {
+  font-size: 1.4rem;
+}
+.insta-blocks {
+  display: flex;
+  grid-gap: 30px;
+}
+.insta-blocks .insta-post {
+  border: 0;
+  border-radius: 0;
+}
+.insta-blocks .insta-post img {
+  vertical-align: top;
+}
+@media (max-width: 768px) {
+  .banner-inner-container .justify-content-between,
+  .banner-inner-container .stars-img-review {
+    justify-content: center;
+    text-align: center;
+  }
+  .ladder-annoucment-bar p {
+    font-size: 11px;
+  }
+  .ladder-annoucment-bar .announcement-btn {
+    padding: 5px 5px;
+    margin-left: 5px;
+    font-size: 11px;
+  }
+  .lander-mobile-slider,
+  .lander-mobile-slider-manual {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .block-section .heading-2 {
+    font-size: 2rem;
+  }
+  .checkout-lander-btn {
+    min-width: 260px;
+    width: 100%;
+    max-width: 400px;
+  }
+  .lander-points {
+    text-align: left;
+  }
+  .lander-product-heading {
+    text-align: left;
+  }
+  .lander-usp-icons {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .lander-usp-icons > .lander-usp {
+    width: 50%;
+  }
+  .ladder-annoucment-bar {
+    justify-content: center;
+  }
+  .lander-mobile-slider {
+    position: relative;
+    padding-bottom: 50px;
+  }
+  .ladder-annoucment-bar {
+    padding: 0;
+  }
+  .lander-banner-wrapper .banner-inner-container {
+    margin-top: 0px;
+  }
+  .lander-banner-wrapper .banner-inner-container .bb-points {
+    margin-top: 10px !important;
+    font-size: 17px;
+  }
+  .lander-banner-wrapper .banner-inner-container .star-img,
+  .lander-product-section .star-img {
+    width: 20px;
+  }
+  .lander-banner-wrapper .banner-inner-container .total-reviews,
+  .lander-product-section .total-reviews {
+    font-size: 16px;
+  }
+  .lander-banner-wrapper .banner-inner-container .checkout-lander-btn {
+    max-width: 260px;
+    padding: 10px;
+  }
+  .lander-banner-wrapper .arrow-bottom {
+    width: 50px;
+    height: 50px;
+    bottom: -25px;
+    left: calc(50% - 25px);
+  }
+  .lander-banner-wrapper .arrow-bottom:before {
+    top: 11px;
+    left: 15px;
+  }
+  .lander-page .rich-text .heading-2,
+  .lander-page .block-section .heading-2,
+  .lander-product-section .heading-2,
+  .lander-page .heading-section .heading-2,
+  .tabel-section-wrapper .heading-2,
+  .lander-instagram .heading-2,
+  .lander-faq .heading-2 {
+    font-size: 28px;
+  }
+  .lander-page .rich-text .rich-text__text,
+  .lander-instagram h2.normal-text {
+    font-size: 16px;
+  }
+  .lander-usp.p-2 img {
+    max-width: 70px;
+    height: auto;
+  }
+  .lander-img-text .container {
+    padding: 0;
+  }
+  .lander-page .heading-section .heading-2 {
+    padding: 0 15px;
+  }
+  .lander-img-text .heading-2 {
+    font-size: 24px;
+    text-align: left;
+  }
+  .lander-img-text .normal-text {
+    font-size: 16px;
+    text-align: left;
+  }
+  .lander-img-text {
+    position: relative;
+    background: transparent !important;
+  }
+  .lander-bg:before {
+    bottom: -150px;
+  }
+  .lander-reviews-section .review .review-detail p {
+    font-size: 16px;
+  }
+  .lander-reviews-section .review .review-detail .stars {
+    margin-top: 0;
+    margin-bottom: 5px;
+  }
+  .lander-reviews-section .review .review-detail {
+    padding: 0;
+  }
+  .lander-faq {
+    padding-top: 10px !important;
+  }
+  .lander-faq .faq-que {
+    font-size: 16px;
+  }
+  .lander-faq .faq-acc p {
+    font-size: 14px;
+  }
+  .lander-faq .faq .faq-acc {
+    margin: 10px 0;
+  }
+  .lander-wrapper-section .lp-blocks .block-img-wrapper {
+    max-width: 150px;
+    height: 150px;
+  }
+  .lander-product-section .container {
+    padding: 0;
+  }
+  .logo-slider .w-25.slick-slide .block-img-wrapper img {
+    max-height: 26px;
+  }
+  .lander-product-section .star-img {
+    width: 17px;
+  }
+  .lander-product-section .stars-img-review {
+    margin-top: 0 !important;
+  }
+  .lander-points li {
+    background-position: 0 2px;
+  }
+  .lander-product-section,
+  .lander-product-section .mobile-padding-y {
+    padding-bottom: 0 !important;
+  }
+  .heading-section.pt-4.pb-2 {
+    padding: 0 !important;
+  }
+  .lander-img-text .mobile-padding-y {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .lander-wrapper-section,
+  .lander-other-benefits {
+    padding-top: 15px !important;
+    padding-bottom: 15px !important;
+  }
+  .tabel-section-wrapper {
+    padding-bottom: 0 !important;
+  }
+  .insta-blocks {
+    grid-gap: 10px;
+    flex-wrap: wrap;
+  }
+  .insta-blocks > div {
+    width: calc(50% - 5px);
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .block-section {
+    min-height: auto;
+  }
+  .logo-slider .slick-arrow.slick-prev {
+    left: -10px;
+  }
+  .logo-slider .slick-arrow.slick-next {
+    right: -10px;
+    top: calc(50% - 15px);
+  }
+  .logo-slider .w-25.slick-slide .block-img-wrapper,
+  .lander-points li {
+    font-size: 14px;
+  }
+  .lander-other-benefits .lp-blocks .block-img-wrapper {
+    border-radius: 0;
+    max-width: 76px;
+    height: 80px;
+  }
+}
+@media (min-width: 768px) {
+  .desktop-spacing {
+    padding: 40px 0;
+  }
+}
+@media (min-width: 1100px) {
+  .lander-banner-wrapper .banner-inner-container {
+    padding-left: 100px;
+  }
+}
+.lander-reviews-section .slick-track {
+  display: flex;
+}
+.lander-reviews-section .review {
+  height: inherit;
+}
+#shopify-section-lander-announcement {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 999;
+}
+body.lander-page {
+  padding-top: 42px;
+}
+.review-section .lander-review-stars .star-img {
+  width: 16px;
+}
+
+/* Spring */
+.spring-product-text {
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.spring-banner .bb-points {
+  font-size: 18px;
+  font-weight: bold;
+}
+.lander-reviews-slider .review-detail {
+  padding-bottom: 25px;
+}
+.lander-reviews-slider .review-bottom-section {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.height-100 {
+  height: 100%;
+}
+.review-detail .review-bottom-section .stars {
+  margin-bottom: 0;
+}
+@media (max-width: 768px) {
+  .spring-extra .fb-section.py-5 {
+    padding-bottom: 0 !important;
+  }
+  .spring-extra .colletion-products {
+    margin-bottom: 0;
+  }
+  .lander-reviews-section .review .review-detail {
+    padding-bottom: 25px;
+  }
+  .insta-blocks.insta-blocks-2 > div {
+    width: 100%;
+  }
+}

@@ -1,0 +1,740 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "announcement_bar_reskin_9fjJ8d": {
+      "type": "announcement-bar-225",
+      "settings": {
+        "class": "",
+        "logoColor": "#11322c",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "text": "Back in stock Frankincense &amp; Myrrh scent",
+        "scrollto": "javascript:void(0);",
+        "btn-bg": "#cb3c8e",
+        "btn-text": "#ffffff",
+        "annuText": "Click Here",
+        "top": "0",
+        "checkout": true,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_3EaRiV": {
+      "type": "banner-10",
+      "settings": {
+        "txt-color": "#ffffff",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktop_9a56d206-8113-48f1-bc28-aad5193c86b5.jpg",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobile_d8a05eb8-3a31-4578-8ce3-db13f345eef4.jpg",
+        "heading": "Give Your Home a Christmas Spruce",
+        "sub_heading": "Member offer: Save up to 62% on newly-restocked Frankincense &amp; Myrrh Christmas Scent Bundles",
+        "btn-bg": "#ffffff",
+        "btn-txt-color": "#11322c",
+        "button_label": "GET OFFER",
+        "button_link": "starterkit-product",
+        "top": "-120",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_19_cPYKAd": {
+      "type": "global-product-225",
+      "blocks": {
+        "variant_dBichG": {
+          "type": "variant",
+          "disabled": true,
+          "settings": {
+            "outofstock": false,
+            "class": "",
+            "varCount": "1",
+            "text_heading": "Seasonal",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Seasonal",
+            "eventValue": "product_anchor",
+            "optionIndex": "1",
+            "sku": "FG1208c"
+          }
+        },
+        "variant_FCCqdL": {
+          "type": "variant",
+          "disabled": true,
+          "settings": {
+            "outofstock": false,
+            "class": "",
+            "varCount": "4",
+            "text_heading": "Signature",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 0,
+            "funnel_stage": "hp",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "2",
+            "sku": "FG1096"
+          }
+        },
+        "product_image_pAeVQQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/d-1xChristmas.png",
+            "mimage": "shopify://shop_images/m-1xChristmas.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_TAwqPa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Member_Offer_1x_-_Desktop_02.jpg",
+            "mimage": "shopify://shop_images/Member_Offer_1x_-_Mobile_02.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_phNNax": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Member_Offer_1x_-_Desktop_03.jpg",
+            "mimage": "shopify://shop_images/Member_Offer_1x_-_Mobile_03.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_bw4xtz": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Member_Offer_1x_-_Desktop_04.jpg",
+            "mimage": "shopify://shop_images/Member_Offer_1x_-_Mobile_04.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_wzpCJp": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Member_Offer_1x_-_Desktop_05.jpg",
+            "mimage": "shopify://shop_images/Member_Offer_1x_-_Mobile_05.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_QykkHC": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/d-2xChristmas.png",
+            "mimage_2": "shopify://shop_images/m-2xChristmas.png",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_djFrbn": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Member_Offer_2x_-_Desktop_02.jpg",
+            "mimage_2": "shopify://shop_images/Member_Offer_2x_-_Mobile_02.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_DA6fi9": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Member_Offer_2x_-_Desktop_05.jpg",
+            "mimage_2": "shopify://shop_images/Member_Offer_2x_-_Mobile_05.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_iA6AHF": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Member_Offer_1x_-_Desktop_04.jpg",
+            "mimage_2": "shopify://shop_images/Member_Offer_2x_-_Mobile_04.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_MQjXK6": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Member_Offer_1x_-_Desktop_03.jpg",
+            "mimage_2": "shopify://shop_images/Member_Offer_2x_-_Mobile_03.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image3_RjK8NM": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/d-3xChristmas.png",
+            "mimage_3": "shopify://shop_images/m-3xChristmas.png",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_6BgYWa": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Member_Offer_3x_-_Desktop_02.jpg",
+            "mimage_3": "shopify://shop_images/Member_Offer_3x_-_Mobile_02.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_aMd7Hb": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Member_Offer_3x_-_Desktop_05.jpg",
+            "mimage_3": "shopify://shop_images/Member_Offer_3x_-_Mobile_05.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_igQq8Q": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Member_Offer_1x_-_Desktop_04.jpg",
+            "mimage_3": "shopify://shop_images/Member_Offer_2x_-_Mobile_04.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "product_image3_EpBjQt": {
+          "type": "productImage3",
+          "settings": {
+            "image_3": "shopify://shop_images/Member_Offer_1x_-_Desktop_03.jpg",
+            "mimage_3": "shopify://shop_images/Member_Offer_2x_-_Mobile_03.jpg",
+            "is_video_3": false,
+            "videoURL_3": ""
+          }
+        },
+        "text_a6hNWF": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 x limited edition Frankincense &amp; Myrrh refills"
+          }
+        },
+        "text_tDGEyp": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 x FREE new-look Bottle for Life"
+          }
+        },
+        "text_NMwGbW": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 x FREE new-look Purdy &amp; Figg cloth"
+          }
+        },
+        "point_JzLEFe": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "6 x limited edition Frankincense &amp; Myrrh refills"
+          }
+        },
+        "point_LWyRT8": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "2 x FREE new-look Bottles for Life"
+          }
+        },
+        "point_hwieEU": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "2 x FREE new-look Purdy &amp; Figg cloths"
+          }
+        },
+        "point_hek83M": {
+          "type": "point",
+          "settings": {
+            "listClass2": "1 show",
+            "listItem2": "*Packaged in 2 separate boxes for easy gifting"
+          }
+        },
+        "point3_P6p9Rh": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "9 x limited edition Frankincense &amp; Myrrh refills"
+          }
+        },
+        "point3_xdVDRD": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "3 x FREE Bottles for Life"
+          }
+        },
+        "point3_hWLMyq": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "3 x FREE new-look Purdy &amp; Figg cloths"
+          }
+        },
+        "point3_zyx6z9": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "Includes FREE delivery"
+          }
+        },
+        "point3_xWcxxN": {
+          "type": "point3",
+          "settings": {
+            "listClass3": "1 show",
+            "listItem3": "*Packaged in 3 separate boxes for easy gifting"
+          }
+        }
+      },
+      "block_order": [
+        "variant_dBichG",
+        "variant_FCCqdL",
+        "product_image_pAeVQQ",
+        "product_image_TAwqPa",
+        "product_image_phNNax",
+        "product_image_bw4xtz",
+        "product_image_wzpCJp",
+        "product_image2_QykkHC",
+        "product_image2_djFrbn",
+        "product_image2_DA6fi9",
+        "product_image2_iA6AHF",
+        "product_image2_MQjXK6",
+        "product_image3_RjK8NM",
+        "product_image3_6BgYWa",
+        "product_image3_aMd7Hb",
+        "product_image3_igQq8Q",
+        "product_image3_EpBjQt",
+        "text_a6hNWF",
+        "text_tDGEyp",
+        "text_NMwGbW",
+        "point_JzLEFe",
+        "point_LWyRT8",
+        "point_hwieEU",
+        "point_hek83M",
+        "point3_P6p9Rh",
+        "point3_xdVDRD",
+        "point3_hWLMyq",
+        "point3_zyx6z9",
+        "point3_xWcxxN"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}"
+      ],
+      "settings": {
+        "className": "",
+        "toast": false,
+        "collapse": true,
+        "outOfStock": false,
+        "scrollId": "starterkit-product",
+        "buyonce": true,
+        "isCheckout": true,
+        "scrollto": "",
+        "background": "#e7ebea",
+        "mainheading": "Member offer: FREE Bottle for Life &amp; cloth",
+        "heading": "Christmas Member Offer",
+        "mainsubheading": "FREE new-look bottle &amp; cloth with Christmas refills",
+        "scent_label": "",
+        "tab_description_1": "",
+        "tab_description_2": "",
+        "btnText": "ADD TO CART",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "plan_heading_1": "1 x Christmas Scent Bundle",
+        "variant_id_1": "53600350437756",
+        "selling_plan_1": "",
+        "sku_1": "FG1208d",
+        "qty_1": "1",
+        "discountPlan_1": "CHRISTMASBUNDLE",
+        "price_1": "20.40",
+        "deleted_price_1": "43",
+        "plan_heading_2": "2 x Christmas Scent Bundles",
+        "variant_id_2": "53600350437756",
+        "selling_plan_2": "",
+        "sku_2": "FG1233d",
+        "qty_2": "2",
+        "discountPlan_2": "CHRISTMASBUNDLE2",
+        "price_2": "36.70",
+        "deleted_price_2": "86",
+        "plan_heading_3": "3 x Christmas Scent Bundles",
+        "variant_id_3": "53600350437756",
+        "selling_plan_3": "",
+        "sku_3": "FG1209d",
+        "qty_3": "3",
+        "discountPlan_3": "CHRISTMASBUNDLE3",
+        "price_3": "48.90",
+        "deleted_price_3": "129",
+        "plan_heading_4": "",
+        "variant_id_4": "44741022089443",
+        "selling_plan_4": "",
+        "sku_4": "FG1096",
+        "discountPlan_4": "SIGNATURE197dv",
+        "price_4": "15",
+        "deleted_price_4": "40",
+        "plan_heading_5": "",
+        "variant_id_5": "45313882357987",
+        "selling_plan_5": "4240212195",
+        "sku_5": "FG1171",
+        "discountPlan_5": "COMPLETE197dv",
+        "price_5": "30",
+        "deleted_price_5": "80",
+        "plan_heading_6": "",
+        "variant_id_6": "45259308499171",
+        "selling_plan_6": "",
+        "sku_6": "FG1112",
+        "discountPlan_6": "",
+        "price_6": "21",
+        "deleted_price_6": "",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 6,
+        "funnel_stage": "hp",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "product_blocks_qCkjga": {
+      "type": "shopify-product-blocks",
+      "blocks": {
+        "product_HW4Ny8": {
+          "type": "product",
+          "settings": {
+            "product": "mini-black-friday-bundle-copy",
+            "variant_id": "54836961739132",
+            "sealing_plan": "",
+            "discount": "MINIBUNDLE225CX",
+            "isSub": false,
+            "title": "Christmas Variety Bundle",
+            "saving": "Save 50%",
+            "price": "£20.99",
+            "crossprice": "£42.00",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_rAx98m": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "variant_id": "53601167737212",
+            "sealing_plan": "4327440611",
+            "discount": "BATHROOMBLISS225CX",
+            "isSub": true,
+            "title": "Bathroom Bliss Starter Kit",
+            "saving": "Save 60%",
+            "price": "£15.00",
+            "crossprice": "£40.00",
+            "buttonLabel": "ADD 90-DAY PLAN"
+          }
+        },
+        "product_MyaVAW": {
+          "type": "product",
+          "settings": {
+            "product": "orange-clove-refill-pack",
+            "variant_id": "54817560527228",
+            "sealing_plan": "",
+            "discount": "ORANGECLOVEREF225CX",
+            "isSub": false,
+            "title": "Orange & Clove Refill Pack",
+            "saving": "Save 15%",
+            "price": "£20.40",
+            "crossprice": "£24",
+            "buttonLabel": "ADD TO CART"
+          }
+        },
+        "product_ECnQ3A": {
+          "type": "product",
+          "settings": {
+            "product": "frankincense-myrrh-counter-clean-refill-copy",
+            "variant_id": "54824765817212",
+            "sealing_plan": "",
+            "discount": "F&MREF225CX",
+            "isSub": false,
+            "title": "Frankincense & Myrrh Refill Pack",
+            "saving": "Save 15%",
+            "price": "£20.40",
+            "crossprice": "£24",
+            "buttonLabel": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_HW4Ny8",
+        "product_rAx98m",
+        "product_MyaVAW",
+        "product_ECnQ3A"
+      ],
+      "settings": {
+        "reviews": false,
+        "toast": false,
+        "bg": "",
+        "heading": "Need anything else?",
+        "subheading": "Stock up for Christmas with festive offers just for members"
+      }
+    },
+    "pf119_seasonal_scents_UUe6fb": {
+      "type": "pf181-expend-blocks",
+      "blocks": {
+        "image_GymrGe": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Desktop_1_5266d233-ea3b-40d6-a367-63c2bfd28fdb.jpg",
+            "mBlockImage": "shopify://shop_images/Mobile_1_c504fdb6-7e42-4c09-9163-f0a2b853cb69.jpg",
+            "tag": "Limited Edition",
+            "heading": "Frankincense & Myrrh",
+            "details": "A blend of frankincense & myrrh with citrusy and smoky undertones. Inspired by Purdy & Charlotte’s festive memories.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Sweet Orange</span><br>An uplifting, sweet-citrus aroma</li>\n<li class=\"font-lausanne fw-200\">\n    <span class=\"fw-400\">Pink Grapefruit</span><br>Zesty, sweet and tangy</li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Coriander Seed</span><br>Spicy and warm</li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Frankincense</span><br>Woody and resinous</li>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Myrrh</span><br>Earthy and balsamic</li>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Vetiver</span><br>A deep, smoky aroma</li>\n    </ul>\n</div>"
+          }
+        },
+        "image_Fcyxqk": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Desktop_3_6aae1214-afbd-4e18-8c64-5f2a517a3037.jpg",
+            "mBlockImage": "shopify://shop_images/Mobile_3_44417794-2127-43ad-8be4-eca0cda4f7e0.jpg",
+            "tag": "Member exclusive",
+            "heading": "Orange & Clove",
+            "details": "A classically Christmas blend of orange, clove and benzoin. Inspired by the scent of traditional Christmas pomanders.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n<h4 class=\"font-lausanne\">Top notes</h4>\n<ul>\n<li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Sweet Orange</span><br>Uplifting and citrusy</li>\n</ul>\n</div>\n<div>\n<h4 class=\"font-lausanne\">Middle notes</h4>\n<ul>\n<li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Spicy Clove</span><br>Woody and warming</li>\n</ul>\n</div>\n<div>\n<h4 class=\"font-lausanne\">Base notes</h4>\n<ul>\n<li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Benzoin</span><br>Rich and creamy</li>\n</ul>\n</div>"
+          }
+        },
+        "image_MwnAJy": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Desktop_2_47aa295c-3c54-4ef0-bb33-050ffafaa909.jpg",
+            "mBlockImage": "shopify://shop_images/Mobile_2_8583ce4d-1b46-4206-ad33-f4726a6010e3.jpg",
+            "tag": "For the bathroom",
+            "heading": "Lime & Lemongrass",
+            "details": "Powered by lime and lemongrass, this tough formula tackles hard water, limescale, and soap scum, leaving your bathroom fresh and citrusy.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n        <ul>\n            <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Lime</span><br>A refreshing and uplifting essential oil with crisp, citrusy notes.</li>\n            <li class=\"font-lausanne\">\n<span class=\"fw-400\"> Lemongrass </span><br>A great natural deodoriser with a fresh, grassy, herbaceous aroma.</li>\n        </ul>\n    </div>\n    <div>\n    </div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_GymrGe",
+        "image_Fcyxqk",
+        "image_MwnAJy"
+      ],
+      "custom_css": [
+        ".tss-tag {font-size: 14px; line-height: 1; color: #212121; background: #fbf1e8; border: 1px solid #f2d4b9; border-radius: 4px; padding: 4px;}"
+      ],
+      "settings": {
+        "bgcolor": "#f6e3d1",
+        "class": "show  pf-173-nature mobile-container-0",
+        "linkVariant": "",
+        "heading": "Natural blends of the finest essential oils",
+        "subtext": ""
+      }
+    },
+    "icon_blocks_reskin_QyJ6db": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_6yhndz": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only perks",
+            "icon_block_description": "Exclusive treats, just for our members",
+            "icon_block_image": "shopify://shop_images/Icon_cffd88f9-5a0a-435e-b38e-e7dc4291977a.png"
+          }
+        },
+        "iconblocks_WWLqyn": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Membership pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_9afda10b-0e29-409c-8191-0bbc22a5d588.png"
+          }
+        },
+        "iconblocks_YXCGmM": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive access",
+            "icon_block_description": "Early access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_052aceb2-3689-4679-86fd-bc7eb7532cf3.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_6yhndz",
+        "iconblocks_WWLqyn",
+        "iconblocks_YXCGmM"
+      ],
+      "settings": {
+        "bg": "#fcfaf6",
+        "textcolor": "#0c231f",
+        "heading": "Enjoy member benefits",
+        "show_hide_block": true
+      }
+    },
+    "two_women_2_YmGrTw": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".blue-text {color: #2d469e !important;}",
+        "@media (max-width: 768px) {.manufactured-inner .heading-2 span {line-height: 38px; font-size: 28px; text-align: left; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-300\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "-120",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Is this an extra subscription?",
+            "faq-ans": "<p>No, this is a buy-once offer just for our members. You won’t be taking out a new subscription.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting this offer?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers. As a member, concentrate refills are always 15% off.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will this offer last?",
+            "faq-ans": "<p>As long as our limited edition seasonal scents last, so we recommend getting your skates on.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>You can view, manage or cancel your subscription by logging into your account with the email address you used to place your first Purdy & Figg order. Once you’re in, you’ll be able to tweak your subscription however you like. You can change what’s in your order, adjust your delivery and billing date, or pause deliveries completely for a bit.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.<br/>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "announcement_bar_reskin_9fjJ8d",
+    "banner_10_3EaRiV",
+    "global_product_19_cPYKAd",
+    "product_blocks_qCkjga",
+    "pf119_seasonal_scents_UUe6fb",
+    "icon_blocks_reskin_QyJ6db",
+    "two_women_2_YmGrTw",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

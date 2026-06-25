@@ -1,0 +1,274 @@
+<style>
+    .main-blend-heading {
+        margin-bottom: 48px !important;
+    }
+    .blend-details-container {
+        display: flex;
+        flex-flow: column;
+    }
+    .blend-box {
+        margin: 60px auto;
+        margin-bottom: 0px;
+    }
+    .see-more-blend--container {
+        position: relative;
+        border-top: 1px solid #424242;
+        padding: 8px 0;
+        border-color: #424242;
+        cursor: pointer;
+    }
+    .see-more-blend--container:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .see-more-blend--container.open .plus-icon {
+        display: none !important;
+    }
+    .see-more-blend--container.open .minus-icon {
+        display: block !important;
+    }
+    .plus-minus {
+        margin-left: auto;
+    }
+    .plus-minus svg {
+        margin: auto;
+    }
+    .plus-minus svg path {
+        stroke: #11322c !important;
+    }
+    .expendable-content {
+        transition: all 0.3s ease;
+        margin-top: 0px;
+        border-radius: 4px;
+        background-color: #F6E3D1;
+        height: 0;
+        overflow: hidden;
+        padding: 0 16px;
+    }
+    .expendable-content h4 {
+        font-weight: 400;
+        font-size: 14px;
+        color: #424242;
+        margin: 0;
+    }
+    .expendable-content ul {
+        margin: 8px 0 10px 0;
+        padding-left: 20px;
+    }
+    .expendable-content ul li {
+        font-weight: 200;
+        font-size: 16px;
+        color: #424242;
+        line-height: 1.5;
+    }
+    .see-more-blend--container.open + .expendable-content {
+        padding: 16px;
+        height: auto;
+        margin-top: 10px;
+    }
+
+    @media screen and (width < 1016px) {
+        .blend-box {
+            margin: 0px auto;
+        }
+    }
+  
+    @media screen and (width <= 768px) {
+        .blend-box {
+            margin: 0px auto;
+            margin-top: 10px;
+        }
+        .custom-blend-wrapper {
+            padding-top: 32px;
+            padding-bottom: 32px;
+        }
+    }
+
+    @media screen and (width > 1016px) {
+        .blend-box {
+            margin: 60px auto;
+            margin-bottom: 0px;
+        }
+    }
+</style>
+
+<div
+    style="background-color:{{section.settings.background}};"
+    class="{{ section.settings.className }} py-80 custom-blend-wrapper"
+>
+    <div class="container">
+        <div class="">
+            <div class="text-center m-text-left">
+                {% if section.settings.main_heading != blank %}
+                <h2 class="heading-2 value-bold mt-0 mb-3 main-blend-heading">
+                    {{ section.settings.main_heading }}
+                </h2>
+                {% endif %}
+              
+                {% if section.settings.sub_heading != blank %}
+                    <p class="font-lausanne gray-text mb-4">{{ section.settings.sub_heading }}</p>
+                {% endif %}
+            </div>
+
+            {% for block in section.blocks %}
+            <div class="d-flex flex-wrap justify-content-between custom-block-box">
+                <div class="w-50 {% if block.settings.layout %} order-2 {%endif%}">
+                    <div class="position-relative">
+                        {% if block.settings.desktop_image %}
+                        {% assign desktop_image = block.settings.desktop_image | img_url: '800x' %}
+                        {% assign mobile_image = block.settings.mobile_image | img_url: '800x' %}
+                        <img
+                          loading="lazy"
+                          src="{{ desktop_image }}"
+                          width="800px"
+                          height="800px"
+                          class="img-responsive w-100 h-auto mobile-hide"
+                          alt="image"
+                        >
+                        <img
+                          loading="lazy"
+                          src="{{ mobile_image }}"
+                          width="800px"
+                          height="800px"
+                          class="img-responsive w-100 h-auto desktop-hide"
+                          alt="image"
+                        >
+                        {% endif %}
+                    </div>
+                </div>
+                <div class="w-50 d-flex justify-content-center {% if block.settings.layout %} order-1 {%endif%} blend-box">
+                    <div class="h-100 w-90">
+                        <div class="blend-details-container">
+                            <h4 class="heading-2 block-heading font-lausanne m-text-left {{section.settings.textcolor}}">
+                                {{ block.settings.block_heading }}
+                            </h4>
+                            <div class="normal-text font-lausanne {{section.settings.textcolor}} m-text-left block-details">
+                                {{ block.settings.block_details }}
+                            </div>
+              
+                            {% if block.settings.expand_content != blank %}   
+                            <div class="see-more-blend--container d-flex w-100 mt-4">
+                                <div>
+                                    <span class="see-more-blend-text value-sans">{{ block.settings.expand_label }}</span>
+                                </div>
+                                <div class="plus-minus d-flex">
+                                    <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
+                                        <g clip-path="url(#clip0_1172_318)">
+                                            <path d="M9 6V12M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2D469E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1172_318">
+                                                <rect width="18" height="18" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                    <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none" style="display: none;">
+                                        <g clip-path="url(#clip0_1172_318)">
+                                            <path d="M6 9H12M16.5 9C16.5 13.1421 13.1421 16.5 9 16.5C4.85786 16.5 1.5 13.1421 1.5 9C1.5 4.85786 4.85786 1.5 9 1.5C13.1421 1.5 16.5 4.85786 16.5 9Z" stroke="#2D469E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_1172_318">
+                                                <rect width="18" height="18" fill="white"/>
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="expendable-content">
+                                {{ block.settings.expand_content }}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image text blend",
+        "settings": [
+            {
+                "type": "text",
+                "id": "className",
+                "label": "Add Section class Name"
+            },
+            {
+                "type": "color",
+                "id": "background",
+                "label": "Select background color"
+            },
+            {
+                "type": "color",
+                "id": "textcolor",
+                "label": "Select text color"
+            },
+            {
+                "type": "text",
+                "id": "main_heading",
+                "label": "Heading"
+            },
+            {
+                "type": "text",
+                "id": "sub_heading",
+                "label": "Sub Heading"
+            },
+        ],
+        "blocks": [
+            {
+                "type": "image",
+                "name": "Add block",
+                "settings": [
+                    {
+                        "type": "checkbox",
+                        "id": "layout",
+                        "label": "Image on right",
+                        "default": false
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "desktop_image",
+                        "label": "Desktop image"
+                    },
+                    {
+                        "type": "image_picker",
+                        "id": "mobile_image",
+                        "label": "Mobile image"
+                    },
+                    {
+                        "type": "text",
+                        "id": "block_heading",
+                        "label": "Heading"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "block_details",
+                        "label": "Details"
+                    },
+                    {
+                        "type": "text",
+                        "id": "expand_label",
+                        "label": "Expand label"
+                    },
+                    {
+                        "type": "textarea",
+                        "id": "expand_content",
+                        "label": "Expand content"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image text block with blend details"
+            }
+        ]
+    }
+{% endschema %}

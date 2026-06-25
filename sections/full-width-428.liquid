@@ -1,0 +1,188 @@
+<style>
+  .spritz-container.meet-founder-box {
+  	width: 100%;
+  	position: relative;
+  	background: {{ section.settings.bgcolor }} !important;
+  	justify-content: space-between;
+  	align-items: center;
+  	gap: 48px;
+  	display: inline-flex;
+  }
+	.spritz-container .meet-founder-container {
+		padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 112px;
+	}
+	.spritz-container .meet-founder-section-block {
+		max-width: 520px;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 24px;
+		display: inline-flex;
+	}
+	.spritz-container .meet-founder-heading h2 {
+		color: {{ section.settings.headingcolor }};
+		font-size: 40px;
+		font-family: "GT Super";
+		font-weight: 400;
+		line-height: 50px;
+		word-wrap: break-word;
+		margin-bottom: unset !important;
+	}
+	.spritz-container .meet-normal-summary {
+		color: {{ section.settings.normalcolor }};
+		font-size: 18px;
+		font-family: "Lausanne";
+		font-weight: 200;
+		line-height: 27px;
+		word-wrap: break-word;
+	}
+	.spritz-container .meet-founder-heading-block {
+		align-self: stretch;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		gap: 12px;
+		display: flex;
+	}
+	.spritz-container .meet-founder-image-block {
+		width: 50%;
+	}
+	.spritz-container .meet-founder-image-block img {
+		width: 100%;
+		height: 100% !important;
+	}
+
+	@media (max-width: 768px) {
+		.spritz-mob {
+			background: url({{ section.settings.mob_image | image_url: width: 800 }});
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center;
+			min-height: 600px;
+			display: flex;
+			justify-content: flex-end;
+			align-items: center;
+			gap: 8px;
+			flex-direction: column;
+		}
+		.spritz-heading {
+			text-align: center;
+			font-family: "GT Super";
+			font-size: 32px;
+			font-style: normal;
+			font-weight: 400;
+			line-height: 40px;
+			color: {{ section.settings.headingcolor }};
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		.spritz-subheading {
+			text-align: center;
+			font-family: "Lausanne";
+			font-size: 16px;
+			font-style: normal;
+			font-weight: 200;
+			line-height: 24px;
+			color: {{ section.settings.normalcolor }};
+			padding-left: 16px;
+			padding-right: 16px;
+			margin-bottom: 32px;
+		}
+	}
+</style>
+
+<div class="meet-founder-box mobile-hide {{ section.settings.className }}">
+	<div class="meet-founder-heading desktop-hide">
+		<h2 style="{{ section.settings.headingcolor }}">{{ section.settings.heading }}</h2>
+	</div>
+	<div class="meet-founder-container {{ section.settings.className }}">
+		<div class="meet-founder-section-block">
+			<div class="meet-founder-heading-block">
+				<div class="meet-founder-heading">
+					<h2 style="{{ section.settings.headingcolor }}">{{ section.settings.heading }}</h2>
+				</div>
+				<div class="meet-bold-summary" style="{{ section.settings.boldcolor }}">{{ section.settings.bold_summary }}</div>
+				<div class="meet-normal-summary" style="{{ section.settings.normalcolor }}">{{ section.settings.summary }}</div>
+			</div>
+		</div>
+	</div>
+	<div class="meet-founder-image-block">
+		<picture>
+			<source media="(min-width:769px)" srcset="{{ section.settings.desk_image | image_url: width: 1600 }}">
+			<source media="(max-width:768px)" srcset="{{ section.settings.mob_image | image_url: width: 1600 }}">
+			<img
+				data-id="{{ section.settings.desk_image.id }}"
+				class="img-responsive w-100 h-auto lazy"
+				src="{{ section.settings.desk_image | image_url: width: 1600 }}"
+				width="800"
+				height="700"
+				alt="{{ section.settings.desk_image.alt }}"
+			>
+		</picture>
+	</div>
+</div>
+
+<div class="spritz-mob desktop-hide">
+	<div class="spritz-heading">{{ section.settings.heading }}</div>
+	<div class="spritz-subheading">{{ section.settings.summary }}</div>
+</div>
+
+{% schema %}
+{
+  "name": "Spritz 428",
+  "settings": [
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Add Section class Name"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background color"
+    },
+    {
+      "type": "checkbox",
+      "id": "layout",
+      "label": "Image on right - Desktop"
+    },
+    {
+      "type": "image_picker",
+      "id": "desk_image",
+      "label": "Desktop image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mob_image",
+      "label": "Mobile image"
+    },
+    {
+      "type": "color",
+      "id": "headingcolor",
+      "label": "Heading color"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "color",
+      "id": "normalcolor",
+      "label": "Normal summary color"
+    },
+    {
+      "type": "html",
+      "id": "summary",
+      "label": "Normal summary"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spritz 428"
+    }
+  ]
+}
+{% endschema %}

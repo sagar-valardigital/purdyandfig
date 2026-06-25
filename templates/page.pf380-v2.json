@@ -1,0 +1,266 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.article-layout",
+  "sections": {
+    "article_380_few9Un": {
+      "type": "article-380",
+      "blocks": {
+        "share_BCaNtU": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.instagram.com/purdyandfigg?igsh=MWo1OHUxOTJ6dXpiZg%3D%3D",
+            "share_icon": "shopify://shop_images/Social_5.png",
+            "share_link": "",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_83K7xL": {
+          "type": "share",
+          "settings": {
+            "redirect": true,
+            "redirect_link": "https://www.tiktok.com/@purdyandfigg?_t=ZN-8wylO6Jc4og&_r=1",
+            "share_icon": "shopify://shop_images/Social_4.png",
+            "share_link": "",
+            "share_icon_class": "copy-redirect-link"
+          }
+        },
+        "share_JUTeYX": {
+          "type": "share",
+          "settings": {
+            "redirect": false,
+            "redirect_link": "",
+            "share_icon": "shopify://shop_images/Social_3.png",
+            "share_link": "https://purdyandfigg.com/pages/the-detox-your-home-didnt-know-it-needed",
+            "share_icon_class": "copy-link"
+          }
+        },
+        "article_heading_VY7VVQ": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "You switched to natural skincare, and you even cleaned up your diet. Now, what about your cleaning cupboard?"
+          }
+        },
+        "article_content_aReEFz": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>The movement toward sustainable living is heating up. From toxin-free beauty to planet-friendly produce, the choices we’re making at home are becoming increasingly more sophisticated.</p><p>We sip on oat milk lattes (soy if we must), dabble in mindfulness, and energetically reject anything that dares to contain parabens. Being an early adopter is hard work, but someone’s got to do it, right?</p><p>But there’s one place that still clings to the past — a dark little corner of the home we rarely stop to question: the cleaning cupboard.</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_heading_gErpAc": {
+          "type": "article_heading",
+          "settings": {
+            "heading": "Why is that?"
+          }
+        },
+        "article_content_jNhLRL": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>In one word: habit. When it comes to cleaning products, we tend to buy what our parents bought or grab whatever’s on offer at the supermarket. Combine this with niche products for specific cleaning tasks and exceptionally clever marketing, and we’ve suddenly got cupboards filled to bursting.</p><p>Because cleaning is often seen as a chore, we don’t stop to think about what we’re using. We’re left with a cocktail of harsh chemicals, many of which are unnecessary, ineffective, and outright harmful to your health.</p><p>The good news? Interest in “clean cleaning” is rising fast. Consumers are becoming more clued up than ever about the effects of certain chemicals (phthalates, we’re looking at you) and are beginning to turn their attention to their homes — and to natural brands.</p>",
+            "content_class": "",
+            "content_text-color": "#212121"
+          }
+        },
+        "article_quote_pVf9TD": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "What does a cleaning detox<span style=\"display: block;\">look like?</span>",
+            "quote-mobile": "What does a cleaning detox look like?"
+          }
+        },
+        "article_image_naY7Qw": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media.jpg"
+          }
+        },
+        "article_image_gif_JLNAJj": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": true,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_01_2_d5820a5a-7585-478d-a522-b5272197c005.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_1.jpg"
+          }
+        },
+        "article_content_DtmPph": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Detoxing your home starts with questioning what’s really in your cleaning products. Read the labels to understand ingredients and warning signs, and make sure to avoid key offenders like ammonia, chlorine and phthalates.</p><p>If all that sounds like hard work, the shortcut to detoxifying your home is to choose natural cleaning sprays with powerful plant-derived ingredients.</p><p>Choosing natural alternatives to classic cleaning products means far fewer single-use plastics, less clutter, and, most importantly, a reduction in toxins, chemicals and synthetic lemon fragrances.</p><p>Natural cleaning isn’t just good for your health and environment – it’s good for your home. It honours the space you spend most of your time in, keeping it free of health-compromising toxins and chemicals that could easily ruin surfaces, furniture, textiles and more. </p><p>It’s this philosophy that inspired two friends — Purdy Rubin and Charlotte Figg — to create one beautifully fragranced, natural cleaning spray that works across your whole home. “We’d been cleaning naturally for years before we developed Counter Clean,” Charlotte noted in a recent interview. “It was our way of finding the joy in cleaning and caring deeply for our homes.” And that’s really what sets Purdy & Figg apart.</p><p>Purdy & Figg favour essential oil blends over synthetic fragrances, and powerful soap-like botanicals over harsh chemicals. “Fragrance is essential to us, our perfumers blend new, limited-edition scents every few months that move in step with the season.”</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_quote_qymPDW": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "What makes ‘natural’ cleaning<span style=\"display: block;\">so effective?</span>",
+            "quote-mobile": "What makes ‘natural’ cleaning so effective?"
+          }
+        },
+        "article_image_cbLVYz": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media_5.jpg"
+          }
+        },
+        "article_image_gif_CX3zKg": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": false,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_02_2_db7f7fb5-0ac2-4a53-b26a-3168cece9522.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_3.jpg"
+          }
+        },
+        "article_content_WtDgVY": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Contrary to popular belief, natural doesn’t mean weak. Purdy & Figg use plant-based surfactants, which work similarly to soap. They break down bacteria and lift away the grime they cling to.</p><p>It’s a completely different approach to chemical-laden sprays, but a worthy switch when it comes to detoxifying our spaces and caring properly for our surfaces.</p><p>The right blend of botanical surfactants can break down dirt just as well as traditional formulas, without leaving behind residues you wouldn’t want near your skin, food or family.</p><p>Think of it like switching from a harsh, strip-the-skin cleanser to a gentle botanical face wash: same results, just gentler.</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_quote_PRij7U": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "Scent, sustainability and<span style=\"display: block\">the joy of cleaning</span>",
+            "quote-mobile": "Scent, sustainability and the joy of cleaning"
+          }
+        },
+        "article_image_Je8AFz": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media_3.jpg"
+          }
+        },
+        "article_image_gif_hPEqke": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": true,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_03.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_3_1.jpg"
+          }
+        },
+        "article_content_bMGnQE": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Caring for your home should feel like caring for yourself: intuitive, gentle, and grounded in what’s good for you. Natural cleaning products honour that connection, turning an everyday chore into an act of joy.</p><p>A huge part of making cleaning feel less like a dreaded task and more like a small daily ritual is fragrance. Real fragrance is made from pure essential oils, rather than phthalate-packed artificial aromas that can cause headaches and long-term respiratory issues.</p><p>Take Calabrian Lemon, a zesty, sunshine-bright blend inspired by the scent of a proper deep clean. It’s the latest seasonal scent from Purdy & Figg, who work with perfumers to craft limited-edition essential oil blends that change with the seasons.</p><p>They’re picky, too — sourcing oils from seventh-generation growers like the Cilione family in Reggio Calabria, where the lemons are considered the finest in the world.</p><p>It’s details like these that set apart the next generation of cleaning products — those created not just for performance or eco credentials, but for pleasure.</p><p>Because when something smells incredible, lives in a beautiful glass bottle, and works across every surface in the house, you don’t just clean more sustainably — you clean more often.</p>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_quote_6kDidW": {
+          "type": "article_quote",
+          "settings": {
+            "quote": "How to start your cupboard detox",
+            "quote-mobile": "How to start your cupboard detox"
+          }
+        },
+        "article_image_4fgECe": {
+          "type": "article_image",
+          "disabled": true,
+          "settings": {
+            "article_img": "shopify://shop_images/Media_4.jpg"
+          }
+        },
+        "article_image_gif_GeNNdN": {
+          "type": "article_image_gif",
+          "settings": {
+            "article_img_gif_layout": false,
+            "article_img_gif": "shopify://shop_images/Article_-_Image_04_703e3050-3562-4d4c-8c53-b2f29189ca2d.jpg",
+            "article_img_gif_overlay": "shopify://shop_images/Article_Image_4.jpg"
+          }
+        },
+        "article_content_gLgQw8": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p>Detoxing your home doesn’t have to mean binning everything at once. Start small. Think of it as a slow, thoughtful way to care for your space, just as you would for your body.</p><ul><li><strong>Choose multifunctional products.</strong> Look for all-purpose cleaners like Purdy & Figg’s Counter Clean to cut out clutter and single-use packaging.</li><li><strong>Check the label.</strong> Avoid parabens, phthalates, ammonia and synthetic dyes.</li><li><strong>Prioritise refills and reusables.</strong> A refillable glass bottle isn’t just better for the planet — it looks better on your shelf, too.</li><li><strong>Go seasonal.</strong> Like with food and skincare, switching up your scent with the seasons makes cleaning feel less like admin and more like self-care.</li></ul>",
+            "content_class": "",
+            "content_text-color": "#616161"
+          }
+        },
+        "article_content_9fhJMj": {
+          "type": "article_content",
+          "settings": {
+            "content": "<p><em>And if you’re looking for a place to start? </em><em><strong>Purdy & Figg’s Seasonal Starter Kit</strong></em><em> includes a beautiful glass Bottle for Life, a high-performance microfibre cloth, and three natural scent refills, currently featuring the Limited Edition Calabrian Lemon. </em><em><strong>It’s £19.95 to get started, and it might just change how you feel about cleaning</strong></em><em>.</em></p>",
+            "content_class": "content-last",
+            "content_text-color": "#212121"
+          }
+        }
+      },
+      "block_order": [
+        "share_BCaNtU",
+        "share_83K7xL",
+        "share_JUTeYX",
+        "article_heading_VY7VVQ",
+        "article_content_aReEFz",
+        "article_heading_gErpAc",
+        "article_content_jNhLRL",
+        "article_quote_pVf9TD",
+        "article_image_naY7Qw",
+        "article_image_gif_JLNAJj",
+        "article_content_DtmPph",
+        "article_quote_qymPDW",
+        "article_image_cbLVYz",
+        "article_image_gif_CX3zKg",
+        "article_content_WtDgVY",
+        "article_quote_PRij7U",
+        "article_image_Je8AFz",
+        "article_image_gif_hPEqke",
+        "article_content_bMGnQE",
+        "article_quote_6kDidW",
+        "article_image_4fgECe",
+        "article_image_gif_GeNNdN",
+        "article_content_gLgQw8",
+        "article_content_9fhJMj"
+      ],
+      "custom_css": [],
+      "name": "Article 380",
+      "settings": {
+        "tag": "",
+        "article-heading": "Time to Detox <span style=\"display: block\">Your Cleaning Cupboard</span>",
+        "article-category": "Home & Lifestyle",
+        "article-subheading": "By Michael Rinaldi",
+        "article-date": "1st August 2025",
+        "main_image": "shopify://shop_images/Image_3.jpg",
+        "press_heading": "",
+        "explore-heading": "Change the way you clean forever<span style=\"display:block\">with <strong>£32 off your first plan</strong></span>",
+        "explore-heading-mobile": "Change the way you clean forever with <strong>£32 off your first plan</strong>",
+        "explore_image": "shopify://shop_images/Image_4.jpg",
+        "btn_label": "Explore Offer",
+        "btn_link": "https://purdyandfigg.com/pages/starterkit-offer-lemon",
+        "btn_bg": "#f79372",
+        "btn_text_color": "#212121",
+        "showancbar": true,
+        "ancbgcolor": "#ffffff",
+        "anctxtcolor": "#212121",
+        "anctext": "Limited Time Offer: Get 60% off all Purdy & Figg Starter Kits"
+      }
+    },
+    "articel_footer_kFGjeb": {
+      "type": "article-footer",
+      "name": "Article Footer",
+      "settings": {
+        "background-color": "#ffffff",
+        "text-color": "#bdbdbd",
+        "footer": "© 2025 All rights reserved."
+      }
+    }
+  },
+  "order": [
+    "article_380_few9Un",
+    "articel_footer_kFGjeb"
+  ]
+}

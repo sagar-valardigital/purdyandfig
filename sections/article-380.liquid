@@ -1,0 +1,968 @@
+<!-- FONTS -->
+
+{{ 'https://cdn.shopify.com/s/files/1/0360/1347/3931/files/adelle-sans-regular.woff2?v=1753955341' | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+{{ 'https://cdn.shopify.com/s/files/1/0360/1347/3931/files/BebasNeue-Regular.woff2?v=1753955770' | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+{{ 'https://cdn.shopify.com/s/files/1/0360/1347/3931/files/PlayfairDisplay-Italic.woff2?v=1753955980' | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+{{ 'https://cdn.shopify.com/s/files/1/0360/1347/3931/files/adelle-sans-bold.woff2?v=1753964246' | preload_tag: as: 'font', type: 'font/woff2', crossorigin: 'anonymous' }}
+
+<style>
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/adelle-sans-regular.woff2?v=1753955341') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Adelle Sans';
+  src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/adelle-sans-bold.woff2?v=1753964246') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Bebas Neue';
+  src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/BebasNeue-Regular.woff2?v=1753955770') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/PlayfairDisplay-Italic.woff2?v=1753955980') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+</style>
+
+
+<style>
+
+.mobile-only {
+  display: none;
+}
+  
+  .art2-anc-bar {
+    display: flex;
+    height: 56px;
+    padding: 16px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #212121;
+  }
+  .art2-anc-bar p {
+    text-align: center;
+    font-family: 'Adelle Sans', 'PT Serif';
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    position: relative;
+    top: 2px;
+  }
+
+.article2-wrapper {
+    max-width: 1440px;
+    margin: auto;
+    padding: 80px;
+} 
+  
+.topsplit {
+    display: flex;
+    align-items: stretch;
+    gap: 20px;
+}
+  
+.topsplit-image {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+        
+.topsplit-title {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.article2-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    text-align: center;
+    gap: 28px;
+    /*border: 1px solid #000;*/
+}
+
+.article2-details-category {
+    font-family: 'Adelle Sans', 'PT Serif';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    color: #212121;
+    text-transform: uppercase;
+}
+
+.article2-line-divider {
+    width: 16px;
+    height: 1px;
+    background-color: #212121;
+  }
+
+.article2-line-divider-vertical {
+    width: 1px;
+    height: 16px;
+    background-color: #212121;
+  }
+
+.article2-details-title {
+    font-family: 'Bebas Neue', 'Impact', 'Arial Black', 'Arial Narrow', sans-serif;
+    line-height: 1.25;
+    letter-spacing: 0;
+    color: #212121;
+}
+
+.article2-details-title h2 {
+    font-size: 50px !important;
+    font-weight: 400 !important;
+    font-style: normal !important;
+    margin: 0 !important;
+}
+
+.article2-details-author {
+    font-family: 'Adelle Sans', 'PT Serif';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 3px;
+    color: #212121;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.article2-details-author span.article2-details-date {
+    color: #9E9E9E;
+}
+
+.article2-details-share-options {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.article2-content-wrapper {
+  width: 100%;
+  max-width: 1072px;
+  margin: 80px auto 0;
+}
+
+.article2-block-heading {
+  width: 100%;
+  max-width: 800px;
+  margin: -16px auto;
+}
+  
+.article2-block-paragraph {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.content-last {
+    margin: 0 auto;
+}
+
+.article2-block-paragraph p, .article2-block-paragraph ul li  {
+  font-family: 'PT Serif';
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.75;
+  letter-spacing: 0;
+  margin-bottom: 8px;
+  margin-top: 0;
+  color: #616161;
+}
+
+.article2-block-paragraph p strong {
+    font-weight: 700;
+    color: #212121;
+}
+
+.article2-block-heading h3 {
+  font-family: 'PT Serif', 'Georgia', 'Times New Roman', serif;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.75;
+  letter-spacing: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #212121;
+}
+
+.content-last p, .content-last ul li {
+    color: #212121;
+}
+
+.article2-block-quote {
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 16px 0 16px 40px;
+  border-left: 2px solid #212121;
+  font-family: 'Playfair Display', 'Georgia', 'Baskerville', 'Times New Roman', serif;
+  font-style: italic;
+  font-size: 48px;
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.article2-image-block-gif, .article2-image-block-gif-left {
+  position: relative;
+  height: auto;
+  padding-bottom: 52px;
+}
+
+.article2-image-block-gif .article2-image-block-gif-bg {
+  width: 100%;
+  padding-right: 186px;
+}
+
+.article2-image-block-gif-left .article2-image-block-gif-bg {
+  width: 100%;
+  padding-left: 186px;
+}
+
+@media (max-width: 768px) {
+  .article2-image-block-gif .article2-image-block-gif-bg {
+    padding-right: clamp(15px, 10%, 100px);
+  }
+
+  .article2-image-block-gif-left .article2-image-block-gif-bg {
+    padding-left: clamp(15px, 10%, 100px);
+  }
+}
+
+@media (max-width: 480px) {
+  .article2-image-block-gif .article2-image-block-gif-bg {
+    padding-right: 60px;
+  }
+  .article2-image-block-gif-left .article2-image-block-gif-bg {
+    padding-left: 60px;
+  }
+}
+
+.article2-image-block-gif .article2-image-block-gif-overlay {
+  width: calc((100% - 186px) * 0.502); /* 445/886 = 0.502 ratio */
+  max-width: 445px;
+  background-color: #FFFFFF;
+  border-left: 12px solid #FFFFFF;
+  border-top: 12px solid #FFFFFF;
+  border-bottom: 12px solid #FFFFFF;
+  top: 57px;
+  position: absolute;
+  right: 0;
+}
+
+.article2-image-block-gif-left .article2-image-block-gif-overlay {
+  width: calc((100% - 186px) * 0.502); /* 445/886 = 0.502 ratio */
+  max-width: 445px;
+  background-color: #FFFFFF;
+  border-right: 12px solid #FFFFFF;
+  border-top: 12px solid #FFFFFF;
+  border-bottom: 12px solid #FFFFFF;
+  top: 57px;
+  position: absolute;
+  left: 0;
+}
+
+.article2-image-block-gif-bg img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.article2-image-block-gif-overlay img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.bottom-section {
+  background-color: #F5F5F5;
+  padding: 80px 0;
+}
+
+.cta-block {
+  max-width: 530px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+}
+
+.cta-image {
+  
+}
+
+.cta-header {
+  text-align: center;
+  margin: 24px;
+}
+
+.cta-header .heading {
+  font-family: 'Adelle Sans', 'PT Serif';
+  font-size: 22px;
+  font-weight: 400;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  color: #212121;
+}
+
+.cta-button-container {
+    padding: 0 0 32px 0;
+}
+  
+.cta-button {
+  border-radius: 0;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 20px 32px 16px;
+  font-family: 'Adelle Sans', 'PT Serif';
+  color: #212121;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.articel-footer {
+  padding: 133px 112px 54px 112px;
+}
+
+.footer-text {
+  font-family: 'PT Serif', 'Georgia', 'Times New Roman', serif;
+}
+  
+
+@media (max-width: 768px) {
+
+  .desktop-only {
+    display: none;
+  }
+  
+  .mobile-only {
+    display: block;
+  }
+  
+ .article2-wrapper {
+    padding: 32px 0 16px;
+  }
+
+.topsplit {
+  gap: 0;
+}
+    
+  .article2-header,
+  .article2-heading,
+  .article2-share-options,
+  .article2-main-image,
+  .article2-content-wrapper,
+  .right-section {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+
+.art2-anc-bar {
+    display: flex;
+    height: 74px;
+    padding: 16px;
+    border-bottom: 1px solid #212121;
+    border-top: 1px solid #212121;
+    margin-top: 16px;
+}
+
+.art2-anc-bar p {
+      font-size: 14px;
+      line-height: 1.5;
+      letter-spacing: 3px;
+    }
+
+.topsplit {
+    flex-direction: column-reverse;
+}
+
+.article2-details {
+  width: 100%;
+  height: auto;
+  margin-bottom: 32px;
+  padding: 0 16px;
+  gap: 20px;
+}
+
+.article2-details-title h2 {
+    font-size: 40px !important;
+}
+
+.article2-details-category {
+  font-size: 10px;
+}
+  
+.article2-details-author {
+  font-size: 10px;
+}
+
+.article2-main-image {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.article2-content-wrapper {
+  margin: 48px 0 0 auto;
+}
+
+.article2-block-paragraph {
+  margin: 24px auto;
+}
+
+.article2-block-paragraph p, .article2-block-paragraph ul li {
+  font-size: 18px;
+}
+
+  .dcblock {
+    display: block;
+  }
+    
+  .explore-header h3 {
+    letter-spacing: 0.4px;
+  }
+
+.article2-block-paragraph p, .article2-block-paragraph ul li  {
+  font-size: 18px;
+}
+
+.article2-block-heading:nth-child(1) {
+  margin: -16px auto 8px;
+}
+
+.article2-block-heading {
+  margin: 8px auto 8px;
+}
+  
+.article2-block-heading h3 {
+  font-size: 18px;
+}
+
+.article2-block-paragraph ul  {
+  padding-left: 24px;
+}
+
+.article2-block-quote {
+  margin: 24px 0 24px 0;
+  padding: 16px 0 16px 24px;
+  font-size: 40px;
+}
+
+.article2-image-block-gif .article2-image-block-gif-overlay {
+  width: 42%;
+  top: 22px;
+  border-left: 4px solid #FFFFFF;
+  border-top: 4px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.article2-image-block-gif-left .article2-image-block-gif-overlay {
+  width: 42%;
+  top: 22px;
+  border-right: 4px solid #FFFFFF;
+  border-top: 4px solid #FFFFFF;
+  border-bottom: 4px solid #FFFFFF;
+}
+
+.article2-image-block-gif-bg img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.article2-image-block-gif-overlay img {
+  width: 100% !important;
+  height: auto !important;
+}
+
+.article2-image-block-gif, .article2-image-block-gif-left {
+  padding-bottom: 18px;
+}
+
+
+.bottom-section {
+  background-color: #F5F5F5;
+  padding: 40px 0;
+}
+
+.cta-block {
+  margin: 0 16px;
+}
+
+.cta-header {
+  margin: 0;
+}
+  
+.cta-header .heading {
+  font-size: 20px;
+  padding: 0 16px;
+}
+
+.articel-footer {
+    padding: 120px 16px 32px 16px;
+}
+    
+  }
+  
+</style>
+
+<div class="article-section-wrapper">
+  {% if section.settings.showancbar %}
+  <div class="art2-anc-bar" style="background: {{ section.settings.ancbgcolor }}; color: {{ section.settings.anctxtcolor }};">
+    <p>{{ section.settings.anctext }}</p>
+  </div>
+  {% endif %}
+  <div class="article2-wrapper">
+    <div class="topsplit">
+      <div class="topsplit-image">
+        <div class="article2-main-image">
+            <img src="{{ section.settings.main_image | image_url }}" class="article-main-img" alt="article image"
+              width="630" height="630">
+        </div>
+      </div><!-- END topsplitleft -->
+      <div class="topsplit-title">
+        <div class="article2-details">
+          <div class="article2-details-category">
+            {{ section.settings.article-category }}
+          </div><!-- END article2-details-category -->
+          <div class="article2-line-divider"></div>
+        <div class="article2-details-title">
+              <h2>
+                {{ section.settings.article-heading }}
+              </h2>
+        </div>
+              <div class="article2-details-author">
+                <span class="author-text">by michael rinaldi</span>
+                <div class="article2-line-divider-vertical"></div>
+                <span class="article2-details-date">{{ section.settings.article-date }}</span>
+</div>
+            <div class="article2-details-share-options">
+              {% for block in section.blocks %}
+              {% if block.type == "share" %}
+              <a  class="{{ block.settings.share_icon_class }}" {% if block.settings.redirect %}target="_blank"{% endif %} href="{% if block.settings.redirect %}{{ block.settings.redirect_link }}{% else %}javascript:void(0);{% endif %}" data-link="{{ block.settings.share_link }}">
+                <img src="{{ block.settings.share_icon | image_url}}" width="40" height="40"
+                  alt="{{ block.settings.share_icon.alt }}">
+              </a>
+              {% endif %}
+              {% endfor %}
+            </div>
+        </div><!-- END article2-details -->
+      </div><!-- END topsplitright -->
+    </div><!-- END article2-container -->
+ 
+          <div class="article2-content-wrapper">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                  {% when 'article_image' %}
+                    <div class="article2-image-block">
+                      <img src="{{ block.settings.article_img | image_url }}" width="" height="" class="img-responsive" alt="{{ block.settings.article_img.alt }}"> 
+                    </div>
+                  {% when 'article_image_gif' %}
+                    <div class="{% if block.settings.article_img_gif_layout %}article2-image-block-gif{% else %}article2-image-block-gif-left{% endif %}">
+                      <div class="article2-image-block-gif-bg">
+                        <img src="{{ block.settings.article_img_gif | img_url: '886x' }}" 
+                          width="886" 
+                          height="550" 
+                          class="img-responsive" 
+                          alt="{{ block.settings.article_img_gif.alt }}"
+                          onerror="this.onerror=null; this.src='{{ block.settings.article_img_gif_fallback | img_url: '886x' }}';">
+                      </div>
+                      <div class="article2-image-block-gif-overlay">
+                        <img src="{{ block.settings.article_img_gif_overlay | img_url: '445x' }}"
+                          width="445"
+                          height="558"
+                          class="img-responsive"
+                          alt="{{ block.settings.article_img_gif_overlay.alt }}">
+                      </div>
+                    </div>
+                  {% when 'article_heading' %}
+                    <div class="article2-block-heading">
+                      <h3>{{ block.settings.heading }}</h3>
+                    </div>
+                  {% when 'article_quote' %}
+                    <div class="article2-block-quote desktop-only">
+                      {{ block.settings.quote }}
+                    </div>
+                    <div class="article2-block-quote mobile-only">
+                      {{ block.settings.quote-mobile }}
+                    </div>
+                  {% when 'article_content' %}
+                    <div class="article2-block-paragraph {{ block.settings.content_class }}">
+                      <div class="font-open fw-400">{{ block.settings.content }}</div>
+                    </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="bottom-section">
+        <div class="cta-block">
+          <div class="cta-image">
+            {% assign exploreImage = section.settings.explore_image | image_url %}
+            <img src="{{ exploreImage }}" width="350" height="400" alt="{{ exploreImage.alt }}" class="w-100 h-auto">
+          </div>
+          <div class="cta-header">
+          <!-- Desktop heading -->
+          <h3 class="heading text-center font-poppin fw-600 desktop-only">
+            {{ section.settings.explore-heading }}
+          </h3>
+
+          <!-- Mobile heading -->
+          <h3 class="heading text-center font-poppin fw-600 mobile-only">
+            {{ section.settings.explore-heading-mobile }}
+          </h3>
+          </div>
+          {% if section.settings.btn_link %}
+          <div class="cta-button-container">
+            <a href="{{ section.settings.btn_link }}" target="_blank" class="btn cta-button"
+              style="background-color:{{ section.settings.btn_bg }}; color:{{ section.settings.btn_text_color }}">{{
+              section.settings.btn_label }}</a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+<div id="link-copied" class="link-copied font-open fw-600">
+  Link Copied
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  let noticeTimeout; // Track the current timeout to prevent overlapping
+  
+  function showCopiedNotice() {
+    const copiedNotice = document.getElementById('link-copied');
+    if (copiedNotice) {
+      // Clear any existing timeout to prevent overlapping animations
+      if (noticeTimeout) {
+        clearTimeout(noticeTimeout);
+      }
+      
+      // Remove class first in case it's already showing
+      copiedNotice.classList.remove('show');
+      
+      // Force reflow to ensure the class removal takes effect
+      copiedNotice.offsetHeight;
+      
+      // Add show class
+      copiedNotice.classList.add('show');
+      
+      // Set timeout to remove the class
+      noticeTimeout = setTimeout(() => {
+        copiedNotice.classList.remove('show');
+        noticeTimeout = null;
+      }, 3000);
+    }
+  }
+  
+  // Handle links that also redirect
+  document.querySelectorAll('.copy-redirect-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const linkToCopy = this.getAttribute('data-link');
+      const actualHref = this.getAttribute('href');
+      
+      navigator.clipboard.writeText(linkToCopy)
+        .then(() => {
+          
+            window.open(actualHref, '_blank');
+        
+        })
+        .catch(err => {
+          console.error('Clipboard copy failed:', err);
+          window.open(actualHref, '_blank');
+        });
+    });
+  });
+  
+  // Handle plain copy buttons
+  document.querySelectorAll('.copy-link').forEach(button => {
+    button.addEventListener('click', () => {
+      const link = button.getAttribute('data-link');
+      
+      navigator.clipboard.writeText(link)
+        .then(() => {
+          showCopiedNotice(); // Show the notice every time
+        })
+        .catch(err => {
+          console.error('Clipboard copy failed:', err);
+        });
+    });
+  });
+});
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "Article 380",
+    "settings": [
+      {
+        "type": "header",
+        "content" : "Article 379 block"
+      },
+      {
+        "type": "text",
+        "id" : "tag",
+        "label" : "article Tag"
+      },
+      {
+        "type": "html",
+        "id" : "article-heading",
+        "label" : "Heading"
+      },
+      {
+        "type": "text",
+        "id" : "article-category",
+        "label" : "Category Name"
+      },
+      {
+        "type": "text",
+        "id" : "article-subheading",
+        "label" : "Sub Heading"
+      },
+      {
+        "type": "text",
+        "id" : "article-date",
+        "label" : "Article Date"
+      },
+      {
+        "type": "image_picker",
+        "id" : "main_image",
+        "label" : "article Main Image"
+      },
+      {
+        "type": "header",
+        "content" : "Press Block"
+      },
+      {
+        "type": "text",
+        "id" : "press_heading",
+        "label": "Press Heading"
+      },
+      {
+        "type": "header",
+        "content" : "Explore Block"
+      },
+      {
+        "type": "html",
+        "id" : "explore-heading",
+        "label" : "Heading"
+      },
+          {
+        "type": "html",
+        "id" : "explore-heading-mobile",
+        "label" : "Heading Mobile"
+      },
+      {
+        "type": "image_picker",
+        "id" : "explore_image",
+        "label" : "Explore Image"
+      },
+      {
+        "type": "text",
+        "id" : "btn_label",
+        "label" : "Button Label"
+      },
+      {
+        "type": "url",
+        "id" : "btn_link",
+        "label" : "Button link"
+      },
+      {
+        "type": "color",
+        "id" : "btn_bg",
+        "label" : "Button background color"
+      },
+      {
+        "type": "color",
+        "id" : "btn_text_color",
+        "label" : "Button text color"
+      },
+      {
+        "type": "header",
+        "content" : "Announcement bar block"
+      },
+      {
+        "type": "checkbox",
+        "id": "showancbar",
+        "label": "Show announcement",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id" : "ancbgcolor",
+        "label" : "Background color"
+      },
+      {
+        "type": "color",
+        "id" : "anctxtcolor",
+        "label" : "Text color"
+      },
+      {
+        "type": "textarea",
+        "id" : "anctext",
+        "label" : "Text"
+      },
+    ],
+    "blocks": [
+      {
+      "type": "share",
+      "name": "Share article",
+      "settings": [
+            {
+              "type": "checkbox",
+              "id": "redirect",
+              "label": "Enable Redirect"
+            },
+           {
+              "type": "text",
+              "id": "redirect_link",
+              "label": "Redirect Link"
+            },
+            {
+              "type": "image_picker",
+              "id": "share_icon",
+              "label": "Add Share Icon"
+            },
+            {
+              "type": "text",
+              "id": "share_link",
+              "label": "Share Link"
+            },
+            {
+              "type": "text",
+              "id": "share_icon_class",
+              "label": "Add Class"
+            }
+         ]
+      },
+      {
+      "type": "press",
+      "name": "Press Images",
+      "settings": [
+            {
+              "type": "image_picker",
+              "id": "press_img",
+              "label": "Add Press Images"
+            }
+         ]
+      },
+      {
+      "type": "article_image",
+      "name": "article Images",
+      "settings": [
+            {
+              "type": "image_picker",
+              "id": "article_img",
+              "label": "Add Image"
+            },
+         ]
+      },
+{
+      "type": "article_image_gif",
+      "name": "Article image with GIF",
+      "settings": [
+            {
+              "type": "checkbox",
+              "id": "article_img_gif_layout",
+              "label": "Overlay image on right"
+            },
+            {
+              "type": "image_picker",
+              "id": "article_img_gif",
+              "label": "Add BG GIF Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "article_img_gif_overlay",
+              "label": "Add Overlay Image"
+            },
+            {
+              "type": "image_picker",
+              "id": "article_img_gif_fallback",
+              "label": "Add GIF Fallback"
+            }
+         ]
+      },
+      {
+      "type": "article_heading",
+      "name": "article Heading",
+      "settings": [
+            {
+              "type": "textarea",
+              "id": "heading",
+              "label": "Heading"
+            }
+         ]
+      },
+{
+      "type": "article_quote",
+      "name": "article Quote",
+      "settings": [
+            {
+              "type": "html",
+              "id": "quote",
+              "label": "Quote"
+            },
+            {
+              "type": "html",
+              "id": "quote-mobile",
+              "label": "Quote Mobile"
+            }
+         ]
+      },
+      {
+      "type": "article_content",
+      "name": "article Content",
+      "settings": [
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Content"
+            },
+            {
+              "type": "text",
+              "id": "content_class",
+              "label": "Add Class"
+            },
+        	  {
+          "type": "color",
+          "id": "content_text-color",
+          "default": "#212121",
+          "label": "Text Colour"
+      }
+         ]
+      }
+    ],
+    "presets": [
+		{
+			"name": "Article 380"
+		}
+	]
+  }
+{% endschema %}

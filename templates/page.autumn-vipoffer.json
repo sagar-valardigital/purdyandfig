@@ -1,0 +1,882 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676": {
+      "type": "global-announcement-bar",
+      "settings": {
+        "outOfStock": true,
+        "logo": false,
+        "class": "",
+        "text": "VIP Launch: FREE Bottle for Life",
+        "bb-color": "#fd5f0c",
+        "text-color": "#ffffff",
+        "scrollto": "",
+        "annuText": "",
+        "landingproduct": ""
+      }
+    },
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2": {
+      "type": "global-header",
+      "settings": {
+        "menu2": "purdy-2-0-header-menu-autumn-jclc",
+        "mobilemenu": "mobile-menu-2-autumn-jclc",
+        "top_product_link": "autumn-variety-kit"
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "e5996c06-8533-4d3c-8321-8492ae111911": {
+      "type": "bb-banner",
+      "blocks": {
+        "93094f51-f07d-4107-9935-3e953e94c29b": {
+          "type": "text",
+          "settings": {
+            "listItem": "Get a FREE Bottle for Life"
+          }
+        },
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c": {
+          "type": "text",
+          "settings": {
+            "listItem": "Try 2 NEW Autumn Scents: Juniper & Cardamom + Lavender & Chamomile"
+          }
+        },
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP orders shipped the same day"
+          }
+        },
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "listItem": "VIP orders shipped the same day"
+          }
+        }
+      },
+      "block_order": [
+        "93094f51-f07d-4107-9935-3e953e94c29b",
+        "0f7a60a0-eeab-4f00-9a5b-15affce7792c",
+        "af6a7367-bd8f-4673-a299-b2a318f41d2f",
+        "ca76e987-69ad-4b9a-aff9-1da69b8a1bbd"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px; padding-left: 1.5rem; text-align: left;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1rem; padding-top: 2rem;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "checkout": false,
+        "discount": "Free",
+        "className": "spring-banner",
+        "idName": "spring-banner",
+        "isSub": false,
+        "landingproduct": "autumn-booster-vip-offer",
+        "desktopimage": "shopify://shop_images/Autumn-VIP-web02.jpg",
+        "mobileimage": "shopify://shop_images/Autumn-VIP-mobb02.jpg",
+        "title": "<span class=\"font-normal-value\">VIP Autumn Scent Launch\n\n<p></p></span>",
+        "subtext": "Secure your VIP Offer:",
+        "price": "14",
+        "delPrice": "23",
+        "textAfterPrice": "Offer ends in 48 hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "48940341-00a6-416e-8886-cb9cad692c7a": {
+      "type": "rich-text",
+      "blocks": {
+        "template--16764610511075__48940341-00a6-416e-8886-cb9cad692c7a-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "2 NEW Scents in ONE VIP Pack + FREE Bottle for Life",
+            "heading_size": "h2"
+          }
+        },
+        "template--16764610511075__48940341-00a6-416e-8886-cb9cad692c7a-text-1": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "text": "<p>Share information about your brand with your customers. Describe a product, make announcements, or welcome customers to your store.</p>"
+          }
+        },
+        "template--16764610511075__48940341-00a6-416e-8886-cb9cad692c7a-button-1": {
+          "type": "button",
+          "disabled": true,
+          "settings": {
+            "button_label": "Button label",
+            "button_link": "",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "template--16764610511075__48940341-00a6-416e-8886-cb9cad692c7a-heading-1",
+        "template--16764610511075__48940341-00a6-416e-8886-cb9cad692c7a-text-1",
+        "template--16764610511075__48940341-00a6-416e-8886-cb9cad692c7a-button-1"
+      ],
+      "custom_css": [
+        "h2 {font-size: 30px; font-family: \"Value-Serif-Pro\"; color: #404f63;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "color_scheme": "#ffffff",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 0
+      }
+    },
+    "b209e0b8-2db4-4a84-8c81-6abb93a326de": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "h2 {font-size: 26px; font-family: \"Value-Serif-Pro\"; color: #d33a3d;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Juniper &amp; Cardamom",
+        "image": "shopify://shop_images/Juniper_copy.jpg",
+        "details": "<h3>Vibrant & Uplifting<br/></h3><p>The invigorating lemon scent complements the aromatic cardamom tones, enriched by its antibacterial properties. The addition of juniper berry’s woody notes and purifying qualities adds the final touch, elevating your cleaning routine to an autumnal stroll in the park.<br/></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1d132550-1d39-4ab1-89be-a0c2bbe18347": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "h2 {font-size: 26px; font-family: \"Value-Serif-Pro\"; color: #d9a605;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Lavender &amp; Chamomile\n<p></p>",
+        "image": "shopify://shop_images/Lavender.jpg",
+        "details": "<h3>Tranquil & Fragrant </h3><p>The gentle, unmistakable lavender notes blend harmoniously with the herbal undertones of Geranium and Clary Sage. Enhanced by a touch of the serene aroma of Roman Chamomile, this captivating fragrance envelops your home in the gentle nostalgia of autumn.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b": {
+      "type": "landing-blocks",
+      "blocks": {
+        "e9358ff1-a922-4541-acc2-5274872a4581": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9161.png",
+            "rounded": true,
+            "heading": "Create a calm & cosy home",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9314.png",
+            "rounded": true,
+            "heading": "Naturally-Scented Home Care",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9315.png",
+            "rounded": true,
+            "heading": "The Crisp Scent of Autumn",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_9159.png",
+            "rounded": true,
+            "heading": "Enjoy a Warm, Familiar Scent",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "e9358ff1-a922-4541-acc2-5274872a4581",
+        "f57072c6-d2a2-4fe2-8e78-2df86c16f256",
+        "e12ceeb8-03c8-428f-9911-6a64d6389a08",
+        "1e8f297f-8499-46e8-8ff7-e0fdd5c75e84"
+      ],
+      "custom_css": [
+        ".heading-4.text-center,h3 {text-decoration: none !important; font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".pb-5 {padding-bottom: 0rem !important;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "#fd5f0c",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Embrace the Golden Season With Autumn-Scented Notes\n\nclean</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "830b41fa-258c-4dd3-b491-b443b4e63a74": {
+      "type": "Marquee-block-2",
+      "blocks": {
+        "90cbdaa0-d258-4e3d-9818-ebaf44f4f11f": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/63840647-0-Frame-12588.svg"
+          }
+        }
+      },
+      "block_order": [
+        "90cbdaa0-d258-4e3d-9818-ebaf44f4f11f"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".marquee-img {padding: 0 30px;}",
+        ".heading-3 {font-size: 1.3rem;"
+      ],
+      "settings": {
+        "enable": true,
+        "img_slider": true,
+        "color_bg": "#fd5f0c",
+        "color_text": "#ffffff",
+        "marqueeHTML": "As Seen in"
+      }
+    },
+    "90186f07-11c8-449b-9303-d82670158439": {
+      "type": "homepage-banner-1",
+      "disabled": true,
+      "settings": {
+        "class": "",
+        "desktopimage": "shopify://shop_images/C_N.jpg",
+        "mobileimage": "shopify://shop_images/cnArtboard_2.jpg",
+        "mobileImgLoc": "img-center",
+        "enablelink": true,
+        "reviewShow": false,
+        "title": "A trip to paradise, every time you clean",
+        "titlecolor": "#ffffff",
+        "subtext": "Save £15 and try our tropical, summer scent for FREE.",
+        "subtextcolor": "#ffffff",
+        "btnText": "SHOP NOW",
+        "link": "",
+        "linkText": "",
+        "textcolor": "",
+        "bgcolor": "",
+        "btnSubText": ""
+      }
+    },
+    "49d1d86a-4188-4863-8378-0a726527234c": {
+      "type": "on-scroll-sticky",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-size: 33px; font-family: \"Value-Serif-Pro\";}",
+        ".my-5 {margin-top: 2rem !important; margin-bottom: 0rem !important; padding: 1rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Take a trip to paradise, every time you clean",
+        "subheading": "<p>Following a sellout summer last year, our Geranium & Ylang Ylang is ready to transport you to a tropical paradise with its scented blend of enchanted gardens and warm, spicy tropics. <br/></p>"
+      }
+    },
+    "e13765db-04a1-4bad-957d-25ed753ffd9f": {
+      "type": "landing-text-with-image",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: Value-Serif-Pro; font-size: 24px;}",
+        ".mobile-padding-y {padding-top: 0rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "Patchouli &amp; Cedarwood\n<p> </p>\n“Moth Magic”",
+        "image": "shopify://shop_images/Image_53.png",
+        "details": "<p>Moth-repellent essential oils star alongside natural insecticide Neem for moth-free wardrobes! The scent is a forest-walk blend of earthy Cedarwood with wafts of woody-citrus MayChang and Patchouli, followed by floral Palmarosa and sweet-balsamic Amyris. <br/></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "3ec202a7-9ec5-4c23-9346-6dd24f28530a": {
+      "type": "landing-text-with-image",
+      "disabled": true,
+      "custom_css": [
+        "h2 {font-family: Value-Serif-Pro; font-size: 24px;}",
+        ".mobile-padding-y {padding-top: 1rem; padding-bottom: 0rem;}",
+        ".two-women-details {margin-top: 2px;}",
+        ".normal-text {font-family: \"Value-Sans\"; margin-top: 20px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": true,
+        "heading": "Lemon &amp; Marjoram\n<p> </p>\n“Zingy Spring”",
+        "image": "shopify://shop_images/Image_54.png",
+        "details": "<p>A vibrant citrussy blend, softened by grassy palmarosa, sweet marjoram and soft clary sage, for cheerful thoughts of Spring in every room.<br/></p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "dcb1b499-7785-4926-98e9-8c795071403e": {
+      "type": "bb-banner",
+      "blocks": {
+        "0962baa7-3057-41ef-823e-9e163588749a": {
+          "type": "text",
+          "settings": {
+            "listItem": "1x 20ml Juniper & Cardamom Concentrate"
+          }
+        },
+        "887bdc09-55a0-4425-84c6-ba94fca4bdcb": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lavender & Chamomile Concentrate"
+          }
+        },
+        "939f5bc4-dc41-4b29-9c9d-555a0e2d241c": {
+          "type": "text",
+          "settings": {
+            "listItem": "FREE Bottle for Life"
+          }
+        },
+        "4f2c2a5d-5cc4-4dc8-99bd-80894169d1d7": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP Offer Valid for 48 Hours"
+          }
+        }
+      },
+      "block_order": [
+        "0962baa7-3057-41ef-823e-9e163588749a",
+        "887bdc09-55a0-4425-84c6-ba94fca4bdcb",
+        "939f5bc4-dc41-4b29-9c9d-555a0e2d241c",
+        "4f2c2a5d-5cc4-4dc8-99bd-80894169d1d7"
+      ],
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": true,
+        "checkout": false,
+        "discount": "Free",
+        "className": "bathroom-banner bb-last-banner-white",
+        "idName": "spring-banner",
+        "isSub": false,
+        "landingproduct": "autumn-booster-vip-offer",
+        "desktopimage": "shopify://shop_images/autumn-vio2.jpg",
+        "mobileimage": "shopify://shop_images/Autumn-VIP-mob02.jpg",
+        "title": "VIP Offer: Autumn Refill Booster + FREE Bottle for Life",
+        "subtext": "VIP Launch Offer:",
+        "price": "14.00",
+        "delPrice": "23",
+        "textAfterPrice": "Offer Ends in 48 Hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    },
+    "001f78c8-7d96-4a57-9895-00898748d6a3": {
+      "type": "bb-products",
+      "blocks": {
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit"
+          }
+        },
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f": {
+          "type": "product",
+          "settings": {
+            "product": "luxury-microfibre-cloth"
+          }
+        },
+        "a2661355-29b7-48aa-b825-c8c24c82e94c": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        },
+        "0d0af1e1-0e90-40b7-abac-a1736eed0e95": {
+          "type": "product",
+          "settings": {
+            "product": "patchouli-cedarwood-refill-booster-pack"
+          }
+        }
+      },
+      "block_order": [
+        "85fe01cc-1ba5-4812-b9e2-3c1bca0843e0",
+        "198f7916-71e5-4462-9b7d-5e242a6b9c2f",
+        "a2661355-29b7-48aa-b825-c8c24c82e94c",
+        "0d0af1e1-0e90-40b7-abac-a1736eed0e95"
+      ],
+      "custom_css": [
+        ".product-detail *,.btn {font-family: \"Value-Sans\";}",
+        ".py-5 {padding-top: 2rem !important; padding-bottom: 5px !important;}",
+        ".bg-white {margin: 9px;}",
+        ".colletion-products {margin-bottom: 0px;}",
+        ".heading-2 {padding-bottom: 1rem;}"
+      ],
+      "settings": {
+        "className": "bg-white add-more-bathroom-product",
+        "bgColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Add extras to your cart</span>",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "b59942de-50b9-419f-a1fc-e2454fded23c": {
+      "type": "video-block",
+      "disabled": true,
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36p; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4",
+        "image": "shopify://shop_images/thumn.jpg",
+        "full-width": true,
+        "heading": "Find out more about our Spring Scents",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/aeac94dbe3014ed48da0b7e893b6762f.mp4"
+      }
+    },
+    "183d6f8f-887d-47a0-abd6-badda41fccc2": {
+      "type": "video-html-block",
+      "custom_css": [
+        ".video-block-text h2 {font-size: 36px; padding: 2rem;}"
+      ],
+      "settings": {
+        "video-url": "https://cdn.shopify.com/videos/c/o/v/3b9d9d85255541bf89292a87910e5810.mov",
+        "image": "shopify://shop_images/video_block_autumn.jpg",
+        "poster": "shopify://shop_images/79483146-5FE3-4899-B92E-497BF0096AB7.jpg",
+        "full-width": true,
+        "heading": "Capture the essence of Autumn  with Purdy and Charlotte",
+        "sub-heading": "",
+        "button-text": "button",
+        "button-url": "https://cdn.shopify.com/videos/c/o/v/3b9d9d85255541bf89292a87910e5810.mov"
+      }
+    },
+    "35d8d2ed-c069-4a7d-bf53-50614aeeb7cd": {
+      "type": "lander-table",
+      "settings": {}
+    },
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8": {
+      "type": "landing-blocks",
+      "blocks": {
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Ellipse_178_8b33f4a6-a2f3-4890-ae38-0ab56ca86208.png",
+            "rounded": true,
+            "heading": "No questions asked money back guarantee if you’re not satisfied.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_8374.png",
+            "rounded": true,
+            "heading": "Ships in 1-2 Days guaranteed. Free delivery over £40.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/Group_8375.png",
+            "rounded": true,
+            "heading": "Save 10 plastic bottles per year from entering landfill.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/iPhone_14_Pro_Max_13_68fbbd04-7f4b-4dac-b55e-a154f276d7f5.png",
+            "rounded": true,
+            "heading": "Easy top up refills whenever you need.",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "21143f31-af4a-4b9f-bf38-618d47c5fa5b",
+        "1ff7f29c-9e77-4f33-82d9-0ce3dec4f767",
+        "dd449fa9-e9dc-4a91-929c-d12dcab41123",
+        "34bf13e1-92e9-4620-8474-fccf2a807c6d"
+      ],
+      "custom_css": [
+        "h3 {margin: 0; font-family: \"Value-Sans\"; font-size: 16px; padding-top: 0rem;}"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#fd5f0c",
+        "sectionTextColor": "#ffffff",
+        "heading": "<span class=\"value-pro\">Extra Benefits</span>",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "99ccde11-5760-4852-bf3d-835fd6a67eae": {
+      "type": "landing-text-with-image",
+      "custom_css": [
+        "p {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".mobile-padding-y {padding-top: 30px; padding-bottom: 0px;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "bg-white bb-image-text",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-60",
+        "layout": false,
+        "heading": "<span class=\"value-pro\">Two women on  a mission to </span>transform cleaning",
+        "image": "shopify://shop_images/THUMBNAIL_4.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make cleaning products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of 100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "ca9a0417-78db-4e8d-8f82-b785e14896be": {
+      "type": "select-scent",
+      "blocks": {
+        "b72f3078-6ac5-4961-8f57-f5999fcb2a5f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/THUMBNAIL_2.jpg",
+            "details": "",
+            "link": ""
+          }
+        },
+        "9606fad0-654e-4910-a8f6-a317ae66c53f": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/THUMBNAIL_3.jpg",
+            "details": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "b72f3078-6ac5-4961-8f57-f5999fcb2a5f",
+        "9606fad0-654e-4910-a8f6-a317ae66c53f"
+      ],
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "class": "",
+        "heading": "About the blends",
+        "subheading": "",
+        "ctalabel": "",
+        "ctalink": ""
+      }
+    },
+    "b73293e2-35b3-464c-aa9c-e829bf1326ae": {
+      "type": "our-blends",
+      "blocks": {
+        "7355e80e-0f32-40f9-b2f2-88f84398e7d4": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "click-none white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6304_2x_0427fb75-4121-41b4-bbc2-5654d0e2f1cf.png",
+            "heading": "Uplifting Citrus",
+            "detail": "A fresh and uplifting blend of sweet orange & grapefruit peels and niaouli leaves, known for their cheerful aromas and mood-enhancing properties.",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        },
+        "f7716969-0bbf-4474-b38e-ee963a000fdb": {
+          "type": "text",
+          "settings": {
+            "popup_no": "",
+            "class": "click-none white-text",
+            "nopopup": false,
+            "bgImage": "shopify://shop_images/Group_6303_2x_d78b4754-830e-4bde-845e-33440dba783b.png",
+            "heading": "Grounding Vetiver",
+            "detail": "An earthy blend of sweet orange, coriander seed and vetiver, known for their calming & grounding effects.",
+            "pop_heading": "",
+            "pop_detail": "",
+            "showplus": true,
+            "PoopupIconCode": ""
+          }
+        }
+      },
+      "block_order": [
+        "7355e80e-0f32-40f9-b2f2-88f84398e7d4",
+        "f7716969-0bbf-4474-b38e-ee963a000fdb"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}"
+      ],
+      "settings": {
+        "class": "show-2-blocks",
+        "bgColor": "#e3f3fe",
+        "heading": "Making Scents Of The World"
+      }
+    },
+    "9394c6b1-be55-4a62-9aa3-0ea37e49655e": {
+      "type": "making-scents",
+      "blocks": {
+        "7439dfb1-9f5a-426c-b723-62d3c06ba532": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_2_e36732b5-f721-42d8-ad01-eedd48165650.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "68ccaf7f-c116-4a22-ad24-6649a142de65": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_4_6c28498a-5eb6-4261-b869-ac3fc89fc599.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "5498cf2a-1a31-44ca-b15e-82450778f18d": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_3_de571dcd-7ec9-4077-a930-359c8d11cadb.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "ec386922-cab0-440d-b97c-10c1dcfd5fcf": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_5_26f391ca-1082-4765-8227-5c015cbf0e92.png",
+            "details": "",
+            "link": ""
+          }
+        },
+        "891a56e6-3228-4710-a210-e6649ea49702": {
+          "type": "text",
+          "settings": {
+            "heading": "",
+            "image": "shopify://shop_images/Web_1920_6_a211e93d-e1f3-4d01-b7d8-89a37138ab10.png",
+            "details": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "7439dfb1-9f5a-426c-b723-62d3c06ba532",
+        "68ccaf7f-c116-4a22-ad24-6649a142de65",
+        "5498cf2a-1a31-44ca-b15e-82450778f18d",
+        "ec386922-cab0-440d-b97c-10c1dcfd5fcf",
+        "891a56e6-3228-4710-a210-e6649ea49702"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        "p {font-family: \"Value-Sans\";}"
+      ],
+      "settings": {
+        "class": "",
+        "bgColor": "#e3f3fe",
+        "heading": "Making Scents Of The World",
+        "ctalabel": "",
+        "ctalink": ""
+      }
+    },
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1": {
+      "type": "landing-table",
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        "td,th {font-family: \"Value-Sans\";}"
+      ],
+      "settings": {}
+    },
+    "3f9761cf-9ad2-4cf9-a5ef-cf49c546816f": {
+      "type": "bb-banner",
+      "blocks": {
+        "62468903-9e03-4db6-9529-af3527b2997f": {
+          "type": "text",
+          "settings": {
+            "listItem": "1x 20ml Juniper & Cardamom Concentrate"
+          }
+        },
+        "56588c1d-1003-4a1a-82ba-3aaae5f1933b": {
+          "type": "text",
+          "settings": {
+            "listItem": "1 x 20ml Lavender & Chamomile Concentrate "
+          }
+        },
+        "7ccd284f-f3fd-4cc0-b6b0-86bff217abb7": {
+          "type": "text",
+          "settings": {
+            "listItem": "FREE Bottle for Life + Cloth "
+          }
+        },
+        "de987fc3-455b-471d-ac7c-7499eb8c02a7": {
+          "type": "text",
+          "settings": {
+            "listItem": "VIP Offer Valid for 48 Hours"
+          }
+        }
+      },
+      "block_order": [
+        "62468903-9e03-4db6-9529-af3527b2997f",
+        "56588c1d-1003-4a1a-82ba-3aaae5f1933b",
+        "7ccd284f-f3fd-4cc0-b6b0-86bff217abb7",
+        "de987fc3-455b-471d-ac7c-7499eb8c02a7"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".heading-2 {font-family: \"Value-Serif-Pro\";}",
+        ".bb-points {font-family: \"Value-Sans\"; font-size: 16px;}",
+        ".btn {font-family: \"Value-Sans\";}",
+        ".bath-banner-details {padding: 1.5rem; padding-top: 2rem;}",
+        ".bb-points {padding-left: 1rem; text-align: left;}",
+        ".pt-5 {padding-top: 0rem !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "checkout": false,
+        "discount": "Free",
+        "className": "",
+        "idName": "spring-banner",
+        "isSub": false,
+        "landingproduct": "",
+        "desktopimage": "shopify://shop_images/Autumn-VIP-web04.jpg",
+        "mobileimage": "shopify://shop_images/Autumn-VIP-mobb04.jpg",
+        "title": "VIP Offer: Autumn Refill Booster + FREE Bottle for Life",
+        "subtext": "VIP Launch Offer: :",
+        "price": "14",
+        "delPrice": "23",
+        "textAfterPrice": " Offer Ends in 48 Hours!",
+        "btnText": "BUY NOW",
+        "ctaDetails": "100% secure checkout"
+      }
+    }
+  },
+  "order": [
+    "b6b8f794-1bcf-4b33-9afc-9aa7eee69676",
+    "f5fdecef-d7db-4da3-b1c6-a9139554cbe2",
+    "main",
+    "e5996c06-8533-4d3c-8321-8492ae111911",
+    "48940341-00a6-416e-8886-cb9cad692c7a",
+    "b209e0b8-2db4-4a84-8c81-6abb93a326de",
+    "1d132550-1d39-4ab1-89be-a0c2bbe18347",
+    "c1e7bc1e-b31e-45aa-9d13-8bbd7ecf3a6b",
+    "830b41fa-258c-4dd3-b491-b443b4e63a74",
+    "90186f07-11c8-449b-9303-d82670158439",
+    "49d1d86a-4188-4863-8378-0a726527234c",
+    "e13765db-04a1-4bad-957d-25ed753ffd9f",
+    "3ec202a7-9ec5-4c23-9346-6dd24f28530a",
+    "dcb1b499-7785-4926-98e9-8c795071403e",
+    "001f78c8-7d96-4a57-9895-00898748d6a3",
+    "b59942de-50b9-419f-a1fc-e2454fded23c",
+    "183d6f8f-887d-47a0-abd6-badda41fccc2",
+    "35d8d2ed-c069-4a7d-bf53-50614aeeb7cd",
+    "49c8de12-a5b5-46b2-87b7-5d1e55ab9cf8",
+    "99ccde11-5760-4852-bf3d-835fd6a67eae",
+    "ca9a0417-78db-4e8d-8f82-b785e14896be",
+    "b73293e2-35b3-464c-aa9c-e829bf1326ae",
+    "9394c6b1-be55-4a62-9aa3-0ea37e49655e",
+    "f517fc6f-6bb8-47cd-8a48-cd85fb3079e1",
+    "3f9761cf-9ad2-4cf9-a5ef-cf49c546816f"
+  ]
+}

@@ -1,0 +1,39 @@
+<div class="annoucment-bar py-2 font-pier" style="background-color:{{section.settings.bb-color}}">
+    <div class="container text-center" style="color:{{section.settings.text-color}}">
+       <a href="{{ section.settings.annuLink }}" style="color:{{section.settings.text-color}}"> {{section.settings.text}} </a>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "t:sections.announcement-bar.name",
+  "settings" : [
+      {
+          "type": "text",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+      },
+	  {
+          "type": "color",
+          "id": "bb-color",
+          "default": "#CB3C8E",
+          "label": "Background Colour"
+      },
+	  {
+          "type": "color",
+          "id": "text-color",
+          "default": "#fff",
+          "label": "text Colour"
+      },{
+          "type": "text",
+          "id": "annuLink",
+          "label": "Link"
+      }
+  ]
+  
+ 
+}
+{% endschema %}

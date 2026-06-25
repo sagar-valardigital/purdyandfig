@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32.279" height="33.5" viewBox="0 0 32.279 33.5">
+  <g id="shopping_cart" data-name="shopping cart" transform="translate(0.25 0.25)">
+    <path id="Path_367" data-name="Path 367" d="M30.823,5.916A3.962,3.962,0,0,0,27.7,4.353H5.757L5.7,3.844A4.179,4.179,0,0,0,1.658,0h-.3A1.406,1.406,0,0,0,0,1.451,1.406,1.406,0,0,0,1.357,2.9h.3A1.393,1.393,0,0,1,3.006,4.183L4.873,21.16a6.965,6.965,0,0,0,6.739,6.409H25.784a1.454,1.454,0,0,0,0-2.9H11.612a4.1,4.1,0,0,1-3.827-2.9H23.961A6.928,6.928,0,0,0,30.639,15.8L31.7,9.479a4.564,4.564,0,0,0-.882-3.564ZM29.041,8.964l-1.067,6.318a4.156,4.156,0,0,1-4.013,3.581H7.354L6.077,7.255H27.7a1.323,1.323,0,0,1,1.047.517A1.524,1.524,0,0,1,29.041,8.964Z" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+    <circle id="Ellipse_1" data-name="Ellipse 1" cx="2" cy="2" r="2" transform="translate(7.359 29)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+    <circle id="Ellipse_2" data-name="Ellipse 2" cx="2" cy="2" r="2" transform="translate(21.359 29)" fill="#fff" stroke="#fff" stroke-width="0.5"/>
+  </g>
+</svg>

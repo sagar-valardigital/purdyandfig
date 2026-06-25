@@ -1,0 +1,1154 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "cart_drawer_xyerRx": {
+      "type": "cart-drawer",
+      "blocks": {
+        "product_qiEwaQ": {
+          "type": "product",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55523184148860",
+            "subscription": true,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSSTARTERCU398",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "product_ayKpt3": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo",
+            "customImage": false,
+            "variant": "54831041282428",
+            "subscription": false,
+            "selling_plan": "",
+            "discount": "ODLLIME&LEMONGRASSCU398",
+            "price": "£13.56",
+            "compare_price": "£16.95",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "empty_cart_KUGbhD": {
+          "type": "empty_cart",
+          "settings": {
+            "product": "bathroom-bliss-bundle-kit",
+            "customImage": false,
+            "variant": "55523184148860",
+            "subscription": true,
+            "selling_plan": "4327440611",
+            "discount": "BATHROOMBLISSSTARTERCU398",
+            "price": "£15.00",
+            "compare_price": "£43.00",
+            "button_text": "ADD TO CART"
+          }
+        },
+        "empty_cart_Vf4KrA": {
+          "type": "empty_cart",
+          "settings": {
+            "product": "oh-de-loo",
+            "customImage": false,
+            "variant": "54831041282428",
+            "subscription": false,
+            "selling_plan": "",
+            "discount": "ODLLIME&LEMONGRASSCU398",
+            "price": "£13.56",
+            "compare_price": "£16.95",
+            "button_text": "ADD TO CART"
+          }
+        }
+      },
+      "block_order": [
+        "product_qiEwaQ",
+        "product_ayKpt3",
+        "empty_cart_KUGbhD",
+        "empty_cart_Vf4KrA"
+      ],
+      "settings": {
+        "enable": true
+      }
+    },
+    "anc_bar_381_NLBdEJ": {
+      "type": "anc-bar-381",
+      "custom_css": [
+        ".anc-bar-mobile {background: #ffede4;}",
+        ".anc-bar-heading-mobile {color: #d15e14;}"
+      ],
+      "name": "Anc bar 381",
+      "settings": {
+        "sticky": true,
+        "enable_checkout": true,
+        "background_color": "#ffffff",
+        "text_color": "#d15e14",
+        "logo_color": "#11322c",
+        "logo_click_url": "",
+        "heading": "Free delivery on orders over <span class=\"market-place-currency\"></span>40"
+      }
+    },
+    "banner_381_dNXxET": {
+      "type": "banner-381",
+      "custom_css": [
+        ".show-block {font-family: \"GT Super\";}",
+        ".banner-heading-381 h2 i {font-style: italic; font-family: \"GT Super\"; font-weight: 600;}",
+        "@media (max-width: 768px) {.show-block {display: block; }}"
+      ],
+      "name": "Banner 381",
+      "settings": {
+        "text_color": "#ffffff",
+        "desktop_image": "shopify://shop_images/Hero_-_Desktop_352fac7a-fed2-4a58-9896-92a882fb7ab8.png",
+        "mobile_image": "shopify://shop_images/Hero_-_Mobile_541b4c37-e510-448b-b443-858e659d7969.png",
+        "heading": "Your Autumn <span class=\"show-block\">Member Offers</span>"
+      }
+    },
+    "citrus_series_398_LVttEg": {
+      "type": "citrus-series-398",
+      "custom_css": [
+        ".citrus-heading {font-size: 58px; line-height: 72.5px;}",
+        ".citrus-heading i {font-weight: 600; font-style: italic; font-family: \"GT Super\";}",
+        ".heading-brd {border-top: unset; border-bottom: unset; padding: unset;}",
+        ".checkout-starterkit-btn {height: 48px;}",
+        "@media (max-width: 768px) {.citrus-heading-box {gap: 12px; text-align: left; }}"
+      ],
+      "name": "Citrus series 398",
+      "settings": {
+        "out_of_stock": false,
+        "isSub": false,
+        "background_color": "#d15e14",
+        "desktop_image": "shopify://shop_images/Desktop_769471d5-e265-4cba-a80e-57d21149c8d0.png",
+        "mobile_image": "shopify://shop_images/Mobile_df06a0d6-7561-41c3-a7e2-48c59460f09a.png",
+        "scroll_id": "starterkit-product",
+        "headingcolor": "#ffede4",
+        "heading": "Save 15% off <i>sensational</i> autumn scents",
+        "summarycolor": "#ffffff",
+        "summary": "Discover new <span class=\"fw-600\">limited-edition</span> scents inspired by the changing rhythms of the season",
+        "landing_product": "seasonal-refill-booster-pack-autumn",
+        "titlecolor": "#ffffff",
+        "product_title": "Autumn Refill Pack",
+        "desccolor": "#ffffff",
+        "product_summary": "Including limited-edition Ginger & Citrus, Pear and Lavender & Chamomile",
+        "variant_id": "45458798641379",
+        "pricecolor": "#ffffff",
+        "product_price": "20.40",
+        "crosspricecolor": "#9e9e9e",
+        "product_cross_price": "24.00",
+        "product_sku": "FG1209d",
+        "selling_plan": "",
+        "discount_code": "AUTUMNREFILLSB398",
+        "btn_bg_color": "#11322c",
+        "btn_text_color": "#ffffff",
+        "btn_text": "ADD TO CART",
+        "popuptitle": "Autumn Refill Pack",
+        "popupsummary": "Including limited-edition Ginger & Citrus, Pear and Lavender & Chamomile",
+        "bulletlabel": "",
+        "bulletpoints1": "",
+        "bulletpoints2": "",
+        "bulletpoints3": "",
+        "bulletpoints4": "",
+        "bulletpoints5": "",
+        "bulletpoints6": "",
+        "bulletpoints7": "",
+        "bulletpoints8": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 3,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "add_to_cart",
+        "eventValue": "shop_anchor",
+        "itemId": "FG1269",
+        "optionIndex": "",
+        "ItemName": "Autumn Refill Pack"
+      }
+    },
+    "collections_381_X8Ht4r": {
+      "type": "collections-381",
+      "blocks": {
+        "image_x9bgMC": {
+          "type": "image",
+          "settings": {
+            "d_image_only": "shopify://shop_images/Card_100ac4d9-a737-44cf-b58d-384306e7c918.png",
+            "m_image_only": "shopify://shop_images/Card_1.png",
+            "badge_heading": "MEMBER EXCLUSIVE",
+            "badge_subheading": "<span class=\"fw-600\">Save 15%</span> on our newest autumn scents and collections"
+          }
+        },
+        "product_CgHqxc": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "seasonal-refill-booster-pack-autumn",
+            "variant_number": "1",
+            "variant_id": "45498243842275",
+            "sku": "FG1209d",
+            "sealing_plan": "",
+            "discount": "AUTUMNREFILLS398",
+            "product_image": "shopify://shop_images/Autumn_Refill_Pack_94f135ea-ece6-4c2c-9561-1ba0716fe566.png",
+            "isSub": false,
+            "title": "Autumn Refill Pack",
+            "summary": "Our seasonal scents inspired by the changing rhythms of season",
+            "saving": "New",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Autumn Refill Pack",
+            "popupsummary": "Our seasonal scents inspired by the changing rhythms of season",
+            "bulletlabel": "",
+            "bulletpoints1": "Pear Counter Clean Refill",
+            "bulletpoints2": "Lavender & Chamomile Counter Clean Refill",
+            "bulletpoints3": "Ginger & Citrus Counter Clean Refill",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Autumn Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_hkwNHY": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "ginger-citrus-refill-pack",
+            "variant_number": "2",
+            "variant_id": "55653216125308",
+            "sku": "FG1290d_V1",
+            "sealing_plan": "",
+            "discount": "G&CREFILL398",
+            "product_image": "shopify://shop_images/Ginger_Citrus_Refill_Pack_9f291c6c-5707-49d1-aeab-45fb927f5b4b.png",
+            "isSub": false,
+            "title": "Ginger &amp; Citrus <span class=\"ds-displ-blc\">Refill Pack</span>",
+            "summary": "Reset your rhythm with 3 Ginger &amp; Citrus scented Counter Clean refills",
+            "saving": "New",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Ginger & Citrus <span class=\"ds-displ-blc mb-displ-blc\">Refill Pack</span>",
+            "popupsummary": "With invigorating autumn aromas, zesty Ginger & Citrus refreshes your spirit as summer fades and routine returns.",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Ginger & Citrus Counter Clean Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Ginger & Citrus Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_rXadPG": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "pear-refill-pack",
+            "variant_number": "3",
+            "variant_id": "55653214290300",
+            "sku": "FG1291d_V1",
+            "sealing_plan": "",
+            "discount": "PEARREFILL398",
+            "product_image": "shopify://shop_images/Pear_Refill_Pack_9bf591fc-8912-46e1-bcba-74363f93d058.png",
+            "isSub": false,
+            "title": "Pear Refill Pack",
+            "summary": "Refresh your space with 3 Pear scented Counter Clean refills",
+            "saving": "New",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Pear Refill Pack",
+            "popupsummary": "Inspired by crisp, green fruit at the peak of their season, Pear is an uplifting autumnal blend crafted to refresh every corner of your home.",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Pear Counter Clean Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Pear Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_HNbp7z": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "lavender-chamomile-refill-pack",
+            "variant_number": "4",
+            "variant_id": "55653216846204",
+            "sku": "FG1292d_V1",
+            "sealing_plan": "",
+            "discount": "L&CREFILL398",
+            "product_image": "shopify://shop_images/Lavender_Chamomile_Refill_Pack_fed8bbe3-2f24-475c-962d-b073430a0a32.png",
+            "isSub": false,
+            "title": "Lavender &amp; Chamomile <span class=\"ds-displ-blc\">Refill Pack</span>",
+            "summary": "Restore your home with 3 Lavender &amp; Chamomile Counter Clean refills",
+            "saving": "New",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Lavender & Chamomile <span class=\"ds-displ-blc mb-displ-blc\">Refill Pack</span>",
+            "popupsummary": "This blend of Lavender & Chamomile brings calm and helps reset your home for autumn.",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Lavender & Chamomile Counter Clean Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Lavender & Chamomile Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_WQpDE4": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "refill-booster-packs",
+            "variant_number": "5",
+            "variant_id": "53598455169404",
+            "sku": "FG1112x_V2",
+            "sealing_plan": "",
+            "discount": "SIGNATURE398",
+            "product_image": "shopify://shop_images/Signature_Scents_Refill_Pack_c0d30fa8-149b-4bf8-86b3-d20161e09932.png",
+            "isSub": false,
+            "title": "Signature Scents <span class=\"ds-displ-blc\">Refill Pack</span>",
+            "summary": "A trio of our original and best-selling Counter Clean refills",
+            "saving": "Bestseller",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Signature Scents <span class=\"mb-displ-blc ds-displ-blc\">Refill Pack</span>",
+            "popupsummary": "Our three bestselling scents, guaranteed to turn your home into a spa.",
+            "bulletlabel": "",
+            "bulletpoints1": "1 Uplifting Citrus Refill",
+            "bulletpoints2": "1 Patchouli & Cedarwood Refill",
+            "bulletpoints3": "1 Grounding Vetiver Refill",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Signature Scents Refill Pack",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_x9bgMC",
+        "product_CgHqxc",
+        "product_hkwNHY",
+        "product_rXadPG",
+        "product_HNbp7z",
+        "product_WQpDE4"
+      ],
+      "custom_css": [
+        ".cta-381 {background: #11322c !important;}",
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 80px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "className": "pf398",
+        "showdivider": false,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Autumn Scent Refills"
+      }
+    },
+    "collections_381_JyJWrL": {
+      "type": "collections-381",
+      "blocks": {
+        "image_rUr34c": {
+          "type": "image",
+          "settings": {
+            "d_image_only": "shopify://shop_images/Card_0b8119e1-48f9-4f87-8867-06e13a2367d3.png",
+            "m_image_only": "shopify://shop_images/Card_1_496830e6-c80a-4927-b859-f58586f503e6.png",
+            "badge_heading": "MEMBER EXCLUSIVE",
+            "badge_subheading": "Enjoy even deeper savings on member-exclusive bundles"
+          }
+        },
+        "product_hNFeLG": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "autumn-full-house",
+            "variant_number": "6",
+            "variant_id": "55659966333308",
+            "sku": "FG1311x_V1",
+            "sealing_plan": "",
+            "discount": "AUTUMNFULLHOUSE398",
+            "product_image": "shopify://shop_images/Autumn_Full_House.png",
+            "isSub": false,
+            "title": "Autumn Full House",
+            "summary": "All our scents in one bundle with a <span class=\"ds-displ-blc\">free Oh! De Loo</span>",
+            "saving": "Exclusive",
+            "price": "48.00",
+            "crossprice": "64.95",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Autumn Full House",
+            "popupsummary": "Save on every scent you need for an Autumn refresh",
+            "bulletlabel": "",
+            "bulletpoints1": "Pear Counter Clean Refill",
+            "bulletpoints2": "Lavender & Chamomile Counter Clean Refill",
+            "bulletpoints3": "Ginger & Citrus Counter Clean Refill",
+            "bulletpoints4": "Uplifting Citrus Counter Clean Refill",
+            "bulletpoints5": "Grounding Vetiver Counter Clean Refill",
+            "bulletpoints6": "Patchouli & Cedarwood Counter Clean Refill",
+            "bulletpoints7": "Oh! de Loo Lime & Lemongrass Deodorising Drops (90ml)",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Autumn Full House",
+            "quantity": 1
+          }
+        },
+        "product_BrDqU6": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "complete-seasonal-refill-pack-autumn",
+            "variant_number": "7",
+            "variant_id": "55653265473916",
+            "sku": "FG1310x_V1",
+            "sealing_plan": "",
+            "discount": "BATHROOMBUNDLE398",
+            "product_image": "shopify://shop_images/Bathroom_Bundle.png",
+            "isSub": false,
+            "title": "Bathroom Bundle",
+            "summary": "Update your bathroom in one bundle",
+            "saving": "Exclusive",
+            "price": "27.50",
+            "crossprice": "45.95",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Bathroom Bundle",
+            "popupsummary": "Update your bathroom with bathroom refills, our member-favourite loo deodoriser and an Anti-Slip Silicone Base.",
+            "bulletlabel": "",
+            "bulletpoints1": "3 Lime & Lemongrass Bathroom Bliss Refills",
+            "bulletpoints2": "1 Oh! de Loo Lime & Lemongrass Deodorising Drops (90ml)",
+            "bulletpoints3": "1 Green Anti-Slip Silicone Base",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Bathroom Bundle",
+            "quantity": 1
+          }
+        },
+        "product_xad78P": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "home-heroes",
+            "variant_number": "8",
+            "variant_id": "55659988517244",
+            "sku": "FG1312x_V1",
+            "sealing_plan": "",
+            "discount": "HOMEHEROES398",
+            "product_image": "shopify://shop_images/Home_Heroes.png",
+            "isSub": false,
+            "title": "Home Heroes",
+            "summary": "Update your clean with all our accessories in one",
+            "saving": "Exclusive",
+            "price": "15",
+            "crossprice": "31",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Home Heroes",
+            "popupsummary": "Everything you need to clean with style with our bestselling cleaning accessories.",
+            "bulletlabel": "",
+            "bulletpoints1": "1 Bottle for Life",
+            "bulletpoints2": "3 Purdy & Figg cloths",
+            "bulletpoints3": "1 Green Anti-Slip Silicone Base",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 5,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Home Heroes",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_rUr34c",
+        "product_hNFeLG",
+        "product_BrDqU6",
+        "product_xad78P"
+      ],
+      "custom_css": [
+        ".cta-381 {background: #11322c !important;}",
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "className": "",
+        "showdivider": true,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Member Exclusive Bundles"
+      }
+    },
+    "collections_381_mCiPnA": {
+      "type": "collections-381",
+      "blocks": {
+        "product_HCgrxm": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "cc-bottle-for-life",
+            "variant_number": "9",
+            "variant_id": "55060561985916",
+            "sku": "FG1090",
+            "sealing_plan": "",
+            "discount": "AUTUMNBFL",
+            "product_image": "shopify://shop_images/Bottle_for_Life.png",
+            "isSub": false,
+            "title": "Bottle for Life",
+            "summary": "Freshen up your clean with a Bottle for Life",
+            "saving": "",
+            "price": "10.50",
+            "crossprice": "15",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Bottle for Life",
+            "popupsummary": "A refillable, planet-friendly 300ml glass Bottle for Life, designed to be kept on display at all times.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "300ml Bottle for Life",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Bottle for Life",
+            "quantity": 1
+          }
+        },
+        "product_b7jyYn": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "anti-slip-silicone-base",
+            "variant_number": "10",
+            "variant_id": "55060453458300",
+            "sku": "CP3230",
+            "sealing_plan": "",
+            "discount": "AUTUMNANTISLIPBASE381",
+            "product_image": "shopify://shop_images/Anti-Slip_Silicone_Base.png",
+            "isSub": false,
+            "title": "Anti-Slip Silicone Base",
+            "summary": "Keep your bottles safe in the bathroom or kitchen",
+            "saving": "",
+            "price": "2.50",
+            "crossprice": "5",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Anti-Slip Silicone Base",
+            "popupsummary": "Silicone base designed to give your bottle stability, while adding a little charm.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Anti-Slip Silicone Base",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 4,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Anti-Slip Silicone Base",
+            "quantity": 1
+          }
+        },
+        "product_piEF4y": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "luxury-microfibre-cloth",
+            "variant_number": "11",
+            "variant_id": "55582594138492",
+            "sku": "FG1229",
+            "sealing_plan": "",
+            "discount": "P&FCLOTH398",
+            "product_image": "shopify://shop_images/Purdy_Figg_Soft_Microfibre_Cloth.png",
+            "isSub": false,
+            "title": "Purdy &amp; Figg Soft Microfibre Cloth",
+            "summary": "Luxuriously soft cloth, perfect for every surface",
+            "saving": "",
+            "price": "2",
+            "crossprice": "4",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Purdy & Figg Microfibre Cloth",
+            "popupsummary": "Luxuriously soft cloth, perfect for every surface",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Purdy & Figg Microfibre Cloth",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Purdy & Figg Soft Microfibre Cloth",
+            "quantity": 1
+          }
+        },
+        "product_df8gfQ": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "p-f-premium-microfibre-cloth-3-pack",
+            "variant_number": "12",
+            "variant_id": "55663538569596",
+            "sku": "FG1229b",
+            "sealing_plan": "",
+            "discount": "P&FCLOTH3PACK398",
+            "product_image": "shopify://shop_images/3_Purdy_Figg_Soft_Microfibre_Cloths.png",
+            "isSub": false,
+            "title": "3 Purdy &amp; Figg Soft Microfibre Cloths",
+            "summary": "Stock up to always have a cloth to hand",
+            "saving": "Best value",
+            "price": "5",
+            "crossprice": "12",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "3 Purdy & Figg Microfibre Cloths",
+            "popupsummary": "Stock up to always have a cloth to hand",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "3 Purdy & Figg Microfibre Cloths",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "3 Purdy & Figg Soft Microfibre Cloths",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "product_HCgrxm",
+        "product_b7jyYn",
+        "product_piEF4y",
+        "product_df8gfQ"
+      ],
+      "custom_css": [
+        ".cta-381 {background: #11322c !important;}",
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 0px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "className": "",
+        "showdivider": true,
+        "shownote": false,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Autumn Essential Accessories"
+      }
+    },
+    "collections_381_H6f6td": {
+      "type": "collections-381",
+      "blocks": {
+        "image_Eg4tbz": {
+          "type": "image",
+          "settings": {
+            "d_image_only": "shopify://shop_images/Card_2e39ca65-939e-43ca-bde0-f8289c8d1a26.png",
+            "m_image_only": "shopify://shop_images/9c09b6a08584a1388cc50ff38588d8d39ee896a5.jpg",
+            "badge_heading": "MEMBER EXCLUSIVE",
+            "badge_subheading": "Save on scents made just for your bathroom"
+          }
+        },
+        "product_mTQjqY": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "bathroom-bliss-refill-booster-pack",
+            "variant_number": "13",
+            "variant_id": "55663540896124",
+            "sku": "FG1151",
+            "sealing_plan": "",
+            "discount": "BATHROOMBLISSREFILLS398",
+            "product_image": "shopify://shop_images/Bathroom_Bliss_Refill_Pack.png",
+            "isSub": false,
+            "title": "Bathroom Bliss <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "summary": "3 limescale-busting Lime &amp; Lemongrass refills",
+            "saving": "Best for Bathrooms",
+            "price": "20.40",
+            "crossprice": "24",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Bathroom Bliss <span class=\"mb-displ-blc\">Refill Pack</span>",
+            "popupsummary": "Our Lime & Lemongrass cleaner tackles limescale, soap scum & hard water deposits using only natural ingredients.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "3 Lime & Lemongrass Bathroom Bliss Refills",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Bathroom Bliss Refill Pack",
+            "quantity": 1
+          }
+        },
+        "product_wU9Ce7": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "oh-de-loo",
+            "variant_number": "14",
+            "variant_id": "54831041216892",
+            "sku": "FG1156NOV24",
+            "sealing_plan": "",
+            "discount": "ODLLIME&LEMONGRASS398",
+            "product_image": "shopify://shop_images/Oh_de_Loo_Lime_Lemongrass.png",
+            "isSub": false,
+            "title": "Oh! De Loo Lime &amp; Lemongrass",
+            "summary": "Year supply of deodorising drops for your loo",
+            "saving": "",
+            "price": "13.56",
+            "crossprice": "16.95",
+            "buttonLabel": "ADD TO CART",
+            "popuptitle": "Oh! de Loo",
+            "popupsummary": "Lime & Lemongrass scented deodorising drops are a quick and easy way to freshen up the loo, the plug, the bin, and anywhere else that needs it.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "Oh! de Loo Lime & Lemongrass Deodorising Drops (90ml)",
+            "bulletpoints2": "",
+            "bulletpoints3": "",
+            "bulletpoints4": "",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Oh! de Loo Lime & Lemongrass",
+            "quantity": 1
+          }
+        },
+        "product_M3YgL6": {
+          "type": "product",
+          "settings": {
+            "out_of_stock": false,
+            "product": "bathroom-bliss-bundle-kit",
+            "variant_number": "15",
+            "variant_id": "55523179823484",
+            "sku": "FG1148",
+            "sealing_plan": "4327440611",
+            "discount": "BATHROOMBLISSSTARTER398",
+            "product_image": "shopify://shop_images/Bathroom_Bliss_Starter_Kit_0761aae4-2345-4efd-9db6-4a94e5c36b5a.png",
+            "isSub": true,
+            "title": "Bathroom Bliss Starter Kit",
+            "summary": "Our Lime &amp; Lemongrass scented bathroom cleaner",
+            "saving": "",
+            "price": "15",
+            "crossprice": "43",
+            "buttonLabel": "ADD 90-DAY PLAN",
+            "popuptitle": "Bathroom Bliss Starter Kit",
+            "popupsummary": "Our Lime & Lemongrass bathroom cleaner fights limescale, soap scum & hard water with only natural ingredients.",
+            "bulletlabel": "Box includes:",
+            "bulletpoints1": "3 Lime & Lemongrass Bathroom Bliss Refills",
+            "bulletpoints2": "1 Bottle for Life",
+            "bulletpoints3": "1 Cloth",
+            "bulletpoints4": "1 Anti-slip Silicone Base",
+            "bulletpoints5": "",
+            "bulletpoints6": "",
+            "bulletpoints7": "",
+            "bulletpoints8": "",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 8,
+            "funnel_stage": "landing_page",
+            "dataModule": "product_block",
+            "dataTitle": "add_to_cart",
+            "eventValue": "shop_anchor",
+            "optionIndex": "",
+            "gaitemName": "Bathroom Bliss Starter Kit",
+            "quantity": 1
+          }
+        }
+      },
+      "block_order": [
+        "image_Eg4tbz",
+        "product_mTQjqY",
+        "product_wU9Ce7",
+        "product_M3YgL6"
+      ],
+      "custom_css": [
+        ".cta-381 {background: #11322c !important;}",
+        "@media (min-width: 768px) {.product-blocks-section {padding-top: 64px; padding-bottom: 80px; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 16px; right: 16px; font-size: 14px; font-weight: 400; line-height: 17.92px; padding: 2px 4px; }}",
+        "@media (max-width: 768px) {.heading-2 {margin-bottom: 16px !important; } .reskin-product-blocks-wrapper .reskin-product-block .saving-tag {top: 8px; right: 8px; font-size: 12px; font-weight: 400; line-height: 15.36px; padding: 2px 4px; }}"
+      ],
+      "name": "Collections 381",
+      "settings": {
+        "className": "",
+        "showdivider": true,
+        "shownote": true,
+        "toast": true,
+        "bg": "#ffffff",
+        "heading": "Bathroom Favourites"
+      }
+    },
+    "member_benifits_381_hjRkHG": {
+      "type": "member-benifits-381",
+      "blocks": {
+        "iconblocks_CcQt9P": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Member-only scents",
+            "icon_block_description": "Exclusive access to limited edition scents",
+            "icon_block_image": "shopify://shop_images/Icon_92f3f035-bbc6-4680-9feb-50a8be57b43b.svg"
+          }
+        },
+        "iconblocks_c3fDJk": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Exclusive pricing",
+            "icon_block_description": "Save 15% on refills, always",
+            "icon_block_image": "shopify://shop_images/Icon_f4bfbf1a-4555-417f-a1f9-95f9677701ac.svg"
+          }
+        },
+        "iconblocks_CMhp33": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Complete control",
+            "icon_block_description": "Amend, pause or cancel your subscription any time",
+            "icon_block_image": "shopify://shop_images/Icon_3acc774f-4fb3-44aa-bc8c-62d3f12fac99.svg"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_CcQt9P",
+        "iconblocks_c3fDJk",
+        "iconblocks_CMhp33"
+      ],
+      "custom_css": [
+        ".green-btn {width: 343px; padding: 12px 16px; border-radius: 4px; margin-top: 40px;}",
+        ".heading-2 {letter-spacing: 0px; color: #0a1e1a !important;}",
+        ".heading-4,p.normal-text {color: #212121;}",
+        "@media (max-width: 768px) {.green-btn {margin-top: unset; width: 100% !important; max-width: 100% !important; } .heading-2 {color: #0a1e1a !important; text-align: center !important; } .heading-4 {color: #0a1e1a; }}"
+      ],
+      "name": "Member benifits 381",
+      "settings": {
+        "class": "",
+        "bg": "#fff7f3",
+        "heading": "Your member benefits",
+        "show_hide_block": true,
+        "showbtn": false,
+        "btnbgcolor": "",
+        "btntxtcolor": "",
+        "btntext": "",
+        "scrollto": "",
+        "top": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "membership_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "meet_founder_with_manufactured_EKCfEQ": {
+      "type": "meet-founder-with-manufactured",
+      "custom_css": [
+        ".green-btn {width: 343px;}"
+      ],
+      "name": "Meet founder manufactured",
+      "settings": {
+        "className": "",
+        "bgcolor": "#ffffff",
+        "layout": true,
+        "desk_image": "shopify://shop_images/Founders_-_Desktop_d30a502b-0089-4eab-88d6-da5c5afa9ad0.png",
+        "mob_image": "shopify://shop_images/Founders_-_Mobile_95117e51-5bbd-4efa-a25e-1b5b1e7bca09.png",
+        "headingcolor": "#0a1e1a",
+        "heading": "Two women on a mission",
+        "boldcolor": "#212121",
+        "bold_summary": "Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning more effective, more effortless, and more enjoyable.",
+        "normalcolor": "#424242",
+        "summary": "From a Hertfordshire garage to millions of homes, their multipurpose spray, scented with essential oils, is on the way to changing the way we all feel about cleaning - for good.",
+        "headingcolorman": "#0a1e1a",
+        "headingman": "Manufactured in the UK",
+        "flagicon": "shopify://shop_images/Icon_c5235267-c1c5-4f4c-a2aa-f835867e57c2.svg",
+        "boldcolorman": "#424242",
+        "bold_summaryman": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "normalcolorman": "#424242",
+        "summaryman": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "showbtn": true,
+        "btnbgcolor": "#11322c",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 9,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "meet_founder_ikWUPR": {
+      "type": "meet-founder",
+      "disabled": true,
+      "custom_css": [
+        ".green-btn {width: 343px;}"
+      ],
+      "name": "Meet founder",
+      "settings": {
+        "className": "",
+        "bgcolor": "#ffffff",
+        "layout": true,
+        "desk_image": "shopify://shop_images/Founders_-_Desktop_d30a502b-0089-4eab-88d6-da5c5afa9ad0.png",
+        "mob_image": "shopify://shop_images/Founders_-_Mobile_95117e51-5bbd-4efa-a25e-1b5b1e7bca09.png",
+        "headingcolor": "#0a1e1a",
+        "heading": "Two women on a mission",
+        "boldcolor": "#212121",
+        "bold_summary": "Purdy Rubin &amp; Charlotte Figg are on a mission to make natural cleaning more effective, more effortless, and more enjoyable.",
+        "normalcolor": "#424242",
+        "summary": "From a Hertfordshire garage to millions of homes, their multipurpose spray, scented with essential oils, is on the way to changing the way we all feel about cleaning - for good.",
+        "showbtn": true,
+        "btnbgcolor": "#11322c",
+        "btntxtcolor": "#ffffff",
+        "btntext": "GET OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "two_women",
+        "dataTitle": "get_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Are these products an extra subscription?",
+            "faq-ans": "<p>No, these are buy-once products with prices just for our members. You won’t be taking out a new subscription unless specifically stated.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Why am I getting these offers?",
+            "faq-ans": "<p>All our members with active subscriptions get access to member benefits, including limited edition scents and exclusive offers. </p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How long will the offer last?",
+            "faq-ans": "<p>This page will be live for the rest of Autumn, but we cannot guarantee how long offers will last, so don’t wait around.</p>"
+          }
+        },
+        "text_NPPtzz": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How can I track my order?",
+            "faq-ans": "<p>We aim to send your products within one working day of receiving your order, and for you to receive it within 48 hours of it being dispatched. For orders being shipped to Europe, please allow two to seven working days from dispatch.</p><p>If your order tracking shows it’s been five working days or more since the last tracking scan, please do give us a shout and a member of our Customer Experience team will get back to you as soon as possible.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "text_NPPtzz"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0px;}",
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "bottom_label": "GET YOUR OFFER",
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "bottomText": "",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_2_EanC9N": {
+      "type": "footer-2",
+      "custom_css": [
+        ".footer-2 {background: #0a1e1a; font-family: \"Lausanne\";}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "cart_drawer_xyerRx",
+    "anc_bar_381_NLBdEJ",
+    "banner_381_dNXxET",
+    "citrus_series_398_LVttEg",
+    "collections_381_X8Ht4r",
+    "collections_381_JyJWrL",
+    "collections_381_mCiPnA",
+    "collections_381_H6f6td",
+    "member_benifits_381_hjRkHG",
+    "meet_founder_with_manufactured_EKCfEQ",
+    "meet_founder_ikWUPR",
+    "faq_section_2_FUFBYY",
+    "footer_2_EanC9N"
+  ]
+}

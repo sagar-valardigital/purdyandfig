@@ -1,0 +1,45 @@
+<style>
+  .shopify-policy__container {
+  max-width: 560px;
+  max-width: 65ch;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+</style>
+
+<div class="shopify-policy__container">
+  <div class="shopify-policy__title">
+    <h1>{{ section.settings.heading }}</h1>
+  </div>
+
+  <div class="shopify-policy__body">
+    <div class="rte">
+    {{ section.settings.content }}
+    </div>
+  </div>
+</div>
+{% schema %}
+  {
+    "name": "Custom Html",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Article Heading",
+        "default": "Article Heading"
+      },
+      {
+        "type": "richtext",
+        "id": "content",
+        "label": "Article Content"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Custom HTML Block",
+        "category": "Text"
+      }
+    ]
+  }
+{% endschema %}

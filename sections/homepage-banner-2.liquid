@@ -1,0 +1,146 @@
+<style>
+  {%- assign DimageURL = section.settings.desktopimage | img_url:"2000x" -%}
+  {%- assign MimageURL = section.settings.mobileimage | img_url:"768x" -%}
+  .bath-banner-details .heading-2{
+    font-size:{{section.settings.d-heading-font-size}}px;
+  }
+  .bath-banner-details .bb-points{
+    font-size:{{section.settings.d-subheading-font-size}}px;
+  }
+  @media(min-width:768px){
+  .bath{{ section.id }}{background-image:url({{DimageURL}})}
+  }
+  @media(max-width:768px){
+                        .bath-banner-details .heading-2{
+      font-size:{{section.settings.m-heading-font-size}}px;
+    }
+    .bath-banner-details .bb-points{
+      font-size:{{section.settings.m-subheading-font-size}}px;
+    }
+  }
+</style>
+
+<div
+  class="pt-5 home-page-banner-2 bathroom-banner bath{{ section.id }} {{ section.settings.className }}"
+  x-data="{qty:1}"
+>
+  <div class="">
+    <div class="banner-inner-container">
+      <div class="d-flex justify-content-between flex-wrap py-3">
+        <div class="bath-banner-details">
+          <h2 class="heading-2 theme-text">{{ section.settings.title }}</h2>
+          <div class="theme-text">
+            <h3 class="mt-4 bb-points">{{ section.settings.subtext }}</h3>
+          </div>
+
+          <div class="text-center mt-3">
+            <a class="btn w-100 theme-btn" href="{{ section.settings.link }}">
+              {{ section.settings.btnText }}
+            </a>
+          </div>
+        </div>
+        <div class="bath-banner-image">
+          <img
+            loading="lazy"
+            class="img-responsive desktop-hide m-auto mb-2 "
+            alt="{{ MimageURL }}"
+            src="{{MimageURL}}"
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Homepage Banner 2",
+  "settings": [
+
+    {
+      "id": "className",
+      "label": "Section Class",
+      "type": "text"
+    },
+
+    {
+      "id": "link",
+      "label": "Choose the landing product",
+      "type": "url"
+    },
+    {
+      "id": "desktopimage",
+      "label": "Desktop Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "mobileimage",
+      "label": "Mobile Image",
+      "type": "image_picker"
+    },
+
+	{
+      "id": "title",
+      "label": "Banner Title",
+      "type": "html"
+    },
+    {
+      "type": "range",
+      "id": "d-heading-font-size",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Desktop Heading Font size",
+      "default": 32
+    },
+    {
+      "type": "range",
+      "id": "m-heading-font-size",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile Heading Font size",
+      "default": 32
+    },
+	{
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "html"
+    },
+    {
+      "type": "range",
+      "id": "d-subheading-font-size",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Dekstop Sub-heading Font size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "m-subheading-font-size",
+      "min": 10,
+      "max": 60,
+      "step": 1,
+      "unit": "px",
+      "label": "Mobile Sub-heading Font size",
+      "default": 20
+    },
+{
+      "id": "btnText",
+      "label": "Button Label",
+      "type": "text",
+	  "default" : "BUY NOW"
+	}
+  ],
+
+  "presets": [
+		{
+			"name": "Homepage Banner 2"
+		}
+	]
+}
+{% endschema %}

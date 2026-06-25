@@ -1,0 +1,113 @@
+<script>
+    // Function to get _ga4session-clientID from the cookie _ga
+function get_gap_client_id() {
+  try {
+    const matches = document.cookie.match(/_ga=(.+?);/);
+    if (matches && matches.length >= 2) {
+      const session_id = matches[1].split('.').slice(-2).join(".");
+      console.log("gap client ID:" + session_id);
+      return session_id;
+    }
+  } catch (error) {
+    console.error("Error while getting gap client ID:", error);
+    return null;
+  }
+  return null;
+}
+
+// Function to get _google-clientID from the cookie _ga_FGQNW4H684
+function get_gap_session_id() {
+  try {
+    const cookieName = "_ga_FGQNW4H684";
+    const cookieValue = document.cookie.split('; ').find(cookie => cookie.startsWith(cookieName));
+    if (cookieValue) {
+      const matches = cookieValue.match(/GS1\.1\.([^.]*)/);
+      if (matches && matches.length >= 2) {
+        console.log('gap session ID: '+ matches[1]);
+        return matches[1];
+      }
+    }
+  } catch (error) {
+    console.error("Error while getting gap session ID:", error);
+    return null;
+  }
+  return null;
+}
+
+    // Function to get current_updated_time
+    function get_current_updated_time() {
+      const cookieName = "gap_updatedAt";
+      const cookieValue = document.cookie.split('; ').find(cookie => cookie.startsWith(cookieName));
+      if (cookieValue) {
+        return cookieValue.split('=')[1];
+      } else {
+        const current_updated_time = (new Date()).getTime().toString();
+        document.cookie = `${cookieName}=${current_updated_time}; path=/;`;
+        return current_updated_time;
+      }
+    }
+
+    // Function to get current userAgent encoded into Base64
+    function get_userAgent_base64() {
+      const userAgent = window.navigator.userAgent;
+      const base64UserAgent = btoa(userAgent);
+      return base64UserAgent;
+    }
+
+    // Function to check if the time difference is more than 30 minutes (1800000 milliseconds)
+    function isMoreThan30Minutes(timeString) {
+      const currentTime = new Date().getTime();
+      const updateTime = parseInt(timeString, 10);
+      return (currentTime - updateTime) > 600000;
+    }
+
+    // Function to make the API call and send the payload
+    function makeAPICall() {
+      const cookieName = "gap_updatedAt";
+      const cookieValue = document.cookie.split('; ').find(cookie => cookie.startsWith(cookieName));
+      const current_updated_time = get_current_updated_time();
+      
+      if (isMoreThan30Minutes(current_updated_time) || !cookieValue) {
+        const gap_session_id = get_gap_session_id();
+        const gap_client_id = get_gap_client_id();
+
+        const payload = {"attributes":{
+          "gap_session_id": gap_session_id,
+          "gap_client_id": gap_client_id
+          }
+        };
+
+        // Replace the API endpoint with the actual endpoint
+        const apiEndpoint = window.Shopify.routes.root+"cart/update.js";
+
+        // Send the payload using fetch or any other method you prefer
+        fetch(apiEndpoint, {
+          method: "POST",
+          body: JSON.stringify(payload),
+          headers: {
+            "Content-Type": "application/json"
+          }
+        })
+        .then(response => {
+          if (response.ok) {
+            console.log("API call successful!");
+          } else {
+            console.log("API call failed!");
+          }
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+      } else {
+        console.log("Time difference is less than 30 minutes. API call not made.");
+      }
+    }
+
+        // Trigger the API call on page load
+    document.addEventListener("DOMContentLoaded", function() {
+        setTimeout(function() {
+          makeAPICall();
+        }, 1000);
+    });
+
+</script>

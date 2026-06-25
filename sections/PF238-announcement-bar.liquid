@@ -1,0 +1,278 @@
+<style>
+  .count-down-timer {
+    font-size: 18px;
+  }
+</style>
+
+<div
+  class="annoucment-bar annoucment-bar-reskin annoucment-bar-2 py-2 {{ section.settings.class }} mobile-hide"
+  style="background-color: {{section.settings.bb-color}}"
+  id="annoucment_bar_2"
+>
+  <div class="container text-center">
+    <div class="">
+      <div class="ann-bar-text-2">
+        <a
+          {% if section.settings.dataTrack %}
+            {% render 'ga4-events' %}
+          {% endif %}
+          {% if section.settings.scrollto != 'blank' %}
+            {% if template.name == 'index' or template.suffix  == "PF215-homepage-new-1" or template.suffix  == "pf197-homepage-v1" or  template.suffix == "pf197-homepage-v2"  %}
+              href="javascript:void(0);"
+              class="click-scroll" data-target="{{ section.settings.scrollto }}"
+            {% else %}
+            href="/#{{ section.settings.scrollto }}"
+            {% endif %}
+            
+          {% else %}
+            href="{{ section.settings.annuLink }}"
+          {% endif %}
+          style="color:{{section.settings.text-color}}"
+        >
+          <p class="m-0 font-lausanne fw-400" style="color:{{section.settings.text-color}};" id="bf-countdown" data-time="{{ section.settings.end_date }}">
+            {{ section.settings.text }}
+          </p>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="ann-bar-text-2 desktop-hide text-center custom-anc-bar-mob" style="background-color: {{section.settings.bb-color}}">
+  <p class="m-0 font-lausanne fw-400" style="color: {{section.settings.text-color}};" id="bf-countdown-1" data-time="{{ section.settings.end_date }}">
+    {{ section.settings.text }}
+  </p>
+</div>
+
+<script type="text/javascript">
+  function getcurrentdate() {
+    const now = new Date();
+      
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+  
+      return `${year}-${month}-${day}`;
+  }
+  
+  const updateCountdown = (targetTimestamp, countdownElement, countdownElement1) => {
+    try {
+      /* Calculate the remaining time in seconds */
+      const currentTime = Math.floor(Date.now() / 1000);
+      const remainingTime = targetTimestamp - currentTime;
+
+      if (isNaN(currentTime) || isNaN(remainingTime)) {
+        return;
+      }
+    
+      if (remainingTime <= 0) {
+        const getthedate = getcurrentdate();
+        if(
+          getthedate == "2024-11-29" || 
+          getthedate == "2024-11-30" || 
+          getthedate == "2024-12-01" || 
+          getthedate == "2024-12-02"
+        ) {
+            window.location.reload();
+        } else {
+          countdownElement.innerHTML = 'Black Friday Offer Ends in: <span class="count-down-timer">00:00:00</span>';
+          countdownElement1.innerHTML = 'Black Friday Offer Ends in: <span class="count-down-timer">00:00:00</span>';
+          return;
+        }
+      }
+    
+      let formattedTime;
+    
+      if (remainingTime <= 259200) {
+        if(remainingTime > 86400) {
+            /* Calculate days, hours, and minutes */
+            const days = Math.floor(remainingTime / 86400);
+            const hours = Math.floor((remainingTime % 86400) / 3600);
+            const minutes = Math.floor((remainingTime % 3600) / 60);
+            const seconds = remainingTime % 60;
+    
+            /* Format the time for more than 168 hours */
+            formattedTime = `${String(days).padStart(2, "0")}:${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        } else {
+            /* Calculate hours, minutes, and seconds */
+            const hours = Math.floor(remainingTime / 3600);
+            const minutes = Math.floor((remainingTime % 3600) / 60);
+            const seconds = remainingTime % 60;
+        
+            /* Format the time for less than 168 hours */
+            formattedTime = `${String(hours).padStart(2, "0")}:${String(minutes).padStart(2, "0")}:${String(seconds).padStart(2, "0")}`;
+        }
+
+        /* Update the countdown element */
+        countdownElement.innerHTML = 'Black Friday Offer Ends in: <span class="count-down-timer">' + formattedTime + '</span>';
+        countdownElement1.innerHTML = 'Black Friday Offer Ends in: <span class="count-down-timer">' + formattedTime + '</span>';
+      }
+    } catch (e) {
+      // countdownElement.style.display = "none";
+      console.error(e);
+    }
+  };
+
+  function fetchEndDateTime() {
+      const now = new Date();
+      
+      const year = now.getFullYear();
+      const month = String(now.getMonth() + 1).padStart(2, '0');
+      const day = String(now.getDate()).padStart(2, '0');
+  
+      const fullDate = `${year}-${month}-${day}`;
+      switch(fullDate) {
+          case '2024-11-28':
+            return '2024-11-29 23:59:59';
+          case '2024-11-29':
+            return '2024-11-29 23:59:59';
+          case '2024-11-30':
+            return '2024-11-30 23:59:59';
+          case '2024-12-01':
+            return '2024-12-01 23:59:59';
+          default:
+            return '2024-12-02 23:59:59';
+      }
+  }
+  
+  document.addEventListener("DOMContentLoaded", (event) => {
+    const countdownElement = document.getElementById("bf-countdown");
+    const countdownElement1 = document.getElementById("bf-countdown-1");
+    if (countdownElement) {
+      /* Set your target UTC timestamp (in seconds since epoch) */
+      const endDateTimeString = fetchEndDateTime(); /* countdownElement.dataset.time; */
+      const targetDate = new Date(endDateTimeString.replace(/-/g, "/"));
+      const targetTimestamp = Math.floor(targetDate.getTime() / 1000);
+  
+      /* Call the updateCountdown function initially and set an interval to update it every second */
+      updateCountdown(targetTimestamp, countdownElement, countdownElement1);
+      setInterval(() => {
+        updateCountdown(targetTimestamp, countdownElement, countdownElement1);
+      }, 1000);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "PF238 Announcement Bar",
+  "class": "top-sticky annoucment_bar_2",
+  "settings" : [
+    {
+       "type": "text",
+       "id": "end_date",
+       "label": "Deals End Date and Time (YYYY-MM-DD HH:MM:SS)",
+       "default": "2024-11-06 23:59:59"
+     },
+     {
+    "type": "text",
+    "id": "class",
+    "label": "Add Class"
+  },
+    {
+          "type": "color",
+          "id": "bb-color",
+          "default": "#CB3C8E",
+          "label": "Background Colour"
+      },
+	  {
+          "type": "color",
+          "id": "text-color",
+          "default": "#fff",
+          "label": "text Colour"
+      },
+    
+      {
+          "type": "html",
+          "id": "text",
+          "default": "Welcome to our store",
+          "label": "t:sections.announcement-bar.blocks.announcement.settings.text.label"
+      },
+    {
+          "type": "url",
+          "id": "annuLink",
+          "label": "Link"
+      },
+    {
+          "type": "text",
+          "id": "scrollto",
+          "label": "Scroll to"
+      },
+    {
+          "type": "text",
+          "id": "top",
+          "label": "On scroll top position",
+          "default": "0"
+      },
+   {
+    "type": "header",
+    "content": "GA4"
+  },
+    {
+"id": "dataTrack",
+"label":"Data Track",
+"type": "checkbox"
+    },
+    {
+"id": "targetUrl",
+"label":"Target Url",
+"type": "url"
+    },
+    {
+"id": "index",
+"label":"Index",
+"type": "number",
+"default" : 0
+    },
+    {
+"id": "funnel_stage",
+"label":"Funnel Stage",
+"type": "text",
+ "default" : "landing_page"
+    },
+    {
+"id": "dataModule",
+"label":"Module",
+"type": "text",
+ "default" : "announcement_bar"
+    },
+      {
+"id": "dataTitle",
+"label":"Event Label",
+"type": "text",
+"default": "get_your_offer"
+    }
+    ,
+      {
+"id": "eventValue",
+"label":"Event Value",
+"type": "text",
+"default" : "shop_anchor"
+    },
+      {
+"id": "itemId",
+"label":"Item Id",
+"type": "text"
+    }
+    ,
+      {
+"id": "optionIndex",
+"label":"Option Index",
+"type": "text"
+    }
+    ,
+      {
+"id": "ItemName",
+"label":"Item Name",
+"type": "text"
+    }
+
+  ],
+  "presets": [
+		{
+			"name": "PF238 Announcement Bar"
+		}
+	]
+
+}
+{% endschema %}

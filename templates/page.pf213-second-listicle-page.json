@@ -1,0 +1,494 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "listicle_announcement_bar_Qg8e4t": {
+      "type": "listicle-announcement-bar",
+      "custom_css": [
+        "@media (max-width: 768px) {.ann-bar-text-2 {background: #212121; font-weight: 400; font-size: 12px; line-height: 18px; padding-bottom: 8px !important; padding-top: 8px !important; }}"
+      ],
+      "settings": {
+        "class": "",
+        "logo": true,
+        "logoRedirect": true,
+        "logoColorDesk": "#ffffff",
+        "bb-color-desk": "#0a1e1a",
+        "text-color-desk": "#ffffff",
+        "logoColorMob": "#11322c",
+        "bb-color-mob": "#ffffff",
+        "text-color-mob": "#fcfaf6",
+        "text": "Save <span class=\"market-place-currency\"></span>25 on Purdy &amp; Figg Starter Kits",
+        "scrollto": "scroll-here-link",
+        "btn-bg-desk": "#fafafa",
+        "btn-text-desk": "#11322c",
+        "btn-bg-mob": "#212121",
+        "btn-text-mob": "#ffffff",
+        "annuText": "GET YOUR OFFER",
+        "top": "0",
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "listicle_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "listicle_banner_common_yxgAU4": {
+      "type": "listicle-banner-common",
+      "settings": {
+        "background": "#ffffff",
+        "image": "shopify://shop_images/Hero_d2c6c925-889f-41d0-9e00-a3ddf47f072b.png",
+        "heading": "5 Reasons to Switch to Natural Cleaning",
+        "headingcolor": "#0a1e1a",
+        "details": "<p>Think natural cleaning products don’t work? Think again. Purdy &amp; Figg is made with powerful, effective natural ingredients that have been used for centuries.</p>\n\n<p>Here’s a round-up of reasons to make the switch.</p>",
+        "textcolor": "#212121"
+      }
+    },
+    "listicle_image_with_text_common_tfKi3w": {
+      "type": "listicle-image-with-text-common",
+      "blocks": {
+        "text_g9f3hB": {
+          "type": "text",
+          "settings": {
+            "width": "w-80",
+            "layout": false,
+            "heading": "Tackles grease, grime and dirt",
+            "image": "shopify://shop_images/Tip_01_c46ff00d-fab5-418e-8bba-6a84860415eb.png",
+            "mimage": "shopify://shop_images/Tip_01_c46ff00d-fab5-418e-8bba-6a84860415eb.png",
+            "details": "Purdy &amp; Figg’s unique combination of natural surfactants (aka ‘the cleaning bit’) and pure essential oils have been rigorously researched, tried and tested, to be sure they properly tackle the toughest of grime. ",
+            "shop_now_cta": "SHOP NOW",
+            "scrollto": "scroll-here-link",
+            "top": "0",
+            "heading-position": false,
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 3,
+            "funnel_stage": "listicle_page",
+            "dataModule": "listicle_block",
+            "dataTitle": "shop_now",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "1",
+            "ItemName": ""
+          }
+        },
+        "text_wzxX4r": {
+          "type": "text",
+          "settings": {
+            "width": "w-80",
+            "layout": true,
+            "heading": "Turns your home into a spa",
+            "image": "shopify://shop_images/Tip_02_35116e27-66f1-4690-aa3d-0ad225cdd676.png",
+            "mimage": "shopify://shop_images/Tip_02_35116e27-66f1-4690-aa3d-0ad225cdd676.png",
+            "details": "Scent has the power to set the mood in your home. Cleaning with our essential oil scents feels like a little act of self care, with blends that uplift, balance and calm, and fill your space with long lasting, glorious aromas.",
+            "shop_now_cta": "SHOP NOW",
+            "scrollto": "scroll-here-link",
+            "top": "0",
+            "heading-position": false,
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 3,
+            "funnel_stage": "listicle_page",
+            "dataModule": "listicle_block",
+            "dataTitle": "shop_now",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "2",
+            "ItemName": ""
+          }
+        },
+        "text_UgnFcx": {
+          "type": "text",
+          "settings": {
+            "width": "w-80",
+            "layout": false,
+            "heading": "Safe to use on every surface",
+            "image": "shopify://shop_images/Tip_03_8e44ba79-1d1e-44c8-a2b9-4154949d7eb5.png",
+            "mimage": "shopify://shop_images/Tip_03_8e44ba79-1d1e-44c8-a2b9-4154949d7eb5.png",
+            "details": "Counter Clean isn’t just for kitchen counters. The natural formula has been developed to work safely on any surface in your home, replacing dozens of toxic products in single use plastic (and leaving you with extra space in your cleaning cupboard).",
+            "shop_now_cta": "SHOP NOW",
+            "scrollto": "scroll-here-link",
+            "top": "0",
+            "heading-position": false,
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 3,
+            "funnel_stage": "listicle_page",
+            "dataModule": "listicle_block",
+            "dataTitle": "shop_now",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "3",
+            "ItemName": ""
+          }
+        },
+        "text_Y9hgV4": {
+          "type": "text",
+          "settings": {
+            "width": "w-80",
+            "layout": true,
+            "heading": "Reduces plastic waste",
+            "image": "shopify://shop_images/Tip_04.png",
+            "mimage": "shopify://shop_images/Tip_04.png",
+            "details": "Lots of cleaning products out there are topped up with water before they get to you. Our cleaning concentrates are diluted with tap water at home, which means less bulky packaging and fewer heavy, water-based products being transported around.",
+            "shop_now_cta": "SHOP NOW",
+            "scrollto": "scroll-here-link",
+            "top": "0",
+            "heading-position": false,
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 3,
+            "funnel_stage": "listicle_page",
+            "dataModule": "listicle_block",
+            "dataTitle": "shop_now",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "4",
+            "ItemName": ""
+          }
+        },
+        "text_3BjGrQ": {
+          "type": "text",
+          "settings": {
+            "width": "w-80",
+            "layout": false,
+            "heading": "Feel-good, non-toxic cleaning",
+            "image": "shopify://shop_images/Tip_05.png",
+            "mimage": "shopify://shop_images/Tip_05.png",
+            "details": "At Purdy &amp; Figg, we want to turn cleaning into something you actually enjoy. Since our formula is non-toxic, you don’t have to worry about damaging your health, the planet, or your precious surfaces when you use it. Better still, our essential oil scents bring a bit of joy to every spray.  \nWelcome to the world of joyful, easy natural cleaning.",
+            "shop_now_cta": "SHOP NOW",
+            "scrollto": "scroll-here-link",
+            "top": "0",
+            "heading-position": false,
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 3,
+            "funnel_stage": "listicle_page",
+            "dataModule": "listicle_block",
+            "dataTitle": "shop_now",
+            "eventValue": "shop_anchor",
+            "itemId": "",
+            "optionIndex": "5",
+            "ItemName": ""
+          }
+        }
+      },
+      "block_order": [
+        "text_g9f3hB",
+        "text_wzxX4r",
+        "text_UgnFcx",
+        "text_Y9hgV4",
+        "text_3BjGrQ"
+      ],
+      "custom_css": [
+        ".image-with-text-2:first-child {padding-top: 80px !important;}",
+        ".image-with-text-2 .heading-2 {letter-spacing: 0; margin-bottom: unset !important;}",
+        "@media (max-width: 768px) {.image-with-text-2:first-child {padding-top: 40px !important; } .image-with-text-2 .heading-2 {letter-spacing: 0; margin-bottom: unset !important; }}"
+      ],
+      "settings": {
+        "className": "pf213-listicle",
+        "background": "#ffffff",
+        "headingcolor": "#212121",
+        "textcolor": "#212121"
+      }
+    },
+    "global_product_19_eYec99": {
+      "type": "global-product-19",
+      "blocks": {
+        "variant_g9y6Vx": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "varCount": "1",
+            "text_heading": "Signature",
+            "discount": "SIGNATURE213db",
+            "variantProduct": "counter-clean-pf99-test",
+            "delPrice": "4000",
+            "sellPrice": "1500",
+            "varaiantid": "45531627520227",
+            "sellingid": "4158095587",
+            "sku": "FG1096",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "1"
+          }
+        },
+        "variant_3LgU3D": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "varCount": "2",
+            "text_heading": "Seasonal",
+            "discount": "SEASONAL213db",
+            "variantProduct": "seasonal-starter-kit-autumn",
+            "delPrice": "4300",
+            "sellPrice": "1800",
+            "varaiantid": "45531636236515",
+            "sellingid": "4256170211",
+            "sku": "FG1208d",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 6,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "seasonal",
+            "eventValue": "product_toggle",
+            "optionIndex": "2"
+          }
+        },
+        "text_8Mr7eV": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 Signature Scent cleaning concentrates lasting 2 - 3 months (worth <span class=\"market-place-currency\"></span>21)"
+          }
+        },
+        "text_K8GYHy": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "FREE glass Bottle for Life &amp; cloth (worth <span class=\"market-place-currency\"></span>19)"
+          }
+        },
+        "text_NFAHLN": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_gmXiaV": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "30-day money-back guarantee"
+          }
+        },
+        "text_xrXpXe": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 rotating Seasonal Scent cleaning concentrates lasting 2 - 3 months (worth <span class=\"market-place-currency\"></span>24)"
+          }
+        },
+        "text_pfRc9C": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "FREE glass Bottle for Life &amp; cloth (worth <span class=\"market-place-currency\"></span>19)"
+          }
+        },
+        "text_hRkp3M": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_PgyCGW": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "30-day money-back guarantee"
+          }
+        },
+        "product_image2_iNbGaM": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_Desktop_Image_01_eaccab3e-eec5-4a17-8fb0-dd03f6a82751.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_Mobile_Image_01_3dcf78b7-cd4f-4d56-a004-f048864c3a41.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_aBa6Re": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_Desktop_Image_02_feee20d3-4e49-4cba-b840-e727679324b0.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_Mobile_Image_02_b71ac56f-2bb7-4f82-9dbf-f2d0beecb051.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_MFmKBa": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_Desktop_Image_03_d7ee1f48-f73b-45a3-8ac4-20465195eca1.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_Mobile_Image_03_8432d1db-923f-465c-ab67-70ced5b29e70.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_zQkPBi": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_Desktop_Image_04_0180c369-ea1a-4a90-b9d0-318401772d59.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_Mobile_Image_04_dd796c34-e029-4047-bd9e-a9037fbf24a3.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_cNNyNa": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Seasonal_Desktop_Image_05_b9d82b57-04a4-4f61-9e7d-8bc13195e4cf.jpg",
+            "mimage_2": "shopify://shop_images/Seasonal_Mobile_Image_05_88bddd54-0be1-4d0a-b444-a87db222b17b.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image_jpmkXQ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_Desktop_Image_01_f1586384-73d2-4e38-a315-c071ec762157.jpg",
+            "mimage": "shopify://shop_images/Signature_Mobile_Image_01_77d49e36-6ad0-4dac-a1a6-17b544edc8f3.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_xUjhpa": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_Desktop_Image_02_6716035b-3c6b-4473-a2ea-39b82267ec76.jpg",
+            "mimage": "shopify://shop_images/Signature_Mobile_Image_02_a79aa7d8-2cc5-4dd1-9b69-946fb24cfe06.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_4mAzD9": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_Desktop_Image_03_e748155c-b577-4b04-9d19-c5668844c5f1.jpg",
+            "mimage": "shopify://shop_images/Signature_Mobile_Image_03_ce039a29-9e95-4b61-b5c4-eb0dcc1716b9.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_aLFiBX": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_Desktop_Image_04_7eeb3d29-4dc2-4482-9e51-432596ae5b00.jpg",
+            "mimage": "shopify://shop_images/Signature_Mobile_Image_04_9c64e887-d4ea-4806-9bc4-23c0bfb13353.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_VwtrcR": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Signature_Desktop_Image_05_91f7a72f-e865-414a-aa94-f920b664cb1f.jpg",
+            "mimage": "shopify://shop_images/Signature_Mobile_Image_05_3287c157-e637-4364-be66-31827da29fbf.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        }
+      },
+      "block_order": [
+        "variant_g9y6Vx",
+        "variant_3LgU3D",
+        "text_8Mr7eV",
+        "text_K8GYHy",
+        "text_NFAHLN",
+        "text_gmXiaV",
+        "text_xrXpXe",
+        "text_pfRc9C",
+        "text_hRkp3M",
+        "text_PgyCGW",
+        "product_image2_iNbGaM",
+        "product_image2_aBa6Re",
+        "product_image2_MFmKBa",
+        "product_image2_zQkPBi",
+        "product_image2_cNNyNa",
+        "product_image_jpmkXQ",
+        "product_image_xUjhpa",
+        "product_image_4mAzD9",
+        "product_image_aLFiBX",
+        "product_image_VwtrcR"
+      ],
+      "custom_css": [
+        ".cls-1,.slick-arrow svg path {fill: #11322c !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": false,
+        "guaranteeDescription": "",
+        "guaranteeTextColor": "#434448",
+        "scrollto": "",
+        "background": "#e7ebea",
+        "p_id": "scroll-here-link",
+        "landingproduct": "counter-clean-pf99-test",
+        "varaiantid": "45531627520227",
+        "sellingid": "4158095587",
+        "sku": "FG1096",
+        "discount": "SIGNATURE213db",
+        "tab_description_1": "Enjoy our three best-selling scents all year round",
+        "tab_description_2": "New limited edition scents blended for every season",
+        "className": "gp-5-ab global-product-19-wrapper",
+        "mainheading": "New customer offer: FREE Starter Kit",
+        "mainsubheading": "One powerful cleaner for your entire home",
+        "heading": "Counter Clean",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "40.00",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "36.5K",
+        "reviews_desktop": "36.5K",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "https://shop.app/checkout/",
+        "index": 6,
+        "funnel_stage": "listicle_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "footer_2_gaj6Fd": {
+      "type": "footer-2",
+      "custom_css": [
+        ".footer-2 {background: #0a1e1a; font-family: \"TWK Lausanne\";}",
+        "@media (max-width: 768px) {.footer-2 .d-flex > div {text-align: left; }}"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "listicle_announcement_bar_Qg8e4t",
+    "listicle_banner_common_yxgAU4",
+    "listicle_image_with_text_common_tfKi3w",
+    "global_product_19_eYec99",
+    "footer_2_gaj6Fd"
+  ]
+}

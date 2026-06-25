@@ -1,0 +1,318 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "d42f3268-c4aa-47ac-8ec5-0bb9c0f799bf": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "pillow-spray",
+            "DescriptionHeading": "Overview",
+            "description": "Our Pillow Spray has been designed to encourage the best night's sleep with a blend of Lavender, Roman Chamomile and Himalayan Cedarwood essential oils.\n<p> </p>\nPump one or two sprays directly onto your pillow. Get into bed and breathe a few deep breaths through your nose to allow the pure essential oils to work their magic and fall into a deep and restful sleep."
+          }
+        },
+        "2e0ef3c1-bea4-4faa-9de2-980e294a390b": {
+          "type": "productdes",
+          "disabled": true,
+          "settings": {
+            "productSelection": "pillow-spray",
+            "DescriptionHeading": "",
+            "description": ""
+          }
+        },
+        "16c60cf2-67b5-4684-b0cf-4ab13c0c71bc": {
+          "type": "productdes",
+          "settings": {
+            "productSelection": "pillow-spray",
+            "DescriptionHeading": "What's in the Box?",
+            "description": "50ml Bella's Lavender Pillow Spray"
+          }
+        }
+      },
+      "block_order": [
+        "d42f3268-c4aa-47ac-8ec5-0bb9c0f799bf",
+        "2e0ef3c1-bea4-4faa-9de2-980e294a390b",
+        "16c60cf2-67b5-4684-b0cf-4ab13c0c71bc"
+      ],
+      "settings": {
+        "btnlabel": "Add To Cart"
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "heading": "You may also like",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "background-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    },
+    "2c2c01ac-85d7-450b-9d30-2ee35074ec31": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "3e6c644e-d08c-4205-ab50-64cf674f60d7": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/daily.png"
+          }
+        },
+        "8bd4546e-0fdb-4a24-8f51-b6b52bcd3fb0": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_f2b2c7a0-296d-4b2e-904b-470d975027a3.png"
+          }
+        },
+        "07cad38d-a83b-4441-9a73-ed8e781305f3": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/house.png"
+          }
+        }
+      },
+      "block_order": [
+        "3e6c644e-d08c-4205-ab50-64cf674f60d7",
+        "8bd4546e-0fdb-4a24-8f51-b6b52bcd3fb0",
+        "07cad38d-a83b-4441-9a73-ed8e781305f3"
+      ],
+      "settings": {
+        "enable": true,
+        "bgColor": "",
+        "heading": "Why you need Bella’s Lavender Pillow Spray",
+        "logoDetailText": "<p>Enjoy the best possible night’s sleep with our essential oil-based pillow spray.  </p><p>Named after co-founder Purdy’s beloved dog Bella, Bella’s Lavender Pillow Spray will help you to feel calm and soothed before bed, fall asleep faster and feel more refreshed when you wake up.</p>"
+      }
+    },
+    "7ae21441-c944-4ea8-8c97-10644f27615e": {
+      "type": "landing-blocks",
+      "blocks": {
+        "7fd5f1bc-93dc-42d8-8648-6da749ce7881": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-01.png",
+            "rounded": true,
+            "heading": "Pure essential oils",
+            "details": "Beautifully scented with organic pure essential oils.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "7fba68dc-7689-4911-9491-9373eff71238": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-02.jpg",
+            "rounded": true,
+            "heading": "Beautifully scented with organic pure essential oils.",
+            "details": "90% of customers reported improved sleep quality with use.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "13ec7f44-2035-4552-a2f3-072c1271c165": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-03_1d9eef08-bfd1-4457-8315-5afce3992849.png",
+            "rounded": true,
+            "heading": "Beautiful packaging",
+            "details": "The perfect ready-to-give gift with a premium navy carton.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "f2aafad1-6af8-4347-94a9-c459d5801da6": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-04_70687d74-7ace-4146-a654-f8799e3d9a54.png",
+            "rounded": true,
+            "heading": "100% natural ingredients",
+            "details": "Made with all-natural ingredients, suitable for sensitive skin.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "7fd5f1bc-93dc-42d8-8648-6da749ce7881",
+        "7fba68dc-7689-4911-9491-9373eff71238",
+        "13ec7f44-2035-4552-a2f3-072c1271c165",
+        "f2aafad1-6af8-4347-94a9-c459d5801da6"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": true,
+        "sectionbgColor": "#e3f3fe",
+        "sectionTextColor": "",
+        "heading": "The ultimate natural sleep aid",
+        "subtext": "An all-natural pillow spray made with the finest ingredients.",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "ec40910a-e035-42f6-a789-cfce54f7c36b": {
+      "type": "bb-products",
+      "blocks": {
+        "0822408f-507a-492a-becc-3b880d561205": {
+          "type": "product",
+          "settings": {
+            "product": "christmas-variety-kit"
+          }
+        },
+        "4fb7a240-6d9e-495f-95d1-0722b5fc11dd": {
+          "type": "product",
+          "settings": {
+            "product": "oh-de-loo"
+          }
+        },
+        "4c807a8f-5a6a-40dc-bc35-b852e4ac4e9e": {
+          "type": "product",
+          "settings": {
+            "product": "hand-body-wash"
+          }
+        }
+      },
+      "block_order": [
+        "0822408f-507a-492a-becc-3b880d561205",
+        "4fb7a240-6d9e-495f-95d1-0722b5fc11dd",
+        "4c807a8f-5a6a-40dc-bc35-b852e4ac4e9e"
+      ],
+      "settings": {
+        "className": "add-more-bathroom-product",
+        "bgColor": "#e3f3fe",
+        "heading": "Add extras to your cart",
+        "btnLabel": "",
+        "btnLink": ""
+      }
+    },
+    "dbe0aa8e-324b-4660-ae1d-e021fb42f0ef": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "How to use",
+        "image": "shopify://shop_images/02-2036_christmasweb-11.png",
+        "details": "<p>Pump 1-2 sprays directly onto your pillow or pyjamas before bed and inhale as you fall asleep. Enjoy a restful night's sleep and wake feeling rejuvenated in the morning.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "f85c1d53-a663-43ca-9bbb-4b9f03f9674a": {
+      "type": "landing-blocks",
+      "blocks": {
+        "2e66bf23-ee1b-4440-9a6b-05af9c064220": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-20.png",
+            "rounded": true,
+            "heading": "Lavender",
+            "details": "Known for its proven natural sedative and restorative properties, lavender oil is one of the most popular sleep aids.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "b349ea81-e5c2-4498-affb-46ae4893f71f": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-21.png",
+            "rounded": true,
+            "heading": "Himalayan Cedarwood",
+            "details": "A warm, woody aroma known to relieve insomnia thanks to its sedative effects. It also wards off negative thoughts and worries.",
+            "mbBlock": "mw-50"
+          }
+        },
+        "9699bcc2-8836-48f2-bf44-641b1ed78745": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/1-22.png",
+            "rounded": true,
+            "heading": "Roman Chamomile",
+            "details": "Is a natural sleep inducer. Roman chamomile has been used to calm nerves, ease headaches, and aid in relaxation for centuries.",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "2e66bf23-ee1b-4440-9a6b-05af9c064220",
+        "b349ea81-e5c2-4498-affb-46ae4893f71f",
+        "9699bcc2-8836-48f2-bf44-641b1ed78745"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "Scent Details",
+        "subtext": "",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "025b6619-9a97-48d5-9dcd-8452790b8809": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "theme-gradient",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Two women on a mission to transform cleaning",
+        "image": "shopify://shop_images/img-3.png",
+        "details": "<p>Purdy Rubin & Charlotte Figg, an NHS nurse and Horticulturist. They wanted to make household products that they felt good using; both for themselves and the environment. What started as a hobby quickly became a movement of  100,000 customers who are demanding more from their cleaning products.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16644285387cfa3d71": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "product-recommendations",
+    "2c2c01ac-85d7-450b-9d30-2ee35074ec31",
+    "7ae21441-c944-4ea8-8c97-10644f27615e",
+    "ec40910a-e035-42f6-a789-cfce54f7c36b",
+    "dbe0aa8e-324b-4660-ae1d-e021fb42f0ef",
+    "f85c1d53-a663-43ca-9bbb-4b9f03f9674a",
+    "025b6619-9a97-48d5-9dcd-8452790b8809",
+    "16644285387cfa3d71"
+  ]
+}

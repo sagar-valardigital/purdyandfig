@@ -1,0 +1,473 @@
+<link href="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/PlayfairDisplay-Italic.woff2?v=1753955980" as="font" type="font/woff2" crossorigin="anonymous" rel="preload">
+
+<style>
+    @font-face {
+  font-family: 'Playfair Display';
+  src: url('https://cdn.shopify.com/s/files/1/0360/1347/3931/files/PlayfairDisplay-Italic.woff2?v=1753955980') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+</style>
+
+<style>
+
+  .art-anc-bar {
+    display: flex;
+    height: 37px;
+    padding: 8px 8px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .art-anc-bar p {
+    text-align: center;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .article-wrapper {
+  padding: 100px 0;
+  }
+  .explore-header h3 {
+  font-weight: 400;
+  }
+  span.article-heading-italic {
+  font-family: 'Playfair Display', 'Georgia', 'Baskerville', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+}
+.article-block-paragraph ul {
+    margin: -5px 0 -5px 8px;
+}
+  @media (max-width: 767px) {
+    .art-anc-bar p {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+    }
+
+    .article-wrapper {
+    padding: 32px 0;
+    }
+    
+    /*.article-header,
+    .article-heading,
+    .article-share-options,
+    .article-main-image,
+    .article-content-wrapper,
+    .right-section {
+    padding-left: 16px;
+    padding-right: 16px;
+    }*/
+
+  span.article-heading-italic {
+  font-family: 'Playfair Display', 'Georgia', 'Baskerville', 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  display: block;
+  font-size: 40px;
+}
+    .explore-header h3 {
+    letter-spacing: 0.4px;
+    }
+  }
+</style>
+
+<div class="article-section-wrapper">
+  {% if section.settings.showancbar %}
+  <div class="art-anc-bar" style="background: {{ section.settings.ancbgcolor }}; color: {{ section.settings.anctxtcolor }};">
+    <p>{{ section.settings.anctext }}</p>
+  </div>
+  {% endif %}
+  <div class="container">
+    <div class="article-wrapper">
+      <div class="left-section">
+        <div class="article-wrapper-inner">
+          <div class="article-header">
+            <!-- <div class="article-tag-block">
+                <span class="article-tag font-open fw-400">{{ section.settings.tag }}</span>
+              </div> -->
+            <div class="article-heading">
+              <h2 class="font-poppin fw-700 heading">
+                {{ section.settings.article-heading }}
+              </h2>
+              <p class="subheading font-open fw-400">{{ section.settings.article-subheading }}</p>
+              <p class="article-info font-open fw-600">{{ section.settings.article-info }}</p>
+            </div>
+            <div class="article-share-options">
+              {% for block in section.blocks %}
+              {% if block.type == "share" %}
+              <a  class="{{ block.settings.share_icon_class }}" {% if block.settings.redirect %}target="_blank"{% endif %} href="{% if block.settings.redirect %}{{ block.settings.redirect_link }}{% else %}javascript:void(0);{% endif %}" data-link="{{ block.settings.share_link }}">
+                <img src="{{ block.settings.share_icon | image_url}}" width="40" height="40"
+                  alt="{{ block.settings.share_icon.alt }}">
+              </a>
+              {% endif %}
+              {% endfor %}
+            </div>
+          </div>
+          <div class="article-main-image">
+            <img src="{{ section.settings.main_image | image_url }}" class="article-main-img" alt="article image"
+              width="300" height="300">
+          </div>
+          <div class="press-block-wrapper">
+            <div class="press-header text-center">
+              <h4 class="font-lausanne fw-400" style="color:#0A1E1A">{{ section.settings.press_heading }}</h4>
+            </div>
+            <div class="">
+              <div class="marquee-section d-flex" style="">
+                <div class="marquee-block d-flex justify-content-center align-items-center">
+                  {% for block in section.blocks %}
+                  {% if block.type == "press" %}
+                  <div class="marquee-img mx-3 px-3">
+                    <img src="{{ block.settings.press_img | img_url: " 250x" }}"
+                      alt="{{ block.settings.press_img.alt }}" class="img-responsive h-auto" width="250" height="80">
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="marquee-block d-flex justify-content-center align-items-center">
+                  {% for block in section.blocks %}
+                  {% if block.type == "press" %}
+                  <div class="marquee-img mx-3 px-3">
+                    <img src="{{ block.settings.press_img | img_url: " 250x" }}"
+                      alt="{{ block.settings.press_img.alt }}" class="img-responsive h-auto" width="250" height="80">
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+                  {% for block in section.blocks %}
+                  {% if block.type == "press" %}
+                  <div class="marquee-img mx-3 px-3">
+                    <img src="{{ block.settings.press_img | img_url: " 250x" }}"
+                      alt="{{ block.settings.press_img.alt }}" class="img-responsive h-auto" width="250" height="80">
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+                  {% for block in section.blocks %}
+                  {% if block.type == "press" %}
+                  <div class="marquee-img mx-3 px-3">
+                    <img src="{{ block.settings.press_img | img_url: " 250x" }}"
+                      alt="{{ block.settings.press_img.alt }}" class="img-responsive h-auto" width="250" height="80">
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+                <div class="marquee-block d-flex d-flex justify-content-center align-items-center">
+                  {% for block in section.blocks %}
+                  {% if block.type == "press" %}
+                  <div class="marquee-img mx-3 px-3">
+                    <img src="{{ block.settings.press_img | img_url: " 250x" }}"
+                      alt="{{ block.settings.press_img.alt }}" class="img-responsive h-auto" width="250" height="80">
+                  </div>
+                  {% endif %}
+                  {% endfor %}
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="article-content-wrapper">
+            {% for block in section.blocks %}
+              {% case block.type %}
+                  {% when 'article_image' %}
+                    <div class="article-image-block">
+                      <img src="{{ block.settings.article_img | image_url }}" width="400" height="400" class="img-responsive" alt="{{ block.settings.article_img.alt }}"> 
+                    </div>
+                  {% when 'article_heading' %}
+                    <div class="article-block-heading">
+                      <h3 class="font-poppin fw-700">{{ block.settings.heading }}</h3>
+                    </div>
+                  {% when 'article_content' %}
+                    <div class="article-block-paragraph">
+                      <div class="font-open fw-400">{{ block.settings.content }}</div>
+                    </div>
+              {% endcase %}
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+      <div class="right-section">
+        <div class="explore-block">
+          <div class="explore-header">
+            <h3 class="heading text-center font-poppin fw-600">
+              {{ section.settings.explore-heading }}
+            </h3>
+          </div>
+          <div class="explore-image">
+            {% assign exploreImage = section.settings.explore_image | image_url %}
+            <img src="{{ exploreImage }}" width="350" height="400" alt="{{ exploreImage.alt }}" class="w-100 h-auto">
+          </div>
+          {% if section.settings.btn_link %}
+          <div class="button-wrapper">
+            <a href="{{ section.settings.btn_link }}" target="_blank" class="btn font-open fw-600"
+              style="background-color:{{ section.settings.btn_bg }}; color:{{ section.settings.btn_text_color }}">{{
+              section.settings.btn_label }} <img src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/arrow-right-solid.svg?v=1749191504" width="18" height="18" alt="arrow"></a>
+          </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<div id="link-copied" class="link-copied font-open fw-600">
+  Link Copied
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+  let noticeTimeout; // Track the current timeout to prevent overlapping
+  
+  function showCopiedNotice() {
+    const copiedNotice = document.getElementById('link-copied');
+    if (copiedNotice) {
+      // Clear any existing timeout to prevent overlapping animations
+      if (noticeTimeout) {
+        clearTimeout(noticeTimeout);
+      }
+      
+      // Remove class first in case it's already showing
+      copiedNotice.classList.remove('show');
+      
+      // Force reflow to ensure the class removal takes effect
+      copiedNotice.offsetHeight;
+      
+      // Add show class
+      copiedNotice.classList.add('show');
+      
+      // Set timeout to remove the class
+      noticeTimeout = setTimeout(() => {
+        copiedNotice.classList.remove('show');
+        noticeTimeout = null;
+      }, 3000);
+    }
+  }
+  
+  // Handle links that also redirect
+  document.querySelectorAll('.copy-redirect-link').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const linkToCopy = this.getAttribute('data-link');
+      const actualHref = this.getAttribute('href');
+      
+      navigator.clipboard.writeText(linkToCopy)
+        .then(() => {
+          
+            window.open(actualHref, '_blank');
+        
+        })
+        .catch(err => {
+          console.error('Clipboard copy failed:', err);
+          window.open(actualHref, '_blank');
+        });
+    });
+  });
+  
+  // Handle plain copy buttons
+  document.querySelectorAll('.copy-link').forEach(button => {
+    button.addEventListener('click', () => {
+      const link = button.getAttribute('data-link');
+      
+      navigator.clipboard.writeText(link)
+        .then(() => {
+          showCopiedNotice(); // Show the notice every time
+        })
+        .catch(err => {
+          console.error('Clipboard copy failed:', err);
+        });
+    });
+  });
+});
+
+</script>
+
+
+{% schema %}
+  {
+    "name": "Article 400",
+    "settings": [
+      {
+        "type": "header",
+        "content" : "Article 400 block"
+      },
+      {
+        "type": "text",
+        "id" : "tag",
+        "label" : "article Tag"
+      },
+      {
+        "type": "text",
+        "id" : "article-heading",
+        "label" : "Heading"
+      },
+      {
+        "type": "text",
+        "id" : "article-subheading",
+        "label" : "Sub Heading"
+      },
+      {
+        "type": "text",
+        "id" : "article-info",
+        "label" : "article Information"
+      },
+      {
+        "type": "image_picker",
+        "id" : "main_image",
+        "label" : "article Main Image"
+      },
+      {
+        "type": "header",
+        "content" : "Press Block"
+      },
+      {
+        "type": "text",
+        "id" : "press_heading",
+        "label": "Press Heading"
+      },
+      {
+        "type": "header",
+        "content" : "Explore Block"
+      },
+      {
+        "type": "textarea",
+        "id" : "explore-heading",
+        "label" : "Heading"
+      },
+      {
+        "type": "image_picker",
+        "id" : "explore_image",
+        "label" : "Explore Image"
+      },
+      {
+        "type": "text",
+        "id" : "btn_label",
+        "label" : "Button Label"
+      },
+      {
+        "type": "url",
+        "id" : "btn_link",
+        "label" : "Button link"
+      },
+      {
+        "type": "color",
+        "id" : "btn_bg",
+        "label" : "Button background color"
+      },
+      {
+        "type": "color",
+        "id" : "btn_text_color",
+        "label" : "Button text color"
+      },
+      {
+        "type": "header",
+        "content" : "Announcement bar block"
+      },
+      {
+        "type": "checkbox",
+        "id": "showancbar",
+        "label": "Show announcement",
+        "default": false
+      },
+      {
+        "type": "color",
+        "id" : "ancbgcolor",
+        "label" : "Background color"
+      },
+      {
+        "type": "color",
+        "id" : "anctxtcolor",
+        "label" : "Text color"
+      },
+      {
+        "type": "textarea",
+        "id" : "anctext",
+        "label" : "Text"
+      },
+    ],
+    "blocks": [
+      {
+      "type": "share",
+      "name": "Share article",
+      "settings": [
+            {
+              "type": "checkbox",
+              "id": "redirect",
+              "label": "Enable Redirect"
+            },
+           {
+              "type": "text",
+              "id": "redirect_link",
+              "label": "Redirect Link"
+            },
+            {
+              "type": "image_picker",
+              "id": "share_icon",
+              "label": "Add Share Icon"
+            },
+            {
+              "type": "text",
+              "id": "share_link",
+              "label": "Share Link"
+            },
+            {
+              "type": "text",
+              "id": "share_icon_class",
+              "label": "Add Class"
+            }
+         ]
+      },
+      {
+      "type": "press",
+      "name": "Press Images",
+      "settings": [
+            {
+              "type": "image_picker",
+              "id": "press_img",
+              "label": "Add Press Images"
+            }
+         ]
+      },
+      {
+      "type": "article_image",
+      "name": "article Images",
+      "settings": [
+            {
+              "type": "image_picker",
+              "id": "article_img",
+              "label": "Add Images"
+            }
+         ]
+      },
+      {
+      "type": "article_heading",
+      "name": "article Heading",
+      "settings": [
+            {
+              "type": "textarea",
+              "id": "heading",
+              "label": "Heading"
+            }
+         ]
+      },
+      {
+      "type": "article_content",
+      "name": "article Content",
+      "settings": [
+            {
+              "type": "richtext",
+              "id": "content",
+              "label": "Content"
+            }
+         ]
+      }
+    ],
+    "presets": [
+		{
+			"name": "Article 400"
+		}
+	]
+  }
+{% endschema %}

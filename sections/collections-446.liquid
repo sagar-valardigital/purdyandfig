@@ -1,0 +1,877 @@
+<style>
+  #body  .section-header {
+    margin-bottom: 32px;
+  }
+  #body  .section-header  .heading-2 {
+    color: #0A1E1A !important;
+    font-family: "Lausanne" !important;
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 35px;
+    letter-spacing: 0.42px;
+    margin-bottom: 4px !important;
+  }
+  #body .section-header p {
+    color: #424242;
+    font-family: "Lausanne";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 27px;
+  }
+  .rpb-pricing {
+    padding-bottom: 8px;
+  }
+  .rpb-product-details .heading-3  {
+    color: var(--Neutral-900, #212121);
+    font-family: "Lausanne" !important;
+    font-size: 18px !important;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 27px;
+    margin-top: 8px;
+    height: auto;
+  }
+  .py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  .btn-christmas-btn {
+    font-size: 14px !important
+  }
+  .reskin-product-blocks-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 32px;
+  }
+  .reskin-product-block {
+    width: calc(25% - 32px);
+    /* height: 431px; */
+    box-sizing: border-box;
+    border: unset !important;
+    padding: unset !important;
+    border-radius: unset !important;
+  }
+  .take-two {
+    width: calc(45% + 32px) !important;
+  }
+  .reskin-product-block{
+    margin:0 !important;
+  }
+  .reskin-product-block img {
+    cursor: pointer;
+  }
+  .rpb-image img {
+    border-radius: 4px;
+  }
+  .rpb-pricing {
+    grid-gap: 4px !important;
+  }
+  .rpb-product-details .rpb-pricing span {
+    color: #424242 !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .rpb-product-details .rpb-pricing del {
+    color: #9E9E9E !important;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px;
+  }
+  .pr-short-desc {
+    color: #424242;
+    font-family: "Lausanne";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 21px;
+  }
+  .cta-381 {
+    display: flex;
+    height: 40px;
+    padding: 9px 14px !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex: 1 0 0;
+    font-size: 14px;
+    line-height: 14px;
+    letter-spacing: 0.35px;
+    text-transform: uppercase;
+    box-shadow: 0 6px 20px -4px rgba(0, 0, 0, 0.10);
+    background-color: #003176 !important;
+    color: #FFFFFF;
+  }
+  .rpb-image {
+    {% comment %} height: 280px; {% endcomment %}
+  }
+
+  .image-only-block img {
+    {% comment %} height: auto !important; {% endcomment %}
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+  }
+  .rpb-image img {
+    height: auto !important;
+    width: 100%;
+    {% comment %} object-fit: cover; {% endcomment %}
+    border-radius: 4px;
+  }
+  .image-only-badge {
+    position: absolute;
+    top: 0;
+    max-width: 260px;
+    padding: 18.829px 9.415px 9.415px 9.415px;
+    display: flex;
+    flex-direction: column;
+  }
+  .badge-head {
+    color: #FFF;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    letter-spacing: 0.21px;
+  }
+  .badge-subhead {
+    color: #FFF;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 160%;
+  }
+  .show-divider-m {
+    display: none;
+  }
+  .alert-note {
+    display: flex;
+    height: 23px;
+    flex-direction: column;
+    justify-content: center;
+    align-self: stretch;
+    color: #212121;
+    text-align: center;
+    font-family: "Lausanne";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 21px;
+    margin-top: 64px;
+  }
+  .rpb-product-details h3.heading-3 {
+    cursor: pointer;
+  }
+  .btn-main-381 {
+    display: flex;
+    gap: 4px;
+  }
+  .cl-btn-del-price-381 {
+    color: #9E9E9E;
+    font-weight: 400;
+  }
+  span.displ-blc {
+    display: block !important;
+  }
+  .reskin-product-block {
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+  }
+  .rpb-title-box {
+    display: flex;
+    flex-direction: column;
+  }
+  .rpb-btn-box {
+    margin-top: auto;
+  }
+  .toast-btn-381 {
+    background: #11322C !important;
+  }
+  span.ds-displ-blc {
+    display: block !important;
+  }
+  .pf446 .saving-tag {
+    background: #C8393C !important;
+    border: solid 1px #C8393C !important;
+    color: #FFFFFF !important;
+  }
+  .pf446 .reskin-product-block {
+    margin-bottom: 32px !important;
+  }
+  .btm-text {
+    color: #212121;
+    text-align: center;
+    font-family: "Lausanne";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.18px;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    bottom: -24px;
+  }
+  .pf446 .des-blc {
+    display: block;
+  }
+  @media (max-width: 768px) {
+    #body  .section-header {
+      margin-bottom: 16px;
+    }
+    #body .section-header p {
+      font-size: 16px;
+      line-height: 24px;
+    }
+    span.frc {
+      display: inline-block !important;
+    }
+    .badge-head {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+    }
+    .badge-subhead {
+      font-size: 14px;
+      line-height: 150%;
+    }
+    .collections-381 h2.heading-2 {
+      font-size: 24px !important;
+      margin-bottom: 16px !important;
+    }
+    .rpb-product-details .heading-3  {
+      font-size: 16px !important;
+      line-height: 24px;
+      {% comment %} max-width: 160px; {% endcomment %}
+    }
+    .pr-short-desc {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+      max-width: 160px;
+    }
+    .reskin-product-blocks-wrapper {
+      gap: 24px;
+    }
+    .reskin-product-block {
+      width: calc(50% - 12px);
+    }
+    .rpb-image {
+      height: 164px;
+    }
+    .reskin-product-block {
+      height: auto;
+      /* height: 330px; */
+    }
+    .rpb-image img {
+      width: 100%;
+      height: 100% !important;
+      object-fit: cover;
+    }
+    .take-two {
+      width: 100% !important;
+      order: 1;
+    }
+    .update-order:nth-child(1) {
+      order: 2 !important;
+    }
+    .update-order:nth-child(2) {
+      order: 3 !important;
+    }
+
+    .product-blocks-section {
+      padding: 32px 0px 0px 0px;
+    }
+    .show-divider-m {
+      display: block;
+      border: solid 1px #E0E0E0;
+      margin: 48px 16px 0px 16px;
+    }
+    .alert-note {
+      font-size: 12px;
+      line-height: 18px;
+      letter-spacing: 0.18px;
+      margin-top: 32px;
+      margin-bottom: 32px;
+    }
+    span.ds-displ-blc {
+      display: inline-block !important;
+    }
+    span.mb-displ-blc {
+      display: block !important;
+    }
+    .pf446 .reskin-product-block {
+      margin-bottom: 16px !important;
+    }
+    .pf446 .popup-product-title-381 {
+      font-size: 16px !important;
+      line-height: 24px !important;
+    }
+    .pf446 .mbl-blc {
+      display: block;
+    }
+  }
+</style>
+
+{% assign blockcount = 0 %}
+{% for block in section.blocks %}
+  {% if block.type == 'product' %}
+    {% assign blockcount = blockcount | plus: 1 %}
+  {% endif %}
+{% endfor %}
+
+{% if section.settings.showdivider %}
+  <div class="show-divider-m"></div>
+{% endif %}
+
+<div
+  id="{{ section.settings.idName }}"
+  class="product-blocks-section {{ section.settings.className }}"
+  x-data="{qty:1}"
+  style="background-color:{{ section.settings.bg }}"
+>
+  <div class="container">
+    <div class="section-header ">
+      {% if section.settings.heading != blank %}
+        <h2 class="heading-2 font-gtsuper">{{ section.settings.heading }}</h2>
+      {% endif %}
+      {% if section.settings.subheading != blank %}
+        <p class="font-lausanne fw-200">{{ section.settings.subheading }}</p>
+      {% endif %}
+    </div>
+    <div class="reskin-product-blocks-wrapper ">
+      {% for block in section.blocks %}
+        {% if block.type == 'image' %}
+          <div class="reskin-product-block image-only-block position-relative {% if blockcount == 2 %}take-two{% endif %}">
+            <img
+              src="{{ block.settings.d_image_only | image_url: width: 600 }}"
+              alt="{{ block.settings.d_image_only.alt }}"
+              width="280"
+              height="457"
+              class="mobile-hide"
+            >
+            <img
+              src="{{ block.settings.d_image_only | image_url: width: 600 }}"
+              alt="{{ block.settings.d_image_only.alt }}"
+              width="164"
+              height="372"
+              class="desktop-hide"
+            >
+            <div class="image-only-badge">
+              <span class="badge-head">{{ block.settings.badge_heading }}</span>
+              <span class="badge-subhead">{{ block.settings.badge_subheading }}</span>
+            </div>
+          </div>
+        {% else %}
+          {% assign product = block.settings.product %}
+          <div class="reskin-product-block {% if blockcount == 2 %}update-order{% endif %} position-relative">
+            <div class="rpb-image position-relative">
+              {% if block.settings.product_image %}
+                <img
+                  src="{{ block.settings.product_image | image_url: width: 600 }}"
+                  alt="{{ block.settings.product_image.alt }}"
+                  width="280"
+                  height="280"
+                  class="image-main-381 mobile-hide"
+                  onclick="firepopupblock(this);"
+                >
+                <img
+                  src="{{ block.settings.product_image | image_url: width: 600 }}"
+                  alt="{{ block.settings.product_image.alt }}"
+                  width="164"
+                  height="164"
+                  class="image-main-381 desktop-hide"
+                  onclick="firepopupblock(this);"
+                >
+              {% else %}
+                <img
+                  src="{{ product.featured_image | image_url : width: 600 }}"
+                  alt="{{ product.featured_image.alt }}"
+                  width="280"
+                  height="280"
+                  class="image-main-381 mobile-hide"
+                  onclick="firepopupblock(this);"
+                >
+                <img
+                  src="{{ product.featured_image | image_url : width: 600 }}"
+                  alt="{{ product.featured_image.alt }}"
+                  width="164"
+                  height="164"
+                  class="image-main-381 desktop-hide"
+                  onclick="firepopupblock(this);"
+                >
+              {% endif %}
+              {% if block.settings.saving != blank %}
+                <span class="saving-tag font-lausanne fw-400">{{ block.settings.saving }}</span>
+              {%- endif %}
+            </div>
+            <div class="rpb-product-details">
+              <h3 class="heading-3 font-lausanne fw-400 title-main-381" onclick="firepopupblock(this);">
+                {{ block.settings.title }}
+              </h3>
+              <div class="pr-short-desc">{{ block.settings.summary }}</div>
+              <div class="rpb-pricing">
+                <span>
+                  {{- localization.country.currency.symbol -}}
+                  {{- block.settings.price -}}
+                </span>
+                {% if block.settings.crossprice != blank %}
+                <del>
+                  {{- localization.country.currency.symbol -}}
+                  {{- block.settings.crossprice -}}
+                </del>
+                {% endif %}
+              </div>
+            </div>
+            <div class="rpb-btn-box">
+              <input type="hidden" class="toast-sub" data-pop-sub="{{ block.settings.isSub }}">
+
+              <div class="bulletpoints1" style="display: none;">{{ block.settings.bulletpoints1 }}</div>
+              <div class="bulletpoints2" style="display: none;">{{ block.settings.bulletpoints2 }}</div>
+              <div class="bulletpoints3" style="display: none;">{{ block.settings.bulletpoints3 }}</div>
+              <div class="bulletpoints4" style="display: none;">{{ block.settings.bulletpoints4 }}</div>
+              <div class="bulletpoints5" style="display: none;">{{ block.settings.bulletpoints5 }}</div>
+              <div class="bulletpoints6" style="display: none;">{{ block.settings.bulletpoints6 }}</div>
+              <div class="bulletpoints7" style="display: none;">{{ block.settings.bulletpoints7 }}</div>
+              <div class="bulletpoints8" style="display: none;">{{ block.settings.bulletpoints8 }}</div>
+              <div class="popup-title" style="display: none;">{{ block.settings.popuptitle }}</div>
+              <div class="popup-summary" style="display: none;">{{ block.settings.popupsummary }}</div>
+              <div class="pop-bullet-heading" style="display: none;">
+                {% if block.settings.bulletlabel != blank -%}
+                  {{- block.settings.bulletlabel -}}
+                {%- else -%}
+                  Pack includes:
+                {%- endif %}
+              </div>
+              <div class="out-of-stock" style="display: none;">{{ block.settings.out_of_stock }}</div>
+              <div class="popup-cta-same" style="display: none;">{{ section.settings.popup_cta_same }}</div>
+
+              <form
+                name="shopify-product-form"
+                autocomplete="off"
+                @submit.prevent="console.log('submitted')"
+                x-ref="product_form_{{ block.settings.variant_number }}"
+                enctype="multipart/form-data"
+                accept-charset="UTF-8"
+                id="product_form_{{ block.settings.variant_number }}"
+                class="shopify-product-form form_s1 link-to-variant variant_1 show"
+                data-product-id="{{product.id}}"
+                action="/cart/add"
+              >
+                <input
+                  autocomplete="off"
+                  type="hidden"
+                  name="id"
+                  class="input_variant_id_"
+                  value="{{ block.settings.variant_id }}"
+                >
+
+                <input autocomplete="off" type="hidden" name="quantity" value="1">
+                {% if block.settings.isSub %}
+                  <input
+                    autocomplete="off"
+                    type="checkbox"
+                    name="purchase_type"
+                    value="subscription"
+                    checked
+                    class="d-none gp--buyoption-input purc_type"
+                  >
+                {% else %}
+                  <input
+                    autocomplete="off"
+                    type="checkbox"
+                    name="purchase_type"
+                    value="payg"
+                    checked
+                    class="d-none gp--buyoption-input purc_type"
+                  >
+                {% endif %}
+                <input
+                  autocomplete="off"
+                  class="input_selling_plan_"
+                  type="hidden"
+                  name="selling_plan"
+                  value="{{ block.settings.sealing_plan}}"
+                >
+                <input
+                  autocomplete="off"
+                  type="hidden"
+                  class="disc"
+                  name="discount"
+                  value="{{ block.settings.discount }}"
+                >
+                {% if block.settings.out_of_stock %}
+                  <button
+                    class="btn btn-christmas-btn btn-loader cta-381 btn-main-381"
+                    disabled="disabled"
+                    style="opacity: 0.6"
+                    {% if block.settings.dataTrack %}
+                      {% comment %} data-add-to-cart="true" {% endcomment %}
+                      data-page-url="{{ request.path }}"
+                      data-target-url="{{ block.settings.targetUrl }}"
+                      data-index="{{ block.settings.index }}"
+                      data-funnel-stage="{{ block.settings.funnel_stage }}"
+                      data-module="{{ block.settings.dataModule }}"
+                      data-event-label="{{ block.settings.dataTitle }}"
+                      data-event-value="{{ block.settings.eventValue }}"
+                      data-item-id="{{ block.settings.sku }}"
+                      data-option-index="{{ block.settings.optionIndex }}"
+                      data-item-name="{{ block.settings.gaitemName }}"
+                      data-quantity="{{ block.settings.quantity }}"
+                      data-price="{{ localization.country.currency.symbol }}{{ block.settings.price }}"
+                      data-cross-price="{{ localization.country.currency.symbol }}{{ block.settings.crossprice }}"
+                      data-item-type="{% if block.settings.isSub %}subscription{% else %}PAYG{% endif %}"
+                    {% endif %}
+                  >
+                    <span class="cl-btn-txt-381">OUT OF STOCK</span>
+                    <!--
+                      <del class="cl-btn-del-price-381">{{ localization.country.currency.symbol }}{{ block.settings.crossprice }}</del>
+                      <span class="cl-btn-price-381">{{ localization.country.currency.symbol }}{{ block.settings.price }}</span>
+                    -->
+                  </button>
+                {% else %}
+                  <button
+                    {% if section.settings.toast %}
+                      x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ block.settings.variant_number }}, false, false, $event)"
+                    {% else %}
+                      x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ block.settings.variant_number }}, false, false, $event)"
+                    {% endif %}
+                    class="btn btn-christmas-btn btn-loader cta-381 btn-main-381"
+                    {% if block.settings.dataTrack %}
+                      data-add-to-cart="true"
+                      data-page-url="{{ request.path }}"
+                      data-target-url="{{ block.settings.targetUrl }}"
+                      data-index="{{ block.settings.index }}"
+                      data-funnel-stage="{{ block.settings.funnel_stage }}"
+                      data-module="{{ block.settings.dataModule }}"
+                      data-event-label="{{ block.settings.dataTitle }}"
+                      data-event-value="{{ block.settings.eventValue }}"
+                      data-item-id="{{ block.settings.sku }}"
+                      data-option-index="{{ block.settings.optionIndex }}"
+                      data-item-name="{{ block.settings.gaitemName }}"
+                      data-quantity="{{ block.settings.quantity }}"
+                      data-price="{{ localization.country.currency.symbol }}{{ block.settings.price }}"
+                      data-cross-price="{{ localization.country.currency.symbol }}{{ block.settings.crossprice }}"
+                      data-item-type="{% if block.settings.isSub %}subscription{% else %}PAYG{% endif %}"
+                    {% endif %}
+                  >
+                    <span class="cl-btn-txt-381">{{ block.settings.buttonLabel }}</span>
+                    <!--
+                      <del class="cl-btn-del-price-381">{{ localization.country.currency.symbol }}{{ block.settings.crossprice }}</del>
+                      <span class="cl-btn-price-381">{{ localization.country.currency.symbol }}{{ block.settings.price }}</span>
+                    -->
+                  </button>
+                {% endif %}
+              </form>
+            </div>
+            {% if block.settings.btmtext != blank %}
+            <div class="btm-text">{{ block.settings.btmtext }}</div>
+            {% endif %}
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+
+    {% if section.settings.shownote %}
+      <div class="alert-note">Discount valid on maximum of 5 products</div>
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collections 446",
+  "class": "collections-381",
+  "settings": [
+    {
+      "type": "checkbox",
+      "id": "popup_cta_same",
+      "label": "Popup CTA same",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "className",
+      "label": "Add section class"
+    },
+    {
+      "type": "text",
+      "id": "idName",
+      "label": "Add section ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "showdivider",
+      "label": "Show divider"
+    },
+    {
+      "type": "checkbox",
+      "id": "shownote",
+      "label": "Show bottom note"
+    },
+    {
+      "type": "checkbox",
+      "id": "toast",
+      "label": "Enable toast"
+    },
+    {
+      "type": "color",
+      "id": "bg",
+      "label": "Section Background Color"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Section Heading"
+    },
+    {
+      "type": "html",
+      "id": "subheading",
+      "label": "Section sub-heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "d_image_only",
+          "label": "Desktop image"
+        },
+        {
+          "type": "image_picker",
+          "id": "m_image_only",
+          "label": "Mobile image"
+        },
+        {
+          "type": "text",
+          "id": "badge_heading",
+          "label": "Badge heading"
+        },
+        {
+          "type": "textarea",
+          "id": "badge_subheading",
+          "label": "Badge sub heading"
+        }
+      ]
+    },
+    {
+      "type": "product",
+      "name": "Product",
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "out_of_stock",
+          "label": "Out of stock"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Choose Product"
+        },
+        {
+          "type": "text",
+          "id": "variant_number",
+          "label": "Variant number"
+        },
+        {
+          "type": "text",
+          "id": "variant_id",
+          "label": "Variant ID"
+        },
+        {
+          "type": "text",
+          "id": "sku",
+          "label": "SKU"
+        },
+        {
+          "type": "text",
+          "id": "sealing_plan",
+          "label": "Sealing Plan"
+        },
+        {
+          "type": "text",
+          "id": "discount",
+          "label": "Discount Code"
+        },
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Choose Product Image"
+        },
+        {
+          "type": "checkbox",
+          "id": "isSub",
+          "label": "Product subscription enable"
+        },
+        {
+          "type": "html",
+          "id": "title",
+          "label": "Product Title"
+        },
+        {
+          "type": "html",
+          "id": "summary",
+          "label": "Short summary"
+        },
+        {
+          "type": "text",
+          "id": "saving",
+          "label": "Product Saving %",
+          "default": "Saving 20%"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Product Price"
+        },
+        {
+          "type": "text",
+          "id": "crossprice",
+          "label": "Product Cross Price"
+        },
+        {
+          "type": "text",
+          "id": "buttonLabel",
+          "label": "Button Label",
+          "default": "ADD TO CART"
+        },
+        {
+          "type": "text",
+          "id": "btmtext",
+          "label": "Bottom text",
+          "default": "Change or cancel anytime"
+        },
+        {
+          "type": "textarea",
+          "id": "popuptitle",
+          "label": "Popup title"
+        },
+        {
+          "type": "textarea",
+          "id": "popupsummary",
+          "label": "Popup description"
+        },
+        {
+          "type": "text",
+          "id": "bulletlabel",
+          "label": "Bullet points heading"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints1",
+          "label": "Bullet point 1"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints2",
+          "label": "Bullet point 2"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints3",
+          "label": "Bullet point 3"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints4",
+          "label": "Bullet point 4"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints5",
+          "label": "Bullet point 5"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints6",
+          "label": "Bullet point 6"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints7",
+          "label": "Bullet point 7"
+        },
+        {
+          "type": "html",
+          "id": "bulletpoints8",
+          "label": "Bullet point 8"
+        },
+        {
+          "type": "header",
+          "content": "GA4"
+        },
+        {
+          "id": "dataTrack",
+          "label": "Data Track",
+          "type": "checkbox"
+        },
+        {
+          "id": "targetUrl",
+          "label": "Target Url",
+          "type": "url"
+        },
+        {
+          "id": "index",
+          "label": "Index",
+          "type": "number",
+          "default": 0
+        },
+        {
+          "id": "funnel_stage",
+          "label": "Funnel Stage",
+          "type": "text",
+          "default": "landing_page"
+        },
+        {
+          "id": "dataModule",
+          "label": "Module",
+          "type": "text",
+          "default": "announcement_bar"
+        },
+        {
+          "id": "dataTitle",
+          "label": "Event Label",
+          "type": "text",
+          "default": "get_your_offer"
+        },
+        {
+          "id": "eventValue",
+          "label": "Event Value",
+          "type": "text",
+          "default": "shop_anchor"
+        },
+        {
+          "id": "optionIndex",
+          "label": "Option Index",
+          "type": "text"
+        },
+        {
+          "id": "gaitemName",
+          "label": "Item Name",
+          "type": "text"
+        },
+        {
+          "id": "quantity",
+          "label": "Item Quantity",
+          "type": "number",
+          "default": 1
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections 446"
+    }
+  ]
+}
+{% endschema %}

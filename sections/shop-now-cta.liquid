@@ -1,0 +1,73 @@
+<style>
+  .show-now-cta-container {
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+    padding-bottom: 80px;
+    font-family: "TWK Lausanne";
+  }
+  .shop-now-cta {
+    font-family: "TWK Lausanne";
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    line-height: 16px;
+    padding: 12px 45px;
+    font-weight: 400;
+    color: {% if section.settings.shopnowctaColor != blank %} {{ section.settings.shopnowctaColor }} {% else %} #FFFFFF {% endif %};
+    background: {% if section.settings.shopnowctaBackground != blank %} {{ section.settings.shopnowctaBackground }} {% else %} #FFFFFF {% endif %};
+    border: solid 1px {% if section.settings.shopnowctaBorderColor != blank %} {{ section.settings.shopnowctaBorderColor }} {% else %} #FFFFFF {% endif %};
+    border-radius: {% if section.settings.shownowctaRadius != blank %} {{ section.settings.shownowctaRadius }}px {% else %} 0px {% endif %};
+    text-transform: uppercase;
+    width: 20%;
+    cursor: pointer;
+  }
+  @media (max-width: 768px) {
+    .shop-now-cta {
+      width: 90%;
+    }
+  }
+</style>
+
+<div class="show-now-cta-container">
+  <button type="button" class="shop-now-cta" onclick="window.location.href='{{ shop.url }}/#starterkit-product';">
+    {% if section.settings.shopnowctaHeading != blank %} {{ section.settings.shopnowctaHeading }} {% else %} Shop Now {% endif %} 
+  </button>
+</div>
+
+{% schema %}
+  {
+    "name": "Shop now CTA",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shopnowctaHeading",
+        "label": "Button text"
+      },
+      {
+        "type": "color",
+        "id": "shopnowctaColor",
+        "label": "Font color"
+      },
+      {
+        "type": "color",
+        "id": "shopnowctaBackground",
+        "label": "Background color"
+      },
+      {
+        "type": "color",
+        "id": "shopnowctaBorderColor",
+        "label": "Border color"
+      },
+      {
+        "type": "number",
+        "id": "shownowctaRadius",
+        "label": "Border Radius"
+      }
+    ],
+    "presets": [
+      {
+          "name": "Shop now CTA"
+      }
+	]
+  }
+{% endschema %}

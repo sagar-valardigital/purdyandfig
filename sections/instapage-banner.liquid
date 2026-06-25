@@ -1,0 +1,312 @@
+<style>
+  {%- assign DimageURL = section.settings.desktopimage | img_url:"2600x" -%}
+  {%- assign MimageURL = section.settings.mobileimage | img_url:"1400x" -%}
+  {%- assign MMimageURL = section.settings.mobileimage | img_url:"900x" -%}
+
+  body {
+    background: #025E55 !important;
+  }
+  .banner-3 {
+    height: 529px;
+  }
+  @media(min-width:768px){
+  .banner-3{{ section.id }}{background-image:url({{DimageURL}})}
+  }
+    @media(max-width:768px){
+  .banner-3{{ section.id }}{background-image:url({{MimageURL}})}
+  }
+     @media(max-width:400px){
+  .banner-3{{ section.id }}{background-image:url({{MMimageURL}})}
+  }
+
+  .banner-3 {
+    margin-top: 62px;
+    padding-top: 66px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: top center;
+  }
+
+  .banner-inner-container {
+    padding: 0;
+  }
+
+  .banner-3 .lander-banner-details {
+    padding: 0px;
+    margin-left: 200px;
+  }
+    
+  .banner-2-reviews .star-img {
+    margin-right: 6px;
+  }
+
+  .banner-2-reviews {
+    display: flex;
+  }
+
+  .banner-2-btn {
+    display: flex;
+    flex-direction: column;
+    margin-top: 28px;
+  }
+
+  .banner-3 * {
+    font-family: EB Garamond;
+  }
+
+  .banner-3 .offer-btn {
+    display: flex;
+    width: 370px;
+    height: 60px;
+    padding: 16.92px 122.49px 18.08px 122.67px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    background: #FCA71A;
+    font-family: "Arial";
+    font-size: 21.8px;
+    font-weight: 700;
+    border-radius: 0px;
+    
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.10);
+  }
+
+  .banner-3 .heading-2 {
+    max-width: 461px;
+    font-size: 49.5px;
+    font-weight: 700;
+    line-height: 59.44px;
+  }
+
+  .banner-3 .sub-text {
+    border-top: 0px;
+    font-size: 23.8px;
+    font-weight: 500;
+    line-height: 38px;
+    padding-top: 0px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  .banner-3 .customers-reviews {
+    font-size: 19.8px;
+    line-height: 32px;
+    margin-left: 21px;
+  }
+
+  .banner-3 .limited-offer {
+    color: #FEFEFE;
+    font-size: 19.8px;
+    line-height: 32px;
+    order: 2;
+    margin-top: 10px;
+  }
+
+  .banner-3 .small-logo {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    .banner-3 {
+      height: 621px;
+      padding-top: 0;
+      margin-top: 55px;
+      background-size: cover;
+      background-position: center -16px;
+    }
+    
+    .banner-3 .lander-banner-details {
+      padding: 12px 12px;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      width: 100%;
+      margin-left: 0;
+    }
+    
+    .banner-3 .offer-btn {
+      width: 100%;
+      padding: 16.92px 0px;
+      order: 2;
+    }
+
+    .banner-2-btn {
+      margin-top: 42px;
+    }
+
+    .banner-3 .heading-2 {
+      font-size: 36px;
+      font-weight: 700;
+      line-height: 51px;
+      text-align: center;
+    }
+
+    .banner-3 .sub-text {
+      font-size: 17.3px;
+      text-align: center;
+      line-height: 27.3px;
+      margin-top: 12px;
+      margin-bottom: 16px;
+    }
+
+    .banner-2-reviews .star-img svg {
+      width: 20px;
+      height: 20px;
+    }
+
+    .banner-2-reviews .star-img {
+      margin-right: 2px;
+    }
+
+    .banner-3 .limited-offer {
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+      margin-bottom: 11px;
+      order: 1;
+    }
+
+    .banner-2-reviews-inner {
+      display: flex;
+      width: 100%;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .banner-3 .customers-reviews {
+      font-size: 16.1px;
+      line-height: 25.35px;
+      margin-left: 6px;
+    }
+
+    .banner-3 .small-logo {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      top: 10.23px;
+    }
+  }
+
+  @media (max-width: 560px) {
+    .banner-3 {
+      height: 621px;
+    }
+  }
+</style>
+
+<div class="position-relative banner-3 banner-3{{ section.id }} {{ section.settings.className }}">
+  <div class="">
+    <div style="padding-top: 10.23px;">
+      <img class="small-logo" width="64.34px" height="28.77px" src="https://cdn.shopify.com/s/files/1/0360/1347/3931/files/64604958-0-Purdy-Figg-Logo-Icon.webp" alt="Purdy & Figg" />
+    </div>
+    <div class="banner-inner-container">
+      <div class="d-flex justify-content-between flex-wrap">
+        <div class="lander-banner-details">
+          <h2 class="heading-2 white-text">{{ section.settings.title }}</h2>
+          <div class="white-text value-sans">
+            <h3 class="sub-text white-text">{{ section.settings.subtext }}</h3>
+          </div>
+
+          <div class="d-grid banner-2-reviews w-100">
+            <div class="banner-2-reviews-inner text-left ms-2 d-flex">
+              <div class="font-pier theme-text mt-0 stars-img-review">
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path d="M5.94478 25.7406C5.09006 26.2978 4.59147 25.9263 4.82296 24.9235L6.74607 16.4547L0.460337 10.8088C-0.287542 10.1402 -0.109475 9.5088 0.887695 9.43451L9.13216 8.74735L12.3195 0.724303C12.6757 -0.241434 13.2989 -0.241434 13.6729 0.724303L16.878 8.74735L25.1047 9.43451C26.1019 9.52737 26.2977 10.1217 25.5321 10.8088L19.2463 16.4547L21.1694 24.9235C21.4009 25.9263 20.9201 26.2978 20.0476 25.7406L12.9962 21.2277L5.94478 25.7406Z" fill="#FCA71A"/>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path d="M5.94478 25.7406C5.09006 26.2978 4.59147 25.9263 4.82296 24.9235L6.74607 16.4547L0.460337 10.8088C-0.287542 10.1402 -0.109475 9.5088 0.887695 9.43451L9.13216 8.74735L12.3195 0.724303C12.6757 -0.241434 13.2989 -0.241434 13.6729 0.724303L16.878 8.74735L25.1047 9.43451C26.1019 9.52737 26.2977 10.1217 25.5321 10.8088L19.2463 16.4547L21.1694 24.9235C21.4009 25.9263 20.9201 26.2978 20.0476 25.7406L12.9962 21.2277L5.94478 25.7406Z" fill="#FCA71A"/>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path d="M5.94478 25.7406C5.09006 26.2978 4.59147 25.9263 4.82296 24.9235L6.74607 16.4547L0.460337 10.8088C-0.287542 10.1402 -0.109475 9.5088 0.887695 9.43451L9.13216 8.74735L12.3195 0.724303C12.6757 -0.241434 13.2989 -0.241434 13.6729 0.724303L16.878 8.74735L25.1047 9.43451C26.1019 9.52737 26.2977 10.1217 25.5321 10.8088L19.2463 16.4547L21.1694 24.9235C21.4009 25.9263 20.9201 26.2978 20.0476 25.7406L12.9962 21.2277L5.94478 25.7406Z" fill="#FCA71A"/>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path d="M5.94478 25.7406C5.09006 26.2978 4.59147 25.9263 4.82296 24.9235L6.74607 16.4547L0.460337 10.8088C-0.287542 10.1402 -0.109475 9.5088 0.887695 9.43451L9.13216 8.74735L12.3195 0.724303C12.6757 -0.241434 13.2989 -0.241434 13.6729 0.724303L16.878 8.74735L25.1047 9.43451C26.1019 9.52737 26.2977 10.1217 25.5321 10.8088L19.2463 16.4547L21.1694 24.9235C21.4009 25.9263 20.9201 26.2978 20.0476 25.7406L12.9962 21.2277L5.94478 25.7406Z" fill="#FCA71A"/>
+                  </svg>
+                </span>
+                <span class="star-img">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
+                    <path d="M5.94478 25.7406C5.09006 26.2978 4.59147 25.9263 4.82296 24.9235L6.74607 16.4547L0.460337 10.8088C-0.287542 10.1402 -0.109475 9.5088 0.887695 9.43451L9.13216 8.74735L12.3195 0.724303C12.6757 -0.241434 13.2989 -0.241434 13.6729 0.724303L16.878 8.74735L25.1047 9.43451C26.1019 9.52737 26.2977 10.1217 25.5321 10.8088L19.2463 16.4547L21.1694 24.9235C21.4009 25.9263 20.9201 26.2978 20.0476 25.7406L12.9962 21.2277L5.94478 25.7406Z" fill="#FCA71A"/>
+                  </svg>
+                </span>
+              </div>
+              <div class="value-medium customers-reviews white-text">(5033 Reviews)</div>
+            </div>
+          </div>
+
+          <div class="banner-2-btn">
+            <span class="limited-offer">Limited Time Offer</span>
+            <a
+              {% if section.settings.scrollto != '' %}
+                data-target="{{ section.settings.scrollto }}"
+              {% endif -%}
+
+              href="javascript:void(0);"
+
+              class="offer-btn btn w-100 btn-loader checkout-banner-btn {% if section.settings.scrollto !='' %}click-scroll{% endif %} {% if section.settings.outOfStock %} bb-disable {% endif %}"
+            >
+              {{ section.settings.btnText -}}</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Instapage Banner",
+  "settings": [
+    {
+      "id": "className",
+      "label": "Section Class",
+      "type": "text"
+    },
+    {
+      "id": "desktopimage",
+      "label": "Desktop Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "mobileimage",
+      "label": "Mobile Image",
+      "type": "image_picker"
+    },
+	{
+      "id": "title",
+      "label": "Banner Title",
+      "type": "html"
+    },
+	{
+      "id": "subtext",
+      "label": "Banner Sub Text",
+      "type": "html"
+    },
+    {
+      "id": "btnText",
+      "label": "Button Label",
+      "type": "text",
+	  "default" : "BUY NOW"
+	},
+
+    {
+      "id": "scrollto",
+      "label":"Scroll to ID",
+      "type": "text",
+          "default":"javascript:void(0);"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instapage Banner"
+    }
+  ]
+}
+{% endschema %}

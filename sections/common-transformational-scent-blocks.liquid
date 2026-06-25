@@ -1,0 +1,293 @@
+{% assign count = 0 %}
+{% for block in section.blocks %}
+    {% assign count = count | plus: 1 %}
+{% endfor %}
+
+<div class="switch_scents">
+    <div
+        style="background-color:{{ section.settings.bgcolor }}"
+        class="py-80  transformational-scents-section link-to-variant variant_{{ section.settings.linkVariant }} {{ section.settings.class }}"
+    >
+        <div class="container">
+            <div
+              {% if count < 2 %}
+                class="d-flex align-items-center justify-content-between tss-one-block-wrapper"
+              {% endif %}
+            >
+              {% if section.settings.heading != blank %}
+                <div class="tss-main-header">
+                    <h2 class="heading-2 text-center white-text value-bold mt-0 " style="color: {{ section.settings.headingcolor }}">{{ section.settings.heading }}</h2>
+                    <p style="color: {{ section.settings.subtextcolor }}" class="normal-text value-sans text-center">
+                        {{ section.settings.subtext }}
+                    </p>
+                </div>
+              {% endif %}
+                <div class="mt-4">
+                    <div class="transformational-scents-slider {% if count > 2 %}tss-slider{% endif %}">
+                        {% for block in section.blocks %}
+                        <div class="org-tss-block">
+                            <div class="tss-content">
+                                <h3 class="tss-heading blue-text-3 value-bold">{{ block.settings.heading }}</h3>
+                            </div>
+                            <div class="tss-block">
+                            <div class="tss-inner-block">
+                                <div class="tss-image position-relative">
+                                    <picture>
+                                        {% assign image = block.settings.blockImage %}
+                                        <source media="(min-width:769px)" srcset="{{ image | img_url: '800x600', crop : 'center'}}">
+                                        <source media="(max-width:768px)" srcset="{{ image | img_url: '400x400', crop : 'center'}}">
+                                        <img
+                                          data-id="{{image.id}}"
+                                          class="img-responsive w-100 h-auto lazy"
+                                          src="{{ image | img_url: '400x300'}}"
+                                          width="400"
+                                          height="300"
+                                          alt="{{ image }}"
+                                        >
+                                    </picture>
+                                    {% if block.settings.tag != blank %}
+                                    <span class="tss-tag">{{ block.settings.tag }}</span>
+                                    {% endif %}
+                                </div>
+                                <div class="tss-content">
+                                    <p class="tss-details black-text normal-text value-sans" style="font-style: {{ block.settings.textFontStyle }}">{{ block.settings.details }}</p>
+                                    {% if block.settings.infoHeading != blank %}
+                                    <div class="scent-accordion-block value-sans">
+                                        <details  class="scent-accordion">
+                                            <summary class="scent-heading value-bold blue-text" id=>{{ block.settings.infoHeading }}</summary>
+                                            <div class="scent-accordion-details">
+                                                {{ block.settings.infoDetails }}
+                                            </div>
+                                        </details>
+                                    </div>
+                                    {% endif %}
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% style %}
+    .switch_scents .org-tss-block {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        transition: height 0.3s ease;
+    }
+    .switch_scents .org-tss-block.expanded {
+        flex-grow: 1;
+    }
+    .switch_scents .tss-main-header h2 {
+        font-size: 2.25rem;
+    }
+    .switch_scents .tss-main-header p {
+        font-size: 1.375rem;
+    }
+    .switch_scents .tss-heading {
+        font-size: 18px;
+        font-weight: 700;
+        border-bottom: unset;
+        color: #3350B4;
+        margin-left: 16px;
+    }
+    .switch_scents .tss-details {
+        font-size: 14.5px;
+        min-height: 90px;
+    }
+    .switch_scents .slick-dots li.slick-active button:before {
+        color: #334FB4;
+        opacity: 1;
+    }
+    .switch_scents .slick-dots li button:before {
+        color: #d2d6e3;
+        opacity: 1;
+    }
+  .switch_scents .tss-block{padding:1px}
+    .switch_scents .tss-block > .tss-inner-block {
+        padding:12px;
+        -moz-box-shadow: 0 0 3px #ccc;
+        -webkit-box-shadow: 0 0 3px #ccc;
+        box-shadow: 0 0 3px #ccc;
+        background: #FCFCFD;
+        flex: auto;
+    }
+    .switch_scents .scent-content-block {
+        -moz-box-shadow: 0 0 3px #ccc;
+        -webkit-box-shadow: 0 0 3px #ccc;
+        box-shadow: 0 0 3px #ccc;
+        background: #FCFCFD;
+        padding: 12px;
+    }
+    .scent-accordion-block {
+        border-bottom: 0;
+        border-top: 1px solid #DFE0E1;
+        padding-top: 16px;
+        margin-top: 16px;
+    }
+    .scent-accordion-block .scent-heading {
+        padding-bottom: 16px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+    .scent-accordion-details {
+        background: #F4F6FC;
+        padding: 16px;
+        border-radius: 8px;
+    }
+    .scent-accordion-details ul {
+        padding-left: 20px;
+    }
+    .scent-accordion-block .scent-heading:after {
+        content: "";
+        position: absolute;
+        right: 0;
+        width: 24px;
+        height: 24px;
+        background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/plus-circle-bule.svg?v=1699552425);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .scent-accordion-block .scent-accordion[open] .scent-heading:after {
+        background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/minus-circle-bule.svg?v=1699552425);
+        background-repeat: no-repeat;
+    }
+
+    .switch_scents .tss-image {
+        position: relative;
+        width: 100%;
+        height: 200px;
+        overflow: hidden;
+    }
+
+    .switch_scents img {
+        width: 100%;
+        height: 100% !important;
+        object-fit: cover; /* Ensures the image covers the entire area */
+        object-position: center; /* Center the image */
+    }
+  
+    @media (max-width: 768px) {
+        .scent-accordion-details {
+            font-size:14px;
+            background: #FCFCFD;
+        }
+    }
+    @media (max-width: 565px) {
+    
+    }
+{% endstyle %}
+
+{% schema %}
+{
+    "name": "Transformational Scents 4",
+    "settings": [
+        {
+            "type": "text",
+            "id": "class",
+            "label": "Section Class"
+        },
+        {
+            "type": "color",
+            "id": "bgcolor",
+            "label": "Background color"
+        },
+        {
+            "type": "text",
+            "id": "linkVariant",
+            "label": "Link variant number"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+        },
+        {
+            "type": "color",
+            "id": "headingcolor",
+            "label": "Heading color",
+            "default": "#3350B4"
+        },
+        {
+            "type": "text",
+            "id": "subtext",
+            "label": "Sub Heading"
+        },
+        {
+            "type": "color",
+            "id": "subtextcolor",
+            "label": "Sub Text color",
+            "default": "#434448"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "image",
+            "name": "Scent block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "blockImage",
+                    "label": "Add Image"
+                },
+                {
+                    "type": "text",
+                    "id": "tag",
+                    "label": "Tag"
+                },
+                {
+                    "type": "text",
+                    "id": "heading",
+                    "label": "Heading"
+                },
+                {
+                    "type": "text",
+                    "id": "details",
+                    "label": "text"
+                },
+                {
+                    "type": "select",
+                    "id": "textFontStyle",
+                    "label": "Text Style",
+                    "options": [
+                        {
+                            "label": "Normal",
+                            "value": "normal"
+                        },
+                        {
+                            "label": "Italic",
+                            "value": "italic"
+                        },
+                        {
+                            "label": "Oblique",
+                            "value": "oblique"
+                        }
+                    ],
+                    "default": "normal"
+                },
+                {
+                    "type": "text",
+                    "id": "infoHeading",
+                    "label": "Info Heading"
+                },
+                {
+                    "type": "html",
+                    "id": "infoDetails",
+                    "label": "Info Detail Text"
+                }
+            ]
+        }
+	],
+    "presets": [
+        {
+            "name": "Transformational Scents 4"
+        }
+    ]
+}
+{% endschema %}

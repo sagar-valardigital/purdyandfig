@@ -1,0 +1,793 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.landing-page",
+  "sections": {
+    "1660806005de1088e8": {
+      "type": "landing-page-announcement",
+      "settings": {
+        "text": "SAVE £15 ON A STARTER KIT",
+        "position": "scroll-section",
+        "bg-color": "#3d5065",
+        "text-color": "#ffffff",
+        "btnLable": "GET OFFER",
+        "btnLink": "customer-offer"
+      }
+    },
+    "1660815394dc4dafc7": {
+      "type": "new-landing-page-banner",
+      "disabled": true,
+      "settings": {
+        "logoHide": false,
+        "desktopimage": "shopify://shop_images/Untitled-1_145a3e15-89ae-4e97-a251-71f46d8dfffb.jpg",
+        "mobileimage": "shopify://shop_images/Untitled-2_c19c9e9f-52ce-472a-adb4-211b01bef502.jpg",
+        "enablelink": true,
+        "title": "Transform your home into a spa",
+        "titlecolor": "#3d5065",
+        "subtext": "Limited time offer: Get a free bottle for life worth £15 with your first order",
+        "subtextcolor": "#3d5065",
+        "btnText": "Get Offer",
+        "link": "customer-offer",
+        "textcolor": "#ffffff",
+        "bgcolor": "#fca722",
+        "btnSubText": "Limited Time Offer"
+      }
+    },
+    "16608958773f3e0110": {
+      "type": "landingpage-product",
+      "blocks": {
+        "de25f362-17de-424e-821e-a3aa556f6912": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/8c04345f2b7347494a0676b903cf32c9.png"
+          }
+        },
+        "e21a4c5d-918b-4d48-bf8f-d045440ea0cd": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/cf58af08377a295a7b83082ccf533c36-2.png"
+          }
+        },
+        "214b6ab7-dde7-49bc-8423-0c689dfa0da0": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/47300bf752a1078022ffc2bcfc2aedaf-2.png"
+          }
+        },
+        "ae289549-1da3-4d40-803e-586420163595": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/1d1babde7d4735946db38982daa357a4-2.png"
+          }
+        },
+        "77e129c3-8e24-44e1-af91-4b2bb2613207": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/Gandylyl_revision-1.png"
+          }
+        },
+        "b5dafaa2-9653-42ab-b850-a4cc3c4b11fd": {
+          "type": "text",
+          "settings": {
+            "details": "1 free glass Bottle for Life (Worth £15)"
+          }
+        },
+        "d202c05f-196e-4684-8353-7d84f6420acf": {
+          "type": "text",
+          "settings": {
+            "details": "3 Eco-Concentrate Refills (2-3 months cleaning)"
+          }
+        },
+        "1987d9c7-1cd1-41f3-b8f4-2a3a4627c1a7": {
+          "type": "text",
+          "settings": {
+            "details": "1 Purdy & Figg cleaning cloth"
+          }
+        },
+        "81991402-f4bf-4093-8e1a-f21cc5ef49e5": {
+          "type": "text",
+          "settings": {
+            "details": "Money Back Guarantee if you don’t love it"
+          }
+        },
+        "92bdcbba-0d7f-405b-b9a5-7eae1ad98ccd": {
+          "type": "text",
+          "settings": {
+            "details": "Change or Cancel Anytime§"
+          }
+        }
+      },
+      "block_order": [
+        "de25f362-17de-424e-821e-a3aa556f6912",
+        "e21a4c5d-918b-4d48-bf8f-d045440ea0cd",
+        "214b6ab7-dde7-49bc-8423-0c689dfa0da0",
+        "ae289549-1da3-4d40-803e-586420163595",
+        "77e129c3-8e24-44e1-af91-4b2bb2613207",
+        "b5dafaa2-9653-42ab-b850-a4cc3c4b11fd",
+        "d202c05f-196e-4684-8353-7d84f6420acf",
+        "1987d9c7-1cd1-41f3-b8f4-2a3a4627c1a7",
+        "81991402-f4bf-4093-8e1a-f21cc5ef49e5",
+        "92bdcbba-0d7f-405b-b9a5-7eae1ad98ccd"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "Counter Clean Variety Starter Kit",
+        "bestseller": "eco-concentrates-surface-cleaner-starter-kit-d",
+        "details": "",
+        "Dimage": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png",
+        "productImage": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png",
+        "mobilebgcolor": "",
+        "btnlabel": "Quick Buy"
+      }
+    },
+    "166081571823d6d17b": {
+      "type": "landing-page-logos",
+      "blocks": {
+        "b888a8ec-31f0-46d4-b2b5-0074ba8a15c3": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/daily_7278b071-867c-43ac-846e-e8a0e539ed9a.png",
+            "details": ""
+          }
+        },
+        "ecffff6a-3a2d-4aec-b204-1a803c8e8042": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/women.png",
+            "details": ""
+          }
+        },
+        "2dd2a5e5-e380-47ad-8400-994c6f9547e4": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/sunday_f2b2c7a0-296d-4b2e-904b-470d975027a3.png",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "b888a8ec-31f0-46d4-b2b5-0074ba8a15c3",
+        "ecffff6a-3a2d-4aec-b204-1a803c8e8042",
+        "2dd2a5e5-e380-47ad-8400-994c6f9547e4"
+      ],
+      "settings": {
+        "enable": true,
+        "slider": false,
+        "bgColor": "#eff9ff",
+        "heading": "FEATURED",
+        "logoDetailText": ""
+      }
+    },
+    "166090898153949303": {
+      "type": "landing-blocks",
+      "blocks": {
+        "7c7577d6-629a-48a9-ad93-eb1ca840215e": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/f1585378f1a8dbecfaddc23f72c78c39.png",
+            "rounded": false,
+            "heading": "Counters & Stone",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "1dda262b-d062-4e7a-8ab5-9267ded85e7c": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/ff1efa752186ee5ef7335548e7307adb.png",
+            "rounded": false,
+            "heading": "Bath & Enamel",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "e4247742-7289-4536-901f-42457efa3c2d": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/69feda05bdfb3d098039b4497abaeba0.png",
+            "rounded": false,
+            "heading": "Glass & Mirrors",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        },
+        "8afe2a04-536d-41d4-856f-eb51ec386bd5": {
+          "type": "text",
+          "settings": {
+            "width": "w-25",
+            "image": "shopify://shop_images/27522fca73212bf7151016a31885acc2.png",
+            "rounded": false,
+            "heading": "Wood & Floors",
+            "details": "",
+            "mbBlock": "mw-50"
+          }
+        }
+      },
+      "block_order": [
+        "7c7577d6-629a-48a9-ad93-eb1ca840215e",
+        "1dda262b-d062-4e7a-8ab5-9267ded85e7c",
+        "e4247742-7289-4536-901f-42457efa3c2d",
+        "8afe2a04-536d-41d4-856f-eb51ec386bd5"
+      ],
+      "settings": {
+        "enable": true,
+        "shadow": false,
+        "sectionbgColor": "",
+        "sectionTextColor": "",
+        "heading": "One Cleaner for all surfaces",
+        "subtext": "Ultra-concentrated, naturally scented eco-friendly cleaning, designed to clean all surfaces in your home",
+        "showBTN": false,
+        "btnLabel": "",
+        "btnLink": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "main": {
+      "type": "main-page",
+      "disabled": true,
+      "settings": {
+        "padding_top": 84,
+        "padding_bottom": 28
+      }
+    },
+    "165893023294cc757d": {
+      "type": "text-over-image",
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-90",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "0",
+        "mainheading": "",
+        "heading": "Safe for your home. Safe for your family. Safe for the planet.",
+        "details": "",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1658915595eebf16a3": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "100% Effective + Third-Party Tested",
+        "image": "shopify://shop_images/5247da3e86c19f53c5ae9f3ccbfd6686.png",
+        "details": "<p>The innovative eco-concentrate developed by PHD chemist Dr Anna Stastanova has been designed to work effectively on all your homes surfaces whilst retaining maximum scent. Over 97% of customers say it works better than their regular cleaner.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "166081704767d41e4b": {
+      "type": "review-slider",
+      "blocks": {
+        "f475d961-b816-4610-aad9-c111da1195bb": {
+          "type": "text",
+          "settings": {
+            "username": "Joanne",
+            "heading": "",
+            "image": "shopify://shop_images/user-1_1175e8d2-e953-4a85-8ba5-db5064570dc7.png",
+            "review": "A weird transformation has taken place… I now look forward to wiping the surfaces of my kitchen after supper. What have you done to me?",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "63802ffb-d0e4-4655-8729-5ede6a576ec5": {
+          "type": "text",
+          "settings": {
+            "username": "Clare",
+            "heading": "",
+            "image": "shopify://shop_images/user-2_1aaa509a-1b80-43ca-bb7e-82c6486d3168.png",
+            "review": "Probably the best product to come out of this pandemic. P&F have managed to take a utilitarian, depressing but necessary product and turn it into something lovely, uplifting and almost luxurious.",
+            "link": "",
+            "btntext": ""
+          }
+        },
+        "79ea8ced-3833-482d-9b82-5091aacc8866": {
+          "type": "text",
+          "settings": {
+            "username": "Trish",
+            "heading": "",
+            "image": "shopify://shop_images/user-3.png",
+            "review": "Absolutely gorgeous product. Charlotte’s Floral is my favourite - the smell is really uplifting. I hope that before long Purdy & Figg bring out a range of perfumes!",
+            "link": "",
+            "btntext": ""
+          }
+        }
+      },
+      "block_order": [
+        "f475d961-b816-4610-aad9-c111da1195bb",
+        "63802ffb-d0e4-4655-8729-5ede6a576ec5",
+        "79ea8ced-3833-482d-9b82-5091aacc8866"
+      ],
+      "settings": {
+        "enable": true,
+        "reviewenable": true,
+        "className": "",
+        "Review-Count": "5.0",
+        "bgColor": "",
+        "heading": "Over 5900 5-Star Reviews",
+        "btnLabel": "",
+        "btn": "",
+        "btnColor": "",
+        "btnTextColor": ""
+      }
+    },
+    "1660816802bf33a971": {
+      "type": "text-over-image",
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-80",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "0",
+        "mainheading": "A scent that transforms your whole home",
+        "heading": "",
+        "details": "<p>‘They’re all absolutely delicious, which is not a thing I have found myself saying about cleaning products before.’ - SUNDAY TIMES</p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "165909841832915be2": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "The best essential oils",
+        "image": "shopify://shop_images/f7ba29c985f10b42682f8d496000a08b.png",
+        "details": "<p>Create the most fantastic smelling home with your surface cleaner. Yes you heard that right! Watch how the aroma stays and hugs you and don’t be surprised when your guests comment on it. All that you need to decide is which scent to use.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16589303884608f839": {
+      "type": "image-with-text",
+      "disabled": true,
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Perfectly Blended",
+        "image": "shopify://shop_images/Group_149-2.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and have put all of their years of work into creating the most incredible smelling cleaner you will ever use.</p>",
+        "link": "",
+        "btntext": "Get Offer",
+        "btntype": "btn",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "16611640693de3ef0f": {
+      "type": "landing-text-with-image",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Perfectly Blended",
+        "image": "shopify://shop_images/Group_149-2.png",
+        "details": "<p>Purdy & Charlotte have had over 30 years of blending experience and <br/>have put all of their years of work into creating the most incredible <br/>smelling cleaner you will ever use.</p>",
+        "link": "",
+        "btntext": "GET OFFER",
+        "btntype": "btn",
+        "heading-position": false,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "166081727209652bfa": {
+      "type": "text-over-image",
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-90",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "0",
+        "mainheading": "",
+        "heading": "Welcome to a chemical-free cleaning revolution",
+        "details": "",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "16608173174ee3db9e": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Reusable Glass Bottles",
+        "image": "shopify://shop_images/7f718cf7eaf62fa80f841cd3cac49d41.png",
+        "details": "<p>You can use our Glass Bottle For Life over and over again meaning you never have to throw away your empty plastic bottles every time your cleaner runs out. We have already helped stop 250,000 plastic bottles from going into landfill. Plus, the reusable glass bottle is 100% recyclable so you don’t have to worry about adding more trash to landfills or oceans.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1660817397816d71b3": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "14x Lower Carbon Emissions",
+        "image": "shopify://shop_images/Group_149-1.png",
+        "details": "<p>Generic Surface Cleaners are made of 90% water and over 1 billion of these heavy bottles are transported around the world every year to get to our homes. Purdy & Figg Eco-Concentrates are 97% lighter than a bulk cleaner to ship and you dilute the concentrates with water coming out of your tap at home.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "166081745897656655": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "Non-Toxic",
+        "image": "shopify://shop_images/1c70718362359c7303613e38c66d64c0.png",
+        "details": "<p>It is our mission to put your family first which is why our Eco-Concentrates are completely plant-based, paraben-free and GMO-free with natural essential oils and no synthetic fragrance or dangerous preservatives.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "166081891728c68a72": {
+      "type": "coupon",
+      "settings": {
+        "text": "*Use Code FREESPA",
+        "bg-color": "#ffffff",
+        "btnLable": "GET OFFER",
+        "btnLink": "#customer-offer"
+      }
+    },
+    "1660817552d19237e1": {
+      "type": "table",
+      "settings": {}
+    },
+    "16608188099c6d3b86": {
+      "type": "coupon",
+      "settings": {
+        "text": "*Use Code FREESPA",
+        "bg-color": "#ffffff",
+        "btnLable": "GET OFFER",
+        "btnLink": "#customer-offer"
+      }
+    },
+    "16608175760d0ceb2c": {
+      "type": "text-over-image",
+      "settings": {
+        "enable": true,
+        "mobileimage": true,
+        "headingAfterImage": false,
+        "bgcolor": "",
+        "width": "w-70",
+        "sp": 1,
+        "alignment": "justify-content-center",
+        "Textalignment": "text-center",
+        "space": "mobile-top",
+        "spacem": "0",
+        "mainheading": "",
+        "heading": "Two women on a mission",
+        "details": "<p>Two best friends Charlotte Figg and Purdy Rubin got together on a mission to make cleaning products that were safe and they loved using for their home.</p>",
+        "mobileShow": false,
+        "textcolor": "#3d5065",
+        "btntext": "",
+        "btn": ""
+      }
+    },
+    "1660817643021dd7e2": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": false,
+        "heading": "By PHD Scientist & Award-Winning Horticultralist",
+        "image": "shopify://shop_images/6aa0fd7c2ea9471d760c11150bb84768.png",
+        "details": "<p>Dr Anna Stastanova PHD and Honorary Research Fellow in Surfactant Chemistry is responsible for the worlds most advanced scent extraction ever achieved in a cleaning product. Professional and multi-award-winning Horticultralist Charlotte Figg has created the essential oil blends as a culmination of 30 years of work.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "1660817722ef7596d2": {
+      "type": "image-with-text",
+      "settings": {
+        "enable": true,
+        "className": "",
+        "textcolor": "theme-text",
+        "background": "white-bg",
+        "width": "w-80",
+        "layout": true,
+        "heading": "Manufactured in The UK",
+        "image": "shopify://shop_images/Group_149.png",
+        "details": "<p>We manufacture Purdy & Figg Eco-Concentrates in England, where we are subject to stringent health regulations. Every Purdy & Figg Eco-Concentrate is manufactured in a state of the art laboratory in England. Rest easy knowing we don’t cut corners. Your safety is important to us.</p>",
+        "link": "",
+        "btntext": "",
+        "btntype": "read-more-link",
+        "heading-position": true,
+        "enable-popup": false,
+        "popup-text": ""
+      }
+    },
+    "166269923900a4421e": {
+      "type": "landingpage-product",
+      "blocks": {
+        "24bfecd9-77c5-4ca6-8caf-1bce160466ae": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/cf58af08377a295a7b83082ccf533c36-2.png"
+          }
+        },
+        "abecf40f-c8e5-4972-a6da-100b496e95e7": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/47300bf752a1078022ffc2bcfc2aedaf-2.png"
+          }
+        },
+        "e3548b8a-5bd1-4686-b2c5-3e5b0fc235aa": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/1d1babde7d4735946db38982daa357a4-2.png"
+          }
+        },
+        "22c12326-c37d-4d6b-985a-6d45be14a932": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/8c04345f2b7347494a0676b903cf32c9.png"
+          }
+        },
+        "b7ba4aaf-fad7-40fa-8c80-ea36850c85e2": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png"
+          }
+        },
+        "4ffc4160-0dcc-4a5a-b316-2cb48cf48e7b": {
+          "type": "text",
+          "settings": {
+            "details": "1 free glass Bottle for Life (Worth £15)"
+          }
+        },
+        "e61c0471-465e-4b6e-96b9-27587e12fe45": {
+          "type": "text",
+          "settings": {
+            "details": "3 Eco-Concentrate Refills (2-3 months cleaning)"
+          }
+        },
+        "6ac93e8a-d5a1-4636-9027-dc7d15eafe6e": {
+          "type": "text",
+          "settings": {
+            "details": "1 Purdy & Figg cleaning cloth"
+          }
+        },
+        "cc0045c4-3f7d-49b6-bf36-25b8f2a362e7": {
+          "type": "text",
+          "settings": {
+            "details": "Money Back Guarantee if you don’t love it"
+          }
+        },
+        "661b3fa5-05b0-4934-ad47-3563f311c5af": {
+          "type": "text",
+          "settings": {
+            "details": "Change or Cancel Anytime§"
+          }
+        }
+      },
+      "block_order": [
+        "24bfecd9-77c5-4ca6-8caf-1bce160466ae",
+        "abecf40f-c8e5-4972-a6da-100b496e95e7",
+        "e3548b8a-5bd1-4686-b2c5-3e5b0fc235aa",
+        "22c12326-c37d-4d6b-985a-6d45be14a932",
+        "b7ba4aaf-fad7-40fa-8c80-ea36850c85e2",
+        "4ffc4160-0dcc-4a5a-b316-2cb48cf48e7b",
+        "e61c0471-465e-4b6e-96b9-27587e12fe45",
+        "6ac93e8a-d5a1-4636-9027-dc7d15eafe6e",
+        "cc0045c4-3f7d-49b6-bf36-25b8f2a362e7",
+        "661b3fa5-05b0-4934-ad47-3563f311c5af"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "New Customer Offer: SAVE £15 On A Starter Kit",
+        "bestseller": "",
+        "details": "",
+        "Dimage": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png",
+        "productImage": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png",
+        "mobilebgcolor": "",
+        "btnlabel": "Quick Buy"
+      }
+    },
+    "1660893181df943408": {
+      "type": "landingpage-product",
+      "disabled": true,
+      "blocks": {
+        "5f973dae-e4e3-4c37-a389-66dfb963a328": {
+          "type": "text",
+          "settings": {
+            "details": "1 free glass Bottle for Life (Wroth £15)"
+          }
+        },
+        "2038d96e-a5f4-4143-bce2-82a0400dc62c": {
+          "type": "text",
+          "settings": {
+            "details": "3 Eco-Concentrate Refills (2-3 months cleaning)"
+          }
+        },
+        "011e4706-974e-4c00-b617-08efd4c35d95": {
+          "type": "text",
+          "settings": {
+            "details": "1 Purdy & Figg cleaning cloth"
+          }
+        },
+        "9ebcc8af-0cde-4ab4-a688-1769689d2bde": {
+          "type": "text",
+          "settings": {
+            "details": "Money Back Guarantee if you don’t love it"
+          }
+        },
+        "13257320-a7f5-453e-948d-904a856d6ccb": {
+          "type": "text",
+          "settings": {
+            "details": "Change or Cancel Anytime§"
+          }
+        },
+        "c36b9f04-e90b-4c63-a5f5-34287e308411": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/8c04345f2b7347494a0676b903cf32c9.png"
+          }
+        },
+        "00580ebf-cad5-486b-bed0-3c54f4662472": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/cf58af08377a295a7b83082ccf533c36-2.png"
+          }
+        },
+        "8f22ff14-b166-49e1-962f-92989456f177": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/47300bf752a1078022ffc2bcfc2aedaf-2.png"
+          }
+        },
+        "ae333e7c-a668-40dd-a5db-885d8442d058": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/1d1babde7d4735946db38982daa357a4-2.png"
+          }
+        },
+        "eca9d641-518d-402f-8cb2-4edf5f622195": {
+          "type": "thumb",
+          "settings": {
+            "thumb": "shopify://shop_images/Gandylyl_revision-1.png"
+          }
+        }
+      },
+      "block_order": [
+        "5f973dae-e4e3-4c37-a389-66dfb963a328",
+        "2038d96e-a5f4-4143-bce2-82a0400dc62c",
+        "011e4706-974e-4c00-b617-08efd4c35d95",
+        "9ebcc8af-0cde-4ab4-a688-1769689d2bde",
+        "13257320-a7f5-453e-948d-904a856d6ccb",
+        "c36b9f04-e90b-4c63-a5f5-34287e308411",
+        "00580ebf-cad5-486b-bed0-3c54f4662472",
+        "8f22ff14-b166-49e1-962f-92989456f177",
+        "ae333e7c-a668-40dd-a5db-885d8442d058",
+        "eca9d641-518d-402f-8cb2-4edf5f622195"
+      ],
+      "settings": {
+        "enable": true,
+        "heading": "New Customer Offer: SAVE £15 On A Starter Kit",
+        "bestseller": "premium-starter-kit",
+        "details": "",
+        "Dimage": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png",
+        "productImage": "shopify://shop_images/dfe844291324ba5663618ebfa3b2715c.png",
+        "mobilebgcolor": "",
+        "btnlabel": "Quick Buy"
+      }
+    }
+  },
+  "order": [
+    "1660806005de1088e8",
+    "1660815394dc4dafc7",
+    "16608958773f3e0110",
+    "166081571823d6d17b",
+    "166090898153949303",
+    "main",
+    "165893023294cc757d",
+    "1658915595eebf16a3",
+    "166081704767d41e4b",
+    "1660816802bf33a971",
+    "165909841832915be2",
+    "16589303884608f839",
+    "16611640693de3ef0f",
+    "166081727209652bfa",
+    "16608173174ee3db9e",
+    "1660817397816d71b3",
+    "166081745897656655",
+    "166081891728c68a72",
+    "1660817552d19237e1",
+    "16608188099c6d3b86",
+    "16608175760d0ceb2c",
+    "1660817643021dd7e2",
+    "1660817722ef7596d2",
+    "166269923900a4421e",
+    "1660893181df943408"
+  ]
+}

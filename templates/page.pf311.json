@@ -1,0 +1,1269 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "a512ad02-ae17-423d-a8a0-476423a1618f": {
+      "type": "announcement-bar-3",
+      "custom_css": [
+        ".announcement-btn-2,.bg-blue {background-color: #212121 !important; color: #ffffff; font-family: \"Lausanne\"; font-weight: 400;}",
+        ".annoucment-bar-logo .logo_path {fill: #11322c !important;}",
+        ".annoucment-bar-2 {padding-top: 7px !important; padding-bottom: 7px !important;}",
+        "@media (max-width: 768px) {.ann-bar-text-2 {background: #0a1e1a !important; font-size: 12px; } .announcement-btn-2 {background: #212121 !important; } .ann-bar-text-2 p {padding: 4px; }}"
+      ],
+      "settings": {
+        "checkout": false,
+        "landingproduct": "",
+        "discount": "",
+        "varaiantid": "",
+        "sellingid": "",
+        "logo": true,
+        "class": "",
+        "text": "Limited time offer: FREE Gentle Chamomile, bottle &amp; cloth",
+        "bb-color": "#ffffff",
+        "text-color": "#2f251c",
+        "scrollto": "starterkit-product",
+        "annuText": "GET YOUR  OFFER",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 1,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "banner_10_L6fm4k": {
+      "type": "banner-10",
+      "custom_css": [
+        ".banner-sub-heading {color: #212121 !important;}",
+        "@media (min-width: 1100px) {.banner-section.banner-10 {height: calc(100vh - 140px); min-height: 657px; }}"
+      ],
+      "settings": {
+        "txt-color": "#0a1e1a",
+        "desktop_img": "shopify://shop_images/Hero_-_Desktop_2_78193a46-89b6-4719-a122-e1c0f8e8f5b4.jpg",
+        "mobile_img": "shopify://shop_images/Hero_-_Mobile_2_5d4bebb6-4485-4aff-bec8-eb9c65023817.jpg",
+        "heading": "Save <span class=\"font-gtsuper market-place-currency\"></span>33 including a free Gentle Chamomile",
+        "sub_heading": "Clean with our NEW spring scents and enjoy a FREE Gentle Chamomile with your Seasonal Starter Kit",
+        "btn-bg": "#11322c",
+        "btn-txt-color": "#ffffff",
+        "button_label": "Get Your Offer",
+        "button_link": "starterkit-product",
+        "top": "",
+        "showreview": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 2,
+        "funnel_stage": "landing_page",
+        "dataModule": "hero",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "90d960e2-da13-4b49-9a83-dee9cb9d7c80": {
+      "type": "marquee-block-3",
+      "blocks": {
+        "ff5c3f25-8cdd-4228-b6af-aebf066f5e81": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/Daily_Mail.svg"
+          }
+        },
+        "66442b87-53c7-4e16-87d8-d6d545c1064e": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/Evening_Standard.svg"
+          }
+        },
+        "20da87c4-6282-4515-b92e-5bdbea59514e": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/Womenshealthlogo_1.svg"
+          }
+        },
+        "a3532e2b-5387-41d9-8a32-a1bc314b3029": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/The_Sunday_Times.svg"
+          }
+        },
+        "c5d4785f-67c2-4a6f-abf7-79a6eda76c31": {
+          "type": "text",
+          "settings": {
+            "usp": "",
+            "usp_img": "shopify://shop_images/Ideal_Home.svg"
+          }
+        }
+      },
+      "block_order": [
+        "ff5c3f25-8cdd-4228-b6af-aebf066f5e81",
+        "66442b87-53c7-4e16-87d8-d6d545c1064e",
+        "20da87c4-6282-4515-b92e-5bdbea59514e",
+        "a3532e2b-5387-41d9-8a32-a1bc314b3029",
+        "c5d4785f-67c2-4a6f-abf7-79a6eda76c31"
+      ],
+      "custom_css": [
+        ".heading-3 {color: #212121; margin-bottom: 5px !important; font-family: \"Lausanne\"; font-size: 16px !important; letter-spacing: 1.2px;}",
+        "@media (max-width: 768px) {.marquee-img {width: 250px; }}"
+      ],
+      "settings": {
+        "enable": true,
+        "img_slider": true,
+        "color_bg": "#f5f5f5",
+        "color_text": "#212121",
+        "marqueeHTML": "FEATURED IN PRESS",
+        "followers": ""
+      }
+    },
+    "icon_blocks_reskin_Vggka3": {
+      "type": "icon-blocks-reskin",
+      "blocks": {
+        "iconblocks_iYG79w": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Natural cleaning power",
+            "icon_block_description": "A powerful natural formula that effortlessly cleans",
+            "icon_block_image": "shopify://shop_images/Icon.png"
+          }
+        },
+        "iconblocks_PfrzGb": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Essential oil scents",
+            "icon_block_description": "Expertly blended with nature’s finest ingredients",
+            "icon_block_image": "shopify://shop_images/Icon_14a3d7d6-7073-49d9-bf85-10afd43e4983.png"
+          }
+        },
+        "iconblocks_aCiLqt": {
+          "type": "iconblocks",
+          "settings": {
+            "icon_block_title": "Sustainable packaging",
+            "icon_block_description": "One reusable glass bottle for the whole home",
+            "icon_block_image": "shopify://shop_images/Icon_84f84568-2020-4be5-a75f-dce94e8b405c.png"
+          }
+        }
+      },
+      "block_order": [
+        "iconblocks_iYG79w",
+        "iconblocks_PfrzGb",
+        "iconblocks_aCiLqt"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0;}",
+        ".icon-blocks-2 .heading-2 {margin-bottom: 40px;}",
+        ".icon-blocks-2-wrapper {margin-top: 0 !important;}"
+      ],
+      "settings": {
+        "class": "",
+        "bg": "#f6e3d1",
+        "textcolor": "#212121",
+        "heading": "Cleaning to feel good about",
+        "show_hide_block": true
+      }
+    },
+    "transformational_scents_3_Cn3YPk": {
+      "type": "transformational-scents-3",
+      "blocks": {
+        "image_GaJkQK": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/5915248eb198335d6a18652fb4998021.png",
+            "mBlockImage": "shopify://shop_images/e608ffdeff15846b795eeea2d1b10bbc.png",
+            "tag": "",
+            "heading": "Stone",
+            "details": "Spray on granite, marble, quartz and other sealed surfaces daily to keep them sparkling."
+          }
+        },
+        "image_D6ftfq": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/647d4d36c7ff6e9b9dfbd1b1d6cf207d.png",
+            "mBlockImage": "shopify://shop_images/8609edb0913297760c8cc9fae202e96d.png",
+            "tag": "",
+            "heading": "Glass",
+            "details": "Work downwards to eliminate streaks on vertical surfaces like mirrors, screens and windows."
+          }
+        },
+        "image_kHG6nf": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/1e94903454314634b8b225210042be3c_88b46b1b-3cab-4b3b-953d-ea46278f1d3a.png",
+            "mBlockImage": "shopify://shop_images/c36c67fe9ee06cd6b3ed428d90b25a42.png",
+            "tag": "",
+            "heading": "Wood",
+            "details": "Wipe away dust and grime, spray to clean, then pat dry for an even finish."
+          }
+        }
+      },
+      "block_order": [
+        "image_GaJkQK",
+        "image_D6ftfq",
+        "image_kHG6nf"
+      ],
+      "custom_css": [
+        ".container {padding: 0 !important;}",
+        ".heading-2 {letter-spacing: 0;}",
+        ".img-responsive {border-radius: 4px;}",
+        ".normal-text {font-size: 18px; font-weight: 200 !important; color: #212121 !important;}",
+        ".tss-heading {font-weight: 400; border-bottom: none; line-height: 20px; padding: 0 0 8px 0; font-size: 18px; font-family: \"Lausanne\";}",
+        ".tss-details {font-style: normal; line-height: 20px; padding: 0; font-size: 16px; font-weight: 200;}",
+        "@media (max-width: 768px) {.normal-text {font-family: \"Lausanne\"; color: #212121; font-size: 16px; text-align: left; }}"
+      ],
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#ffffff",
+        "class": "show",
+        "linkVariant": "",
+        "heading": "One spray for your whole home",
+        "subtext": "Simplify your cleaning routine with one product that’s safe to use on every surface"
+      }
+    },
+    "image_with_text_3_DGFYzt": {
+      "type": "image-with-text-3",
+      "custom_css": [
+        ".heading-2 {font-size: 40px; letter-spacing: 0;}",
+        ".two-women-details .heading-2 {margin-bottom: 12px !important;}",
+        ".shop-now-cta {margin-top: 24px;}",
+        ".image-with-text-2 {padding-top: 80px !important; padding-bottom: 80px !important;}",
+        "@media screen and (max-width: 991px) {.image-with-text-2 {padding-top: 32px !important; padding-bottom: 32px !important; }}"
+      ],
+      "settings": {
+        "className": "pf-176-img-text",
+        "textcolor": "#0c231f",
+        "background": "#edc6a2",
+        "width": "w-90",
+        "layout": true,
+        "heading": "Claim your free Gentle Chamomile",
+        "image": "shopify://shop_images/GC_Block-Desktop.png",
+        "mimage": "shopify://shop_images/GC-Block-Mobile.png",
+        "details": "Our new Gentle Chamomile scent was created to bring calm to the home of Purdy’s newborn granddaughter. Now you can welcome this soothing scent into your home too.",
+        "shop_now_cta": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "heading-position": false,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 6,
+        "funnel_stage": "landing_page",
+        "dataModule": "image_with_text",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "global_product_219_4Rkind": {
+      "type": "global-product-219",
+      "blocks": {
+        "variant_XxnREp": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "variantBadge": "New spring scents",
+            "varCount": "1",
+            "text_heading": "Seasonal",
+            "discount": "SEASONAL311bv",
+            "variantProduct": "seasonal-starter-kit-spring-free-gentle-chamomile",
+            "delPrice": "4800",
+            "sellPrice": "1500",
+            "varaiantid": "55030724985212",
+            "sellingid": "710188728700",
+            "sku": "FG1227b",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Seasonal",
+            "eventValue": "product_toggle",
+            "optionIndex": "1"
+          }
+        },
+        "variant_MqLWFG": {
+          "type": "variant",
+          "settings": {
+            "outofstock": false,
+            "variantBadge": "",
+            "varCount": "2",
+            "text_heading": "Signature",
+            "discount": "SIGNATURE311bv",
+            "variantProduct": "counter-clean-pf99-test",
+            "delPrice": "4000",
+            "sellPrice": "1500",
+            "varaiantid": "44753817993443",
+            "sellingid": "4158095587",
+            "sku": "FG1096",
+            "dataTrack": true,
+            "targetUrl": "",
+            "index": 7,
+            "funnel_stage": "landing_page",
+            "dataModule": "buy_box_1",
+            "dataTitle": "Signature",
+            "eventValue": "product_toggle",
+            "optionIndex": "2"
+          }
+        },
+        "text_pKEzeN": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "3 rotating Seasonal scent concentrates lasting 2-3 months <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>21)</span>"
+          }
+        },
+        "text_fCNNBh": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "1 FREE limited edition Gentle Chamomile <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>8)</span>"
+          }
+        },
+        "text_FXqmR7": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "FREE glass Bottle for Life and cloth <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>19)</span>"
+          }
+        },
+        "text_NVAnnd": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "text_pm3cqF": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "3 Signature scent concentrates lasting 2-3 months <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>21)</span>"
+          }
+        },
+        "text_jBnntb": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "FREE glass Bottle for Life and cloth <span class=\"fw-400\">(worth <span class=\"market-place-currency\"></span>19)</span>"
+          }
+        },
+        "text_GptAmX": {
+          "type": "text",
+          "settings": {
+            "listClass": "2",
+            "listItem": "Delivery every 3 months, delay or cancel any time"
+          }
+        },
+        "product_image_DnpnJg": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Kit_-_Seasonal_-_Desktop_01_1c4b7cf7-0e57-4c8e-8451-41ce523b9d23.jpg",
+            "mimage": "shopify://shop_images/Kit_-_Seasonal_-_Mobile_01_093ef816-ebc9-4bf4-b342-142dbcbbaa2c.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_MHReKM": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Kit_-_Seasonal_-_Desktop_02_7856e497-45b6-4091-ab5e-ce3944457f59.jpg",
+            "mimage": "shopify://shop_images/Kit_-_Seasonal_-_Mobile_02_3a88e0db-f4c4-4bab-b366-819156672438.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_g8gH3y": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Kit_-_Seasonal_-_Desktop_03_03bb2e2c-fb77-44ad-a8dc-74f22337c8fb.jpg",
+            "mimage": "shopify://shop_images/Kit_-_Seasonal_-_Mobile_03_11b7931f-13b0-47a0-9c52-2a4cd3372161.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_4wHbye": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Kit_-_Seasonal_-_Desktop_04_348eeb80-0529-4997-b3db-394b67f7a54c.jpg",
+            "mimage": "shopify://shop_images/Kit_-_Seasonal_-_Mobile_04_4a91610a-9d1f-44a2-b2d5-9ecc5fbead93.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_YQQCpJ": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/Kit_-_Seasonal_-_Desktop_05_fc9f86ab-aa77-4520-9121-2b6f4f777d36.jpg",
+            "mimage": "shopify://shop_images/Kit_-_Seasonal_-_Mobile_05_420a1aaa-12a7-4671-8b86-bc0a2be88d41.jpg",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image2_8jnWnK": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Kit_-_Signature_-_Desktop_01_b72866ed-6c3a-4c6e-8956-4b8981f2da46.jpg",
+            "mimage_2": "shopify://shop_images/Kit_-_Signature_-_Mobile_01_ea1e39ec-6b63-4ad6-a451-3aab30829bb0.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_WaCyNk": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Kit_-_Signature_-_Desktop_02_4f524832-9840-4e56-a70c-1c65e82ed1b1.jpg",
+            "mimage_2": "shopify://shop_images/Kit_-_Signature_-_Mobile_02_55fe2fc9-876e-4da3-ba4b-ba7c862ccbb2.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_HCnGba": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Kit_-_Signature_-_Desktop_03_75829d81-4db2-4705-83a7-4987b442f60b.jpg",
+            "mimage_2": "shopify://shop_images/Kit_-_Signature_-_Mobile_03_df237280-1e5f-47bf-bcf8-5a4c1c480c94.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_TwYi3z": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Kit_-_Signature_-_Desktop_04_748bf5ef-1307-47a1-a553-1934669055f5.jpg",
+            "mimage_2": "shopify://shop_images/Kit_-_Signature_-_Mobile_04_abf8c96f-33a5-478d-9169-b0ff78eb48b4.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        },
+        "product_image2_gfe7pi": {
+          "type": "productImage2",
+          "settings": {
+            "image_2": "shopify://shop_images/Kit_-_Signature_-_Desktop_05_aa659d0e-7a3c-4794-8148-889276488ed0.jpg",
+            "mimage_2": "shopify://shop_images/Kit_-_Signature_-_Mobile_05_01ef212e-abe9-406c-8634-6ac2a30598a3.jpg",
+            "is_video_2": false,
+            "videoURL_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "variant_XxnREp",
+        "variant_MqLWFG",
+        "text_pKEzeN",
+        "text_fCNNBh",
+        "text_FXqmR7",
+        "text_NVAnnd",
+        "text_pm3cqF",
+        "text_jBnntb",
+        "text_GptAmX",
+        "product_image_DnpnJg",
+        "product_image_MHReKM",
+        "product_image_g8gH3y",
+        "product_image_4wHbye",
+        "product_image_YQQCpJ",
+        "product_image2_8jnWnK",
+        "product_image2_WaCyNk",
+        "product_image2_HCnGba",
+        "product_image2_TwYi3z",
+        "product_image2_gfe7pi"
+      ],
+      "custom_css": [
+        ".slick-arrow svg path {fill: #11322c !important ;}",
+        ".link-to-variant {font-family: \"Lausanne\";}",
+        "li.gp-5-variant-li.value-sans {font-family: \"Lausanne\";}",
+        ".gp-5-variant-li label {border-color: #bdbdbd;}",
+        ".variant-badge {z-index: 999999;}",
+        "@media (max-width: 768px) {.stars-img-review span {font-size: 12px !important; } .global-product-5 .star-img {width: 12px; } .global-product-19-wrapper .gp-5-price-points {background-color: #f5f5f5; } .global-product-19-wrapper .gp-4-details .gp-5-bottom {padding: 15px 0 15px; } .variant-badge {font-size: 10px; }}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "guaranteeText": true,
+        "guaranteeDescription": "30-day money-back guarantee",
+        "guaranteeTextColor": "#212121",
+        "scrollto": "",
+        "background": "#fbf1e8",
+        "p_id": "starterkit-product",
+        "landingproduct": "seasonal-starter-kit-spring-free-gentle-chamomile",
+        "varaiantid": "55030724985212",
+        "sellingid": "710188728700",
+        "sku": "FG1227b",
+        "discount": "SEASONAL311bv",
+        "tab_description_1": "New limited edition scents every season",
+        "tab_description_2": "Enjoy our three bestselling scents all year round",
+        "className": "gp-5-ab global-product-19-wrapper  gp-219",
+        "mainheading": "New customer offer: FREE bottle &amp; cloth",
+        "mainsubheading": "One powerful cleaner for your entire home",
+        "choosescent": "",
+        "heading": "Counter Clean Starter Kit",
+        "subtext": "",
+        "price": "15.00",
+        "delPrice": "48.00",
+        "btnText": "TRY IT RISK FREE",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "reviews_mobile": "38,325",
+        "reviews_desktop": "1,734",
+        "heading-position": false,
+        "before-mobile": true,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 7,
+        "funnel_stage": "landing_page",
+        "dataModule": "buy_box_1",
+        "dataTitle": "try_it_risk_free",
+        "eventValue": "add_to_cart",
+        "optionIndex": "",
+        "quantity": 1
+      }
+    },
+    "pf181_expend_blocks_ndxLFF": {
+      "type": "pf181-expend-blocks",
+      "blocks": {
+        "image_MEPNem": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop01.png",
+            "mBlockImage": "shopify://shop_images/Scent-Block-Mobile01_ec83320b-932c-4e73-b6c3-00020e9e3d5f.png",
+            "tag": "",
+            "heading": "Gentle Chamomile",
+            "details": "A gentle Roman chamomile oil, symbolising tenderness and love and designed to bring calm to the home.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n<span class=\"fw-400\">Roman Chamomile</span><br>Warm, sweet, herbaceous, with a hint of green apple</li>\n    </ul>\n</div>"
+          }
+        },
+        "image_prBBn8": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop02.png",
+            "mBlockImage": "shopify://shop_images/Scent-Block-Mobile02_2c8a6b94-8447-47ea-b432-df4edcf6555d.png",
+            "tag": "",
+            "heading": "Orange & Petitgrain",
+            "details": "A cheerful blend of orange, grapefruit and petitgrain, inspired by Moroccan orange blossom in early spring.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Orange</span>\n            <br>\n           Sweet and citrusy\n        </li>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Pink Grapefruit</span>\n            <br>\n            Sweet and tangy\n        </li>\n       \n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Petitgrain</span>\n            <br>\n             Citrusy floral, woody, green\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Copaiba</span>\n            <br>\n             Gentle and woody\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_UmBWtk": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop03.png",
+            "mBlockImage": "shopify://shop_images/Scent-Block-Mobile03_330b4301-30e1-4fa2-889b-25a11bada986.png",
+            "tag": "",
+            "heading": "Patchouli & Cedarwood",
+            "details": "A rich blend of patchouli and cedarwood, inspired by scented wooden chests filled with silk.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">May Chang</span>\n            <br>\n            Fresh and citrusy\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Palmarosa</span>\n            <br>\n            Sweet and floral-rosy\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Red Cedar</span>\n            <br>\n            Woody and sweetly balsamic\n        </li>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Patchouli</span>\n            <br>\n            Rich and herbaceous\n        </li>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Amyris</span>\n            <br>\n            Sweet and woody\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_8BaGJY": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop04.png",
+            "mBlockImage": "shopify://shop_images/Scent-Block-Mobile04_f05536b1-120a-4d9c-864d-0451d624fd77.png",
+            "tag": "",
+            "heading": "Lemon & Marjoram",
+            "details": "A blend of marjoram, clary sage, palmarosa and lemon, inspired by drinking lemonade in the sun.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Lemon</span>\n            <br>\n            Light, sharp and fresh\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Sweet marjoram</span>\n            <br>\n            Warm, woody, delicately floral\n        </li>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Palmarosa</span>\n            <br>\n            Rosy, grassy and earthy\n        </li>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Clary sage</span>\n            <br>\n            Herbaceous, floral and earthy\n        </li>\n    </ul>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_MEPNem",
+        "image_prBBn8",
+        "image_UmBWtk",
+        "image_8BaGJY"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0;}",
+        ".tss-tag {font-size: 14px; font-weight: 400; border-radius: 4px; right: 16px; top: 16px; padding: 2px 4px; border: 1px solid var(--Secondary-200, #f2d4b9); background: var(--Secondary-50, #fbf1e8); line-height: 128%; color: #212121;}",
+        ".tss-details {font-size: 14px;}"
+      ],
+      "settings": {
+        "bgcolor": "#ffffff",
+        "class": "show pf-173-nature mobile-container-0",
+        "linkVariant": "1",
+        "heading": "Spring scents, made with the finest ingredients",
+        "subtext": ""
+      }
+    },
+    "pf181_expend_blocks_pfeeqW": {
+      "type": "pf181-expend-blocks",
+      "blocks": {
+        "image_wRtpwX": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop05.png",
+            "mBlockImage": "shopify://shop_images/Scent-Block-Mobile05_e058ea2a-4cdc-4abf-bd71-293b1e5ee6f3.png",
+            "tag": "",
+            "heading": "Uplifting Citrus",
+            "details": "A blend of orange, grapefruit, and niaouli, inspired by a refreshing spring clean.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Sweet Orange</span>\n            <br>\n            An uplifting, sweet-citrusy aroma\n        </li>\n        <li class=\"font-lausanne  fw-200\">\n            <span class=\"fw-400\">Grapefruit Peel</span>\n            <br>\n            A fruity, energy-boosting scent\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne  fw-200\">\n            <span class=\"fw-400\">Niaouli Leaves</span>\n            <br>\n            A fresh oil with an earthy aroma\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_gaQU9T": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop06.png",
+            "mBlockImage": "shopify://shop_images/Scent-Block-Mobile06_40408687-9f32-4174-b882-fa965e58e77f.png",
+            "tag": "",
+            "heading": "Balancing Floral",
+            "details": "A harmonious blend of lemon, geranium and vetiver, inspired by a garden in bloom.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Lemon Peel</span>\n            <br>\n          A fresh and cheerful citrus oil\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne  fw-200\">\n            <span class=\"fw-400\">Rose Geranium</span>\n            <br>\n            A rich, floral aroma\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne  fw-200\">\n            <span class=\"fw-400\">Vetiver Root</span>\n            <br>\n            A calming, earthy and grassy scent\n        </li>\n    </ul>\n</div>"
+          }
+        },
+        "image_bTmVfz": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Scent-Block-Desktop07.png",
+            "mBlockImage": "shopify://shop_images/Image_13_6c978489-211c-45cb-8d38-5369d4b8b7d6.png",
+            "tag": "",
+            "heading": "Grounding Vetiver",
+            "details": "A blend of sweet orange, coriander seed and vetiver, inspired by a spice bazaar.",
+            "expend-label": "blend details",
+            "expendable-content": "<div>\n    <h4 class=\"font-lausanne\">Top notes</h4>\n    <ul>\n        <li class=\"font-lausanne fw-200\">\n            <span class=\"fw-400\">Sweet Orange</span>\n            <br>\n            Uplifting, with a sweet-citrus aroma\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Middle notes</h4>\n    <ul>\n        <li class=\"font-lausanne  fw-200\">\n            <span class=\"fw-400\">Coriander</span>\n            <br>\n            A spicy, woody scent with antibacterial and antiviral properties\n        </li>\n    </ul>\n</div>\n<div>\n    <h4 class=\"font-lausanne\">Base notes</h4>\n    <ul>\n        <li class=\"font-lausanne  fw-200\">\n            <span class=\"fw-400\">Vetiver</span>\n            <br>\n           A calming oil with an earthy, grassy scent\n        </li>\n    </ul>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "image_wRtpwX",
+        "image_gaQU9T",
+        "image_bTmVfz"
+      ],
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0;}",
+        ".tss-tag {font-size: 14px; font-weight: 400; border-radius: 4px; right: 16px; top: 16px; padding: 2px 4px; border: 1px solid var(--Secondary-200, #f2d4b9); background: var(--Secondary-50, #fbf1e8); line-height: 128%; color: #212121;}",
+        ".tss-details {font-size: 14px;}"
+      ],
+      "settings": {
+        "bgcolor": "#ffffff",
+        "class": "pf-173-nature mobile-container-0",
+        "linkVariant": "2",
+        "heading": "Signature scents, handpicked from nature",
+        "subtext": ""
+      }
+    },
+    "transformational_scents_reskin_gAJGn4": {
+      "type": "transformational-scents-reskin",
+      "blocks": {
+        "image_hqk8zc": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Seasons-Block-Desktop01.png",
+            "mBlockImage": "shopify://shop_images/Seasons-Block-Mobile01.png",
+            "tag": "",
+            "heading": "Spring",
+            "details": "Blow the the cobwebs away with the spring clean in one spray."
+          }
+        },
+        "image_Djp6RR": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Seasons-Block-Desktop02.png",
+            "mBlockImage": "shopify://shop_images/Seasons-Block-Mobile02.png",
+            "tag": "",
+            "heading": "Summer",
+            "details": "Make the most of the season and bring summer’s most glorious scents inside."
+          }
+        },
+        "image_EGgngQ": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Seasons-Block-Desktop03ALT.png",
+            "mBlockImage": "shopify://shop_images/Seasons-Block-Mobile03ALT.png",
+            "tag": "",
+            "heading": "Autumn",
+            "details": "Re-energise your cleaning routine with autumn’s most uplifting scents."
+          }
+        },
+        "image_mPP8Vw": {
+          "type": "image",
+          "settings": {
+            "blockImage": "shopify://shop_images/Seasons-Block-Desktop04.png",
+            "mBlockImage": "shopify://shop_images/Seasons-Block-Mobile04.png",
+            "tag": "",
+            "heading": "Winter",
+            "details": "Welcome winter into your home with warming essential oil blends."
+          }
+        }
+      },
+      "block_order": [
+        "image_hqk8zc",
+        "image_Djp6RR",
+        "image_EGgngQ",
+        "image_mPP8Vw"
+      ],
+      "custom_css": [
+        ".common-btn-width {width: 343px;}",
+        "@media (max-width: 768px) {.common-btn-width {width: 100%; }}",
+        ".blue-starterkit-btn {font-size: 16px;}",
+        ".scents-reskins .transformational-scents-slider .tss-block {padding: 15px 16px 0px 16px;}",
+        ".heading-2 {letter-spacing: 0px;}"
+      ],
+      "settings": {
+        "sectionId": "",
+        "bgcolor": "#f6f1e5",
+        "class": "show mobile-container-0",
+        "linkVariant": "",
+        "heading": "Discover limited edition scents every season",
+        "subtext": "Our seasonal membership features limited edition ranges, crafted with the finest seasonal ingredients.",
+        "addScrollBtn": true,
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 10,
+        "funnel_stage": "landing_page",
+        "dataModule": "scent_block",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "11e26e64-5410-48f9-9c9a-3698a74d1770": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".heading-2 {letter-spacing: 0;}",
+        ".slick-arrow svg path {fill: #11322c !important;}",
+        ".common-btn-width {width: 343px;}",
+        "@media (max-width: 768px) {.common-btn-width {width: 100%; } .two-women-wrapper-2 .w-50.d-flex.justify-content-center.mobile-hide .two-women-details .normal-text {font-size: 16px; }}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "className": "two-women-wrapper-2",
+        "background": "#ffffff",
+        "layout": false,
+        "main_heading": "Two women on a mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<span class=\"fw-400\">Best friends Purdy &amp; Charlotte were fed up with cleaning cupboards cluttered with toxic products.</span><span class=\"fw-200\"> Both firm believers in the power of natural cleaning, they experimented with formulas in an empty garage until they landed on an all natural, multipurpose spray, beautifully scented with essential oils. They called it Counter Clean. </span>",
+        "man_details_1": "We manufacture Purdy &amp; Figg cleaning concentrates in England, where we’re subject to stringent health regulations.",
+        "man_details_2": "Every Purdy &amp; Figg concentrate is made in a state-of-the-art laboratory. We promise we’ll never cut corners when it comes to your health or safety.",
+        "btnLabel": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "manufactured_in_the_uk",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "4f5b5391-b1ab-4116-9ae8-7c2e152c9c8d": {
+      "type": "review-slider-reskin",
+      "blocks": {
+        "d68c0270-9f27-4238-bdf0-1ea41155f1a5": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Mhairi_screenshot.png",
+            "heading": "The holy grail of cleaning products!",
+            "review": "\"Bin all your other products; this does it all! Smells wonderful and cleans, literally, everything!\"",
+            "userName": "Emma",
+            "poster": "shopify://shop_images/poster-1_b5f8777d-1a0b-4fa7-ae4d-6069c23e7a54.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/f1aedf74105d424a814090708def7086.mp4"
+          }
+        },
+        "b61362f4-49c7-4865-ab91-c3f0e90c998e": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Lara_screenshot.png",
+            "heading": "Transformed my cleaning routine",
+            "review": "\"I loved it. My first purchase. I have ditched my other artificial smelling cleaning products. This all purposes cleaner does what it says and smells delightful.\"",
+            "userName": "Lara",
+            "poster": "shopify://shop_images/poster-6.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/d99e4cf5e2af4261873e4f03c604ad58.mp4"
+          }
+        },
+        "e77e13cc-7b69-4b41-982c-6a94724f7795": {
+          "type": "text",
+          "settings": {
+            "image": "shopify://shop_images/Emma_screenshot.png",
+            "heading": "Love it!",
+            "review": "\"Absolutely LOVE these products!!... Chucking all the other cleaning products I have because this does it all and does it better!\"",
+            "userName": "Mhairi",
+            "poster": "shopify://shop_images/poster-3_f89a79dc-f25e-4c20-a6f8-9ec90700bf72.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/fdbab72202c24b309c70f0ba6f3450d0.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "d68c0270-9f27-4238-bdf0-1ea41155f1a5",
+        "b61362f4-49c7-4865-ab91-c3f0e90c998e",
+        "e77e13cc-7b69-4b41-982c-6a94724f7795"
+      ],
+      "custom_css": [
+        ".cls-1 {fill: #2d469e;}",
+        ".blue-text {color: #2d469e !important;}",
+        ".blue-starterkit-btn {background-color: #2d469e; font-family: \"Lausanne\"; font-size: 16px;}"
+      ],
+      "settings": {
+        "heading": "Join 200k+ happy customers who’ve simplified their cleaning routines",
+        "scrollto": "starterkit-product",
+        "top": "80",
+        "className": "",
+        "bgColor": "#fbf1e8",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 12,
+        "funnel_stage": "landing_page",
+        "dataModule": "reviews_slider",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "0d7b4809-b3f0-4552-b395-2a0fcac97820": {
+      "type": "table-reskin",
+      "blocks": {
+        "2b9d9cc5-9b39-4b0d-9834-50025977aefa": {
+          "type": "text",
+          "settings": {
+            "featureName": "No toxic chemicals",
+            "pfIcon": "shopify://shop_images/Tick.png",
+            "methodIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png",
+            "flashIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png"
+          }
+        },
+        "a0f8f9dd-3a49-4ece-aa0e-98b962cedbfc": {
+          "type": "text",
+          "settings": {
+            "featureName": "Pure essential oils",
+            "pfIcon": "shopify://shop_images/Tick.png",
+            "methodIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png",
+            "flashIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png"
+          }
+        },
+        "4f5a780d-924f-4791-bec4-edbeb832405e": {
+          "type": "text",
+          "settings": {
+            "featureName": "Single use plastic-free",
+            "pfIcon": "shopify://shop_images/Tick.png",
+            "methodIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png",
+            "flashIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png"
+          }
+        },
+        "a601bf08-b110-4819-bf5c-87e28d5716d5": {
+          "type": "text",
+          "disabled": true,
+          "settings": {
+            "featureName": "Natural ingredients",
+            "pfIcon": "shopify://shop_images/Tick.png",
+            "methodIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png",
+            "flashIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png"
+          }
+        },
+        "1e9f7254-8595-4439-a93a-e3cd36b6587f": {
+          "type": "text",
+          "settings": {
+            "featureName": "Made in the UK",
+            "pfIcon": "shopify://shop_images/Tick.png",
+            "methodIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png",
+            "flashIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png"
+          }
+        },
+        "text_ke4tFU": {
+          "type": "text",
+          "settings": {
+            "featureName": "Seasonal scent ranges",
+            "pfIcon": "shopify://shop_images/Tick.png",
+            "methodIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png",
+            "flashIcon": "shopify://shop_images/Tick_9f05f94f-786d-4581-86dc-10ef9666def0.png"
+          }
+        }
+      },
+      "block_order": [
+        "2b9d9cc5-9b39-4b0d-9834-50025977aefa",
+        "a0f8f9dd-3a49-4ece-aa0e-98b962cedbfc",
+        "4f5a780d-924f-4791-bec4-edbeb832405e",
+        "a601bf08-b110-4819-bf5c-87e28d5716d5",
+        "1e9f7254-8595-4439-a93a-e3cd36b6587f",
+        "text_ke4tFU"
+      ],
+      "custom_css": [
+        ".common-btn-width {width: 343px;}",
+        "@media (max-width: 768px) {.common-btn-width {width: 100%; }}",
+        ".blue-starterkit-btn {font-size: 16px;}",
+        ".table-2 {background-color: ##ffffff !important;}",
+        ".heading-2 {letter-spacing: 0; text-align: center;}"
+      ],
+      "settings": {
+        "addScrollBtn": true,
+        "heading": "We really are different",
+        "subheading": "",
+        "scrollto": "starterkit-product",
+        "top": "0",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 13,
+        "funnel_stage": "landing_page",
+        "dataModule": "comparison_table",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "get_offer_button_yWXJ9U": {
+      "type": "get-offer-button",
+      "disabled": true,
+      "custom_css": [
+        ".get-offer-cta-wrapper {display: none;}",
+        "@media (max-width: 768px) {.container {padding: 0 16px 32px 16px !important; } .get-offer-cta-wrapper {display: block; }}",
+        ".blue-starterkit-btn {font-family: \"Lausanne\"; margin-top: 30px; border: 0; border-radius: 4px; background-color: #11322c !important; color: #fff; padding: 10px 15px;}"
+      ],
+      "settings": {
+        "cta_text": "GET YOUR OFFER",
+        "scrollto": "scroll-here-link",
+        "top": "0",
+        "bgColor": "#ffffff",
+        "paddingTop": 0,
+        "paddingBottom": 0,
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 11,
+        "funnel_stage": "landing_page",
+        "dataModule": "table_reskin",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "faq_section_2_FUFBYY": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "Why do I get a free Gentle Chamomile scent?",
+            "faq-ans": "<p>For a limited time we’re giving all our new members an extra scent for free, to help you take a gentle approach to cleaning this spring.</p>"
+          }
+        },
+        "text_TA9k4H": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I use Counter Clean?",
+            "faq-ans": "<p>To use Counter Clean, simply pour the whole 20ml bottle of cleaning concentrate into your Bottle for Life and slowly fill to the top (just below the neck) with tap water. Give the bottle a gentle shake to mix, then enjoy your uplifting clean!</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Which surfaces is Counter Clean suitable for?",
+            "faq-ans": "<p>We're pleased to say that Counter Clean is pH neutral, which means it’s safe to use on most surfaces. That includes softer materials like aluminium, wood, stone, quartz and other sealed surfaces. We do recommend patch testing first on any particularly sensitive or precious surfaces you’re concerned about. Just spray onto a cloth and wipe a small patch to see the results. </p>"
+          }
+        },
+        "text_NfqNbz": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How do I manage my subscription?",
+            "faq-ans": "<p>We offer lots of subscription options, including switching your scent refill pack, changing the frequency of your deliveries or cancelling your membership altogether. Subscriptions are set to a 90-day frequency by default, but you can always move your next billing date if you need to in a few easy steps. We understand there might be times when you need to stop your deliveries, and we’ll always respect your decision to leave - even if we’ll miss you.</p><p>If you have any trouble managing your subscription, our Customer Experience Team is always on hand to respond to your questions and requests as soon as possible. They’re very friendly.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What's the difference between Signature & Seasonal?",
+            "faq-ans": "<p>We offer two different scent collections with your Counter Clean subscription - Signature and Seasonal Scents. Our Signature Scent pack is available all year round, and contains our three best-selling scents - Uplifting Citrus, Balancing Floral, and Grounding Vetiver. Our Seasonal Scent pack contains three limited edition new scents blended for every season. </p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>A 300ml bottle of Counter Clean (including one 20ml concentrate) contains about 230 sprays. A typical household will get through one of our 300ml bottles in two to four weeks, unless you get a bit addicted to wiping down your surfaces like we have!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "text_TA9k4H",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "text_NfqNbz",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff"
+      ],
+      "custom_css": [
+        ".faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-plus.svg?v=1722600268);}",
+        ".faq-acc[open] .faq-que-2:after {background-image: url(https://cdn.shopify.com/s/files/1/0360/1347/3931/files/green-minus.svg?v=1722600268);}",
+        ".heading-2 {letter-spacing: 0;}"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#fafafa",
+        "class": "",
+        "heading": "Frequently asked questions",
+        "addScrollBtn": false,
+        "scrollto": "javascript:void(0);",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "announcement_bar",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "1616c4c5-6d10-4f48-a274-122128027936": {
+      "type": "social-video-reskin",
+      "blocks": {
+        "2ccd4b4d-84d2-4704-821d-7d731da142b9": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-1_0cf27e3e-fff9-4d88-8e61-2ff9ed737526.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/8710260775a44d4f87dbed4218d671df.mp4"
+          }
+        },
+        "7457efd6-fef5-4871-a74f-d46ac8c384f4": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-2_f342761e-a524-477d-ac89-3cac39642714.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/14f49899d45c4f2cb1f9c18a3bf03ff6.mp4"
+          }
+        },
+        "a65d022c-29ac-4508-a7d9-4da5c6a7cada": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-3_6b4b5581-7d62-4528-bb2e-1a9b48969dae.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/26782dcfb18240c580a496f5bd77c68f.mp4"
+          }
+        },
+        "56412b87-968a-4cd1-9c22-06ec6ce1e30d": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/poster-4_767956fa-da13-4a1c-8c1f-eec21f9eed10.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/824835749f884d6690186631c344bcb0.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "2ccd4b4d-84d2-4704-821d-7d731da142b9",
+        "7457efd6-fef5-4871-a74f-d46ac8c384f4",
+        "a65d022c-29ac-4508-a7d9-4da5c6a7cada",
+        "56412b87-968a-4cd1-9c22-06ec6ce1e30d"
+      ],
+      "custom_css": [
+        ".common-btn-width {width: 343px;}",
+        "@media (max-width: 768px) {.common-btn-width {width: 100%; }}",
+        ".blue-starterkit-btn {font-size: 16px;}",
+        ".heading-2 {font-size: 40px; letter-spacing: 0;}"
+      ],
+      "settings": {
+        "scrollto": "starterkit-product",
+        "top": "80",
+        "bgColor": "#ffffff",
+        "dataTrack": true,
+        "targetUrl": "",
+        "index": 16,
+        "funnel_stage": "landing_page",
+        "dataModule": "social_video_slider",
+        "dataTitle": "get_your_offer",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "footer_GxnhJW": {
+      "type": "footer-3",
+      "blocks": {
+        "social_YnFgMq": {
+          "type": "social",
+          "settings": {
+            "socials": "insta",
+            "social-link": "https://instagram.com/PurdyandFigg"
+          }
+        },
+        "social_EmF9wy": {
+          "type": "social",
+          "settings": {
+            "socials": "fb",
+            "social-link": "https://m.facebook.com/purdyandfigg/"
+          }
+        },
+        "social_79pLYn": {
+          "type": "social",
+          "disabled": true,
+          "settings": {
+            "socials": "twitter",
+            "social-link": "https://twitter.com/PurdyFigg"
+          }
+        },
+        "social_JXMk3p": {
+          "type": "social",
+          "settings": {
+            "socials": "tiktok",
+            "social-link": "https://www.tiktok.com/@purdyandfigg"
+          }
+        },
+        "menu_gHiryP": {
+          "type": "menu",
+          "settings": {
+            "heading": "Shop",
+            "menu": "purdyandfigg-menu"
+          }
+        },
+        "menu_bM4ywQ": {
+          "type": "menu",
+          "settings": {
+            "heading": "About Us",
+            "menu": "purdy-2-0-footer-menu"
+          }
+        },
+        "payment_eBQxKB": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/amex.png"
+          }
+        },
+        "payment_bcCg9p": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/apple_0ad12007-d172-4e8f-aca4-83562a020aea.png"
+          }
+        },
+        "payment_JJgcr3": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/paymrnt.png"
+          }
+        },
+        "payment_8jRGRn": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/discover_f87eb58e-266e-44f2-803d-14af694bf837.png"
+          }
+        },
+        "payment_bErwJN": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/G-pay.png"
+          }
+        },
+        "payment_ynw83Q": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/MASTER.png"
+          }
+        },
+        "payment_ThDikz": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/MASTER-2.png"
+          }
+        },
+        "payment_ADYtCN": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/PAYPAL.png"
+          }
+        },
+        "payment_zePXii": {
+          "type": "payment",
+          "settings": {
+            "payimage": "shopify://shop_images/VISA_cb857893-a509-46e2-8742-1ec3726d0cd5.png"
+          }
+        }
+      },
+      "block_order": [
+        "social_YnFgMq",
+        "social_EmF9wy",
+        "social_79pLYn",
+        "social_JXMk3p",
+        "menu_gHiryP",
+        "menu_bM4ywQ",
+        "payment_eBQxKB",
+        "payment_bcCg9p",
+        "payment_JJgcr3",
+        "payment_8jRGRn",
+        "payment_bErwJN",
+        "payment_ynw83Q",
+        "payment_ThDikz",
+        "payment_ADYtCN",
+        "payment_zePXii"
+      ],
+      "disabled": true,
+      "settings": {
+        "email": "info@purdyandfigg.com",
+        "help_url": "https://help.purdyandfigg.com/en",
+        "return_refund_url": "",
+        "copyright": "Copyright @purdyandfigg 2024",
+        "accLink": "shopify://policies/privacy-policy",
+        "privacyLink": "https://purdyandfigg.com/policies/privacy-policy",
+        "termsLink": "https://purdyandfigg.com/policies/terms-of-service"
+      }
+    },
+    "footer_2_gaj6Fd": {
+      "type": "footer-2",
+      "custom_css": [
+        ".footer-2 {background: #11322c; font-family: \"TWK Lausanne\";}"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "a512ad02-ae17-423d-a8a0-476423a1618f",
+    "banner_10_L6fm4k",
+    "90d960e2-da13-4b49-9a83-dee9cb9d7c80",
+    "icon_blocks_reskin_Vggka3",
+    "transformational_scents_3_Cn3YPk",
+    "image_with_text_3_DGFYzt",
+    "global_product_219_4Rkind",
+    "pf181_expend_blocks_ndxLFF",
+    "pf181_expend_blocks_pfeeqW",
+    "transformational_scents_reskin_gAJGn4",
+    "11e26e64-5410-48f9-9c9a-3698a74d1770",
+    "4f5b5391-b1ab-4116-9ae8-7c2e152c9c8d",
+    "0d7b4809-b3f0-4552-b395-2a0fcac97820",
+    "get_offer_button_yWXJ9U",
+    "faq_section_2_FUFBYY",
+    "1616c4c5-6d10-4f48-a274-122128027936",
+    "footer_GxnhJW",
+    "footer_2_gaj6Fd"
+  ]
+}

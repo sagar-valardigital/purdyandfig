@@ -1,0 +1,312 @@
+<style>
+  .reviews-carousel .container {
+    display: flex;
+    width: 100%;
+    max-width: 1280px;
+    padding: 80px 112px;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 107px;
+  }
+
+  .reviews-carousel .review-text {
+    font-size: 24px;
+    line-height: 32px !important;
+    margin-bottom: 8px;
+    font-weight: 500;
+  }
+
+  .reviews-carousel .supporting-text {
+    color: #A0A1A7;
+    font-size: 16px;
+  }
+
+  .reviews-carousel .rating {
+    color: #434448;
+    font-family: "Value-Medium-Fixed";
+    font-weight: 700;
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-left: 8px;
+  }
+
+  .reviews-carousel .based-on {
+    font-family: "Value-Sans-Fixed";
+    font-weight: 600;
+  }
+
+  .reviews-carousel .underline {
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .reviews-carousel .container p {
+    leading-trim: both;
+    text-edge: cap;
+    font-style: normal;
+    line-height: 24px;
+  }
+
+  .reviews-carousel .stars-container {
+    margin-right: auto;
+  }
+  
+  .reviews-carousel .stars {
+    display: flex;
+    gap: 2.5px;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .reviews-carousel .carousel-container {
+    overflow: hidden;
+    height: 96px;
+    position: relative;
+  }
+
+  .reviews-carousel .carousel-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .reviews-carousel .animate {
+    animation: slide var(--total-duration) linear infinite;
+  }
+
+  .reviews-carousel .carousel-wrapper > div {
+    height: 96px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  :root {
+    --review-count: {{ section.blocks.size }};
+    --total-duration: calc((var(--review-count) + 1) * 2.5s);
+  }
+
+  @keyframes slide {
+    {% assign total_reviews = section.blocks.size | plus: 1 %}
+    {% assign interval = 100 | divided_by: section.blocks.size %}
+    {% for i in (0..section.blocks.size) %}
+      {{ i | times: interval }}% { transform: translateY(calc(-{{ i }} * 100% / {{ total_reviews }})); }
+      {{ i | times: interval | plus: interval | minus: 3 }}% { transform: translateY(calc(-{{ i }} * 100% / {{ total_reviews }})); }
+    {% endfor %}
+    100% { transform: translateY(calc(-{{ section.blocks.size }} * 100% / {{ total_reviews }})); }
+  }
+
+  @media only screen and (max-width: 968px) {
+    .reviews-carousel .container {
+      width: 100%;
+      max-width: 375px;
+      padding: 32px 16px;
+      flex-direction: column;
+      gap: 32px;
+    }
+
+    .reviews-carousel .carousel-container {
+      max-width: 100%;
+      height: 100%;
+    }
+
+    .reviews-carousel .carousel-wrapper {
+      text-align: center;
+      flex-direction: row;
+
+      /* Magic that prevents flickering on iOS */
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+       -webkit-transform: translate3d(0, 0, 0);
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    .reviews-carousel .animate {
+      animation: slide-mobile var(--total-duration) linear infinite;
+    }
+
+    .reviews-carousel .carousel-wrapper > div {
+      width: 100%;
+      height: 100%;
+      flex-shrink: 0;
+
+      /* Magic that prevents flickering on iOS */
+      -webkit-transform-style: preserve-3d;
+      -webkit-backface-visibility: hidden;
+       -webkit-transform: translate3d(0, 0, 0);
+      -webkit-font-smoothing: antialiased; 
+    }
+
+    .reviews-carousel .review-text {
+      color: #434448;
+      font-size: 14px;
+      font-family: "Value-Sans-Fixed";
+      font-weight: 600;
+      line-height: 20px !important;
+    }
+  
+    .reviews-carousel .supporting-text {
+      font-size: 14px;
+      font-family: "Value-Sans-Fixed";
+      font-weight: 600;
+      line-height: 20px !important;
+      margin-bottom: 0;
+    }
+
+    .reviews-carousel .stars-container {
+      display: flex;
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+    }
+
+    .reviews-carousel .rating {
+      font-size: 14px;
+      line-height: 20px !important;
+      vertical-align: middle;
+      font-family: "Value-Medium-Fixed";
+      font-weight: 700;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .reviews-carousel .based-on {
+      color: #434448;
+      font-size: 14px;
+      font-family: "Value-Sans-Fixed";
+      margin-bottom: 0;
+      font-weight: 500;
+      line-height: 20px !important;
+      vertical-align: middle;
+      width: 100%;
+      -webkit-font-smoothing: subpixel-antialiased;
+    }
+
+    .reviews-carousel .stars-container .inner {
+      display: flex;
+      gap: 16px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  @keyframes slide-mobile {
+    {% assign total_reviews = section.blocks.size | plus: 1 %}
+    {% assign interval = 100 | divided_by: section.blocks.size %}
+    {% for i in (0..section.blocks.size) %}
+      {{ i | times: interval }}% { transform: translateX(calc(-{{ i }} * 100%)); }
+      {{ i | times: interval | plus: interval | minus: 3 }}% { transform: translateX(calc(-{{ i }} * 100%)); }
+    {% endfor %}
+    100% { transform: translateX(calc(-{{ section.blocks.size }} * 100%)); }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    // When the observed elements enter the viewport apply the `animate` class
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add("animate");
+
+          // Unobserve to prevent retriggering
+          observer.unobserve(entry.target);
+        }
+      });
+    });
+
+    // Set the element with class `carousel-wrapper` to be observed
+    const carouselWrapper = document.querySelector(".reviews-carousel .carousel-wrapper");
+    if(carouselWrapper) {
+      observer.observe(carouselWrapper);
+    }
+  });
+</script>
+
+<div class="reviews-carousel">
+  <div class="container">
+    <div class="stars-container">
+      <div class="inner">
+        <div class="d-flex">
+          <div class="stars">
+            {% for i in (1..5) %}
+              <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <g id="Star icon" clip-path="url(#clip0_458_3619)">
+                  <path id="Star background" d="M10.0383 1.60996C10.2091 1.19932 10.7909 1.19932 10.9617 1.60996L13.0278 6.57744C13.0998 6.75056 13.2626 6.86885 13.4495 6.88383L18.8123 7.31376C19.2556 7.3493 19.4354 7.90256 19.0976 8.19189L15.0117 11.6919C14.8693 11.8139 14.8071 12.0053 14.8506 12.1876L16.0989 17.4208C16.2021 17.8534 15.7315 18.1954 15.3519 17.9635L10.7606 15.1592C10.6006 15.0615 10.3994 15.0615 10.2394 15.1592L5.64806 17.9635C5.26851 18.1954 4.79788 17.8534 4.90108 17.4208L6.14939 12.1876C6.19289 12.0053 6.1307 11.8139 5.98831 11.6919L1.90241 8.19189C1.56464 7.90256 1.74441 7.3493 2.18773 7.31376L7.55054 6.88383C7.73744 6.86885 7.90024 6.75056 7.97225 6.57744L10.0383 1.60996Z" fill="#F4F5F5"/>
+                  <g id="Star" clip-path="url(#clip1_458_3619)">
+                    <path id="Star_2" d="M10.0383 1.60996C10.2091 1.19932 10.7909 1.19932 10.9617 1.60996L13.0278 6.57744C13.0998 6.75056 13.2626 6.86885 13.4495 6.88383L18.8123 7.31376C19.2556 7.3493 19.4354 7.90256 19.0976 8.19189L15.0117 11.6919C14.8693 11.8139 14.8071 12.0053 14.8506 12.1876L16.0989 17.4208C16.2021 17.8534 15.7315 18.1954 15.3519 17.9635L10.7606 15.1592C10.6006 15.0615 10.3994 15.0615 10.2394 15.1592L5.64806 17.9635C5.26851 18.1954 4.79788 17.8534 4.90108 17.4208L6.14939 12.1876C6.19289 12.0053 6.1307 11.8139 5.98831 11.6919L1.90241 8.19189C1.56464 7.90256 1.74441 7.3493 2.18773 7.31376L7.55054 6.88383C7.73744 6.86885 7.90024 6.75056 7.97225 6.57744L10.0383 1.60996Z" fill="#FEC84B"/>
+                  </g>
+                </g>
+                <defs>
+                  <clipPath id="clip0_458_3619">
+                    <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                  </clipPath>
+                  <clipPath id="clip1_458_3619">
+                    <rect width="20" height="20" fill="white" transform="translate(0.5)"/>
+                  </clipPath>
+                </defs>
+              </svg>
+            {% endfor %}
+          </div>
+          <!-- <p class="rating">5.0</p> -->
+        </div>
+        
+        <p class="value-sans based-on"><span class="underline">{{ settings.gloabalreviews }}</span> verified 5-star reviews</p>
+        
+      </div>
+    </div>
+
+    <div class="carousel-container">
+      <div class="carousel-wrapper">
+        {% for review in section.blocks %}
+          <div>
+            <p class="value-sans review-text">{{ review.settings.text }}</p>
+            <p class="value supporting-text">{{ review.settings.author }}</p>
+          </div>
+        {% endfor %}
+        <!-- Duplicate the first review to make the transition smooth -->
+        {% assign first_review = section.blocks.first %}
+        <div>
+          <p class="value-sans review-text">{{ first_review.settings.text }}</p>
+          <p class="value supporting-text">{{ first_review.settings.author }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Reviews Carousel",
+    "settings": [
+      {
+        "type": "text",
+        "id": "totalReviews",
+        "label": "Reviews"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "review",
+        "name": "Review",
+        "settings": [
+          {
+            "type": "text",
+            "id": "text",
+            "label": "Review Text",
+            "default": "The smell! It's beautiful, unlike sprays you get from the supermarkets."
+          },
+          {
+            "type": "text",
+            "id": "author",
+            "label": "Author",
+            "default": "Karen, UK"
+          }
+        ]
+      }
+    ],
+    "presets": [
+		{
+			"name": "Reviews Carousel"
+		}
+	]
+  }
+{% endschema %}

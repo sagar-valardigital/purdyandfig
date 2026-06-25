@@ -1,0 +1,115 @@
+<style>
+  #element-1349 .cropped, #element-1347 .cropped {
+    background: none !important;
+  }
+</style>
+
+<section class="section section-relative " id="page-block-nsdf2u3d02b" data-at="section">
+    <div class="section-holder-border item-block item-absolute" data-at="section-border"></div>
+    <div class="section-holder-overlay item-block item-absolute" data-at="section-overlay"></div>
+    <div class="section-block">
+        <div class="section-inner section-fit section-relative">
+            <div class="widget item-absolute headline  " id="element-1332" data-at="headline">
+                <div class="contents">
+                    <h1>
+                        <span class="x_d96addeb x_aaed72c5">{{ section.settings.heading }}</span>
+                    </h1>
+                </div>
+            </div>
+            <div class="widget item-absolute  " id="element-1347">
+                <div class="contents cropped item-block" data-at="image-cropp">
+                  <img class="item-content-box item-block image " data-at="image" alt="" src="{{ section.blocks[2].settings.image | img_url: '800x' }}" srcset="{{ section.blocks[2].settings.image | img_url: '800x' }}">
+                </div>
+            </div>
+            <div class="widget item-absolute  " id="element-1349">
+                <div class="contents cropped item-block" data-at="image-cropp">
+                  <img class="item-content-box item-block image " data-at="image" alt="" src="{{ section.blocks[0].settings.image | img_url: '800x' }}" srcset="{{ section.blocks[0].settings.image | img_url: '800x' }}">
+                </div>
+            </div>
+            <div class="widget item-absolute  " id="element-1346">
+                <div class="contents cropped item-block" data-at="image-cropp">
+                    <img class="item-content-box item-block image " data-at="image" alt="" src="{{ section.blocks[1].settings.image | img_url: '800x' }}" srcset="{{ section.blocks[1].settings.image | img_url: '800x' }}">
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1334" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_b796efc8 x_5f0ed501">{{ section.blocks[0].settings.heading }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1333" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_7276ea46 x_8a9d83ad">{{ section.blocks[1].settings.heading }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1335" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_b796efc8 x_5f0ed501"><span class="x_a269ab78">{{ section.blocks[2].settings.heading }}</span></p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1343" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_e6507cf2 x_06cb0376">{{ section.blocks[0].settings.info }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1344" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_e6507cf2 x_06cb0376">{{ section.blocks[1].settings.info }}</p>
+                </div>
+            </div>
+            <div class="widget item-absolute paragraph  " id="element-1345" data-at="paragraph">
+                <div class="contents">
+                    <p class="x_e6507cf2 x_06cb0376">{{ section.blocks[2].settings.info }}</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Instapage Info",
+    "settings": [
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading"
+      }
+    ],
+    "max_blocks": 3,
+    "blocks": [
+      {
+        "type": "text",
+        "name": "block",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+          },
+          {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading"
+          },
+          {
+            "type": "text",
+            "id": "info",
+            "label": "Information"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "Instapage Info"
+      }
+	]
+  }
+{% endschema %}
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}

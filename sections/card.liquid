@@ -1,0 +1,57 @@
+<div class="{{ section.settings.class }}">
+  <div class="container">
+    <div class="startkit-card text-center">
+      <div class="value-sans black-text">{{ section.settings.cardtext }}</div>
+      <div class="">
+        <img
+          class="h-auto"
+          width="200"
+          height="80"
+          alt="article"
+          src="{{  section.settings.cardimg |  img_url : '300x' }}"
+        >
+      </div>
+    </div>
+    <div class="mt-4 desktop-hide">
+      <span
+        class="d-block text-center blue-starterkit-btn click-scroll m-auto"
+        data-target="{{ section.settings.scrollto }}"
+        >GET YOUR OFFER</span
+      >
+    </div>
+  </div>
+</div>
+
+{% schema %}
+ {
+   "name": "card",
+   "settings": [
+     {
+          "type": "text",
+          "id": "scrollto",
+          "label": "Scroll to section id",
+          "default": "javascript:void(0);"
+      },
+     {
+      "type": "text",
+      "id": "class",
+      "label": "Class"
+    },
+     {
+      "type": "text",
+      "id": "cardtext",
+      "label": "Text"
+    },
+     {
+      "type": "image_picker",
+      "id": "cardimg",
+      "label": "Image"
+    }
+   ],
+"presets": [
+	{
+		"name": "card"
+	}
+]
+ }
+{% endschema %}

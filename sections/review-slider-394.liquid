@@ -1,0 +1,406 @@
+<style>
+	{% if section.settings.bgimage %}
+	.review-block-slider-pf394 {
+		background: url("{{ section.settings.bgimage | image_url: width: 1500, height: 1000, crop: 'center' }}") no-repeat;
+		background-size: cover;
+		background-position: center center;
+	}
+	{% else %}
+	.review-block-slider-pf394 {
+		background: {{ section.settings.bgcolor }};
+	}
+	{% endif %}
+
+  .review-block-slider-pf394 {
+    padding-top: 50px !important;
+  }
+
+	.review-block-slider-pf394 {
+		padding: 80px 112px !important;
+	}
+
+  .review-block-slider-pf394 .slider-outer-mt40 {
+    margin-top: 40px;
+  }
+
+  .review-block-slider-pf394 .trim-t-30 {
+    padding-top: 50px !important;
+  }
+
+  .review-block-slider-pf394 .review-scents-slider .review-block {
+    flex: 1;
+    padding: 0;
+    background: transparent;
+    margin: 0 15px 0;
+  }
+
+  .review-block-slider-pf394 .review-image {
+      margin-bottom: 8px;
+      border-radius: 4px;
+      overflow: hidden;
+  }
+
+  .review-block-slider-pf394 .review-block .review-review {
+    line-height: 25.60px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 200;
+    font-style: normal;
+    padding-top: 0;
+    color: #424242 !important;
+  }
+
+  .review-block-slider-pf394 .review-block .review-name {
+    line-height: 21px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 600;
+    margin-bottom: 0 !important;
+    margin-top: 4px;
+  }
+
+  .review-block-slider-pf394 .tss-heading {
+    border-bottom: 0;
+  }
+
+  .review-block-slider-pf394 .heading-2 {
+    letter-spacing: 0px !important;
+    color: #212121 !important;
+  }
+
+  .review-block-slider-pf394 p.subheading {
+    color: #424242 !important;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .review-block-slider-pf394 .slick-dotted.slick-slider {
+      margin-bottom: 24px;
+  }
+
+  /* Progress Bar - Mobile Only */
+  .review-block-slider-pf394 .review-progress-container {
+    display: none;
+    justify-content: center;
+    margin-top: 20px;
+    padding: 0;
+  }
+
+  @media(max-width:768px) {
+
+  .review-block-slider-pf394 .review-block .review-review {
+    font-size: 14px;
+  }
+
+  .review-block-slider-pf394 .review-block .review-name {
+    font-size: 12px;
+  }
+
+
+  .review-block-slider-pf394 .review-progress-container {
+    display: flex;
+    margin-right: 15px;
+  }
+  }
+
+  .review-block-slider-pf394 .review-progress-bar {
+    width: 100%;
+    /* max-width: 200px; */
+    height: 2px;
+    background-color: #E9B88B;
+    border-radius: 1px;
+    overflow: hidden;
+    position: relative;
+  }
+
+  .review-block-slider-pf394 .review-progress-fill {
+    height: 100%;
+    background-color: #212121;
+    border-radius: 1px;
+    transition: transform 0.5s ease;
+    will-change: transform;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+
+  /* Desktop: Show all reviews in a row */
+  @media(min-width:769px) {
+  .review-block-slider-pf394 .review-scents-slider {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 0;
+  }
+
+  .review-block-slider-pf394 .review-scents-slider .review-block {
+    flex: 1;
+    min-width: 0;
+  }
+  }
+
+  @media(max-width:768px) {
+
+  .review-block-slider-pf394 {
+		padding: 32px 16px !important;
+	}
+
+  .review-block-slider-pf394 .review-scents-slider .review-block {
+    margin: 0 16px 15px 0;
+    flex: none;
+    width: calc(100vw - 160px); /* Show some of next slide */
+  }
+
+  .review-block-slider-pf394 .trim-t-30 {
+    padding-top: 0 !important;
+  }
+
+  .review-block-slider-pf394 .slider-outer-mt40 {
+    margin-top: 0px;
+  }
+
+
+  .review-block-slider-pf394 .review-scents-slider {
+    margin-top: 24px !important;
+  }
+
+  .review-block-slider-pf394 .review-block-bleed {
+    margin-right: -15px;
+  }
+
+  .review-block-slider-pf394 .review-slider-main-header {
+    padding: 0;
+  }
+</style>
+
+{% assign review_count = 0 %}
+{% for block in section.blocks %}
+  {% assign review_count = review_count | plus: 1 %}
+{% endfor %}
+<div id="{{ section.settings.sectionId }}">
+  <div
+    class="py-80 trim-t-30 transformational-scents-section {{ section.settings.class }}"
+  >
+    <div class="container">
+      <div
+        {% if review_count < 2 %}
+          class="d-flex align-items-center justify-content-between tss-one-block-wrapper"
+        {% endif %}
+      >
+        <div class="review-slider-main-header">
+          <h2 class="heading-2 text-center white-text value-bold mt-0" style="color: {{ section.settings.headingcolor }} !important;">{{ section.settings.heading }}</h2>
+          <p class="subheading fw-200 normal-text value-sans text-center">
+            {{ section.settings.subtext }}
+          </p>
+        </div>
+        <div class="slider-outer-mt40 review-block-bleed">
+          <div
+            class="review-scents-slider {% if review_count > 2 %}review-slider{% endif %}"
+            data-total-slides="{{ review_count }}"
+          >
+            {% for block in section.blocks %}
+              <div class="review-block" data-slide-index="{{ forloop.index0 }}">
+                <div class="review-image position-relative">
+                  <picture>
+                    {% assign image = block.settings.blockImage %}
+                    {% assign mimage = block.settings.mBlockImage %}
+
+                    <source media="(min-width:769px)" srcset="{{ image | image_url: width: 800 }}">
+                    <source media="(max-width:768px)" srcset="{{ mimage | image_url: width: 800 }}">
+                    <img
+                      data-id="{{image.id}}"
+                      class="img-responsive w-100 h-auto lazy"
+                      src="{{ image | image_url: width: 800 }}"
+                      width="400"
+                      height="300"
+                      alt="{{ image.alt }}"
+                    >
+                  </picture>
+                  {% if block.settings.tag != blank %}
+                    <span class="tss-tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                </div>
+                <div class="review-content">
+                  <p class="review-review font-lausanne black-text normal-text" style="color: {{ section.settings.reviewtextcolor }} !important;">{{ block.settings.review }}</p>
+                  <h3 class="review-name font-lausanne blue-text-3" style="color: {{ section.settings.authorcolor }} !important;">{{ block.settings.name }}</h3>
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <!-- Progress Bar for Mobile -->
+          
+          {% if review_count > 1 %}
+            <div class="review-progress-container" {% if section.settings.showprogressbar %}style="display: none;"{% endif %}>
+              <div class="review-progress-bar">
+                <div class="review-progress-fill" data-total="{{ review_count }}"></div>
+              </div>
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const progressFill = document.querySelector('.review-progress-fill');
+
+    if (!progressFill) return;
+
+    const totalSlides = parseInt(progressFill.dataset.total);
+
+    // Global function to update progress bar
+    window.updateReviewProgress = function (slideIndex) {
+      const segmentWidth = 100 / totalSlides;
+      const progressBar = progressFill.parentElement;
+      const containerWidth = progressBar.offsetWidth;
+      const positionPercent = slideIndex * segmentWidth;
+      const positionPixels = (positionPercent / 100) * containerWidth;
+
+      progressFill.style.width = segmentWidth + '%';
+      progressFill.style.transform = 'translateX(' + positionPixels + 'px)';
+    };
+
+    // Initialize progress bar to first slide
+    window.updateReviewProgress(0);
+
+    // Function to connect to Slick when jQuery is available
+    function connectToSlider() {
+      const jq = window.$ || window.jQuery || window.jquery;
+
+      if (jq) {
+        // Only initialize slider on mobile (768px and below)
+        if (window.innerWidth <= 768) {
+          jq('.review-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            centerMode: false,
+            variableWidth: true,
+            arrows: false,
+            dots: false,
+          });
+
+          jq('.review-slider').on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+            window.updateReviewProgress(nextSlide);
+          });
+        }
+
+        return true;
+      } else {
+        return false;
+      }
+    }
+
+    // Try connecting immediately
+    if (!connectToSlider()) {
+      let attempts = 0;
+      const maxAttempts = 10;
+
+      const checkForjQuery = setInterval(function () {
+        attempts++;
+
+        if (connectToSlider() || attempts >= maxAttempts) {
+          clearInterval(checkForjQuery);
+        }
+      }, 500);
+    }
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Review slider 394",
+  "settings": [
+    {
+      "type": "text",
+      "id": "sectionId",
+      "label": "Section ID"
+    },
+    {
+      "type": "checkbox",
+      "id": "showprogressbar",
+      "label": "Show progress bar - Mobile"
+    },
+    {
+      "type": "color",
+      "id": "bgcolor",
+      "label": "Background color"
+    },
+		{
+      "type": "color",
+      "id": "headingcolor",
+      "label": "Heading color"
+    },
+		{
+      "type": "color",
+      "id": "reviewtextcolor",
+      "label": "Review text color"
+    },
+		{
+      "type": "color",
+      "id": "authorcolor",
+      "label": "Author color"
+    },
+		{
+      "type": "image_picker",
+      "id": "bgimage",
+      "label": "Background image"
+    },
+    {
+      "type": "text",
+      "id": "class",
+      "label": "Section Class"
+    },
+    {
+      "type": "html",
+      "id": "heading",
+      "label": "Heading"
+    },
+    {
+      "type": "html",
+      "id": "subtext",
+      "label": "Sub Heading"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "image",
+      "name": "Reviewer block",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "blockImage",
+          "label": "Desktop Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "mBlockImage",
+          "label": "Mobile Image"
+        },
+        {
+          "type": "text",
+          "id": "review",
+          "label": "Review"
+        },
+        {
+          "type": "text",
+          "id": "name",
+          "label": "Reviewer Name"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Review slider 394"
+    }
+  ]
+}
+{% endschema %}

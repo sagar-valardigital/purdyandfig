@@ -1,0 +1,737 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "layout": "theme.global-landing-page",
+  "sections": {
+    "a512ad02-ae17-423d-a8a0-476423a1618f": {
+      "type": "announcement-bar-2",
+      "settings": {
+        "logo": true,
+        "class": "",
+        "text": "Save £15 on a Starter Kit",
+        "bb-color": "#ffffff",
+        "text-color": "#161718",
+        "scrollto": "starterkit-product",
+        "annuText": "GET YOUR OFFER",
+        "top": "0",
+        "dataTrack": false,
+        "targetUrl": "",
+        "index": 0,
+        "funnel_stage": "landing_page",
+        "dataModule": "cta",
+        "dataTitle": "get_your_offer_bar",
+        "eventValue": "shop_anchor",
+        "itemId": "",
+        "optionIndex": "",
+        "ItemName": ""
+      }
+    },
+    "865af3e5-42ef-4adf-a56d-67a6fb14b2f8": {
+      "type": "banner-4",
+      "custom_css": [
+        "@media (max-width: 768px) {.lander-banner-details {margin-bottom: 50px; }}"
+      ],
+      "settings": {
+        "className": "sklp-banner",
+        "desktopimage": "shopify://shop_images/SETUP-4_WI-5_2023-11-30_PURDY_FIGG_0278_MAIN_2_v2_1_-1.png",
+        "mobileimage": "shopify://shop_images/SETUP-4_WI-5_2023-11-30_PURDY_FIGG_0278_MAIN_3_v2-2.png",
+        "title": "Master the Art of Effortless Cleaning",
+        "subtext": "Free Glass Bottle For Life Worth £15",
+        "subtexttext": "Introducing Purdy &amp; Figg’s powerful, naturally scented, science driven formulation into your daily routine, will leave your home effortlessly clean",
+        "btnText": "GET YOUR OFFER",
+        "scrollto": "starterkit-product",
+        "dataTrack": false,
+        "dataTitle": "get_your_offer_banner",
+        "dataModule": "cta"
+      }
+    },
+    "3e84f103-135d-473b-b56b-e3c1b6d6a6f8": {
+      "type": "accordion-blocks-2",
+      "blocks": {
+        "02a8aab3-94ef-41bb-a615-bd4c92e93b57": {
+          "type": "image",
+          "settings": {
+            "accordion_image": "shopify://shop_images/Square-01_1.png",
+            "accordion_heading": "Effortless Cleaning",
+            "accordion_details": "Purdy & Figg turns big tasks into little joys, with one product that does it all, from your kitchen, to your bathroom, floors or fabric."
+          }
+        },
+        "3b0278df-d2b8-40be-8a24-2935b5f12f64": {
+          "type": "image",
+          "settings": {
+            "accordion_image": "shopify://shop_images/Square-02.png",
+            "accordion_heading": "Lifts Grease And Grime",
+            "accordion_details": "Powerful Surfactants with hydrophilic heads and hydrophobic tails form micelles, encapsulating grease and grime, removing it from the surface."
+          }
+        },
+        "48b7c13a-b4e0-4c9c-977b-d3cbc9a7cede": {
+          "type": "image",
+          "settings": {
+            "accordion_image": "shopify://shop_images/Square-03.png",
+            "accordion_heading": "Leaves Surfaces Gleaming",
+            "accordion_details": "Using Purdy & Figg little and often maximises light reflection, and reduces water spots, giving you a sparkling finish every day."
+          }
+        },
+        "39bcd983-8b4f-47a7-aa07-4eaa7ae2b6e7": {
+          "type": "image",
+          "settings": {
+            "accordion_image": "shopify://shop_images/4_copy_1.png",
+            "accordion_heading": "Long Lasting Freshness",
+            "accordion_details": "100% Pure Essential Oils Interact with olfactory receptors in the nose to leave a long lasting fresh scent at home."
+          }
+        }
+      },
+      "block_order": [
+        "02a8aab3-94ef-41bb-a615-bd4c92e93b57",
+        "3b0278df-d2b8-40be-8a24-2935b5f12f64",
+        "48b7c13a-b4e0-4c9c-977b-d3cbc9a7cede",
+        "39bcd983-8b4f-47a7-aa07-4eaa7ae2b6e7"
+      ],
+      "settings": {
+        "scrollto": "javascript:void(0);",
+        "accordian": false,
+        "slider": true,
+        "showbtn": false,
+        "bgcolor": "#ffffff",
+        "class": "sklp-accordion-block",
+        "heading": "Benefits of Switching",
+        "subtext": "",
+        "dataTrack": false,
+        "dataTitle": "",
+        "dataModule": ""
+      }
+    },
+    "global_product_5_D39eDL": {
+      "type": "global-product-7",
+      "blocks": {
+        "product_image_BB7wFV": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-1.png",
+            "mimage": "shopify://shop_images/mlp-1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_Hzk6AA": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-2.png",
+            "mimage": "shopify://shop_images/mlp-2.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_cGfJFP": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-3.png",
+            "mimage": "shopify://shop_images/mlp-3.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_T6Te4M": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-4.png",
+            "mimage": "shopify://shop_images/mlp-4.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_p6YQWB": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-5.png",
+            "mimage": "shopify://shop_images/mlp-5.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_QdFxV7": {
+          "type": "productImage",
+          "disabled": true,
+          "settings": {
+            "is_video": true,
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/29ef45e5da044e998e78762cc74eb117.mp4",
+            "poster": "shopify://shop_images/lp-6.png"
+          }
+        },
+        "text_3rmWYt": {
+          "type": "text",
+          "settings": {
+            "listItem": "90 Days Cleaning with 3 Eco-Concentrates"
+          }
+        },
+        "text_qiApXx": {
+          "type": "text",
+          "settings": {
+            "listItem": "Delivery Every Three Months, Pause or Cancel Anytime"
+          }
+        },
+        "text_zGwPww": {
+          "type": "text",
+          "settings": {
+            "listItem": "Three Bestselling Scents"
+          }
+        },
+        "text_ApiCAe": {
+          "type": "text",
+          "settings": {
+            "listItem": "Free Bottle For Life & Microfibre Cloth"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_BB7wFV",
+        "product_image_Hzk6AA",
+        "product_image_cGfJFP",
+        "product_image_T6Te4M",
+        "product_image_p6YQWB",
+        "product_image_QdFxV7",
+        "text_3rmWYt",
+        "text_qiApXx",
+        "text_zGwPww",
+        "text_ApiCAe"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".sklp-product .gp-4-details .g4-btn-wrapper {margin-bottom: 0 !important;}"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "starterkit-product",
+        "background": "#f4f6fc",
+        "p_id": "starterkit-product-2",
+        "landingproduct": "counter-clean-starter-kit",
+        "discount": "EFFORTLESS15",
+        "className": "gp-5-ab",
+        "mainheading": "The Starter Kit",
+        "mainsubheading": "Combine a single, powerful refill with tap water in our (free!) Glass Bottle for Life, and it’ll last a month with every day sprays.",
+        "heading": "Variety Starter Kit",
+        "subtext": "",
+        "price": "£15",
+        "delPrice": "£30",
+        "btnText": "BUY NOW",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": false,
+        "dataTrack": true,
+        "dataTitle": "buy_box_atc",
+        "dataModule": "buy_box"
+      }
+    },
+    "global_product_9_bMdHNQ": {
+      "type": "global-product-9",
+      "blocks": {
+        "product_image_tWW6R6": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-1.png",
+            "mimage": "shopify://shop_images/mlp-1.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_3DVxFi": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-2.png",
+            "mimage": "shopify://shop_images/mlp-2.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_JWPeDb": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-3.png",
+            "mimage": "shopify://shop_images/mlp-3.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_dNrCw9": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-4.png",
+            "mimage": "shopify://shop_images/mlp-4.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "product_image_F7dRfV": {
+          "type": "productImage",
+          "settings": {
+            "image": "shopify://shop_images/lp-5.png",
+            "mimage": "shopify://shop_images/mlp-5.png",
+            "is_video": false,
+            "videoURL": ""
+          }
+        },
+        "text_hJRj6i": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "90 Days Cleaning with 3 Eco-Concentrates"
+          }
+        },
+        "text_RpUQU3": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Delivery Every Three Months, Pause or Cancel Anytime"
+          }
+        },
+        "text_pzNADt": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Three Bestselling Scents"
+          }
+        },
+        "text_MwniCW": {
+          "type": "text",
+          "settings": {
+            "listClass": "1 show",
+            "listItem": "Free Bottle For Life & Microfibre Cloth"
+          }
+        }
+      },
+      "block_order": [
+        "product_image_tWW6R6",
+        "product_image_3DVxFi",
+        "product_image_JWPeDb",
+        "product_image_dNrCw9",
+        "product_image_F7dRfV",
+        "text_hJRj6i",
+        "text_RpUQU3",
+        "text_pzNADt",
+        "text_MwniCW"
+      ],
+      "settings": {
+        "outOfStock": false,
+        "isSub": true,
+        "isCheckout": true,
+        "scrollto": "sklp-review-section",
+        "background": "#f4f6fc",
+        "p_id": "starterkit-product",
+        "landingproduct": "counter-clean-starter-kit",
+        "discount": "EFFORTLESS15",
+        "tab_description_1": "Our best-selling blends for a beautifully scented home",
+        "tab_description_2": "",
+        "className": "gp-5-ab",
+        "mainheading": "The Starter Kit",
+        "mainsubheading": "Combine a single, powerful refill with tap water in our (free!) Glass Bottle for Life, and it’ll last a month with every day sprays.",
+        "heading": "Variety Starter Kit",
+        "productsubheading": "",
+        "subtext": "",
+        "price": "£15.00",
+        "delPrice": "£30.00",
+        "btnText": "BUY NOW",
+        "redirectLink": "",
+        "ctaDetails": "",
+        "shopbtnLabel": "",
+        "shopbtnLink": "",
+        "heading-position": false,
+        "before-mobile": false,
+        "dataTrack": false,
+        "dataTitle": "buy_box_atc",
+        "dataModule": "buy_box"
+      }
+    },
+    "icon_blocks_3_XE6Kd4": {
+      "type": "icon-blocks-3",
+      "blocks": {
+        "image_xRz6m6": {
+          "type": "image",
+          "settings": {
+            "heading": "Non-GMO",
+            "icon": "shopify://shop_images/Frame_48096340_16220347-6de3-465b-bfee-d608050623cf.png",
+            "details": ""
+          }
+        },
+        "image_Qz6Ur3": {
+          "type": "image",
+          "settings": {
+            "heading": "Essential Oils",
+            "icon": "shopify://shop_images/Frame_48096340_1_c1f70bcf-5397-420e-b0d7-8823f099d453.png",
+            "details": ""
+          }
+        },
+        "image_i96Jni": {
+          "type": "image",
+          "settings": {
+            "heading": "Paraben Free",
+            "icon": "shopify://shop_images/Frame_48096340_2.png",
+            "details": ""
+          }
+        },
+        "image_fFDPzw": {
+          "type": "image",
+          "settings": {
+            "heading": "No Synthetic Fragrance",
+            "icon": "shopify://shop_images/Frame_48096340_3_b149024b-b6cd-4327-b7ef-4c5711b7a443.png",
+            "details": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_xRz6m6",
+        "image_Qz6Ur3",
+        "image_i96Jni",
+        "image_fFDPzw"
+      ],
+      "settings": {
+        "class": "sklp-icon-block",
+        "heading": "Natural Cleaner",
+        "subtext": "No single-use plastic, toxins or synthetic fragrance"
+      }
+    },
+    "11e26e64-5410-48f9-9c9a-3698a74d1770": {
+      "type": "two-women-2",
+      "custom_css": [
+        ".manufactured {display: none;}"
+      ],
+      "settings": {
+        "className": "two-women-wrapper-2 starterkit-lp-two-women",
+        "background": "#f4f6fc",
+        "layout": false,
+        "main_heading": "Two Women On A Mission",
+        "sub_heading": "",
+        "heading": "",
+        "image": "shopify://shop_images/c0855ba36e497bb2acf6ef7605222d4a.jpg",
+        "details": "<div class=\"value-sans\">\n<p class=\"blue-text value-sans\">Purdy &amp; Figg began with two best friends tired of using natural cleaning products that compromised on cleaning power.</p>\n<span class=\"gray-text value-sans\" style=\"color:#434448\">After spending five years in their garage, researching and formulating with PhD surfactant chemists, they created one powerful product that works on every surface, and is safe to use every single day, Counter Clean - now a viral sensation!</span>\n</div>"
+      }
+    },
+    "heading_wcLd4K": {
+      "type": "heading",
+      "custom_css": [
+        ".heading-2 {font-family: Value-bold; color: #3350b4;}"
+      ],
+      "settings": {
+        "enable": true,
+        "className": "sklp-heading",
+        "bgColor": "",
+        "heading": "Clean little and often with Purdy & Figg"
+      }
+    },
+    "5c8c1d85-ae74-49c7-bda6-109118d97488": {
+      "type": "image-with-text-2",
+      "settings": {
+        "className": "sklp-image-text",
+        "textcolor": "#3541bf",
+        "background": "#ffffff",
+        "width": "w-90",
+        "layout": false,
+        "heading": "Natural Surfactants",
+        "image": "shopify://shop_images/P_F_House_Shoot_210630_2_31de7387-6468-4931-9dc4-2749748d6667.png",
+        "mimage": "shopify://shop_images/P_F_House_Shoot_210630_2_1_209b6640-495b-441e-85c2-d0792fce2a03.png",
+        "details": "Natural surfactants have the power to tackle grease and grime, whilst being completely harmless to you and your family.",
+        "heading-position": false
+      }
+    },
+    "image_with_text_2_pNrtCz": {
+      "type": "image-with-text-2",
+      "settings": {
+        "className": "sklp-image-text",
+        "textcolor": "#3541bf",
+        "background": "#ffffff",
+        "width": "w-90",
+        "layout": true,
+        "heading": "Concentrated Refills",
+        "image": "shopify://shop_images/Square-05-2.png",
+        "mimage": "shopify://shop_images/Square-05-2_1.png",
+        "details": "Mix an organic essential oil concentrate with tap water in your bottle for life, and simply top up with another refill, whenever you run out.",
+        "heading-position": false
+      }
+    },
+    "image_with_text_2_U4w4aW": {
+      "type": "image-with-text-2",
+      "settings": {
+        "className": "sklp-image-text",
+        "textcolor": "#3541bf",
+        "background": "#ffffff",
+        "width": "w-90",
+        "layout": false,
+        "heading": "Hand Blended Scents",
+        "image": "shopify://shop_images/Purdy___Figg_-_Evergreen_Studio_4_0750_copy_2_2.png",
+        "mimage": "shopify://shop_images/Square-02_1.png",
+        "details": "Essential oils are blended by in house fragrance experts to give your home a long lasting freshness.",
+        "heading-position": false
+      }
+    },
+    "image_with_text_2_iimkkT": {
+      "type": "image-with-text-2",
+      "custom_css": [
+        ".sklp-image-text {padding-bottom: 48px;}"
+      ],
+      "settings": {
+        "className": "sklp-image-text",
+        "textcolor": "#3541bf",
+        "background": "#ffffff",
+        "width": "w-90",
+        "layout": true,
+        "heading": "Glass Bottle For Life & Microfibre Cloth",
+        "image": "shopify://shop_images/Square-03_1.png",
+        "mimage": "shopify://shop_images/Square-03_2.png",
+        "details": "Our Glass Bottles for Life are designed to be easily carried around the house. Plus, our ultra soft microfibre cloth helps you buff your surfaces for the ultimate gleam.",
+        "heading-position": false
+      }
+    },
+    "manufactured_in_uk_TrhYQr": {
+      "type": "manufactured-in-uk",
+      "blocks": {
+        "text_hy3YrH": {
+          "type": "text",
+          "settings": {
+            "heading": "Quality Standards",
+            "detail": "Manufactured in purpose built labs in the UK, Purdy & Figg's formulations are exactly controlled for a consistently high quality product."
+          }
+        },
+        "text_xe8M3C": {
+          "type": "text",
+          "settings": {
+            "heading": "Quality Ingredients",
+            "detail": "Purdy & Figg’s essential oils are sourced from local growers and are natural and science backed; the quality is triple checked on site."
+          }
+        }
+      },
+      "block_order": [
+        "text_hy3YrH",
+        "text_xe8M3C"
+      ],
+      "settings": {
+        "class": "sklp-manufactured",
+        "heading": "Manufactured in the UK"
+      }
+    },
+    "4f5b5391-b1ab-4116-9ae8-7c2e152c9c8d": {
+      "type": "review-slider-4",
+      "blocks": {
+        "d68c0270-9f27-4238-bdf0-1ea41155f1a5": {
+          "type": "text",
+          "settings": {
+            "heading": "Bliss in a bottle!!!",
+            "review": "I have a cleaning business and I am always trying new products, I have now stopped buying anything else other than Purdy & Figg products! I absolutely love everything and all of my customers love it also! A good few of them have gone on to buy from you. Lime & Lemongrass is my favourite scent and cleans effortlessly.",
+            "userName": "Gillian T.",
+            "poster": "shopify://shop_images/f5ada179-a13d-4870-873a-8f99d0729def_full_s.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/b4c01284cd8547a090756bed9532fadc.mp4",
+            "autoplay": true
+          }
+        },
+        "b61362f4-49c7-4865-ab91-c3f0e90c998e": {
+          "type": "text",
+          "settings": {
+            "heading": "Brilliant!",
+            "review": "I have been using the counter clean for all sorts of places. There have been marks on our wood floor since we moved in. I have tried many things to get them off. One spray of Purdy and Figg removed the marks!",
+            "userName": "Susan T.",
+            "poster": "shopify://shop_images/f5ada179-a13d-4870-873a-8f99d0729def_full_size_1_1.png",
+            "videoURL": "",
+            "autoplay": false
+          }
+        },
+        "e77e13cc-7b69-4b41-982c-6a94724f7795": {
+          "type": "text",
+          "settings": {
+            "heading": "eco Surface cleaner",
+            "review": "I was sceptical about these little beauties. But honestly they leave everything they touch looking like new. My taps, handles, toaster, microwave, metal bin all look new! What can I say that hasn’t been said about the fragrances. Pure pleasure to clean the whole place! Thank you Purdy & Figg! 👍",
+            "userName": "Carl F.",
+            "poster": "shopify://shop_images/43108203-5434-4c9c-b1d8-9bb4e1cad047_full_size_1.png",
+            "videoURL": "",
+            "autoplay": false
+          }
+        }
+      },
+      "block_order": [
+        "d68c0270-9f27-4238-bdf0-1ea41155f1a5",
+        "b61362f4-49c7-4865-ab91-c3f0e90c998e",
+        "e77e13cc-7b69-4b41-982c-6a94724f7795"
+      ],
+      "custom_css": [
+        ".cls-1 {fill: #fec84b;}"
+      ],
+      "settings": {
+        "scrollto": "starterkit-product",
+        "className": "sklp-review-section",
+        "bgColor": "#f4f6fc",
+        "dataTrack": false,
+        "dataTitle": "get_your_offer_reviews",
+        "dataModule": "cta"
+      }
+    },
+    "a2194449-184e-4118-8225-9a59caeea728": {
+      "type": "faq-section-2",
+      "blocks": {
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97": {
+          "type": "text",
+          "settings": {
+            "open": true,
+            "faq-question": "How can I be sure it works?",
+            "faq-ans": "<p>Our product is completely effective at tackling grease, grim and dirt. What’s more, 93% of our 100k customers would recommend us for our cleaning power.</p>"
+          }
+        },
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "What ingredients give Counter Clean its powerful cleaning properties?",
+            "faq-ans": "<p>Counter Clean contains powerful surfactants with hydrophilic heads and hydrophobic tails that form micelles, which allows it to encapsulate grease and grime, and remove it from any surface.</p>"
+          }
+        },
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Is it safe to use on all my surfaces?",
+            "faq-ans": "<p>Counter Clean can be used on all surfaces, including softer surfaces like aluminium, wood, stone or any other porous surfaces.</p>"
+          }
+        },
+        "b3da5911-c83c-46b6-b545-797e91781fff": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "How many uses will I get out of a bottle?",
+            "faq-ans": "<p>Each concentrate dilutes to 300ml of Counter Clean, we recommend using one refill per month. The Starter Kit is designed to last you 3 months.</p>"
+          }
+        },
+        "29134be3-da11-47cf-a53b-7f88d2bbe596": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Is it safe around pets?",
+            "faq-ans": "<p>Our products are safe to use around dogs and other pets, however, it's best not to use them to clean beds or food bowls without rinsing afterwards. If you are worried about allergies, do contact your vet.</p>"
+          }
+        },
+        "text_GBEb3b": {
+          "type": "text",
+          "settings": {
+            "open": false,
+            "faq-question": "Is it Cruelty Free?",
+            "faq-ans": "<p>Counter Clean has never been tested on animals. We also only work with suppliers who also avoid testing on animals too!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "d5f0750c-d1c1-4e82-bde9-e538cec56d97",
+        "3bef21b1-6cdf-4174-a35c-01e4fa513c76",
+        "3c474819-85aa-4a9a-bcc0-dc1e0f54550d",
+        "b3da5911-c83c-46b6-b545-797e91781fff",
+        "29134be3-da11-47cf-a53b-7f88d2bbe596",
+        "text_GBEb3b"
+      ],
+      "settings": {
+        "enable": true,
+        "color_bg": "#ffffff",
+        "class": "sklp-faq",
+        "heading": "Frequently asked questions"
+      }
+    },
+    "1616c4c5-6d10-4f48-a274-122128027936": {
+      "type": "social-video-2",
+      "blocks": {
+        "56412b87-968a-4cd1-9c22-06ec6ce1e30d": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/UGC_1_fin_1.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/7e80aaa6bb2d4fffae28a51197d750ed.mov"
+          }
+        },
+        "2ccd4b4d-84d2-4704-821d-7d731da142b9": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/Snapinsta.app_video_322683116_346191041364720_5101082934472366711_n_1_1.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/0ca61725ad8a489cbe080618e34d186b.mp4"
+          }
+        },
+        "7457efd6-fef5-4871-a74f-d46ac8c384f4": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/UGC_2_fin_1.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/188cce7a1ec34d11b488ac55ecc33257.mov"
+          }
+        },
+        "a65d022c-29ac-4508-a7d9-4da5c6a7cada": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/Snapinsta.app_video_10000000_1727366804397748_6552127909538867060_n.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/950823bc3cdf4841a944339b48c21366.mp4"
+          }
+        },
+        "8f1a6802-3cd1-400b-86b8-714a30042bc1": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/Snapinsta.app_video_10000000_720964866600620_6948248042413744172_n.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/ba7a4437b1514ecfbdd609a0dd74ec62.mp4"
+          }
+        },
+        "844d2d82-2941-4403-8078-d2f39d4eb801": {
+          "type": "video",
+          "settings": {
+            "poster": "shopify://shop_images/Snapinsta.app_video_41051181_1520453128689054_9055401358161216745_n.png",
+            "videoURL": "https://cdn.shopify.com/videos/c/o/v/2fc9c7d36b4a46f1bf92317d6bc1f011.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "56412b87-968a-4cd1-9c22-06ec6ce1e30d",
+        "2ccd4b4d-84d2-4704-821d-7d731da142b9",
+        "7457efd6-fef5-4871-a74f-d46ac8c384f4",
+        "a65d022c-29ac-4508-a7d9-4da5c6a7cada",
+        "8f1a6802-3cd1-400b-86b8-714a30042bc1",
+        "844d2d82-2941-4403-8078-d2f39d4eb801"
+      ],
+      "settings": {
+        "scrollto": "starterkit-product",
+        "bgColor": "#f4f6fc",
+        "class": "sklp-social-video",
+        "heading": "See Us In Real Life",
+        "subtext": "See real customers‘ daily Purdy & Figg routines",
+        "dataTrack": false,
+        "dataTitle": "get_your_offer_social",
+        "dataModule": "cta"
+      }
+    },
+    "dadf1b77-90f5-4fe1-be9d-b69a959fdae0": {
+      "type": "footer-2",
+      "settings": {}
+    },
+    "custom_js_2_VnqHeC": {
+      "type": "custom-js-2",
+      "settings": {}
+    }
+  },
+  "order": [
+    "a512ad02-ae17-423d-a8a0-476423a1618f",
+    "865af3e5-42ef-4adf-a56d-67a6fb14b2f8",
+    "3e84f103-135d-473b-b56b-e3c1b6d6a6f8",
+    "global_product_5_D39eDL",
+    "global_product_9_bMdHNQ",
+    "icon_blocks_3_XE6Kd4",
+    "11e26e64-5410-48f9-9c9a-3698a74d1770",
+    "heading_wcLd4K",
+    "5c8c1d85-ae74-49c7-bda6-109118d97488",
+    "image_with_text_2_pNrtCz",
+    "image_with_text_2_U4w4aW",
+    "image_with_text_2_iimkkT",
+    "manufactured_in_uk_TrhYQr",
+    "4f5b5391-b1ab-4116-9ae8-7c2e152c9c8d",
+    "a2194449-184e-4118-8225-9a59caeea728",
+    "1616c4c5-6d10-4f48-a274-122128027936",
+    "dadf1b77-90f5-4fe1-be9d-b69a959fdae0",
+    "custom_js_2_VnqHeC"
+  ]
+}

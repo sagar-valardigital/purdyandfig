@@ -1,0 +1,79 @@
+{% for block in section.blocks %}
+  {% if block.type == 'empty_cart' %}
+    {% assign product = block.settings.product %}
+    {% assign compare_price = block.settings.compare_price %}
+    {% assign price = block.settings.price %}
+
+    <div class="cart--upsell show">
+      <div class="upsell-product-wrapper upsell-2 {{ product.handle }}">
+        <div class="upsell-product">
+          <div class="upsell-product-section">
+
+            <div class="up-product-img">
+              <img
+                class="w-100 h-auto"
+                {% if block.settings.variant_image %}
+                  src="{{ block.settings.variant_image | image_url: '120x120' }}"
+                {% else %}
+                  src="{{ product.featured_image | product_img_url: '120x120' }}"
+                {% endif %}
+                alt="{{ product.title }}"
+                width="75"
+                height="75"
+              >
+            </div>
+
+            <div class="up-add-cart-option">
+              <div class="up-top">
+                <div class="up-title">
+                  <h4 class="theme-text font-lausanne fw-600">{{ product.title }}</h4>
+                  <div class="up-price" style="align-items:baseline;">
+                    <span class="upsell-price theme-text font-lausanne fw-400" style="font-size:12px;">
+                      {{ price }}
+                    </span>
+                    {% if compare_price != blank %}
+                      &nbsp;
+                      <span class="upsell-compare-price theme-text font-lausanne fw-400"
+                        style="font-size:10px; text-decoration:line-through; vertical-align:bottom;">
+                        {{ compare_price }}
+                      </span>
+                    {% endif %}
+                  </div>
+                </div>
+
+                <form
+                  @submit.prevent="console.log('submitted')"
+                  x-ref="product_form_{{ product.id }}_e"
+                  enctype="multipart/form-data"
+                  accept-charset="UTF-8"
+                  id="product_form_{{ product.id }}_e"
+                  class="shopify-product-form"
+                  data-product-id="{{ product.id }}"
+                  action="/cart/add"
+                >
+                  <input type="hidden" name="id" value="{{ block.settings.variant }}">
+                  <input type="hidden" name="quantity" value="1">
+                  <input autocomplete="off" type="hidden" name="discount" value="{{ block.settings.discount }}">
+                  {% if block.settings.subscription %}
+                    <input type="hidden" name="selling_plan" value="{{ block.settings.selling_plan }}">
+                    <input type="checkbox" name="purchase_type" value="subscription" checked class="d-none">
+                  {% else %}
+                    <input type="checkbox" name="purchase_type" value="one-time" checked class="d-none">
+                  {% endif %}
+
+                  <button
+                    class="btn green-btn theme-btn btn-loader"
+                    x-on:click="Purdy.AddToCartWithDiscount($refs.product_form_{{ product.id }}_e, false, '{{ product.title | replace: "'", "" }}', $event)"
+                  >
+                    ADD
+                  </button>
+                </form>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
+{% endfor %}

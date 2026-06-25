@@ -1,0 +1,122 @@
+<style>
+  .banner-section-381 {
+    width: 100%;
+    height: 400px;
+    padding: 80px 184px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: url('{{ section.settings.desktop_image | image_url: width: 3200 }}');
+    background-color: lightgray;
+    background-size: cover;
+    background-position: top center;
+  }
+
+  .banner-image-381 {
+    display: none;
+  }
+
+  .banner-heading-381 h2 {
+    font-family: "GT Super";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 125%;
+    color: {{ section.settings.text_color }};
+    margin-bottom: 0 !important;
+  }
+
+   .banner-heading-381 .subheading {
+    font-family: "Lausanne";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 200;
+    line-height: 150%;
+    color: {{ section.settings.text_color }};
+  }
+
+.show-block {
+  font-family: "GT Super";
+}
+.banner-heading-381 h2 i {
+  font-style: italic;
+  font-family: "GT Super";
+  font-weight: 600;
+}
+
+.reskin-product-blocks-wrapper .reskin-product-block .saving-tag {
+    background-color: #C8393C !important;
+    color: #FFFFFF !important;
+    border: 1px solid #C8393C;
+}
+
+  @media (max-width: 767px) {
+    .banner-section-381 {
+      height: 280px;
+      padding: 32px 16px 18px 16px;
+      background: url('{{ section.settings.mobile_image | image_url: width: 1200 }}');
+      background-size: cover;
+      background-position: top center;
+    }
+
+    .banner-heading-381 {
+      padding: 0!important;
+    }
+
+    .banner-heading-381 h2 {
+      font-size: 36px;
+      line-height: 45px;
+    }
+
+  .show-block {
+    display: block;
+  }
+
+  }
+</style>
+
+<section class="banner-section-381 position-relative">
+  <div class="banner-heading-381">
+    <h2>{{ section.settings.heading }}</h2>
+    <div class="subheading">{{ section.settings.subheading }}</div>
+  </div>
+</section>
+
+{% schema %}
+  {
+    "name": "Banner 501",
+    "settings": [
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text color"
+      },
+      {
+        "type": "image_picker",
+        "id": "desktop_image",
+        "label": "Desktop image"
+      },
+      {
+        "type": "image_picker",
+        "id": "mobile_image",
+        "label": "Mobile image"
+      },
+      {
+        "type": "html",
+        "id": "heading",
+        "label": "Heading"
+      },
+      {
+        "type": "html",
+        "id": "subheading",
+        "label": "Sub Heading"
+      }
+    ],
+    "presets": [
+      {
+        "name": "Banner 501"
+      }
+    ]
+  }
+{% endschema %}
